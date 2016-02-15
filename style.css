@@ -1,0 +1,76 @@
+body {
+	font-family: sans-serif;
+}
+
+td.configuration {
+	width:20px;
+}
+
+table {
+	border-collapse:collapse;
+}
+
+td.role,td.configuration,td.act,th.act,th.scene {
+	border:1px solid #AAA;
+	height:20px;
+}
+
+
+td.act,th.act,th.scene,td.configuration {
+	text-align:center;
+}
+th.caption{text-align: right;
+	font-style: italic;
+	font-weight: lighter;
+	padding-right: 4px;
+}
+td {
+	white-space:nowrap;
+}
+
+td.monolog {
+	background-image:-webkit-repeating-linear-gradient(135deg,rgba(0,0,0,.3),rgba(0,0,0,.3) 1px,transparent 2px,transparent 2px,rgba(0,0,0,.3) 3px);
+	background-image:-moz-repeating-linear-gradient(135deg,rgba(0,0,0,.3),rgba(0,0,0,.3) 1px,transparent 2px,transparent 2px,rgba(0,0,0,.3) 3px);
+	background-image:-o-repeating-linear-gradient(135deg,rgba(0,0,0,.3),rgba(0,0,0,.3) 1px,transparent 2px,transparent 2px,rgba(0,0,0,.3) 3px);
+	background-image:repeating-linear-gradient(135deg,rgba(0,0,0,.3),rgba(0,0,0,.3) 1px,transparent 2px,transparent 2px,rgba(0,0,0,.3) 3px);
+}
+
+td.dialog {
+	background-color:grey;
+}
+
+td.trilog {
+	background-color:#AAA;
+}
+
+td.polyog {
+	background:#fff;
+}
+
+td.speaking {
+	background-color:#000;
+}
+
+td.mute {
+	background-color:#AAA;
+	color:#AAA;
+}
+
+td.hidden {
+	background-color:#AAA;
+}
+
+td.dead {
+	background-color:#AAA;
+}
+
+td.offstage {
+	background-color:#000;
+	color:#000;
+	border:2px dotted grey;
+}
+
+td.absent {
+	background-color:#fff;
+	color:#fff;
+}
