@@ -2,9 +2,7 @@ body {
 	font-family: sans-serif;
 }
 
-td.configuration {
-	width:20px;
-}
+
 
 table {
 	border-collapse:collapse;
@@ -23,6 +21,7 @@ th.caption{text-align: right;
 	font-style: italic;
 	font-weight: lighter;
 	padding-right: 4px;
+	width:200px;
 }
 td {
 	white-space:nowrap;
@@ -40,7 +39,7 @@ td.dialog {
 }
 
 td.trilog {
-	background-color:#AAA;
+	background-color:lightgrey;
 }
 
 td.polyog {
@@ -48,29 +47,35 @@ td.polyog {
 }
 
 td.speaking {
-	background-color:#000;
+	background-color:grey;
+	color:grey;
 }
 
 td.mute {
-	background-color:#AAA;
-	color:#AAA;
+	background-color:lightgrey;
+	color:lightgrey;
 }
 
 td.hidden {
-	background-color:#AAA;
+	background-color:lightgrey;
 }
 
 td.dead {
-	background-color:#AAA;
+	background-color:lightgrey;
 }
 
 td.offstage {
-	background-color:#000;
-	color:#000;
-	border:2px dotted grey;
+	background-color:grey;
+	color:grey;
+	border:2px dotted black;
 }
+td.aside{
+border:2px dashed black;}
 
 td.absent {
 	background-color:#fff;
 	color:#fff;
+}
+td.configuration {
+	width:20px;
 }

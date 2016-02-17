@@ -53,8 +53,16 @@ $legend = <<<HTML
             <td>Personnage hors-scène </td>
           </tr>
           <tr>
+            <td class="aside configuration mute">2</td>
+            <td>Personnage de l'espace secondaire </td>
+          </tr>
+		  <tr>
             <td class="monolog configuration">1</td>
             <td>Monologue </td>
+          </tr>
+          <tr>
+            <td class="configuration">–</td>
+            <td>Scène muette </td>
           </tr>
           <tr>
             <td class="dialog configuration">2</td>
@@ -63,12 +71,6 @@ $legend = <<<HTML
           <tr>
             <td class="trilog configuration">3</td>
             <td>Trilogue </td>
-          </tr>
-<tr>
-            <td class="configuration">+</td>
-            <td>Plus de trois personnages </td>
-          </tr>
-
         </table>
 
 HTML;
@@ -82,9 +84,10 @@ if(isset($_POST["post"])){
 		$inputdom->load($file);
 		$proc = new XSLTProcessor();
 		$xsl = $proc->importStylesheet($xsl);
+		$proc -> setParameter("", "basename", str_replace(".xml", "", basename($file)));
 		$newdom = $proc->transformToDoc($inputdom);
 		$html .= $newdom->SaveXML();
-		
+
 	}
 	$html .= $legend;
 }
