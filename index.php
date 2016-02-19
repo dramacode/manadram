@@ -112,7 +112,8 @@ if(isset($_POST["post"])){
 
 		$pdo = new PDO('sqlite:../../corpus/claudel/claudel.sqlite');
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-		$play = $pdo->query("SELECT id FROM play WHERE code = '".$code."'")->fetch()['id'];
+		$play = $pdo->query("SELECT id FROM play WHERE code = '".$code."'")->fetch();
+		$play = $play['id'];
 		$configurations = $pdo->query("SELECT c FROM configuration WHERE play = '".$play."' ORDER BY id")->fetchAll();
 		$html .= "<script type='text/javascript'>var configurationLengthPlay = [];";
 		foreach($configurations as $configuration){
