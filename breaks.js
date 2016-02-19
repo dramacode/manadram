@@ -90,7 +90,6 @@ for (i = 0; i < table.length; i++) {
 				if (offstageTd[k].innerHTML != '') {
 					var offstage = parseInt(offstageTd[k].innerHTML);
 				}
-				alert(offstage);
 				count += (length * (number - offstage));
 			}
 		}
