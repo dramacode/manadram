@@ -66,10 +66,6 @@ $legend = <<<HTML
             <td>Monologue </td>
           </tr>
           <tr>
-            <td class="configuration">–</td>
-            <td>Scène muette </td>
-          </tr>
-          <tr>
             <td class="dialog configuration">2</td>
             <td>Dialogue </td>
           </tr>
