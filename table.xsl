@@ -31,10 +31,10 @@
     <h3>
       <xsl:value-of select="tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title"/>
     </h3>
-    <table id="{$basename}">
+    <table class="result" id="{$basename}">
       <!--ligne actes-->
       <thead>
-        <tr id="acts">
+        <tr class="acts">
           <th class="caption">Actes</th>
           <xsl:for-each select="//*[@type = 'act'] | //*[@type = 'acte']">
             <xsl:variable name="n" select="count(.//tei:listPerson[@type = 'configuration'])"/>
@@ -186,25 +186,24 @@
         <tr>
           <td> </td>
         </tr>
-        <tr id="averagePresents">
+        <tr class="averagePresents">
           <td class="role">Nombre moyen de personnages<br/> présents par scène dans l'acte</td>
           <xsl:for-each select="//*[@type = 'act'] | //*[@type = 'acte']">
             <xsl:variable name="actId" select="@xml:id"/>
             <xsl:variable name="n" select="count(.//tei:listPerson[@type = 'configuration'])"/>
             <td class="act {$actId} {.//tei:listPerson[@type='configuration'][1]/@xml:id}" colspan="{$n}" id="averagePresents{$actId}">
-              <xsl:value-of select="format-number(count(.//tei:person) div count(.//tei:listPerson[@type = 'configuration']), '#.#')"/>
-            </td>
+              <!--<xsl:value-of select="format-number(count(.//tei:person) div count(.//tei:listPerson[@type = 'configuration']), '#.#')"/>--> </td>
           </xsl:for-each>
         </tr>
-        <tr id="averageSpeakings">
+        <tr class="averageSpeakings">
           <td class="role">Nombre moyen de personnages<br/> parlant par scène dans l'acte</td>
           <xsl:for-each select="//*[@type = 'act'] | //*[@type = 'acte']">
             <xsl:variable name="actId" select="@xml:id"/>
             <xsl:variable name="n" select="count(.//tei:listPerson[@type = 'configuration'])"/>
-            <td class="act {$actId} {.//tei:listPerson[@type='configuration'][1]/@xml:id}" colspan="{$n}" id="averageSpeaking{$actId}"> </td>
+            <td class="act {$actId} {.//tei:listPerson[@type='configuration'][1]/@xml:id}" colspan="{$n}" id="averageSpeakings{$actId}"> </td>
           </xsl:for-each>
         </tr>
-        <tr id="averagePresentsTime">
+        <tr class="averagePresentsTime">
           <td class="role">Nombre moyen de personnages<br/> présents par scène dans l'acte<br/> rapporté à la durée de la scène</td>
           <xsl:for-each select="//*[@type = 'act'] | //*[@type = 'acte']">
             <xsl:variable name="actId" select="@xml:id"/>
@@ -212,7 +211,7 @@
             <td class="act {$actId} {.//tei:listPerson[@type='configuration'][1]/@xml:id}" colspan="{$n}" id="averagePresentsTime{$actId}">   </td>
           </xsl:for-each>
         </tr>
-        <tr id="averageSpeakingsTime">
+        <tr class="averageSpeakingsTime">
           <td class="role">Nombre moyen de personnages <br/>parlant par scène dans l'acte<br/> rapporté à la durée de la scène</td>
           <xsl:for-each select="//*[@type = 'act'] | //*[@type = 'acte']">
             <xsl:variable name="actId" select="@xml:id"/>
@@ -221,17 +220,22 @@
           </xsl:for-each>
         </tr>
         <!--ligne scènes-->
-        <tr id="numberPresents">
+        <tr class="numberPresents">
           <td class="role">Personnages présents</td>
           <xsl:for-each select="//*[@type = 'configuration']">
-            <td class="configuration ">
+            <xsl:variable name="actId" select="ancestor::tei:div[@type = 'act']/@xml:id"/>
+            <xsl:variable name="confId">
+              <xsl:value-of select="@xml:id"/>
+            </xsl:variable>
+            <td class="configuration {$confId} {$actId}">
               <xsl:value-of select="count(.//tei:person)"/>
             </td>
           </xsl:for-each>
         </tr>
-        <tr id="numberSpeakings">
+        <tr class="numberSpeakings">
           <td class="role">Personnages parlant</td>
           <xsl:for-each select="//*[@type = 'configuration']">
+            <xsl:variable name="actId" select="ancestor::tei:div[@type = 'act']/@xml:id"/>
             <xsl:variable name="confId">
               <xsl:value-of select="@xml:id"/>
             </xsl:variable>
@@ -250,32 +254,32 @@
             </xsl:variable>
             <xsl:choose>
               <xsl:when test="$personCount = 0">
-                <td class="configuration {$confId}"> –<!--<xsl:value-of select="$personCount"/>--> </td>
+                <td class="configuration {$confId} {$actId}"><!--<xsl:value-of select="$personCount"/>--></td>
               </xsl:when>
               <xsl:when test="$personCount = 1">
-                <td class="configuration monolog {$confId}">
+                <td class="configuration monolog {$confId} {$actId}">
                   <xsl:value-of select="$personCount"/>
                 </td>
               </xsl:when>
               <xsl:when test="$personCount = 2">
-                <td class="configuration dialog {$confId}">
+                <td class="configuration dialog {$confId} {$actId}">
                   <xsl:value-of select="$personCount"/>
                 </td>
               </xsl:when>
               <xsl:when test="$personCount = 3">
-                <td class="configuration trilog {$confId}">
+                <td class="configuration trilog {$confId} {$actId}">
                   <xsl:value-of select="$personCount"/>
                 </td>
               </xsl:when>
               <xsl:otherwise>
-                <td class="configuration polylog {$confId}">
+                <td class="configuration polylog {$confId} {$actId}">
                   <xsl:value-of select="$personCount"/>
                 </td>
               </xsl:otherwise>
             </xsl:choose>
           </xsl:for-each>
         </tr>
-        <tr id="numberFrontStage">
+        <tr class="numberFrontStage">
           <td class="role">Personages de l'espace principal</td>
           <xsl:for-each select="//*[@type = 'configuration']">
             <xsl:variable name="confId">
@@ -294,7 +298,7 @@
             </xsl:choose>
           </xsl:for-each>
         </tr>
-        <tr id="numberAside">
+        <tr class="numberAside">
           <td class="role">Personages de l'espace secondaire</td>
           <xsl:for-each select="//*[@type = 'configuration']">
             <xsl:variable name="confId">
@@ -313,7 +317,7 @@
             </xsl:choose>
           </xsl:for-each>
         </tr>
-        <tr id="numberHidden">
+        <tr class="numberHidden">
           <td class="role">Personages cachés</td>
           <xsl:for-each select="//*[@type = 'configuration']">
             <xsl:variable name="confId">
@@ -332,31 +336,66 @@
             </xsl:choose>
           </xsl:for-each>
         </tr>
-        <tr id="numberOffstage">
+        <tr class="numberOffstage">
           <td class="role">Personages hors scène</td>
           <xsl:for-each select="//*[@type = 'configuration']">
+            <xsl:variable name="actId" select="ancestor::tei:div[@type = 'act']/@xml:id"/>
             <xsl:variable name="confId">
               <xsl:value-of select="@xml:id"/>
             </xsl:variable>
             <xsl:variable name="count" select="count(.//tei:person[@role = 'offstage'])"/>
             <xsl:choose>
               <xsl:when test="$count > 0">
-                <td class="configuration dead {$confId}">
+                <td class="configuration dead {$confId} {$actId}">
                   <xsl:value-of select="$count"/>
                 </td>
               </xsl:when>
               <xsl:otherwise>
-                <td class="configuration {$confId}"> </td>
+                <td class="configuration {$confId} {$actId}"> </td>
               </xsl:otherwise>
             </xsl:choose>
           </xsl:for-each>
         </tr>
+        
+        <tr class="length" style="display:none;" ><!--style="display:none;"-->
+          <td class="role">Longueur</td>
+          <xsl:for-each select="//*[@type = 'configuration']">
+            <xsl:variable name="confId">
+              <xsl:value-of select="@xml:id"/>
+            </xsl:variable>
+            <xsl:variable name="nextConfId">
+              <xsl:value-of select="following::tei:listPerson/@xml:id"/>
+            </xsl:variable>
+            <xsl:variable name="actId" select="ancestor::tei:div[@type = 'act']/@xml:id"/>
+            
+            <td class="configuration {$confId} {$actId}">
+            </td>
+          </xsl:for-each>
+        </tr>
+        <!--<tr class="length"><!-\-style="display:none;"-\->
+          <td class="role">Longueur</td>
+          <xsl:for-each select="//*[@type = 'configuration']">
+            <xsl:variable name="confId">
+              <xsl:value-of select="@xml:id"/>
+            </xsl:variable>
+            <xsl:variable name="nextConfId">
+              <xsl:value-of select="following::tei:listPerson/@xml:id"/>
+            </xsl:variable>
+            <xsl:variable name="actId" select="ancestor::tei:div[@type = 'act']/@xml:id"/>
+            <xsl:variable name="txt" select="//tei:listPerson[@xml:id=$confId]/following::tei:p"/>
+<!-\-            //text()[preceding::tei:div[@xml:id=$confId]][following::tei:div[@xml:id=$nextConfId]]-\->
+            <xsl:variable name="count" select="string-length($txt)"/>
+            <td class="configuration {$confId} {$actId}">
+              <xsl:value-of select="$count"/>
+              <xsl:value-of select="following::*[text()]"/>
+            </td>
+          </xsl:for-each>
+        </tr>-->
       </tbody>
     </table>
     <script type="text/javascript">
-<!--
-        pb si j 'ai plusieurs tables//-->
-      var configurationBreaks = new Array();
+
+      var configurationBreaksPlay = [];
       <xsl:for-each select="//tei:listPerson[@type = 'configuration'][position() > 1]">
         <xsl:variable name="actId">
           <xsl:value-of select="ancestor::tei:div[@type = 'act']/@xml:id"/>
@@ -369,27 +408,23 @@
         </xsl:variable>
          <!--    dernière conf des premiers actes    -->
         <xsl:if test="count(//tei:listPerson[following::tei:listPerson[@xml:id = $confId]][ancestor::tei:div[@xml:id = $actId]]) = 0">
-          configurationBreaks.push("<xsl:value-of select="@xml:id"/>");          
+          configurationBreaksPlay.push("<xsl:value-of select="@xml:id"/>");          
         </xsl:if>
         <!--    si aucun personnage commun    -->
         <xsl:if test="not(//tei:listPerson[@xml:id = $confId]//tei:person/@corresp = //tei:listPerson[@xml:id = $previousConfId]//tei:person/@corresp)">
           <!--    sauf si subtype=link    -->
           <xsl:if test="not(@subtype and @subtype != 'break')">
-            configurationBreaks.push("<xsl:value-of select="@xml:id"/>");
+            configurationBreaksPlay.push("<xsl:value-of select="@xml:id"/>");
           </xsl:if>
         </xsl:if>
 <!--    si subtype=break    -->
         <xsl:if test="@subtype = 'break'">
-          configurationBreaks.push("<xsl:value-of select="@xml:id"/>");
+          configurationBreaksPlay.push("<xsl:value-of select="@xml:id"/>");
         </xsl:if>
       </xsl:for-each>
-<!--
-        alert(configurationBreaks);//--><!--
-        appliquer aux conf//-->
-<!--
-        appliquer aux scènes//-->
-<!--
-        appliquer aux actes: tous sauf le premier//-->
+      configurationBreaks.push({id:'<xsl:value-of select="$basename"/>', configurations:configurationBreaksPlay});
+
+      
     </script>
   </xsl:template>
 </xsl:stylesheet>

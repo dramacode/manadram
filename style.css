@@ -70,7 +70,8 @@ td.offstage {
 	border:2px dotted black;
 }
 td.aside{
-border:2px dashed black;}
+	border:2px dashed black;
+}
 
 td.absent {
 	background-color:#fff;
@@ -78,4 +79,11 @@ td.absent {
 }
 td.configuration {
 	width:20px;
+}
+
+td.break, th.break{
+	border-right:1px solid #AAA;
+	border-top:1px solid #AAA;
+	border-bottom:1px solid #AAA;
+	border-left:double #AAA !important;
 }
