@@ -7,7 +7,30 @@ for (i = 0; i < configurationBreaks.length; i++) {
 		}
 	}
 }
-//moyenne des présents
+/*
+//google
+google.load("visualization", "1", {
+	packages: ["corechart", 'table']
+});
+function drawChart(chartType, containerID, dataArray, options) {
+	var data = google.visualization.arrayToDataTable(dataArray);
+	var containerDiv = document.getElementById(containerID);
+	var chart = false;
+	if (chartType.toUpperCase() == 'BARCHART') {
+		chart = new google.visualization.BarChart(containerDiv);
+	} else if (chartType.toUpperCase() == 'COLUMNCHART') {
+		chart = new google.visualization.ColumnChart(containerDiv);
+	} else if (chartType.toUpperCase() == 'PIECHART') {
+		chart = new google.visualization.PieChart(containerDiv);
+	} else if (chartType.toUpperCase() == 'TABLECHART') {
+		chart = new google.visualization.Table(containerDiv);
+	}
+	if (chart == false) {
+		return false;
+	}
+	chart.draw(data, options);
+}
+*/
 var table = document.getElementsByClassName("result");
 for (i = 0; i < table.length; i++) {
 	var tableid = table[i].id;
@@ -102,6 +125,7 @@ for (i = 0; i < table.length; i++) {
 	for (l = 0; l < acts.length; l++) {
 		labels.push(acts[l].innerHTML);
 	}
+	//rgraph
 	var data = averages;
 	var bar = new RGraph.Bar({
 		id: 'graph' + tableid,
@@ -117,4 +141,19 @@ for (i = 0; i < table.length; i++) {
 			colors: ['grey']
 		}
 	}).draw();
+//google : voir le format des données
+/*
+	var test_aray = [
+		['Name', 'Count-A', 'Count-B'],
+		['Test-A', 4, 3],
+		['Test-B', 1, 2],
+		['Test-C', 3, 4],
+		['Test-D', 2, 0],
+		['Test-E', 2, 5]
+	];
+
+	google.setOnLoadCallback(function() {
+		drawChart('columntChart', 'gglgraph'+tableid, data, null);
+	});
+*/
 }

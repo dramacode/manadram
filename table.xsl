@@ -109,7 +109,9 @@
                   <xsl:choose>
                     <xsl:when test="$nextConfId = ''">
                       <xsl:choose>
-                        <xsl:when test="//tei:listPerson[@xml:id = $confId]/following::tei:sp[following::tei:listPerson[@xml:id = $nextConfId]][@who = $roleId]">
+                        <xsl:when test="
+                          //tei:listPerson[@xml:id = $confId]/following::tei:sp[@who = $roleId]|
+                          //tei:listPerson[@xml:id = $confId]/ancestor::tei:sp[@who = $roleId]">
                           <xsl:choose>
                             <xsl:when test=".//tei:person[@corresp = concat('#', $roleId)][@role = 'offstage']">
                               <td class="configuration offstage {$confId}" id="{$roleId}{$confId}">1</td>
@@ -142,7 +144,12 @@
                     </xsl:when>
                     <xsl:otherwise>
                       <xsl:choose>
-                        <xsl:when test="//tei:listPerson[@xml:id = $confId]/following::tei:sp[following::tei:listPerson[@xml:id = $nextConfId]][@who = $roleId]">
+                        <xsl:when test="
+                          //tei:listPerson[@xml:id = $confId]/following::tei:sp[following::tei:listPerson[@xml:id = $nextConfId]][@who = $roleId]|
+                          //tei:listPerson[@xml:id = $confId]/following::tei:sp[descendant::tei:listPerson[@xml:id = $nextConfId]][@who = $roleId]|
+                          //tei:listPerson[@xml:id = $confId]/ancestor::tei:sp[following::tei:listPerson[@xml:id = $nextConfId]][@who = $roleId]|
+                          //tei:listPerson[@xml:id = $confId]/ancestor::tei:sp[descendant::tei:listPerson[@xml:id = $nextConfId]][@who = $roleId]
+                          ">
                           <xsl:choose>
                             <xsl:when test=".//tei:person[@corresp = concat('#', $roleId)][@role = 'offstage']">
                               <td class="configuration offstage {$confId}" id="{$roleId}{$confId}">1</td>
@@ -245,10 +252,34 @@
             <xsl:variable name="personCount">
               <xsl:choose>
                 <xsl:when test="$nextConfId = ''">
-                  <xsl:value-of select="count(//tei:listPerson[@xml:id = $confId]//tei:person[translate(@corresp, '#', '') = //tei:listPerson[@xml:id = $confId]/following::tei:sp/@who])"/>
+                  <xsl:value-of select="count(
+                    //tei:listPerson
+                    [@xml:id = $confId]//tei:person[
+                    (translate(@corresp, '#', '') = 
+                    //tei:listPerson[@xml:id = $confId]/following::tei:sp/@who)
+                    or
+                    (translate(@corresp, '#', '') = 
+                    //tei:listPerson[@xml:id = $confId]/ancestor::tei:sp/@who)
+                    ]
+                    )"/>
                 </xsl:when>
                 <xsl:otherwise>
-                  <xsl:value-of select="count(//tei:listPerson[@xml:id = $confId]//tei:person[translate(@corresp, '#', '') = //tei:listPerson[@xml:id = $confId]/following::tei:sp[following::tei:listPerson[@xml:id = $nextConfId]]/@who])"/>
+                  <xsl:value-of select="count(
+                    //tei:listPerson
+                    [@xml:id = $confId]//tei:person[
+                    (translate(@corresp, '#', '') = 
+                    //tei:listPerson[@xml:id = $confId]/following::tei:sp[following::tei:listPerson[@xml:id = $nextConfId]]/@who)
+                    or
+                    (translate(@corresp, '#', '') = 
+                    //tei:listPerson[@xml:id = $confId]/ancestor::tei:sp[following::tei:listPerson[@xml:id = $nextConfId]]/@who)
+                    or
+                    (translate(@corresp, '#', '') = 
+                    //tei:listPerson[@xml:id = $confId]/following::tei:sp[descendant::tei:listPerson[@xml:id = $nextConfId]]/@who)
+                    or
+                    (translate(@corresp, '#', '') = 
+                    //tei:listPerson[@xml:id = $confId]/ancestor::tei:sp[descendant::tei:listPerson[@xml:id = $nextConfId]]/@who)
+                    ]
+                    )"/>
                 </xsl:otherwise>
               </xsl:choose>
             </xsl:variable>

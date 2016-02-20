@@ -8,6 +8,14 @@ $html = ""
 	."<head>"
 	."<meta charset='UTF-8'/>"
 	."<link href='style.css' rel='stylesheet' type='text/css'/>"
+/*
+	."<script src='//d3js.org/d3.v3.min.js' charset='utf-8'></script>"
+	."<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>"
+*/
+	."<script src='RGraph/libraries/RGraph.common.core.js'></script>"
+	."<script src='RGraph/libraries/RGraph.bar.js'></script>"
+//	."<script type='text/javascript' src='https://www.google.com/jsapi'></script>"
+	."<script type='text/javascript'>var configurationBreaks = [];var configurationLength = [];</script>"
 	."</head>"
 	."<body>";
 $form = <<<HTML
@@ -25,11 +33,6 @@ $form = <<<HTML
 	    <input type="submit" value="Valider" />
   </form>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="RGraph/libraries/RGraph.common.core.js"></script>
-<script src="RGraph/libraries/RGraph.bar.js"></script>
-<script type="text/javascript">var configurationBreaks = [];
-var configurationLength = [];</script>
 HTML;
 
 $legend = <<<HTML
@@ -119,6 +122,11 @@ if(isset($_POST["post"])){
 		$html .= "<div width='600'>";
 		$html .= "<canvas id='graph".$code."' width='600' height='200'>[No canvas support]</canvas><p>Nombre moyen de personnages présents sur scène (sans compter les personnages muets)
 </p>";
+/*
+		$html .= "<div id='gglgraph".$code."' width='600' height='200'></div><p>Nombre moyen de personnages présents sur scène (sans compter les personnages muets)
+</p>";
+*/
+
 		$html .="</div>";
 		$html .= "</div>";
 
