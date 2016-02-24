@@ -14,7 +14,7 @@ $html = ""
 */
 	."<script src='RGraph/libraries/RGraph.common.core.js'></script>"
 	."<script src='RGraph/libraries/RGraph.bar.js'></script>"
-//	."<script type='text/javascript' src='https://www.google.com/jsapi'></script>"
+// ."<script type='text/javascript' src='https://www.google.com/jsapi'></script>"
 	."<script type='text/javascript'>var configurationBreaks = [];var configurationLength = [];</script>"
 	."</head>"
 	."<body>";
@@ -119,19 +119,23 @@ if(isset($_POST["post"])){
 			$html .= "configurationLengthPlay.push('".$configuration['c']."');";
 		}
 		$html .= "configurationLength.push(configurationLengthPlay);</script>";
+		$html .= "</div>";
+
+	}
+	$html .= $legend;
+	$html .= "<h3>Nombre moyen de personnages présents sur scène (sans compter les personnages muets)</h3>";
+	foreach($files as $file){
+		$code = str_replace(".xml", "", basename($file));
 		$html .= "<div width='600'>";
-		$html .= "<canvas id='graph".$code."' width='600' height='200'>[No canvas support]</canvas><p>Nombre moyen de personnages présents sur scène (sans compter les personnages muets)
-</p>";
-/*
+		$html .= "<canvas id='graph".$code."' width='600' height='200'>[No canvas support]</canvas>";
+		/*
 		$html .= "<div id='gglgraph".$code."' width='600' height='200'></div><p>Nombre moyen de personnages présents sur scène (sans compter les personnages muets)
 </p>";
 */
 
 		$html .="</div>";
-		$html .= "</div>";
 
 	}
-	$html .= $legend;
 }
 $html.="<script type='text/javascript' src='breaks.js'></script>
 

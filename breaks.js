@@ -131,6 +131,7 @@ for (i = 0; i < table.length; i++) {
 		id: 'graph' + tableid,
 		data: data,
 		options: {
+			title:tableid,
 			labels: labels,
 			labelsAbove: true,
 			labelsAboveDecimals: 1,

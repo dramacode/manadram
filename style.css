@@ -82,8 +82,5 @@ td.configuration {
 }
 
 td.break, th.break{
-	border-right:1px solid #AAA;
-	border-top:1px solid #AAA;
-	border-bottom:1px solid #AAA;
 	border-left:double #AAA !important;
 }
