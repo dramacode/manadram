@@ -1,0 +1,87 @@
+body {
+	font-family: sans-serif;
+	font-size: 24px !important;
+}
+
+
+
+table {
+	border-collapse:collapse;
+}
+
+td.role,td.configuration,td.act,th.act,th.scene {
+	border:1px solid #AAA;
+	height:21px;
+}
+
+
+td.act,th.act,th.scene,td.configuration {
+	text-align:center;
+}
+th.caption{text-align: right;
+	font-style: italic;
+	font-weight: lighter;
+	padding-right: 4px;
+
+}
+td {
+	white-space:nowrap;
+}
+
+td.monolog {
+	background-image:-webkit-repeating-linear-gradient(135deg,rgba(0,0,0,.3),rgba(0,0,0,.3) 1px,transparent 2px,transparent 2px,rgba(0,0,0,.3) 3px);
+	background-image:-moz-repeating-linear-gradient(135deg,rgba(0,0,0,.3),rgba(0,0,0,.3) 1px,transparent 2px,transparent 2px,rgba(0,0,0,.3) 3px);
+	background-image:-o-repeating-linear-gradient(135deg,rgba(0,0,0,.3),rgba(0,0,0,.3) 1px,transparent 2px,transparent 2px,rgba(0,0,0,.3) 3px);
+	background-image:repeating-linear-gradient(135deg,rgba(0,0,0,.3),rgba(0,0,0,.3) 1px,transparent 2px,transparent 2px,rgba(0,0,0,.3) 3px);
+}
+
+td.dialog {
+	background-color:grey;
+}
+
+td.trilog {
+	background-color:lightgrey;
+}
+
+td.polyog {
+	background:#fff;
+}
+
+td.speaking {
+	background-color:grey;
+	color:grey;
+}
+
+td.mute {
+	background-color:lightgrey;
+	color:lightgrey;
+}
+
+td.hidden {
+	background-color:lightgrey;
+}
+
+td.dead {
+	background-color:lightgrey;
+}
+
+td.offstage {
+	background-color:grey;
+	color:grey;
+	border:2px dotted black;
+}
+td.aside{
+	border:2px dashed black;
+}
+
+td.absent {
+	background-color:#fff;
+	color:#fff;
+}
+td.configuration {
+	width:16px;
+}
+
+td.break, th.break{
+	border-left:double #AAA !important;
+}
