@@ -1,10 +1,13 @@
 <?php
-foreach (glob("functions/*.php") as $function) {
-    require_once ("functions/" . basename($function));
-}
+error_reporting(0);
+
+require_once ("functions/functions.php");
+require_once ("functions/getNeedle.php");
+require_once ("functions/searchPattern.php");
+
 $haystack = array();
 
-if ($_GET["author"] == "corneillep") {
+if (isset($_GET["author"]) and $_GET["author"] == "corneillep") {
     foreach (glob("corneillep/*.php") as $data) {
         include ("corneillep/" . basename($data));
     }
@@ -56,12 +59,11 @@ include ("tpl/header.tpl.php");
 
 
 if (isset($_POST["post"])) {
-    $a = microtime(true);
+
 
     //echo "<pre>";print_r($_POST);
     doPost($files, $haystack, $corpus, $fields);
-    $b = microtime(true);
-    echo $b - $a;
+
 
     //echo $b;
     
@@ -73,6 +75,7 @@ include ("tpl/form.tpl.php");
 echo '</body></html>';
 
 function doPost($files, $haystack, $corpus, $fields) {
+    $a = microtime(true);
     //echo "<pre>";print_r($haystack);
     $dfields = array(
         "author" => "Auteur",
@@ -96,6 +99,8 @@ function doPost($files, $haystack, $corpus, $fields) {
     $options.= $group ? "G" : "";
     $haystack = $haystack[$n][$options];
     $searchResults = searchPattern($needle, $haystack, $dfields, $corpus, $fields);
+    $b = microtime(true);
+    $time = round($b - $a, 2);
     $patab = $searchResults["patab"];
     echo '<div class="res">';
     $occurrences = $searchResults["occurrences"];
