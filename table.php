@@ -1,0 +1,48 @@
+<?php
+echo '<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery.hoverIntent.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/tipsy/src/javascripts/jquery.tipsy.js"></script>
+        <script type="text/javascript" src="js/fancybox/source/jquery.fancybox.js"></script>
+        <script type="text/javascript" src="TableFilter/dist/tablefilter/tablefilter.js"></script>
+        	<script type="text/javascript">var configurationBreaks = [];var configurationLength = [];</script>
+
+    <script src="js/breaks.js" type="text/javascript"> </script>
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+        <link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css" type="text/css" />
+        <link rel="stylesheet" href="js/tipsy/src/stylesheets/tipsy.css" type="text/css" />
+        <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/table.css">
+    <title>Moteur d\'analyse dramaturgique</title>
+</head>
+
+<body>';
+
+if (isset($_GET["play"])) {
+    doGet();
+}
+include("tpl/table.tpl.php");
+echo '</body></html>';
+
+function doGet() {
+    $file = "http://dramacode.github.io/tcp5/" . $_GET["play"] . ".xml";
+    $xsl = new DOMDocument();
+    $xsl->load("table.xsl");
+    $inputdom = new DomDocument();
+    $inputdom->load($file);
+    $proc = new XSLTProcessor();
+    $xsl = $proc->importStylesheet($xsl);
+    $code = basename($file, ".xml");
+    $proc->setParameter("", "basename", $code);
+    $newdom = $proc->transformToDoc($inputdom);
+    echo $newdom->SaveXML();
+}
+
+?>

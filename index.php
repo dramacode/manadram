@@ -1,82 +1,113 @@
-<head>
-	<meta charset="utf-8"/>
-	<link rel="stylesheet" type="text/css" href="style.css"/>
-</head>
-<body>
-<div class="center">
-  <h3>Générateur de tableaux d'occupation scénique</h3>
-  <p>Veuillez sélectionner la ou les pièces à visualiser (maintenez la touche shift/majuscule enfoncée pour sélectionner plusieurs pièces) :</p>
-<form action="result.php" method="post" enctype="multipart/form-data">
-<input type="file" name="texte" />
-<p>ou entrer son URL :</p>
-<input type="text" name="url"/><br/>
-<p>ou sélectionner un fichier dans la liste :</p>
 <?php
-$files = glob("documents/*.xml");
-if (empty($files)) {$files = (glob("../../../theatre-classique/code/documents/*.xml"));}
-?>
-<select name="corpus[]" multiple>
-	<?php
-/*
-foreach ($files as $file){
-	$name = realpath($file);
-	echo "<option value='".$name."'>".basename($file)."</option>";
+foreach (glob("functions/*.php") as $function) {
+    require_once ("functions/" . basename($function));
 }
-*/
+$haystack = array();
 
-// $files = glob("../../corpus/moliere/documents/*.xml");
-foreach ($files as $file){
-	$path = realpath($file);
-	$name = basename($file);
-	$text = file_get_contents($path);
-	$text = preg_replace("#\s<\?xml-model .*\?>#", "", $text);
-	$xml = simplexml_load_string($text);
-	$xml->registerXPathNamespace('t', 'http://www.tei-c.org/ns/1.0');
-	$title = $xml->xpath("//t:title");
-	$title = $title[0];
-	$title = (string)$title;
-	$author = $xml->xpath("//t:author");
-	$author = $author[0];
-	$author = (string)$author;
-	$div2 = $xml->xpath("//t:div2[@type='scene']");
-	if ($div2){
-		echo "<option value='".$path."'>".$author.", ".$title."</option>";
-	}
+if ($_GET["author"] == "corneillep") {
+    foreach (glob("corneillep/*.php") as $data) {
+        include ("corneillep/" . basename($data));
+    }
+} else {
+    foreach (glob("data/*.php") as $data) {
+        include ("data/" . basename($data));
+    }
+}
+echo '<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery.hoverIntent.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/tipsy/src/javascripts/jquery.tipsy.js"></script>
+        <script type="text/javascript" src="js/fancybox/source/jquery.fancybox.js"></script>
+        <script type="text/javascript" src="TableFilter/dist/tablefilter/tablefilter.js"></script>
+        <script type="text/javascript" src="js/excelexport/dist/jquery.battatech.excelexport.min.js"></script>
+        <script type="text/javascript" src="js/dygraph/dygraph-combined.js"></script>
+    <script type="text/javascript" src="js/main.js"> </script>
+    <script type="text/javascript" src="js/results.js"></script>
+<script type="text/javascript" src="js/export.js"></script>
+
+       <link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css" type="text/css" />
+        <link rel="stylesheet" href="js/tipsy/src/stylesheets/tipsy.css" type="text/css" />
+        <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css" type="text/css" />
+      <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+    <link rel="stylesheet" type="text/css" href="css/table.css">
+     <title>Moteur d\'analyse dramaturgique</title>
+</head>
+
+<body>';
+include ("tpl/header.tpl.php");
+
+//$files est passé à doPost et à form.tpl
+
+//$needle = getNeedle();
+
+
+//$n = count(array_shift(array_values($needle)));
+
+
+//echo '<div style="display: none">	<div id="results" style="width:1000px;height:800px;overflow:auto;">';
+
+
+if (isset($_POST["post"])) {
+    $a = microtime(true);
+
+    //echo "<pre>";print_r($_POST);
+    doPost($files, $haystack, $corpus, $fields);
+    $b = microtime(true);
+    echo $b - $a;
+
+    //echo $b;
+    
+}
+
+//echo '</div></div>';
+include ("tpl/corpus.tpl.php");
+include ("tpl/form.tpl.php");
+echo '</body></html>';
+
+function doPost($files, $haystack, $corpus, $fields) {
+    //echo "<pre>";print_r($haystack);
+    $dfields = array(
+        "author" => "Auteur",
+        "play" => "Titre",
+        "lustrum" => "Année",
+        "genre" => "Genre"
+    );
+    foreach ($_POST["xpath"] as $key => $xpath) {
+        
+        if (!$xpath) {
+            continue;
+        }
+        $fields[$key] = $xpath;
+    }
+    $needle = getNeedle();
+    $n = count(array_shift(array_values($needle)));
+    $group = (isset($_POST["group"])) ? true : false;
+    $confidents = (isset($_POST["ignore_confident"])) ? true : false;
+    $options = (!$confidents and !$group) ? "default" : "";
+    $options.= $confidents ? "C" : "";
+    $options.= $group ? "G" : "";
+    $haystack = $haystack[$n][$options];
+    $searchResults = searchPattern($needle, $haystack, $dfields, $corpus, $fields);
+    $patab = $searchResults["patab"];
+    echo '<div class="res">';
+    $occurrences = $searchResults["occurrences"];
+    $csv = $searchResults["csv"];
+    $tables = $searchResults["tables"];
+    $results = $searchResults["results"];
+    include ("tpl/patab.tpl.php");
+    //include ("tpl/occurrences.tpl.php");
+    include ("tpl/csv.tpl.php");
+    include ("tpl/tables.tpl.php");
+    //include ("tpl/results.tpl.php");
+    echo '</div>';
 }
 ?>
-</select>
-<br/><br/>
-<input type="submit" value="Valider" /><br/><br/>
-</form>
-<p>Le texte doit respecter le schéma suivant :</p>
-<textarea rows="15" cols="70" readonly><!ELEMENT TEI (teiHeader)>
-<!ELEMENT teiHeader (fileDesc)>
-<!ELEMENT fileDesc (titleStmt)>
-<!ELEMENT titleStmt (title)>
-<!ELEMENT title (#PCDATA)>
-<!ELEMENT role (#PCDATA)><!--le nom de chaque personnage dans la liste des personnages en t&ecirc;te de la pièce-->
-<!ATTLIST role
-  xml:id NMTOKEN #REQUIRED><!--l'identifiant du personnage dans la liste des personnages en t&ecirc;te de la pièce-->
-<!ELEMENT div1 (div2)><!--le contenu de chaque acte-->
-<!ATTLIST div1
-  type CDATA #REQUIRED><!--"acte" ou "act"-->
-<!ELEMENT div2 (stage,sp)><!--le contenu de chaque scène-->
-<!ELEMENT stage (#PCDATA)><!--la liste des personnages présents, séparés par des virgules-->
-<!ELEMENT sp (#PCDATA)><!--le contenu de chaque réplique-->
-<!ATTLIST sp
-  who NMTOKEN #REQUIRED><!--l'identifiant du personnage qui parle--></textarea><br/>
 
-<h4><a href="claudel">Corpus Claudel</a></h4>
-  <form method="post" enctype="multipart/form-data" action="claudel/index.php">
-        <select name="files[]" multiple>
-			<option value='../../../corpus/claudel/claudel_jeune-fille-violaine_1892.xml'>La Jeune Fille Violaine, 1892</option>";
-			<option value='../../../corpus/claudel/claudel_jeune-fille-violaine_1899.xml'>La Jeune Fille Violaine, 1899</option>";
-			<option value='../../../corpus/claudel/claudel_annonce_1911.xml'>L'Annonce faite à Marie, 1911</option>";
-			<option value='../../../corpus/claudel/claudel_annonce_1948.xml'>L'Annonce faite à Marie, 1948</option>";
-		</select>
-		<input type="hidden" name="post"/><br/><br/>
-	    <input type="submit" value="Valider" />
-  </form>
-
-</div>
-</body>
