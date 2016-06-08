@@ -282,7 +282,7 @@ p,li {
 #tables div.table {margin:10px 0;}
 #graphdiv{width:600px;height:200px;}
 #tables div table {margin:auto;padding:10px 0;}
-#graphcontainer{float: right;}
+#graphcontainer{float: right;margin-left: 50px;}
 #graphcontainer p{text-align: center;}
 #patab{width: 1100px;margin:auto;padding-bottom: 20px;}
 #tables{clear:both;}
@@ -295,17 +295,17 @@ p,li {
 #tables{height:100%;}
 #tables div.table{height: 80% !important;overflow: scroll;}
 .res, .dygraph-label, .dygraph-axis-label{font-size: 12px;}
-.res td.author{width: 150px;max-width: 150px;}
-.res td.title{width:150px;max-width:150px;}
+.res td.author{width: 120px;max-width: 120px;}
+.res td.title{width:140px;max-width:120px;}
 .res td.genre{width: 150px;
 	max-width: 150px;}
 .res td.xpath{width:150px;max-width:150px;}
-.res td.date{width: 60px;
-	max-width: 60px;}
+.res td.date{width: 70px;
+	max-width: 70px;}
 .res td.view-table, .res td.view-text, .res td.view-source{width: 20px;
 	max-width: 20px;}
-.res td.act-n, .res td.scene-n{width: 60px;
-	max-width: 60px;}
+.res td.act-n, .res td.scene-n{width: 70px;
+	max-width: 70px;}
 p{margin:0;}
 #settings p{margin: 25px 0 15px 0;}
 thead .fa{margin-right:5px !important;}

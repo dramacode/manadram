@@ -84,13 +84,15 @@ function searchPattern($needle, $haystack, $dfields, $corpus, $fields) {
                 $dom->load("../tcp5/" . $hay["id"]["play"] . ".xml");
                 $xp = new DOMXPath($dom);
                 $xp->registerNamespace("tei", "http://www.tei-c.org/ns/1.0");
+                $conf = $dom->getElementById($results[$key]["sceneId"]);
                 $i = 0;
                 foreach ($_POST["xpath"] as $xkey => $request) {
                     
                     if (!$request) {
                         continue;
                     }
-                    $xpath = $xp->query($request);
+                    
+                    $xpath = $xp->query($request, $conf);
                     $xpath = $xpath ? $xpath->length : "Requte invalide";
                     $results[$key][$xkey] = $xpath;
                     $results[$key]["xpath"][$i] = $xpath;

@@ -20,9 +20,9 @@
     </script>
     <div id="div-patab-info">
         <div id="patab-table">
-        <?php echo $patab;?><?php if(isset($_POST["group"])){?>
+        <?php echo $patab;?>
         </div>
-        <div id="patab-options">
+        <div id="patab-options"><?php if(isset($_POST["group"])){?>
         <p>Grouper les personnages <i class="fa fa-check"></i></p><?php }?><?php if(isset($_POST["ignore_confident"])){?>
     
         <p>Ignorer les confidents <i class="fa fa-check"></i></p><?php }?>

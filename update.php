@@ -1,5 +1,5 @@
 <?php
-set_time_limit(4000);
+set_time_limit(20000);
 error_reporting(E_ALL);
 foreach (glob("functions/*.php") as $function) {
     require_once ("functions/" . basename($function));
@@ -15,7 +15,7 @@ $corpus = array();
 foreach ($files as $file) {
     $corpus[basename($file, ".xml") ] = biblio(basename($file, ".xml"));
 }
-file_put_contents('data/corpus.php', '<?php $corpus = ' . var_export($corpus, true) . '; ?>');
+file_put_contents('corneillep/corpus.php', '<?php $corpus = ' . var_export($corpus, true) . '; ?>');
 //haystack
 $modes = array(
     "default" => array(
@@ -38,21 +38,21 @@ $modes = array(
 $i = 1;
 
 while ($i < 2) {
-    $haystack = array(); 
+     
     foreach ($modes as $key => $mode) {
-         
-        $haystack[$key] = getHaystack($files, $i, $mode[0], $mode[1], $corpus);
-        
+        $haystack = getHaystack($files, $i, $mode[0], $mode[1], $corpus);
+    file_put_contents("corneillep/haystack".$i.$key.".php", '<?php $haystack['.$i.']["'.$key.'"] = ' . var_export($haystack, true) . '; ?>');    
     }
-    file_put_contents("data/haystack".$i.".php", '<?php $haystack['.$i.'] = ' . var_export($haystack, true) . '; ?>');
+    
     $i++;
 }
 //fields
+exit;
 $haystack = array();
 foreach (glob("data/haystack*.php") as $data) {
-    include ("data/" . basename($data));
+    //include ("data/" . basename($data));
 }
-   
+   include ("data/haystack1default.php");
 $types = array(
     "author",
     "authorId",

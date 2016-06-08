@@ -1,21 +1,8 @@
 <?php
 error_reporting(0);
-
 require_once ("functions/functions.php");
 require_once ("functions/getNeedle.php");
 require_once ("functions/searchPattern.php");
-
-$haystack = array();
-
-if (isset($_GET["author"]) and $_GET["author"] == "corneillep") {
-    foreach (glob("corneillep/*.php") as $data) {
-        include ("corneillep/" . basename($data));
-    }
-} else {
-    foreach (glob("data/*.php") as $data) {
-        include ("data/" . basename($data));
-    }
-}
 echo '<!DOCTYPE html>
 
 <html>
@@ -60,10 +47,8 @@ include ("tpl/header.tpl.php");
 
 if (isset($_POST["post"])) {
 
-
     //echo "<pre>";print_r($_POST);
-    doPost($files, $haystack, $corpus, $fields);
-
+    doPost($files, $corpus, $fields);
 
     //echo $b;
     
@@ -74,8 +59,10 @@ include ("tpl/corpus.tpl.php");
 include ("tpl/form.tpl.php");
 echo '</body></html>';
 
-function doPost($files, $haystack, $corpus, $fields) {
+function doPost($files, $corpus, $fields) {
+
     $a = microtime(true);
+
     //echo "<pre>";print_r($haystack);
     $dfields = array(
         "author" => "Auteur",
@@ -97,7 +84,20 @@ function doPost($files, $haystack, $corpus, $fields) {
     $options = (!$confidents and !$group) ? "default" : "";
     $options.= $confidents ? "C" : "";
     $options.= $group ? "G" : "";
-    $haystack = $haystack[$n][$options];
+    $folder = (isset($_GET["author"]) and $_GET["author"] == "corneillep") ? "corneillep" : "data";
+    $haystack = array();
+    
+    if (isset($_GET["author"]) and $_GET["author"] == "corneillep") {
+        include ("corneillep/corpus.php");
+        include ("corneillep/fields.php");
+        include ("corneillep/haystack" . $n . $options .  ".php");
+        $haystack = $haystack[$n][$options];
+    } else {
+        include ("data/corpus.php");
+        include ("data/fields.php");
+        include ("data/haystack" . $n . $options . ".php");
+        $haystack = $haystack[$n][$options];
+    }
     $searchResults = searchPattern($needle, $haystack, $dfields, $corpus, $fields);
     $b = microtime(true);
     $time = round($b - $a, 2);
@@ -108,9 +108,11 @@ function doPost($files, $haystack, $corpus, $fields) {
     $tables = $searchResults["tables"];
     $results = $searchResults["results"];
     include ("tpl/patab.tpl.php");
+
     //include ("tpl/occurrences.tpl.php");
     include ("tpl/csv.tpl.php");
     include ("tpl/tables.tpl.php");
+
     //include ("tpl/results.tpl.php");
     echo '</div>';
 }

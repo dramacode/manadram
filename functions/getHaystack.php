@@ -30,12 +30,12 @@ function getHaystack($files, $n, $confidents, $group, $corpus) {
             $sceneId = $sceneId->item(0)->getAttribute("xml:id");
             $actId = $xp->evaluate("./ancestor::*[@type='act']", $configuration); // suppose que toutes les scnes soient dans un acte
 
-            
+            $actId = $actId->item(0)->getAttribute("xml:id");
+
             //print_r($actId);echo $sceneId.$fileName."<br/>";
-
-            $actId = $actId->item(0);
-
+            
             //$sceneId = $configuration->parentNode->parentNode->getAttribute("xml:id");
+
             $scene = $xp->evaluate("./ancestor::*[@type='scene']", $configuration);
 
             //                         echo "<br/>";
@@ -62,46 +62,71 @@ function getHaystack($files, $n, $confidents, $group, $corpus) {
             $act = ($act->length > 0) ? $act->item(0)->getAttribute("n") : "";
 
             //$acteId = $configuration->parentNode->parentNode->parentNode->getAttribute("xml:id");
-            $haystack[$fileName . "_" . $sceneId] = array(
-                "id" => array(
-                    "play" => $fileName,
-                    "act" => $act,
-                    "scene" => $scene,
-                    "sceneId" => $sceneId
-                ) ,
-                "pattern" => array()
-            );
-            $haystack[$fileName . "_" . $sceneId]["id"] = array_merge($haystack[$fileName . "_" . $sceneId]["id"], biblio($fileName));
-            unset($haystack[$fileName . "_" . $sceneId]["id"]["roles"]);
+            $persons = $array;
 
             //first conf
             $persons[0] = $xp->evaluate("tei:person/@corresp", $configuration);
             $array = array();
             foreach ($persons[0] as $person) {
                 $array[] = $person->textContent;
-                
-
             }
             $persons[0] = $array;
-            foreach ($characters as $character) {
-                $haystack[$fileName . "_" . $sceneId]["pattern"][$character][0] = in_array($character, $persons[0]) ? 1 : 0;
-            }
-
+            //echo "<br/>".$fileName.$sceneId;print_r($array);
+            //continue;
             //next conf, depending on the number of conf asked
             $i = 1;
+            //echo $n."<br/>";
+            //continue;
+            //$next = $xp->evaluate("./following::tei:listPerson[" . $i . "]", $configuration);
+            //echo "<br/>".$fileName.$sceneId;print_r($next);
+            //
+            $true = true;
             while ($i < $n) {
-                $persons[$i] = $xp->evaluate("following::tei:listPerson[ancestor::*[@xml:id='" . $actId . "']][" . $i . "]/tei:person/@corresp", $configuration);
-                $array = array();
-                foreach ($persons[$i] as $person) {
-                    $array[] = $person->textContent;
-                }
-                $persons[$i] = $array;
-                foreach ($characters as $character) {
-                    $haystack[$fileName . "_" . $sceneId]["pattern"][$character][$i] = in_array($character, $persons[$i]) ? 1 : 0;
+                $next = $xp->evaluate("./following::tei:listPerson[" . $i . "]", $configuration);
+                
+                if ($next->length == 0) {
+                    $true = false;
+                } else {
+                    $next = $next->item(0);
+                    $nextAct = $xp->evaluate("./ancestor::*[@type='act']", $next)->item(0)->getAttribute("xml:id");
+                    
+                    if ($nextAct != $actId) {
+                        $true = false;
+                    } else {
+                        $persons[$i] = $xp->evaluate("./tei:person/@corresp", $next);
+                        $array = array();
+                        foreach ($persons[$i] as $person) {
+                            $array[] = $person->textContent;
+                        }
+                        $persons[$i] = $array;
+                        foreach ($characters as $character) {
+                            $haystack[$fileName . "_" . $sceneId]["pattern"][$character][$i] = in_array($character, $persons[$i]) ? 1 : 0;
+                        }
+                    }
                 }
                 $i++;
             }
+            
+            if (!$true) {
+                unset($haystack[$fileName . "_" . $sceneId]);
+                continue;
+            }
+           
+            foreach ($characters as $character) {
+                $haystack[$fileName . "_" . $sceneId]["pattern"][$character][0] = in_array($character, $persons[0]) ? 1 : 0;
+                ksort($haystack[$fileName . "_" . $sceneId]["pattern"][$character]);
+            }
 
+            $haystack[$fileName . "_" . $sceneId]["id"] = array(
+                    "play" => $fileName,
+                    "act" => $act,
+                    "scene" => $scene,
+                    "sceneId" => $sceneId
+                );
+            $haystack[$fileName . "_" . $sceneId]["id"] = array_merge($haystack[$fileName . "_" . $sceneId]["id"], biblio($fileName));
+         
+            unset($haystack[$fileName . "_" . $sceneId]["id"]["roles"]);
+            //continue;
             //preview pattern
             $array = array();
             foreach ($haystack[$fileName . "_" . $sceneId]["pattern"] as $key => $character) {
@@ -140,6 +165,8 @@ function getHaystack($files, $n, $confidents, $group, $corpus) {
                     }
                 }
             }
+
+
         }
     }
 

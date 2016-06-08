@@ -24,9 +24,8 @@
         <p>Les requêtes sont évaluées à partir de la première scène de chaque séquence correspondant au motif recherché. Le résultat affiché correspond au nombre d'éléments renvoyés par la requête</p>
         <p>La requête doit respecter la syntaxe XPath 1.0. Les éléments doivent être précédés de l'espace de nom "tei"</p>
         <ul>
-            <li>./ancestor::*[@type='scene'] récupère la scène courante</li>
-            <li>./ancestor::*[@type='act'] récupère l'acte courant </li>
-            <li>./ancestor::*[@type='scene']/</li>
+            <li>./parent::* récupère l'acte courant </li>
+            <li>./tei:sp renvoie le nombre de répliques de la scène</li>
         </ul>
         <br/>
         <h4>Données</h4>
