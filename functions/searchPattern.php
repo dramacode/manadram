@@ -79,12 +79,18 @@ function searchPattern($needle, $haystack, $dfields, $corpus, $fields) {
             $results[$key]["scene"] = $hay["id"]["scene"];
             $results[$key]["sceneId"] = $hay["id"]["sceneId"];
             $results[$key]["string"] = $hay["id"]["string"];
-            if (isset($_POST["xpath"])) {
+
+            if ($_POST["xpath"]["xpath-0"]) {
+	            
                 $dom = new DOMDocument();
-                $dom->load("../tcp5/" . $hay["id"]["play"] . ".xml");
+//                 $string = file_get_contents("http://dramacode.github.io/tcp5/" . $hay["id"]["play"] . ".xml");
+//                 echo $string;
+                //$dom->load("../tcp5/" . $hay["id"]["play"] . ".xml");
+                $dom->load("http://dramacode.github.io/tcp5/" . $hay["id"]["play"] . ".xml");
                 $xp = new DOMXPath($dom);
                 $xp->registerNamespace("tei", "http://www.tei-c.org/ns/1.0");
                 $conf = $dom->getElementById($results[$key]["sceneId"]);
+//                 print_r($conf);
                 $i = 0;
                 foreach ($_POST["xpath"] as $xkey => $request) {
                     
@@ -95,13 +101,13 @@ function searchPattern($needle, $haystack, $dfields, $corpus, $fields) {
                     $xpath = $xp->query($request, $conf);
                     $xpath = $xpath ? $xpath->length : "Requte invalide";
                     $results[$key][$xkey] = $xpath;
-                    $results[$key]["xpath"][$i] = $xpath;
+                    $results[$key]["xpath"]["xpath-".$i] = $xpath;
                     $i++;
                 }
             }
         }
     }
-
+//             print_r($_POST);
     //OCCURRENCES
     $occurrences = array();
     $occurrences["n"] = count($results);
@@ -140,15 +146,15 @@ function searchPattern($needle, $haystack, $dfields, $corpus, $fields) {
         }
     }
     $tables = $array;
-    
     //gŽrer les XPath
+    
     foreach($results as $result){
         $i=0;
-        foreach($result["xpath"] as $xpath){
-                if (!isset($tables[$i][$xpath])) {
-                    $tables["xpath"][$i][$xpath]["n"] = 1;
+        foreach($result["xpath"] as $key=>$xpath){
+                if (!isset($tables["xpath"][$key])) {
+                    $tables["xpath"][$key][$xpath]["n"] = 1;
                 }else{
-                    $tables["xpath"][$i][$xpath]["n"]++;
+                    $tables["xpath"][$key][$xpath]["n"]++;
                 }
         $i++; 
         }
@@ -156,6 +162,8 @@ function searchPattern($needle, $haystack, $dfields, $corpus, $fields) {
     foreach($tables["xpath"] as $key=>$table){
         ksort($tables["xpath"][$key]);
     }
+        //echo "<pre>";print_r($_POST);print_r($tables);
+
     //echo "<pre>";print_r($_POST);
    
 

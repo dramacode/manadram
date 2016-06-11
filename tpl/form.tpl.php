@@ -127,16 +127,6 @@
                 <input class="option-button" type="checkbox" id="ignore_confident" name="ignore_confident">
                 <label for="ignore_confident" class="tooltip" title='"AB/A" trouve "AB/AC" si C est un confident.'><i class="fa fa-user-times"></i>Ignorer les confidents</label>
             </div>
-            <div id="xpath-play" class="hide">
-                <p>Évaluer une requête XPath sur la pièce</p>
-                <div id="xpath-fields-play">
-                    <input type="text" name="xpathplay[]" class="xpath-field-play">
-                </div>
-                <div>
-                <a title="Ajouter un champ" class="tooltip" id="add_field_play"><i class="fa fa-plus"> </i></a>
-                <a title="Supprimer un champ" class="tooltip" id="delete_field_play"><i class="fa fa-minus"> </i></a>
-                </div>
-            </div>
             <div id="xpath-configuration">
                 <p>Évaluer une requête XPath</p>
                 <div id="xpath-fields-configuration">

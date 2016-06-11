@@ -53,7 +53,11 @@ if (isset($_POST["post"])) {
     //echo $b;
     
 }
-
+    if (isset($_GET["author"]) and $_GET["author"] == "corneillep") {
+        include ("corneillep/corpus.php");
+    } else {
+        include ("data/corpus.php");
+    }
 //echo '</div></div>';
 include ("tpl/corpus.tpl.php");
 include ("tpl/form.tpl.php");

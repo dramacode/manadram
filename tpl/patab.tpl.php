@@ -27,8 +27,9 @@
     
         <p>Ignorer les confidents <i class="fa fa-check"></i></p><?php }?>
         </div>
+        <div id="patab-results">
+        <p><i class="fa fa-caret-right"></i> <?php echo $occurrences["n"]; ?> occurence<?php if($occurrences["n"]>1){echo "s";}?> trouvée<?php if($occurrences["n"]>1){echo "s";}?> sur <?php echo $occurrences["total"]; ?> (<?php echo $occurrences["percentage"]; ?>%) en <?php echo $time; ?> secondes.</p>
+        </div>
     </div>
-    <div id="patab-results">
-    <p><i class="fa fa-caret-right"></i> <?php echo $occurrences["n"]; ?> occurence<?php if($occurrences["n"]>1){echo "s";}?> trouvées sur <?php echo $occurrences["total"]; ?> (<?php echo $occurrences["percentage"]; ?>%) en <?php echo $time; ?> secondes.</p>
-    </div>
+
 </div>

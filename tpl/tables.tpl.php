@@ -133,7 +133,7 @@
 
 <?php foreach($tables["xpath"] as $key=>$xpath){?>
     
-        <h3><?php echo $_POST["xpath"]["xpath-".$key];?></h3>
+        <h3><?php echo $_POST["xpath"][$key];?></h3>
         <div class="table">
         <table class="tableFilter tableExport" id="xpath-<?php echo $key; ?>">
             <thead>

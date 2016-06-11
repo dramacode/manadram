@@ -43,12 +43,7 @@ function initListeners() {
     document.getElementById("delete_column").addEventListener('click', function() {
         delCol();
     });
-    document.getElementById("add_field_play").addEventListener('click', function() {
-        addFieldPlay();
-    });
-    document.getElementById("delete_field_play").addEventListener('click', function() {
-        delFieldPlay();
-    });
+    
     document.getElementById("add_field_configuration").addEventListener('click', function() {
         addFieldConfiguration();
     });
@@ -198,18 +193,6 @@ function delCol() {
 
 
 
-function addFieldPlay() {
-    var fields = document.getElementsByClassName("xpath-field-play");
-    var newField = fields[0].cloneNode(true);
-    document.getElementById("xpath-fields-play").appendChild(newField);
-}
-function delFieldPlay() {
-    if(document.getElementsByClassName("xpath-field-play").length > 1){
-
-    var fields = document.getElementById("xpath-fields-play");
-    
-    fields.removeChild(fields.lastChild);}
-}
 
 function addFieldConfiguration() {
     var fields = document.getElementsByClassName("xpath-field-configuration");

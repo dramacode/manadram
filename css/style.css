@@ -135,7 +135,7 @@ label {
 /*top:20%;*/
 /*right:15%;*/
 	padding:2%;
-	width:34%;
+	width:450px;
 }
 
 .settings-wrapper:hover {
@@ -143,12 +143,13 @@ label {
 }
 
 .settings-wrapper {
-	padding:20px 0 20px 20px;
+	padding:20px 20px 20px 20px;
+	width: 433px;
 }
 
 #settings input {
 	display:block;
-	width:430px!important;
+	width:427px!important;
 }
 
 /*#settings .ui-buttonset{width:420px;}*/
@@ -160,7 +161,7 @@ label {
 	background-color:#f2f2f2;
 }
 
-#trigger-info,#trigger-corpus {
+#trigger-info,#trigger-corpus, #reload {
 	float:right;
 }
 
@@ -280,18 +281,18 @@ p,li {
 }*/
 
 #tables div.table {margin:10px 0;}
-#graphdiv{width:600px;height:200px;}
+#graphdiv{width:100%;height:200px;}
 #tables div table {margin:auto;padding:10px 0;}
-#graphcontainer{float: right;margin-left: 50px;}
+#graphcontainer{float: right;margin-left: 50px;width: 50%;margin-right: 3%;}
 #graphcontainer p{text-align: center;}
-#patab{width: 1100px;margin:auto;padding-bottom: 20px;}
+#patab{width: 100%;margin:auto;padding-bottom: 20px;}
 #tables{clear:both;}
 #settings{position: relative;
 	top:30px;
-	right:100px;
+	right:10%;
 }
 #patab-table{float: left;margin-right:15px;}
-#div-patab-info{padding-top:30px;}
+#div-patab-info{padding-top:30px;margin-left:3%;}
 #tables{height:100%;}
 #tables div.table{height: 80% !important;overflow: scroll;}
 .res, .dygraph-label, .dygraph-axis-label{font-size: 12px;}
@@ -319,5 +320,8 @@ thead .fa{margin-right:5px !important;}
 #patab-results
 */
 
-#form{width:1500px;margin:auto;}
+#form{width:75%;margin:auto;}
 #info img{display: block;margin: auto;margin-top:20px;margin-bottom: 20px;}
+
+.scene a{text-decoration: none;color: black;}
+.scene:hover{background-color: lightgrey;}

@@ -21,6 +21,7 @@
   <!-- fonction "link" : renvoie true ou false selon qu'une scène est lié à la suivante -->
   <xsl:template name="link">
     <xsl:param name="scene"/>
+    
     <xsl:if test="(tei:sp/@who = following-sibling::tei:*[@type='scene'][1]/tei:sp/@who) or (tei:sp/@who = following-sibling::*[@type = 'scene'][1]/tei:sp/@who) or (tei:sp/@who = following-sibling::*[@type = 'titre2'][1]/tei:sp/@who)"/>
   </xsl:template>
   <!-- fonction "last" : renvoie true si on est dans le dernier acte ou la dernière scène -->
@@ -57,7 +58,9 @@
               <xsl:variable name="actId">
                 <xsl:value-of select="@xml:id"/>
               </xsl:variable>
-              
+              <xsl:variable name="actN">
+                <xsl:value-of select="@n"/>
+              </xsl:variable>
               <xsl:choose>
                 <xsl:when test="not(tei:*[@type = 'scene'])">
                   <xsl:variable name="n" select="count(.//tei:listPerson[@type = 'configuration'])"/>
@@ -70,7 +73,9 @@
                     </xsl:variable>
                     <xsl:variable name="n" select="count(//tei:*[@xml:id = $sceneId]//tei:listPerson[@type = 'configuration'])"/>
                     <td class="scene {.//tei:listPerson[@type='configuration'][1]/@xml:id}" id="{@xml:id}" colspan="{$n}">
-                      <xsl:value-of select="@n"/>
+                      <a target="_blank" title="Voir le texte" class="tooltip" href="http://www.theatre-classique.fr/pages/programmes/edition.php?t=../documents/{translate($basename, $lowercase, $uppercase)}.xml#A{$actN}.S{$actN}{@n}">
+                        <xsl:value-of select="@n"/>
+                      </a>
                     </td>
                   </xsl:for-each>
                 </xsl:otherwise>
@@ -83,6 +88,28 @@
       </thead>
       <!--corps du tableau-->
       <tbody>
+        
+        <tr id="confList" style="display:none;">
+          <td></td>
+          <xsl:for-each select="//tei:listPerson">
+            <xsl:variable name="confId">
+              <xsl:value-of select="@xml:id"/>
+            </xsl:variable>
+            <xsl:variable name="actId">
+              <xsl:value-of select="./ancestor::*[@type='act']/@xml:id"/>
+            </xsl:variable>
+            <xsl:variable name="previousConfId">
+              <xsl:value-of select="preceding::tei:listPerson[@type = 'configuration'][1]/@xml:id"/>
+            </xsl:variable>
+            <td id="{@xml:id}">
+              <xsl:attribute name="class">configuration <xsl:value-of select="$confId"/>
+                <xsl:if test="(count(//tei:listPerson[following::tei:listPerson[@xml:id = $confId]][ancestor::tei:*[@xml:id = $actId]]) = 0) 
+                  or (not(.//tei:person/@corresp = //tei:listPerson[@xml:id = $previousConfId]//tei:person/@corresp)) or (@subtype = 'break')"> break</xsl:if>
+              </xsl:attribute>
+            </td>
+          </xsl:for-each>
+        </tr>
+        
         <!--<xsl:for-each select="//tei:role[@xml:id]"> classer selon la castList + prendre les role qui n'apparaissent pas encore dans les configurations-->
         <xsl:for-each select="//tei:person[not(preceding::tei:person/@corresp = ./@corresp)]">
           
@@ -198,18 +225,7 @@
                 </xsl:otherwise>
               </xsl:choose>
             </xsl:for-each>
-            <!--<td>
-              <xsl:value-of select="count(//tei:listPerson
-                [@type='configuration']
-                [descendant::tei:person[@corresp=concat('#', $roleId)]]
-                [
-                  (not(preceding::tei:listPerson[@type='configuration'][1]//tei:person[@corresp=concat('#', $roleId)])) or 
-                  (@subtype='break') or
-                  (./ancestor::tei:div[@type='act']/@xml:id != ./preceding::tei:listPerson[@type='configuration'][1]/ancestor::tei:div[@type='act']/@xml:id)
-                ]
-                )"/>
-              
-            </td>-->
+
             
           </tr>
         </xsl:for-each>
@@ -347,37 +363,6 @@
         
       </tbody>
     </table>
-    <script type="text/javascript">
-      var configurationBreaksPlay = [];
-      <xsl:for-each select="//tei:listPerson[@type = 'configuration'][position() > 1]">
-        <xsl:variable name="actId">
-          <xsl:value-of select="ancestor::tei:*[@type = 'act' or @type='acte']/@xml:id"/>
-        </xsl:variable>
-        <xsl:variable name="confId">
-          <xsl:value-of select="@xml:id"/>
-        </xsl:variable>
-        <xsl:variable name="previousConfId">
-          <xsl:value-of select="preceding::tei:listPerson[@type = 'configuration'][1]/@xml:id"/>
-        </xsl:variable>
-        <!--    dernière conf des premiers actes    -->
-        <xsl:if test="count(//tei:listPerson[following::tei:listPerson[@xml:id = $confId]][ancestor::tei:*[@xml:id = $actId]]) = 0">
-          configurationBreaksPlay.push("<xsl:value-of select="@xml:id"/>");          
-        </xsl:if>
-        <!--    si aucun personnage commun    -->
-        <xsl:if test="not(.//tei:person/@corresp = //tei:listPerson[@xml:id = $previousConfId]//tei:person/@corresp)">
-          <!--    sauf si subtype=link    -->
-          <xsl:if test="not(@subtype and @subtype != 'break')">
-            configurationBreaksPlay.push("<xsl:value-of select="@xml:id"/>");
-          </xsl:if>
-        </xsl:if>
-        <!--    si subtype=break    -->
-        <xsl:if test="@subtype = 'break'">
-          configurationBreaksPlay.push("<xsl:value-of select="@xml:id"/>");
-        </xsl:if>
-      </xsl:for-each>
-      configurationBreaks.push({id:'<xsl:value-of select="$basename"/>', configurations:configurationBreaksPlay});
-      
-      
-    </script>
+    
   </xsl:template>
 </xsl:stylesheet>
