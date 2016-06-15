@@ -174,6 +174,9 @@ function searchPattern($needle, $haystack, $dfields, $corpus, $fields) {
         //$n = (isset($tables["lustrum"][$key])) ? $tables["lustrum"][$key]["percentage"] : 0;
         $string.= '"' . substr($key, 0, 4) . ',' . $lustrum["percentage"] . '\n" +';
     }
+    $json = "['a',  -.5,  5.7],
+        ['b',  -.4,  6.7],
+        ['c',  -.3,  7.7],";
     $string = rtrim($string, "+");
     $csv = $string;
     //echo $csv;
@@ -184,8 +187,8 @@ function searchPattern($needle, $haystack, $dfields, $corpus, $fields) {
 
         "tables" => $tables,
         
-        "csv" => $csv
-
+        "csv" => $csv,
+        "json" => $json
         
     );
 }

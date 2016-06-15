@@ -28,13 +28,15 @@ initListenersScene();
 
 
 function initListeners() {
-    document.getElementById("add_row").addEventListener('click', function() {
-        addRow();
+    $("#add_row").click(function(){
+            addRow();
+    });
+    $("#add_column").click(function(){
+            addColumn();
     });
     document.getElementById("add_column").addEventListener('click', function() {
-        if (document.getElementById("A").getElementsByClassName("configuration").length<10) {
-        addColumn()
-        }
+        addColumn();
+        
 
     });
     document.getElementById("delete_row").addEventListener('click', function() {
@@ -54,8 +56,10 @@ function initListeners() {
 function initListenersScene() {
     var scene = document.getElementsByClassName("configuration");
     for (var i = 0; i < scene.length; i++) {
-        scene[i].addEventListener('click', function() {
+        scene[i].addEventListener('click', function(e) {
+        
             toggleScene(this);
+          
         });
     }
 }
@@ -64,11 +68,6 @@ function nextChar(c) {
     return String.fromCharCode(c.charCodeAt(0) + 1);
 }
 
-function include(arr, obj) {
-    for (var i = 0; i < arr.length; i++) {
-        if (arr[i] == obj) return true;
-    }
-}
 
 function toggleScene(e) {
     var v = e.firstChild.value;
@@ -78,66 +77,46 @@ function toggleScene(e) {
         e.setAttribute("style", "background:grey");
         break;
     case "P":
-        e.firstChild.value = "A";/*M*/
-        e.setAttribute("style", "background:white");/*white*/
-        break;
-    case "M":
-        e.firstChild.value = "PM";
-        e.setAttribute("style", "background-image: repeating-linear-gradient(-45deg, grey, grey 21px, black 21px, black 43px)");
-        break;
-    case "PM":
-        e.firstChild.value = "APM";
-        e.setAttribute("style", "background-image: repeating-linear-gradient(-45deg, white, white 10px, grey 10px, grey 30px, black 30px, black 45px)");
-        break;
-    case "APM":
         e.firstChild.value = "A";
-        e.setAttribute("style", "background:none");
+        e.setAttribute("style", "background:white");
         break;
     }
-    //change value
-    //change background-color
+
 }
 
 function addRow() {
+    
+    //clone
     var lastTr = document.getElementsByClassName("character");
     var length = lastTr.length - 1;
     lastTr = lastTr[length];
-    var patternTable = document.querySelector("#pattern tbody");
     var newTr = lastTr.cloneNode(true);
-    //set rowId	
     var rowId = nextChar(lastTr.id);
-    // 	tr
+    // 	modify
+    //tr
     newTr.id = rowId;
-    // first td (header)
-    newTr.firstElementChild.textContent = rowId;
-    //second td (optional)
-    var opt = newTr.getElementsByTagName("td")[1];
-    opt.firstElementChild.name = "optional" + rowId;
-    //third td (indifferent bound together)
-    var opt = newTr.getElementsByTagName("td")[2];
-    opt.firstElementChild.name = "indifferent_same_value_" + rowId;
-    // other tds	
     var tds = newTr.getElementsByClassName("configuration");
     for (var i = 0; i < tds.length; i++) {
         var n = i + 1;
-        tds[i].className = "configuration r" + rowId + " c" + (i + 1);
-        tds[i].firstElementChild.id = rowId + (i + 1);
-        tds[i].firstElementChild.name = "pattern["+rowId+"][" + i-2 +"]";
+        //td
         tds[i].setAttribute("style", "");
+        //input
+        tds[i].firstElementChild.name = "pattern["+rowId+"][" + i +"]";
         tds[i].firstElementChild.setAttribute("value", "A");
-        // 		tds[i].lastElementChild.setAttribute("for", rowId + (i + 1));
+        tds[i].addEventListener('click', function(e) {
+            toggleScene(this);
+        });
     }
     //append	
+    var patternTable = document.querySelector("#pattern tbody");
     patternTable.appendChild(newTr);
-    initListenersScene();
 }
 
 function addColumn() {
+    var td = document.getElementById("A").getElementsByClassName("configuration");
+    var l = td.length;
+    if (l<10) {
     //get last column id
-    var th = document.getElementById("link")
-    var tds = th.getElementsByTagName("td");
-    var l = tds.length;
-    // td link
     var lastTd = th.lastElementChild;
     var newTd = lastTd.cloneNode(true);
     newTd.firstElementChild.firstElementChild.name = "link" + (l - 1) + "-" + l;
@@ -154,26 +133,26 @@ function addColumn() {
         var rowId = tr[i].id;
         var lastTd = tr[i].lastElementChild;
         var newTd = lastTd.cloneNode(true);
-        newTd.className = "configuration r" + rowId + " c" + (l - 1);
-        newTd.firstElementChild.id = rowId + (l - 1);
-        newTd.firstElementChild.name = "pattern["+rowId+"]["+ (l-3) +"]";
+        //modify
+        //td
         newTd.setAttribute("style", "");
+        //input
+        newTd.firstElementChild.name = "pattern["+rowId+"]["+ (l-3) +"]";
         newTd.firstElementChild.setAttribute("value", "A");
-        // 		newTd.lastElementChild.setAttribute("for", rowId + (l-1));
+        //append
         tr[i].appendChild(newTd);
     }
     initListenersScene();
+    }
 }
 
 function delRow() {
     var lastTr = document.getElementsByClassName("character");
     var length = lastTr.length - 1;
     lastTr = lastTr[length];
-    var rowId = lastTr.id;
     var patternTable = document.querySelector("#pattern tbody");
     if (length > 0) {
         patternTable.removeChild(lastTr);
-        //deleteFields(rowId);
     }
 }
 

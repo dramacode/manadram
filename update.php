@@ -15,7 +15,8 @@ $corpus = array();
 foreach ($files as $file) {
     $corpus[basename($file, ".xml") ] = biblio(basename($file, ".xml"));
 }
-file_put_contents('corneillep/corpus.php', '<?php $corpus = ' . var_export($corpus, true) . '; ?>');
+file_put_contents('data/corpus.php', '<?php $corpus = ' . var_export($corpus, true) . '; ?>');
+
 //haystack
 $modes = array(
     "default" => array(
@@ -36,107 +37,104 @@ $modes = array(
     )
 );
 $i = 1;
-
-while ($i < 2) {
-     
+while ($i < 11) {
     foreach ($modes as $key => $mode) {
         $haystack = getHaystack($files, $i, $mode[0], $mode[1], $corpus);
-    file_put_contents("corneillep/haystack".$i.$key.".php", '<?php $haystack['.$i.']["'.$key.'"] = ' . var_export($haystack, true) . '; ?>');    
+        file_put_contents("data/haystack" . $i . $key . ".php", '<?php $haystack[' . $i . ']["' . $key . '"] = ' . var_export($haystack, true) . '; ?>');
+        
+        if ($key == "default") {
+            $fields = getFields($haystack, $corpus, $files, $i);
+            file_put_contents("data/fields" . $i . ".php", '<?php $fields[' . $i . '] = ' . var_export($fields, true) . '; ?>');
+        }
     }
-    
     $i++;
 }
+
 //fields
 exit;
-$haystack = array();
-foreach (glob("data/haystack*.php") as $data) {
-    //include ("data/" . basename($data));
-}
-   include ("data/haystack1default.php");
-$types = array(
-    "author",
-    "authorId",
-    "title",
-    "genre",
-    "genreId",
-    "play",
-    "date",
-    "lustrum"
-);
-$fields = array();
-foreach ($haystack[1]["default"] as $key => $hay) {
-    foreach ($types as $type) {
 
-        //$fields[$type][$hay["id"][$type]]=0;
-        
-        if (!isset($fields[$type])) {
-            $fields[$type] = array();
-        }
-        $fields[$type][normalize($hay["id"][$type]) ]["field"] = $hay["id"][$type];
-        $fields[$type][normalize($hay["id"][$type]) ]["value"] = 0;
+function getFields($haystack, $corpus, $files, $n) {
 
-        //array_push($fields[$type], array(
-        
-        //    "field" =>
-
-        
-        //    $hay["id"][$type],
-
-        
-        //    "value" => 0
-
-        
-        //    //$hay["id"][$type]=>0
-
-        
-        //));
-
-        
-    }
-}
-
-//dates and lustra : traitement spécifique
-$dates = getDates($files);
-$lustra = array();
-foreach ($dates as $date) {
-    $lustrum = roundUpToAny($date);
-    $lustrum = ($lustrum - 4) . "-" . $lustrum;
-    
-    if (!in_array($lustrum, $lustra)) {
-        $lustra[] = $lustrum;
-    }
-}
-$fields["date"] = array();
-foreach ($dates as $date) {
-    $fields["date"][$date] = array(
-        "field" => $date,
-        "value" => 0
+    $types = array(
+        "author",
+        "authorId",
+        "title",
+        "genre",
+        "genreId",
+        "play",
+        "date",
+        "lustrum"
     );
-}
-$fields["lustrum"] = array();
-foreach ($lustra as $lustrum) {
-    $fields["lustrum"][$lustrum] = array(
-        "field" => $lustrum,
-        "value" => 0
-    );
-}
+    $fields = array();
+    foreach ($haystack as $key => $hay) {
+        foreach ($types as $type) {
 
-foreach ($haystack[1]["default"] as $key => $hay) {
-    foreach ($types as $type) {
-        foreach ($fields[$type] as $kfield => $field) {
+            //$fields[$type][$hay["id"][$type]]=0;
             
-            if ($fields[$type][$kfield]["field"] == $hay["id"][$type]) {
-                $fields[$type][$kfield]["value"]++;
+            if (!isset($fields[$type])) {
+                $fields[$type] = array();
             }
+            $fields[$type][normalize($hay["id"][$type]) ]["field"] = $hay["id"][$type];
+            $fields[$type][normalize($hay["id"][$type]) ]["value"] = 0;
+
+            //array_push($fields[$type], array(
+            
+            //    "field" =>
+
+            
+            //    $hay["id"][$type],
+
+            
+            //    "value" => 0
+
+            
+            //    //$hay["id"][$type]=>0
+
+            
+            //));
 
             
         }
     }
-}
-foreach ($types as $type) {
-    ksort($fields[$type]);
-}
 
-
-file_put_contents("data/fields.php", '<?php $fields = ' . var_export($fields, true) . '; ?>');
+    //dates and lustra : traitement spécifique
+    $dates = getDates($files);
+    $lustra = array();
+    foreach ($dates as $date) {
+        $lustrum = roundUpToAny($date);
+        $lustrum = ($lustrum - 4) . "-" . $lustrum;
+        
+        if (!in_array($lustrum, $lustra)) {
+            $lustra[] = $lustrum;
+        }
+    }
+    $fields["date"] = array();
+    foreach ($dates as $date) {
+        $fields["date"][$date] = array(
+            "field" => $date,
+            "value" => 0
+        );
+    }
+    $fields["lustrum"] = array();
+    foreach ($lustra as $lustrum) {
+        $fields["lustrum"][$lustrum] = array(
+            "field" => $lustrum,
+            "value" => 0
+        );
+    }
+    foreach ($haystack as $key => $hay) {
+        foreach ($types as $type) {
+            foreach ($fields[$type] as $kfield => $field) {
+                
+                if ($fields[$type][$kfield]["field"] == $hay["id"][$type]) {
+                    $fields[$type][$kfield]["value"]++;
+                }
+            }
+        }
+    }
+    foreach ($types as $type) {
+        ksort($fields[$type]);
+    }
+    return $fields;
+}
 ?>

@@ -17,6 +17,7 @@ echo '<!DOCTYPE html>
         <script type="text/javascript" src="TableFilter/dist/tablefilter/tablefilter.js"></script>
         <script type="text/javascript" src="js/excelexport/dist/jquery.battatech.excelexport.min.js"></script>
         <script type="text/javascript" src="js/dygraph/dygraph-combined.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="js/main.js"> </script>
     <script type="text/javascript" src="js/results.js"></script>
 <script type="text/javascript" src="js/export.js"></script>
@@ -90,16 +91,18 @@ function doPost($files, $corpus, $fields) {
     $options.= $group ? "G" : "";
     $folder = (isset($_GET["author"]) and $_GET["author"] == "corneillep") ? "corneillep" : "data";
     $haystack = array();
-    
+    $fields = array();
     if (isset($_GET["author"]) and $_GET["author"] == "corneillep") {
         include ("corneillep/corpus.php");
-        include ("corneillep/fields.php");
+        include ("corneillep/fields".$n.".php");
         include ("corneillep/haystack" . $n . $options .  ".php");
+        $fields = $fields[$n];
         $haystack = $haystack[$n][$options];
     } else {
         include ("data/corpus.php");
-        include ("data/fields.php");
+        include ("data/fields".$n.".php");
         include ("data/haystack" . $n . $options . ".php");
+        $fields = $fields[$n];
         $haystack = $haystack[$n][$options];
     }
     $searchResults = searchPattern($needle, $haystack, $dfields, $corpus, $fields);
@@ -109,6 +112,7 @@ function doPost($files, $corpus, $fields) {
     echo '<div class="res">';
     $occurrences = $searchResults["occurrences"];
     $csv = $searchResults["csv"];
+    $json = $searchResults["json"];
     $tables = $searchResults["tables"];
     $results = $searchResults["results"];
     include ("tpl/patab.tpl.php");

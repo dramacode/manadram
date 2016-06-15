@@ -15,97 +15,22 @@
             </div>
            <table class="search pattern">
                 <tbody>
-                                        <tr id="link" class="hide">
-                        <td class="no-border"></td>
-
-                        <td class="no-border"></td>
-
-                        <td>
-                            <div>
-                                <select name="link0-1">
-                                    <option value="liaison">
-                                        Acte
-                                    </option>
-
-                                    <option value="rupture">
-                                        Entracte
-                                    </option>
-                                </select>
-                            </div>
-                        </td>
-
-                        <td>
-                            <div>
-                                <select name="link1-2">
-                                    <option value="liaison">
-                                        Acte
-                                    </option>
-
-                                    <option value="rupture">
-                                        Entracte
-                                    </option>
-                                </select>
-                            </div>
-                        </td>
-
-                        <td>
-                            <div>
-                                <select name="link2-3">
-                                    <option value="liaison">
-                                        Acte
-                                    </option>
-
-                                    <option value="rupture">
-                                        Entracte
-                                    </option>
-                                </select>
-                            </div>
-                        </td>
-                        <td>
-                            <div>
-                                <select name="link3-4">
-                                    <option value="liaison">
-                                        Acte
-                                    </option>
-
-                                    <option value="rupture">
-                                        Entracte
-                                    </option>
-                                </select>
-                            </div>
-                        </td>
-                    </tr>
-
-                    <tr id="optional" class="hide">
-                        <td style="border-right:none;"></td>
-
-                        <td style="border-right:none;"></td>
-
-                        <td></td>
-
-                        <td><input type="text" name="optional1" value="{1}" size="3"></td>
-
-                        <td><input type="text" name="optional2" value="{1}" size="3"></td>
-                        <td><input type="text" name="optional3" value="{1}" size="3"></td>
-                    </tr>
+                    
                     <tr class="character" id="A">
-                        <td class="role hide">A</td>
-                        <td class="configuration rA c1"><input type="hidden" value="A" id="A1" name="pattern[A][0]"></td>
-                        <td class="configuration rA c2"><input type="hidden" value="A" id="A2" name="pattern[A][1]"></td>
-                        <td class="configuration rA c3"><input type="hidden" value="A" id="A3" name="pattern[A][2]"></td>
+                        <td class="configuration"><input type="hidden" value="A" name="pattern[A][0]"></td>
+                        <td class="configuration"><input type="hidden" value="A" name="pattern[A][1]"></td>
+                        <td class="configuration"><input type="hidden" value="A" name="pattern[A][2]"></td>
                     </tr>
 
                     <tr class="character" id="B">
-                        <td class="role hide">B</td>
-                        <td class="configuration rB c1"><input type="hidden" value="A" id="B1" name="pattern[B][0]"></td>
-                        <td class="configuration rB c2"><input type="hidden" value="A" id="B2" name="pattern[B][1]"></td>
-                        <td class="configuration rB c3"><input type="hidden" value="A" id="B3" name="pattern[B][2]"></td>
+                        <td class="configuration"><input type="hidden" value="A" name="pattern[B][0]"></td>
+                        <td class="configuration"><input type="hidden" value="A" name="pattern[B][1]"></td>
+                        <td class="configuration"><input type="hidden" value="A" name="pattern[B][2]"></td>
                     </tr>
                     <tr class="character" id="C">
-                        <td class="role hide">C</td>
-                        <td class="configuration rC c1"><input type="hidden" value="A" id="C1" name="pattern[C][0]"></td>
-                        <td class="configuration rC c2"><input type="hidden" value="A" id="C2" name="pattern[C][1]"></td>
-                        <td class="configuration rC c3"><input type="hidden" value="A" id="C3" name="pattern[C][2]"></td>
+                        <td class="configuration"><input type="hidden" value="A" name="pattern[C][0]"></td>
+                        <td class="configuration"><input type="hidden" value="A" name="pattern[C][1]"></td>
+                        <td class="configuration"><input type="hidden" value="A" name="pattern[C][2]"></td>
                     </tr>
                 </tbody>
             </table>

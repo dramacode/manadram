@@ -1,7 +1,8 @@
 <?php
 function getDates($files){
     foreach ($files as $file) {
-    $dates[] = biblio(basename($file, ".xml"))["date"];
+    $d = biblio(basename($file, ".xml"));
+    $dates[] = $d["date"];
     }
     $end = max($dates);
     $i = min($dates);

@@ -222,7 +222,9 @@ label {
 #table-results .fltrow td:nth-child(1) input,#table-results .fltrow td:nth-child(2) input,#table-results .fltrow td:nth-child(3) input {
 	display:none;
 }
-
+#corpus .fltrow td:nth-child(1) input,#corpus .fltrow td:nth-child(2) input,#corpus .fltrow td:nth-child(3) input {
+	display:none;
+}
 /*
 table#table-results tbody,table#table-results thead {
 	display:block;
