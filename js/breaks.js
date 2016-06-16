@@ -7,7 +7,10 @@
         var scene = location.search;
         if (scene.indexOf("&scene=") > 0) {
             scene = scene.substring(scene.indexOf("&scene=") + 7);
-            document.getElementById(scene).style = "background-color:yellow;"
+            scene = scene.split("+");
+            for (i=0;i<scene.length;i++) {
+                document.getElementById(scene[i]).style = "background-color:yellow;"                
+            }
         }
 
         var breaks = document.getElementById("confList").getElementsByClassName("break");

@@ -26,14 +26,13 @@ echo '<!DOCTYPE html>
 
 <body>';
 $lang = (isset($_GET["lang"]) and $_GET["lang"] == "en")? "en" : "fr";
-
 if (isset($_GET["play"])) {
-    doGet();
+    doGet($lang);
 }
-include("tpl/table.tpl.php");
+include("tpl/".$lang."/table.tpl.php");
 echo '</body></html>';
 
-function doGet() {
+function doGet($lang) {
     $file = "http://dramacode.github.io/tcp5/" . $_GET["play"] . ".xml";
     $xsl = new DOMDocument();
     $xsl->load("tpl/".$lang."/table.xsl");

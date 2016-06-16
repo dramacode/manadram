@@ -21,7 +21,7 @@
         <tbody>
             <?php foreach($results as $id=>$result){?>
             <tr>
-                <td class="view-table"><a class="tooltip" title="Voir le tableau d'occupation scénique" target="_blank" href="table.php?play=<?php echo $result["play"];?>&scene=<?php echo $result["sceneId"];?>"><i class="fa fa-table"></i></a></td>
+                <td class="view-table"><a class="tooltip" title="Voir le tableau d'occupation scénique" target="_blank" href="table.php?play=<?php echo $result["play"];?>&scene=<?php echo $result["allocc"];?>"><i class="fa fa-table"></i></a></td>
                 <td class="view-text"><a class="tooltip" title="Voir le texte" target="_blank" href="http://www.theatre-classique.fr/pages/programmes/edition.php?t=../documents/<?php echo strtoupper($result["play"]);?>.xml#A<?php echo $result["act"];?>.S<?php echo $result["act"];?><?php echo $result["scene"];?>"><i class="fa fa-file-text-o"></i></a></td>
                 <td class="view-source"><a class="tooltip" title="Voir la source XML" target="_blank" href="http://dramacode.github.io/tcp5/<?php echo $result["play"];?>.xml"><i class="fa fa-file-code-o"></i></a></td>
                 <td class="author"><p><?php echo $result["author"];?></p></td>

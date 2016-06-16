@@ -79,7 +79,7 @@ function searchPattern($needle, $haystack, $dfields, $corpus, $fields) {
             $results[$key]["scene"] = $hay["id"]["scene"];
             $results[$key]["sceneId"] = $hay["id"]["sceneId"];
             $results[$key]["string"] = $hay["id"]["string"];
-
+             $results[$key]["allocc"] = $hay["id"]["sceneId"];
             if ($_POST["xpath"]["xpath-0"]) {
 	            
                 $dom = new DOMDocument();
@@ -107,7 +107,15 @@ function searchPattern($needle, $haystack, $dfields, $corpus, $fields) {
             }
         }
     }
-//             print_r($_POST);
+
+    foreach ($results as $key=>$result){
+        foreach ($results as $key2=>$result2){
+            if(($result2["play"] == $result["play"]) and ($result2["sceneId"] != $result["sceneId"])){
+                $results[$key]["allocc"].= "+".$result2["sceneId"];
+            }
+        }
+    }
+
     //OCCURRENCES
     $occurrences = array();
     $occurrences["n"] = count($results);
