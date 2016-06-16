@@ -169,17 +169,13 @@ function searchPattern($needle, $haystack, $dfields, $corpus, $fields) {
 
     //CSV
     $lustra = $fields["lustrum"];
-    $string = '"Date,Pourcentage\n"+';
+    //$csv = '"Date,Pourcentage\n"+';
+    $json = "";
     foreach ($tables["lustrum"] as $key=>$lustrum) {
-        //$n = (isset($tables["lustrum"][$key])) ? $tables["lustrum"][$key]["percentage"] : 0;
-        $string.= '"' . substr($key, 0, 4) . ',' . $lustrum["percentage"] . '\n" +';
+        //$csv.= '"' . substr($key, 0, 4) . ',' . $lustrum["percentage"] . '\n" +';
+        $json .= "['".$key."', ".($lustrum["percentage"]/100).",".$fields["lustrum"][$key]["value"]."],";
     }
-    $json = "['a',  -.5,  5.7],
-        ['b',  -.4,  6.7],
-        ['c',  -.3,  7.7],";
-    $string = rtrim($string, "+");
-    $csv = $string;
-    //echo $csv;
+    //$csv = rtrim($csv, "+");
     return array(
         "patab" => $patab,
         "results" => $results,

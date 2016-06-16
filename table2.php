@@ -25,6 +25,7 @@ echo '<!DOCTYPE html>
 </head>
 
 <body>';
+$lang = (isset($_GET["lang"]) and $_GET["lang"] == "en") ? "en" : "fr";
 
 if (isset($_GET["play"])) {
     doGet();
@@ -35,7 +36,7 @@ echo '</body></html>';
 function doGet() {
     $file = "../tcp5/" . $_GET["play"] . ".xml";
     $xsl = new DOMDocument();
-    $xsl->load("table.xsl");
+    $xsl->load("tpl/".$lang."/table.xsl");
     $inputdom = new DomDocument();
     $inputdom->load($file);
     $proc = new XSLTProcessor();

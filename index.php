@@ -18,7 +18,6 @@ echo '<!DOCTYPE html>
         <script type="text/javascript" src="js/excelexport/dist/jquery.battatech.excelexport.min.js"></script>
         <script type="text/javascript" src="js/dygraph/dygraph-combined.js"></script>
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript" src="js/main.js"> </script>
     <script type="text/javascript" src="js/results.js"></script>
 <script type="text/javascript" src="js/export.js"></script>
 
@@ -33,7 +32,15 @@ echo '<!DOCTYPE html>
 </head>
 
 <body>';
-include ("tpl/header.tpl.php");
+
+if (isset($_GET["author"]) and $_GET["author"] == "corneillep") {
+    include ("corneillep/corpus.php");
+} else {
+    include ("data/corpus.php");
+}
+$lang = (isset($_GET["lang"]) and $_GET["lang"] == "en")? "en" : "fr";
+include ("tpl/".$lang."/header.tpl.php");
+include ("tpl/".$lang."/corpus.tpl.php");
 
 //$files est passé à doPost et à form.tpl
 
@@ -48,23 +55,15 @@ include ("tpl/header.tpl.php");
 
 if (isset($_POST["post"])) {
 
-    //echo "<pre>";print_r($_POST);
-    doPost($files, $corpus, $fields);
+    doPost($files, $corpus, $fields, $lang);
 
-    //echo $b;
-    
+} else {
+    echo '<script type="text/javascript" src="js/main.js"> </script>';
+    include ("tpl/".$lang."/form.tpl.php");
 }
-    if (isset($_GET["author"]) and $_GET["author"] == "corneillep") {
-        include ("corneillep/corpus.php");
-    } else {
-        include ("data/corpus.php");
-    }
-//echo '</div></div>';
-include ("tpl/corpus.tpl.php");
-include ("tpl/form.tpl.php");
 echo '</body></html>';
 
-function doPost($files, $corpus, $fields) {
+function doPost($files, $corpus, $fields, $lang) {
 
     $a = microtime(true);
 
@@ -92,15 +91,16 @@ function doPost($files, $corpus, $fields) {
     $folder = (isset($_GET["author"]) and $_GET["author"] == "corneillep") ? "corneillep" : "data";
     $haystack = array();
     $fields = array();
+    
     if (isset($_GET["author"]) and $_GET["author"] == "corneillep") {
         include ("corneillep/corpus.php");
-        include ("corneillep/fields".$n.".php");
-        include ("corneillep/haystack" . $n . $options .  ".php");
+        include ("corneillep/fields" . $n . ".php");
+        include ("corneillep/haystack" . $n . $options . ".php");
         $fields = $fields[$n];
         $haystack = $haystack[$n][$options];
     } else {
         include ("data/corpus.php");
-        include ("data/fields".$n.".php");
+        include ("data/fields" . $n . ".php");
         include ("data/haystack" . $n . $options . ".php");
         $fields = $fields[$n];
         $haystack = $haystack[$n][$options];
@@ -115,11 +115,8 @@ function doPost($files, $corpus, $fields) {
     $json = $searchResults["json"];
     $tables = $searchResults["tables"];
     $results = $searchResults["results"];
-    include ("tpl/patab.tpl.php");
-
-    //include ("tpl/occurrences.tpl.php");
-    include ("tpl/csv.tpl.php");
-    include ("tpl/tables.tpl.php");
+    include ("tpl/".$lang."/patab.tpl.ggl.php");
+    include ("tpl/".$lang."/tables.tpl.php");
 
     //include ("tpl/results.tpl.php");
     echo '</div>';

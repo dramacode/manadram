@@ -164,7 +164,14 @@ label {
 #trigger-info,#trigger-corpus, #reload {
 	float:right;
 }
-
+.lang{
+    float: right;
+    line-height:1.8;
+    font-size: 19px;
+    /*font-weight: bold;*/
+    text-decoration: none;
+    
+}
 #header {
 	margin:2% 3%;
 }
@@ -269,7 +276,7 @@ table#table-results tbody {
 p,li {
 	text-align:justify;
 }
-
+.res p{text-align: left;}
 #table-corpus{
 	margin:auto;
 }
@@ -283,7 +290,7 @@ p,li {
 }*/
 
 #tables div.table {margin:10px 0;}
-#graphdiv{width:100%;height:200px;}
+/*#graphdiv{width:100%;}*/
 #tables div table {margin:auto;padding:10px 0;}
 #graphcontainer{float: right;margin-left: 50px;width: 50%;margin-right: 3%;}
 #graphcontainer p{text-align: center;}
@@ -294,14 +301,14 @@ p,li {
 	right:10%;
 }
 #patab-table{float: left;margin-right:15px;}
-#div-patab-info{padding-top:30px;margin-left:3%;}
+#div-patab-info{padding-top:100px;margin-left:3%;width:50%;}
 #tables{height:100%;}
 #tables div.table{height: 80% !important;overflow: scroll;}
 .res, .dygraph-label, .dygraph-axis-label{font-size: 12px;}
 .res td.author{width: 120px;max-width: 120px;}
-.res td.title{width:140px;max-width:120px;}
-.res td.genre{width: 150px;
-	max-width: 150px;}
+.res td.title{width:150px;max-width:150px;}
+.res td.genre{width: 140px;
+	max-width: 140px;}
 .res td.xpath{width:150px;max-width:150px;}
 .res td.date{width: 70px;
 	max-width: 70px;}
@@ -327,3 +334,4 @@ thead .fa{margin-right:5px !important;}
 
 .scene a{text-decoration: none;color: black;}
 .scene:hover{background-color: lightgrey;}
+.fltrow td, .fltrow{background-color: inherit !important; /*border-left: none !important;*/}
