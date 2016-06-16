@@ -334,4 +334,5 @@ thead .fa{margin-right:5px !important;}
 
 .scene a{text-decoration: none;color: black;}
 .scene:hover{background-color: lightgrey;}
-.fltrow td, .fltrow{background-color: inherit !important; /*border-left: none !important;*/}
+.fltrow td, .fltrow{background-color: inherit !important; border-left: none !important;border-right: none !important;}
+tr.fltrow{border-left:1px solid #ccc !important;border-right:1px solid #ccc !important;}
