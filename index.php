@@ -39,8 +39,9 @@ if (isset($_GET["author"]) and $_GET["author"] == "corneillep") {
     include ("data/corpus.php");
 }
 $lang = (isset($_GET["lang"]) and $_GET["lang"] == "en")? "en" : "fr";
-include ("tpl/".$lang."/header.tpl.php");
-include ("tpl/".$lang."/corpus.tpl.php");
+include ("lang/".$lang.".php");
+include ("tpl/header.tpl.php");
+include ("tpl/corpus.tpl.php");
 
 //$files est passé à doPost et à form.tpl
 
@@ -55,16 +56,17 @@ include ("tpl/".$lang."/corpus.tpl.php");
 
 if (isset($_POST["post"])) {
 
-    doPost($files, $corpus, $fields, $lang);
+    doPost($files, $corpus, $fields);
 
 } else {
     echo '<script type="text/javascript" src="js/main.js"> </script>';
-    include ("tpl/".$lang."/form.tpl.php");
+    include ("tpl/form.tpl.php");
 }
+include("tpl/footer.tpl.php");
 echo '</body></html>';
 
-function doPost($files, $corpus, $fields, $lang) {
-
+function doPost($files, $corpus, $fields) {
+    
     $a = microtime(true);
 
     //echo "<pre>";print_r($haystack);
@@ -115,8 +117,8 @@ function doPost($files, $corpus, $fields, $lang) {
     $json = $searchResults["json"];
     $tables = $searchResults["tables"];
     $results = $searchResults["results"];
-    include ("tpl/".$lang."/patab.tpl.ggl.php");
-    include ("tpl/".$lang."/tables.tpl.php");
+    include ("tpl/patab.tpl.ggl.php");
+    include ("tpl/tables.tpl.php");
 
     //include ("tpl/results.tpl.php");
     echo '</div>';

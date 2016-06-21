@@ -1,5 +1,7 @@
 <?php
 error_reporting(0);
+$lang = (isset($_GET["lang"]) and $_GET["lang"] == "en")? "en" : "fr";
+include ("lang/".$lang.".php");
 include("data/corpus.php");
 echo '<!DOCTYPE html>
 
@@ -25,17 +27,16 @@ echo '<!DOCTYPE html>
 </head>
 
 <body>';
-$lang = (isset($_GET["lang"]) and $_GET["lang"] == "en")? "en" : "fr";
 if (isset($_GET["play"])) {
     doGet($lang);
 }
-include("tpl/".$lang."/table.tpl.php");
+include("tpl/table.tpl.php");
 echo '</body></html>';
 
 function doGet($lang) {
     $file = "http://dramacode.github.io/tcp5/" . $_GET["play"] . ".xml";
     $xsl = new DOMDocument();
-    $xsl->load("tpl/".$lang."/table.xsl");
+    $xsl->load("tpl/table.".$lang.".xsl");
     $inputdom = new DomDocument();
     $inputdom->load($file);
     $proc = new XSLTProcessor();

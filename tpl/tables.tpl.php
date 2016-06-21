@@ -21,7 +21,7 @@
         <tbody>
             <?php foreach($results as $id=>$result){?>
             <tr>
-                <td class="view-table"><a class="tooltip" title="Voir le tableau d'occupation scénique" target="_blank" href="table.php?play=<?php echo $result["play"];?>&scene=<?php echo $result["allocc"];?>"><i class="fa fa-table"></i></a></td>
+                <td class="view-table"><a class="tooltip" title="Voir le tableau d'occupation scénique" target="_blank" href="table.php?play=<?php echo $result["play"];?>&scene=<?php echo trim($tables["play"][$result["play"]]["allocc"], "+");?>"><i class="fa fa-table"></i></a></td>
                 <td class="view-text"><a class="tooltip" title="Voir le texte" target="_blank" href="http://www.theatre-classique.fr/pages/programmes/edition.php?t=../documents/<?php echo strtoupper($result["play"]);?>.xml#A<?php echo $result["act"];?>.S<?php echo $result["act"];?><?php echo $result["scene"];?>"><i class="fa fa-file-text-o"></i></a></td>
                 <td class="view-source"><a class="tooltip" title="Voir la source XML" target="_blank" href="http://dramacode.github.io/tcp5/<?php echo $result["play"];?>.xml"><i class="fa fa-file-code-o"></i></a></td>
                 <td class="author"><p><?php echo $result["author"];?></p></td>
@@ -88,6 +88,10 @@
             <table class="tableFilter tableExport" id="play">
                 <thead>
                     <tr>
+                                        <td class="view-table"></td>
+                <td class="view-text"></td>
+                <td class="view-source"></td>
+
                         <td><i class="fa fa-sort"></i>Auteur</td>
                         <td><i class="fa fa-sort"></i>Titre</td>
                         <td><i class="fa fa-sort tooltip" title="Nombre d'occurrences par pièce""></i>Occurrences</td>
@@ -97,6 +101,9 @@
                 <tbody>
                     <?php foreach($tables["play"] as $fkey => $fieldResult){ ?>
                     <tr>
+                <td class="view-table"><a class="tooltip" title="Voir le tableau d'occupation scénique" target="_blank" href="table.php?play=<?php echo $fkey;?>&scene=<?php echo trim($tables["play"][$fkey]["allocc"], "+");?>"><i class="fa fa-table"></i></a></td>
+                <td class="view-text"><a class="tooltip" title="Voir le texte" target="_blank" href="http://www.theatre-classique.fr/pages/programmes/edition.php?t=../documents/<?php echo strtoupper($fkey);?>.xml;?><?php echo $result["scene"];?>"><i class="fa fa-file-text-o"></i></a></td>
+                <td class="view-source"><a class="tooltip" title="Voir la source XML" target="_blank" href="http://dramacode.github.io/tcp5/<?php echo $fkey;?>.xml"><i class="fa fa-file-code-o"></i></a></td>
                         <td><?php echo $corpus[$fkey]["author"];?></td>
                         <td><?php echo $corpus[$fkey]["title"];?></td>
                         <td><?php echo $fieldResult["n"];?></td>

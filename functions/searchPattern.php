@@ -108,13 +108,13 @@ function searchPattern($needle, $haystack, $dfields, $corpus, $fields) {
         }
     }
 
-    foreach ($results as $key=>$result){
-        foreach ($results as $key2=>$result2){
-            if(($result2["play"] == $result["play"]) and ($result2["sceneId"] != $result["sceneId"])){
-                $results[$key]["allocc"].= "+".$result2["sceneId"];
-            }
-        }
-    }
+    //foreach ($results as $key=>$result){
+    //    foreach ($results as $key2=>$result2){
+    //        if(($result2["play"] == $result["play"]) and ($result2["sceneId"] != $result["sceneId"])){
+    //            $results[$key]["allocc"].= "+".$result2["sceneId"];
+    //        }
+    //    }
+    //}
 
     //OCCURRENCES
     $occurrences = array();
@@ -151,10 +151,20 @@ function searchPattern($needle, $haystack, $dfields, $corpus, $fields) {
             $array[$kfield][$valueId]["n"] = $tables[$kfield][$valueId]["n"];
             $array[$kfield][$valueId]["total"] = $fields[$kfield][$valueId]["value"];
             $array[$kfield][$valueId]["percentage"] = ($fields[$kfield][$valueId]["value"] > 0) ? round((($array[$kfield][$valueId]["n"] / $fields[$kfield][$valueId]["value"]) * 100), 2): "false";
+            $array[$kfield][$valueId]["allocc"] = "";
         }
     }
     $tables = $array;
     //gŽrer les XPath
+    foreach ($results as $key=>$result){
+        foreach ($results as $key2=>$result2){
+            //echo "<br/>".$result2["play"]."-".$tables["play"][$result["play"]]["allocc"]. "-" .$result2["sceneId"];
+            if(($result2["play"] == $result["play"]) and (strpos($tables["play"][$result["play"]]["allocc"], $result2["sceneId"]) ===false)){
+                //echo "a";
+                $tables["play"][$result["play"]]["allocc"] .= $result2["sceneId"]."+";
+            }
+        }
+    }
     
     foreach($results as $result){
         $i=0;
@@ -177,13 +187,13 @@ function searchPattern($needle, $haystack, $dfields, $corpus, $fields) {
 
     //CSV
     $lustra = $fields["lustrum"];
-    //$csv = '"Date,Pourcentage\n"+';
+    $csv = '"Date,Pourcentage\n"+';
     $json = "";
     foreach ($tables["lustrum"] as $key=>$lustrum) {
-        //$csv.= '"' . substr($key, 0, 4) . ',' . $lustrum["percentage"] . '\n" +';
+        $csv.= '"' . substr($key, 0, 4) . ',' . $lustrum["percentage"] . '\n" +';
         $json .= "['".$key."', ".($lustrum["percentage"]/100).",".$fields["lustrum"][$key]["value"]."],";
     }
-    //$csv = rtrim($csv, "+");
+    $csv = rtrim($csv, "+");
     return array(
         "patab" => $patab,
         "results" => $results,

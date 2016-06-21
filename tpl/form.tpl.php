@@ -37,7 +37,7 @@
 
             <div class="submit-wrapper">
                 <input type="hidden" name="post">
-                <input class="submit" type="submit" value="Rechercher">
+                <input class="submit" type="submit" value="<?php echo SEARCH;?>">
             </div>
             </div>
     </div>
@@ -48,12 +48,12 @@
             <div class="br-settings"></div>
             <div id="options">
                 <input class="option-button" type="checkbox" id="group" name="group">
-                <label for="group" class="tooltip" title='"AB/A" trouve "ABC/AB" <br/>("A" et "B" représentent un groupe homogène de personnages dont les entrées et les sorties sont solidaires).'><i class="fa fa-group"></i>Grouper les personnages</label>
+                <label for="group" class="tooltip" title='"AB/A" trouve "ABC/AB" <br/>("A" et "B" représentent un groupe homogène de personnages dont les entrées et les sorties sont solidaires).'><i class="fa fa-group"></i><?php echo GROUP;?></label>
                 <input class="option-button" type="checkbox" id="ignore_confident" name="ignore_confident">
-                <label for="ignore_confident" class="tooltip" title='"AB/A" trouve "AB/AC" si C est un confident.'><i class="fa fa-user-times"></i>Ignorer les confidents</label>
+                <label for="ignore_confident" class="tooltip" title='"AB/A" trouve "AB/AC" si C est un confident.'><i class="fa fa-user-times"></i><?php echo CONFIDANTS;?></label>
             </div>
             <div id="xpath-configuration">
-                <p>Évaluer une requête XPath</p>
+                <p><?php echo XPATH;?></p>
                 <div id="xpath-fields-configuration">
                     <input type="text" name="xpath[xpath-0]" class="xpath-field-configuration">
                 </div>

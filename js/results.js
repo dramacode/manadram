@@ -1,10 +1,11 @@
- (function($) {
-        $(document).ready(function() {
-$( "#tables" ).accordion({
+(function($) {
+$(document).ready(function() {
+
+    $( "#tables" ).accordion({
       collapsible: true,
       active: false
     });
-
+    
     var tfConfig = {
     base_path: 'TableFilter/dist/tablefilter/',
      auto_filter: true,

@@ -2,7 +2,8 @@ body,input {
 	font-family:Verdana;
 	font-size:16px;
 }
-
+html, body{height: 96%;}
+#form{height: 80%;}
 table {
 	border-collapse:collapse;
 }
@@ -125,7 +126,7 @@ label {
 /*position: absolute;*/
 /*left:0;*/
 /*top:20%;*/
-	padding:5%;
+	padding:15%;
 }
 
 #settings {
@@ -160,12 +161,11 @@ label {
 #pattern td:hover {
 	background-color:#f2f2f2;
 }
+.menu{float: right;}
 
-#trigger-info,#trigger-corpus, #reload {
-	float:right;
-}
+div.lang{float: right;
+margin: 2% 4%;}
 .lang{
-    float: right;
     line-height:1.8;
     font-size: 19px;
     /*font-weight: bold;*/
@@ -230,6 +230,9 @@ label {
 	display:none;
 }
 #corpus .fltrow td:nth-child(1) input,#corpus .fltrow td:nth-child(2) input,#corpus .fltrow td:nth-child(3) input {
+	display:none;
+}
+#play .fltrow td:nth-child(1) input,#play .fltrow td:nth-child(2) input,#play .fltrow td:nth-child(3) input {
 	display:none;
 }
 /*
@@ -319,7 +322,7 @@ p,li {
 p{margin:0;}
 #settings p{margin: 25px 0 15px 0;}
 thead .fa{margin-right:5px !important;}
-#tables{padding-top: 30px;padding-bottom: 200px;}
+#tables{padding-top: 30px;padding-bottom: 60px;}
 
 /*
 #patab{display: table;}
@@ -329,7 +332,7 @@ thead .fa{margin-right:5px !important;}
 #patab-results
 */
 
-#form{width:75%;margin:auto;}
+#form{width:70%;margin:auto;}
 #info img{display: block;margin: auto;margin-top:20px;margin-bottom: 20px;}
 
 .scene a{text-decoration: none;color: black;}
