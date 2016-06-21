@@ -9,6 +9,7 @@ $(document).ready(function() {
     var tfConfig = {
     base_path: 'TableFilter/dist/tablefilter/',
      auto_filter: true,
+     loader:true,
      rows_counter: true,
         watermark: "Filtrer",
         //col_widths: ['25px', '25px', '200px', '200px', '200px', '200px', '200px', '200px' ],
