@@ -28,6 +28,7 @@ echo '<!DOCTYPE html>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/form.css">
     <link rel="stylesheet" type="text/css" href="css/table.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
      <title>Moteur d\'analyse dramaturgique</title>
 </head>
 

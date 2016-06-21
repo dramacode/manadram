@@ -23,6 +23,8 @@ echo '<!DOCTYPE html>
         <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/table.css">
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
     <title>'.$corpus[$_GET["play"]]["title"].'</title>
 </head>
 
