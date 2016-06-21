@@ -34,7 +34,7 @@ include("tpl/table.tpl.php");
 echo '</body></html>';
 
 function doGet($lang) {
-    $file = "http://dramacode.github.io/tcp5/" . $_GET["play"] . ".xml";
+    $file = "../tcp5/" . $_GET["play"] . ".xml";
     $xsl = new DOMDocument();
     $xsl->load("tpl/table.".$lang.".xsl");
     $inputdom = new DomDocument();
