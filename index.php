@@ -96,13 +96,11 @@ function doPost($files, $corpus, $fields) {
     $fields = array();
     
     if (isset($_GET["author"]) and $_GET["author"] == "corneillep") {
-        include ("corneillep/corpus.php");
         include ("corneillep/fields" . $n . ".php");
         include ("corneillep/haystack" . $n . $options . ".php");
         $fields = $fields[$n];
         $haystack = $haystack[$n][$options];
     } else {
-        include ("data/corpus.php");
         include ("data/fields" . $n . ".php");
         include ("data/haystack" . $n . $options . ".php");
         $fields = $fields[$n];

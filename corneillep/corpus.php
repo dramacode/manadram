@@ -1,7 +1,7 @@
 <?php $corpus = array (
   'corneillep_veuve34' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'La Veuve',
     'date' => 1632,
     'lustrum' => '1631-1635',
@@ -9,7 +9,7 @@
     'play' => 'corneillep_veuve34',
     'titleId' => 'LaVeuve',
     'genreId' => 'Comedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'PHILISTE' => 'PHILISTE',
@@ -28,7 +28,7 @@
   ),
   'corneillep_toison' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'La Conquête de la Toison d\'or',
     'date' => 1660,
     'lustrum' => '1656-1660',
@@ -36,7 +36,7 @@
     'play' => 'corneillep_toison',
     'titleId' => 'LaConquetedelaToisondor',
     'genreId' => 'Tragedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'MEDEE' => 'MÉDÉE',
@@ -70,7 +70,7 @@
   ),
   'corneillep_tite' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'Tite et Bérénice',
     'date' => 1670,
     'lustrum' => '1666-1670',
@@ -78,7 +78,7 @@
     'play' => 'corneillep_tite',
     'titleId' => 'TiteetBerenice',
     'genreId' => 'Comedieheroique',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'DOMITIE' => 'DOMITIE',
@@ -93,7 +93,7 @@
   ),
   'corneillep_theodore' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'Théodore',
     'date' => 1645,
     'lustrum' => '1641-1645',
@@ -101,7 +101,7 @@
     'play' => 'corneillep_theodore',
     'titleId' => 'Theodore',
     'genreId' => 'Tragedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'PLACIDE' => 'PLACIDE',
@@ -117,7 +117,7 @@
   ),
   'corneillep_surena' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'Suréna',
     'date' => 1674,
     'lustrum' => '1671-1675',
@@ -125,7 +125,7 @@
     'play' => 'corneillep_surena',
     'titleId' => 'Surena',
     'genreId' => 'Tragedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'EURYDICE' => 'EURYDICE',
@@ -139,7 +139,7 @@
   ),
   'corneillep_suivante' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'La Suivante',
     'date' => 1634,
     'lustrum' => '1631-1635',
@@ -147,7 +147,7 @@
     'play' => 'corneillep_suivante',
     'titleId' => 'LaSuivante',
     'genreId' => 'Comedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'DAMON' => 'DAMON',
@@ -164,7 +164,7 @@
   ),
   'corneillep_suitementeur' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'La Suite du Menteur',
     'date' => 1644,
     'lustrum' => '1641-1645',
@@ -172,7 +172,7 @@
     'play' => 'corneillep_suitementeur',
     'titleId' => 'LaSuiteduMenteur',
     'genreId' => 'Comedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'CLITON' => 'CLITON',
@@ -186,7 +186,7 @@
   ),
   'corneillep_sophonisbe' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'Sophonisbe',
     'date' => 1663,
     'lustrum' => '1661-1665',
@@ -194,7 +194,7 @@
     'play' => 'corneillep_sophonisbe',
     'titleId' => 'Sophonisbe',
     'genreId' => 'Tragedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'BOCCHAR' => 'BOCCHAR',
@@ -214,7 +214,7 @@
   ),
   'corneillep_sertorius' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'Sertorius',
     'date' => 1662,
     'lustrum' => '1661-1665',
@@ -222,7 +222,7 @@
     'play' => 'corneillep_sertorius',
     'titleId' => 'Sertorius',
     'genreId' => 'Tragedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'PERPENNA' => 'PERPENNA',
@@ -238,7 +238,7 @@
   ),
   'corneillep_rodogune' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'Rodogune',
     'date' => 1644,
     'lustrum' => '1641-1645',
@@ -246,7 +246,7 @@
     'play' => 'corneillep_rodogune',
     'titleId' => 'Rodogune',
     'genreId' => 'Tragedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'LAONICE' => 'LAONICE',
@@ -260,7 +260,7 @@
   ),
   'corneillep_pulcherie' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'Pulchérie',
     'date' => 1672,
     'lustrum' => '1671-1675',
@@ -268,7 +268,7 @@
     'play' => 'corneillep_pulcherie',
     'titleId' => 'Pulcherie',
     'genreId' => 'Comedieheroique',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'PULCHERIE' => 'PULCHÉRIE',
@@ -281,7 +281,7 @@
   ),
   'corneillep_polyeucte' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'Polyeucte',
     'date' => 1643,
     'lustrum' => '1641-1645',
@@ -289,7 +289,7 @@
     'play' => 'corneillep_polyeucte',
     'titleId' => 'Polyeucte',
     'genreId' => 'Tragedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'NEARQUE' => 'NÉARQUE',
@@ -305,7 +305,7 @@
   ),
   'corneillep_placeroyale' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'La Place Royale',
     'date' => 1634,
     'lustrum' => '1631-1635',
@@ -313,7 +313,7 @@
     'play' => 'corneillep_placeroyale',
     'titleId' => 'LaPlaceRoyale',
     'genreId' => 'Comedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'ANGELIQUE' => 'ANGÉLIQUE',
@@ -328,7 +328,7 @@
   ),
   'corneillep_pertharite' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'Pertharite',
     'date' => 1651,
     'lustrum' => '1651-1655',
@@ -336,7 +336,7 @@
     'play' => 'corneillep_pertharite',
     'titleId' => 'Pertharite',
     'genreId' => 'Tragedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'RODELINDE' => 'RODELINDE',
@@ -350,7 +350,7 @@
   ),
   'corneillep_othon' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'Othon',
     'date' => 1664,
     'lustrum' => '1661-1665',
@@ -358,7 +358,7 @@
     'play' => 'corneillep_othon',
     'titleId' => 'Othon',
     'genreId' => 'Tragedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'ALBIN' => 'ALBIN',
@@ -377,7 +377,7 @@
   ),
   'corneillep_oedipe' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'Oedipe',
     'date' => 1659,
     'lustrum' => '1656-1660',
@@ -385,7 +385,7 @@
     'play' => 'corneillep_oedipe',
     'titleId' => 'Oedipe',
     'genreId' => 'Tragedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'THESEE' => 'THÉSÉE',
@@ -403,7 +403,7 @@
   ),
   'corneillep_nicomede' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'Nicomède',
     'date' => 1650,
     'lustrum' => '1646-1650',
@@ -411,7 +411,7 @@
     'play' => 'corneillep_nicomede',
     'titleId' => 'Nicomede',
     'genreId' => 'Tragedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'LAODICE' => 'LAODICE',
@@ -426,7 +426,7 @@
   ),
   'corneillep_mortpompee' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'La Mort de Pompée',
     'date' => 1644,
     'lustrum' => '1641-1645',
@@ -434,7 +434,7 @@
     'play' => 'corneillep_mortpompee',
     'titleId' => 'LaMortdePompee',
     'genreId' => 'Tragedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'PTOLEMEE' => 'PTOLÉMÉE',
@@ -452,7 +452,7 @@
   ),
   'corneillep_menteur' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'Le Menteur',
     'date' => 1644,
     'lustrum' => '1641-1645',
@@ -460,7 +460,7 @@
     'play' => 'corneillep_menteur',
     'titleId' => 'LeMenteur',
     'genreId' => 'Comedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'DORANTE' => 'DORANTE',
@@ -477,7 +477,7 @@
   ),
   'corneillep_melite' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'Mélite',
     'date' => 1630,
     'lustrum' => '1626-1630',
@@ -485,7 +485,7 @@
     'play' => 'corneillep_melite',
     'titleId' => 'Melite',
     'genreId' => 'Comedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'ERASTE' => 'ERASTE',
@@ -500,7 +500,7 @@
   ),
   'corneillep_medee39' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'Médée',
     'date' => 1635,
     'lustrum' => '1631-1635',
@@ -508,7 +508,7 @@
     'play' => 'corneillep_medee39',
     'titleId' => 'Medee',
     'genreId' => 'Tragedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'POLLUX' => 'POLLUX',
@@ -524,7 +524,7 @@
   ),
   'corneillep_illusioncomique' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'L\'Illusion comique',
     'date' => 1636,
     'lustrum' => '1636-1640',
@@ -532,7 +532,7 @@
     'play' => 'corneillep_illusioncomique',
     'titleId' => 'LIllusioncomique',
     'genreId' => 'Comedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'DORANTE' => 'DORANTE',
@@ -551,7 +551,7 @@
   ),
   'corneillep_horace' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'Horace',
     'date' => 1640,
     'lustrum' => '1636-1640',
@@ -559,7 +559,7 @@
     'play' => 'corneillep_horace',
     'titleId' => 'Horace',
     'genreId' => 'Tragedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'SABINE' => 'SABINE',
@@ -576,7 +576,7 @@
   ),
   'corneillep_heraclius' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'Héraclius',
     'date' => 1646,
     'lustrum' => '1646-1650',
@@ -584,7 +584,7 @@
     'play' => 'corneillep_heraclius',
     'titleId' => 'Heraclius',
     'genreId' => 'Tragedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'PHOCAS' => 'PHOCAS',
@@ -601,7 +601,7 @@
   ),
   'corneillep_galeriedupalais' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'La Galerie du palais',
     'date' => 1633,
     'lustrum' => '1631-1635',
@@ -609,7 +609,7 @@
     'play' => 'corneillep_galeriedupalais',
     'titleId' => 'LaGaleriedupalais',
     'genreId' => 'Comedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'ARONTE' => 'ARONTE',
@@ -628,7 +628,7 @@
   ),
   'corneillep_donsanche' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'Don Sanche d\'Aragon',
     'date' => 1649,
     'lustrum' => '1646-1650',
@@ -636,7 +636,7 @@
     'play' => 'corneillep_donsanche',
     'titleId' => 'DonSanchedAragon',
     'genreId' => 'Comedieheroique',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'LEONOR' => 'DONA LÉONOR',
@@ -653,7 +653,7 @@
   ),
   'corneillep_clitandre' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'Clitandre',
     'date' => 1631,
     'lustrum' => '1631-1635',
@@ -661,7 +661,7 @@
     'play' => 'corneillep_clitandre',
     'titleId' => 'Clitandre',
     'genreId' => 'Tragedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'CALISTE' => 'CALISTE',
@@ -684,7 +684,7 @@
   ),
   'corneillep_cinna' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'Cinna',
     'date' => 1642,
     'lustrum' => '1641-1645',
@@ -692,7 +692,7 @@
     'play' => 'corneillep_cinna',
     'titleId' => 'Cinna',
     'genreId' => 'Tragedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'EMILIE' => 'ÉMILIE',
@@ -708,7 +708,7 @@
   ),
   'corneillep_cid37' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'Le Cid',
     'date' => 1637,
     'lustrum' => '1636-1640',
@@ -716,7 +716,7 @@
     'play' => 'corneillep_cid37',
     'titleId' => 'LeCid',
     'genreId' => 'Tragi-comedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'ELVIRE' => 'ELVIRE',
@@ -735,7 +735,7 @@
   ),
   'corneillep_attila' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'Attila',
     'date' => 1667,
     'lustrum' => '1666-1670',
@@ -743,7 +743,7 @@
     'play' => 'corneillep_attila',
     'titleId' => 'Attila',
     'genreId' => 'Tragedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'ATTILA' => 'ATTILA',
@@ -757,7 +757,7 @@
   ),
   'corneillep_andromede' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'Andromède',
     'date' => 1650,
     'lustrum' => '1646-1650',
@@ -765,7 +765,7 @@
     'play' => 'corneillep_andromede',
     'titleId' => 'Andromede',
     'genreId' => 'Tragedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'CASSIOPE' => 'CASSIOPE',
@@ -800,7 +800,7 @@
   ),
   'corneillep_agesilas' => 
   array (
-    'author' => 'Corneille',
+    'author' => 'Corneille, Pierre',
     'title' => 'Agésilas',
     'date' => 1666,
     'lustrum' => '1666-1670',
@@ -808,7 +808,7 @@
     'play' => 'corneillep_agesilas',
     'titleId' => 'Agesilas',
     'genreId' => 'Tragedie',
-    'authorId' => 'Corneille',
+    'authorId' => 'CorneillePierre',
     'roles' => 
     array (
       'AGLATIDE' => 'AGLATIDE',
