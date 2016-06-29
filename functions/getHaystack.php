@@ -1,7 +1,6 @@
 <?php
 
-function getHaystack($files, $n, $confidents, $group, $corpus) {
-
+function getHaystack($files, $n, $confidents, $group, $corpus, $all) {
     $dom = new DOMDocument();
     $haystack = array();
     foreach ($files as $file) {
@@ -90,7 +89,7 @@ function getHaystack($files, $n, $confidents, $group, $corpus) {
                     $next = $next->item(0);
                     $nextAct = $xp->evaluate("./ancestor::*[@type='act']", $next)->item(0)->getAttribute("xml:id");
                     
-                    if ($nextAct != $actId) {
+                    if ($nextAct != $actId and !$all) {
                         $true = false;
                     } else {
                         $persons[$i] = $xp->evaluate("./tei:person/@corresp", $next);
@@ -106,12 +105,11 @@ function getHaystack($files, $n, $confidents, $group, $corpus) {
                 }
                 $i++;
             }
-            
             if (!$true) {
                 unset($haystack[$fileName . "_" . $sceneId]);
                 continue;
             }
-           
+            
             foreach ($characters as $character) {
                 $haystack[$fileName . "_" . $sceneId]["pattern"][$character][0] = in_array($character, $persons[0]) ? 1 : 0;
                 ksort($haystack[$fileName . "_" . $sceneId]["pattern"][$character]);
@@ -129,23 +127,29 @@ function getHaystack($files, $n, $confidents, $group, $corpus) {
             //continue;
             //preview pattern
             $array = array();
+            $array2 = array();
             foreach ($haystack[$fileName . "_" . $sceneId]["pattern"] as $key => $character) {
                 $i = 0;
                 foreach ($character as $configuration) {
                     
                     if (!isset($array[$i])) {
                         $array[$i] = "";
+                        $array2[$i] = "";
                     }
                     
                     if ($configuration) {
                         $array[$i].= $corpus[$fileName]["roles"][str_replace("#", "", $key) ] . "-";
+                        $array2[$i].=$key.",";
                     }
                     $i++;
                 }
             }
+            $cpp = implode(";", $array2);
+            $cpp = trim(str_replace(",;", ";", $cpp) , ",");
             $string = implode("/", $array);
             $string = trim(str_replace("-/", "/", $string) , "-");
             $haystack[$fileName . "_" . $sceneId]["id"]["string"] = $string;
+            $haystack[$fileName . "_" . $sceneId]["id"]["string-id"] = $cpp;
 
             //remove stuff
             foreach ($haystack[$fileName . "_" . $sceneId]["pattern"] as $key => $character) {

@@ -39,7 +39,7 @@ $modes = array(
 $i = 1;
 while ($i < 11) {
     foreach ($modes as $key => $mode) {
-        $haystack = getHaystack($files, $i, $mode[0], $mode[1], $corpus);
+        $haystack = getHaystack($files, $i, $mode[0], $mode[1], $corpus, false);
         file_put_contents("data/haystack" . $i . $key . ".php", '<?php $haystack[' . $i . ']["' . $key . '"] = ' . var_export($haystack, true) . '; ?>');
         
         if ($key == "default") {
