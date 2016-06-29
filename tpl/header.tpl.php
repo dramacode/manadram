@@ -1,7 +1,7 @@
 <div id="header">
     <a href="http://obvil.paris-sorbonne.fr" class="logo"><img src="http://obvil.paris-sorbonne.fr/sites/default/files/logo.png"></a>
 
-    <div class="menu"><a href="#info" id="trigger-info" title="Documentation" class="tooltip-e fancybox"><i class="fa fa-question">&#160;</i></a><a href="#corpus" title="Corpus" id="trigger-corpus" class="tooltip-e fancybox"><i class="fa fa-database">&#160;</i></a><a href="." id="reload" title="New search" class="tooltip-e fancybox"><i class="fa fa-rotate-left">&#160;</i></a></div>
+    <div class="menu"><a href="#info" id="trigger-info" title="Aide et présentation du projet" class="tooltip-e fancybox"><i class="fa fa-question">&#160;</i></a><a href="#corpus" title="Corpus" id="trigger-corpus" class="tooltip-e fancybox"><i class="fa fa-database">&#160;</i></a><a href="." id="reload" title="Nouvelle recherche" class="tooltip-e fancybox"><i class="fa fa-rotate-left">&#160;</i></a></div>
 </div>
 
 <div style="display: none">
