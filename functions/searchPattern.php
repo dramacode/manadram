@@ -86,7 +86,7 @@ function searchPattern($needle, $haystack, $dfields, $corpus, $fields) {
 //                 $string = file_get_contents("http://dramacode.github.io/tcp5/" . $hay["id"]["play"] . ".xml");
 //                 echo $string;
                 //$dom->load("../tcp5/" . $hay["id"]["play"] . ".xml");
-                $dom->load("http://dramacode.github.io/tcp5/" . $hay["id"]["play"] . ".xml");
+                $dom->load("../tcp5/" . $hay["id"]["play"] . ".xml");
                 $xp = new DOMXPath($dom);
                 $xp->registerNamespace("tei", "http://www.tei-c.org/ns/1.0");
                 $conf = $dom->getElementById($results[$key]["sceneId"]);
