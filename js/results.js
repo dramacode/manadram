@@ -1,6 +1,10 @@
 (function($) {
 $(document).ready(function() {
-
+    $(".fancybox").fancybox({
+            'titlePosition': 'inside',
+            'transitionIn': 'none',
+            'transitionOut': 'none'
+        });
     $( "#tables" ).accordion({
       collapsible: true,
       active: false
@@ -46,3 +50,4 @@ $(document).ready(function() {
         
         });
 })(jQuery);
+

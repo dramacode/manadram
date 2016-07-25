@@ -120,7 +120,7 @@
           <xsl:variable name="role">
             <!--            <xsl:value-of select="."/> classer selon la castlist-->
             <xsl:choose>
-              <xsl:when test="//tei:role[@xml:id=$roleId] != ''">
+              <xsl:when test="//tei:role[@xml:id=$roleId]/text()">
                 <xsl:value-of select="//tei:role[@xml:id=$roleId]"/>
               </xsl:when>
               <xsl:otherwise>
