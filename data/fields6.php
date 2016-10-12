@@ -41,15 +41,20 @@
       'field' => 'Chevreau',
       'value' => 5,
     ),
+    'Corneille' => 
+    array (
+      'field' => 'Corneille',
+      'value' => 12,
+    ),
     'CorneillePierre' => 
     array (
       'field' => 'Corneille, Pierre',
-      'value' => 217,
+      'value' => 216,
     ),
     'CorneilleThomas' => 
     array (
       'field' => 'Corneille, Thomas',
-      'value' => 261,
+      'value' => 250,
     ),
     'Cyrano' => 
     array (
@@ -206,11 +211,6 @@
       'field' => 'Villiers',
       'value' => 8,
     ),
-    'dUrfe' => 
-    array (
-      'field' => 'd’Urfé',
-      'value' => 25,
-    ),
   ),
   'authorId' => 
   array (
@@ -254,15 +254,20 @@
       'field' => 'Chevreau',
       'value' => 5,
     ),
+    'Corneille' => 
+    array (
+      'field' => 'Corneille',
+      'value' => 12,
+    ),
     'CorneillePierre' => 
     array (
       'field' => 'CorneillePierre',
-      'value' => 217,
+      'value' => 216,
     ),
     'CorneilleThomas' => 
     array (
       'field' => 'CorneilleThomas',
-      'value' => 261,
+      'value' => 250,
     ),
     'Cyrano' => 
     array (
@@ -418,11 +423,6 @@
     array (
       'field' => 'Villiers',
       'value' => 8,
-    ),
-    'dUrfe' => 
-    array (
-      'field' => 'dUrfe',
-      'value' => 25,
     ),
   ),
   'title' => 
@@ -881,11 +881,6 @@
     array (
       'field' => 'La Suivante',
       'value' => 22,
-    ),
-    'LaSylvanire' => 
-    array (
-      'field' => 'La Sylvanire',
-      'value' => 25,
     ),
     'LaThebaide' => 
     array (
@@ -1438,7 +1433,7 @@
     'Comedie' => 
     array (
       'field' => 'Comédie',
-      'value' => 800,
+      'value' => 808,
     ),
     'Comedie-ballet' => 
     array (
@@ -1460,20 +1455,15 @@
       'field' => 'Pastorale',
       'value' => 21,
     ),
-    'Pastoraleheroique' => 
-    array (
-      'field' => 'Pastorale héroïque',
-      'value' => 25,
-    ),
     'Tragedie' => 
     array (
       'field' => 'Tragédie',
-      'value' => 421,
+      'value' => 408,
     ),
     'Tragi-comedie' => 
     array (
       'field' => 'Tragi-comédie',
-      'value' => 285,
+      'value' => 290,
     ),
   ),
   'genreId' => 
@@ -1481,7 +1471,7 @@
     'Comedie' => 
     array (
       'field' => 'Comedie',
-      'value' => 800,
+      'value' => 808,
     ),
     'Comedie-ballet' => 
     array (
@@ -1503,20 +1493,15 @@
       'field' => 'Pastorale',
       'value' => 21,
     ),
-    'Pastoraleheroique' => 
-    array (
-      'field' => 'Pastoraleheroique',
-      'value' => 25,
-    ),
     'Tragedie' => 
     array (
       'field' => 'Tragedie',
-      'value' => 421,
+      'value' => 408,
     ),
     'Tragi-comedie' => 
     array (
       'field' => 'Tragi-comedie',
-      'value' => 285,
+      'value' => 290,
     ),
   ),
   'play' => 
@@ -2566,11 +2551,6 @@
       'field' => 'tristan_parasite',
       'value' => 6,
     ),
-    'urfe_sylvanire' => 
-    array (
-      'field' => 'urfe_sylvanire',
-      'value' => 25,
-    ),
     'villiers_festindepierre' => 
     array (
       'field' => 'villiers_festindepierre',
@@ -2579,71 +2559,6 @@
   ),
   'date' => 
   array (
-    1617 => 
-    array (
-      'field' => 1617,
-      'value' => 25,
-    ),
-    1618 => 
-    array (
-      'field' => 1618,
-      'value' => 0,
-    ),
-    1619 => 
-    array (
-      'field' => 1619,
-      'value' => 0,
-    ),
-    1620 => 
-    array (
-      'field' => 1620,
-      'value' => 0,
-    ),
-    1621 => 
-    array (
-      'field' => 1621,
-      'value' => 0,
-    ),
-    1622 => 
-    array (
-      'field' => 1622,
-      'value' => 0,
-    ),
-    1623 => 
-    array (
-      'field' => 1623,
-      'value' => 0,
-    ),
-    1624 => 
-    array (
-      'field' => 1624,
-      'value' => 0,
-    ),
-    1625 => 
-    array (
-      'field' => 1625,
-      'value' => 0,
-    ),
-    1626 => 
-    array (
-      'field' => 1626,
-      'value' => 0,
-    ),
-    1627 => 
-    array (
-      'field' => 1627,
-      'value' => 0,
-    ),
-    1628 => 
-    array (
-      'field' => 1628,
-      'value' => 0,
-    ),
-    1629 => 
-    array (
-      'field' => 1629,
-      'value' => 0,
-    ),
     1630 => 
     array (
       'field' => 1630,
@@ -2902,16 +2817,6 @@
   ),
   'lustrum' => 
   array (
-    '1616-1620' => 
-    array (
-      'field' => '1616-1620',
-      'value' => 25,
-    ),
-    '1621-1625' => 
-    array (
-      'field' => '1621-1625',
-      'value' => 0,
-    ),
     '1626-1630' => 
     array (
       'field' => '1626-1630',

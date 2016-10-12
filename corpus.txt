@@ -97,7 +97,6 @@
 ../tcp5/duryer_alcimedon.xml
 ../tcp5/duryer_alcionee.xml
 ../tcp5/duryer_anaxandre.xml
-../tcp5/duryer_argenispoliarque.xml
 ../tcp5/duryer_berenice.xml
 ../tcp5/duryer_dynamis.xml
 ../tcp5/duryer_esther.xml
@@ -221,6 +220,4 @@
 ../tcp5/tristan_mortseneque.xml
 ../tcp5/tristan_osman.xml
 ../tcp5/tristan_parasite.xml
-../tcp5/urfe_sylvanire.xml
-../tcp5/viau_pyrame.xml
 ../tcp5/villiers_festindepierre.xml

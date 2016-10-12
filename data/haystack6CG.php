@@ -3,7 +3,7 @@
   array (
     'pattern' => 
     array (
-      '#DONJUAN' => 
+      '#donjuan' => 
       array (
         0 => 1,
         1 => 1,
@@ -12,7 +12,7 @@
         4 => 1,
         5 => 0,
       ),
-      '#DONPHILIPPE' => 
+      '#donphilippe' => 
       array (
         0 => 0,
         1 => 0,
@@ -21,7 +21,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#AMARILLE' => 
+      '#amarille' => 
       array (
         0 => 0,
         1 => 1,
@@ -30,7 +30,7 @@
         4 => 0,
         5 => 1,
       ),
-      '#DONPEDRE' => 
+      '#donpedre' => 
       array (
         0 => 0,
         1 => 1,
@@ -39,7 +39,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#ARCHERS' => 
+      '#archers' => 
       array (
         0 => 0,
         1 => 0,
@@ -47,6 +47,15 @@
         3 => 0,
         4 => 0,
         5 => 1,
+      ),
+      '#philipin' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 0,
+        3 => 1,
+        4 => 1,
+        5 => 0,
       ),
     ),
     'id' => 
@@ -63,14 +72,15 @@
       'titleId' => 'LeFestindePierre',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Villiers',
-      'string' => 'DON JUAN/DON JUAN-AMARILLE-DON PIERRE/DON PHILIPPE-AMARILLE//DON JUAN/AMARILLE-LE PRÉVÔT-PREMIER ARCHER.',
+      'string' => 'DON JUAN-PHILIPIN/DON JUAN-AMARILLE-DON PIERRE-PHILIPIN/DON PHILIPPE-AMARILLE/PHILIPIN/DON JUAN-PHILIPIN/AMARILLE-LE PRÉVÔT-PREMIER ARCHER.',
+      'string-id' => '#donjuan,#philipin;#donjuan,#amarille,#donpedre,#philipin;#donphilippe,#amarille;#philipin;#donjuan,#philipin;#amarille,#prevot,#archers',
     ),
   ),
   'villiers_festindepierre_II02' => 
   array (
     'pattern' => 
     array (
-      '#DONJUAN' => 
+      '#donjuan' => 
       array (
         0 => 1,
         1 => 0,
@@ -79,7 +89,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#DONPHILIPPE' => 
+      '#donphilippe' => 
       array (
         0 => 0,
         1 => 1,
@@ -88,7 +98,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#AMARILLE' => 
+      '#amarille' => 
       array (
         0 => 1,
         1 => 1,
@@ -97,7 +107,7 @@
         4 => 1,
         5 => 0,
       ),
-      '#DONPEDRE' => 
+      '#donpedre' => 
       array (
         0 => 1,
         1 => 0,
@@ -106,13 +116,22 @@
         4 => 0,
         5 => 0,
       ),
-      '#ARCHERS' => 
+      '#archers' => 
       array (
         0 => 0,
         1 => 0,
         2 => 0,
         3 => 0,
         4 => 1,
+        5 => 1,
+      ),
+      '#philipin' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 1,
+        3 => 1,
+        4 => 0,
         5 => 1,
       ),
     ),
@@ -130,14 +149,15 @@
       'titleId' => 'LeFestindePierre',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Villiers',
-      'string' => 'DON JUAN-AMARILLE-DON PIERRE/DON PHILIPPE-AMARILLE//DON JUAN/AMARILLE-LE PRÉVÔT-PREMIER ARCHER./LE PRÉVÔT-PREMIER ARCHER.',
+      'string' => 'DON JUAN-AMARILLE-DON PIERRE-PHILIPIN/DON PHILIPPE-AMARILLE/PHILIPIN/DON JUAN-PHILIPIN/AMARILLE-LE PRÉVÔT-PREMIER ARCHER./LE PRÉVÔT-PREMIER ARCHER.-PHILIPIN',
+      'string-id' => '#donjuan,#amarille,#donpedre,#philipin;#donphilippe,#amarille;#philipin;#donjuan,#philipin;#amarille,#prevot,#archers;#prevot,#archers,#philipin',
     ),
   ),
   'villiers_festindepierre_IV01' => 
   array (
     'pattern' => 
     array (
-      '#DONJUAN' => 
+      '#donjuan' => 
       array (
         0 => 0,
         1 => 1,
@@ -146,7 +166,7 @@
         4 => 1,
         5 => 0,
       ),
-      '#ORIANE' => 
+      '#oriane' => 
       array (
         0 => 0,
         1 => 0,
@@ -155,7 +175,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#BELINDE' => 
+      '#belinde' => 
       array (
         0 => 0,
         1 => 0,
@@ -164,7 +184,7 @@
         4 => 1,
         5 => 0,
       ),
-      '#PHILEMON' => 
+      '#philemon' => 
       array (
         0 => 1,
         1 => 1,
@@ -173,7 +193,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#MACETTE' => 
+      '#macette' => 
       array (
         0 => 1,
         1 => 0,
@@ -181,6 +201,15 @@
         3 => 0,
         4 => 0,
         5 => 0,
+      ),
+      '#philipin' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 1,
+        3 => 0,
+        4 => 1,
+        5 => 1,
       ),
     ),
     'id' => 
@@ -197,14 +226,15 @@
       'titleId' => 'LeFestindePierre',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Villiers',
-      'string' => 'PHILÉMON-MACETTE/DON JUAN-PHILÉMON/DON JUAN-PHILÉMON/ORIANE-BÉLINDE/DON JUAN-ORIANE-BÉLINDE/ORIANE',
+      'string' => 'PHILÉMON-MACETTE/DON JUAN-PHILÉMON-PHILIPIN/DON JUAN-PHILÉMON-PHILIPIN/ORIANE-BÉLINDE/DON JUAN-ORIANE-BÉLINDE-PHILIPIN/ORIANE-PHILIPIN',
+      'string-id' => '#philemon,#macette;#donjuan,#philemon,#philipin;#donjuan,#philemon,#philipin;#oriane,#belinde;#donjuan,#oriane,#belinde,#philipin;#oriane,#philipin',
     ),
   ),
   'villiers_festindepierre_IV02' => 
   array (
     'pattern' => 
     array (
-      '#DONJUAN' => 
+      '#donjuan' => 
       array (
         0 => 1,
         1 => 1,
@@ -213,7 +243,7 @@
         4 => 0,
         5 => 1,
       ),
-      '#ORIANE' => 
+      '#oriane' => 
       array (
         0 => 0,
         1 => 0,
@@ -222,7 +252,7 @@
         4 => 1,
         5 => 0,
       ),
-      '#BELINDE' => 
+      '#belinde' => 
       array (
         0 => 0,
         1 => 0,
@@ -231,7 +261,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#PHILEMON' => 
+      '#philemon' => 
       array (
         0 => 1,
         1 => 1,
@@ -239,6 +269,15 @@
         3 => 0,
         4 => 0,
         5 => 0,
+      ),
+      '#philipin' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 0,
+        3 => 1,
+        4 => 1,
+        5 => 1,
       ),
     ),
     'id' => 
@@ -255,14 +294,15 @@
       'titleId' => 'LeFestindePierre',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Villiers',
-      'string' => 'DON JUAN-PHILÉMON/DON JUAN-PHILÉMON/ORIANE-BÉLINDE/DON JUAN-ORIANE-BÉLINDE/ORIANE/DON JUAN',
+      'string' => 'DON JUAN-PHILÉMON-PHILIPIN/DON JUAN-PHILÉMON-PHILIPIN/ORIANE-BÉLINDE/DON JUAN-ORIANE-BÉLINDE-PHILIPIN/ORIANE-PHILIPIN/DON JUAN-PHILIPIN',
+      'string-id' => '#donjuan,#philemon,#philipin;#donjuan,#philemon,#philipin;#oriane,#belinde;#donjuan,#oriane,#belinde,#philipin;#oriane,#philipin;#donjuan,#philipin',
     ),
   ),
   'villiers_festindepierre_IV03' => 
   array (
     'pattern' => 
     array (
-      '#DONJUAN' => 
+      '#donjuan' => 
       array (
         0 => 1,
         1 => 0,
@@ -271,7 +311,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#ORIANE' => 
+      '#oriane' => 
       array (
         0 => 0,
         1 => 1,
@@ -280,7 +320,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#BELINDE' => 
+      '#belinde' => 
       array (
         0 => 0,
         1 => 1,
@@ -289,7 +329,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#PHILEMON' => 
+      '#philemon' => 
       array (
         0 => 1,
         1 => 0,
@@ -298,13 +338,22 @@
         4 => 0,
         5 => 0,
       ),
-      '#SPECTRE' => 
+      '#spectre' => 
       array (
         0 => 0,
         1 => 0,
         2 => 0,
         3 => 0,
         4 => 0,
+        5 => 1,
+      ),
+      '#philipin' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 1,
+        3 => 1,
+        4 => 1,
         5 => 1,
       ),
     ),
@@ -322,14 +371,15 @@
       'titleId' => 'LeFestindePierre',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Villiers',
-      'string' => 'DON JUAN-PHILÉMON/ORIANE-BÉLINDE/DON JUAN-ORIANE-BÉLINDE/ORIANE/DON JUAN/DON JUAN-L\'OMBRE DE DON PIERRE',
+      'string' => 'DON JUAN-PHILÉMON-PHILIPIN/ORIANE-BÉLINDE/DON JUAN-ORIANE-BÉLINDE-PHILIPIN/ORIANE-PHILIPIN/DON JUAN-PHILIPIN/DON JUAN-L\'OMBRE DE DON PIERRE-PHILIPIN',
+      'string-id' => '#donjuan,#philemon,#philipin;#oriane,#belinde;#donjuan,#oriane,#belinde,#philipin;#oriane,#philipin;#donjuan,#philipin;#donjuan,#spectre,#philipin',
     ),
   ),
   'villiers_festindepierre_V01' => 
   array (
     'pattern' => 
     array (
-      '#DONJUAN' => 
+      '#donjuan' => 
       array (
         0 => 1,
         1 => 1,
@@ -338,7 +388,7 @@
         4 => 0,
         5 => 1,
       ),
-      '#MACETTE' => 
+      '#macette' => 
       array (
         0 => 0,
         1 => 0,
@@ -347,7 +397,7 @@
         4 => 1,
         5 => 0,
       ),
-      '#LEMARIE' => 
+      '#lemarie' => 
       array (
         0 => 0,
         1 => 0,
@@ -356,7 +406,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#LAMARIEE' => 
+      '#lamariee' => 
       array (
         0 => 0,
         1 => 0,
@@ -365,7 +415,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#SPECTRE' => 
+      '#spectre' => 
       array (
         0 => 0,
         1 => 1,
@@ -373,6 +423,15 @@
         3 => 0,
         4 => 0,
         5 => 0,
+      ),
+      '#philipin' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
       ),
     ),
     'id' => 
@@ -389,14 +448,15 @@
       'titleId' => 'LeFestindePierre',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Villiers',
-      'string' => 'DON JUAN/DON JUAN-L\'OMBRE DE DON PIERRE/PHILÉMON-MACETTE-LE MARIÉ/DON JUAN-PHILÉMON-MACETTE-LE MARIÉ-LA MARIÉE/PHILÉMON-MACETTE/DON JUAN',
+      'string' => 'DON JUAN-PHILIPIN/DON JUAN-L\'OMBRE DE DON PIERRE-PHILIPIN/PHILÉMON-MACETTE-LE MARIÉ-PHILIPIN/DON JUAN-PHILÉMON-MACETTE-LE MARIÉ-LA MARIÉE-PHILIPIN/PHILÉMON-MACETTE-PHILIPIN/DON JUAN-PHILIPIN',
+      'string-id' => '#donjuan,#philipin;#donjuan,#spectre,#philipin;#philemon,#macette,#lemarie,#philipin;#donjuan,#philemon,#macette,#lemarie,#lamariee,#philipin;#philemon,#macette,#philipin;#donjuan,#philipin',
     ),
   ),
   'villiers_festindepierre_V02' => 
   array (
     'pattern' => 
     array (
-      '#DONJUAN' => 
+      '#donjuan' => 
       array (
         0 => 1,
         1 => 0,
@@ -405,7 +465,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#MACETTE' => 
+      '#macette' => 
       array (
         0 => 0,
         1 => 1,
@@ -414,7 +474,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#LEMARIE' => 
+      '#lemarie' => 
       array (
         0 => 0,
         1 => 1,
@@ -423,7 +483,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#LAMARIEE' => 
+      '#lamariee' => 
       array (
         0 => 0,
         1 => 0,
@@ -432,13 +492,22 @@
         4 => 0,
         5 => 0,
       ),
-      '#SPECTRE' => 
+      '#spectre' => 
       array (
         0 => 1,
         1 => 0,
         2 => 0,
         3 => 0,
         4 => 0,
+        5 => 1,
+      ),
+      '#philipin' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
         5 => 1,
       ),
     ),
@@ -456,14 +525,15 @@
       'titleId' => 'LeFestindePierre',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Villiers',
-      'string' => 'DON JUAN-L\'OMBRE DE DON PIERRE/PHILÉMON-MACETTE-LE MARIÉ/DON JUAN-PHILÉMON-MACETTE-LE MARIÉ-LA MARIÉE/PHILÉMON-MACETTE/DON JUAN/DON JUAN-L\'OMBRE DE DON PIERRE',
+      'string' => 'DON JUAN-L\'OMBRE DE DON PIERRE-PHILIPIN/PHILÉMON-MACETTE-LE MARIÉ-PHILIPIN/DON JUAN-PHILÉMON-MACETTE-LE MARIÉ-LA MARIÉE-PHILIPIN/PHILÉMON-MACETTE-PHILIPIN/DON JUAN-PHILIPIN/DON JUAN-L\'OMBRE DE DON PIERRE-PHILIPIN',
+      'string-id' => '#donjuan,#spectre,#philipin;#philemon,#macette,#lemarie,#philipin;#donjuan,#philemon,#macette,#lemarie,#lamariee,#philipin;#philemon,#macette,#philipin;#donjuan,#philipin;#donjuan,#spectre,#philipin',
     ),
   ),
   'villiers_festindepierre_V03' => 
   array (
     'pattern' => 
     array (
-      '#DONJUAN' => 
+      '#donjuan' => 
       array (
         0 => 0,
         1 => 1,
@@ -472,7 +542,7 @@
         4 => 1,
         5 => 0,
       ),
-      '#MACETTE' => 
+      '#macette' => 
       array (
         0 => 1,
         1 => 1,
@@ -481,7 +551,7 @@
         4 => 0,
         5 => 1,
       ),
-      '#LEMARIE' => 
+      '#lemarie' => 
       array (
         0 => 1,
         1 => 1,
@@ -490,7 +560,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#LAMARIEE' => 
+      '#lamariee' => 
       array (
         0 => 0,
         1 => 1,
@@ -499,7 +569,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#SPECTRE' => 
+      '#spectre' => 
       array (
         0 => 0,
         1 => 0,
@@ -507,6 +577,15 @@
         3 => 0,
         4 => 1,
         5 => 0,
+      ),
+      '#philipin' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
       ),
     ),
     'id' => 
@@ -523,1736 +602,8 @@
       'titleId' => 'LeFestindePierre',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Villiers',
-      'string' => 'PHILÉMON-MACETTE-LE MARIÉ/DON JUAN-PHILÉMON-MACETTE-LE MARIÉ-LA MARIÉE/PHILÉMON-MACETTE/DON JUAN/DON JUAN-L\'OMBRE DE DON PIERRE/PHILÉMON-MACETTE',
-    ),
-  ),
-  'urfe_sylvanire_II01' => 
-  array (
-    'pattern' => 
-    array (
-      '#AGLANTE' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 1,
-        3 => 1,
-        4 => 1,
-        5 => 0,
-      ),
-      '#HYLAS' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 1,
-        3 => 1,
-        4 => 1,
-        5 => 1,
-      ),
-      '#SYLVANIRE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 1,
-        4 => 0,
-        5 => 0,
-      ),
-      '#LERICE' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '1',
-      'scene' => '1',
-      'sceneId' => 'II01',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'AGLANTE-HYLAS/MÉNANDRE-LERICE/AGLANTE-HYLAS/AGLANTE-HYLAS-SYLVANIRE/AGLANTE-HYLAS/HYLAS',
-    ),
-  ),
-  'urfe_sylvanire_II02' => 
-  array (
-    'pattern' => 
-    array (
-      '#AGLANTE' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 1,
-        3 => 1,
-        4 => 0,
-        5 => 0,
-      ),
-      '#HYLAS' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 1,
-        3 => 1,
-        4 => 1,
-        5 => 1,
-      ),
-      '#SYLVANIRE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 1,
-        3 => 0,
-        4 => 0,
-        5 => 1,
-      ),
-      '#FOSSINDE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 1,
-      ),
-      '#LERICE' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '1',
-      'scene' => '2',
-      'sceneId' => 'II02',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'MÉNANDRE-LERICE/AGLANTE-HYLAS/AGLANTE-HYLAS-SYLVANIRE/AGLANTE-HYLAS/HYLAS/HYLAS-SYLVANIRE-FOSSINDE',
-    ),
-  ),
-  'urfe_sylvanire_II03' => 
-  array (
-    'pattern' => 
-    array (
-      '#AGLANTE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#HYLAS' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 1,
-        4 => 1,
-        5 => 0,
-      ),
-      '#SYLVANIRE' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 1,
-        5 => 1,
-      ),
-      '#FOSSINDE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 1,
-        5 => 1,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '1',
-      'scene' => '3',
-      'sceneId' => 'II03',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'AGLANTE-HYLAS/AGLANTE-HYLAS-SYLVANIRE/AGLANTE-HYLAS/HYLAS/HYLAS-SYLVANIRE-FOSSINDE/SYLVANIRE-FOSSINDE',
-    ),
-  ),
-  'urfe_sylvanire_II04' => 
-  array (
-    'pattern' => 
-    array (
-      '#AGLANTE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#HYLAS' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 1,
-        4 => 0,
-        5 => 0,
-      ),
-      '#ADRASTE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 1,
-      ),
-      '#SYLVANIRE' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 0,
-        3 => 1,
-        4 => 1,
-        5 => 1,
-      ),
-      '#FOSSINDE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 1,
-        4 => 1,
-        5 => 1,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '1',
-      'scene' => '4',
-      'sceneId' => 'II04',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'AGLANTE-HYLAS-SYLVANIRE/AGLANTE-HYLAS/HYLAS/HYLAS-SYLVANIRE-FOSSINDE/SYLVANIRE-FOSSINDE/ADRASTE-SYLVANIRE-FOSSINDE',
-    ),
-  ),
-  'urfe_sylvanire_III01' => 
-  array (
-    'pattern' => 
-    array (
-      '#ALCIRON' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 1,
-        4 => 1,
-        5 => 0,
-      ),
-      '#TIRINTE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 1,
-        3 => 1,
-        4 => 1,
-        5 => 0,
-      ),
-      '#SYLVANIRE' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 1,
-        3 => 0,
-        4 => 0,
-        5 => 1,
-      ),
-      '#FOSSINDE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 1,
-      ),
-      '#MENANDRE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 1,
-        4 => 0,
-        5 => 0,
-      ),
-      '#SATYRE' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '2',
-      'scene' => '1',
-      'sceneId' => 'III01',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'SATYRE/SYLVANIRE/TIRINTE-SYLVANIRE/ALCIRON-TIRINTE-MÉNANDRE/ALCIRON-TIRINTE/SYLVANIRE-FOSSINDE',
-    ),
-  ),
-  'urfe_sylvanire_III02' => 
-  array (
-    'pattern' => 
-    array (
-      '#ALCIRON' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 1,
-        3 => 1,
-        4 => 0,
-        5 => 0,
-      ),
-      '#TIRINTE' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 1,
-        3 => 1,
-        4 => 0,
-        5 => 0,
-      ),
-      '#SYLVANIRE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 1,
-        5 => 0,
-      ),
-      '#FOSSINDE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 1,
-        5 => 1,
-      ),
-      '#MENANDRE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 1,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#ECHO' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 1,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '2',
-      'scene' => '2',
-      'sceneId' => 'III02',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'SYLVANIRE/TIRINTE-SYLVANIRE/ALCIRON-TIRINTE-MÉNANDRE/ALCIRON-TIRINTE/SYLVANIRE-FOSSINDE/FOSSINDE-ÉCHO',
-    ),
-  ),
-  'urfe_sylvanire_III03' => 
-  array (
-    'pattern' => 
-    array (
-      '#ALCIRON' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 1,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#TIRINTE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#SYLVANIRE' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 0,
-        3 => 1,
-        4 => 0,
-        5 => 0,
-      ),
-      '#FOSSINDE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 1,
-        4 => 1,
-        5 => 1,
-      ),
-      '#MENANDRE' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#SATYRE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 1,
-      ),
-      '#ECHO' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 1,
-        5 => 0,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '2',
-      'scene' => '3',
-      'sceneId' => 'III03',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'TIRINTE-SYLVANIRE/ALCIRON-TIRINTE-MÉNANDRE/ALCIRON-TIRINTE/SYLVANIRE-FOSSINDE/FOSSINDE-ÉCHO/FOSSINDE-SATYRE',
-    ),
-  ),
-  'urfe_sylvanire_IV01' => 
-  array (
-    'pattern' => 
-    array (
-      '#ALCIRON' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 1,
-        5 => 0,
-      ),
-      '#HYLAS' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#TIRINTE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 1,
-        5 => 1,
-      ),
-      '#SYLVANIRE' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 1,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#FOSSINDE' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 1,
-        3 => 1,
-        4 => 0,
-        5 => 0,
-      ),
-      '#LERICE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 1,
-        3 => 1,
-        4 => 0,
-        5 => 0,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '3',
-      'scene' => '1',
-      'sceneId' => 'IV01',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'AGLANTE-HYLAS/AGLANTE-HYLAS-SYLVANIRE-FOSSINDE/SYLVANIRE-FOSSINDE-MÉNANDRE-LERICE/FOSSINDE-MÉNANDRE-LERICE/ALCIRON-TIRINTE/TIRINTE',
-    ),
-  ),
-  'urfe_sylvanire_IV02' => 
-  array (
-    'pattern' => 
-    array (
-      '#ALCIRON' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 1,
-        4 => 0,
-        5 => 0,
-      ),
-      '#HYLAS' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#TIRINTE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 1,
-        4 => 1,
-        5 => 1,
-      ),
-      '#SYLVANIRE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 1,
-      ),
-      '#FOSSINDE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 0,
-        4 => 0,
-        5 => 1,
-      ),
-      '#LERICE' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 1,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '3',
-      'scene' => '2',
-      'sceneId' => 'IV02',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'AGLANTE-HYLAS-SYLVANIRE-FOSSINDE/SYLVANIRE-FOSSINDE-MÉNANDRE-LERICE/FOSSINDE-MÉNANDRE-LERICE/ALCIRON-TIRINTE/TIRINTE/TIRINTE-SYLVANIRE-FOSSINDE',
-    ),
-  ),
-  'urfe_sylvanire_IV03' => 
-  array (
-    'pattern' => 
-    array (
-      '#ALCIRON' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 1,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#TIRINTE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 1,
-        3 => 1,
-        4 => 1,
-        5 => 0,
-      ),
-      '#SYLVANIRE' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 1,
-        5 => 0,
-      ),
-      '#FOSSINDE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 1,
-        5 => 1,
-      ),
-      '#LERICE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '3',
-      'scene' => '3',
-      'sceneId' => 'IV03',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'SYLVANIRE-FOSSINDE-MÉNANDRE-LERICE/FOSSINDE-MÉNANDRE-LERICE/ALCIRON-TIRINTE/TIRINTE/TIRINTE-SYLVANIRE-FOSSINDE/FOSSINDE',
-    ),
-  ),
-  'urfe_sylvanire_IV04' => 
-  array (
-    'pattern' => 
-    array (
-      '#ALCIRON' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#TIRINTE' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 1,
-        3 => 1,
-        4 => 0,
-        5 => 0,
-      ),
-      '#SYLVANIRE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 1,
-        4 => 0,
-        5 => 0,
-      ),
-      '#FOSSINDE' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 0,
-        3 => 1,
-        4 => 1,
-        5 => 1,
-      ),
-      '#LERICE' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#SATYRE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 1,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '3',
-      'scene' => '4',
-      'sceneId' => 'IV04',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'FOSSINDE-MÉNANDRE-LERICE/ALCIRON-TIRINTE/TIRINTE/TIRINTE-SYLVANIRE-FOSSINDE/FOSSINDE/FOSSINDE-SATYRE',
-    ),
-  ),
-  'urfe_sylvanire_IV05' => 
-  array (
-    'pattern' => 
-    array (
-      '#ALCIRON' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#TIRINTE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#ADRASTE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 1,
-      ),
-      '#SYLVANIRE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 1,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#FOSSINDE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 1,
-        3 => 1,
-        4 => 1,
-        5 => 1,
-      ),
-      '#SATYRE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 1,
-        5 => 1,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '3',
-      'scene' => '5',
-      'sceneId' => 'IV05',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'ALCIRON-TIRINTE/TIRINTE/TIRINTE-SYLVANIRE-FOSSINDE/FOSSINDE/FOSSINDE-SATYRE/ADRASTE-FOSSINDE-SATYRE',
-    ),
-  ),
-  'urfe_sylvanire_V01' => 
-  array (
-    'pattern' => 
-    array (
-      '#AGLANTE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 0,
-        4 => 1,
-        5 => 1,
-      ),
-      '#HYLAS' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 1,
-        4 => 1,
-        5 => 0,
-      ),
-      '#TIRINTE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#FOSSINDE' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#LERICE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 1,
-        5 => 1,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '4',
-      'scene' => '1',
-      'sceneId' => 'V01',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'AGLANTE-HYLAS-TIRINTE/AGLANTE-HYLAS-TIRINTE-FOSSINDE/AGLANTE-HYLAS-TIRINTE/HYLAS/AGLANTE-HYLAS-SYLVANIRE-MÉNANDRE-LERICE/AGLANTE-SYLVANIRE-MÉNANDRE-LERICE',
-    ),
-  ),
-  'urfe_sylvanire_V02' => 
-  array (
-    'pattern' => 
-    array (
-      '#AGLANTE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 0,
-        3 => 1,
-        4 => 1,
-        5 => 0,
-      ),
-      '#HYLAS' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 1,
-        4 => 0,
-        5 => 0,
-      ),
-      '#TIRINTE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#FOSSINDE' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 1,
-      ),
-      '#LERICE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 1,
-        4 => 1,
-        5 => 0,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '4',
-      'scene' => '2',
-      'sceneId' => 'V02',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'AGLANTE-HYLAS-TIRINTE-FOSSINDE/AGLANTE-HYLAS-TIRINTE/HYLAS/AGLANTE-HYLAS-SYLVANIRE-MÉNANDRE-LERICE/AGLANTE-SYLVANIRE-MÉNANDRE-LERICE/FOSSINDE',
-    ),
-  ),
-  'urfe_sylvanire_V03' => 
-  array (
-    'pattern' => 
-    array (
-      '#AGLANTE' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 1,
-        3 => 1,
-        4 => 0,
-        5 => 0,
-      ),
-      '#HYLAS' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#TIRINTE' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 1,
-      ),
-      '#FOSSINDE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 1,
-        5 => 1,
-      ),
-      '#LERICE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 1,
-        3 => 1,
-        4 => 0,
-        5 => 0,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '4',
-      'scene' => '3',
-      'sceneId' => 'V03',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'AGLANTE-HYLAS-TIRINTE/HYLAS/AGLANTE-HYLAS-SYLVANIRE-MÉNANDRE-LERICE/AGLANTE-SYLVANIRE-MÉNANDRE-LERICE/FOSSINDE/TIRINTE-FOSSINDE',
-    ),
-  ),
-  'urfe_sylvanire_V04' => 
-  array (
-    'pattern' => 
-    array (
-      '#HYLAS' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#TIRINTE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 1,
-        5 => 1,
-      ),
-      '#FOSSINDE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 1,
-        4 => 1,
-        5 => 0,
-      ),
-      '#LERICE' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 1,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '4',
-      'scene' => '4',
-      'sceneId' => 'V04',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'HYLAS/AGLANTE-HYLAS-SYLVANIRE-MÉNANDRE-LERICE/AGLANTE-SYLVANIRE-MÉNANDRE-LERICE/FOSSINDE/TIRINTE-FOSSINDE/TIRINTE',
-    ),
-  ),
-  'urfe_sylvanire_V05' => 
-  array (
-    'pattern' => 
-    array (
-      '#HYLAS' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#TIRINTE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 1,
-        4 => 1,
-        5 => 1,
-      ),
-      '#FOSSINDE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 1,
-        3 => 1,
-        4 => 0,
-        5 => 0,
-      ),
-      '#LERICE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '4',
-      'scene' => '5',
-      'sceneId' => 'V05',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'AGLANTE-HYLAS-SYLVANIRE-MÉNANDRE-LERICE/AGLANTE-SYLVANIRE-MÉNANDRE-LERICE/FOSSINDE/TIRINTE-FOSSINDE/TIRINTE/TIRINTE',
-    ),
-  ),
-  'urfe_sylvanire_VI01' => 
-  array (
-    'pattern' => 
-    array (
-      '#AGLANTE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 1,
-        5 => 1,
-      ),
-      '#ALCIRON' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 1,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#TIRINTE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 1,
-        3 => 1,
-        4 => 1,
-        5 => 1,
-      ),
-      '#SYLVANIRE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 1,
-        4 => 1,
-        5 => 1,
-      ),
-      '#ECHO' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '5',
-      'scene' => '1',
-      'sceneId' => 'VI01',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'AGLANTE/AGLANTE-ÉCHO/ALCIRON-TIRINTE/TIRINTE-SYLVANIRE/AGLANTE-TIRINTE-SYLVANIRE/AGLANTE-TIRINTE-SYLVANIRE',
-    ),
-  ),
-  'urfe_sylvanire_VI02' => 
-  array (
-    'pattern' => 
-    array (
-      '#AGLANTE' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 0,
-        3 => 1,
-        4 => 1,
-        5 => 1,
-      ),
-      '#ALCIRON' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#TIRINTE' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 1,
-        3 => 1,
-        4 => 1,
-        5 => 1,
-      ),
-      '#SYLVANIRE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 1,
-        3 => 1,
-        4 => 1,
-        5 => 1,
-      ),
-      '#LERICE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 1,
-      ),
-      '#ECHO' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '5',
-      'scene' => '2',
-      'sceneId' => 'VI02',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'AGLANTE-ÉCHO/ALCIRON-TIRINTE/TIRINTE-SYLVANIRE/AGLANTE-TIRINTE-SYLVANIRE/AGLANTE-TIRINTE-SYLVANIRE/AGLANTE-HYLAS-TIRINTE-SYLVANIRE-FOSSINDE-MÉNANDRE-LERICE',
-    ),
-  ),
-  'urfe_sylvanire_VI03' => 
-  array (
-    'pattern' => 
-    array (
-      '#AGLANTE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 1,
-        3 => 1,
-        4 => 1,
-        5 => 1,
-      ),
-      '#ALCIRON' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#TIRINTE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 1,
-        4 => 1,
-        5 => 0,
-      ),
-      '#SYLVANIRE' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 1,
-        3 => 1,
-        4 => 1,
-        5 => 1,
-      ),
-      '#FOSSINDE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 1,
-        5 => 0,
-      ),
-      '#LERICE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 1,
-        5 => 1,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '5',
-      'scene' => '3',
-      'sceneId' => 'VI03',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'ALCIRON-TIRINTE/TIRINTE-SYLVANIRE/AGLANTE-TIRINTE-SYLVANIRE/AGLANTE-TIRINTE-SYLVANIRE/AGLANTE-HYLAS-TIRINTE-SYLVANIRE-FOSSINDE-MÉNANDRE-LERICE/AGLANTE-SYLVANIRE-MÉNANDRE-LERICE',
-    ),
-  ),
-  'urfe_sylvanire_VI04' => 
-  array (
-    'pattern' => 
-    array (
-      '#AGLANTE' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 1,
-        3 => 1,
-        4 => 1,
-        5 => 0,
-      ),
-      '#TIRINTE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 1,
-        4 => 0,
-        5 => 0,
-      ),
-      '#SYLVANIRE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 1,
-        4 => 1,
-        5 => 1,
-      ),
-      '#FOSSINDE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 1,
-        4 => 0,
-        5 => 0,
-      ),
-      '#LERICE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 1,
-        4 => 1,
-        5 => 1,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '5',
-      'scene' => '4',
-      'sceneId' => 'VI04',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'TIRINTE-SYLVANIRE/AGLANTE-TIRINTE-SYLVANIRE/AGLANTE-TIRINTE-SYLVANIRE/AGLANTE-HYLAS-TIRINTE-SYLVANIRE-FOSSINDE-MÉNANDRE-LERICE/AGLANTE-SYLVANIRE-MÉNANDRE-LERICE/SYLVANIRE-MÉNANDRE-LERICE',
-    ),
-  ),
-  'urfe_sylvanire_VI05' => 
-  array (
-    'pattern' => 
-    array (
-      '#AGLANTE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 1,
-        4 => 0,
-        5 => 1,
-      ),
-      '#TIRINTE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#SYLVANIRE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 1,
-        4 => 1,
-        5 => 0,
-      ),
-      '#FOSSINDE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 1,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#LERICE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 1,
-        3 => 1,
-        4 => 1,
-        5 => 0,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '5',
-      'scene' => '5',
-      'sceneId' => 'VI05',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'AGLANTE-TIRINTE-SYLVANIRE/AGLANTE-TIRINTE-SYLVANIRE/AGLANTE-HYLAS-TIRINTE-SYLVANIRE-FOSSINDE-MÉNANDRE-LERICE/AGLANTE-SYLVANIRE-MÉNANDRE-LERICE/SYLVANIRE-MÉNANDRE-LERICE/AGLANTE',
-    ),
-  ),
-  'urfe_sylvanire_VI06' => 
-  array (
-    'pattern' => 
-    array (
-      '#AGLANTE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 0,
-        4 => 1,
-        5 => 1,
-      ),
-      '#TIRINTE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#SYLVANIRE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 1,
-        4 => 0,
-        5 => 1,
-      ),
-      '#FOSSINDE' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#LERICE' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 1,
-        3 => 1,
-        4 => 0,
-        5 => 0,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '5',
-      'scene' => '6',
-      'sceneId' => 'VI06',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'AGLANTE-TIRINTE-SYLVANIRE/AGLANTE-HYLAS-TIRINTE-SYLVANIRE-FOSSINDE-MÉNANDRE-LERICE/AGLANTE-SYLVANIRE-MÉNANDRE-LERICE/SYLVANIRE-MÉNANDRE-LERICE/AGLANTE/AGLANTE-SYLVANIRE',
-    ),
-  ),
-  'urfe_sylvanire_VI07' => 
-  array (
-    'pattern' => 
-    array (
-      '#AGLANTE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 0,
-        3 => 1,
-        4 => 1,
-        5 => 1,
-      ),
-      '#ALCIRON' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 1,
-      ),
-      '#SYLVANIRE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 0,
-        4 => 1,
-        5 => 1,
-      ),
-      '#FOSSINDE' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#LERICE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '5',
-      'scene' => '7',
-      'sceneId' => 'VI07',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'AGLANTE-HYLAS-TIRINTE-SYLVANIRE-FOSSINDE-MÉNANDRE-LERICE/AGLANTE-SYLVANIRE-MÉNANDRE-LERICE/SYLVANIRE-MÉNANDRE-LERICE/AGLANTE/AGLANTE-SYLVANIRE/AGLANTE-ALCIRON-SYLVANIRE',
-    ),
-  ),
-  'urfe_sylvanire_VI08' => 
-  array (
-    'pattern' => 
-    array (
-      '#AGLANTE' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 1,
-        3 => 1,
-        4 => 1,
-        5 => 1,
-      ),
-      '#ALCIRON' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 1,
-        5 => 1,
-      ),
-      '#SYLVANIRE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 0,
-        3 => 1,
-        4 => 1,
-        5 => 1,
-      ),
-      '#FOSSINDE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 1,
-      ),
-      '#LERICE' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 1,
-      ),
-    ),
-    'id' => 
-    array (
-      'play' => 'urfe_sylvanire',
-      'act' => '5',
-      'scene' => '8',
-      'sceneId' => 'VI08',
-      'author' => 'd’Urfé',
-      'title' => 'La Sylvanire',
-      'date' => 1617,
-      'lustrum' => '1616-1620',
-      'genre' => 'Pastorale héroïque',
-      'titleId' => 'LaSylvanire',
-      'genreId' => 'Pastoraleheroique',
-      'authorId' => 'dUrfe',
-      'string' => 'AGLANTE-SYLVANIRE-MÉNANDRE-LERICE/SYLVANIRE-MÉNANDRE-LERICE/AGLANTE/AGLANTE-SYLVANIRE/AGLANTE-ALCIRON-SYLVANIRE/AGLANTE-ALCIRON-HYLAS-TIRINTE-SYLVANIRE-FOSSINDE-MÉNANDRE-LERICE',
+      'string' => 'PHILÉMON-MACETTE-LE MARIÉ-PHILIPIN/DON JUAN-PHILÉMON-MACETTE-LE MARIÉ-LA MARIÉE-PHILIPIN/PHILÉMON-MACETTE-PHILIPIN/DON JUAN-PHILIPIN/DON JUAN-L\'OMBRE DE DON PIERRE-PHILIPIN/PHILÉMON-MACETTE-PHILIPIN',
+      'string-id' => '#philemon,#macette,#lemarie,#philipin;#donjuan,#philemon,#macette,#lemarie,#lamariee,#philipin;#philemon,#macette,#philipin;#donjuan,#philipin;#donjuan,#spectre,#philipin;#philemon,#macette,#philipin',
     ),
   ),
   'tristan_parasite_I01' => 
@@ -2311,6 +662,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'TristanLHermite',
       'string' => 'PHÉNICE/PHÉNICE-LUCINDE/PHÉNICE-FRIPESAUCES/PHÉNICE-FRIPESAUCES/FRIPESAUCES-LE CAPITAN/PHÉNICE-LUCINDE-LE CAPITAN',
+      'string-id' => '#PHENICE;#PHENICE,#LUCINDE;#PHENICE,#FRIPESAUCES;#PHENICE,#FRIPESAUCES;#FRIPESAUCES,#LECAPITAN;#PHENICE,#LUCINDE,#LECAPITAN',
     ),
   ),
   'tristan_parasite_III01' => 
@@ -2371,6 +723,15 @@
         4 => 1,
         5 => 1,
       ),
+      '#MANILLE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
     ),
     'id' => 
     array (
@@ -2386,7 +747,8 @@
       'titleId' => 'LeParasite',
       'genreId' => 'Comedie',
       'authorId' => 'TristanLHermite',
-      'string' => 'FRIPESAUCES/FRIPESAUCES-LISANDRE/PHÉNICE-LUCINDE-FRIPESAUCES-LISANDRE/LISANDRE-LUCILE/PHÉNICE-LISANDRE-LUCILE/PHÉNICE-LUCINDE-LE CAPITAN-LUCILE',
+      'string' => 'FRIPESAUCES/FRIPESAUCES-LISANDRE/PHÉNICE-LUCINDE-FRIPESAUCES-LISANDRE-LUCILE/LISANDRE-LUCILE/PHÉNICE-LISANDRE-LUCILE/PHÉNICE-LUCINDE-LE CAPITAN-LUCILE',
+      'string-id' => '#FRIPESAUCES;#FRIPESAUCES,#LISANDRE;#PHENICE,#LUCINDE,#FRIPESAUCES,#LISANDRE,#MANILLE;#LISANDRE,#LUCILE;#PHENICE,#LISANDRE,#LUCILE;#PHENICE,#LUCINDE,#LECAPITAN,#LUCILE',
     ),
   ),
   'tristan_parasite_III02' => 
@@ -2447,6 +809,15 @@
         4 => 1,
         5 => 0,
       ),
+      '#MANILLE' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 1,
+      ),
     ),
     'id' => 
     array (
@@ -2462,7 +833,8 @@
       'titleId' => 'LeParasite',
       'genreId' => 'Comedie',
       'authorId' => 'TristanLHermite',
-      'string' => 'FRIPESAUCES-LISANDRE/PHÉNICE-LUCINDE-FRIPESAUCES-LISANDRE/LISANDRE-LUCILE/PHÉNICE-LISANDRE-LUCILE/PHÉNICE-LUCINDE-LE CAPITAN-LUCILE/LE CAPITAN',
+      'string' => 'FRIPESAUCES-LISANDRE/PHÉNICE-LUCINDE-FRIPESAUCES-LISANDRE-LUCILE/LISANDRE-LUCILE/PHÉNICE-LISANDRE-LUCILE/PHÉNICE-LUCINDE-LE CAPITAN-LUCILE/LE CAPITAN-LUCILE',
+      'string-id' => '#FRIPESAUCES,#LISANDRE;#PHENICE,#LUCINDE,#FRIPESAUCES,#LISANDRE,#MANILLE;#LISANDRE,#LUCILE;#PHENICE,#LISANDRE,#LUCILE;#PHENICE,#LUCINDE,#LECAPITAN,#LUCILE;#LECAPITAN,#MANILLE',
     ),
   ),
   'tristan_parasite_IV01' => 
@@ -2514,6 +886,15 @@
         4 => 1,
         5 => 1,
       ),
+      '#MANILLE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 1,
+      ),
     ),
     'id' => 
     array (
@@ -2529,7 +910,8 @@
       'titleId' => 'LeParasite',
       'genreId' => 'Comedie',
       'authorId' => 'TristanLHermite',
-      'string' => 'LE CAPITAN/LE CAPITAN-ALCIDOR/PHÉNICE-FRIPESAUCES-LE CAPITAN-ALCIDOR/PHÉNICE-LUCINDE-FRIPESAUCES-ALCIDOR/PHÉNICE-LUCINDE-FRIPESAUCES-LISANDRE-ALCIDOR/PHÉNICE-LUCINDE-FRIPESAUCES-LISANDRE-ALCIDOR',
+      'string' => 'LE CAPITAN/LE CAPITAN-ALCIDOR/PHÉNICE-FRIPESAUCES-LE CAPITAN-ALCIDOR/PHÉNICE-LUCINDE-FRIPESAUCES-ALCIDOR/PHÉNICE-LUCINDE-FRIPESAUCES-LISANDRE-ALCIDOR/PHÉNICE-LUCINDE-FRIPESAUCES-LISANDRE-ALCIDOR-LUCILE',
+      'string-id' => '#LECAPITAN;#LECAPITAN,#ALCIDOR;#PHENICE,#FRIPESAUCES,#LECAPITAN,#ALCIDOR;#PHENICE,#LUCINDE,#FRIPESAUCES,#ALCIDOR;#PHENICE,#LUCINDE,#FRIPESAUCES,#LISANDRE,#ALCIDOR;#PHENICE,#LUCINDE,#FRIPESAUCES,#LISANDRE,#ALCIDOR,#MANILLE',
     ),
   ),
   'tristan_parasite_V01' => 
@@ -2581,6 +963,15 @@
         4 => 1,
         5 => 1,
       ),
+      '#MANILLE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 1,
+      ),
     ),
     'id' => 
     array (
@@ -2596,7 +987,8 @@
       'titleId' => 'LeParasite',
       'genreId' => 'Comedie',
       'authorId' => 'TristanLHermite',
-      'string' => 'FRIPESAUCES/FRIPESAUCES-LE CAPITAN/PHÉNICE-FRIPESAUCES-LE CAPITAN-ALCIDOR/LE CAPITAN/FRIPESAUCES-LUCILE/FRIPESAUCES-ALCIDOR-LUCILE',
+      'string' => 'FRIPESAUCES/FRIPESAUCES-LE CAPITAN/PHÉNICE-FRIPESAUCES-LE CAPITAN-ALCIDOR/LE CAPITAN/FRIPESAUCES-LUCILE/FRIPESAUCES-ALCIDOR-LUCILE-LUCILE',
+      'string-id' => '#FRIPESAUCES;#FRIPESAUCES,#LECAPITAN;#PHENICE,#FRIPESAUCES,#LECAPITAN,#ALCIDOR;#LECAPITAN;#FRIPESAUCES,#LUCILE;#FRIPESAUCES,#ALCIDOR,#LUCILE,#MANILLE',
     ),
   ),
   'tristan_parasite_V02' => 
@@ -2657,6 +1049,15 @@
         4 => 1,
         5 => 1,
       ),
+      '#MANILLE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 1,
+        5 => 1,
+      ),
     ),
     'id' => 
     array (
@@ -2672,7 +1073,8 @@
       'titleId' => 'LeParasite',
       'genreId' => 'Comedie',
       'authorId' => 'TristanLHermite',
-      'string' => 'FRIPESAUCES-LE CAPITAN/PHÉNICE-FRIPESAUCES-LE CAPITAN-ALCIDOR/LE CAPITAN/FRIPESAUCES-LUCILE/FRIPESAUCES-ALCIDOR-LUCILE/PHÉNICE-LUCINDE-FRIPESAUCES-ALCIDOR-LUCILE',
+      'string' => 'FRIPESAUCES-LE CAPITAN/PHÉNICE-FRIPESAUCES-LE CAPITAN-ALCIDOR/LE CAPITAN/FRIPESAUCES-LUCILE/FRIPESAUCES-ALCIDOR-LUCILE-LUCILE/PHÉNICE-LUCINDE-FRIPESAUCES-ALCIDOR-LUCILE-LUCILE',
+      'string-id' => '#FRIPESAUCES,#LECAPITAN;#PHENICE,#FRIPESAUCES,#LECAPITAN,#ALCIDOR;#LECAPITAN;#FRIPESAUCES,#LUCILE;#FRIPESAUCES,#ALCIDOR,#LUCILE,#MANILLE;#PHENICE,#LUCINDE,#FRIPESAUCES,#ALCIDOR,#LUCILE,#MANILLE',
     ),
   ),
   'tristan_mortseneque_II01' => 
@@ -2740,6 +1142,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'TristanLHermite',
       'string' => 'RUFUS-PISON-SÉVINUS/RUFUS-PISON-SÉVINUS-ÉPICARIS-LUCAIN/ÉPICARIS-LUCAIN/SÉNÈQUE-LUCAIN/ÉPICARIS-LUCAIN/ÉPICARIS-PROCULE',
+      'string-id' => '#RUFUS,#PISON,#SEVINUS;#RUFUS,#PISON,#SEVINUS,#EPICARIS,#LUCAIN;#EPICARIS,#LUCAIN;#SENEQUE,#LUCAIN;#EPICARIS,#LUCAIN;#EPICARIS,#PROCULE',
     ),
   ),
   'tristan_mortdechrispe_II01' => 
@@ -2754,6 +1157,15 @@
         3 => 0,
         4 => 0,
         5 => 0,
+      ),
+      '#CONSTANTIN' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 1,
       ),
       '#CONSTANCE' => 
       array (
@@ -2779,7 +1191,8 @@
       'titleId' => 'LaMortdeChrispe',
       'genreId' => 'Tragedie',
       'authorId' => 'TristanLHermite',
-      'string' => 'FAUSTE/FAUSTE/CHRISPE-CONSTANCE/CHRISPE-CONSTANCE/CHRISPE-CONSTANCE/CHRISPE-CONSTANCE',
+      'string' => 'FAUSTE/FAUSTE/CHRISPE-CONSTANCE/CHRISPE-CONSTANCE/CHRISPE-CONSTANCE/CHRISPE-CONSTANTIN le Grand-CONSTANCE',
+      'string-id' => '#FAUSTE;#FAUSTE;#CHRISPE,#CONSTANCE;#CHRISPE,#CONSTANCE;#CHRISPE,#CONSTANCE;#CHRISPE,#CONSTANTIN,#CONSTANCE',
     ),
   ),
   'tristan_mortdechrispe_II02' => 
@@ -2801,6 +1214,15 @@
         1 => 1,
         2 => 1,
         3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#CONSTANTIN' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
         4 => 1,
         5 => 1,
       ),
@@ -2828,7 +1250,8 @@
       'titleId' => 'LaMortdeChrispe',
       'genreId' => 'Tragedie',
       'authorId' => 'TristanLHermite',
-      'string' => 'FAUSTE/CHRISPE-CONSTANCE/CHRISPE-CONSTANCE/CHRISPE-CONSTANCE/CHRISPE-CONSTANCE/CHRISPE',
+      'string' => 'FAUSTE/CHRISPE-CONSTANCE/CHRISPE-CONSTANCE/CHRISPE-CONSTANCE/CHRISPE-CONSTANTIN le Grand-CONSTANCE/CHRISPE-CONSTANTIN le Grand',
+      'string-id' => '#FAUSTE;#CHRISPE,#CONSTANCE;#CHRISPE,#CONSTANCE;#CHRISPE,#CONSTANCE;#CHRISPE,#CONSTANTIN,#CONSTANCE;#CHRISPE,#CONSTANTIN',
     ),
   ),
   'tristan_mortdechrispe_III01' => 
@@ -2851,6 +1274,15 @@
         2 => 0,
         3 => 1,
         4 => 1,
+        5 => 0,
+      ),
+      '#CONSTANTIN' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 0,
+        3 => 0,
+        4 => 0,
         5 => 0,
       ),
       '#LACTANCE' => 
@@ -2877,7 +1309,8 @@
       'titleId' => 'LaMortdeChrispe',
       'genreId' => 'Tragedie',
       'authorId' => 'TristanLHermite',
-      'string' => 'LACTANCE/FAUSTE/FAUSTE/FAUSTE-CHRISPE/CHRISPE/FAUSTE',
+      'string' => 'CONSTANTIN le Grand-LACTANCE/FAUSTE-CONSTANTIN le Grand/FAUSTE/FAUSTE-CHRISPE/CHRISPE/FAUSTE',
+      'string-id' => '#CONSTANTIN,#LACTANCE;#FAUSTE,#CONSTANTIN;#FAUSTE;#FAUSTE,#CHRISPE;#CHRISPE;#FAUSTE',
     ),
   ),
   'tristan_mortdechrispe_V01' => 
@@ -2891,6 +1324,15 @@
         2 => 1,
         3 => 1,
         4 => 1,
+        5 => 1,
+      ),
+      '#CONSTANTIN' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 1,
+        3 => 0,
+        4 => 0,
         5 => 1,
       ),
       '#LACTANCE' => 
@@ -2907,7 +1349,7 @@
         0 => 0,
         1 => 0,
         2 => 0,
-        3 => 0,
+        3 => 1,
         4 => 0,
         5 => 1,
       ),
@@ -2926,7 +1368,8 @@
       'titleId' => 'LaMortdeChrispe',
       'genreId' => 'Tragedie',
       'authorId' => 'TristanLHermite',
-      'string' => 'FAUSTE/FAUSTE/FAUSTE-LACTANCE/FAUSTE/FAUSTE/FAUSTE-PROBE',
+      'string' => 'FAUSTE/FAUSTE-CONSTANTIN le Grand/FAUSTE-CONSTANTIN le Grand-LACTANCE/FAUSTE-PROBE/FAUSTE/FAUSTE-CONSTANTIN le Grand-PROBE',
+      'string-id' => '#FAUSTE;#FAUSTE,#CONSTANTIN;#FAUSTE,#CONSTANTIN,#LACTANCE;#FAUSTE,#PROBE;#FAUSTE;#FAUSTE,#CONSTANTIN,#PROBE',
     ),
   ),
   'tristan_mortdechrispe_V02' => 
@@ -2942,6 +1385,15 @@
         4 => 1,
         5 => 0,
       ),
+      '#CONSTANTIN' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 0,
+        3 => 0,
+        4 => 1,
+        5 => 1,
+      ),
       '#LACTANCE' => 
       array (
         0 => 0,
@@ -2955,7 +1407,7 @@
       array (
         0 => 0,
         1 => 0,
-        2 => 0,
+        2 => 1,
         3 => 0,
         4 => 1,
         5 => 1,
@@ -2975,7 +1427,8 @@
       'titleId' => 'LaMortdeChrispe',
       'genreId' => 'Tragedie',
       'authorId' => 'TristanLHermite',
-      'string' => 'FAUSTE/FAUSTE-LACTANCE/FAUSTE/FAUSTE/FAUSTE-PROBE/PROBE',
+      'string' => 'FAUSTE-CONSTANTIN le Grand/FAUSTE-CONSTANTIN le Grand-LACTANCE/FAUSTE-PROBE/FAUSTE/FAUSTE-CONSTANTIN le Grand-PROBE/CONSTANTIN le Grand-PROBE',
+      'string-id' => '#FAUSTE,#CONSTANTIN;#FAUSTE,#CONSTANTIN,#LACTANCE;#FAUSTE,#PROBE;#FAUSTE;#FAUSTE,#CONSTANTIN,#PROBE;#CONSTANTIN,#PROBE',
     ),
   ),
   'tristan_mariane_II01' => 
@@ -3052,6 +1505,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'TristanLHermite',
       'string' => 'MARIANE-DINA/SALOMÉ-MARIANE/SALOMÉ-L\'ÉCHANSON/HÉRODE-MARIANE/HÉRODE-SALOMÉ/HÉRODE-THARÉ-SALOMÉ-L\'ÉCHANSON',
+      'string-id' => '#MARIANE,#DINA;#SALOME,#MARIANE;#SALOME,#LECHANSON;#HERODE,#MARIANE;#HERODE,#SALOME;#HERODE,#THARE,#SALOME,#LECHANSON,#HUISSIER',
     ),
   ),
   'tristan_mariane_II02' => 
@@ -3128,6 +1582,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'TristanLHermite',
       'string' => 'SALOMÉ-MARIANE/SALOMÉ-L\'ÉCHANSON/HÉRODE-MARIANE/HÉRODE-SALOMÉ/HÉRODE-THARÉ-SALOMÉ-L\'ÉCHANSON-/HÉRODE-PHÉRORE-SALOMÉ',
+      'string-id' => '#SALOME,#MARIANE;#SALOME,#LECHANSON;#HERODE,#MARIANE;#HERODE,#SALOME;#HERODE,#THARE,#SALOME,#LECHANSON,#HUISSIER;#HERODE,#PHERORE,#SALOME',
     ),
   ),
   'tristan_mariane_IV01' => 
@@ -3204,6 +1659,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'TristanLHermite',
       'string' => 'HÉRODE-PHÉRORE-SALOMÉ/MARIANE/MARIANE-LE CONCIERGE/ALEXANDRA-/THARÉ-MARIANE-DINA/THARÉ-MARIANE-ALEXANDRA-DINA',
+      'string-id' => '#HERODE,#PHERORE,#SALOME;#MARIANE;#MARIANE,#LECONCIERGE;#ALEXANDRA,#LECHEVALIERDHONNEUR;#THARE,#MARIANE,#DINA;#THARE,#MARIANE,#ALEXANDRA,#DINA',
     ),
   ),
   'somaize_veritablesprecieuses_I01' => 
@@ -3253,6 +1709,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Somaize',
       'string' => 'ISCARIE/ARTÉMISE-ISCARIE///ARTÉMISE-ISCARIE/ARTÉMISE-ISCARIE-LE BARON',
+      'string-id' => '#ISCARIE;#ARTEMISE,#ISCARIE;;;#ARTEMISE,#ISCARIE;#ARTEMISE,#ISCARIE,#LEBARON',
     ),
   ),
   'somaize_veritablesprecieuses_I02' => 
@@ -3293,6 +1750,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Somaize',
       'string' => 'ARTÉMISE-ISCARIE///ARTÉMISE-ISCARIE/ARTÉMISE-ISCARIE-LE BARON/ARTÉMISE-ISCARIE-LE BARON',
+      'string-id' => '#ARTEMISE,#ISCARIE;;;#ARTEMISE,#ISCARIE;#ARTEMISE,#ISCARIE,#LEBARON;#ARTEMISE,#ISCARIE,#LEBARON',
     ),
   ),
   'somaize_veritablesprecieuses_I03' => 
@@ -3342,6 +1800,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Somaize',
       'string' => '//ARTÉMISE-ISCARIE/ARTÉMISE-ISCARIE-LE BARON/ARTÉMISE-ISCARIE-LE BARON/ARTÉMISE-ISCARIE-LE BARON-MONSIEUR GREVAL',
+      'string-id' => ';;#ARTEMISE,#ISCARIE;#ARTEMISE,#ISCARIE,#LEBARON;#ARTEMISE,#ISCARIE,#LEBARON;#ARTEMISE,#ISCARIE,#LEBARON,#MONSIEURGREVAL',
     ),
   ),
   'somaize_precieusesridicules_I01' => 
@@ -3400,6 +1859,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Somaize',
       'string' => 'LA GRANGE-DU CROISY/LA GRANGE-DU CROISY-GORGIBUS/GORGIBUS-MAROTTE/GORGIBUS-MADELON-CATHOS/MADELON-CATHOS/MADELON-CATHOS-MAROTTE',
+      'string-id' => '#LAGRANGE,#DUCROISY;#LAGRANGE,#DUCROISY,#GORGIBUS;#GORGIBUS,#MAROTTE;#GORGIBUS,#MADELON,#CATHOS;#MADELON,#CATHOS;#MADELON,#CATHOS,#MAROTTE',
     ),
   ),
   'somaize_precieusesridicules_I02' => 
@@ -3458,6 +1918,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Somaize',
       'string' => 'LA GRANGE-DU CROISY-GORGIBUS/GORGIBUS-MAROTTE/GORGIBUS-MADELON-CATHOS/MADELON-CATHOS/MADELON-CATHOS-MAROTTE/',
+      'string-id' => '#LAGRANGE,#DUCROISY,#GORGIBUS;#GORGIBUS,#MAROTTE;#GORGIBUS,#MADELON,#CATHOS;#MADELON,#CATHOS;#MADELON,#CATHOS,#MAROTTE;',
     ),
   ),
   'somaize_precieusesridicules_I03' => 
@@ -3507,6 +1968,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Somaize',
       'string' => 'GORGIBUS-MAROTTE/GORGIBUS-MADELON-CATHOS/MADELON-CATHOS/MADELON-CATHOS-MAROTTE//MAROTTE',
+      'string-id' => '#GORGIBUS,#MAROTTE;#GORGIBUS,#MADELON,#CATHOS;#MADELON,#CATHOS;#MADELON,#CATHOS,#MAROTTE;;#MAROTTE',
     ),
   ),
   'somaize_precieusesridicules_I04' => 
@@ -3565,6 +2027,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Somaize',
       'string' => 'GORGIBUS-MADELON-CATHOS/MADELON-CATHOS/MADELON-CATHOS-MAROTTE//MAROTTE/MADELON-CATHOS-ALMANZOR',
+      'string-id' => '#GORGIBUS,#MADELON,#CATHOS;#MADELON,#CATHOS;#MADELON,#CATHOS,#MAROTTE;;#MAROTTE;#MADELON,#CATHOS,#ALMANZOR',
     ),
   ),
   'somaize_precieusesridicules_I05' => 
@@ -3614,6 +2077,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Somaize',
       'string' => 'MADELON-CATHOS/MADELON-CATHOS-MAROTTE//MAROTTE/MADELON-CATHOS-ALMANZOR/MADELON-CATHOS-MAROTTE',
+      'string-id' => '#MADELON,#CATHOS;#MADELON,#CATHOS,#MAROTTE;;#MAROTTE;#MADELON,#CATHOS,#ALMANZOR;#MADELON,#CATHOS,#MAROTTE',
     ),
   ),
   'somaize_precieusesridicules_I06' => 
@@ -3663,6 +2127,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Somaize',
       'string' => 'MADELON-CATHOS-MAROTTE//MAROTTE/MADELON-CATHOS-ALMANZOR/MADELON-CATHOS-MAROTTE/MADELON-CATHOS-MAROTTE',
+      'string-id' => '#MADELON,#CATHOS,#MAROTTE;;#MAROTTE;#MADELON,#CATHOS,#ALMANZOR;#MADELON,#CATHOS,#MAROTTE;#MADELON,#CATHOS,#MAROTTE',
     ),
   ),
   'somaize_precieusesridicules_I07' => 
@@ -3712,6 +2177,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Somaize',
       'string' => '/MAROTTE/MADELON-CATHOS-ALMANZOR/MADELON-CATHOS-MAROTTE/MADELON-CATHOS-MAROTTE/MADELON-CATHOS-MAROTTE-ALMANZOR',
+      'string-id' => ';#MAROTTE;#MADELON,#CATHOS,#ALMANZOR;#MADELON,#CATHOS,#MAROTTE;#MADELON,#CATHOS,#MAROTTE;#MADELON,#CATHOS,#MAROTTE,#ALMANZOR',
     ),
   ),
   'somaize_precieusesridicules_I08' => 
@@ -3770,6 +2236,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Somaize',
       'string' => 'MAROTTE/MADELON-CATHOS-ALMANZOR/MADELON-CATHOS-MAROTTE/MADELON-CATHOS-MAROTTE/MADELON-CATHOS-MAROTTE-ALMANZOR/LA GRANGE-DU CROISY',
+      'string-id' => '#MAROTTE;#MADELON,#CATHOS,#ALMANZOR;#MADELON,#CATHOS,#MAROTTE;#MADELON,#CATHOS,#MAROTTE;#MADELON,#CATHOS,#MAROTTE,#ALMANZOR;#LAGRANGE,#DUCROISY',
     ),
   ),
   'somaize_precieusesridicules_I09' => 
@@ -3828,6 +2295,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Somaize',
       'string' => 'MADELON-CATHOS-ALMANZOR/MADELON-CATHOS-MAROTTE/MADELON-CATHOS-MAROTTE/MADELON-CATHOS-MAROTTE-ALMANZOR/LA GRANGE-DU CROISY/MADELON-CATHOS',
+      'string-id' => '#MADELON,#CATHOS,#ALMANZOR;#MADELON,#CATHOS,#MAROTTE;#MADELON,#CATHOS,#MAROTTE;#MADELON,#CATHOS,#MAROTTE,#ALMANZOR;#LAGRANGE,#DUCROISY;#MADELON,#CATHOS',
     ),
   ),
   'somaize_precieusesridicules_I10' => 
@@ -3886,6 +2354,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Somaize',
       'string' => 'MADELON-CATHOS-MAROTTE/MADELON-CATHOS-MAROTTE/MADELON-CATHOS-MAROTTE-ALMANZOR/LA GRANGE-DU CROISY/MADELON-CATHOS/LA GRANGE-DU CROISY-MADELON-CATHOS',
+      'string-id' => '#MADELON,#CATHOS,#MAROTTE;#MADELON,#CATHOS,#MAROTTE;#MADELON,#CATHOS,#MAROTTE,#ALMANZOR;#LAGRANGE,#DUCROISY;#MADELON,#CATHOS;#LAGRANGE,#DUCROISY,#MADELON,#CATHOS',
     ),
   ),
   'somaize_precieusesridicules_I11' => 
@@ -3962,6 +2431,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Somaize',
       'string' => 'MADELON-CATHOS-MAROTTE/MADELON-CATHOS-MAROTTE-ALMANZOR/LA GRANGE-DU CROISY/MADELON-CATHOS/LA GRANGE-DU CROISY-MADELON-CATHOS/GORGIBUS-MADELON',
+      'string-id' => '#MADELON,#CATHOS,#MAROTTE;#MADELON,#CATHOS,#MAROTTE,#ALMANZOR;#LAGRANGE,#DUCROISY;#MADELON,#CATHOS;#LAGRANGE,#DUCROISY,#MADELON,#CATHOS;#GORGIBUS,#MADELON',
     ),
   ),
   'somaize_precieusesridicules_I12' => 
@@ -4038,6 +2508,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Somaize',
       'string' => 'MADELON-CATHOS-MAROTTE-ALMANZOR/LA GRANGE-DU CROISY/MADELON-CATHOS/LA GRANGE-DU CROISY-MADELON-CATHOS/GORGIBUS-MADELON/GORGIBUS-MADELON-CATHOS-VIOLONS',
+      'string-id' => '#MADELON,#CATHOS,#MAROTTE,#ALMANZOR;#LAGRANGE,#DUCROISY;#MADELON,#CATHOS;#LAGRANGE,#DUCROISY,#MADELON,#CATHOS;#GORGIBUS,#MADELON;#GORGIBUS,#MADELON,#CATHOS,#VIOLONS',
     ),
   ),
   'scudery_vassalgenereux_III01' => 
@@ -4096,6 +2567,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'LUCIDAN/THÉANDRE-GLACITIDE/LUCIDAN/ROSIMAR/ROSILÉE-ARTÉSIE/ROSILÉE-ARTÉSIE',
+      'string-id' => '#LUCIDAN;#THEANDRE,#GLACITIDE;#LUCIDAN;#ROSIMAR;#ROSILEE,#ARTESIE;#ROSILEE,#ARTESIE',
     ),
   ),
   'scudery_vassalgenereux_III02' => 
@@ -4154,6 +2626,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'THÉANDRE-GLACITIDE/LUCIDAN/ROSIMAR/ROSILÉE-ARTÉSIE/ROSILÉE-ARTÉSIE/LUCIDAN',
+      'string-id' => '#THEANDRE,#GLACITIDE;#LUCIDAN;#ROSIMAR;#ROSILEE,#ARTESIE;#ROSILEE,#ARTESIE;#LUCIDAN',
     ),
   ),
   'scudery_vassalgenereux_III03' => 
@@ -4212,6 +2685,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'LUCIDAN/ROSIMAR/ROSILÉE-ARTÉSIE/ROSILÉE-ARTÉSIE/LUCIDAN/LUCIDAN-PALINONDE-ALBERIN',
+      'string-id' => '#LUCIDAN;#ROSIMAR;#ROSILEE,#ARTESIE;#ROSILEE,#ARTESIE;#LUCIDAN;#LUCIDAN,#PALINONDE,#ALBERIN',
     ),
   ),
   'scudery_vassalgenereux_III04' => 
@@ -4270,6 +2744,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'ROSIMAR/ROSILÉE-ARTÉSIE/ROSILÉE-ARTÉSIE/LUCIDAN/LUCIDAN-PALINONDE-ALBERIN/LUCIDAN',
+      'string-id' => '#ROSIMAR;#ROSILEE,#ARTESIE;#ROSILEE,#ARTESIE;#LUCIDAN;#LUCIDAN,#PALINONDE,#ALBERIN;#LUCIDAN',
     ),
   ),
   'scudery_princedeguise_I01' => 
@@ -4337,6 +2812,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'CLÉARQUE-LISANDRE-FLORESTOR/ARGÉNIE-PHILIS/ARGÉNIE-PHILIS-ARMILE/THÉOTIME-ARCHANE/CLÉARQUE-LISANDRE-FLORESTOR-THÉOTIME-ARCHANE/CLÉARQUE-LISANDRE-FLORESTOR-ROSEMONDE-ARGÉNIE-THÉOTIME-ARCHANE-PHILIS-ANTHÉNOR-ARISTE-ARMILE-CHOEUR',
+      'string-id' => '#CLEARQUE,#LISANDRE,#FLORESTOR;#ARGENIE,#PHILIS;#ARGENIE,#PHILIS,#ARMILE;#THEOTIME,#ARCHANE;#CLEARQUE,#LISANDRE,#FLORESTOR,#THEOTIME,#ARCHANE;#CLEARQUE,#LISANDRE,#FLORESTOR,#ROSEMONDE,#ARGENIE,#THEOTIME,#ARCHANE,#PHILIS,#ANTHENOR,#ARISTE,#ARMILE,#CHOEUR',
     ),
   ),
   'scudery_princedeguise_II01' => 
@@ -4404,6 +2880,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'ARGÉNIE-PHILIS/CLÉARQUE-LISANDRE/MÉLANIRE/CLÉARQUE-RUTILE/CLÉARQUE-ARGÉNIE-PHILIS/CLÉARQUE-MÉLANIRE',
+      'string-id' => '#ARGENIE,#PHILIS;#CLEARQUE,#LISANDRE;#MELANIRE;#CLEARQUE,#RUTILE;#CLEARQUE,#ARGENIE,#PHILIS;#CLEARQUE,#MELANIRE',
     ),
   ),
   'scudery_princedeguise_III01' => 
@@ -4471,6 +2948,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'CLÉARQUE-LISANDRE-FLORESTOR/CLÉARQUE-RUTILE/MÉLANIRE/CLÉARQUE/CLÉARQUE-ARGÉNIE-PHILIS/MÉLANIRE',
+      'string-id' => '#CLEARQUE,#LISANDRE,#FLORESTOR;#CLEARQUE,#RUTILE;#MELANIRE;#CLEARQUE;#CLEARQUE,#ARGENIE,#PHILIS;#MELANIRE',
     ),
   ),
   'scudery_princedeguise_IV01' => 
@@ -4538,6 +3016,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'LISANDRE-FLORESTOR/ROSEMONDE-MÉLANIRE-ANTHÉNOR/CLÉARQUE/CLÉARQUE-ARGÉNIE-PHILIS/CLÉARQUE-ROSEMONDE-ARGÉNIE-PHILIS-MÉLANIRE-ANTHÉNOR-ARISTE-CHOEUR/LISANDRE-FLORESTOR',
+      'string-id' => '#LISANDRE,#FLORESTOR;#ROSEMONDE,#MELANIRE,#ANTHENOR;#CLEARQUE;#CLEARQUE,#ARGENIE,#PHILIS;#CLEARQUE,#ROSEMONDE,#ARGENIE,#PHILIS,#MELANIRE,#ANTHENOR,#ARISTE,#CHOEUR;#LISANDRE,#FLORESTOR',
     ),
   ),
   'scudery_princedeguise_IV02' => 
@@ -4614,6 +3093,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'ROSEMONDE-MÉLANIRE-ANTHÉNOR/CLÉARQUE/CLÉARQUE-ARGÉNIE-PHILIS/CLÉARQUE-ROSEMONDE-ARGÉNIE-PHILIS-MÉLANIRE-ANTHÉNOR-ARISTE-CHOEUR/LISANDRE-FLORESTOR/CLÉARQUE-ROSEMONDE-ARGÉNIE-PHILIS-ANTHÉNOR-ARISTE-CHOEUR',
+      'string-id' => '#ROSEMONDE,#MELANIRE,#ANTHENOR;#CLEARQUE;#CLEARQUE,#ARGENIE,#PHILIS;#CLEARQUE,#ROSEMONDE,#ARGENIE,#PHILIS,#MELANIRE,#ANTHENOR,#ARISTE,#CHOEUR;#LISANDRE,#FLORESTOR;#CLEARQUE,#ROSEMONDE,#ARGENIE,#PHILIS,#ANTHENOR,#ARISTE,#CHOEUR',
     ),
   ),
   'scudery_princedeguise_V01' => 
@@ -4690,6 +3170,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'CLÉARQUE-ARISTE/ARGÉNIE-PHILIS/LISANDRE-FLORESTOR/MÉLANIRE/RUTILE-MÉLANIRE/ROSEMONDE-THÉOTIME-ARCHANE-ANTHÉNOR-ARMILE-JUGES-CHOEUR',
+      'string-id' => '#CLEARQUE,#ARISTE;#ARGENIE,#PHILIS;#LISANDRE,#FLORESTOR;#MELANIRE;#RUTILE,#MELANIRE;#ROSEMONDE,#THEOTIME,#ARCHANE,#ANTHENOR,#ARMILE,#JUGES,#CHOEUR',
     ),
   ),
   'scudery_princedeguise_V02' => 
@@ -4775,6 +3256,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'ARGÉNIE-PHILIS/LISANDRE-FLORESTOR/MÉLANIRE/RUTILE-MÉLANIRE/ROSEMONDE-THÉOTIME-ARCHANE-ANTHÉNOR-ARMILE-JUGES-CHOEUR/ROSEMONDE-ARGÉNIE-ANTHÉNOR',
+      'string-id' => '#ARGENIE,#PHILIS;#LISANDRE,#FLORESTOR;#MELANIRE;#RUTILE,#MELANIRE;#ROSEMONDE,#THEOTIME,#ARCHANE,#ANTHENOR,#ARMILE,#JUGES,#CHOEUR;#ROSEMONDE,#ARGENIE,#ANTHENOR',
     ),
   ),
   'scudery_princedeguise_V03' => 
@@ -4860,6 +3342,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'LISANDRE-FLORESTOR/MÉLANIRE/RUTILE-MÉLANIRE/ROSEMONDE-THÉOTIME-ARCHANE-ANTHÉNOR-ARMILE-JUGES-CHOEUR/ROSEMONDE-ARGÉNIE-ANTHÉNOR/LISANDRE-FLORESTOR-ANTHÉNOR',
+      'string-id' => '#LISANDRE,#FLORESTOR;#MELANIRE;#RUTILE,#MELANIRE;#ROSEMONDE,#THEOTIME,#ARCHANE,#ANTHENOR,#ARMILE,#JUGES,#CHOEUR;#ROSEMONDE,#ARGENIE,#ANTHENOR;#LISANDRE,#FLORESTOR,#ANTHENOR',
     ),
   ),
   'scudery_princedeguise_V04' => 
@@ -4954,6 +3437,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'MÉLANIRE/RUTILE-MÉLANIRE/ROSEMONDE-THÉOTIME-ARCHANE-ANTHÉNOR-ARMILE-JUGES-CHOEUR/ROSEMONDE-ARGÉNIE-ANTHÉNOR/LISANDRE-FLORESTOR-ANTHÉNOR/CLÉARQUE-LISANDRE-FLORESTOR-ROSEMONDE-ARGÉNIE-ANTHÉNOR',
+      'string-id' => '#MELANIRE;#RUTILE,#MELANIRE;#ROSEMONDE,#THEOTIME,#ARCHANE,#ANTHENOR,#ARMILE,#JUGES,#CHOEUR;#ROSEMONDE,#ARGENIE,#ANTHENOR;#LISANDRE,#FLORESTOR,#ANTHENOR;#CLEARQUE,#LISANDRE,#FLORESTOR,#ROSEMONDE,#ARGENIE,#ANTHENOR',
     ),
   ),
   'scudery_orante_I01' => 
@@ -5030,6 +3514,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'ISIMANDRE-ROSIMOND/ORMIN/NÉRINE-CLINDOR/PALINICE-LUCINDE-FLORANGE/ORANTE/ORANTE-NÉRINE',
+      'string-id' => '#ISIMANDRE,#ROSIMOND;#ORMIN;#NERINE,#CLINDOR;#PALINICE,#LUCINDE,#FLORANGE;#ORANTE;#ORANTE,#NERINE',
     ),
   ),
   'scudery_orante_I02' => 
@@ -5097,6 +3582,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'ORMIN/NÉRINE-CLINDOR/PALINICE-LUCINDE-FLORANGE/ORANTE/ORANTE-NÉRINE/ORANTE-NÉRINE-CLINDOR',
+      'string-id' => '#ORMIN;#NERINE,#CLINDOR;#PALINICE,#LUCINDE,#FLORANGE;#ORANTE;#ORANTE,#NERINE;#ORANTE,#NERINE,#CLINDOR',
     ),
   ),
   'scudery_orante_I03' => 
@@ -5164,6 +3650,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'NÉRINE-CLINDOR/PALINICE-LUCINDE-FLORANGE/ORANTE/ORANTE-NÉRINE/ORANTE-NÉRINE-CLINDOR/ORANTE-ORMIN-PALINICE-LUCINDE-FLORANGE-NÉRINE',
+      'string-id' => '#NERINE,#CLINDOR;#PALINICE,#LUCINDE,#FLORANGE;#ORANTE;#ORANTE,#NERINE;#ORANTE,#NERINE,#CLINDOR;#ORANTE,#ORMIN,#PALINICE,#LUCINDE,#FLORANGE,#NERINE',
     ),
   ),
   'scudery_orante_II01' => 
@@ -5231,6 +3718,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'PALINICE/ORMIN/ORANTE-NÉRINE/ORANTE-FLORANGE-NÉRINE/ORANTE-LUCINDE-FLORANGE-NÉRINE/ORANTE-ORMIN-LUCINDE-FLORANGE-NÉRINE',
+      'string-id' => '#PALINICE;#ORMIN;#ORANTE,#NERINE;#ORANTE,#FLORANGE,#NERINE;#ORANTE,#LUCINDE,#FLORANGE,#NERINE;#ORANTE,#ORMIN,#LUCINDE,#FLORANGE,#NERINE',
     ),
   ),
   'scudery_orante_II02' => 
@@ -5298,6 +3786,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'ORMIN/ORANTE-NÉRINE/ORANTE-FLORANGE-NÉRINE/ORANTE-LUCINDE-FLORANGE-NÉRINE/ORANTE-ORMIN-LUCINDE-FLORANGE-NÉRINE/ISIMANDRE',
+      'string-id' => '#ORMIN;#ORANTE,#NERINE;#ORANTE,#FLORANGE,#NERINE;#ORANTE,#LUCINDE,#FLORANGE,#NERINE;#ORANTE,#ORMIN,#LUCINDE,#FLORANGE,#NERINE;#ISIMANDRE',
     ),
   ),
   'scudery_orante_II03' => 
@@ -5374,6 +3863,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'ORANTE-NÉRINE/ORANTE-FLORANGE-NÉRINE/ORANTE-LUCINDE-FLORANGE-NÉRINE/ORANTE-ORMIN-LUCINDE-FLORANGE-NÉRINE/ISIMANDRE/ISIMANDRE-CLINDOR',
+      'string-id' => '#ORANTE,#NERINE;#ORANTE,#FLORANGE,#NERINE;#ORANTE,#LUCINDE,#FLORANGE,#NERINE;#ORANTE,#ORMIN,#LUCINDE,#FLORANGE,#NERINE;#ISIMANDRE;#ISIMANDRE,#CLINDOR',
     ),
   ),
   'scudery_orante_III01' => 
@@ -5450,6 +3940,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'FLORANGE/ISIMANDRE-CLINDOR-LINDOMAN/PALINICE-LUCINDE-NÉRINE/ORANTE-LINDOMAN/ORANTE-NÉRINE-LINDOMAN/ISIMANDRE-ORANTE-NÉRINE-CLINDOR-LINDOMAN',
+      'string-id' => '#FLORANGE;#ISIMANDRE,#CLINDOR,#LINDOMAN;#PALINICE,#LUCINDE,#NERINE;#ORANTE,#LINDOMAN;#ORANTE,#NERINE,#LINDOMAN;#ISIMANDRE,#ORANTE,#NERINE,#CLINDOR,#LINDOMAN',
     ),
   ),
   'scudery_orante_III02' => 
@@ -5526,6 +4017,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'ISIMANDRE-CLINDOR-LINDOMAN/PALINICE-LUCINDE-NÉRINE/ORANTE-LINDOMAN/ORANTE-NÉRINE-LINDOMAN/ISIMANDRE-ORANTE-NÉRINE-CLINDOR-LINDOMAN/ISIMANDRE-ORANTE-ORMIN-NÉRINE-CLINDOR-LINDOMAN',
+      'string-id' => '#ISIMANDRE,#CLINDOR,#LINDOMAN;#PALINICE,#LUCINDE,#NERINE;#ORANTE,#LINDOMAN;#ORANTE,#NERINE,#LINDOMAN;#ISIMANDRE,#ORANTE,#NERINE,#CLINDOR,#LINDOMAN;#ISIMANDRE,#ORANTE,#ORMIN,#NERINE,#CLINDOR,#LINDOMAN',
     ),
   ),
   'scudery_orante_IV01' => 
@@ -5593,6 +4085,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'ORANTE-PALINICE-LUCINDE-NÉRINE/ISIMANDRE-FLORANGE-CLINDOR/POLIANTE/ORANTE-NÉRINE/ORANTE-NÉRINE-CLINDOR/PALINICE-LUCINDE',
+      'string-id' => '#ORANTE,#PALINICE,#LUCINDE,#NERINE;#ISIMANDRE,#FLORANGE,#CLINDOR;#POLIANTE;#ORANTE,#NERINE;#ORANTE,#NERINE,#CLINDOR;#PALINICE,#LUCINDE',
     ),
   ),
   'scudery_orante_IV02' => 
@@ -5669,6 +4162,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'ISIMANDRE-FLORANGE-CLINDOR/POLIANTE/ORANTE-NÉRINE/ORANTE-NÉRINE-CLINDOR/PALINICE-LUCINDE/ORMIN',
+      'string-id' => '#ISIMANDRE,#FLORANGE,#CLINDOR;#POLIANTE;#ORANTE,#NERINE;#ORANTE,#NERINE,#CLINDOR;#PALINICE,#LUCINDE;#ORMIN',
     ),
   ),
   'scudery_orante_IV03' => 
@@ -5745,6 +4239,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'POLIANTE/ORANTE-NÉRINE/ORANTE-NÉRINE-CLINDOR/PALINICE-LUCINDE/ORMIN/ISIMANDRE-FLORANGE',
+      'string-id' => '#POLIANTE;#ORANTE,#NERINE;#ORANTE,#NERINE,#CLINDOR;#PALINICE,#LUCINDE;#ORMIN;#ISIMANDRE,#FLORANGE',
     ),
   ),
   'scudery_orante_IV04' => 
@@ -5812,6 +4307,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'ORANTE-NÉRINE/ORANTE-NÉRINE-CLINDOR/PALINICE-LUCINDE/ORMIN/ISIMANDRE-FLORANGE/ISIMANDRE-ORANTE-FLORANGE-NÉRINE-CLINDOR',
+      'string-id' => '#ORANTE,#NERINE;#ORANTE,#NERINE,#CLINDOR;#PALINICE,#LUCINDE;#ORMIN;#ISIMANDRE,#FLORANGE;#ISIMANDRE,#ORANTE,#FLORANGE,#NERINE,#CLINDOR',
     ),
   ),
   'scudery_orante_IV05' => 
@@ -5870,6 +4366,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'ORANTE-NÉRINE-CLINDOR/PALINICE-LUCINDE/ORMIN/ISIMANDRE-FLORANGE/ISIMANDRE-ORANTE-FLORANGE-NÉRINE-CLINDOR/ORMIN-PALINICE-LUCINDE',
+      'string-id' => '#ORANTE,#NERINE,#CLINDOR;#PALINICE,#LUCINDE;#ORMIN;#ISIMANDRE,#FLORANGE;#ISIMANDRE,#ORANTE,#FLORANGE,#NERINE,#CLINDOR;#ORMIN,#PALINICE,#LUCINDE',
     ),
   ),
   'scudery_orante_IV06' => 
@@ -5946,6 +4443,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'PALINICE-LUCINDE/ORMIN/ISIMANDRE-FLORANGE/ISIMANDRE-ORANTE-FLORANGE-NÉRINE-CLINDOR/ORMIN-PALINICE-LUCINDE/ORMIN-PALINICE-LUCINDE-FLORANGE-LERISTE',
+      'string-id' => '#PALINICE,#LUCINDE;#ORMIN;#ISIMANDRE,#FLORANGE;#ISIMANDRE,#ORANTE,#FLORANGE,#NERINE,#CLINDOR;#ORMIN,#PALINICE,#LUCINDE;#ORMIN,#PALINICE,#LUCINDE,#FLORANGE,#LERISTE',
     ),
   ),
   'scudery_orante_V01' => 
@@ -6031,6 +4529,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'ISIMANDRE-LERISTE/ISIMANDRE-ORANTE/ORANTE-POLIANTE/ORANTE-POLIANTE-CLINDOR/ORMIN/ORMIN-FLORANGE-ARGAMOR-GERTIMANT',
+      'string-id' => '#ISIMANDRE,#LERISTE;#ISIMANDRE,#ORANTE;#ORANTE,#POLIANTE;#ORANTE,#POLIANTE,#CLINDOR;#ORMIN;#ORMIN,#FLORANGE,#ARGAMOR,#GERTIMANT',
     ),
   ),
   'scudery_orante_V02' => 
@@ -6116,6 +4615,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'ISIMANDRE-ORANTE/ORANTE-POLIANTE/ORANTE-POLIANTE-CLINDOR/ORMIN/ORMIN-FLORANGE-ARGAMOR-GERTIMANT/ISIMANDRE-ORMIN-FLORANGE-LERISTE-ARGAMOR-GERTIMANT',
+      'string-id' => '#ISIMANDRE,#ORANTE;#ORANTE,#POLIANTE;#ORANTE,#POLIANTE,#CLINDOR;#ORMIN;#ORMIN,#FLORANGE,#ARGAMOR,#GERTIMANT;#ISIMANDRE,#ORMIN,#FLORANGE,#LERISTE,#ARGAMOR,#GERTIMANT',
     ),
   ),
   'scudery_orante_V03' => 
@@ -6192,6 +4692,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'ORANTE-POLIANTE/ORANTE-POLIANTE-CLINDOR/ORMIN/ORMIN-FLORANGE-ARGAMOR-GERTIMANT/ISIMANDRE-ORMIN-FLORANGE-LERISTE-ARGAMOR-GERTIMANT/PALINICE-LUCINDE',
+      'string-id' => '#ORANTE,#POLIANTE;#ORANTE,#POLIANTE,#CLINDOR;#ORMIN;#ORMIN,#FLORANGE,#ARGAMOR,#GERTIMANT;#ISIMANDRE,#ORMIN,#FLORANGE,#LERISTE,#ARGAMOR,#GERTIMANT;#PALINICE,#LUCINDE',
     ),
   ),
   'scudery_orante_V04' => 
@@ -6268,6 +4769,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'ORANTE-POLIANTE-CLINDOR/ORMIN/ORMIN-FLORANGE-ARGAMOR-GERTIMANT/ISIMANDRE-ORMIN-FLORANGE-LERISTE-ARGAMOR-GERTIMANT/PALINICE-LUCINDE/POLIANTE-CLINDOR',
+      'string-id' => '#ORANTE,#POLIANTE,#CLINDOR;#ORMIN;#ORMIN,#FLORANGE,#ARGAMOR,#GERTIMANT;#ISIMANDRE,#ORMIN,#FLORANGE,#LERISTE,#ARGAMOR,#GERTIMANT;#PALINICE,#LUCINDE;#POLIANTE,#CLINDOR',
     ),
   ),
   'scudery_orante_V05' => 
@@ -6335,6 +4837,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'ORMIN/ORMIN-FLORANGE-ARGAMOR-GERTIMANT/ISIMANDRE-ORMIN-FLORANGE-LERISTE-ARGAMOR-GERTIMANT/PALINICE-LUCINDE/POLIANTE-CLINDOR/ISIMANDRE-ORMIN-POLIANTE-CLINDOR-LERISTE',
+      'string-id' => '#ORMIN;#ORMIN,#FLORANGE,#ARGAMOR,#GERTIMANT;#ISIMANDRE,#ORMIN,#FLORANGE,#LERISTE,#ARGAMOR,#GERTIMANT;#PALINICE,#LUCINDE;#POLIANTE,#CLINDOR;#ISIMANDRE,#ORMIN,#POLIANTE,#CLINDOR,#LERISTE',
     ),
   ),
   'scudery_orante_V06' => 
@@ -6402,6 +4905,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'ORMIN-FLORANGE-ARGAMOR-GERTIMANT/ISIMANDRE-ORMIN-FLORANGE-LERISTE-ARGAMOR-GERTIMANT/PALINICE-LUCINDE/POLIANTE-CLINDOR/ISIMANDRE-ORMIN-POLIANTE-CLINDOR-LERISTE/ISIMANDRE-ORMIN-PALINICE-LUCINDE-POLIANTE-CLINDOR-LERISTE',
+      'string-id' => '#ORMIN,#FLORANGE,#ARGAMOR,#GERTIMANT;#ISIMANDRE,#ORMIN,#FLORANGE,#LERISTE,#ARGAMOR,#GERTIMANT;#PALINICE,#LUCINDE;#POLIANTE,#CLINDOR;#ISIMANDRE,#ORMIN,#POLIANTE,#CLINDOR,#LERISTE;#ISIMANDRE,#ORMIN,#PALINICE,#LUCINDE,#POLIANTE,#CLINDOR,#LERISTE',
     ),
   ),
   'scudery_orante_V07' => 
@@ -6478,6 +4982,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'ISIMANDRE-ORMIN-FLORANGE-LERISTE-ARGAMOR-GERTIMANT/PALINICE-LUCINDE/POLIANTE-CLINDOR/ISIMANDRE-ORMIN-POLIANTE-CLINDOR-LERISTE/ISIMANDRE-ORMIN-PALINICE-LUCINDE-POLIANTE-CLINDOR-LERISTE/ISIMANDRE-ORANTE-ORMIN-LUCINDE-NÉRINE-POLIANTE-CLINDOR-LERISTE',
+      'string-id' => '#ISIMANDRE,#ORMIN,#FLORANGE,#LERISTE,#ARGAMOR,#GERTIMANT;#PALINICE,#LUCINDE;#POLIANTE,#CLINDOR;#ISIMANDRE,#ORMIN,#POLIANTE,#CLINDOR,#LERISTE;#ISIMANDRE,#ORMIN,#PALINICE,#LUCINDE,#POLIANTE,#CLINDOR,#LERISTE;#ISIMANDRE,#ORANTE,#ORMIN,#LUCINDE,#NERINE,#POLIANTE,#CLINDOR,#LERISTE',
     ),
   ),
   'scudery_filssuppose_I01' => 
@@ -6563,6 +5068,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scudery',
       'string' => 'ROSANDRE-LUCIANE/ROSANDRE-ORONTE/ALMEDOR-ROSANDRE/PHILANTE-BÉLISE/PHILANTE-CLORIAN-BÉLISE/PHILANTE',
+      'string-id' => '#ROSANDRE,#LUCIANE;#ROSANDRE,#ORONTE;#ALMEDOR,#ROSANDRE;#PHILANTE,#BELISE;#PHILANTE,#CLORIAN,#BELISE;#PHILANTE',
     ),
   ),
   'scudery_filssuppose_I02' => 
@@ -6639,6 +5145,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scudery',
       'string' => 'ROSANDRE-ORONTE/ALMEDOR-ROSANDRE/PHILANTE-BÉLISE/PHILANTE-CLORIAN-BÉLISE/PHILANTE/CLORIAN-BÉLISE',
+      'string-id' => '#ROSANDRE,#ORONTE;#ALMEDOR,#ROSANDRE;#PHILANTE,#BELISE;#PHILANTE,#CLORIAN,#BELISE;#PHILANTE;#CLORIAN,#BELISE',
     ),
   ),
   'scudery_filssuppose_II01' => 
@@ -6697,6 +5204,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scudery',
       'string' => 'PHILANTE-LUCIANE-ORONTE-CLORIAN-BÉLISE/LUCIANE-ORONTE/BÉLISE/CLORIAN/PHILANTE/PHILANTE-CLORIAN',
+      'string-id' => '#PHILANTE,#LUCIANE,#ORONTE,#CLORIAN,#BELISE;#LUCIANE,#ORONTE;#BELISE;#CLORIAN;#PHILANTE;#PHILANTE,#CLORIAN',
     ),
   ),
   'scudery_filssuppose_III01' => 
@@ -6773,6 +5281,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scudery',
       'string' => 'PHILANTE/PHILANTE-CLORIAN/ALMEDOR-BÉLISE/ORONTE/ALMEDOR-ROSANDRE-LUCIANE/ALMEDOR-ROSANDRE-LUCIANE-BÉLISE',
+      'string-id' => '#PHILANTE;#PHILANTE,#CLORIAN;#ALMEDOR,#BELISE;#ORONTE;#ALMEDOR,#ROSANDRE,#LUCIANE;#ALMEDOR,#ROSANDRE,#LUCIANE,#BELISE',
     ),
   ),
   'scudery_filssuppose_III02' => 
@@ -6849,6 +5358,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scudery',
       'string' => 'PHILANTE-CLORIAN/ALMEDOR-BÉLISE/ORONTE/ALMEDOR-ROSANDRE-LUCIANE/ALMEDOR-ROSANDRE-LUCIANE-BÉLISE/LUCIANE-ORONTE-BÉLISE',
+      'string-id' => '#PHILANTE,#CLORIAN;#ALMEDOR,#BELISE;#ORONTE;#ALMEDOR,#ROSANDRE,#LUCIANE;#ALMEDOR,#ROSANDRE,#LUCIANE,#BELISE;#LUCIANE,#ORONTE,#BELISE',
     ),
   ),
   'scudery_filssuppose_III03' => 
@@ -6925,6 +5435,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scudery',
       'string' => 'ALMEDOR-BÉLISE/ORONTE/ALMEDOR-ROSANDRE-LUCIANE/ALMEDOR-ROSANDRE-LUCIANE-BÉLISE/LUCIANE-ORONTE-BÉLISE/ALMEDOR-ROSANDRE-PHILANTE-LUCIANE-ORONTE-BÉLISE',
+      'string-id' => '#ALMEDOR,#BELISE;#ORONTE;#ALMEDOR,#ROSANDRE,#LUCIANE;#ALMEDOR,#ROSANDRE,#LUCIANE,#BELISE;#LUCIANE,#ORONTE,#BELISE;#ALMEDOR,#ROSANDRE,#PHILANTE,#LUCIANE,#ORONTE,#BELISE',
     ),
   ),
   'scudery_filssuppose_IV01' => 
@@ -6992,6 +5503,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scudery',
       'string' => 'LUCIANE-BÉLISE/ORONTE-BRASIDE//PHILANTE-BRASIDE-CLORIAN/ALMEDOR-ROSANDRE/ORONTE',
+      'string-id' => '#LUCIANE,#BELISE;#ORONTE,#BRASIDE;;#PHILANTE,#BRASIDE,#CLORIAN;#ALMEDOR,#ROSANDRE;#ORONTE',
     ),
   ),
   'scudery_filssuppose_IV02' => 
@@ -7050,6 +5562,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scudery',
       'string' => 'ORONTE-BRASIDE//PHILANTE-BRASIDE-CLORIAN/ALMEDOR-ROSANDRE/ORONTE/PHILANTE-ORONTE-BRASIDE-CLORIAN',
+      'string-id' => '#ORONTE,#BRASIDE;;#PHILANTE,#BRASIDE,#CLORIAN;#ALMEDOR,#ROSANDRE;#ORONTE;#PHILANTE,#ORONTE,#BRASIDE,#CLORIAN',
     ),
   ),
   'scudery_eudoxe_III01' => 
@@ -7126,6 +5639,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'GENSERIC-THRASIMOND-ASPAR/THRASIMOND-OLIMBRE-URSACE/THRASIMOND-OLIMBRE-URSACE-OLICHARSIS/GENSERIC-ASPAR/EUDOXE-PLACIDIE-GENSERIC/GENSERIC-ASPAR',
+      'string-id' => '#GENSERIC,#THRASIMOND,#ASPAR;#THRASIMOND,#OLIMBRE,#URSACE;#THRASIMOND,#OLIMBRE,#URSACE,#OLICHARSIS;#GENSERIC,#ASPAR;#EUDOXE,#PLACIDIE,#GENSERIC;#GENSERIC,#ASPAR',
     ),
   ),
   'scudery_eudoxe_III02' => 
@@ -7202,6 +5716,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'THRASIMOND-OLIMBRE-URSACE/THRASIMOND-OLIMBRE-URSACE-OLICHARSIS/GENSERIC-ASPAR/EUDOXE-PLACIDIE-GENSERIC/GENSERIC-ASPAR/THRASIMOND',
+      'string-id' => '#THRASIMOND,#OLIMBRE,#URSACE;#THRASIMOND,#OLIMBRE,#URSACE,#OLICHARSIS;#GENSERIC,#ASPAR;#EUDOXE,#PLACIDIE,#GENSERIC;#GENSERIC,#ASPAR;#THRASIMOND',
     ),
   ),
   'scudery_eudoxe_III03' => 
@@ -7278,6 +5793,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'THRASIMOND-OLIMBRE-URSACE-OLICHARSIS/GENSERIC-ASPAR/EUDOXE-PLACIDIE-GENSERIC/GENSERIC-ASPAR/THRASIMOND/THRASIMOND-TALERBAL',
+      'string-id' => '#THRASIMOND,#OLIMBRE,#URSACE,#OLICHARSIS;#GENSERIC,#ASPAR;#EUDOXE,#PLACIDIE,#GENSERIC;#GENSERIC,#ASPAR;#THRASIMOND;#THRASIMOND,#TALERBAL',
     ),
   ),
   'scudery_amourtyran_IV01' => 
@@ -7354,6 +5870,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'PHRAARTE-EUPHORBE/TIRIDATE/TIRIDATE/OROSMANE-ORMÈNE-POLIXÈNE/OROSMANE-ORMÈNE-POLIXÈNE-CASSANDRE/TIGRANE-ORMÈNE',
+      'string-id' => '#PHRAARTE,#EUPHORBE;#TIRIDATE;#TIRIDATE;#OROSMANE,#ORMENE,#POLIXENE;#OROSMANE,#ORMENE,#POLIXENE,#CASSANDRE;#TIGRANE,#ORMENE',
     ),
   ),
   'scudery_amourtyran_IV02' => 
@@ -7421,6 +5938,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'TIRIDATE/TIRIDATE/OROSMANE-ORMÈNE-POLIXÈNE/OROSMANE-ORMÈNE-POLIXÈNE-CASSANDRE/TIGRANE-ORMÈNE/TIGRANE-TIRIDATE-ORMÈNE',
+      'string-id' => '#TIRIDATE;#TIRIDATE;#OROSMANE,#ORMENE,#POLIXENE;#OROSMANE,#ORMENE,#POLIXENE,#CASSANDRE;#TIGRANE,#ORMENE;#TIGRANE,#TIRIDATE,#ORMENE',
     ),
   ),
   'scudery_amourtyran_V01' => 
@@ -7488,6 +6006,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'TIGRANE/TIGRANE-CASSANDRE/OROSMANE-POLIXÈNE/OROSMANE-TIGRANE-POLIXÈNE-CASSANDRE/TIRIDATE-CASSANDRE/OROSMANE-TIGRANE-TIRIDATE-ORMÈNE-POLIXÈNE-CASSANDRE-HÉCUBE',
+      'string-id' => '#TIGRANE;#TIGRANE,#CASSANDRE;#OROSMANE,#POLIXENE;#OROSMANE,#TIGRANE,#POLIXENE,#CASSANDRE;#TIRIDATE,#CASSANDRE;#OROSMANE,#TIGRANE,#TIRIDATE,#ORMENE,#POLIXENE,#CASSANDRE,#HECUBE',
     ),
   ),
   'scudery_amourtyran_V02' => 
@@ -7555,6 +6074,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'TIGRANE-CASSANDRE/OROSMANE-POLIXÈNE/OROSMANE-TIGRANE-POLIXÈNE-CASSANDRE/TIRIDATE-CASSANDRE/OROSMANE-TIGRANE-TIRIDATE-ORMÈNE-POLIXÈNE-CASSANDRE-HÉCUBE/OROSMANE-TIGRANE-TIRIDATE-ORMÈNE-POLIXÈNE-CASSANDRE-HÉCUBE',
+      'string-id' => '#TIGRANE,#CASSANDRE;#OROSMANE,#POLIXENE;#OROSMANE,#TIGRANE,#POLIXENE,#CASSANDRE;#TIRIDATE,#CASSANDRE;#OROSMANE,#TIGRANE,#TIRIDATE,#ORMENE,#POLIXENE,#CASSANDRE,#HECUBE;#OROSMANE,#TIGRANE,#TIRIDATE,#ORMENE,#POLIXENE,#CASSANDRE,#HECUBE',
     ),
   ),
   'scudery_amourtyran_V03' => 
@@ -7631,6 +6151,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scudery',
       'string' => 'OROSMANE-POLIXÈNE/OROSMANE-TIGRANE-POLIXÈNE-CASSANDRE/TIRIDATE-CASSANDRE/OROSMANE-TIGRANE-TIRIDATE-ORMÈNE-POLIXÈNE-CASSANDRE-HÉCUBE/OROSMANE-TIGRANE-TIRIDATE-ORMÈNE-POLIXÈNE-CASSANDRE-HÉCUBE/OROSMANE-TIGRANE-TIRIDATE-ORMÈNE-POLIXÈNE-TROILE-PHRAARTE-CASSANDRE-HÉCUBE',
+      'string-id' => '#OROSMANE,#POLIXENE;#OROSMANE,#TIGRANE,#POLIXENE,#CASSANDRE;#TIRIDATE,#CASSANDRE;#OROSMANE,#TIGRANE,#TIRIDATE,#ORMENE,#POLIXENE,#CASSANDRE,#HECUBE;#OROSMANE,#TIGRANE,#TIRIDATE,#ORMENE,#POLIXENE,#CASSANDRE,#HECUBE;#OROSMANE,#TIGRANE,#TIRIDATE,#ORMENE,#POLIXENE,#TROILE,#PHRAARTE,#CASSANDRE,#HECUBE',
     ),
   ),
   'scarron_princecorsaire_III01' => 
@@ -7684,11 +6205,12 @@
       'title' => 'Le Prince corsaire',
       'date' => 1658,
       'lustrum' => '1656-1660',
-      'genre' => 'Comédie',
+      'genre' => 'Tragi-comédie',
       'titleId' => 'LePrincecorsaire',
-      'genreId' => 'Comedie',
+      'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'NICANOR/NICANOR-LICAS/ÉLISE-NICANOR-LICAS/ÉLISE-AMINTAS-NICANOR/AMINTAS-NICANOR/AMINTAS',
+      'string-id' => '#NICANOR;#NICANOR,#LICAS;#ELISE,#NICANOR,#LICAS;#ELISE,#AMINTAS,#NICANOR;#AMINTAS,#NICANOR;#AMINTAS',
     ),
   ),
   'scarron_princecorsaire_III02' => 
@@ -7751,11 +6273,12 @@
       'title' => 'Le Prince corsaire',
       'date' => 1658,
       'lustrum' => '1656-1660',
-      'genre' => 'Comédie',
+      'genre' => 'Tragi-comédie',
       'titleId' => 'LePrincecorsaire',
-      'genreId' => 'Comedie',
+      'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'NICANOR-LICAS/ÉLISE-NICANOR-LICAS/ÉLISE-AMINTAS-NICANOR/AMINTAS-NICANOR/AMINTAS/ALCIONNE-AMINTAS',
+      'string-id' => '#NICANOR,#LICAS;#ELISE,#NICANOR,#LICAS;#ELISE,#AMINTAS,#NICANOR;#AMINTAS,#NICANOR;#AMINTAS;#ALCIONNE,#AMINTAS',
     ),
   ),
   'scarron_princecorsaire_III03' => 
@@ -7818,11 +6341,12 @@
       'title' => 'Le Prince corsaire',
       'date' => 1658,
       'lustrum' => '1656-1660',
-      'genre' => 'Comédie',
+      'genre' => 'Tragi-comédie',
       'titleId' => 'LePrincecorsaire',
-      'genreId' => 'Comedie',
+      'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'ÉLISE-NICANOR-LICAS/ÉLISE-AMINTAS-NICANOR/AMINTAS-NICANOR/AMINTAS/ALCIONNE-AMINTAS/AMINTAS-NICANOR',
+      'string-id' => '#ELISE,#NICANOR,#LICAS;#ELISE,#AMINTAS,#NICANOR;#AMINTAS,#NICANOR;#AMINTAS;#ALCIONNE,#AMINTAS;#AMINTAS,#NICANOR',
     ),
   ),
   'scarron_princecorsaire_IV01' => 
@@ -7876,11 +6400,12 @@
       'title' => 'Le Prince corsaire',
       'date' => 1658,
       'lustrum' => '1656-1660',
-      'genre' => 'Comédie',
+      'genre' => 'Tragi-comédie',
       'titleId' => 'LePrincecorsaire',
-      'genreId' => 'Comedie',
+      'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'OROSMANE/OROSMANE-ÉLISE-AMINTAS/AMINTAS-LICAS/ÉLISE-LICAS/OROSMANE-ÉLISE-AMINTAS/OROSMANE-ÉLISE',
+      'string-id' => '#OROSMANE;#OROSMANE,#ELISE,#AMINTAS;#AMINTAS,#LICAS;#ELISE,#LICAS;#OROSMANE,#ELISE,#AMINTAS;#OROSMANE,#ELISE',
     ),
   ),
   'scarron_princecorsaire_IV02' => 
@@ -7934,11 +6459,12 @@
       'title' => 'Le Prince corsaire',
       'date' => 1658,
       'lustrum' => '1656-1660',
-      'genre' => 'Comédie',
+      'genre' => 'Tragi-comédie',
       'titleId' => 'LePrincecorsaire',
-      'genreId' => 'Comedie',
+      'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'OROSMANE-ÉLISE-AMINTAS/AMINTAS-LICAS/ÉLISE-LICAS/OROSMANE-ÉLISE-AMINTAS/OROSMANE-ÉLISE/OROSMANE-ÉLISE-AMINTAS',
+      'string-id' => '#OROSMANE,#ELISE,#AMINTAS;#AMINTAS,#LICAS;#ELISE,#LICAS;#OROSMANE,#ELISE,#AMINTAS;#OROSMANE,#ELISE;#OROSMANE,#ELISE,#AMINTAS',
     ),
   ),
   'scarron_princecorsaire_V01' => 
@@ -7992,11 +6518,12 @@
       'title' => 'Le Prince corsaire',
       'date' => 1658,
       'lustrum' => '1656-1660',
-      'genre' => 'Comédie',
+      'genre' => 'Tragi-comédie',
       'titleId' => 'LePrincecorsaire',
-      'genreId' => 'Comedie',
+      'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'ÉLISE-ALCIONNE/ÉLISE-ALCIONNE/ALCIONNE-NICANOR/ÉLISE/OROSMANE-ÉLISE/OROSMANE-ÉLISE',
+      'string-id' => '#ELISE,#ALCIONNE;#ELISE,#ALCIONNE;#ALCIONNE,#NICANOR;#ELISE;#OROSMANE,#ELISE;#OROSMANE,#ELISE',
     ),
   ),
   'scarron_princecorsaire_V02' => 
@@ -8059,11 +6586,12 @@
       'title' => 'Le Prince corsaire',
       'date' => 1658,
       'lustrum' => '1656-1660',
-      'genre' => 'Comédie',
+      'genre' => 'Tragi-comédie',
       'titleId' => 'LePrincecorsaire',
-      'genreId' => 'Comedie',
+      'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'ÉLISE-ALCIONNE/ALCIONNE-NICANOR/ÉLISE/OROSMANE-ÉLISE/OROSMANE-ÉLISE/OROSMANE-ÉLISE-ARGANTE',
+      'string-id' => '#ELISE,#ALCIONNE;#ALCIONNE,#NICANOR;#ELISE;#OROSMANE,#ELISE;#OROSMANE,#ELISE;#OROSMANE,#ELISE,#ARGANTE',
     ),
   ),
   'scarron_princecorsaire_V03' => 
@@ -8117,11 +6645,12 @@
       'title' => 'Le Prince corsaire',
       'date' => 1658,
       'lustrum' => '1656-1660',
-      'genre' => 'Comédie',
+      'genre' => 'Tragi-comédie',
       'titleId' => 'LePrincecorsaire',
-      'genreId' => 'Comedie',
+      'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'ALCIONNE-NICANOR/ÉLISE/OROSMANE-ÉLISE/OROSMANE-ÉLISE/OROSMANE-ÉLISE-ARGANTE/ÉLISE',
+      'string-id' => '#ALCIONNE,#NICANOR;#ELISE;#OROSMANE,#ELISE;#OROSMANE,#ELISE;#OROSMANE,#ELISE,#ARGANTE;#ELISE',
     ),
   ),
   'scarron_princecorsaire_V04' => 
@@ -8175,11 +6704,12 @@
       'title' => 'Le Prince corsaire',
       'date' => 1658,
       'lustrum' => '1656-1660',
-      'genre' => 'Comédie',
+      'genre' => 'Tragi-comédie',
       'titleId' => 'LePrincecorsaire',
-      'genreId' => 'Comedie',
+      'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'ÉLISE/OROSMANE-ÉLISE/OROSMANE-ÉLISE/OROSMANE-ÉLISE-ARGANTE/ÉLISE/ÉLISE-NICANOR',
+      'string-id' => '#ELISE;#OROSMANE,#ELISE;#OROSMANE,#ELISE;#OROSMANE,#ELISE,#ARGANTE;#ELISE;#ELISE,#NICANOR',
     ),
   ),
   'scarron_princecorsaire_V05' => 
@@ -8233,11 +6763,12 @@
       'title' => 'Le Prince corsaire',
       'date' => 1658,
       'lustrum' => '1656-1660',
-      'genre' => 'Comédie',
+      'genre' => 'Tragi-comédie',
       'titleId' => 'LePrincecorsaire',
-      'genreId' => 'Comedie',
+      'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'OROSMANE-ÉLISE/OROSMANE-ÉLISE/OROSMANE-ÉLISE-ARGANTE/ÉLISE/ÉLISE-NICANOR/OROSMANE-ÉLISE-NICANOR',
+      'string-id' => '#OROSMANE,#ELISE;#OROSMANE,#ELISE;#OROSMANE,#ELISE,#ARGANTE;#ELISE;#ELISE,#NICANOR;#OROSMANE,#ELISE,#NICANOR',
     ),
   ),
   'scarron_marquisridicule_V01' => 
@@ -8295,7 +6826,8 @@
       'titleId' => 'LeMarquisridicule',
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
-      'string' => 'DON SANCHE/DON SANCHE-ORDUGNO/DON SANCHE-BLANCHE-ORDUGNO/DON SANCHE-BLANCHE-ORDUGNO/DON SANCHE/STÉFANIE-OLIVARES',
+      'string' => 'DON SANCHE/DON BLAIZE-POL-DON SANCHE-ORDUGNO/DON BLAIZE-POL-DON SANCHE-BLANCHE-ORDUGNO/DON BLAIZE-POL-DON SANCHE-BLANCHE-ORDUGNO/DON SANCHE/DON COSME de Vargas-STÉFANIE-OLIVARES',
+      'string-id' => '#DONSANCHE;#DONBLAIZE,#DONSANCHE,#ORDUGNO;#DONBLAIZE,#DONSANCHE,#BLANCHE,#ORDUGNO;#DONBLAIZE,#DONSANCHE,#BLANCHE,#ORDUGNO;#DONSANCHE;#DONCOSME,#STEFANIE,#OLIVARES',
     ),
   ),
   'scarron_marquisridicule_V02' => 
@@ -8353,7 +6885,8 @@
       'titleId' => 'LeMarquisridicule',
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
-      'string' => 'DON SANCHE-ORDUGNO/DON SANCHE-BLANCHE-ORDUGNO/DON SANCHE-BLANCHE-ORDUGNO/DON SANCHE/STÉFANIE-OLIVARES/DON SANCHE-BLANCHE-STÉFANIE-OLIVARES-ORDUGNO',
+      'string' => 'DON BLAIZE-POL-DON SANCHE-ORDUGNO/DON BLAIZE-POL-DON SANCHE-BLANCHE-ORDUGNO/DON BLAIZE-POL-DON SANCHE-BLANCHE-ORDUGNO/DON SANCHE/DON COSME de Vargas-STÉFANIE-OLIVARES/DON BLAIZE-POL-DON SANCHE-DON COSME de Vargas-BLANCHE-STÉFANIE-OLIVARES-ORDUGNO',
+      'string-id' => '#DONBLAIZE,#DONSANCHE,#ORDUGNO;#DONBLAIZE,#DONSANCHE,#BLANCHE,#ORDUGNO;#DONBLAIZE,#DONSANCHE,#BLANCHE,#ORDUGNO;#DONSANCHE;#DONCOSME,#STEFANIE,#OLIVARES;#DONBLAIZE,#DONSANCHE,#DONCOSME,#BLANCHE,#STEFANIE,#OLIVARES,#ORDUGNO',
     ),
   ),
   'scarron_jodeletdueliste_II01' => 
@@ -8421,6 +6954,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON DIEGO GIRON-DON ALPHONSE/JODELET-DON ALPHONSE/DON DIEGO GIRON-DON FÉLIX DE FONSEQUE-JODELET/DON DIEGO GIRON-DON FÉLIX DE FONSEQUE-DON ALPHONSE/DON DIEGO GIRON-DON ALPHONSE/DON DIEGO GIRON-DON GASPARD DE PADILLE-DON ALPHONSE',
+      'string-id' => '#DONDIEGUE,#ALPHONSE;#JODELET,#ALPHONSE;#DONDIEGUE,#DONFELIX,#JODELET;#DONDIEGUE,#DONFELIX,#ALPHONSE;#DONDIEGUE,#ALPHONSE;#DONDIEGUE,#DONGASPARD,#ALPHONSE',
     ),
   ),
   'scarron_jodeletdueliste_II02' => 
@@ -8497,6 +7031,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'JODELET-DON ALPHONSE/DON DIEGO GIRON-DON FÉLIX DE FONSEQUE-JODELET/DON DIEGO GIRON-DON FÉLIX DE FONSEQUE-DON ALPHONSE/DON DIEGO GIRON-DON ALPHONSE/DON DIEGO GIRON-DON GASPARD DE PADILLE-DON ALPHONSE/DON DIEGO GIRON-LUCIE-DON ALPHONSE',
+      'string-id' => '#JODELET,#ALPHONSE;#DONDIEGUE,#DONFELIX,#JODELET;#DONDIEGUE,#DONFELIX,#ALPHONSE;#DONDIEGUE,#ALPHONSE;#DONDIEGUE,#DONGASPARD,#ALPHONSE;#DONDIEGUE,#LUCIE,#ALPHONSE',
     ),
   ),
   'scarron_jodeletdueliste_III01' => 
@@ -8573,6 +7108,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'JODELET/JODELET-DON ALPHONSE/DON DIEGO GIRON-DON ALPHONSE/DON DIEGO GIRON-DON FÉLIX DE FONSEQUE-DON ALPHONSE/DON DIEGO GIRON-DON FÉLIX DE FONSEQUE-DON PEDRO D\'AVILA-HÉLÈNE-LUCIE/LUCIE',
+      'string-id' => '#JODELET;#JODELET,#ALPHONSE;#DONDIEGUE,#ALPHONSE;#DONDIEGUE,#DONFELIX,#ALPHONSE;#DONDIEGUE,#DONFELIX,#DONPEDRO,#HELENE,#LUCIE;#LUCIE',
     ),
   ),
   'scarron_jodeletdueliste_IV01' => 
@@ -8658,6 +7194,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'LUCIE/DON PEDRO D\'AVILA/DON PEDRO D\'AVILA-LUCIE-DON ALPHONSE/DON DIEGO GIRON-DON FÉLIX DE FONSEQUE-DON PEDRO D\'AVILA-HÉLÈNE-LUCIE/DON DIEGO GIRON-DON ALPHONSE/DON DIEGO GIRON-DON FÉLIX DE FONSEQUE-DON PEDRO D\'AVILA-LUCIE-JODELET-DON ALPHONSE',
+      'string-id' => '#LUCIE;#DONPEDRO;#DONPEDRO,#LUCIE,#ALPHONSE;#DONDIEGUE,#DONFELIX,#DONPEDRO,#HELENE,#LUCIE;#DONDIEGUE,#ALPHONSE;#DONDIEGUE,#DONFELIX,#DONPEDRO,#LUCIE,#JODELET,#ALPHONSE',
     ),
   ),
   'scarron_jodeletdueliste_IV02' => 
@@ -8743,6 +7280,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON PEDRO D\'AVILA/DON PEDRO D\'AVILA-LUCIE-DON ALPHONSE/DON DIEGO GIRON-DON FÉLIX DE FONSEQUE-DON PEDRO D\'AVILA-HÉLÈNE-LUCIE/DON DIEGO GIRON-DON ALPHONSE/DON DIEGO GIRON-DON FÉLIX DE FONSEQUE-DON PEDRO D\'AVILA-LUCIE-JODELET-DON ALPHONSE/JODELET',
+      'string-id' => '#DONPEDRO;#DONPEDRO,#LUCIE,#ALPHONSE;#DONDIEGUE,#DONFELIX,#DONPEDRO,#HELENE,#LUCIE;#DONDIEGUE,#ALPHONSE;#DONDIEGUE,#DONFELIX,#DONPEDRO,#LUCIE,#JODELET,#ALPHONSE;#JODELET',
     ),
   ),
   'scarron_jodeletdueliste_IV03' => 
@@ -8819,6 +7357,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON PEDRO D\'AVILA-LUCIE-DON ALPHONSE/DON DIEGO GIRON-DON FÉLIX DE FONSEQUE-DON PEDRO D\'AVILA-HÉLÈNE-LUCIE/DON DIEGO GIRON-DON ALPHONSE/DON DIEGO GIRON-DON FÉLIX DE FONSEQUE-DON PEDRO D\'AVILA-LUCIE-JODELET-DON ALPHONSE/JODELET/DON FÉLIX DE FONSEQUE-JODELET',
+      'string-id' => '#DONPEDRO,#LUCIE,#ALPHONSE;#DONDIEGUE,#DONFELIX,#DONPEDRO,#HELENE,#LUCIE;#DONDIEGUE,#ALPHONSE;#DONDIEGUE,#DONFELIX,#DONPEDRO,#LUCIE,#JODELET,#ALPHONSE;#JODELET;#DONFELIX,#JODELET',
     ),
   ),
   'scarron_jodeletdueliste_V01' => 
@@ -8895,6 +7434,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'JODELET/JODELET-DON ALPHONSE/DON FÉLIX DE FONSEQUE-DON PEDRO D\'AVILA-DON ALPHONSE/DON FÉLIX DE FONSEQUE-DON GASPARD DE PADILLE-DON PEDRO D\'AVILA-HÉLÈNE/DON DIEGO GIRON-DON ALPHONSE/DON DIEGO GIRON-LUCIE-DON ALPHONSE',
+      'string-id' => '#JODELET;#JODELET,#ALPHONSE;#DONFELIX,#DONPEDRO,#ALPHONSE;#DONFELIX,#DONGASPARD,#DONPEDRO,#HELENE;#DONDIEGUE,#ALPHONSE;#DONDIEGUE,#LUCIE,#ALPHONSE',
     ),
   ),
   'scarron_jodeletdueliste_V02' => 
@@ -8980,6 +7520,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'JODELET-DON ALPHONSE/DON FÉLIX DE FONSEQUE-DON PEDRO D\'AVILA-DON ALPHONSE/DON FÉLIX DE FONSEQUE-DON GASPARD DE PADILLE-DON PEDRO D\'AVILA-HÉLÈNE/DON DIEGO GIRON-DON ALPHONSE/DON DIEGO GIRON-LUCIE-DON ALPHONSE/DON DIEGO GIRON-DON GASPARD DE PADILLE-DON PEDRO D\'AVILA-HÉLÈNE-LUCIE',
+      'string-id' => '#JODELET,#ALPHONSE;#DONFELIX,#DONPEDRO,#ALPHONSE;#DONFELIX,#DONGASPARD,#DONPEDRO,#HELENE;#DONDIEGUE,#ALPHONSE;#DONDIEGUE,#LUCIE,#ALPHONSE;#DONDIEGUE,#DONGASPARD,#DONPEDRO,#HELENE,#LUCIE',
     ),
   ),
   'scarron_jodelet_I01' => 
@@ -9020,6 +7561,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON JUAN/DON JUAN/DON JUAN/DON JUAN-DON LOUIS/DON JUAN/',
+      'string-id' => '#DONJUAN;#DONJUAN;#DONJUAN;#DONJUAN,#DONLOUIS;#DONJUAN;',
     ),
   ),
   'scarron_jodelet_II01' => 
@@ -9069,6 +7611,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'ISABELLE//DON FERNAND/DON FERNAND/DON FERNAND-ISABELLE/DON FERNAND-ISABELLE-LUCRÈCE',
+      'string-id' => '#ISABELLE;;#DONFERNAND;#DONFERNAND;#DONFERNAND,#ISABELLE;#DONFERNAND,#ISABELLE,#LUCRECE',
     ),
   ),
   'scarron_jodelet_II02' => 
@@ -9118,6 +7661,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => '/DON FERNAND/DON FERNAND/DON FERNAND-ISABELLE/DON FERNAND-ISABELLE-LUCRÈCE/DON FERNAND-LUCRÈCE',
+      'string-id' => ';#DONFERNAND;#DONFERNAND;#DONFERNAND,#ISABELLE;#DONFERNAND,#ISABELLE,#LUCRECE;#DONFERNAND,#LUCRECE',
     ),
   ),
   'scarron_jodelet_II03' => 
@@ -9167,6 +7711,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON FERNAND/DON FERNAND/DON FERNAND-ISABELLE/DON FERNAND-ISABELLE-LUCRÈCE/DON FERNAND-LUCRÈCE/DON FERNAND-LUCRÈCE',
+      'string-id' => '#DONFERNAND;#DONFERNAND;#DONFERNAND,#ISABELLE;#DONFERNAND,#ISABELLE,#LUCRECE;#DONFERNAND,#LUCRECE;#DONFERNAND,#LUCRECE',
     ),
   ),
   'scarron_jodelet_II04' => 
@@ -9216,6 +7761,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON FERNAND/DON FERNAND-ISABELLE/DON FERNAND-ISABELLE-LUCRÈCE/DON FERNAND-LUCRÈCE/DON FERNAND-LUCRÈCE/DON FERNAND',
+      'string-id' => '#DONFERNAND;#DONFERNAND,#ISABELLE;#DONFERNAND,#ISABELLE,#LUCRECE;#DONFERNAND,#LUCRECE;#DONFERNAND,#LUCRECE;#DONFERNAND',
     ),
   ),
   'scarron_jodelet_II05' => 
@@ -9274,6 +7820,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON FERNAND-ISABELLE/DON FERNAND-ISABELLE-LUCRÈCE/DON FERNAND-LUCRÈCE/DON FERNAND-LUCRÈCE/DON FERNAND/DON LOUIS-DON FERNAND',
+      'string-id' => '#DONFERNAND,#ISABELLE;#DONFERNAND,#ISABELLE,#LUCRECE;#DONFERNAND,#LUCRECE;#DONFERNAND,#LUCRECE;#DONFERNAND;#DONLOUIS,#DONFERNAND',
     ),
   ),
   'scarron_jodelet_II06' => 
@@ -9332,6 +7879,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON FERNAND-ISABELLE-LUCRÈCE/DON FERNAND-LUCRÈCE/DON FERNAND-LUCRÈCE/DON FERNAND/DON LOUIS-DON FERNAND/DON LOUIS-DON FERNAND',
+      'string-id' => '#DONFERNAND,#ISABELLE,#LUCRECE;#DONFERNAND,#LUCRECE;#DONFERNAND,#LUCRECE;#DONFERNAND;#DONLOUIS,#DONFERNAND;#DONLOUIS,#DONFERNAND',
     ),
   ),
   'scarron_jodelet_II07' => 
@@ -9381,6 +7929,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON FERNAND-LUCRÈCE/DON FERNAND-LUCRÈCE/DON FERNAND/DON LOUIS-DON FERNAND/DON LOUIS-DON FERNAND/DON LOUIS-DON FERNAND',
+      'string-id' => '#DONFERNAND,#LUCRECE;#DONFERNAND,#LUCRECE;#DONFERNAND;#DONLOUIS,#DONFERNAND;#DONLOUIS,#DONFERNAND;#DONLOUIS,#DONFERNAND',
     ),
   ),
   'scarron_jodelet_II08' => 
@@ -9439,6 +7988,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON FERNAND-LUCRÈCE/DON FERNAND/DON LOUIS-DON FERNAND/DON LOUIS-DON FERNAND/DON LOUIS-DON FERNAND/DON LOUIS-DON FERNAND-ISABELLE',
+      'string-id' => '#DONFERNAND,#LUCRECE;#DONFERNAND;#DONLOUIS,#DONFERNAND;#DONLOUIS,#DONFERNAND;#DONLOUIS,#DONFERNAND;#DONLOUIS,#DONFERNAND,#ISABELLE',
     ),
   ),
   'scarron_jodelet_II09' => 
@@ -9497,6 +8047,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON FERNAND/DON LOUIS-DON FERNAND/DON LOUIS-DON FERNAND/DON LOUIS-DON FERNAND/DON LOUIS-DON FERNAND-ISABELLE/DON JUAN-DON LOUIS-DON FERNAND-ISABELLE',
+      'string-id' => '#DONFERNAND;#DONLOUIS,#DONFERNAND;#DONLOUIS,#DONFERNAND;#DONLOUIS,#DONFERNAND;#DONLOUIS,#DONFERNAND,#ISABELLE;#DONJUAN,#DONLOUIS,#DONFERNAND,#ISABELLE',
     ),
   ),
   'scarron_jodelet_II10' => 
@@ -9546,6 +8097,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON LOUIS-DON FERNAND/DON LOUIS-DON FERNAND/DON LOUIS-DON FERNAND/DON LOUIS-DON FERNAND-ISABELLE/DON JUAN-DON LOUIS-DON FERNAND-ISABELLE/DON JUAN',
+      'string-id' => '#DONLOUIS,#DONFERNAND;#DONLOUIS,#DONFERNAND;#DONLOUIS,#DONFERNAND;#DONLOUIS,#DONFERNAND,#ISABELLE;#DONJUAN,#DONLOUIS,#DONFERNAND,#ISABELLE;#DONJUAN',
     ),
   ),
   'scarron_jodelet_III01' => 
@@ -9595,6 +8147,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON LOUIS/DON LOUIS/DON FERNAND-ISABELLE/ISABELLE/DON LOUIS-ISABELLE/DON LOUIS-ISABELLE',
+      'string-id' => '#DONLOUIS;#DONLOUIS;#DONFERNAND,#ISABELLE;#ISABELLE;#DONLOUIS,#ISABELLE;#DONLOUIS,#ISABELLE',
     ),
   ),
   'scarron_jodelet_III02' => 
@@ -9644,6 +8197,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON LOUIS/DON FERNAND-ISABELLE/ISABELLE/DON LOUIS-ISABELLE/DON LOUIS-ISABELLE/ISABELLE',
+      'string-id' => '#DONLOUIS;#DONFERNAND,#ISABELLE;#ISABELLE;#DONLOUIS,#ISABELLE;#DONLOUIS,#ISABELLE;#ISABELLE',
     ),
   ),
   'scarron_jodelet_III03' => 
@@ -9702,6 +8256,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON FERNAND-ISABELLE/ISABELLE/DON LOUIS-ISABELLE/DON LOUIS-ISABELLE/ISABELLE/DON JUAN-DON FERNAND-ISABELLE',
+      'string-id' => '#DONFERNAND,#ISABELLE;#ISABELLE;#DONLOUIS,#ISABELLE;#DONLOUIS,#ISABELLE;#ISABELLE;#DONJUAN,#DONFERNAND,#ISABELLE',
     ),
   ),
   'scarron_jodelet_III04' => 
@@ -9760,6 +8315,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'ISABELLE/DON LOUIS-ISABELLE/DON LOUIS-ISABELLE/ISABELLE/DON JUAN-DON FERNAND-ISABELLE/DON JUAN-ISABELLE',
+      'string-id' => '#ISABELLE;#DONLOUIS,#ISABELLE;#DONLOUIS,#ISABELLE;#ISABELLE;#DONJUAN,#DONFERNAND,#ISABELLE;#DONJUAN,#ISABELLE',
     ),
   ),
   'scarron_jodelet_III05' => 
@@ -9818,6 +8374,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON LOUIS-ISABELLE/DON LOUIS-ISABELLE/ISABELLE/DON JUAN-DON FERNAND-ISABELLE/DON JUAN-ISABELLE/DON JUAN-ISABELLE',
+      'string-id' => '#DONLOUIS,#ISABELLE;#DONLOUIS,#ISABELLE;#ISABELLE;#DONJUAN,#DONFERNAND,#ISABELLE;#DONJUAN,#ISABELLE;#DONJUAN,#ISABELLE',
     ),
   ),
   'scarron_jodelet_III06' => 
@@ -9876,6 +8433,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON LOUIS-ISABELLE/ISABELLE/DON JUAN-DON FERNAND-ISABELLE/DON JUAN-ISABELLE/DON JUAN-ISABELLE/ISABELLE',
+      'string-id' => '#DONLOUIS,#ISABELLE;#ISABELLE;#DONJUAN,#DONFERNAND,#ISABELLE;#DONJUAN,#ISABELLE;#DONJUAN,#ISABELLE;#ISABELLE',
     ),
   ),
   'scarron_jodelet_III07' => 
@@ -9925,6 +8483,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'ISABELLE/DON JUAN-DON FERNAND-ISABELLE/DON JUAN-ISABELLE/DON JUAN-ISABELLE/ISABELLE/DON JUAN',
+      'string-id' => '#ISABELLE;#DONJUAN,#DONFERNAND,#ISABELLE;#DONJUAN,#ISABELLE;#DONJUAN,#ISABELLE;#ISABELLE;#DONJUAN',
     ),
   ),
   'scarron_jodelet_III08' => 
@@ -9974,6 +8533,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON JUAN-DON FERNAND-ISABELLE/DON JUAN-ISABELLE/DON JUAN-ISABELLE/ISABELLE/DON JUAN/DON JUAN-ISABELLE',
+      'string-id' => '#DONJUAN,#DONFERNAND,#ISABELLE;#DONJUAN,#ISABELLE;#DONJUAN,#ISABELLE;#ISABELLE;#DONJUAN;#DONJUAN,#ISABELLE',
     ),
   ),
   'scarron_jodelet_III09' => 
@@ -10014,6 +8574,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON JUAN-ISABELLE/DON JUAN-ISABELLE/ISABELLE/DON JUAN/DON JUAN-ISABELLE/DON JUAN-ISABELLE',
+      'string-id' => '#DONJUAN,#ISABELLE;#DONJUAN,#ISABELLE;#ISABELLE;#DONJUAN;#DONJUAN,#ISABELLE;#DONJUAN,#ISABELLE',
     ),
   ),
   'scarron_jodelet_III10' => 
@@ -10054,6 +8615,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON JUAN-ISABELLE/ISABELLE/DON JUAN/DON JUAN-ISABELLE/DON JUAN-ISABELLE/ISABELLE',
+      'string-id' => '#DONJUAN,#ISABELLE;#ISABELLE;#DONJUAN;#DONJUAN,#ISABELLE;#DONJUAN,#ISABELLE;#ISABELLE',
     ),
   ),
   'scarron_jodelet_III11' => 
@@ -10103,6 +8665,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'ISABELLE/DON JUAN/DON JUAN-ISABELLE/DON JUAN-ISABELLE/ISABELLE/LUCRÈCE',
+      'string-id' => '#ISABELLE;#DONJUAN;#DONJUAN,#ISABELLE;#DONJUAN,#ISABELLE;#ISABELLE;#LUCRECE',
     ),
   ),
   'scarron_jodelet_III12' => 
@@ -10152,6 +8715,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON JUAN/DON JUAN-ISABELLE/DON JUAN-ISABELLE/ISABELLE/LUCRÈCE/LUCRÈCE',
+      'string-id' => '#DONJUAN;#DONJUAN,#ISABELLE;#DONJUAN,#ISABELLE;#ISABELLE;#LUCRECE;#LUCRECE',
     ),
   ),
   'scarron_jodelet_III13' => 
@@ -10210,6 +8774,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON JUAN-ISABELLE/DON JUAN-ISABELLE/ISABELLE/LUCRÈCE/LUCRÈCE/DON LOUIS-LUCRÈCE',
+      'string-id' => '#DONJUAN,#ISABELLE;#DONJUAN,#ISABELLE;#ISABELLE;#LUCRECE;#LUCRECE;#DONLOUIS,#LUCRECE',
     ),
   ),
   'scarron_jodelet_III14' => 
@@ -10268,6 +8833,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON JUAN-ISABELLE/ISABELLE/LUCRÈCE/LUCRÈCE/DON LOUIS-LUCRÈCE/DON JUAN-DON LOUIS-LUCRÈCE',
+      'string-id' => '#DONJUAN,#ISABELLE;#ISABELLE;#LUCRECE;#LUCRECE;#DONLOUIS,#LUCRECE;#DONJUAN,#DONLOUIS,#LUCRECE',
     ),
   ),
   'scarron_jodelet_III15' => 
@@ -10335,6 +8901,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'ISABELLE/LUCRÈCE/LUCRÈCE/DON LOUIS-LUCRÈCE/DON JUAN-DON LOUIS-LUCRÈCE/DON JUAN-DON LOUIS-DON FERNAND-ISABELLE-LUCRÈCE',
+      'string-id' => '#ISABELLE;#LUCRECE;#LUCRECE;#DONLOUIS,#LUCRECE;#DONJUAN,#DONLOUIS,#LUCRECE;#DONJUAN,#DONLOUIS,#DONFERNAND,#ISABELLE,#LUCRECE',
     ),
   ),
   'scarron_jodelet_IV01' => 
@@ -10375,6 +8942,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'ISABELLE-LUCRÈCE////ISABELLE/',
+      'string-id' => '#ISABELLE,#LUCRECE;;;;#ISABELLE;',
     ),
   ),
   'scarron_jodelet_IV02' => 
@@ -10415,6 +8983,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => '///ISABELLE//DON FERNAND',
+      'string-id' => ';;;#ISABELLE;;#DONFERNAND',
     ),
   ),
   'scarron_jodelet_IV03' => 
@@ -10464,6 +9033,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => '//ISABELLE//DON FERNAND/DON JUAN-DON FERNAND',
+      'string-id' => ';;#ISABELLE;;#DONFERNAND;#DONJUAN,#DONFERNAND',
     ),
   ),
   'scarron_jodelet_IV04' => 
@@ -10513,6 +9083,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => '/ISABELLE//DON FERNAND/DON JUAN-DON FERNAND/DON JUAN-DON FERNAND',
+      'string-id' => ';#ISABELLE;;#DONFERNAND;#DONJUAN,#DONFERNAND;#DONJUAN,#DONFERNAND',
     ),
   ),
   'scarron_jodelet_IV05' => 
@@ -10562,6 +9133,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'ISABELLE//DON FERNAND/DON JUAN-DON FERNAND/DON JUAN-DON FERNAND/DON JUAN',
+      'string-id' => '#ISABELLE;;#DONFERNAND;#DONJUAN,#DONFERNAND;#DONJUAN,#DONFERNAND;#DONJUAN',
     ),
   ),
   'scarron_jodelet_V01' => 
@@ -10620,6 +9192,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => '/ISABELLE-LUCRÈCE/DON JUAN//DON JUAN-DON LOUIS/DON JUAN-DON LOUIS-DON FERNAND',
+      'string-id' => ';#ISABELLE,#LUCRECE;#DONJUAN;;#DONJUAN,#DONLOUIS;#DONJUAN,#DONLOUIS,#DONFERNAND',
     ),
   ),
   'scarron_jodelet_V02' => 
@@ -10678,6 +9251,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'ISABELLE-LUCRÈCE/DON JUAN//DON JUAN-DON LOUIS/DON JUAN-DON LOUIS-DON FERNAND/DON JUAN-DON LOUIS-DON FERNAND',
+      'string-id' => '#ISABELLE,#LUCRECE;#DONJUAN;;#DONJUAN,#DONLOUIS;#DONJUAN,#DONLOUIS,#DONFERNAND;#DONJUAN,#DONLOUIS,#DONFERNAND',
     ),
   ),
   'scarron_jodelet_V03' => 
@@ -10727,6 +9301,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON JUAN//DON JUAN-DON LOUIS/DON JUAN-DON LOUIS-DON FERNAND/DON JUAN-DON LOUIS-DON FERNAND/DON JUAN-DON LOUIS-DON FERNAND',
+      'string-id' => '#DONJUAN;;#DONJUAN,#DONLOUIS;#DONJUAN,#DONLOUIS,#DONFERNAND;#DONJUAN,#DONLOUIS,#DONFERNAND;#DONJUAN,#DONLOUIS,#DONFERNAND',
     ),
   ),
   'scarron_jodelet_V04' => 
@@ -10776,6 +9351,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => '/DON JUAN-DON LOUIS/DON JUAN-DON LOUIS-DON FERNAND/DON JUAN-DON LOUIS-DON FERNAND/DON JUAN-DON LOUIS-DON FERNAND/DON JUAN-DON LOUIS-DON FERNAND-ISABELLE-LUCRÈCE',
+      'string-id' => ';#DONJUAN,#DONLOUIS;#DONJUAN,#DONLOUIS,#DONFERNAND;#DONJUAN,#DONLOUIS,#DONFERNAND;#DONJUAN,#DONLOUIS,#DONFERNAND;#DONJUAN,#DONLOUIS,#DONFERNAND,#ISABELLE,#LUCRECE',
     ),
   ),
   'scarron_heritierridicule_I01' => 
@@ -10852,6 +9428,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'LÉONOR DE GUSMAN-BÉATRIX/LÉONOR DE GUSMAN-HÉLÈNE DE TORRES-BÉATRIX/DON JUAN BRACAMONT-LÉONOR DE GUSMAN-HÉLÈNE DE TORRES-BÉATRIX/DON DIÈGUE de Mendoce-DON JUAN BRACAMONT-HÉLÈNE DE TORRES-BÉATRIX/LÉONOR DE GUSMAN-HÉLÈNE DE TORRES-BÉATRIX/HÉLÈNE DE TORRES-PAQUETTE',
+      'string-id' => '#LEONOR,#BEATRIX;#LEONOR,#HELENE,#BEATRIX;#DONJUAN,#LEONOR,#HELENE,#BEATRIX;#DONDIEGUE,#DONJUAN,#HELENE,#BEATRIX;#LEONOR,#HELENE,#BEATRIX;#HELENE,#PAQUETTE',
     ),
   ),
   'scarron_gardiendesoimeme_I01' => 
@@ -10937,6 +9514,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'ALCANDRE-SULPICE/FILIPIN-MAURICETTE-PAYSANS/ALCANDRE-CONSTANCE/ALCANDRE-CONSTANCE-HÉLÈNE-FILIPIN-MAURICETTE-PAYSANS/LICASTE-SOLDATS/FILIPIN',
+      'string-id' => '#ALCANDRE,#SULPICE;#FILIPIN,#MAURICETTE,#PAYSAN;#ALCANDRE,#CONSTANCE;#ALCANDRE,#CONSTANCE,#HELENE,#FILIPIN,#MAURICETTE,#PAYSAN;#LICASTE,#SOLDAT;#FILIPIN',
     ),
   ),
   'scarron_gardiendesoimeme_I02' => 
@@ -11004,6 +9582,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'FILIPIN-MAURICETTE-PAYSANS/ALCANDRE-CONSTANCE/ALCANDRE-CONSTANCE-HÉLÈNE-FILIPIN-MAURICETTE-PAYSANS/LICASTE-SOLDATS/FILIPIN/FILIPIN-LICASTE-SOLDATS',
+      'string-id' => '#FILIPIN,#MAURICETTE,#PAYSAN;#ALCANDRE,#CONSTANCE;#ALCANDRE,#CONSTANCE,#HELENE,#FILIPIN,#MAURICETTE,#PAYSAN;#LICASTE,#SOLDAT;#FILIPIN;#FILIPIN,#LICASTE,#SOLDAT',
     ),
   ),
   'scarron_gardiendesoimeme_II01' => 
@@ -11089,6 +9668,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'CONSTANCE-HÉLÈNE/ALCANDRE-CONSTANCE/ALCANDRE-CONSTANCE-HÉLÈNE-LICASTE/LE ROI DE NAPLES-CONSTANCE/LE ROI DE NAPLES-FILIPIN-SULPICE-LICASTE-SOLDATS/LE ROI DE NAPLES-ISABELLE-SABINE',
+      'string-id' => '#CONSTANCE,#HELENE;#ALCANDRE,#CONSTANCE;#ALCANDRE,#CONSTANCE,#HELENE,#LICASTE;#LEROI,#CONSTANCE;#LEROI,#FILIPIN,#SULPICE,#LICASTE,#SOLDAT;#LEROI,#ISABELLE,#SABINE',
     ),
   ),
   'scarron_gardiendesoimeme_IV01' => 
@@ -11165,6 +9745,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'ALCANDRE-CONSTANCE/ISABELLE-SABINE/ISABELLE-CONSTANCE-SABINE/ALCANDRE-ISABELLE-CONSTANCE/ALCANDRE-CONSTANCE-SULPICE/LE ROI DE NAPLES-CONSTANCE',
+      'string-id' => '#ALCANDRE,#CONSTANCE;#ISABELLE,#SABINE;#ISABELLE,#CONSTANCE,#SABINE;#ALCANDRE,#ISABELLE,#CONSTANCE;#ALCANDRE,#CONSTANCE,#SULPICE;#LEROI,#CONSTANCE',
     ),
   ),
   'scarron_gardiendesoimeme_IV02' => 
@@ -11250,6 +9831,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'ISABELLE-SABINE/ISABELLE-CONSTANCE-SABINE/ALCANDRE-ISABELLE-CONSTANCE/ALCANDRE-CONSTANCE-SULPICE/LE ROI DE NAPLES-CONSTANCE/LE ROI DE NAPLES-LICASTE',
+      'string-id' => '#ISABELLE,#SABINE;#ISABELLE,#CONSTANCE,#SABINE;#ALCANDRE,#ISABELLE,#CONSTANCE;#ALCANDRE,#CONSTANCE,#SULPICE;#LEROI,#CONSTANCE;#LEROI,#LICASTE',
     ),
   ),
   'scarron_gardiendesoimeme_IV03' => 
@@ -11335,6 +9917,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'ISABELLE-CONSTANCE-SABINE/ALCANDRE-ISABELLE-CONSTANCE/ALCANDRE-CONSTANCE-SULPICE/LE ROI DE NAPLES-CONSTANCE/LE ROI DE NAPLES-LICASTE/LE ROI DE NAPLES-ISABELLE-LICASTE',
+      'string-id' => '#ISABELLE,#CONSTANCE,#SABINE;#ALCANDRE,#ISABELLE,#CONSTANCE;#ALCANDRE,#CONSTANCE,#SULPICE;#LEROI,#CONSTANCE;#LEROI,#LICASTE;#LEROI,#ISABELLE,#LICASTE',
     ),
   ),
   'scarron_gardiendesoimeme_IV04' => 
@@ -11420,6 +10003,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'ALCANDRE-ISABELLE-CONSTANCE/ALCANDRE-CONSTANCE-SULPICE/LE ROI DE NAPLES-CONSTANCE/LE ROI DE NAPLES-LICASTE/LE ROI DE NAPLES-ISABELLE-LICASTE/LE ROI DE NAPLES-ALCANDRE-ISABELLE-SABINE-FILIPIN-SULPICE-LICASTE',
+      'string-id' => '#ALCANDRE,#ISABELLE,#CONSTANCE;#ALCANDRE,#CONSTANCE,#SULPICE;#LEROI,#CONSTANCE;#LEROI,#LICASTE;#LEROI,#ISABELLE,#LICASTE;#LEROI,#ALCANDRE,#ISABELLE,#SABINE,#FILIPIN,#SULPICE,#LICASTE',
     ),
   ),
   'scarron_gardiendesoimeme_IV05' => 
@@ -11505,6 +10089,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'ALCANDRE-CONSTANCE-SULPICE/LE ROI DE NAPLES-CONSTANCE/LE ROI DE NAPLES-LICASTE/LE ROI DE NAPLES-ISABELLE-LICASTE/LE ROI DE NAPLES-ALCANDRE-ISABELLE-SABINE-FILIPIN-SULPICE-LICASTE/ALCANDRE-ISABELLE-FILIPIN-SULPICE-LICASTE',
+      'string-id' => '#ALCANDRE,#CONSTANCE,#SULPICE;#LEROI,#CONSTANCE;#LEROI,#LICASTE;#LEROI,#ISABELLE,#LICASTE;#LEROI,#ALCANDRE,#ISABELLE,#SABINE,#FILIPIN,#SULPICE,#LICASTE;#ALCANDRE,#ISABELLE,#FILIPIN,#SULPICE,#LICASTE',
     ),
   ),
   'scarron_gardiendesoimeme_V01' => 
@@ -11608,6 +10193,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'CONSTANCE-HÉLÈNE-SULPICE/ALCANDRE-SULPICE/MAURICETTE-PAYSANS/LE ROI DE NAPLES-SULPICE-LICASTE/LE ROI DE NAPLES-LE PRINCE DE SICILE-ISABELLE/LE ROI DE NAPLES-LE PRINCE DE SICILE-ALCANDRE-ISABELLE-FILIPIN-SULPICE-MAURICETTE',
+      'string-id' => '#CONSTANCE,#HELENE,#SULPICE;#ALCANDRE,#SULPICE;#MAURICETTE,#PAYSAN;#LEROI,#SULPICE,#LICASTE;#LEROI,#LEPRINCE,#ISABELLE;#LEROI,#LEPRINCE,#ALCANDRE,#ISABELLE,#FILIPIN,#SULPICE,#MAURICETTE',
     ),
   ),
   'scarron_gardiendesoimeme_V02' => 
@@ -11711,6 +10297,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'ALCANDRE-SULPICE/MAURICETTE-PAYSANS/LE ROI DE NAPLES-SULPICE-LICASTE/LE ROI DE NAPLES-LE PRINCE DE SICILE-ISABELLE/LE ROI DE NAPLES-LE PRINCE DE SICILE-ALCANDRE-ISABELLE-FILIPIN-SULPICE-MAURICETTE/LE ROI DE NAPLES-ALCANDRE-CONSTANCE',
+      'string-id' => '#ALCANDRE,#SULPICE;#MAURICETTE,#PAYSAN;#LEROI,#SULPICE,#LICASTE;#LEROI,#LEPRINCE,#ISABELLE;#LEROI,#LEPRINCE,#ALCANDRE,#ISABELLE,#FILIPIN,#SULPICE,#MAURICETTE;#LEROI,#ALCANDRE,#CONSTANCE',
     ),
   ),
   'scarron_gardiendesoimeme_V03' => 
@@ -11814,6 +10401,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'MAURICETTE-PAYSANS/LE ROI DE NAPLES-SULPICE-LICASTE/LE ROI DE NAPLES-LE PRINCE DE SICILE-ISABELLE/LE ROI DE NAPLES-LE PRINCE DE SICILE-ALCANDRE-ISABELLE-FILIPIN-SULPICE-MAURICETTE/LE ROI DE NAPLES-ALCANDRE-CONSTANCE/LE ROI DE NAPLES-LE PRINCE DE SICILE-ALCANDRE-ISABELLE-CONSTANCE-FILIPIN-SULPICE-MAURICETTE',
+      'string-id' => '#MAURICETTE,#PAYSAN;#LEROI,#SULPICE,#LICASTE;#LEROI,#LEPRINCE,#ISABELLE;#LEROI,#LEPRINCE,#ALCANDRE,#ISABELLE,#FILIPIN,#SULPICE,#MAURICETTE;#LEROI,#ALCANDRE,#CONSTANCE;#LEROI,#LEPRINCE,#ALCANDRE,#ISABELLE,#CONSTANCE,#FILIPIN,#SULPICE,#MAURICETTE',
     ),
   ),
   'scarron_fausseapparence_II01' => 
@@ -11881,6 +10469,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'DON SANCHE DE LYSSAN/DON SANCHE DE LYSSAN-FLORE-MARINE/LÉONORE-FLORE-MARINE/LÉONORE-FLORE-DON LOUIS DE ROXAS-MARINE/DON SANCHE DE LYSSAN-MARINE/DON SANCHE DE LYSSAN-FLORE',
+      'string-id' => '#DONSANCHE;#DONSANCHE,#FLORE,#MARINE;#LEONORE,#FLORE,#MARINE;#LEONORE,#FLORE,#DONLOUIS,#MARINE;#DONSANCHE,#MARINE;#DONSANCHE,#FLORE',
     ),
   ),
   'scarron_fausseapparence_II02' => 
@@ -11948,6 +10537,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'DON SANCHE DE LYSSAN-FLORE-MARINE/LÉONORE-FLORE-MARINE/LÉONORE-FLORE-DON LOUIS DE ROXAS-MARINE/DON SANCHE DE LYSSAN-MARINE/DON SANCHE DE LYSSAN-FLORE/FLORE-MARINE',
+      'string-id' => '#DONSANCHE,#FLORE,#MARINE;#LEONORE,#FLORE,#MARINE;#LEONORE,#FLORE,#DONLOUIS,#MARINE;#DONSANCHE,#MARINE;#DONSANCHE,#FLORE;#FLORE,#MARINE',
     ),
   ),
   'scarron_fausseapparence_II03' => 
@@ -12015,6 +10605,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'LÉONORE-FLORE-MARINE/LÉONORE-FLORE-DON LOUIS DE ROXAS-MARINE/DON SANCHE DE LYSSAN-MARINE/DON SANCHE DE LYSSAN-FLORE/FLORE-MARINE/FLORE-MARINE',
+      'string-id' => '#LEONORE,#FLORE,#MARINE;#LEONORE,#FLORE,#DONLOUIS,#MARINE;#DONSANCHE,#MARINE;#DONSANCHE,#FLORE;#FLORE,#MARINE;#FLORE,#MARINE',
     ),
   ),
   'scarron_fausseapparence_III01' => 
@@ -12091,6 +10682,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'DON CARLOS DE ROXAS-DON LOUIS DE ROXAS/DON CARLOS DE ROXAS-DON LOUIS DE ROXAS/DON PEDRE DE LARA-DON LOUIS DE ROXAS/DON CARLOS DE ROXAS/LÉONORE-FLORE-MARINE/DON SANCHE DE LYSSAN-FLORE-MARINE',
+      'string-id' => '#DONCARLOS,#DONLOUIS;#DONCARLOS,#DONLOUIS;#DONPEDRE,#DONLOUIS;#DONCARLOS;#LEONORE,#FLORE,#MARINE;#DONSANCHE,#FLORE,#MARINE',
     ),
   ),
   'scarron_fausseapparence_III02' => 
@@ -12167,6 +10759,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'DON CARLOS DE ROXAS-DON LOUIS DE ROXAS/DON PEDRE DE LARA-DON LOUIS DE ROXAS/DON CARLOS DE ROXAS/LÉONORE-FLORE-MARINE/DON SANCHE DE LYSSAN-FLORE-MARINE/DON SANCHE DE LYSSAN-FLORE-MARINE',
+      'string-id' => '#DONCARLOS,#DONLOUIS;#DONPEDRE,#DONLOUIS;#DONCARLOS;#LEONORE,#FLORE,#MARINE;#DONSANCHE,#FLORE,#MARINE;#DONSANCHE,#FLORE,#MARINE',
     ),
   ),
   'scarron_fausseapparence_III03' => 
@@ -12252,6 +10845,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'DON PEDRE DE LARA-DON LOUIS DE ROXAS/DON CARLOS DE ROXAS/LÉONORE-FLORE-MARINE/DON SANCHE DE LYSSAN-FLORE-MARINE/DON SANCHE DE LYSSAN-FLORE-MARINE/FLORE-DON LOUIS DE ROXAS',
+      'string-id' => '#DONPEDRE,#DONLOUIS;#DONCARLOS;#LEONORE,#FLORE,#MARINE;#DONSANCHE,#FLORE,#MARINE;#DONSANCHE,#FLORE,#MARINE;#FLORE,#DONLOUIS',
     ),
   ),
   'scarron_fausseapparence_III04' => 
@@ -12328,6 +10922,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'DON CARLOS DE ROXAS/LÉONORE-FLORE-MARINE/DON SANCHE DE LYSSAN-FLORE-MARINE/DON SANCHE DE LYSSAN-FLORE-MARINE/FLORE-DON LOUIS DE ROXAS/DON CARLOS DE ROXAS-LÉONORE-DON SANCHE DE LYSSAN-FLORE-DON LOUIS DE ROXAS-MARINE',
+      'string-id' => '#DONCARLOS;#LEONORE,#FLORE,#MARINE;#DONSANCHE,#FLORE,#MARINE;#DONSANCHE,#FLORE,#MARINE;#FLORE,#DONLOUIS;#DONCARLOS,#LEONORE,#DONSANCHE,#FLORE,#DONLOUIS,#MARINE',
     ),
   ),
   'scarron_fausseapparence_IV01' => 
@@ -12404,6 +10999,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'DON CARLOS DE ROXAS-DON LOUIS DE ROXAS/FLORE-DON LOUIS DE ROXAS/DON CARLOS DE ROXAS-LÉONORE-FLORE/DON CARLOS DE ROXAS-LÉONORE-DON PEDRE DE LARA/DON PEDRE DE LARA-FLORE-MARINE/DON CARLOS DE ROXAS-LÉONORE-DON PEDRE DE LARA-FLORE-DON LOUIS DE ROXAS',
+      'string-id' => '#DONCARLOS,#DONLOUIS;#FLORE,#DONLOUIS;#DONCARLOS,#LEONORE,#FLORE;#DONCARLOS,#LEONORE,#DONPEDRE;#DONPEDRE,#FLORE,#MARINE;#DONCARLOS,#LEONORE,#DONPEDRE,#FLORE,#DONLOUIS',
     ),
   ),
   'scarron_fausseapparence_V01' => 
@@ -12462,6 +11058,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'LÉONORE/DON SANCHE DE LYSSAN/DON CARLOS DE ROXAS-DON SANCHE DE LYSSAN-FLORE/DON SANCHE DE LYSSAN-FLORE/LÉONORE-DON SANCHE DE LYSSAN-FLORE/DON CARLOS DE ROXAS-DON SANCHE DE LYSSAN',
+      'string-id' => '#LEONORE;#DONSANCHE;#DONCARLOS,#DONSANCHE,#FLORE;#DONSANCHE,#FLORE;#LEONORE,#DONSANCHE,#FLORE;#DONCARLOS,#DONSANCHE',
     ),
   ),
   'scarron_fausseapparence_V02' => 
@@ -12529,6 +11126,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'DON SANCHE DE LYSSAN/DON CARLOS DE ROXAS-DON SANCHE DE LYSSAN-FLORE/DON SANCHE DE LYSSAN-FLORE/LÉONORE-DON SANCHE DE LYSSAN-FLORE/DON CARLOS DE ROXAS-DON SANCHE DE LYSSAN/DON CARLOS DE ROXAS-LÉONORE-DON PEDRE DE LARA-DON SANCHE DE LYSSAN-DON LOUIS DE ROXAS-MARINE',
+      'string-id' => '#DONSANCHE;#DONCARLOS,#DONSANCHE,#FLORE;#DONSANCHE,#FLORE;#LEONORE,#DONSANCHE,#FLORE;#DONCARLOS,#DONSANCHE;#DONCARLOS,#LEONORE,#DONPEDRE,#DONSANCHE,#DONLOUIS,#MARINE',
     ),
   ),
   'scarron_ecolierdesalamanque_II01' => 
@@ -12596,6 +11194,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => '/DON PEDRE DE CESPEDE-/LE COMTE-DON PEDRE DE CESPEDE-/CASSANDRE-/LE COMTE-CASSANDRE-DON PEDRE DE CESPEDE-/LE COMTE-DON PEDRE DE CESPEDE--UN PRÉVÔT-ARCHERS',
+      'string-id' => '#DONLOUIS;#DONPEDRE,#DONLOUIS;#LECOMTE,#DONPEDRE,#DONLOUIS;#CASSANDRE,#DONLOUIS;#LECOMTE,#CASSANDRE,#DONPEDRE,#DONLOUIS;#LECOMTE,#DONPEDRE,#DONLOUIS,#PREVOT,#ARCHERS',
     ),
   ),
   'scarron_ecolierdesalamanque_II02' => 
@@ -12663,6 +11262,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'DON PEDRE DE CESPEDE-/LE COMTE-DON PEDRE DE CESPEDE-/CASSANDRE-/LE COMTE-CASSANDRE-DON PEDRE DE CESPEDE-/LE COMTE-DON PEDRE DE CESPEDE--UN PRÉVÔT-ARCHERS/LE COMTE',
+      'string-id' => '#DONPEDRE,#DONLOUIS;#LECOMTE,#DONPEDRE,#DONLOUIS;#CASSANDRE,#DONLOUIS;#LECOMTE,#CASSANDRE,#DONPEDRE,#DONLOUIS;#LECOMTE,#DONPEDRE,#DONLOUIS,#PREVOT,#ARCHERS;#LECOMTE,#DONLOUIS',
     ),
   ),
   'scarron_ecolierdesalamanque_II03' => 
@@ -12730,6 +11330,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'LE COMTE-DON PEDRE DE CESPEDE-/CASSANDRE-/LE COMTE-CASSANDRE-DON PEDRE DE CESPEDE-/LE COMTE-DON PEDRE DE CESPEDE--UN PRÉVÔT-ARCHERS/LE COMTE-/LE COMTE-CASSANDRE',
+      'string-id' => '#LECOMTE,#DONPEDRE,#DONLOUIS;#CASSANDRE,#DONLOUIS;#LECOMTE,#CASSANDRE,#DONPEDRE,#DONLOUIS;#LECOMTE,#DONPEDRE,#DONLOUIS,#PREVOT,#ARCHERS;#LECOMTE,#DONLOUIS;#LECOMTE,#CASSANDRE,#DONLOUIS',
     ),
   ),
   'scarron_ecolierdesalamanque_II04' => 
@@ -12797,6 +11398,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'CASSANDRE-/LE COMTE-CASSANDRE-DON PEDRE DE CESPEDE-/LE COMTE-DON PEDRE DE CESPEDE--UN PRÉVÔT-ARCHERS/LE COMTE-/LE COMTE-CASSANDRE-/LE COMTE-DON PEDRE DE CESPEDE',
+      'string-id' => '#CASSANDRE,#DONLOUIS;#LECOMTE,#CASSANDRE,#DONPEDRE,#DONLOUIS;#LECOMTE,#DONPEDRE,#DONLOUIS,#PREVOT,#ARCHERS;#LECOMTE,#DONLOUIS;#LECOMTE,#CASSANDRE,#DONLOUIS;#LECOMTE,#DONPEDRE,#DONLOUIS',
     ),
   ),
   'scarron_ecolierdesalamanque_IV01' => 
@@ -12864,6 +11466,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => '//LA TAILLADE-/DON PEDRE DE CESPEDE--UN PRÉVÔT/DON PEDRE DE CESPEDE-/CASSANDRE-DON PEDRE DE CESPEDE',
+      'string-id' => '#DONLOUIS;#DONLOUIS;#LATAILLADE,#DONLOUIS;#DONPEDRE,#DONLOUIS,#PREVOT;#DONPEDRE,#DONLOUIS;#CASSANDRE,#DONPEDRE,#DONLOUIS',
     ),
   ),
   'scarron_ecolierdesalamanque_IV02' => 
@@ -12940,6 +11543,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => '/LA TAILLADE-/DON PEDRE DE CESPEDE--UN PRÉVÔT/DON PEDRE DE CESPEDE-/CASSANDRE-DON PEDRE DE CESPEDE-/LE COMTE-DON PEDRE DE CESPEDE',
+      'string-id' => '#DONLOUIS;#LATAILLADE,#DONLOUIS;#DONPEDRE,#DONLOUIS,#PREVOT;#DONPEDRE,#DONLOUIS;#CASSANDRE,#DONPEDRE,#DONLOUIS;#LECOMTE,#DONPEDRE,#DONLOUIS',
     ),
   ),
   'scarron_ecolierdesalamanque_IV03' => 
@@ -13025,6 +11629,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'LA TAILLADE-/DON PEDRE DE CESPEDE--UN PRÉVÔT/DON PEDRE DE CESPEDE-/CASSANDRE-DON PEDRE DE CESPEDE-/LE COMTE-DON PEDRE DE CESPEDE-/LE COMTE-DON PEDRE DE CESPEDE-DON FÉLIX DE CESPEDE',
+      'string-id' => '#LATAILLADE,#DONLOUIS;#DONPEDRE,#DONLOUIS,#PREVOT;#DONPEDRE,#DONLOUIS;#CASSANDRE,#DONPEDRE,#DONLOUIS;#LECOMTE,#DONPEDRE,#DONLOUIS;#LECOMTE,#DONPEDRE,#DONFELIX,#DONLOUIS',
     ),
   ),
   'scarron_ecolierdesalamanque_IV04' => 
@@ -13092,6 +11697,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'DON PEDRE DE CESPEDE--UN PRÉVÔT/DON PEDRE DE CESPEDE-/CASSANDRE-DON PEDRE DE CESPEDE-/LE COMTE-DON PEDRE DE CESPEDE-/LE COMTE-DON PEDRE DE CESPEDE-DON FÉLIX DE CESPEDE-/LE COMTE-DON PEDRE DE CESPEDE--UN PRÉVÔT',
+      'string-id' => '#DONPEDRE,#DONLOUIS,#PREVOT;#DONPEDRE,#DONLOUIS;#CASSANDRE,#DONPEDRE,#DONLOUIS;#LECOMTE,#DONPEDRE,#DONLOUIS;#LECOMTE,#DONPEDRE,#DONFELIX,#DONLOUIS;#LECOMTE,#DONPEDRE,#DONLOUIS,#PREVOT',
     ),
   ),
   'scarron_ecolierdesalamanque_V01' => 
@@ -13177,6 +11783,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'DON PEDRE DE CESPEDE-/LA TAILLADE-/LE COMTE-DON PEDRE DE CESPEDE-LA TAILLADE-/CASSANDRE-LÉONORE-/LE COMTE-CASSANDRE-LÉONORE-/LE COMTE-LÉONORE-DON FÉLIX DE CESPEDE--UN PRÉVÔT',
+      'string-id' => '#DONPEDRE,#DONLOUIS;#LATAILLADE,#DONLOUIS;#LECOMTE,#DONPEDRE,#LATAILLADE,#DONLOUIS;#CASSANDRE,#LEONORE,#DONLOUIS;#LECOMTE,#CASSANDRE,#LEONORE,#DONLOUIS;#LECOMTE,#LEONORE,#DONFELIX,#DONLOUIS,#PREVOT',
     ),
   ),
   'scarron_ecolierdesalamanque_V02' => 
@@ -13271,6 +11878,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Scarron',
       'string' => 'LA TAILLADE-/LE COMTE-DON PEDRE DE CESPEDE-LA TAILLADE-/CASSANDRE-LÉONORE-/LE COMTE-CASSANDRE-LÉONORE-/LE COMTE-LÉONORE-DON FÉLIX DE CESPEDE--UN PRÉVÔT/LE COMTE-CASSANDRE-DON PEDRE DE CESPEDE-LÉONORE-DON FÉLIX DE CESPEDE',
+      'string-id' => '#LATAILLADE,#DONLOUIS;#LECOMTE,#DONPEDRE,#LATAILLADE,#DONLOUIS;#CASSANDRE,#LEONORE,#DONLOUIS;#LECOMTE,#CASSANDRE,#LEONORE,#DONLOUIS;#LECOMTE,#LEONORE,#DONFELIX,#DONLOUIS,#PREVOT;#LECOMTE,#CASSANDRE,#DONPEDRE,#LEONORE,#DONFELIX,#DONLOUIS',
     ),
   ),
   'scarron_domjaphetdarmenie_IV01' => 
@@ -13356,6 +11964,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON ALFONCE ENRIQUEZ-/DON ALFONCE ENRIQUEZ-MARINE-/DON JAPHET D\'ARMÉNIE-FOUCARAL-DON ALFONCE ENRIQUEZ-/DON JAPHET D\'ARMÉNIE-FOUCARAL-LÉONORE-/DON JAPHET D\'ARMÉNIE-LE COMMANDEUR-DON ALVARE-RODRIGUE-/DON JAPHET D\'ARMÉNIE',
+      'string-id' => '#DONALFONCE,#DUEGNE;#DONALFONCE,#MARINE,#DUEGNE;#DONJAPHET,#FOUCARAL,#DONALFONCE,#DUEGNE;#DONJAPHET,#FOUCARAL,#LEONORE,#DUEGNE;#DONJAPHET,#LECOMMANDEUR,#DONALVARE,#RODRIGUE,#DUEGNE;#DONJAPHET,#DUEGNE',
     ),
   ),
   'scarron_domjaphetdarmenie_IV02' => 
@@ -13441,6 +12050,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON ALFONCE ENRIQUEZ-MARINE-/DON JAPHET D\'ARMÉNIE-FOUCARAL-DON ALFONCE ENRIQUEZ-/DON JAPHET D\'ARMÉNIE-FOUCARAL-LÉONORE-/DON JAPHET D\'ARMÉNIE-LE COMMANDEUR-DON ALVARE-RODRIGUE-/DON JAPHET D\'ARMÉNIE-/DON JAPHET D\'ARMÉNIE-FOUCARAL-LE COMMANDEUR-DON ALVARE-RODRIGUE',
+      'string-id' => '#DONALFONCE,#MARINE,#DUEGNE;#DONJAPHET,#FOUCARAL,#DONALFONCE,#DUEGNE;#DONJAPHET,#FOUCARAL,#LEONORE,#DUEGNE;#DONJAPHET,#LECOMMANDEUR,#DONALVARE,#RODRIGUE,#DUEGNE;#DONJAPHET,#DUEGNE;#DONJAPHET,#FOUCARAL,#LECOMMANDEUR,#DONALVARE,#RODRIGUE,#DUEGNE',
     ),
   ),
   'scarron_domjaphetdarmenie_IV03' => 
@@ -13517,6 +12127,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON JAPHET D\'ARMÉNIE-FOUCARAL-DON ALFONCE ENRIQUEZ-/DON JAPHET D\'ARMÉNIE-FOUCARAL-LÉONORE-/DON JAPHET D\'ARMÉNIE-LE COMMANDEUR-DON ALVARE-RODRIGUE-/DON JAPHET D\'ARMÉNIE-/DON JAPHET D\'ARMÉNIE-FOUCARAL-LE COMMANDEUR-DON ALVARE-RODRIGUE-/DON ALFONCE ENRIQUEZ',
+      'string-id' => '#DONJAPHET,#FOUCARAL,#DONALFONCE,#DUEGNE;#DONJAPHET,#FOUCARAL,#LEONORE,#DUEGNE;#DONJAPHET,#LECOMMANDEUR,#DONALVARE,#RODRIGUE,#DUEGNE;#DONJAPHET,#DUEGNE;#DONJAPHET,#FOUCARAL,#LECOMMANDEUR,#DONALVARE,#RODRIGUE,#DUEGNE;#DONALFONCE,#DUEGNE',
     ),
   ),
   'scarron_domjaphetdarmenie_V01' => 
@@ -13611,6 +12222,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'DON JAPHET D\'ARMÉNIE-DON ALVARE-/ELVIRE-DON ALVARE-/ELVIRE-DON ALVARE-PEDRO-/DON ALFONCE ENRIQUEZ-LE COMMANDEUR-ELVIRE-DON ALVARE-/FOUCARAL-DON ALFONCE ENRIQUEZ-LE COMMANDEUR-LÉONORE-ELVIRE-DON ALVARE-/DON JAPHET D\'ARMÉNIE-FOUCARAL-DON ALFONCE ENRIQUEZ-LE COMMANDEUR',
+      'string-id' => '#DONJAPHET,#DONALVARE,#DUEGNE;#ELVIRE,#DONALVARE,#DUEGNE;#ELVIRE,#DONALVARE,#HARANGUEUR,#DUEGNE;#DONALFONCE,#LECOMMANDEUR,#ELVIRE,#DONALVARE,#DUEGNE;#FOUCARAL,#DONALFONCE,#LECOMMANDEUR,#LEONORE,#ELVIRE,#DONALVARE,#DUEGNE;#DONJAPHET,#FOUCARAL,#DONALFONCE,#LECOMMANDEUR,#DUEGNE',
     ),
   ),
   'scarron_domjaphetdarmenie_V02' => 
@@ -13714,6 +12326,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Scarron',
       'string' => 'ELVIRE-DON ALVARE-/ELVIRE-DON ALVARE-PEDRO-/DON ALFONCE ENRIQUEZ-LE COMMANDEUR-ELVIRE-DON ALVARE-/FOUCARAL-DON ALFONCE ENRIQUEZ-LE COMMANDEUR-LÉONORE-ELVIRE-DON ALVARE-/DON JAPHET D\'ARMÉNIE-FOUCARAL-DON ALFONCE ENRIQUEZ-LE COMMANDEUR-/DON JAPHET D\'ARMÉNIE-FOUCARAL-LE COMMANDEUR-UN COURIER',
+      'string-id' => '#ELVIRE,#DONALVARE,#DUEGNE;#ELVIRE,#DONALVARE,#HARANGUEUR,#DUEGNE;#DONALFONCE,#LECOMMANDEUR,#ELVIRE,#DONALVARE,#DUEGNE;#FOUCARAL,#DONALFONCE,#LECOMMANDEUR,#LEONORE,#ELVIRE,#DONALVARE,#DUEGNE;#DONJAPHET,#FOUCARAL,#DONALFONCE,#LECOMMANDEUR,#DUEGNE;#DONJAPHET,#FOUCARAL,#LECOMMANDEUR,#COURIER,#DUEGNE',
     ),
   ),
   'sallebray_belleegyptienne_I01' => 
@@ -13772,6 +12385,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Sallebray',
       'string' => 'PRÉCIEUSE-LA VIEILLE/PRÉCIEUSE-LA VIEILLE-LE POÈTE/PRÉCIEUSE-LE POÈTE/PRÉCIEUSE-LA VIEILLE//DON JEAN DE CARCAME-PRÉCIEUSE-LA VIEILLE',
+      'string-id' => '#PRECIEUSE,#LAVIEILLE;#PRECIEUSE,#LAVIEILLE,#LEPOETE;#PRECIEUSE,#LEPOETE;#PRECIEUSE,#LAVIEILLE;;#DONJEANDECARCAME,#PRECIEUSE,#LAVIEILLE',
     ),
   ),
   'sallebray_belleegyptienne_I02' => 
@@ -13830,6 +12444,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Sallebray',
       'string' => 'PRÉCIEUSE-LA VIEILLE-LE POÈTE/PRÉCIEUSE-LE POÈTE/PRÉCIEUSE-LA VIEILLE//DON JEAN DE CARCAME-PRÉCIEUSE-LA VIEILLE/PRÉCIEUSE-LA VIEILLE',
+      'string-id' => '#PRECIEUSE,#LAVIEILLE,#LEPOETE;#PRECIEUSE,#LEPOETE;#PRECIEUSE,#LAVIEILLE;;#DONJEANDECARCAME,#PRECIEUSE,#LAVIEILLE;#PRECIEUSE,#LAVIEILLE',
     ),
   ),
   'sallebray_belleegyptienne_III01' => 
@@ -13879,6 +12494,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Sallebray',
       'string' => 'LE POÈTE/PRÉCIEUSE-LA VIEILLE-LE POÈTE/LA VIEILLE-LE POÈTE/PRÉCIEUSE-LA VIEILLE/PRÉCIEUSE/PRÉCIEUSE-LA VIEILLE',
+      'string-id' => '#LEPOETE;#PRECIEUSE,#LAVIEILLE,#LEPOETE;#LAVIEILLE,#LEPOETE;#PRECIEUSE,#LAVIEILLE;#PRECIEUSE;#PRECIEUSE,#LAVIEILLE',
     ),
   ),
   'sallebray_belleegyptienne_III02' => 
@@ -13928,6 +12544,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Sallebray',
       'string' => 'PRÉCIEUSE-LA VIEILLE-LE POÈTE/LA VIEILLE-LE POÈTE/PRÉCIEUSE-LA VIEILLE/PRÉCIEUSE/PRÉCIEUSE-LA VIEILLE/PRÉCIEUSE',
+      'string-id' => '#PRECIEUSE,#LAVIEILLE,#LEPOETE;#LAVIEILLE,#LEPOETE;#PRECIEUSE,#LAVIEILLE;#PRECIEUSE;#PRECIEUSE,#LAVIEILLE;#PRECIEUSE',
     ),
   ),
   'sallebray_belleegyptienne_III03' => 
@@ -13977,6 +12594,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Sallebray',
       'string' => 'LA VIEILLE-LE POÈTE/PRÉCIEUSE-LA VIEILLE/PRÉCIEUSE/PRÉCIEUSE-LA VIEILLE/PRÉCIEUSE/',
+      'string-id' => '#LAVIEILLE,#LEPOETE;#PRECIEUSE,#LAVIEILLE;#PRECIEUSE;#PRECIEUSE,#LAVIEILLE;#PRECIEUSE;',
     ),
   ),
   'sallebray_belleegyptienne_III04' => 
@@ -14026,6 +12644,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Sallebray',
       'string' => 'PRÉCIEUSE-LA VIEILLE/PRÉCIEUSE/PRÉCIEUSE-LA VIEILLE/PRÉCIEUSE//LE POÈTE',
+      'string-id' => '#PRECIEUSE,#LAVIEILLE;#PRECIEUSE;#PRECIEUSE,#LAVIEILLE;#PRECIEUSE;;#LEPOETE',
     ),
   ),
   'sallebray_belleegyptienne_IV01' => 
@@ -14075,6 +12694,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Sallebray',
       'string' => 'PRÉCIEUSE/PRÉCIEUSE-HIPOLITE/HIPOLITE/PRÉCIEUSE/HIPOLITE-LE PRÉVÔT/HIPOLITE',
+      'string-id' => '#PRECIEUSE;#PRECIEUSE,#HIPOLITE;#HIPOLITE;#PRECIEUSE;#HIPOLITE,#LEPREVOT;#HIPOLITE',
     ),
   ),
   'sallebray_belleegyptienne_IV02' => 
@@ -14133,6 +12753,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Sallebray',
       'string' => 'PRÉCIEUSE-HIPOLITE/HIPOLITE/PRÉCIEUSE/HIPOLITE-LE PRÉVÔT/HIPOLITE/PRÉCIEUSE-LA VIEILLE',
+      'string-id' => '#PRECIEUSE,#HIPOLITE;#HIPOLITE;#PRECIEUSE;#HIPOLITE,#LEPREVOT;#HIPOLITE;#PRECIEUSE,#LAVIEILLE',
     ),
   ),
   'sallebray_belleegyptienne_IV03' => 
@@ -14191,6 +12812,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Sallebray',
       'string' => 'HIPOLITE/PRÉCIEUSE/HIPOLITE-LE PRÉVÔT/HIPOLITE/PRÉCIEUSE-LA VIEILLE/PRÉCIEUSE-LA VIEILLE-HIPOLITE-LE PRÉVÔT',
+      'string-id' => '#HIPOLITE;#PRECIEUSE;#HIPOLITE,#LEPREVOT;#HIPOLITE;#PRECIEUSE,#LAVIEILLE;#PRECIEUSE,#LAVIEILLE,#HIPOLITE,#LEPREVOT',
     ),
   ),
   'sallebray_belleegyptienne_V01' => 
@@ -14249,6 +12871,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Sallebray',
       'string' => 'FERDINAND-ISABELLE/PRÉCIEUSE-LA VIEILLE-FERDINAND-ISABELLE/PRÉCIEUSE-LA VIEILLE-ISABELLE/PRÉCIEUSE-LA VIEILLE-FERDINAND-ISABELLE/PRÉCIEUSE-LA VIEILLE-FERDINAND-ISABELLE/PRÉCIEUSE-LA VIEILLE-FERDINAND-ISABELLE-LE PRÉVÔT',
+      'string-id' => '#FERDINAND,#ISABELLE;#PRECIEUSE,#LAVIEILLE,#FERDINAND,#ISABELLE;#PRECIEUSE,#LAVIEILLE,#ISABELLE;#PRECIEUSE,#LAVIEILLE,#FERDINAND,#ISABELLE;#PRECIEUSE,#LAVIEILLE,#FERDINAND,#ISABELLE;#PRECIEUSE,#LAVIEILLE,#FERDINAND,#ISABELLE,#LEPREVOT',
     ),
   ),
   'rotrou_venceslas_I01' => 
@@ -14307,6 +12930,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'VENCESLAS-LADISLAS-ALEXANDRE/VENCESLAS-LADISLAS-ALEXANDRE/VENCESLAS-LADISLAS/VENCESLAS-LADISLAS-ALEXANDRE-FEDERIC/VENCESLAS-LADISLAS/LADISLAS',
+      'string-id' => '#LEROI,#LEPRINCE,#ALEXANDRE;#LEROI,#LEPRINCE,#ALEXANDRE;#LEROI,#LEPRINCE;#LEROI,#LEPRINCE,#ALEXANDRE,#LEDUC;#LEROI,#LEPRINCE;#LEPRINCE',
     ),
   ),
   'rotrou_venceslas_II01' => 
@@ -14365,6 +12989,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'CASSANDRE-THÉODORE/LADISLAS-CASSANDRE-THÉODORE/LADISLAS-THÉODORE/THÉODORE/THÉODORE/ALEXANDRE-THÉODORE',
+      'string-id' => '#CASSANDRE,#THEODORE;#LEPRINCE,#CASSANDRE,#THEODORE;#LEPRINCE,#THEODORE;#THEODORE;#THEODORE;#ALEXANDRE,#THEODORE',
     ),
   ),
   'rotrou_venceslas_III01' => 
@@ -14432,6 +13057,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'FEDERIC/ALEXANDRE-FEDERIC/ALEXANDRE-FEDERIC-CASSANDRE/LADISLAS-ALEXANDRE-CASSANDRE/LADISLAS-FEDERIC/VENCESLAS-LADISLAS-FEDERIC',
+      'string-id' => '#LEDUC;#ALEXANDRE,#LEDUC;#ALEXANDRE,#LEDUC,#CASSANDRE;#LEPRINCE,#ALEXANDRE,#CASSANDRE;#LEPRINCE,#LEDUC;#LEROI,#LEPRINCE,#LEDUC',
     ),
   ),
   'rotrou_venceslas_III02' => 
@@ -14499,6 +13125,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'ALEXANDRE-FEDERIC/ALEXANDRE-FEDERIC-CASSANDRE/LADISLAS-ALEXANDRE-CASSANDRE/LADISLAS-FEDERIC/VENCESLAS-LADISLAS-FEDERIC/VENCESLAS-FEDERIC',
+      'string-id' => '#ALEXANDRE,#LEDUC;#ALEXANDRE,#LEDUC,#CASSANDRE;#LEPRINCE,#ALEXANDRE,#CASSANDRE;#LEPRINCE,#LEDUC;#LEROI,#LEPRINCE,#LEDUC;#LEROI,#LEDUC',
     ),
   ),
   'rotrou_venceslas_IV01' => 
@@ -14566,6 +13193,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'THÉODORE/LADISLAS-THÉODORE/LADISLAS/VENCESLAS-LADISLAS/VENCESLAS-LADISLAS-FEDERIC/VENCESLAS-LADISLAS-FEDERIC-CASSANDRE',
+      'string-id' => '#THEODORE;#LEPRINCE,#THEODORE;#LEPRINCE;#LEROI,#LEPRINCE;#LEROI,#LEPRINCE,#LEDUC;#LEROI,#LEPRINCE,#LEDUC,#CASSANDRE',
     ),
   ),
   'rotrou_venceslas_IV02' => 
@@ -14633,6 +13261,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'LADISLAS-THÉODORE/LADISLAS/VENCESLAS-LADISLAS/VENCESLAS-LADISLAS-FEDERIC/VENCESLAS-LADISLAS-FEDERIC-CASSANDRE/VENCESLAS-CASSANDRE',
+      'string-id' => '#LEPRINCE,#THEODORE;#LEPRINCE;#LEROI,#LEPRINCE;#LEROI,#LEPRINCE,#LEDUC;#LEROI,#LEPRINCE,#LEDUC,#CASSANDRE;#LEROI,#CASSANDRE',
     ),
   ),
   'rotrou_venceslas_V01' => 
@@ -14700,6 +13329,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'THÉODORE/FEDERIC-THÉODORE/VENCESLAS-FEDERIC/VENCESLAS-LADISLAS/VENCESLAS/VENCESLAS-CASSANDRE-THÉODORE',
+      'string-id' => '#THEODORE;#LEDUC,#THEODORE;#LEROI,#LEDUC;#LEROI,#LEPRINCE;#LEROI;#LEROI,#CASSANDRE,#THEODORE',
     ),
   ),
   'rotrou_venceslas_V02' => 
@@ -14767,6 +13397,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'FEDERIC-THÉODORE/VENCESLAS-FEDERIC/VENCESLAS-LADISLAS/VENCESLAS/VENCESLAS-CASSANDRE-THÉODORE/VENCESLAS-FEDERIC-CASSANDRE-THÉODORE',
+      'string-id' => '#LEDUC,#THEODORE;#LEROI,#LEDUC;#LEROI,#LEPRINCE;#LEROI;#LEROI,#CASSANDRE,#THEODORE;#LEROI,#LEDUC,#CASSANDRE,#THEODORE',
     ),
   ),
   'rotrou_venceslas_V03' => 
@@ -14825,6 +13456,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'VENCESLAS-FEDERIC/VENCESLAS-LADISLAS/VENCESLAS/VENCESLAS-CASSANDRE-THÉODORE/VENCESLAS-FEDERIC-CASSANDRE-THÉODORE/VENCESLAS-CASSANDRE-THÉODORE',
+      'string-id' => '#LEROI,#LEDUC;#LEROI,#LEPRINCE;#LEROI;#LEROI,#CASSANDRE,#THEODORE;#LEROI,#LEDUC,#CASSANDRE,#THEODORE;#LEROI,#CASSANDRE,#THEODORE',
     ),
   ),
   'rotrou_venceslas_V04' => 
@@ -14883,6 +13515,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'VENCESLAS-LADISLAS/VENCESLAS/VENCESLAS-CASSANDRE-THÉODORE/VENCESLAS-FEDERIC-CASSANDRE-THÉODORE/VENCESLAS-CASSANDRE-THÉODORE/VENCESLAS-LADISLAS-FEDERIC-CASSANDRE-THÉODORE',
+      'string-id' => '#LEROI,#LEPRINCE;#LEROI;#LEROI,#CASSANDRE,#THEODORE;#LEROI,#LEDUC,#CASSANDRE,#THEODORE;#LEROI,#CASSANDRE,#THEODORE;#LEROI,#LEPRINCE,#LEDUC,#CASSANDRE,#THEODORE',
     ),
   ),
   'rotrou_sosies_III01' => 
@@ -14941,6 +13574,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Rotrou',
       'string' => 'JUPITER---/JUPITER-ALCMÈNE---/JUPITER-ALCMÈNE---/JUPITER-ALCMÈNE---/MERCURE---/MERCURE',
+      'string-id' => '#JUPITER,#CAPITAINE1,#CAPITAINE2,#CAPITAINE3;#JUPITER,#ALCMENE,#CAPITAINE1,#CAPITAINE2,#CAPITAINE3;#JUPITER,#ALCMENE,#CAPITAINE1,#CAPITAINE2,#CAPITAINE3;#JUPITER,#ALCMENE,#CAPITAINE1,#CAPITAINE2,#CAPITAINE3;#MERCURE,#CAPITAINE1,#CAPITAINE2,#CAPITAINE3;#MERCURE,#CAPITAINE1,#CAPITAINE2,#CAPITAINE3',
     ),
   ),
   'rotrou_sosies_V01' => 
@@ -15017,6 +13651,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Rotrou',
       'string' => 'MERCURE---/JUPITER-MERCURE-ALCMÈNE-LES CAPITAINES---/--/AMPHITRYON-LES CAPITAINES---/AMPHITRYON---/JUPITER-AMPHITRYON',
+      'string-id' => '#MERCURE,#CAPITAINE1,#CAPITAINE2,#CAPITAINE3;#JUPITER,#MERCURE,#ALCMENE,#LES-CAPITAINES,#CAPITAINE1,#CAPITAINE2,#CAPITAINE3;#CAPITAINE1,#CAPITAINE2,#CAPITAINE3;#AMPHITRYON,#LES-CAPITAINES,#CAPITAINE1,#CAPITAINE2,#CAPITAINE3;#AMPHITRYON,#CAPITAINE1,#CAPITAINE2,#CAPITAINE3;#JUPITER,#AMPHITRYON,#CAPITAINE1,#CAPITAINE2,#CAPITAINE3',
     ),
   ),
   'rotrou_saintgenest_II01' => 
@@ -15084,6 +13719,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Rotrou',
       'string' => 'GENEST-DÉCORATEUR--/GENEST--/GENEST-MARCELE--/GENEST--/GENEST-DÉCORATEUR--/DIOCLÉTIAN-MAXIMIN-VALÉRIE-PLANCIEN-MAXIMIN',
+      'string-id' => '#GENEST,#DECORATEUR,#VOIX,#PAGE;#GENEST,#VOIX,#PAGE;#GENEST,#MARCELE,#VOIX,#PAGE;#GENEST,#VOIX,#PAGE;#GENEST,#DECORATEUR,#VOIX,#PAGE;#DIOCLETIAN,#MAXIMIN,#VALERIE,#PLANCIEN,#MAXIMIN2,#VOIX,#PAGE',
     ),
   ),
   'rotrou_saintgenest_II02' => 
@@ -15169,6 +13805,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Rotrou',
       'string' => 'GENEST--/GENEST-MARCELE--/GENEST--/GENEST-DÉCORATEUR--/DIOCLÉTIAN-MAXIMIN-VALÉRIE-PLANCIEN-MAXIMIN--/MAXIMIN-VALÉRIE-PLANCIEN-GENEST-ADRIAN-MAXIMIN',
+      'string-id' => '#GENEST,#VOIX,#PAGE;#GENEST,#MARCELE,#VOIX,#PAGE;#GENEST,#VOIX,#PAGE;#GENEST,#DECORATEUR,#VOIX,#PAGE;#DIOCLETIAN,#MAXIMIN,#VALERIE,#PLANCIEN,#MAXIMIN2,#VOIX,#PAGE;#MAXIMIN,#VALERIE,#PLANCIEN,#GENEST,#ADRIAN,#MAXIMIN2,#VOIX,#PAGE',
     ),
   ),
   'rotrou_saintgenest_II03' => 
@@ -15263,6 +13900,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Rotrou',
       'string' => 'GENEST-MARCELE--/GENEST--/GENEST-DÉCORATEUR--/DIOCLÉTIAN-MAXIMIN-VALÉRIE-PLANCIEN-MAXIMIN--/MAXIMIN-VALÉRIE-PLANCIEN-GENEST-ADRIAN-MAXIMIN--/SERGESTE-ADRIAN-FLAVIE',
+      'string-id' => '#GENEST,#MARCELE,#VOIX,#PAGE;#GENEST,#VOIX,#PAGE;#GENEST,#DECORATEUR,#VOIX,#PAGE;#DIOCLETIAN,#MAXIMIN,#VALERIE,#PLANCIEN,#MAXIMIN2,#VOIX,#PAGE;#MAXIMIN,#VALERIE,#PLANCIEN,#GENEST,#ADRIAN,#MAXIMIN2,#VOIX,#PAGE;#SERGESTE,#ADRIAN,#FLAVIE,#VOIX,#PAGE',
     ),
   ),
   'rotrou_saintgenest_II04' => 
@@ -15357,6 +13995,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Rotrou',
       'string' => 'GENEST--/GENEST-DÉCORATEUR--/DIOCLÉTIAN-MAXIMIN-VALÉRIE-PLANCIEN-MAXIMIN--/MAXIMIN-VALÉRIE-PLANCIEN-GENEST-ADRIAN-MAXIMIN--/SERGESTE-ADRIAN-FLAVIE--/DIOCLÉTIAN-MAXIMIN-VALÉRIE-MAXIMIN',
+      'string-id' => '#GENEST,#VOIX,#PAGE;#GENEST,#DECORATEUR,#VOIX,#PAGE;#DIOCLETIAN,#MAXIMIN,#VALERIE,#PLANCIEN,#MAXIMIN2,#VOIX,#PAGE;#MAXIMIN,#VALERIE,#PLANCIEN,#GENEST,#ADRIAN,#MAXIMIN2,#VOIX,#PAGE;#SERGESTE,#ADRIAN,#FLAVIE,#VOIX,#PAGE;#DIOCLETIAN,#MAXIMIN,#VALERIE,#MAXIMIN2,#VOIX,#PAGE',
     ),
   ),
   'rotrou_saintgenest_III01' => 
@@ -15442,6 +14081,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Rotrou',
       'string' => 'DIOCLÉTIAN-MAXIMIN-VALÉRIE-PLANCIEN-MAXIMIN--/MAXIMIN-OCTAVE-ADRIAN-FLAVIE-MAXIMIN--/MAXIMIN-MAXIMIN--/GEÔLIER-ADRIAN-FLAVIE--/ADRIAN-NATALIE-FLAVIE--/ADRIAN-NATALIE-FLAVIE',
+      'string-id' => '#DIOCLETIAN,#MAXIMIN,#VALERIE,#PLANCIEN,#MAXIMIN2,#VOIX,#PAGE;#MAXIMIN,#OCTAVE,#ADRIAN,#FLAVIE,#MAXIMIN2,#VOIX,#PAGE;#MAXIMIN,#MAXIMIN2,#VOIX,#PAGE;#GEOLIER,#ADRIAN,#FLAVIE,#VOIX,#PAGE;#ADRIAN,#NATALIE,#FLAVIE,#VOIX,#PAGE;#ADRIAN,#NATALIE,#FLAVIE,#VOIX,#PAGE',
     ),
   ),
   'rotrou_saintgenest_III02' => 
@@ -15518,6 +14158,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Rotrou',
       'string' => 'MAXIMIN-OCTAVE-ADRIAN-FLAVIE-MAXIMIN--/MAXIMIN-MAXIMIN--/GEÔLIER-ADRIAN-FLAVIE--/ADRIAN-NATALIE-FLAVIE--/ADRIAN-NATALIE-FLAVIE--/NATALIE',
+      'string-id' => '#MAXIMIN,#OCTAVE,#ADRIAN,#FLAVIE,#MAXIMIN2,#VOIX,#PAGE;#MAXIMIN,#MAXIMIN2,#VOIX,#PAGE;#GEOLIER,#ADRIAN,#FLAVIE,#VOIX,#PAGE;#ADRIAN,#NATALIE,#FLAVIE,#VOIX,#PAGE;#ADRIAN,#NATALIE,#FLAVIE,#VOIX,#PAGE;#NATALIE,#VOIX,#PAGE',
     ),
   ),
   'rotrou_saintgenest_III03' => 
@@ -15594,6 +14235,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Rotrou',
       'string' => 'MAXIMIN-MAXIMIN--/GEÔLIER-ADRIAN-FLAVIE--/ADRIAN-NATALIE-FLAVIE--/ADRIAN-NATALIE-FLAVIE--/NATALIE--/DIOCLÉTIAN-MAXIMIN-GENEST-MAXIMIN',
+      'string-id' => '#MAXIMIN,#MAXIMIN2,#VOIX,#PAGE;#GEOLIER,#ADRIAN,#FLAVIE,#VOIX,#PAGE;#ADRIAN,#NATALIE,#FLAVIE,#VOIX,#PAGE;#ADRIAN,#NATALIE,#FLAVIE,#VOIX,#PAGE;#NATALIE,#VOIX,#PAGE;#DIOCLETIAN,#MAXIMIN,#GENEST,#MAXIMIN2,#VOIX,#PAGE',
     ),
   ),
   'rotrou_saintgenest_IV01' => 
@@ -15706,6 +14348,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Rotrou',
       'string' => 'DIOCLÉTIAN-MAXIMIN-VALÉRIE-PLANCIEN-MAXIMIN--/DIOCLÉTIAN-MAXIMIN-VALÉRIE-PLANCIEN-GENEST-ADRIAN-FLAVIE-MAXIMIN--/ADRIAN--/ADRIAN-NATALIE--/DIOCLÉTIAN-VALÉRIE-MARCELE-LENTULE-ADRIAN-NATALIE-ANTHYME--/DIOCLÉTIAN-MARCELE-LENTULE-FLAVIE',
+      'string-id' => '#DIOCLETIAN,#MAXIMIN,#VALERIE,#PLANCIEN,#MAXIMIN2,#VOIX,#PAGE;#DIOCLETIAN,#MAXIMIN,#VALERIE,#PLANCIEN,#GENEST,#ADRIAN,#FLAVIE,#MAXIMIN2,#VOIX,#PAGE;#ADRIAN,#VOIX,#PAGE;#ADRIAN,#NATALIE,#VOIX,#PAGE;#DIOCLETIAN,#VALERIE,#MARCELE,#LENTULE,#ADRIAN,#NATALIE,#ANTHYME,#VOIX,#PAGE;#DIOCLETIAN,#MARCELE,#LENTULE,#FLAVIE,#VOIX,#PAGE',
     ),
   ),
   'rotrou_saintgenest_IV02' => 
@@ -15827,6 +14470,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Rotrou',
       'string' => 'DIOCLÉTIAN-MAXIMIN-VALÉRIE-PLANCIEN-GENEST-ADRIAN-FLAVIE-MAXIMIN--/ADRIAN--/ADRIAN-NATALIE--/DIOCLÉTIAN-VALÉRIE-MARCELE-LENTULE-ADRIAN-NATALIE-ANTHYME--/DIOCLÉTIAN-MARCELE-LENTULE-FLAVIE--/DIOCLÉTIAN-MAXIMIN-VALÉRIE-PLANCIEN-GENEST-MARCELE-SERGESTE-LENTULE',
+      'string-id' => '#DIOCLETIAN,#MAXIMIN,#VALERIE,#PLANCIEN,#GENEST,#ADRIAN,#FLAVIE,#MAXIMIN2,#VOIX,#PAGE;#ADRIAN,#VOIX,#PAGE;#ADRIAN,#NATALIE,#VOIX,#PAGE;#DIOCLETIAN,#VALERIE,#MARCELE,#LENTULE,#ADRIAN,#NATALIE,#ANTHYME,#VOIX,#PAGE;#DIOCLETIAN,#MARCELE,#LENTULE,#FLAVIE,#VOIX,#PAGE;#DIOCLETIAN,#MAXIMIN,#VALERIE,#PLANCIEN,#GENEST,#MARCELE,#SERGESTE,#LENTULE,#VOIX,#PAGE',
     ),
   ),
   'rotrou_saintgenest_IV03' => 
@@ -15948,6 +14592,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Rotrou',
       'string' => 'ADRIAN--/ADRIAN-NATALIE--/DIOCLÉTIAN-VALÉRIE-MARCELE-LENTULE-ADRIAN-NATALIE-ANTHYME--/DIOCLÉTIAN-MARCELE-LENTULE-FLAVIE--/DIOCLÉTIAN-MAXIMIN-VALÉRIE-PLANCIEN-GENEST-MARCELE-SERGESTE-LENTULE--/PLANCIEN-GENEST-MARCELE-OCTAVE-DÉCORATEUR',
+      'string-id' => '#ADRIAN,#VOIX,#PAGE;#ADRIAN,#NATALIE,#VOIX,#PAGE;#DIOCLETIAN,#VALERIE,#MARCELE,#LENTULE,#ADRIAN,#NATALIE,#ANTHYME,#VOIX,#PAGE;#DIOCLETIAN,#MARCELE,#LENTULE,#FLAVIE,#VOIX,#PAGE;#DIOCLETIAN,#MAXIMIN,#VALERIE,#PLANCIEN,#GENEST,#MARCELE,#SERGESTE,#LENTULE,#VOIX,#PAGE;#PLANCIEN,#GENEST,#MARCELE,#OCTAVE,#DECORATEUR,#VOIX,#PAGE',
     ),
   ),
   'rotrou_saintgenest_IV04' => 
@@ -16096,6 +14741,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Rotrou',
       'string' => 'ADRIAN-NATALIE--/DIOCLÉTIAN-VALÉRIE-MARCELE-LENTULE-ADRIAN-NATALIE-ANTHYME--/DIOCLÉTIAN-MARCELE-LENTULE-FLAVIE--/DIOCLÉTIAN-MAXIMIN-VALÉRIE-PLANCIEN-GENEST-MARCELE-SERGESTE-LENTULE--/PLANCIEN-GENEST-MARCELE-OCTAVE-DÉCORATEUR--/PLANCIEN-MARCELE-OCTAVE-SERGESTE-LENTULE-ALBIN-DÉCORATEUR',
+      'string-id' => '#ADRIAN,#NATALIE,#VOIX,#PAGE;#DIOCLETIAN,#VALERIE,#MARCELE,#LENTULE,#ADRIAN,#NATALIE,#ANTHYME,#VOIX,#PAGE;#DIOCLETIAN,#MARCELE,#LENTULE,#FLAVIE,#VOIX,#PAGE;#DIOCLETIAN,#MAXIMIN,#VALERIE,#PLANCIEN,#GENEST,#MARCELE,#SERGESTE,#LENTULE,#VOIX,#PAGE;#PLANCIEN,#GENEST,#MARCELE,#OCTAVE,#DECORATEUR,#VOIX,#PAGE;#PLANCIEN,#MARCELE,#OCTAVE,#SERGESTE,#LENTULE,#ALBIN,#DECORATEUR,#VOIX,#PAGE',
     ),
   ),
   'rotrou_saintgenest_V01' => 
@@ -16181,6 +14827,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Rotrou',
       'string' => 'GENEST--/GENEST-MARCELE-GEÔLIER--/GENEST-MARCELE-GEÔLIER--/GENEST-GEÔLIER--/DIOCLÉTIAN-MAXIMIN--/DIOCLÉTIAN-VALÉRIE-MARCELE-OCTAVE-FLAVIE',
+      'string-id' => '#GENEST,#VOIX,#PAGE;#GENEST,#MARCELE,#GEOLIER,#VOIX,#PAGE;#GENEST,#MARCELE,#GEOLIER,#VOIX,#PAGE;#GENEST,#GEOLIER,#VOIX,#PAGE;#DIOCLETIAN,#MAXIMIN,#VOIX,#PAGE;#DIOCLETIAN,#VALERIE,#MARCELE,#OCTAVE,#FLAVIE,#VOIX,#PAGE',
     ),
   ),
   'rotrou_saintgenest_V02' => 
@@ -16275,6 +14922,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Rotrou',
       'string' => 'GENEST-MARCELE-GEÔLIER--/GENEST-MARCELE-GEÔLIER--/GENEST-GEÔLIER--/DIOCLÉTIAN-MAXIMIN--/DIOCLÉTIAN-VALÉRIE-MARCELE-OCTAVE-FLAVIE--/DIOCLÉTIAN-MAXIMIN-VALÉRIE-PLANCIEN-MARCELE-OCTAVE-MAXIMIN',
+      'string-id' => '#GENEST,#MARCELE,#GEOLIER,#VOIX,#PAGE;#GENEST,#MARCELE,#GEOLIER,#VOIX,#PAGE;#GENEST,#GEOLIER,#VOIX,#PAGE;#DIOCLETIAN,#MAXIMIN,#VOIX,#PAGE;#DIOCLETIAN,#VALERIE,#MARCELE,#OCTAVE,#FLAVIE,#VOIX,#PAGE;#DIOCLETIAN,#MAXIMIN,#VALERIE,#PLANCIEN,#MARCELE,#OCTAVE,#MAXIMIN2,#VOIX,#PAGE',
     ),
   ),
   'rotrou_dombernarddecabrere_I01' => 
@@ -16342,6 +14990,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'DON LOPE DE LUNE---LAZARILLE/DON LOPE DE LUNE--DON PEDRE--LE COMTE-LAZARILLE/-DON PEDRE-/DON LOPE DE LUNE--DON PEDRE--LE COMTE-PEREZ-LAZARILLE-SOLDATS/-DON PEDRE--LE COMTE/DON LOPE DE LUNE--DON PEDRE--LE COMTE-LAZARILLE',
+      'string-id' => '#DONLOPE,#DOROTHEE,#DONSANCHE,#LAZARILLE;#DONLOPE,#DOROTHEE,#LEROI,#DONSANCHE,#LECOMTE,#LAZARILLE;#DOROTHEE,#LEROI,#DONSANCHE;#DONLOPE,#DOROTHEE,#LEROI,#DONSANCHE,#LECOMTE,#LESECRETAIRE,#LAZARILLE,#GARDE;#DOROTHEE,#LEROI,#DONSANCHE,#LECOMTE;#DONLOPE,#DOROTHEE,#LEROI,#DONSANCHE,#LECOMTE,#LAZARILLE',
     ),
   ),
   'rotrou_dombernarddecabrere_I02' => 
@@ -16418,6 +15067,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'DON LOPE DE LUNE--DON PEDRE--LE COMTE-LAZARILLE/-DON PEDRE-/DON LOPE DE LUNE--DON PEDRE--LE COMTE-PEREZ-LAZARILLE-SOLDATS/-DON PEDRE--LE COMTE/DON LOPE DE LUNE--DON PEDRE--LE COMTE-LAZARILLE/DON LOPE DE LUNE---LE COMTE-PEREZ-LAZARILLE',
+      'string-id' => '#DONLOPE,#DOROTHEE,#LEROI,#DONSANCHE,#LECOMTE,#LAZARILLE;#DOROTHEE,#LEROI,#DONSANCHE;#DONLOPE,#DOROTHEE,#LEROI,#DONSANCHE,#LECOMTE,#LESECRETAIRE,#LAZARILLE,#GARDE;#DOROTHEE,#LEROI,#DONSANCHE,#LECOMTE;#DONLOPE,#DOROTHEE,#LEROI,#DONSANCHE,#LECOMTE,#LAZARILLE;#DONLOPE,#DOROTHEE,#DONSANCHE,#LECOMTE,#LESECRETAIRE,#LAZARILLE',
     ),
   ),
   'rotrou_dombernarddecabrere_I03' => 
@@ -16503,6 +15153,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'DON PEDRE-/DON LOPE DE LUNE--DON PEDRE--LE COMTE-PEREZ-LAZARILLE-SOLDATS/-DON PEDRE--LE COMTE/DON LOPE DE LUNE--DON PEDRE--LE COMTE-LAZARILLE/DON LOPE DE LUNE---LE COMTE-PEREZ-LAZARILLE/-DON PEDRE--LÉONOR-LE COMTE',
+      'string-id' => '#DOROTHEE,#LEROI,#DONSANCHE;#DONLOPE,#DOROTHEE,#LEROI,#DONSANCHE,#LECOMTE,#LESECRETAIRE,#LAZARILLE,#GARDE;#DOROTHEE,#LEROI,#DONSANCHE,#LECOMTE;#DONLOPE,#DOROTHEE,#LEROI,#DONSANCHE,#LECOMTE,#LAZARILLE;#DONLOPE,#DOROTHEE,#DONSANCHE,#LECOMTE,#LESECRETAIRE,#LAZARILLE;#DOROTHEE,#LEROI,#DONSANCHE,#LEONOR,#LECOMTE',
     ),
   ),
   'rotrou_dombernarddecabrere_I04' => 
@@ -16588,6 +15239,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'DON LOPE DE LUNE--DON PEDRE--LE COMTE-PEREZ-LAZARILLE-SOLDATS/-DON PEDRE--LE COMTE/DON LOPE DE LUNE--DON PEDRE--LE COMTE-LAZARILLE/DON LOPE DE LUNE---LE COMTE-PEREZ-LAZARILLE/-DON PEDRE--LÉONOR-LE COMTE/DON LOPE DE LUNE---LAZARILLE',
+      'string-id' => '#DONLOPE,#DOROTHEE,#LEROI,#DONSANCHE,#LECOMTE,#LESECRETAIRE,#LAZARILLE,#GARDE;#DOROTHEE,#LEROI,#DONSANCHE,#LECOMTE;#DONLOPE,#DOROTHEE,#LEROI,#DONSANCHE,#LECOMTE,#LAZARILLE;#DONLOPE,#DOROTHEE,#DONSANCHE,#LECOMTE,#LESECRETAIRE,#LAZARILLE;#DOROTHEE,#LEROI,#DONSANCHE,#LEONOR,#LECOMTE;#DONLOPE,#DOROTHEE,#DONSANCHE,#LAZARILLE',
     ),
   ),
   'rotrou_dombernarddecabrere_II01' => 
@@ -16673,6 +15325,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'DON BERNARD DE CABRERE-DON LOPE DE LUNE---LAZARILLE/-DON PEDRE--LE COMTE/DON BERNARD DE CABRERE--DON PEDRE--LE COMTE-LAZARILLE-SOLDATS/DON LOPE DE LUNE---LAZARILLE/DON BERNARD DE CABRERE-DON LOPE DE LUNE---LE COMTE-LAZARILLE/DON LOPE DE LUNE---LAZARILLE',
+      'string-id' => '#DONBERNARD,#DONLOPE,#DOROTHEE,#DONSANCHE,#LAZARILLE;#DOROTHEE,#LEROI,#DONSANCHE,#LECOMTE;#DONBERNARD,#DOROTHEE,#LEROI,#DONSANCHE,#LECOMTE,#LAZARILLE,#GARDE;#DONLOPE,#DOROTHEE,#DONSANCHE,#LAZARILLE;#DONBERNARD,#DONLOPE,#DOROTHEE,#DONSANCHE,#LECOMTE,#LAZARILLE;#DONLOPE,#DOROTHEE,#DONSANCHE,#LAZARILLE',
     ),
   ),
   'rotrou_dombernarddecabrere_III01' => 
@@ -16749,6 +15402,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'L\'INFANTE-LÉONOR/--LÉONOR/--LÉONOR-PEREZ/--PEREZ/-DON PEDRE--PEREZ/-DON PEDRE--PEREZ-SOLDATS',
+      'string-id' => '#DOROTHEE,#DONSANCHE,#INFANTE,#LEONOR;#DOROTHEE,#DONSANCHE,#LEONOR;#DOROTHEE,#DONSANCHE,#LEONOR,#LESECRETAIRE;#DOROTHEE,#DONSANCHE,#LESECRETAIRE;#DOROTHEE,#LEROI,#DONSANCHE,#LESECRETAIRE;#DOROTHEE,#LEROI,#DONSANCHE,#LESECRETAIRE,#GARDE',
     ),
   ),
   'rotrou_dombernarddecabrere_III02' => 
@@ -16816,6 +15470,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'LÉONOR/--LÉONOR-PEREZ/--PEREZ/-DON PEDRE--PEREZ/-DON PEDRE--PEREZ-SOLDATS/-DON PEDRE',
+      'string-id' => '#DOROTHEE,#DONSANCHE,#LEONOR;#DOROTHEE,#DONSANCHE,#LEONOR,#LESECRETAIRE;#DOROTHEE,#DONSANCHE,#LESECRETAIRE;#DOROTHEE,#LEROI,#DONSANCHE,#LESECRETAIRE;#DOROTHEE,#LEROI,#DONSANCHE,#LESECRETAIRE,#GARDE;#DOROTHEE,#LEROI,#DONSANCHE',
     ),
   ),
   'rotrou_dombernarddecabrere_III03' => 
@@ -16892,6 +15547,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'LÉONOR-PEREZ/--PEREZ/-DON PEDRE--PEREZ/-DON PEDRE--PEREZ-SOLDATS/-DON PEDRE-/DON BERNARD DE CABRERE--DON PEDRE--LE COMTE',
+      'string-id' => '#DOROTHEE,#DONSANCHE,#LEONOR,#LESECRETAIRE;#DOROTHEE,#DONSANCHE,#LESECRETAIRE;#DOROTHEE,#LEROI,#DONSANCHE,#LESECRETAIRE;#DOROTHEE,#LEROI,#DONSANCHE,#LESECRETAIRE,#GARDE;#DOROTHEE,#LEROI,#DONSANCHE;#DONBERNARD,#DOROTHEE,#LEROI,#DONSANCHE,#LECOMTE',
     ),
   ),
   'rotrou_dombernarddecabrere_III04' => 
@@ -16977,6 +15633,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'PEREZ/-DON PEDRE--PEREZ/-DON PEDRE--PEREZ-SOLDATS/-DON PEDRE-/DON BERNARD DE CABRERE--DON PEDRE--LE COMTE/DON BERNARD DE CABRERE-DON LOPE DE LUNE---LAZARILLE',
+      'string-id' => '#DOROTHEE,#DONSANCHE,#LESECRETAIRE;#DOROTHEE,#LEROI,#DONSANCHE,#LESECRETAIRE;#DOROTHEE,#LEROI,#DONSANCHE,#LESECRETAIRE,#GARDE;#DOROTHEE,#LEROI,#DONSANCHE;#DONBERNARD,#DOROTHEE,#LEROI,#DONSANCHE,#LECOMTE;#DONBERNARD,#DONLOPE,#DOROTHEE,#DONSANCHE,#LAZARILLE',
     ),
   ),
   'rotrou_dombernarddecabrere_IV01' => 
@@ -17062,6 +15719,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'DON PEDRE--LÉONOR-LE COMTE/-DON PEDRE--LÉONOR/-DON PEDRE--L\'INFANTE-LÉONOR-LE COMTE-PEREZ/DON BERNARD DE CABRERE-DON LOPE DE LUNE--DON PEDRE--L\'INFANTE-LÉONOR-LAZARILLE-SOLDATS/DON LOPE DE LUNE---LAZARILLE/DON LOPE DE LUNE---LAZARILLE',
+      'string-id' => '#DOROTHEE,#LEROI,#DONSANCHE,#LEONOR,#LECOMTE;#DOROTHEE,#LEROI,#DONSANCHE,#LEONOR;#DOROTHEE,#LEROI,#DONSANCHE,#INFANTE,#LEONOR,#LECOMTE,#LESECRETAIRE;#DONBERNARD,#DONLOPE,#DOROTHEE,#LEROI,#DONSANCHE,#INFANTE,#LEONOR,#LAZARILLE,#GARDE;#DONLOPE,#DOROTHEE,#DONSANCHE,#LAZARILLE;#DONLOPE,#DOROTHEE,#DONSANCHE,#LAZARILLE',
     ),
   ),
   'rotrou_dombernarddecabrere_IV02' => 
@@ -17156,6 +15814,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'DON PEDRE--LÉONOR/-DON PEDRE--L\'INFANTE-LÉONOR-LE COMTE-PEREZ/DON BERNARD DE CABRERE-DON LOPE DE LUNE--DON PEDRE--L\'INFANTE-LÉONOR-LAZARILLE-SOLDATS/DON LOPE DE LUNE---LAZARILLE/DON LOPE DE LUNE---LAZARILLE/DON BERNARD DE CABRERE-DON LOPE DE LUNE',
+      'string-id' => '#DOROTHEE,#LEROI,#DONSANCHE,#LEONOR;#DOROTHEE,#LEROI,#DONSANCHE,#INFANTE,#LEONOR,#LECOMTE,#LESECRETAIRE;#DONBERNARD,#DONLOPE,#DOROTHEE,#LEROI,#DONSANCHE,#INFANTE,#LEONOR,#LAZARILLE,#GARDE;#DONLOPE,#DOROTHEE,#DONSANCHE,#LAZARILLE;#DONLOPE,#DOROTHEE,#DONSANCHE,#LAZARILLE;#DONBERNARD,#DONLOPE,#DOROTHEE,#DONSANCHE',
     ),
   ),
   'rotrou_dombernarddecabrere_V01' => 
@@ -17223,6 +15882,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'DON BERNARD DE CABRERE--/DON BERNARD DE CABRERE---L\'INFANTE/--L\'INFANTE/DON LOPE DE LUNE---L\'INFANTE/DON LOPE DE LUNE--DON PEDRE--L\'INFANTE/-DON PEDRE--L\'INFANTE',
+      'string-id' => '#DONBERNARD,#DOROTHEE,#DONSANCHE;#DONBERNARD,#DOROTHEE,#DONSANCHE,#INFANTE;#DOROTHEE,#DONSANCHE,#INFANTE;#DONLOPE,#DOROTHEE,#DONSANCHE,#INFANTE;#DONLOPE,#DOROTHEE,#LEROI,#DONSANCHE,#INFANTE;#DOROTHEE,#LEROI,#DONSANCHE,#INFANTE',
     ),
   ),
   'rotrou_dombernarddecabrere_V02' => 
@@ -17290,6 +15950,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'DON BERNARD DE CABRERE---L\'INFANTE/--L\'INFANTE/DON LOPE DE LUNE---L\'INFANTE/DON LOPE DE LUNE--DON PEDRE--L\'INFANTE/-DON PEDRE--L\'INFANTE/DON BERNARD DE CABRERE-DON LOPE DE LUNE',
+      'string-id' => '#DONBERNARD,#DOROTHEE,#DONSANCHE,#INFANTE;#DOROTHEE,#DONSANCHE,#INFANTE;#DONLOPE,#DOROTHEE,#DONSANCHE,#INFANTE;#DONLOPE,#DOROTHEE,#LEROI,#DONSANCHE,#INFANTE;#DOROTHEE,#LEROI,#DONSANCHE,#INFANTE;#DONBERNARD,#DONLOPE,#DOROTHEE,#DONSANCHE',
     ),
   ),
   'rotrou_dombernarddecabrere_V03' => 
@@ -17366,6 +16027,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'L\'INFANTE/DON LOPE DE LUNE---L\'INFANTE/DON LOPE DE LUNE--DON PEDRE--L\'INFANTE/-DON PEDRE--L\'INFANTE/DON BERNARD DE CABRERE-DON LOPE DE LUNE--/DON BERNARD DE CABRERE-DON LOPE DE LUNE---LAZARILLE',
+      'string-id' => '#DOROTHEE,#DONSANCHE,#INFANTE;#DONLOPE,#DOROTHEE,#DONSANCHE,#INFANTE;#DONLOPE,#DOROTHEE,#LEROI,#DONSANCHE,#INFANTE;#DOROTHEE,#LEROI,#DONSANCHE,#INFANTE;#DONBERNARD,#DONLOPE,#DOROTHEE,#DONSANCHE;#DONBERNARD,#DONLOPE,#DOROTHEE,#DONSANCHE,#LAZARILLE',
     ),
   ),
   'rotrou_dombernarddecabrere_V04' => 
@@ -17451,6 +16113,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'DON LOPE DE LUNE---L\'INFANTE/DON LOPE DE LUNE--DON PEDRE--L\'INFANTE/-DON PEDRE--L\'INFANTE/DON BERNARD DE CABRERE-DON LOPE DE LUNE--/DON BERNARD DE CABRERE-DON LOPE DE LUNE---LAZARILLE/DON BERNARD DE CABRERE--DON PEDRE--LE COMTE',
+      'string-id' => '#DONLOPE,#DOROTHEE,#DONSANCHE,#INFANTE;#DONLOPE,#DOROTHEE,#LEROI,#DONSANCHE,#INFANTE;#DOROTHEE,#LEROI,#DONSANCHE,#INFANTE;#DONBERNARD,#DONLOPE,#DOROTHEE,#DONSANCHE;#DONBERNARD,#DONLOPE,#DOROTHEE,#DONSANCHE,#LAZARILLE;#DONBERNARD,#DOROTHEE,#LEROI,#DONSANCHE,#LECOMTE',
     ),
   ),
   'rotrou_dombernarddecabrere_V05' => 
@@ -17545,6 +16208,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'DON LOPE DE LUNE--DON PEDRE--L\'INFANTE/-DON PEDRE--L\'INFANTE/DON BERNARD DE CABRERE-DON LOPE DE LUNE--/DON BERNARD DE CABRERE-DON LOPE DE LUNE---LAZARILLE/DON BERNARD DE CABRERE--DON PEDRE--LE COMTE/DON BERNARD DE CABRERE--DON PEDRE--L\'INFANTE-LÉONOR-LE COMTE',
+      'string-id' => '#DONLOPE,#DOROTHEE,#LEROI,#DONSANCHE,#INFANTE;#DOROTHEE,#LEROI,#DONSANCHE,#INFANTE;#DONBERNARD,#DONLOPE,#DOROTHEE,#DONSANCHE;#DONBERNARD,#DONLOPE,#DOROTHEE,#DONSANCHE,#LAZARILLE;#DONBERNARD,#DOROTHEE,#LEROI,#DONSANCHE,#LECOMTE;#DONBERNARD,#DOROTHEE,#LEROI,#DONSANCHE,#INFANTE,#LEONOR,#LECOMTE',
     ),
   ),
   'rotrou_cosroes_V01' => 
@@ -17630,6 +16294,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Rotrou',
       'string' => 'SYRA---SARDARIGUE-GARDES/SYRA--SYROËS--SARDARIGUE-PALMYRAS-PHARNACE-GARDES/-SYROËS--MARDESANE-SARDARIGUE-PALMYRAS-PHARNACE-GARDES/-SYROËS--PALMYRAS-PHARNACE-GARDES/COSROËS--SYROËS--SARDARIGUE-PALMYRAS-PHARNACE-GARDES/-SYROËS--PALMYRAS-PHARNACE',
+      'string-id' => '#SYRA,#HORMISDATE,#ARTANASDE,#SARDARIGUE,#GARDES;#SYRA,#HORMISDATE,#SYROES,#ARTANASDE,#SARDARIGUE,#PALMYRAS,#PHARNACE,#GARDES;#HORMISDATE,#SYROES,#ARTANASDE,#MARDESANE,#SARDARIGUE,#PALMYRAS,#PHARNACE,#GARDES;#HORMISDATE,#SYROES,#ARTANASDE,#PALMYRAS,#PHARNACE,#GARDES;#COSROES,#HORMISDATE,#SYROES,#ARTANASDE,#SARDARIGUE,#PALMYRAS,#PHARNACE,#GARDES;#HORMISDATE,#SYROES,#ARTANASDE,#PALMYRAS,#PHARNACE',
     ),
   ),
   'rotrou_cosroes_V02' => 
@@ -17715,6 +16380,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Rotrou',
       'string' => 'SYRA--SYROËS--SARDARIGUE-PALMYRAS-PHARNACE-GARDES/-SYROËS--MARDESANE-SARDARIGUE-PALMYRAS-PHARNACE-GARDES/-SYROËS--PALMYRAS-PHARNACE-GARDES/COSROËS--SYROËS--SARDARIGUE-PALMYRAS-PHARNACE-GARDES/-SYROËS--PALMYRAS-PHARNACE/-SYROËS--NARSÉE-PALMYRAS-PHARNACE',
+      'string-id' => '#SYRA,#HORMISDATE,#SYROES,#ARTANASDE,#SARDARIGUE,#PALMYRAS,#PHARNACE,#GARDES;#HORMISDATE,#SYROES,#ARTANASDE,#MARDESANE,#SARDARIGUE,#PALMYRAS,#PHARNACE,#GARDES;#HORMISDATE,#SYROES,#ARTANASDE,#PALMYRAS,#PHARNACE,#GARDES;#COSROES,#HORMISDATE,#SYROES,#ARTANASDE,#SARDARIGUE,#PALMYRAS,#PHARNACE,#GARDES;#HORMISDATE,#SYROES,#ARTANASDE,#PALMYRAS,#PHARNACE;#HORMISDATE,#SYROES,#ARTANASDE,#NARSEE,#PALMYRAS,#PHARNACE',
     ),
   ),
   'rotrou_cosroes_V03' => 
@@ -17791,6 +16457,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Rotrou',
       'string' => 'SYROËS--MARDESANE-SARDARIGUE-PALMYRAS-PHARNACE-GARDES/-SYROËS--PALMYRAS-PHARNACE-GARDES/COSROËS--SYROËS--SARDARIGUE-PALMYRAS-PHARNACE-GARDES/-SYROËS--PALMYRAS-PHARNACE/-SYROËS--NARSÉE-PALMYRAS-PHARNACE/-SYROËS--SARDARIGUE-PALMYRAS-PHARNACE-GARDES',
+      'string-id' => '#HORMISDATE,#SYROES,#ARTANASDE,#MARDESANE,#SARDARIGUE,#PALMYRAS,#PHARNACE,#GARDES;#HORMISDATE,#SYROES,#ARTANASDE,#PALMYRAS,#PHARNACE,#GARDES;#COSROES,#HORMISDATE,#SYROES,#ARTANASDE,#SARDARIGUE,#PALMYRAS,#PHARNACE,#GARDES;#HORMISDATE,#SYROES,#ARTANASDE,#PALMYRAS,#PHARNACE;#HORMISDATE,#SYROES,#ARTANASDE,#NARSEE,#PALMYRAS,#PHARNACE;#HORMISDATE,#SYROES,#ARTANASDE,#SARDARIGUE,#PALMYRAS,#PHARNACE,#GARDES',
     ),
   ),
   'rotrou_cleagenor_I01' => 
@@ -17867,6 +16534,7 @@
       'genreId' => 'Pastorale',
       'authorId' => 'Rotrou',
       'string' => 'CLÉAGÉNOR/CLÉAGÉNOR-THÉANDRE/CLÉAGÉNOR-OZANOR-DORISTÉE/DORISTÉE-PREMIER VOLEUR-DEUXIÈME VOLEUR/CLÉAGÉNOR/CLÉAGÉNOR-ARCHERS',
+      'string-id' => '#CLEAGENOR;#CLEAGENOR,#THEANDRE;#CLEAGENOR,#OZANOR,#DORISTEE;#DORISTEE,#VOLEUR1,#VOLEUR2;#CLEAGENOR;#CLEAGENOR,#ARCHERS',
     ),
   ),
   'rotrou_cleagenor_III01' => 
@@ -17916,6 +16584,7 @@
       'genreId' => 'Pastorale',
       'authorId' => 'Rotrou',
       'string' => 'DORANTE/PHILEMOND-DORANTE/PHILEMOND-DORANTE/PHILEMOND/THÉANDRE-PHILEMOND/THÉANDRE-PHILEMOND',
+      'string-id' => '#DORANTE;#PHILEMOND,#DORANTE;#PHILEMOND,#DORANTE;#PHILEMOND;#THEANDRE,#PHILEMOND;#THEANDRE,#PHILEMOND',
     ),
   ),
   'rotrou_cleagenor_V01' => 
@@ -17974,6 +16643,7 @@
       'genreId' => 'Pastorale',
       'authorId' => 'Rotrou',
       'string' => 'PHILEMOND-DORANTE/PHILEMOND/THÉANDRE-PHILEMOND-DORANTE-PHILACTE/THÉANDRE-DORANTE-PHILACTE/THÉANDRE-DORANTE-PHILACTE/CLÉAGÉNOR-THÉANDRE-DORANTE-PHILACTE',
+      'string-id' => '#PHILEMOND,#DORANTE;#PHILEMOND;#THEANDRE,#PHILEMOND,#DORANTE,#PHILACTE;#THEANDRE,#DORANTE,#PHILACTE;#THEANDRE,#DORANTE,#PHILACTE;#CLEAGENOR,#THEANDRE,#DORANTE,#PHILACTE',
     ),
   ),
   'rotrou_cleagenor_V02' => 
@@ -18032,6 +16702,7 @@
       'genreId' => 'Pastorale',
       'authorId' => 'Rotrou',
       'string' => 'PHILEMOND/THÉANDRE-PHILEMOND-DORANTE-PHILACTE/THÉANDRE-DORANTE-PHILACTE/THÉANDRE-DORANTE-PHILACTE/CLÉAGÉNOR-THÉANDRE-DORANTE-PHILACTE/CLÉAGÉNOR-THÉANDRE-DORISTÉE-DORANTE-PHILACTE',
+      'string-id' => '#PHILEMOND;#THEANDRE,#PHILEMOND,#DORANTE,#PHILACTE;#THEANDRE,#DORANTE,#PHILACTE;#THEANDRE,#DORANTE,#PHILACTE;#CLEAGENOR,#THEANDRE,#DORANTE,#PHILACTE;#CLEAGENOR,#THEANDRE,#DORISTEE,#DORANTE,#PHILACTE',
     ),
   ),
   'rotrou_antigone_I01' => 
@@ -18117,6 +16788,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Rotrou',
       'string' => 'JOCASTE-ISMÈNE-/JOCASTE-ANTIGONE-ISMÈNE-/JOCASTE-ÉTÉOCLE-ANTIGONE-ISMÈNE-CRÉON-HÉMON-/ANTIGONE-HÉMON-/ANTIGONE-HÉMON-UN PAGE-/POLYNICE-ADRASTE-ARGIE',
+      'string-id' => '#JOCASTE,#ISMENE,#TYRESIE;#JOCASTE,#ANTIGONE,#ISMENE,#TYRESIE;#JOCASTE,#ETEOCLE,#ANTIGONE,#ISMENE,#CREON,#HEMON,#TYRESIE;#ANTIGONE,#HEMON,#TYRESIE;#ANTIGONE,#HEMON,#PAGE,#TYRESIE;#POLYNICE,#ADRASTE,#ARGIE,#TYRESIE',
     ),
   ),
   'rotrou_antigone_III01' => 
@@ -18184,6 +16856,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Rotrou',
       'string' => 'ANTIGONE-/ANTIGONE-HÉMON-/ANTIGONE-ISMÈNE-/ANTIGONE-HÉMON-/ANTIGONE-ISMÈNE-/ARGIE-MÉNETTE',
+      'string-id' => '#ANTIGONE,#TYRESIE;#ANTIGONE,#HEMON,#TYRESIE;#ANTIGONE,#ISMENE,#TYRESIE;#ANTIGONE,#HEMON,#TYRESIE;#ANTIGONE,#ISMENE,#TYRESIE;#ARGIE,#MENETTE,#TYRESIE',
     ),
   ),
   'rotrou_antigone_III02' => 
@@ -18251,6 +16924,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Rotrou',
       'string' => 'ANTIGONE-HÉMON-/ANTIGONE-ISMÈNE-/ANTIGONE-HÉMON-/ANTIGONE-ISMÈNE-/ARGIE-MÉNETTE-/ANTIGONE-ARGIE-MÉNETTE',
+      'string-id' => '#ANTIGONE,#HEMON,#TYRESIE;#ANTIGONE,#ISMENE,#TYRESIE;#ANTIGONE,#HEMON,#TYRESIE;#ANTIGONE,#ISMENE,#TYRESIE;#ARGIE,#MENETTE,#TYRESIE;#ANTIGONE,#ARGIE,#MENETTE,#TYRESIE',
     ),
   ),
   'rotrou_antigone_V01' => 
@@ -18318,6 +16992,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Rotrou',
       'string' => 'HÉMON-/HÉMON-ÉPHISE-/HÉMON-/CRÉON-ÉPHISE-/CRÉON-ÉPHISE-CLÉODAMAS-/CRÉON-ÉPHISE-CLÉODAMAS',
+      'string-id' => '#HEMON,#TYRESIE;#HEMON,#EPHISE,#TYRESIE;#HEMON,#TYRESIE;#CREON,#EPHISE,#TYRESIE;#CREON,#EPHISE,#CLEODAMAS,#TYRESIE;#CREON,#EPHISE,#CLEODAMAS,#TYRESIE',
     ),
   ),
   'rotrou_antigone_V02' => 
@@ -18394,6 +17069,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Rotrou',
       'string' => 'HÉMON-ÉPHISE-/HÉMON-/CRÉON-ÉPHISE-/CRÉON-ÉPHISE-CLÉODAMAS-/CRÉON-ÉPHISE-CLÉODAMAS-/CRÉON-CAPITAINES GRECS',
+      'string-id' => '#HEMON,#EPHISE,#TYRESIE;#HEMON,#TYRESIE;#CREON,#EPHISE,#TYRESIE;#CREON,#EPHISE,#CLEODAMAS,#TYRESIE;#CREON,#EPHISE,#CLEODAMAS,#TYRESIE;#CREON,#CAPITAINE,#TYRESIE',
     ),
   ),
   'rotrou_antigone_V03' => 
@@ -18479,6 +17155,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Rotrou',
       'string' => 'HÉMON-/CRÉON-ÉPHISE-/CRÉON-ÉPHISE-CLÉODAMAS-/CRÉON-ÉPHISE-CLÉODAMAS-/CRÉON-CAPITAINES GRECS-/ANTIGONE-ISMÈNE-HÉMON',
+      'string-id' => '#HEMON,#TYRESIE;#CREON,#EPHISE,#TYRESIE;#CREON,#EPHISE,#CLEODAMAS,#TYRESIE;#CREON,#EPHISE,#CLEODAMAS,#TYRESIE;#CREON,#CAPITAINE,#TYRESIE;#ANTIGONE,#ISMENE,#HEMON,#TYRESIE',
     ),
   ),
   'rotrou_antigone_V04' => 
@@ -18564,6 +17241,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Rotrou',
       'string' => 'CRÉON-ÉPHISE-/CRÉON-ÉPHISE-CLÉODAMAS-/CRÉON-ÉPHISE-CLÉODAMAS-/CRÉON-CAPITAINES GRECS-/ANTIGONE-ISMÈNE-HÉMON-/ISMÈNE-CRÉON-HÉMON-ÉPHISE-CLÉODAMAS',
+      'string-id' => '#CREON,#EPHISE,#TYRESIE;#CREON,#EPHISE,#CLEODAMAS,#TYRESIE;#CREON,#EPHISE,#CLEODAMAS,#TYRESIE;#CREON,#CAPITAINE,#TYRESIE;#ANTIGONE,#ISMENE,#HEMON,#TYRESIE;#ISMENE,#CREON,#HEMON,#EPHISE,#CLEODAMAS,#TYRESIE',
     ),
   ),
   'rotrou_amelie_II01' => 
@@ -18631,6 +17309,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'ÉMILE-/DIONYS-LISIDAN-/DIONYS-LISIDAN-ÉMILE-/DIONYS-LISIDAN-/AMÉLIE-DIONYS-LISIDAN-ÉRASTE-LE PÈRE-/AMÉLIE-DIONYS-LISIDAN',
+      'string-id' => '#EMILE,#NOURRICE;#DIONYS,#LISIDAN,#NOURRICE;#DIONYS,#LISIDAN,#EMILE,#NOURRICE;#DIONYS,#LISIDAN,#NOURRICE;#AMELIE,#DIONYS,#LISIDAN,#ERASTE,#LEPERE,#NOURRICE;#AMELIE,#DIONYS,#LISIDAN,#NOURRICE',
     ),
   ),
   'rotrou_amelie_II02' => 
@@ -18698,6 +17377,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'DIONYS-LISIDAN-/DIONYS-LISIDAN-ÉMILE-/DIONYS-LISIDAN-/AMÉLIE-DIONYS-LISIDAN-ÉRASTE-LE PÈRE-/AMÉLIE-DIONYS-LISIDAN-/AMÉLIE-DIONYS-ÉRANTE-LISIDAN',
+      'string-id' => '#DIONYS,#LISIDAN,#NOURRICE;#DIONYS,#LISIDAN,#EMILE,#NOURRICE;#DIONYS,#LISIDAN,#NOURRICE;#AMELIE,#DIONYS,#LISIDAN,#ERASTE,#LEPERE,#NOURRICE;#AMELIE,#DIONYS,#LISIDAN,#NOURRICE;#AMELIE,#DIONYS,#ERANTE,#LISIDAN,#NOURRICE',
     ),
   ),
   'rotrou_amelie_II03' => 
@@ -18774,6 +17454,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'DIONYS-LISIDAN-ÉMILE-/DIONYS-LISIDAN-/AMÉLIE-DIONYS-LISIDAN-ÉRASTE-LE PÈRE-/AMÉLIE-DIONYS-LISIDAN-/AMÉLIE-DIONYS-ÉRANTE-LISIDAN-/AMÉLIE-DIONYS',
+      'string-id' => '#DIONYS,#LISIDAN,#EMILE,#NOURRICE;#DIONYS,#LISIDAN,#NOURRICE;#AMELIE,#DIONYS,#LISIDAN,#ERASTE,#LEPERE,#NOURRICE;#AMELIE,#DIONYS,#LISIDAN,#NOURRICE;#AMELIE,#DIONYS,#ERANTE,#LISIDAN,#NOURRICE;#AMELIE,#DIONYS,#NOURRICE',
     ),
   ),
   'rotrou_amelie_II04' => 
@@ -18841,6 +17522,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'DIONYS-LISIDAN-/AMÉLIE-DIONYS-LISIDAN-ÉRASTE-LE PÈRE-/AMÉLIE-DIONYS-LISIDAN-/AMÉLIE-DIONYS-ÉRANTE-LISIDAN-/AMÉLIE-DIONYS-/DIONYS-LISIDAN',
+      'string-id' => '#DIONYS,#LISIDAN,#NOURRICE;#AMELIE,#DIONYS,#LISIDAN,#ERASTE,#LEPERE,#NOURRICE;#AMELIE,#DIONYS,#LISIDAN,#NOURRICE;#AMELIE,#DIONYS,#ERANTE,#LISIDAN,#NOURRICE;#AMELIE,#DIONYS,#NOURRICE;#DIONYS,#LISIDAN,#NOURRICE',
     ),
   ),
   'rotrou_amelie_III01' => 
@@ -18899,6 +17581,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => '/AMÉLIE-/LISIDAN-/DIONYS-ÉRANTE-LISIDAN-/DIONYS-ÉRANTE-LISIDAN-/AMÉLIE-DIONYS-ÉRANTE-LISIDAN',
+      'string-id' => '#NOURRICE;#AMELIE,#NOURRICE;#LISIDAN,#NOURRICE;#DIONYS,#ERANTE,#LISIDAN,#NOURRICE;#DIONYS,#ERANTE,#LISIDAN,#NOURRICE;#AMELIE,#DIONYS,#ERANTE,#LISIDAN,#NOURRICE',
     ),
   ),
   'rotrou_amelie_III02' => 
@@ -18957,6 +17640,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'AMÉLIE-/LISIDAN-/DIONYS-ÉRANTE-LISIDAN-/DIONYS-ÉRANTE-LISIDAN-/AMÉLIE-DIONYS-ÉRANTE-LISIDAN-/AMÉLIE-DIONYS-ÉRANTE-LISIDAN',
+      'string-id' => '#AMELIE,#NOURRICE;#LISIDAN,#NOURRICE;#DIONYS,#ERANTE,#LISIDAN,#NOURRICE;#DIONYS,#ERANTE,#LISIDAN,#NOURRICE;#AMELIE,#DIONYS,#ERANTE,#LISIDAN,#NOURRICE;#AMELIE,#DIONYS,#ERANTE,#LISIDAN,#NOURRICE',
     ),
   ),
   'rotrou_amelie_III03' => 
@@ -19015,6 +17699,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'LISIDAN-/DIONYS-ÉRANTE-LISIDAN-/DIONYS-ÉRANTE-LISIDAN-/AMÉLIE-DIONYS-ÉRANTE-LISIDAN-/AMÉLIE-DIONYS-ÉRANTE-LISIDAN-/AMÉLIE-DIONYS-ÉRANTE-LISIDAN-ÉMILE',
+      'string-id' => '#LISIDAN,#NOURRICE;#DIONYS,#ERANTE,#LISIDAN,#NOURRICE;#DIONYS,#ERANTE,#LISIDAN,#NOURRICE;#AMELIE,#DIONYS,#ERANTE,#LISIDAN,#NOURRICE;#AMELIE,#DIONYS,#ERANTE,#LISIDAN,#NOURRICE;#AMELIE,#DIONYS,#ERANTE,#LISIDAN,#EMILE,#NOURRICE',
     ),
   ),
   'rotrou_amelie_IV01' => 
@@ -19100,6 +17785,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'CLORIS-/AMÉLIE-DIONYS-ÉRANTE-LISIDAN-CLORIS-/AMÉLIE-LE PÈRE-/AMÉLIE-CLORIS-/AMÉLIE-ÉRASTE-CLORIS-/LISIDAN',
+      'string-id' => '#CLORIS,#NOURRICE;#AMELIE,#DIONYS,#ERANTE,#LISIDAN,#CLORIS,#NOURRICE;#AMELIE,#LEPERE,#NOURRICE;#AMELIE,#CLORIS,#NOURRICE;#AMELIE,#ERASTE,#CLORIS,#NOURRICE;#LISIDAN,#NOURRICE',
     ),
   ),
   'rotrou_amelie_V01' => 
@@ -19167,6 +17853,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'DIONYS-/AMÉLIE-DIONYS-CLORIS-/DIONYS-ÉRANTE-LISIDAN-/AMÉLIE-DIONYS-ÉRANTE-LISIDAN-CLORIS-/AMÉLIE-DIONYS-ÉRANTE-LISIDAN-ÉRASTE-CLORIS-/AMÉLIE-DIONYS-ÉRANTE-LISIDAN-ÉRASTE-CLORIS-ÉMILE',
+      'string-id' => '#DIONYS,#NOURRICE;#AMELIE,#DIONYS,#CLORIS,#NOURRICE;#DIONYS,#ERANTE,#LISIDAN,#NOURRICE;#AMELIE,#DIONYS,#ERANTE,#LISIDAN,#CLORIS,#NOURRICE;#AMELIE,#DIONYS,#ERANTE,#LISIDAN,#ERASTE,#CLORIS,#NOURRICE;#AMELIE,#DIONYS,#ERANTE,#LISIDAN,#ERASTE,#CLORIS,#EMILE,#NOURRICE',
     ),
   ),
   'rotrou_amarillis_II01' => 
@@ -19243,6 +17930,7 @@
       'genreId' => 'Pastorale',
       'authorId' => 'TristanLHermite',
       'string' => 'Trois SATYRES---/-AMARILLIS-PHILIDAS-DAPHNÉ---/-PHILIDAS-CELIDAN---/-AMARILLIS-PHILIDAS-DAPHNÉ---/BÉLISE-TYRENE--AMARILLIS-DAPHNÉ---/-PHILIDAS',
+      'string-id' => '#CLEONTE,#SATYRES,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#AMARILLIS,#PHILIDAS,#DAPHNE,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#PHILIDAS,#CELIDAN,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#AMARILLIS,#PHILIDAS,#DAPHNE,#SATYRE1,#SATYRE2,#SATYRE3;#BELISE,#TYRENE,#CLEONTE,#AMARILLIS,#DAPHNE,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#PHILIDAS,#SATYRE1,#SATYRE2,#SATYRE3',
     ),
   ),
   'rotrou_amarillis_III01' => 
@@ -19319,6 +18007,7 @@
       'genreId' => 'Pastorale',
       'authorId' => 'TristanLHermite',
       'string' => 'AMARILLIS-PHILIDAS---/TYRENE--AMARILLIS---/-AMARILLIS---/TYRENE----/TYRENE--DAPHNÉ---/-DAPHNÉ-CELIDAN',
+      'string-id' => '#CLEONTE,#AMARILLIS,#PHILIDAS,#SATYRE1,#SATYRE2,#SATYRE3;#TYRENE,#CLEONTE,#AMARILLIS,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#AMARILLIS,#SATYRE1,#SATYRE2,#SATYRE3;#TYRENE,#CLEONTE,#SATYRE1,#SATYRE2,#SATYRE3;#TYRENE,#CLEONTE,#DAPHNE,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#DAPHNE,#CELIDAN,#SATYRE1,#SATYRE2,#SATYRE3',
     ),
   ),
   'rotrou_amarillis_IV01' => 
@@ -19386,6 +18075,7 @@
       'genreId' => 'Pastorale',
       'authorId' => 'TristanLHermite',
       'string' => 'PHILIDAS-DAPHNÉ-CELIDAN---/-PHILIDAS-CELIDAN---/TYRENE----/-AMARILLIS-DAPHNÉ---/-AMARILLIS---/',
+      'string-id' => '#CLEONTE,#PHILIDAS,#DAPHNE,#CELIDAN,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#PHILIDAS,#CELIDAN,#SATYRE1,#SATYRE2,#SATYRE3;#TYRENE,#CLEONTE,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#AMARILLIS,#DAPHNE,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#AMARILLIS,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#SATYRE1,#SATYRE2,#SATYRE3',
     ),
   ),
   'rotrou_amarillis_IV02' => 
@@ -19462,6 +18152,7 @@
       'genreId' => 'Pastorale',
       'authorId' => 'TristanLHermite',
       'string' => 'PHILIDAS-CELIDAN---/TYRENE----/-AMARILLIS-DAPHNÉ---/-AMARILLIS---/---/-Trois SATYRES',
+      'string-id' => '#CLEONTE,#PHILIDAS,#CELIDAN,#SATYRE1,#SATYRE2,#SATYRE3;#TYRENE,#CLEONTE,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#AMARILLIS,#DAPHNE,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#AMARILLIS,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#SATYRES,#SATYRE1,#SATYRE2,#SATYRE3',
     ),
   ),
   'rotrou_amarillis_V01' => 
@@ -19529,6 +18220,7 @@
       'genreId' => 'Pastorale',
       'authorId' => 'TristanLHermite',
       'string' => 'CELIDAN---/-CELIDAN---/-PHILIDAS---/-AMARILLIS---/-AMARILLIS-Trois SATYRES---/-AMARILLIS-PHILIDAS',
+      'string-id' => '#CLEONTE,#CELIDAN,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#CELIDAN,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#PHILIDAS,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#AMARILLIS,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#AMARILLIS,#SATYRES,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#AMARILLIS,#PHILIDAS,#SATYRE1,#SATYRE2,#SATYRE3',
     ),
   ),
   'rotrou_amarillis_V02' => 
@@ -19605,6 +18297,7 @@
       'genreId' => 'Pastorale',
       'authorId' => 'TristanLHermite',
       'string' => 'CELIDAN---/-PHILIDAS---/-AMARILLIS---/-AMARILLIS-Trois SATYRES---/-AMARILLIS-PHILIDAS---/TYRENE--AMARILLIS-PHILIDAS',
+      'string-id' => '#CLEONTE,#CELIDAN,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#PHILIDAS,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#AMARILLIS,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#AMARILLIS,#SATYRES,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#AMARILLIS,#PHILIDAS,#SATYRE1,#SATYRE2,#SATYRE3;#TYRENE,#CLEONTE,#AMARILLIS,#PHILIDAS,#SATYRE1,#SATYRE2,#SATYRE3',
     ),
   ),
   'rotrou_amarillis_V03' => 
@@ -19681,6 +18374,7 @@
       'genreId' => 'Pastorale',
       'authorId' => 'TristanLHermite',
       'string' => 'PHILIDAS---/-AMARILLIS---/-AMARILLIS-Trois SATYRES---/-AMARILLIS-PHILIDAS---/TYRENE--AMARILLIS-PHILIDAS---/-DAPHNÉ',
+      'string-id' => '#CLEONTE,#PHILIDAS,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#AMARILLIS,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#AMARILLIS,#SATYRES,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#AMARILLIS,#PHILIDAS,#SATYRE1,#SATYRE2,#SATYRE3;#TYRENE,#CLEONTE,#AMARILLIS,#PHILIDAS,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#DAPHNE,#SATYRE1,#SATYRE2,#SATYRE3',
     ),
   ),
   'rotrou_amarillis_V04' => 
@@ -19766,6 +18460,7 @@
       'genreId' => 'Pastorale',
       'authorId' => 'TristanLHermite',
       'string' => 'AMARILLIS---/-AMARILLIS-Trois SATYRES---/-AMARILLIS-PHILIDAS---/TYRENE--AMARILLIS-PHILIDAS---/-DAPHNÉ---/-DAPHNÉ-CELIDAN',
+      'string-id' => '#CLEONTE,#AMARILLIS,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#AMARILLIS,#SATYRES,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#AMARILLIS,#PHILIDAS,#SATYRE1,#SATYRE2,#SATYRE3;#TYRENE,#CLEONTE,#AMARILLIS,#PHILIDAS,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#DAPHNE,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#DAPHNE,#CELIDAN,#SATYRE1,#SATYRE2,#SATYRE3',
     ),
   ),
   'rotrou_amarillis_V05' => 
@@ -19860,6 +18555,7 @@
       'genreId' => 'Pastorale',
       'authorId' => 'TristanLHermite',
       'string' => 'AMARILLIS-Trois SATYRES---/-AMARILLIS-PHILIDAS---/TYRENE--AMARILLIS-PHILIDAS---/-DAPHNÉ---/-DAPHNÉ-CELIDAN---/LISIMÈNE-TYRENE--AMARILLIS-PHILIDAS-DAPHNÉ-CELIDAN',
+      'string-id' => '#CLEONTE,#AMARILLIS,#SATYRES,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#AMARILLIS,#PHILIDAS,#SATYRE1,#SATYRE2,#SATYRE3;#TYRENE,#CLEONTE,#AMARILLIS,#PHILIDAS,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#DAPHNE,#SATYRE1,#SATYRE2,#SATYRE3;#CLEONTE,#DAPHNE,#CELIDAN,#SATYRE1,#SATYRE2,#SATYRE3;#LISIMENE,#TYRENE,#CLEONTE,#AMARILLIS,#PHILIDAS,#DAPHNE,#CELIDAN,#SATYRE1,#SATYRE2,#SATYRE3',
     ),
   ),
   'rotrou_agesilan_II01' => 
@@ -19936,6 +18632,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'FLORISEL/FLORISEL-ROSARAN/DARINEL-DARAIDE/DARINEL-DARAIDE-DIANE/DARINEL-DARAIDE-DIANE-ARDENIE/DARINEL-DARAIDE-DIANE-ARDENIE-SYDONIE',
+      'string-id' => '#FLORISEL;#FLORISEL,#ROSARAN;#DARINEL,#DARAIDE;#DARINEL,#DARAIDE,#DIANE;#DARINEL,#DARAIDE,#DIANE,#ARDENIE;#DARINEL,#DARAIDE,#DIANE,#ARDENIE,#SYDONIE',
     ),
   ),
   'rotrou_agesilan_II02' => 
@@ -20012,6 +18709,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'FLORISEL-ROSARAN/DARINEL-DARAIDE/DARINEL-DARAIDE-DIANE/DARINEL-DARAIDE-DIANE-ARDENIE/DARINEL-DARAIDE-DIANE-ARDENIE-SYDONIE/SYDONIE-UN PAGE',
+      'string-id' => '#FLORISEL,#ROSARAN;#DARINEL,#DARAIDE;#DARINEL,#DARAIDE,#DIANE;#DARINEL,#DARAIDE,#DIANE,#ARDENIE;#DARINEL,#DARAIDE,#DIANE,#ARDENIE,#SYDONIE;#SYDONIE,#PAGE',
     ),
   ),
   'rotrou_agesilan_II03' => 
@@ -20088,6 +18786,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'DARINEL-DARAIDE/DARINEL-DARAIDE-DIANE/DARINEL-DARAIDE-DIANE-ARDENIE/DARINEL-DARAIDE-DIANE-ARDENIE-SYDONIE/SYDONIE-UN PAGE/BRUNEO-DARINEL-DARAIDE-DIANE-ARDENIE-SYDONIE',
+      'string-id' => '#DARINEL,#DARAIDE;#DARINEL,#DARAIDE,#DIANE;#DARINEL,#DARAIDE,#DIANE,#ARDENIE;#DARINEL,#DARAIDE,#DIANE,#ARDENIE,#SYDONIE;#SYDONIE,#PAGE;#BRUNEO,#DARINEL,#DARAIDE,#DIANE,#ARDENIE,#SYDONIE',
     ),
   ),
   'rotrou_agesilan_III01' => 
@@ -20164,6 +18863,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'DIANE-ARDENIE/DARINEL-DARAIDE/DARINEL-DARAIDE-DIANE-ARDENIE/ARDENIE/SYDONIE-ANAXARTE/BRUNEO-DARAIDE-DIANE-ARDENIE-SYDONIE-ANAXARTE',
+      'string-id' => '#DIANE,#ARDENIE;#DARINEL,#DARAIDE;#DARINEL,#DARAIDE,#DIANE,#ARDENIE;#ARDENIE;#SYDONIE,#ANAXARTE;#BRUNEO,#DARAIDE,#DIANE,#ARDENIE,#SYDONIE,#ANAXARTE',
     ),
   ),
   'rotrou_agesilan_IV01' => 
@@ -20240,6 +18940,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'DIANE-ARDENIE/DARAIDE-DIANE-ARDENIE/DARAIDE-ARDENIE-SYDONIE/DARAIDE-DIANE-ARDENIE-SYDONIE/FLORISEL/FLORISEL-DARINEL-DARAIDE',
+      'string-id' => '#DIANE,#ARDENIE;#DARAIDE,#DIANE,#ARDENIE;#DARAIDE,#ARDENIE,#SYDONIE;#DARAIDE,#DIANE,#ARDENIE,#SYDONIE;#FLORISEL;#FLORISEL,#DARINEL,#DARAIDE',
     ),
   ),
   'rotrou_agesilan_V01' => 
@@ -20316,6 +19017,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'SYDONIE/DARAIDE-SYDONIE/DARINEL-ARDENIE/FLORISEL-DARAIDE-SYDONIE/DARAIDE-DIANE-ARDENIE/FLORISEL-DARINEL-DARAIDE-DIANE-ARDENIE-SYDONIE',
+      'string-id' => '#SYDONIE;#DARAIDE,#SYDONIE;#DARINEL,#ARDENIE;#FLORISEL,#DARAIDE,#SYDONIE;#DARAIDE,#DIANE,#ARDENIE;#FLORISEL,#DARINEL,#DARAIDE,#DIANE,#ARDENIE,#SYDONIE',
     ),
   ),
   'rotrou_agesilan_V02' => 
@@ -20401,6 +19103,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'DARAIDE-SYDONIE/DARINEL-ARDENIE/FLORISEL-DARAIDE-SYDONIE/DARAIDE-DIANE-ARDENIE/FLORISEL-DARINEL-DARAIDE-DIANE-ARDENIE-SYDONIE/FLORISEL-BRUNEO-Trois CAVALIERS',
+      'string-id' => '#DARAIDE,#SYDONIE;#DARINEL,#ARDENIE;#FLORISEL,#DARAIDE,#SYDONIE;#DARAIDE,#DIANE,#ARDENIE;#FLORISEL,#DARINEL,#DARAIDE,#DIANE,#ARDENIE,#SYDONIE;#FLORISEL,#BRUNEO,#CAVALIERS',
     ),
   ),
   'rotrou_agesilan_V03' => 
@@ -20495,13 +19198,14 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rotrou',
       'string' => 'DARINEL-ARDENIE/FLORISEL-DARAIDE-SYDONIE/DARAIDE-DIANE-ARDENIE/FLORISEL-DARINEL-DARAIDE-DIANE-ARDENIE-SYDONIE/FLORISEL-BRUNEO-Trois CAVALIERS/FLORISEL-ROSARAN-DARAIDE-DIANE-ARDENIE-SYDONIE',
+      'string-id' => '#DARINEL,#ARDENIE;#FLORISEL,#DARAIDE,#SYDONIE;#DARAIDE,#DIANE,#ARDENIE;#FLORISEL,#DARINEL,#DARAIDE,#DIANE,#ARDENIE,#SYDONIE;#FLORISEL,#BRUNEO,#CAVALIERS;#FLORISEL,#ROSARAN,#DARAIDE,#DIANE,#ARDENIE,#SYDONIE',
     ),
   ),
   'rosimond_festindepierre_I01' => 
   array (
     'pattern' => 
     array (
-      '#DONJUAN' => 
+      '#donjuan' => 
       array (
         0 => 0,
         1 => 1,
@@ -20510,7 +19214,16 @@
         4 => 1,
         5 => 1,
       ),
-      '#DONFELIX' => 
+      '#carrille' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#donfelix' => 
       array (
         0 => 0,
         1 => 0,
@@ -20519,7 +19232,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#LEONOR' => 
+      '#leonor' => 
       array (
         0 => 1,
         1 => 0,
@@ -20527,15 +19240,6 @@
         3 => 0,
         4 => 0,
         5 => 0,
-      ),
-      '#DONGASPARD' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 1,
-        4 => 1,
-        5 => 1,
       ),
     ),
     'id' => 
@@ -20552,14 +19256,15 @@
       'titleId' => 'LeNouveauFestindePierre',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rosimond',
-      'string' => 'LÉONORE-/DON JUAN-/DON JUAN-LÉONORE-/DON JUAN-/DON JUAN-DON LOPE-DON FELIX-/DON JUAN-DON LOPE-DON FELIX',
+      'string' => 'CARRILLE-LÉONORE/DON JUAN-CARRILLE/DON JUAN-CARRILLE-LÉONORE/DON JUAN-CARRILLE/DON JUAN-CARRILLE-DON LOPE-DON FELIX/DON JUAN-CARRILLE-DON LOPE-DON FELIX',
+      'string-id' => '#carrille,#leonor;#donjuan,#carrille;#donjuan,#carrille,#leonor;#donjuan,#carrille;#donjuan,#carrille,#donlope,#donfelix;#donjuan,#carrille,#donlope,#donfelix',
     ),
   ),
   'rosimond_festindepierre_II01' => 
   array (
     'pattern' => 
     array (
-      '#DONJUAN' => 
+      '#donjuan' => 
       array (
         0 => 0,
         1 => 0,
@@ -20568,7 +19273,16 @@
         4 => 0,
         5 => 1,
       ),
-      '#DONFELIX' => 
+      '#carrille' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#donfelix' => 
       array (
         0 => 0,
         1 => 0,
@@ -20577,7 +19291,7 @@
         4 => 0,
         5 => 1,
       ),
-      '#ORMIN' => 
+      '#ormin' => 
       array (
         0 => 0,
         1 => 1,
@@ -20586,7 +19300,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#PAQUETTE' => 
+      '#paquette' => 
       array (
         0 => 1,
         1 => 1,
@@ -20595,7 +19309,7 @@
         4 => 1,
         5 => 0,
       ),
-      '#THOMAS' => 
+      '#thomas' => 
       array (
         0 => 0,
         1 => 1,
@@ -20603,15 +19317,6 @@
         3 => 1,
         4 => 1,
         5 => 0,
-      ),
-      '#DONGASPARD' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 1,
-        4 => 1,
-        5 => 1,
       ),
     ),
     'id' => 
@@ -20628,14 +19333,15 @@
       'titleId' => 'LeNouveauFestindePierre',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rosimond',
-      'string' => 'PAQUETTE-/ORMIN-PAQUETTE-THOMASSE-THOMAS-/DON JUAN-THOMASSE-THOMAS-/DON JUAN-PAQUETTE-THOMASSE-THOMAS-/PAQUETTE-THOMASSE-THOMAS-/DON JUAN-DON FELIX',
+      'string' => 'CARRILLE-PAQUETTE/ORMIN-PAQUETTE-THOMASSE-THOMAS/DON JUAN-CARRILLE-THOMASSE-THOMAS/DON JUAN-CARRILLE-PAQUETTE-THOMASSE-THOMAS/CARRILLE-PAQUETTE-THOMASSE-THOMAS/DON JUAN-CARRILLE-DON FELIX',
+      'string-id' => '#carrille,#paquette;#ormin,#paquette,#thomasse,#thomas;#donjuan,#carrille,#thomasse,#thomas;#donjuan,#carrille,#paquette,#thomasse,#thomas;#carrille,#paquette,#thomasse,#thomas;#donjuan,#carrille,#donfelix',
     ),
   ),
   'rosimond_festindepierre_II02' => 
   array (
     'pattern' => 
     array (
-      '#DONJUAN' => 
+      '#donjuan' => 
       array (
         0 => 0,
         1 => 1,
@@ -20644,58 +19350,58 @@
         4 => 1,
         5 => 0,
       ),
-      '#DONFELIX' => 
+      '#carrille' => 
       array (
         0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 1,
-        5 => 0,
-      ),
-      '#ORMIN' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#PAQUETTE' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 1,
-        3 => 1,
-        4 => 0,
-        5 => 0,
-      ),
-      '#THOMAS' => 
-      array (
-        0 => 1,
         1 => 1,
         2 => 1,
         3 => 1,
-        4 => 0,
-        5 => 0,
-      ),
-      '#VOIX' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
+        4 => 1,
         5 => 1,
       ),
-      '#DONGASPARD' => 
+      '#donfelix' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 1,
+        5 => 0,
+      ),
+      '#ormin' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
+      '#paquette' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 1,
+        3 => 1,
+        4 => 0,
+        5 => 0,
+      ),
+      '#thomas' => 
       array (
         0 => 1,
         1 => 1,
         2 => 1,
         3 => 1,
-        4 => 1,
+        4 => 0,
+        5 => 0,
+      ),
+      '#voix' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
         5 => 1,
       ),
     ),
@@ -20713,14 +19419,15 @@
       'titleId' => 'LeNouveauFestindePierre',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rosimond',
-      'string' => 'ORMIN-PAQUETTE-THOMASSE-THOMAS-/DON JUAN-THOMASSE-THOMAS-/DON JUAN-PAQUETTE-THOMASSE-THOMAS-/PAQUETTE-THOMASSE-THOMAS-/DON JUAN-DON FELIX-/DEUX VOIX',
+      'string' => 'ORMIN-PAQUETTE-THOMASSE-THOMAS/DON JUAN-CARRILLE-THOMASSE-THOMAS/DON JUAN-CARRILLE-PAQUETTE-THOMASSE-THOMAS/CARRILLE-PAQUETTE-THOMASSE-THOMAS/DON JUAN-CARRILLE-DON FELIX/CARRILLE-DEUX VOIX',
+      'string-id' => '#ormin,#paquette,#thomasse,#thomas;#donjuan,#carrille,#thomasse,#thomas;#donjuan,#carrille,#paquette,#thomasse,#thomas;#carrille,#paquette,#thomasse,#thomas;#donjuan,#carrille,#donfelix;#carrille,#voix',
     ),
   ),
   'rosimond_festindepierre_II03' => 
   array (
     'pattern' => 
     array (
-      '#DONJUAN' => 
+      '#donjuan' => 
       array (
         0 => 1,
         1 => 1,
@@ -20729,7 +19436,16 @@
         4 => 0,
         5 => 1,
       ),
-      '#DONFELIX' => 
+      '#carrille' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#donfelix' => 
       array (
         0 => 0,
         1 => 0,
@@ -20738,7 +19454,7 @@
         4 => 0,
         5 => 1,
       ),
-      '#PAQUETTE' => 
+      '#paquette' => 
       array (
         0 => 0,
         1 => 1,
@@ -20747,7 +19463,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#THOMAS' => 
+      '#thomas' => 
       array (
         0 => 1,
         1 => 1,
@@ -20756,7 +19472,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#VOIX' => 
+      '#voix' => 
       array (
         0 => 0,
         1 => 0,
@@ -20764,15 +19480,6 @@
         3 => 0,
         4 => 1,
         5 => 0,
-      ),
-      '#DONGASPARD' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 1,
-        4 => 1,
-        5 => 1,
       ),
     ),
     'id' => 
@@ -20789,14 +19496,15 @@
       'titleId' => 'LeNouveauFestindePierre',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rosimond',
-      'string' => 'DON JUAN-THOMASSE-THOMAS-/DON JUAN-PAQUETTE-THOMASSE-THOMAS-/PAQUETTE-THOMASSE-THOMAS-/DON JUAN-DON FELIX-/DEUX VOIX-/DON JUAN-DON FELIX',
+      'string' => 'DON JUAN-CARRILLE-THOMASSE-THOMAS/DON JUAN-CARRILLE-PAQUETTE-THOMASSE-THOMAS/CARRILLE-PAQUETTE-THOMASSE-THOMAS/DON JUAN-CARRILLE-DON FELIX/CARRILLE-DEUX VOIX/DON JUAN-CARRILLE-DON FELIX',
+      'string-id' => '#donjuan,#carrille,#thomasse,#thomas;#donjuan,#carrille,#paquette,#thomasse,#thomas;#carrille,#paquette,#thomasse,#thomas;#donjuan,#carrille,#donfelix;#carrille,#voix;#donjuan,#carrille,#donfelix',
     ),
   ),
   'rosimond_festindepierre_II04' => 
   array (
     'pattern' => 
     array (
-      '#DONJUAN' => 
+      '#donjuan' => 
       array (
         0 => 1,
         1 => 0,
@@ -20805,34 +19513,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#DONFELIX' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 1,
-        3 => 0,
-        4 => 1,
-        5 => 0,
-      ),
-      '#THOMAS' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#VOIX' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 1,
-        4 => 0,
-        5 => 0,
-      ),
-      '#DONGASPARD' => 
+      '#carrille' => 
       array (
         0 => 1,
         1 => 1,
@@ -20840,6 +19521,33 @@
         3 => 1,
         4 => 1,
         5 => 1,
+      ),
+      '#donfelix' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 0,
+        4 => 1,
+        5 => 0,
+      ),
+      '#thomas' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
+      '#voix' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 1,
+        4 => 0,
+        5 => 0,
       ),
     ),
     'id' => 
@@ -20856,14 +19564,24 @@
       'titleId' => 'LeNouveauFestindePierre',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rosimond',
-      'string' => 'DON JUAN-PAQUETTE-THOMASSE-THOMAS-/PAQUETTE-THOMASSE-THOMAS-/DON JUAN-DON FELIX-/DEUX VOIX-/DON JUAN-DON FELIX-/DON JUAN',
+      'string' => 'DON JUAN-CARRILLE-PAQUETTE-THOMASSE-THOMAS/CARRILLE-PAQUETTE-THOMASSE-THOMAS/DON JUAN-CARRILLE-DON FELIX/CARRILLE-DEUX VOIX/DON JUAN-CARRILLE-DON FELIX/DON JUAN-CARRILLE',
+      'string-id' => '#donjuan,#carrille,#paquette,#thomasse,#thomas;#carrille,#paquette,#thomasse,#thomas;#donjuan,#carrille,#donfelix;#carrille,#voix;#donjuan,#carrille,#donfelix;#donjuan,#carrille',
     ),
   ),
   'rosimond_festindepierre_III01' => 
   array (
     'pattern' => 
     array (
-      '#DONFELIX' => 
+      '#carrille' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#donfelix' => 
       array (
         0 => 0,
         1 => 0,
@@ -20872,7 +19590,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#LEPREVOT' => 
+      '#leprevot' => 
       array (
         0 => 0,
         1 => 0,
@@ -20881,7 +19599,7 @@
         4 => 0,
         5 => 1,
       ),
-      '#THOMAS' => 
+      '#thomas' => 
       array (
         0 => 0,
         1 => 1,
@@ -20890,14 +19608,14 @@
         4 => 0,
         5 => 0,
       ),
-      '#DONGASPARD' => 
+      '#dongaspard' => 
       array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
+        0 => 0,
+        1 => 0,
+        2 => 0,
         3 => 1,
-        4 => 1,
-        5 => 1,
+        4 => 0,
+        5 => 0,
       ),
     ),
     'id' => 
@@ -20914,14 +19632,24 @@
       'titleId' => 'LeNouveauFestindePierre',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rosimond',
-      'string' => 'DON JUAN-/DON JUAN-PAQUETTE-THOMASSE-THOMAS-/DON JUAN-/DON JUAN-DON LOPE-DON FELIX-/DON JUAN-DON LOPE-DON FELIX-/DON JUAN-DON LOPE-DON FELIX-LE PRÉVOT',
+      'string' => 'DON JUAN-CARRILLE/DON JUAN-CARRILLE-PAQUETTE-THOMASSE-THOMAS/DON JUAN-CARRILLE/DON JUAN-CARRILLE-DON LOPE-DON FELIX-/DON JUAN-CARRILLE-DON LOPE-DON FELIX/DON JUAN-CARRILLE-DON LOPE-DON FELIX-LE PRÉVOT',
+      'string-id' => '#donjuan,#carrille;#donjuan,#carrille,#paquette,#thomasse,#thomas;#donjuan,#carrille;#donjuan,#carrille,#donlope,#donfelix,#dongaspard;#donjuan,#carrille,#donlope,#donfelix;#donjuan,#carrille,#donlope,#donfelix,#leprevot',
     ),
   ),
   'rosimond_festindepierre_III02' => 
   array (
     'pattern' => 
     array (
-      '#DONFELIX' => 
+      '#carrille' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#donfelix' => 
       array (
         0 => 0,
         1 => 0,
@@ -20930,7 +19658,7 @@
         4 => 1,
         5 => 0,
       ),
-      '#LEPREVOT' => 
+      '#leprevot' => 
       array (
         0 => 0,
         1 => 0,
@@ -20939,7 +19667,7 @@
         4 => 1,
         5 => 0,
       ),
-      '#THOMAS' => 
+      '#thomas' => 
       array (
         0 => 1,
         1 => 0,
@@ -20948,14 +19676,14 @@
         4 => 0,
         5 => 0,
       ),
-      '#DONGASPARD' => 
+      '#dongaspard' => 
       array (
-        0 => 1,
-        1 => 1,
+        0 => 0,
+        1 => 0,
         2 => 1,
-        3 => 1,
-        4 => 1,
-        5 => 1,
+        3 => 0,
+        4 => 0,
+        5 => 0,
       ),
     ),
     'id' => 
@@ -20972,14 +19700,15 @@
       'titleId' => 'LeNouveauFestindePierre',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rosimond',
-      'string' => 'DON JUAN-PAQUETTE-THOMASSE-THOMAS-/DON JUAN-/DON JUAN-DON LOPE-DON FELIX-/DON JUAN-DON LOPE-DON FELIX-/DON JUAN-DON LOPE-DON FELIX-LE PRÉVOT-/DON JUAN',
+      'string' => 'DON JUAN-CARRILLE-PAQUETTE-THOMASSE-THOMAS/DON JUAN-CARRILLE/DON JUAN-CARRILLE-DON LOPE-DON FELIX-/DON JUAN-CARRILLE-DON LOPE-DON FELIX/DON JUAN-CARRILLE-DON LOPE-DON FELIX-LE PRÉVOT/DON JUAN-CARRILLE',
+      'string-id' => '#donjuan,#carrille,#paquette,#thomasse,#thomas;#donjuan,#carrille;#donjuan,#carrille,#donlope,#donfelix,#dongaspard;#donjuan,#carrille,#donlope,#donfelix;#donjuan,#carrille,#donlope,#donfelix,#leprevot;#donjuan,#carrille',
     ),
   ),
   'rosimond_festindepierre_V01' => 
   array (
     'pattern' => 
     array (
-      '#DONJUAN' => 
+      '#donjuan' => 
       array (
         0 => 1,
         1 => 0,
@@ -20988,7 +19717,16 @@
         4 => 1,
         5 => 1,
       ),
-      '#ROLLIN' => 
+      '#carrille' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#rollin' => 
       array (
         0 => 1,
         1 => 1,
@@ -20997,7 +19735,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#AMARILLE' => 
+      '#amarille' => 
       array (
         0 => 1,
         1 => 0,
@@ -21006,22 +19744,13 @@
         4 => 0,
         5 => 0,
       ),
-      '#VOIX' => 
+      '#voix' => 
       array (
         0 => 0,
         1 => 0,
         2 => 0,
         3 => 0,
         4 => 0,
-        5 => 1,
-      ),
-      '#DONGASPARD' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 1,
-        4 => 1,
         5 => 1,
       ),
     ),
@@ -21039,14 +19768,15 @@
       'titleId' => 'LeNouveauFestindePierre',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rosimond',
-      'string' => 'DON JUAN-THOMAS-ROLLIN-AMARILLE-/THOMAS-ROLLIN-/DON JUAN-THOMAS-ROLLIN-/DON JUAN-AMARILLE-/DON JUAN-/DON JUAN-DEUX VOIX',
+      'string' => 'DON JUAN-THOMAS-ROLLIN-AMARILLE/CARRILLE-THOMAS-ROLLIN/DON JUAN-CARRILLE-THOMAS-ROLLIN/DON JUAN-CARRILLE-AMARILLE/DON JUAN-CARRILLE/DON JUAN-CARRILLE-DEUX VOIX',
+      'string-id' => '#donjuan,#thomas,#rollin,#amarille;#carrille,#thomas,#rollin;#donjuan,#carrille,#thomas,#rollin;#donjuan,#carrille,#amarille;#donjuan,#carrille;#donjuan,#carrille,#voix',
     ),
   ),
   'rosimond_festindepierre_V02' => 
   array (
     'pattern' => 
     array (
-      '#DONJUAN' => 
+      '#donjuan' => 
       array (
         0 => 0,
         1 => 1,
@@ -21055,43 +19785,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#LOMBRE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 1,
-      ),
-      '#ROLLIN' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#AMARILLE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 1,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#VOIX' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 1,
-        5 => 0,
-      ),
-      '#DONGASPARD' => 
+      '#carrille' => 
       array (
         0 => 1,
         1 => 1,
@@ -21099,6 +19793,42 @@
         3 => 1,
         4 => 1,
         5 => 1,
+      ),
+      '#lombre' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 1,
+      ),
+      '#rollin' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
+      '#amarille' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
+      '#voix' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 1,
+        5 => 0,
       ),
     ),
     'id' => 
@@ -21115,7 +19845,8 @@
       'titleId' => 'LeNouveauFestindePierre',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Rosimond',
-      'string' => 'THOMAS-ROLLIN-/DON JUAN-THOMAS-ROLLIN-/DON JUAN-AMARILLE-/DON JUAN-/DON JUAN-DEUX VOIX-/DON JUAN-L\'OMBRE DE DON PIERRE',
+      'string' => 'CARRILLE-THOMAS-ROLLIN/DON JUAN-CARRILLE-THOMAS-ROLLIN/DON JUAN-CARRILLE-AMARILLE/DON JUAN-CARRILLE/DON JUAN-CARRILLE-DEUX VOIX/DON JUAN-CARRILLE-L\'OMBRE DE DON PIERRE',
+      'string-id' => '#carrille,#thomas,#rollin;#donjuan,#carrille,#thomas,#rollin;#donjuan,#carrille,#amarille;#donjuan,#carrille;#donjuan,#carrille,#voix;#donjuan,#carrille,#lombre',
     ),
   ),
   'rosimond_avocatsavetier_I01' => 
@@ -21174,6 +19905,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Rosimond',
       'string' => 'ROSANDRE-PANCRACE/ROSANDRE-BAGOLIN/ROSANDRE-PANCRACE/ROSANDRE-PANCRACE-LISIMÈNE-BAGOLIN/ROSANDRE-LISIMÈNE/LISIMÈNE-BAGOLIN',
+      'string-id' => '#ROSANDRE,#PANCRACE;#ROSANDRE,#BAGOLIN;#ROSANDRE,#PANCRACE;#ROSANDRE,#PANCRACE,#LISIMENE,#BAGOLIN;#ROSANDRE,#LISIMENE;#LISIMENE,#BAGOLIN',
     ),
   ),
   'rosimond_avocatsavetier_I02' => 
@@ -21241,6 +19973,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Rosimond',
       'string' => 'ROSANDRE-BAGOLIN/ROSANDRE-PANCRACE/ROSANDRE-PANCRACE-LISIMÈNE-BAGOLIN/ROSANDRE-LISIMÈNE/LISIMÈNE-BAGOLIN/ROSANDRE-PANCRACE-LISIMÈNE-BAGOLIN-LE COUSIN-LE DOCTEUR',
+      'string-id' => '#ROSANDRE,#BAGOLIN;#ROSANDRE,#PANCRACE;#ROSANDRE,#PANCRACE,#LISIMENE,#BAGOLIN;#ROSANDRE,#LISIMENE;#LISIMENE,#BAGOLIN;#ROSANDRE,#PANCRACE,#LISIMENE,#BAGOLIN,#LECOUSIN,#LEDOCTEUR',
     ),
   ),
   'rosimond_avocatsavetier_I03' => 
@@ -21326,6 +20059,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Rosimond',
       'string' => 'ROSANDRE-PANCRACE/ROSANDRE-PANCRACE-LISIMÈNE-BAGOLIN/ROSANDRE-LISIMÈNE/LISIMÈNE-BAGOLIN/ROSANDRE-PANCRACE-LISIMÈNE-BAGOLIN-LE COUSIN-LE DOCTEUR/PANCRACE-LE DOCTEUR-UN SERGENT',
+      'string-id' => '#ROSANDRE,#PANCRACE;#ROSANDRE,#PANCRACE,#LISIMENE,#BAGOLIN;#ROSANDRE,#LISIMENE;#LISIMENE,#BAGOLIN;#ROSANDRE,#PANCRACE,#LISIMENE,#BAGOLIN,#LECOUSIN,#LEDOCTEUR;#PANCRACE,#LEDOCTEUR,#SERGENT',
     ),
   ),
   'rosimond_avocatsavetier_I04' => 
@@ -21411,6 +20145,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Rosimond',
       'string' => 'ROSANDRE-PANCRACE-LISIMÈNE-BAGOLIN/ROSANDRE-LISIMÈNE/LISIMÈNE-BAGOLIN/ROSANDRE-PANCRACE-LISIMÈNE-BAGOLIN-LE COUSIN-LE DOCTEUR/PANCRACE-LE DOCTEUR-UN SERGENT/BAGOLIN',
+      'string-id' => '#ROSANDRE,#PANCRACE,#LISIMENE,#BAGOLIN;#ROSANDRE,#LISIMENE;#LISIMENE,#BAGOLIN;#ROSANDRE,#PANCRACE,#LISIMENE,#BAGOLIN,#LECOUSIN,#LEDOCTEUR;#PANCRACE,#LEDOCTEUR,#SERGENT;#BAGOLIN',
     ),
   ),
   'rosimond_avocatsavetier_I05' => 
@@ -21487,6 +20222,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Rosimond',
       'string' => 'ROSANDRE-LISIMÈNE/LISIMÈNE-BAGOLIN/ROSANDRE-PANCRACE-LISIMÈNE-BAGOLIN-LE COUSIN-LE DOCTEUR/PANCRACE-LE DOCTEUR-UN SERGENT/BAGOLIN/BAGOLIN-LE COUSIN-UN SERGENT',
+      'string-id' => '#ROSANDRE,#LISIMENE;#LISIMENE,#BAGOLIN;#ROSANDRE,#PANCRACE,#LISIMENE,#BAGOLIN,#LECOUSIN,#LEDOCTEUR;#PANCRACE,#LEDOCTEUR,#SERGENT;#BAGOLIN;#BAGOLIN,#LECOUSIN,#SERGENT',
     ),
   ),
   'rosimond_avocatsavetier_I06' => 
@@ -21572,6 +20308,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Rosimond',
       'string' => 'LISIMÈNE-BAGOLIN/ROSANDRE-PANCRACE-LISIMÈNE-BAGOLIN-LE COUSIN-LE DOCTEUR/PANCRACE-LE DOCTEUR-UN SERGENT/BAGOLIN/BAGOLIN-LE COUSIN-UN SERGENT/PANCRACE-BAGOLIN-LE DOCTEUR-UN SERGENT-PLUSIEURS RECORS',
+      'string-id' => '#LISIMENE,#BAGOLIN;#ROSANDRE,#PANCRACE,#LISIMENE,#BAGOLIN,#LECOUSIN,#LEDOCTEUR;#PANCRACE,#LEDOCTEUR,#SERGENT;#BAGOLIN;#BAGOLIN,#LECOUSIN,#SERGENT;#PANCRACE,#BAGOLIN,#LEDOCTEUR,#SERGENT,#RECORS',
     ),
   ),
   'rosimond_avocatsavetier_I07' => 
@@ -21648,6 +20385,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Rosimond',
       'string' => 'ROSANDRE-PANCRACE-LISIMÈNE-BAGOLIN-LE COUSIN-LE DOCTEUR/PANCRACE-LE DOCTEUR-UN SERGENT/BAGOLIN/BAGOLIN-LE COUSIN-UN SERGENT/PANCRACE-BAGOLIN-LE DOCTEUR-UN SERGENT-PLUSIEURS RECORS/ROSANDRE-LISIMÈNE',
+      'string-id' => '#ROSANDRE,#PANCRACE,#LISIMENE,#BAGOLIN,#LECOUSIN,#LEDOCTEUR;#PANCRACE,#LEDOCTEUR,#SERGENT;#BAGOLIN;#BAGOLIN,#LECOUSIN,#SERGENT;#PANCRACE,#BAGOLIN,#LEDOCTEUR,#SERGENT,#RECORS;#ROSANDRE,#LISIMENE',
     ),
   ),
   'rosimond_avocatsavetier_I08' => 
@@ -21724,6 +20462,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Rosimond',
       'string' => 'PANCRACE-LE DOCTEUR-UN SERGENT/BAGOLIN/BAGOLIN-LE COUSIN-UN SERGENT/PANCRACE-BAGOLIN-LE DOCTEUR-UN SERGENT-PLUSIEURS RECORS/ROSANDRE-LISIMÈNE/ROSANDRE-PANCRACE-LISIMÈNE-BAGOLIN-LE COUSIN-LE DOCTEUR-UN SERGENT-PLUSIEURS RECORS',
+      'string-id' => '#PANCRACE,#LEDOCTEUR,#SERGENT;#BAGOLIN;#BAGOLIN,#LECOUSIN,#SERGENT;#PANCRACE,#BAGOLIN,#LEDOCTEUR,#SERGENT,#RECORS;#ROSANDRE,#LISIMENE;#ROSANDRE,#PANCRACE,#LISIMENE,#BAGOLIN,#LECOUSIN,#LEDOCTEUR,#SERGENT,#RECORS',
     ),
   ),
   'racine_thebaide64_I01' => 
@@ -21782,6 +20521,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'JOCASTE/JOCASTE-ANTIGONE/ÉTÉOCLE-JOCASTE-ANTIGONE/ÉTÉOCLE-JOCASTE-ANTIGONE-CRÉON/JOCASTE-ANTIGONE-CRÉON/JOCASTE-ANTIGONE',
+      'string-id' => '#JOCASTE;#JOCASTE,#ANTIGONE;#ETEOCLE,#JOCASTE,#ANTIGONE;#ETEOCLE,#JOCASTE,#ANTIGONE,#CREON;#JOCASTE,#ANTIGONE,#CREON;#JOCASTE,#ANTIGONE',
     ),
   ),
   'racine_thebaide64_III01' => 
@@ -21840,6 +20580,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'JOCASTE/JOCASTE/JOCASTE-ANTIGONE/ÉTÉOCLE-JOCASTE-ANTIGONE-CRÉON/ÉTÉOCLE-JOCASTE-ANTIGONE-CRÉON/CRÉON',
+      'string-id' => '#JOCASTE;#JOCASTE;#JOCASTE,#ANTIGONE;#ETEOCLE,#JOCASTE,#ANTIGONE,#CREON;#ETEOCLE,#JOCASTE,#ANTIGONE,#CREON;#CREON',
     ),
   ),
   'racine_thebaide64_V01' => 
@@ -21880,6 +20621,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'ANTIGONE/ANTIGONE/ANTIGONE-CRÉON/CRÉON/CRÉON/CRÉON',
+      'string-id' => '#ANTIGONE;#ANTIGONE;#ANTIGONE,#CREON;#CREON;#CREON;#CREON',
     ),
   ),
   'racine_plaideurs69_I01' => 
@@ -21947,6 +20689,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Racine',
       'string' => 'PETIT-JEAN/PETIT-JEAN-L\'INTIMÉ/DANDIN-PETIT-JEAN-L\'INTIMÉ/DANDIN-LÉANDRE-PETIT-JEAN-L\'INTIMÉ/LÉANDRE-L\'INTIMÉ/CHICANNEAU-PETIT-JEAN',
+      'string-id' => '#PETIT-JEAN;#PETIT-JEAN,#LINTIME;#DANDIN,#PETIT-JEAN,#LINTIME;#DANDIN,#LEANDRE,#PETIT-JEAN,#LINTIME;#LEANDRE,#LINTIME;#CHICANNEAU,#PETIT-JEAN',
     ),
   ),
   'racine_plaideurs69_I02' => 
@@ -22023,6 +20766,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Racine',
       'string' => 'PETIT-JEAN-L\'INTIMÉ/DANDIN-PETIT-JEAN-L\'INTIMÉ/DANDIN-LÉANDRE-PETIT-JEAN-L\'INTIMÉ/LÉANDRE-L\'INTIMÉ/CHICANNEAU-PETIT-JEAN/CHICANNEAU-LA COMTESSE',
+      'string-id' => '#PETIT-JEAN,#LINTIME;#DANDIN,#PETIT-JEAN,#LINTIME;#DANDIN,#LEANDRE,#PETIT-JEAN,#LINTIME;#LEANDRE,#LINTIME;#CHICANNEAU,#PETIT-JEAN;#CHICANNEAU,#LACOMTESSE',
     ),
   ),
   'racine_plaideurs69_I03' => 
@@ -22099,6 +20843,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Racine',
       'string' => 'DANDIN-PETIT-JEAN-L\'INTIMÉ/DANDIN-LÉANDRE-PETIT-JEAN-L\'INTIMÉ/LÉANDRE-L\'INTIMÉ/CHICANNEAU-PETIT-JEAN/CHICANNEAU-LA COMTESSE/CHICANNEAU-LA COMTESSE-PETIT-JEAN',
+      'string-id' => '#DANDIN,#PETIT-JEAN,#LINTIME;#DANDIN,#LEANDRE,#PETIT-JEAN,#LINTIME;#LEANDRE,#LINTIME;#CHICANNEAU,#PETIT-JEAN;#CHICANNEAU,#LACOMTESSE;#CHICANNEAU,#LACOMTESSE,#PETIT-JEAN',
     ),
   ),
   'racine_plaideurs69_II01' => 
@@ -22157,6 +20902,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Racine',
       'string' => 'LÉANDRE-L\'INTIMÉ/ISABELLE-L\'INTIMÉ/CHICANNEAU-ISABELLE-L\'INTIMÉ/CHICANNEAU-L\'INTIMÉ/LÉANDRE-CHICANNEAU-L\'INTIMÉ/LÉANDRE-CHICANNEAU-ISABELLE-L\'INTIMÉ',
+      'string-id' => '#LEANDRE,#LINTIME;#ISABELLE,#LINTIME;#CHICANNEAU,#ISABELLE,#LINTIME;#CHICANNEAU,#LINTIME;#LEANDRE,#CHICANNEAU,#LINTIME;#LEANDRE,#CHICANNEAU,#ISABELLE,#LINTIME',
     ),
   ),
   'racine_plaideurs69_II02' => 
@@ -22224,6 +20970,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Racine',
       'string' => 'ISABELLE-L\'INTIMÉ/CHICANNEAU-ISABELLE-L\'INTIMÉ/CHICANNEAU-L\'INTIMÉ/LÉANDRE-CHICANNEAU-L\'INTIMÉ/LÉANDRE-CHICANNEAU-ISABELLE-L\'INTIMÉ/LÉANDRE-CHICANNEAU-PETIT-JEAN',
+      'string-id' => '#ISABELLE,#LINTIME;#CHICANNEAU,#ISABELLE,#LINTIME;#CHICANNEAU,#LINTIME;#LEANDRE,#CHICANNEAU,#LINTIME;#LEANDRE,#CHICANNEAU,#ISABELLE,#LINTIME;#LEANDRE,#CHICANNEAU,#PETIT-JEAN',
     ),
   ),
   'racine_plaideurs69_II03' => 
@@ -22300,6 +21047,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Racine',
       'string' => 'CHICANNEAU-ISABELLE-L\'INTIMÉ/CHICANNEAU-L\'INTIMÉ/LÉANDRE-CHICANNEAU-L\'INTIMÉ/LÉANDRE-CHICANNEAU-ISABELLE-L\'INTIMÉ/LÉANDRE-CHICANNEAU-PETIT-JEAN/DANDIN-LÉANDRE-CHICANNEAU-PETIT-JEAN-L\'INTIMÉ',
+      'string-id' => '#CHICANNEAU,#ISABELLE,#LINTIME;#CHICANNEAU,#LINTIME;#LEANDRE,#CHICANNEAU,#LINTIME;#LEANDRE,#CHICANNEAU,#ISABELLE,#LINTIME;#LEANDRE,#CHICANNEAU,#PETIT-JEAN;#DANDIN,#LEANDRE,#CHICANNEAU,#PETIT-JEAN,#LINTIME',
     ),
   ),
   'racine_plaideurs69_II04' => 
@@ -22385,6 +21133,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Racine',
       'string' => 'CHICANNEAU-L\'INTIMÉ/LÉANDRE-CHICANNEAU-L\'INTIMÉ/LÉANDRE-CHICANNEAU-ISABELLE-L\'INTIMÉ/LÉANDRE-CHICANNEAU-PETIT-JEAN/DANDIN-LÉANDRE-CHICANNEAU-PETIT-JEAN-L\'INTIMÉ/DANDIN-CHICANNEAU-LA COMTESSE-L\'INTIMÉ',
+      'string-id' => '#CHICANNEAU,#LINTIME;#LEANDRE,#CHICANNEAU,#LINTIME;#LEANDRE,#CHICANNEAU,#ISABELLE,#LINTIME;#LEANDRE,#CHICANNEAU,#PETIT-JEAN;#DANDIN,#LEANDRE,#CHICANNEAU,#PETIT-JEAN,#LINTIME;#DANDIN,#CHICANNEAU,#LACOMTESSE,#LINTIME',
     ),
   ),
   'racine_plaideurs69_II05' => 
@@ -22470,6 +21219,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Racine',
       'string' => 'LÉANDRE-CHICANNEAU-L\'INTIMÉ/LÉANDRE-CHICANNEAU-ISABELLE-L\'INTIMÉ/LÉANDRE-CHICANNEAU-PETIT-JEAN/DANDIN-LÉANDRE-CHICANNEAU-PETIT-JEAN-L\'INTIMÉ/DANDIN-CHICANNEAU-LA COMTESSE-L\'INTIMÉ/LÉANDRE-CHICANNEAU-LA COMTESSE',
+      'string-id' => '#LEANDRE,#CHICANNEAU,#LINTIME;#LEANDRE,#CHICANNEAU,#ISABELLE,#LINTIME;#LEANDRE,#CHICANNEAU,#PETIT-JEAN;#DANDIN,#LEANDRE,#CHICANNEAU,#PETIT-JEAN,#LINTIME;#DANDIN,#CHICANNEAU,#LACOMTESSE,#LINTIME;#LEANDRE,#CHICANNEAU,#LACOMTESSE',
     ),
   ),
   'racine_plaideurs69_II06' => 
@@ -22555,6 +21305,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Racine',
       'string' => 'LÉANDRE-CHICANNEAU-ISABELLE-L\'INTIMÉ/LÉANDRE-CHICANNEAU-PETIT-JEAN/DANDIN-LÉANDRE-CHICANNEAU-PETIT-JEAN-L\'INTIMÉ/DANDIN-CHICANNEAU-LA COMTESSE-L\'INTIMÉ/LÉANDRE-CHICANNEAU-LA COMTESSE/DANDIN-LÉANDRE-CHICANNEAU-LA COMTESSE-PETIT-JEAN-L\'INTIMÉ',
+      'string-id' => '#LEANDRE,#CHICANNEAU,#ISABELLE,#LINTIME;#LEANDRE,#CHICANNEAU,#PETIT-JEAN;#DANDIN,#LEANDRE,#CHICANNEAU,#PETIT-JEAN,#LINTIME;#DANDIN,#CHICANNEAU,#LACOMTESSE,#LINTIME;#LEANDRE,#CHICANNEAU,#LACOMTESSE;#DANDIN,#LEANDRE,#CHICANNEAU,#LACOMTESSE,#PETIT-JEAN,#LINTIME',
     ),
   ),
   'racine_plaideurs69_II07' => 
@@ -22622,6 +21373,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Racine',
       'string' => 'LÉANDRE-CHICANNEAU-PETIT-JEAN/DANDIN-LÉANDRE-CHICANNEAU-PETIT-JEAN-L\'INTIMÉ/DANDIN-CHICANNEAU-LA COMTESSE-L\'INTIMÉ/LÉANDRE-CHICANNEAU-LA COMTESSE/DANDIN-LÉANDRE-CHICANNEAU-LA COMTESSE-PETIT-JEAN-L\'INTIMÉ/LÉANDRE-LA COMTESSE',
+      'string-id' => '#LEANDRE,#CHICANNEAU,#PETIT-JEAN;#DANDIN,#LEANDRE,#CHICANNEAU,#PETIT-JEAN,#LINTIME;#DANDIN,#CHICANNEAU,#LACOMTESSE,#LINTIME;#LEANDRE,#CHICANNEAU,#LACOMTESSE;#DANDIN,#LEANDRE,#CHICANNEAU,#LACOMTESSE,#PETIT-JEAN,#LINTIME;#LEANDRE,#LACOMTESSE',
     ),
   ),
   'racine_plaideurs69_II08' => 
@@ -22689,6 +21441,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Racine',
       'string' => 'DANDIN-LÉANDRE-CHICANNEAU-PETIT-JEAN-L\'INTIMÉ/DANDIN-CHICANNEAU-LA COMTESSE-L\'INTIMÉ/LÉANDRE-CHICANNEAU-LA COMTESSE/DANDIN-LÉANDRE-CHICANNEAU-LA COMTESSE-PETIT-JEAN-L\'INTIMÉ/LÉANDRE-LA COMTESSE/DANDIN-LÉANDRE-L\'INTIMÉ',
+      'string-id' => '#DANDIN,#LEANDRE,#CHICANNEAU,#PETIT-JEAN,#LINTIME;#DANDIN,#CHICANNEAU,#LACOMTESSE,#LINTIME;#LEANDRE,#CHICANNEAU,#LACOMTESSE;#DANDIN,#LEANDRE,#CHICANNEAU,#LACOMTESSE,#PETIT-JEAN,#LINTIME;#LEANDRE,#LACOMTESSE;#DANDIN,#LEANDRE,#LINTIME',
     ),
   ),
   'racine_plaideurs69_II09' => 
@@ -22756,6 +21509,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Racine',
       'string' => 'DANDIN-CHICANNEAU-LA COMTESSE-L\'INTIMÉ/LÉANDRE-CHICANNEAU-LA COMTESSE/DANDIN-LÉANDRE-CHICANNEAU-LA COMTESSE-PETIT-JEAN-L\'INTIMÉ/LÉANDRE-LA COMTESSE/DANDIN-LÉANDRE-L\'INTIMÉ/DANDIN-LÉANDRE-PETIT-JEAN-L\'INTIMÉ',
+      'string-id' => '#DANDIN,#CHICANNEAU,#LACOMTESSE,#LINTIME;#LEANDRE,#CHICANNEAU,#LACOMTESSE;#DANDIN,#LEANDRE,#CHICANNEAU,#LACOMTESSE,#PETIT-JEAN,#LINTIME;#LEANDRE,#LACOMTESSE;#DANDIN,#LEANDRE,#LINTIME;#DANDIN,#LEANDRE,#PETIT-JEAN,#LINTIME',
     ),
   ),
   'racine_plaideurs_I01' => 
@@ -22823,6 +21577,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Racine',
       'string' => 'PETIT JEAN/PETIT JEAN-L\'INTIMÉ/DANDIN-PETIT JEAN-L\'INTIMÉ/DANDIN-LÉANDRE-PETIT JEAN-L\'INTIMÉ/LÉANDRE-L\'INTIMÉ/CHICANNEAU-PETIT JEAN',
+      'string-id' => '#PETITJEAN;#PETITJEAN,#LINTIME;#DANDIN,#PETITJEAN,#LINTIME;#DANDIN,#LEANDRE,#PETITJEAN,#LINTIME;#LEANDRE,#LINTIME;#CHICANNEAU,#PETITJEAN',
     ),
   ),
   'racine_plaideurs_I02' => 
@@ -22899,6 +21654,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Racine',
       'string' => 'PETIT JEAN-L\'INTIMÉ/DANDIN-PETIT JEAN-L\'INTIMÉ/DANDIN-LÉANDRE-PETIT JEAN-L\'INTIMÉ/LÉANDRE-L\'INTIMÉ/CHICANNEAU-PETIT JEAN/CHICANNEAU-LA COMTESSE',
+      'string-id' => '#PETITJEAN,#LINTIME;#DANDIN,#PETITJEAN,#LINTIME;#DANDIN,#LEANDRE,#PETITJEAN,#LINTIME;#LEANDRE,#LINTIME;#CHICANNEAU,#PETITJEAN;#CHICANNEAU,#COMTESSE',
     ),
   ),
   'racine_plaideurs_I03' => 
@@ -22975,6 +21731,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Racine',
       'string' => 'DANDIN-PETIT JEAN-L\'INTIMÉ/DANDIN-LÉANDRE-PETIT JEAN-L\'INTIMÉ/LÉANDRE-L\'INTIMÉ/CHICANNEAU-PETIT JEAN/CHICANNEAU-LA COMTESSE/CHICANNEAU-LA COMTESSE-PETIT JEAN',
+      'string-id' => '#DANDIN,#PETITJEAN,#LINTIME;#DANDIN,#LEANDRE,#PETITJEAN,#LINTIME;#LEANDRE,#LINTIME;#CHICANNEAU,#PETITJEAN;#CHICANNEAU,#COMTESSE;#CHICANNEAU,#COMTESSE,#PETITJEAN',
     ),
   ),
   'racine_plaideurs_II01' => 
@@ -23033,6 +21790,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Racine',
       'string' => 'LÉANDRE-L\'INTIMÉ/ISABELLE-L\'INTIMÉ/CHICANNEAU-ISABELLE-L\'INTIMÉ/CHICANNEAU-L\'INTIMÉ/LÉANDRE-CHICANNEAU-L\'INTIMÉ/LÉANDRE-CHICANNEAU-ISABELLE-L\'INTIMÉ',
+      'string-id' => '#LEANDRE,#LINTIME;#ISABELLE,#LINTIME;#CHICANNEAU,#ISABELLE,#LINTIME;#CHICANNEAU,#LINTIME;#LEANDRE,#CHICANNEAU,#LINTIME;#LEANDRE,#CHICANNEAU,#ISABELLE,#LINTIME',
     ),
   ),
   'racine_plaideurs_II02' => 
@@ -23100,6 +21858,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Racine',
       'string' => 'ISABELLE-L\'INTIMÉ/CHICANNEAU-ISABELLE-L\'INTIMÉ/CHICANNEAU-L\'INTIMÉ/LÉANDRE-CHICANNEAU-L\'INTIMÉ/LÉANDRE-CHICANNEAU-ISABELLE-L\'INTIMÉ/LÉANDRE-CHICANNEAU-PETIT JEAN',
+      'string-id' => '#ISABELLE,#LINTIME;#CHICANNEAU,#ISABELLE,#LINTIME;#CHICANNEAU,#LINTIME;#LEANDRE,#CHICANNEAU,#LINTIME;#LEANDRE,#CHICANNEAU,#ISABELLE,#LINTIME;#LEANDRE,#CHICANNEAU,#PETITJEAN',
     ),
   ),
   'racine_plaideurs_II03' => 
@@ -23176,6 +21935,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Racine',
       'string' => 'CHICANNEAU-ISABELLE-L\'INTIMÉ/CHICANNEAU-L\'INTIMÉ/LÉANDRE-CHICANNEAU-L\'INTIMÉ/LÉANDRE-CHICANNEAU-ISABELLE-L\'INTIMÉ/LÉANDRE-CHICANNEAU-PETIT JEAN/DANDIN-LÉANDRE-CHICANNEAU-PETIT JEAN-L\'INTIMÉ',
+      'string-id' => '#CHICANNEAU,#ISABELLE,#LINTIME;#CHICANNEAU,#LINTIME;#LEANDRE,#CHICANNEAU,#LINTIME;#LEANDRE,#CHICANNEAU,#ISABELLE,#LINTIME;#LEANDRE,#CHICANNEAU,#PETITJEAN;#DANDIN,#LEANDRE,#CHICANNEAU,#PETITJEAN,#LINTIME',
     ),
   ),
   'racine_plaideurs_II04' => 
@@ -23261,6 +22021,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Racine',
       'string' => 'CHICANNEAU-L\'INTIMÉ/LÉANDRE-CHICANNEAU-L\'INTIMÉ/LÉANDRE-CHICANNEAU-ISABELLE-L\'INTIMÉ/LÉANDRE-CHICANNEAU-PETIT JEAN/DANDIN-LÉANDRE-CHICANNEAU-PETIT JEAN-L\'INTIMÉ/DANDIN-CHICANNEAU-LA COMTESSE-L\'INTIMÉ',
+      'string-id' => '#CHICANNEAU,#LINTIME;#LEANDRE,#CHICANNEAU,#LINTIME;#LEANDRE,#CHICANNEAU,#ISABELLE,#LINTIME;#LEANDRE,#CHICANNEAU,#PETITJEAN;#DANDIN,#LEANDRE,#CHICANNEAU,#PETITJEAN,#LINTIME;#DANDIN,#CHICANNEAU,#COMTESSE,#LINTIME',
     ),
   ),
   'racine_plaideurs_II05' => 
@@ -23346,6 +22107,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Racine',
       'string' => 'LÉANDRE-CHICANNEAU-L\'INTIMÉ/LÉANDRE-CHICANNEAU-ISABELLE-L\'INTIMÉ/LÉANDRE-CHICANNEAU-PETIT JEAN/DANDIN-LÉANDRE-CHICANNEAU-PETIT JEAN-L\'INTIMÉ/DANDIN-CHICANNEAU-LA COMTESSE-L\'INTIMÉ/LÉANDRE-CHICANNEAU-LA COMTESSE',
+      'string-id' => '#LEANDRE,#CHICANNEAU,#LINTIME;#LEANDRE,#CHICANNEAU,#ISABELLE,#LINTIME;#LEANDRE,#CHICANNEAU,#PETITJEAN;#DANDIN,#LEANDRE,#CHICANNEAU,#PETITJEAN,#LINTIME;#DANDIN,#CHICANNEAU,#COMTESSE,#LINTIME;#LEANDRE,#CHICANNEAU,#COMTESSE',
     ),
   ),
   'racine_plaideurs_II06' => 
@@ -23431,6 +22193,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Racine',
       'string' => 'LÉANDRE-CHICANNEAU-ISABELLE-L\'INTIMÉ/LÉANDRE-CHICANNEAU-PETIT JEAN/DANDIN-LÉANDRE-CHICANNEAU-PETIT JEAN-L\'INTIMÉ/DANDIN-CHICANNEAU-LA COMTESSE-L\'INTIMÉ/LÉANDRE-CHICANNEAU-LA COMTESSE/DANDIN-LÉANDRE-CHICANNEAU-LA COMTESSE-PETIT JEAN-L\'INTIMÉ',
+      'string-id' => '#LEANDRE,#CHICANNEAU,#ISABELLE,#LINTIME;#LEANDRE,#CHICANNEAU,#PETITJEAN;#DANDIN,#LEANDRE,#CHICANNEAU,#PETITJEAN,#LINTIME;#DANDIN,#CHICANNEAU,#COMTESSE,#LINTIME;#LEANDRE,#CHICANNEAU,#COMTESSE;#DANDIN,#LEANDRE,#CHICANNEAU,#COMTESSE,#PETITJEAN,#LINTIME',
     ),
   ),
   'racine_plaideurs_II07' => 
@@ -23498,6 +22261,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Racine',
       'string' => 'LÉANDRE-CHICANNEAU-PETIT JEAN/DANDIN-LÉANDRE-CHICANNEAU-PETIT JEAN-L\'INTIMÉ/DANDIN-CHICANNEAU-LA COMTESSE-L\'INTIMÉ/LÉANDRE-CHICANNEAU-LA COMTESSE/DANDIN-LÉANDRE-CHICANNEAU-LA COMTESSE-PETIT JEAN-L\'INTIMÉ/LÉANDRE-LA COMTESSE',
+      'string-id' => '#LEANDRE,#CHICANNEAU,#PETITJEAN;#DANDIN,#LEANDRE,#CHICANNEAU,#PETITJEAN,#LINTIME;#DANDIN,#CHICANNEAU,#COMTESSE,#LINTIME;#LEANDRE,#CHICANNEAU,#COMTESSE;#DANDIN,#LEANDRE,#CHICANNEAU,#COMTESSE,#PETITJEAN,#LINTIME;#LEANDRE,#COMTESSE',
     ),
   ),
   'racine_plaideurs_II08' => 
@@ -23565,6 +22329,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Racine',
       'string' => 'DANDIN-LÉANDRE-CHICANNEAU-PETIT JEAN-L\'INTIMÉ/DANDIN-CHICANNEAU-LA COMTESSE-L\'INTIMÉ/LÉANDRE-CHICANNEAU-LA COMTESSE/DANDIN-LÉANDRE-CHICANNEAU-LA COMTESSE-PETIT JEAN-L\'INTIMÉ/LÉANDRE-LA COMTESSE/DANDIN-LÉANDRE-L\'INTIMÉ',
+      'string-id' => '#DANDIN,#LEANDRE,#CHICANNEAU,#PETITJEAN,#LINTIME;#DANDIN,#CHICANNEAU,#COMTESSE,#LINTIME;#LEANDRE,#CHICANNEAU,#COMTESSE;#DANDIN,#LEANDRE,#CHICANNEAU,#COMTESSE,#PETITJEAN,#LINTIME;#LEANDRE,#COMTESSE;#DANDIN,#LEANDRE,#LINTIME',
     ),
   ),
   'racine_plaideurs_II09' => 
@@ -23632,22 +22397,14 @@
       'genreId' => 'Comedie',
       'authorId' => 'Racine',
       'string' => 'DANDIN-CHICANNEAU-LA COMTESSE-L\'INTIMÉ/LÉANDRE-CHICANNEAU-LA COMTESSE/DANDIN-LÉANDRE-CHICANNEAU-LA COMTESSE-PETIT JEAN-L\'INTIMÉ/LÉANDRE-LA COMTESSE/DANDIN-LÉANDRE-L\'INTIMÉ/DANDIN-LÉANDRE-PETIT JEAN-L\'INTIMÉ',
+      'string-id' => '#DANDIN,#CHICANNEAU,#COMTESSE,#LINTIME;#LEANDRE,#CHICANNEAU,#COMTESSE;#DANDIN,#LEANDRE,#CHICANNEAU,#COMTESSE,#PETITJEAN,#LINTIME;#LEANDRE,#COMTESSE;#DANDIN,#LEANDRE,#LINTIME;#DANDIN,#LEANDRE,#PETITJEAN,#LINTIME',
     ),
   ),
   'racine_phedre77_II01' => 
   array (
     'pattern' => 
     array (
-      '#PHEDRE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 1,
-        5 => 0,
-      ),
-      '#HIPPOLYTE' => 
+      '#hippolyte' => 
       array (
         0 => 0,
         1 => 1,
@@ -23656,7 +22413,25 @@
         4 => 1,
         5 => 1,
       ),
-      '#ARICIE' => 
+      '#oenone' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 1,
+        5 => 0,
+      ),
+      '#theramene' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 1,
+        4 => 0,
+        5 => 1,
+      ),
+      '#ismene' => 
       array (
         0 => 1,
         1 => 1,
@@ -23680,14 +22455,15 @@
       'titleId' => 'Phedre',
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
-      'string' => 'ARICIE/HIPPOLYTE-ARICIE/HIPPOLYTE-ARICIE/HIPPOLYTE/PHÈDRE-HIPPOLYTE/HIPPOLYTE',
+      'string' => 'ARICIE-ISMÈNE/HIPPOLYTE-ARICIE-ISMÈNE/HIPPOLYTE-ARICIE-THÉRAMÈNE-ISMÈNE/HIPPOLYTE-THÉRAMÈNE/PHÈDRE-HIPPOLYTE-OENONE/HIPPOLYTE-THÉRAMÈNE',
+      'string-id' => '#aricie,#ismene;#hippolyte,#aricie,#ismene;#hippolyte,#aricie,#theramene,#ismene;#hippolyte,#theramene;#phedre,#hippolyte,#oenone;#hippolyte,#theramene',
     ),
   ),
   'racine_phedre77_III01' => 
   array (
     'pattern' => 
     array (
-      '#THESEE' => 
+      '#thesee' => 
       array (
         0 => 0,
         1 => 0,
@@ -23696,7 +22472,7 @@
         4 => 1,
         5 => 0,
       ),
-      '#PHEDRE' => 
+      '#phedre' => 
       array (
         0 => 1,
         1 => 1,
@@ -23705,7 +22481,16 @@
         4 => 0,
         5 => 0,
       ),
-      '#HIPPOLYTE' => 
+      '#oenone' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 1,
+        3 => 1,
+        4 => 0,
+        5 => 0,
+      ),
+      '#theramene' => 
       array (
         0 => 0,
         1 => 0,
@@ -23729,14 +22514,15 @@
       'titleId' => 'Phedre',
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
-      'string' => 'PHÈDRE/PHÈDRE/PHÈDRE/THÉSÉE-PHÈDRE-HIPPOLYTE/THÉSÉE-HIPPOLYTE/HIPPOLYTE',
+      'string' => 'PHÈDRE-OENONE/PHÈDRE/PHÈDRE-OENONE/THÉSÉE-PHÈDRE-HIPPOLYTE-OENONE-THÉRAMÈNE/THÉSÉE-HIPPOLYTE-THÉRAMÈNE/HIPPOLYTE-THÉRAMÈNE',
+      'string-id' => '#phedre,#oenone;#phedre;#phedre,#oenone;#thesee,#phedre,#hippolyte,#oenone,#theramene;#thesee,#hippolyte,#theramene;#hippolyte,#theramene',
     ),
   ),
   'racine_phedre77_IV01' => 
   array (
     'pattern' => 
     array (
-      '#THESEE' => 
+      '#thesee' => 
       array (
         0 => 1,
         1 => 1,
@@ -23745,7 +22531,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#PHEDRE' => 
+      '#phedre' => 
       array (
         0 => 0,
         1 => 0,
@@ -23754,7 +22540,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#HIPPOLYTE' => 
+      '#hippolyte' => 
       array (
         0 => 0,
         1 => 1,
@@ -23762,6 +22548,15 @@
         3 => 0,
         4 => 0,
         5 => 0,
+      ),
+      '#oenone' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 1,
       ),
     ),
     'id' => 
@@ -23778,14 +22573,15 @@
       'titleId' => 'Phedre',
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
-      'string' => 'THÉSÉE/THÉSÉE-HIPPOLYTE/THÉSÉE/THÉSÉE-PHÈDRE/PHÈDRE/PHÈDRE',
+      'string' => 'THÉSÉE-OENONE/THÉSÉE-HIPPOLYTE/THÉSÉE/THÉSÉE-PHÈDRE/PHÈDRE/PHÈDRE-OENONE',
+      'string-id' => '#thesee,#oenone;#thesee,#hippolyte;#thesee;#thesee,#phedre;#phedre;#phedre,#oenone',
     ),
   ),
   'racine_phedre77_V01' => 
   array (
     'pattern' => 
     array (
-      '#THESEE' => 
+      '#thesee' => 
       array (
         0 => 0,
         1 => 1,
@@ -23794,7 +22590,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#HIPPOLYTE' => 
+      '#hippolyte' => 
       array (
         0 => 1,
         1 => 0,
@@ -23803,13 +22599,40 @@
         4 => 0,
         5 => 0,
       ),
-      '#ARICIE' => 
+      '#aricie' => 
       array (
         0 => 1,
         1 => 1,
         2 => 1,
         3 => 0,
         4 => 0,
+        5 => 0,
+      ),
+      '#theramene' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 1,
+      ),
+      '#ismene' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
+      '#panope' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 1,
         5 => 0,
       ),
     ),
@@ -23827,14 +22650,15 @@
       'titleId' => 'Phedre',
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
-      'string' => 'HIPPOLYTE-ARICIE/THÉSÉE-ARICIE/THÉSÉE-ARICIE/THÉSÉE/THÉSÉE/THÉSÉE',
+      'string' => 'HIPPOLYTE-ARICIE/THÉSÉE-ARICIE-ISMÈNE/THÉSÉE-ARICIE/THÉSÉE/THÉSÉE-PANOPE/THÉSÉE-THÉRAMÈNE',
+      'string-id' => '#hippolyte,#aricie;#thesee,#aricie,#ismene;#thesee,#aricie;#thesee;#thesee,#panope;#thesee,#theramene',
     ),
   ),
   'racine_phedre77_V02' => 
   array (
     'pattern' => 
     array (
-      '#THESEE' => 
+      '#thesee' => 
       array (
         0 => 1,
         1 => 1,
@@ -23843,16 +22667,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#PHEDRE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 1,
-      ),
-      '#ARICIE' => 
+      '#aricie' => 
       array (
         0 => 1,
         1 => 1,
@@ -23860,6 +22675,42 @@
         3 => 0,
         4 => 0,
         5 => 0,
+      ),
+      '#theramene' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 1,
+        5 => 1,
+      ),
+      '#ismene' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
+      '#panope' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 1,
+        4 => 0,
+        5 => 1,
+      ),
+      '#gardes' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 1,
       ),
     ),
     'id' => 
@@ -23876,7 +22727,8 @@
       'titleId' => 'Phedre',
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
-      'string' => 'THÉSÉE-ARICIE/THÉSÉE-ARICIE/THÉSÉE/THÉSÉE/THÉSÉE/THÉSÉE-PHÈDRE',
+      'string' => 'THÉSÉE-ARICIE-ISMÈNE/THÉSÉE-ARICIE/THÉSÉE/THÉSÉE-PANOPE/THÉSÉE-THÉRAMÈNE/THÉSÉE-PHÈDRE-THÉRAMÈNE-PANOPE-GARDES',
+      'string-id' => '#thesee,#aricie,#ismene;#thesee,#aricie;#thesee;#thesee,#panope;#thesee,#theramene;#thesee,#phedre,#theramene,#panope,#gardes',
     ),
   ),
   'racine_mithridate_II01' => 
@@ -23935,6 +22787,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'MONIME/MITHRIDATE-PHARNACE-XIPHARÈS/MITHRIDATE/MITHRIDATE-MONIME/MITHRIDATE-MONIME-XIPHARÈS/MONIME-XIPHARÈS',
+      'string-id' => '#MONIME;#MITHRIDATE,#PHARNACE,#XIPHARES;#MITHRIDATE;#MITHRIDATE,#MONIME;#MITHRIDATE,#MONIME,#XIPHARES;#MONIME,#XIPHARES',
     ),
   ),
   'racine_mithridate_III01' => 
@@ -23993,6 +22846,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'MITHRIDATE-PHARNACE-XIPHARÈS/MITHRIDATE-PHARNACE-XIPHARÈS/MITHRIDATE-XIPHARÈS/MITHRIDATE/MITHRIDATE-MONIME/MITHRIDATE',
+      'string-id' => '#MITHRIDATE,#PHARNACE,#XIPHARES;#MITHRIDATE,#PHARNACE,#XIPHARES;#MITHRIDATE,#XIPHARES;#MITHRIDATE;#MITHRIDATE,#MONIME;#MITHRIDATE',
     ),
   ),
   'racine_mithridate_IV01' => 
@@ -24042,6 +22896,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'MONIME/MONIME-XIPHARÈS/MONIME/MITHRIDATE-MONIME/MITHRIDATE/MITHRIDATE',
+      'string-id' => '#MONIME;#MONIME,#XIPHARES;#MONIME;#MITHRIDATE,#MONIME;#MITHRIDATE;#MITHRIDATE',
     ),
   ),
   'racine_mithridate_IV02' => 
@@ -24091,6 +22946,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'MONIME-XIPHARÈS/MONIME/MITHRIDATE-MONIME/MITHRIDATE/MITHRIDATE/MITHRIDATE',
+      'string-id' => '#MONIME,#XIPHARES;#MONIME;#MITHRIDATE,#MONIME;#MITHRIDATE;#MITHRIDATE;#MITHRIDATE',
     ),
   ),
   'racine_iphigenie_II01' => 
@@ -24158,6 +23014,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'ERIPHILE/AGAMEMNON-IPHIGÉNIE-ERIPHILE/IPHIGÉNIE-ERIPHILE/CLYTEMNESTRE-ERIPHILE/IPHIGÉNIE-ERIPHILE/ACHILLE-IPHIGÉNIE-ERIPHILE',
+      'string-id' => '#ERIPHILE;#AGAMEMNON,#IPHIGENIE,#ERIPHILE;#IPHIGENIE,#ERIPHILE;#CLYTEMNESTRE,#ERIPHILE;#IPHIGENIE,#ERIPHILE;#ACHILLE,#IPHIGENIE,#ERIPHILE',
     ),
   ),
   'racine_iphigenie_II02' => 
@@ -24225,6 +23082,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'AGAMEMNON-IPHIGÉNIE-ERIPHILE/IPHIGÉNIE-ERIPHILE/CLYTEMNESTRE-ERIPHILE/IPHIGÉNIE-ERIPHILE/ACHILLE-IPHIGÉNIE-ERIPHILE/ACHILLE-ERIPHILE',
+      'string-id' => '#AGAMEMNON,#IPHIGENIE,#ERIPHILE;#IPHIGENIE,#ERIPHILE;#CLYTEMNESTRE,#ERIPHILE;#IPHIGENIE,#ERIPHILE;#ACHILLE,#IPHIGENIE,#ERIPHILE;#ACHILLE,#ERIPHILE',
     ),
   ),
   'racine_iphigenie_II03' => 
@@ -24283,6 +23141,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'IPHIGÉNIE-ERIPHILE/CLYTEMNESTRE-ERIPHILE/IPHIGÉNIE-ERIPHILE/ACHILLE-IPHIGÉNIE-ERIPHILE/ACHILLE-ERIPHILE/ERIPHILE',
+      'string-id' => '#IPHIGENIE,#ERIPHILE;#CLYTEMNESTRE,#ERIPHILE;#IPHIGENIE,#ERIPHILE;#ACHILLE,#IPHIGENIE,#ERIPHILE;#ACHILLE,#ERIPHILE;#ERIPHILE',
     ),
   ),
   'racine_iphigenie_III01' => 
@@ -24350,6 +23209,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'AGAMEMNON-CLYTEMNESTRE/CLYTEMNESTRE/ACHILLE-CLYTEMNESTRE/ACHILLE-CLYTEMNESTRE-IPHIGÉNIE-ERIPHILE/ACHILLE-CLYTEMNESTRE-IPHIGÉNIE-ERIPHILE/ACHILLE-IPHIGÉNIE',
+      'string-id' => '#AGAMEMNON,#CLYTEMNESTRE;#CLYTEMNESTRE;#ACHILLE,#CLYTEMNESTRE;#ACHILLE,#CLYTEMNESTRE,#IPHIGENIE,#ERIPHILE;#ACHILLE,#CLYTEMNESTRE,#IPHIGENIE,#ERIPHILE;#ACHILLE,#IPHIGENIE',
     ),
   ),
   'racine_iphigenie_III02' => 
@@ -24408,6 +23268,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'CLYTEMNESTRE/ACHILLE-CLYTEMNESTRE/ACHILLE-CLYTEMNESTRE-IPHIGÉNIE-ERIPHILE/ACHILLE-CLYTEMNESTRE-IPHIGÉNIE-ERIPHILE/ACHILLE-IPHIGÉNIE/ACHILLE-CLYTEMNESTRE-IPHIGÉNIE',
+      'string-id' => '#CLYTEMNESTRE;#ACHILLE,#CLYTEMNESTRE;#ACHILLE,#CLYTEMNESTRE,#IPHIGENIE,#ERIPHILE;#ACHILLE,#CLYTEMNESTRE,#IPHIGENIE,#ERIPHILE;#ACHILLE,#IPHIGENIE;#ACHILLE,#CLYTEMNESTRE,#IPHIGENIE',
     ),
   ),
   'racine_iphigenie_IV01' => 
@@ -24475,6 +23336,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'ERIPHILE/CLYTEMNESTRE/AGAMEMNON-CLYTEMNESTRE/AGAMEMNON-CLYTEMNESTRE-IPHIGÉNIE/AGAMEMNON/AGAMEMNON-ACHILLE',
+      'string-id' => '#ERIPHILE;#CLYTEMNESTRE;#AGAMEMNON,#CLYTEMNESTRE;#AGAMEMNON,#CLYTEMNESTRE,#IPHIGENIE;#AGAMEMNON;#AGAMEMNON,#ACHILLE',
     ),
   ),
   'racine_iphigenie_IV02' => 
@@ -24533,6 +23395,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'CLYTEMNESTRE/AGAMEMNON-CLYTEMNESTRE/AGAMEMNON-CLYTEMNESTRE-IPHIGÉNIE/AGAMEMNON/AGAMEMNON-ACHILLE/AGAMEMNON',
+      'string-id' => '#CLYTEMNESTRE;#AGAMEMNON,#CLYTEMNESTRE;#AGAMEMNON,#CLYTEMNESTRE,#IPHIGENIE;#AGAMEMNON;#AGAMEMNON,#ACHILLE;#AGAMEMNON',
     ),
   ),
   'racine_iphigenie_IV03' => 
@@ -24591,6 +23454,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'AGAMEMNON-CLYTEMNESTRE/AGAMEMNON-CLYTEMNESTRE-IPHIGÉNIE/AGAMEMNON/AGAMEMNON-ACHILLE/AGAMEMNON/AGAMEMNON',
+      'string-id' => '#AGAMEMNON,#CLYTEMNESTRE;#AGAMEMNON,#CLYTEMNESTRE,#IPHIGENIE;#AGAMEMNON;#AGAMEMNON,#ACHILLE;#AGAMEMNON;#AGAMEMNON',
     ),
   ),
   'racine_iphigenie_IV04' => 
@@ -24640,6 +23504,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'AGAMEMNON-CLYTEMNESTRE-IPHIGÉNIE/AGAMEMNON/AGAMEMNON-ACHILLE/AGAMEMNON/AGAMEMNON/AGAMEMNON',
+      'string-id' => '#AGAMEMNON,#CLYTEMNESTRE,#IPHIGENIE;#AGAMEMNON;#AGAMEMNON,#ACHILLE;#AGAMEMNON;#AGAMEMNON;#AGAMEMNON',
     ),
   ),
   'racine_iphigenie_IV05' => 
@@ -24689,6 +23554,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'AGAMEMNON/AGAMEMNON-ACHILLE/AGAMEMNON/AGAMEMNON/AGAMEMNON/AGAMEMNON-CLYTEMNESTRE-IPHIGÉNIE-ERIPHILE',
+      'string-id' => '#AGAMEMNON;#AGAMEMNON,#ACHILLE;#AGAMEMNON;#AGAMEMNON;#AGAMEMNON;#AGAMEMNON,#CLYTEMNESTRE,#IPHIGENIE,#ERIPHILE',
     ),
   ),
   'racine_iphigenie_IV06' => 
@@ -24747,6 +23613,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'AGAMEMNON-ACHILLE/AGAMEMNON/AGAMEMNON/AGAMEMNON/AGAMEMNON-CLYTEMNESTRE-IPHIGÉNIE-ERIPHILE/ERIPHILE',
+      'string-id' => '#AGAMEMNON,#ACHILLE;#AGAMEMNON;#AGAMEMNON;#AGAMEMNON;#AGAMEMNON,#CLYTEMNESTRE,#IPHIGENIE,#ERIPHILE;#ERIPHILE',
     ),
   ),
   'racine_iphigenie_V01' => 
@@ -24805,6 +23672,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'IPHIGÉNIE/ACHILLE-IPHIGÉNIE/CLYTEMNESTRE-IPHIGÉNIE/CLYTEMNESTRE/CLYTEMNESTRE/ULYSSE-CLYTEMNESTRE',
+      'string-id' => '#IPHIGENIE;#ACHILLE,#IPHIGENIE;#CLYTEMNESTRE,#IPHIGENIE;#CLYTEMNESTRE;#CLYTEMNESTRE;#ULYSSE,#CLYTEMNESTRE',
     ),
   ),
   'racine_britannicus_II01' => 
@@ -24872,6 +23740,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'NÉRON-BURRHUS-NARCISSE/NÉRON-NARCISSE/NÉRON-JUNIE/NÉRON-JUNIE-NARCISSE/JUNIE-NARCISSE/BRITANNICUS-JUNIE-NARCISSE',
+      'string-id' => '#NERON,#BURRHUS,#NARCISSE;#NERON,#NARCISSE;#NERON,#JUNIE;#NERON,#JUNIE,#NARCISSE;#JUNIE,#NARCISSE;#BRITANNICUS,#JUNIE,#NARCISSE',
     ),
   ),
   'racine_britannicus_II02' => 
@@ -24930,6 +23799,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'NÉRON-NARCISSE/NÉRON-JUNIE/NÉRON-JUNIE-NARCISSE/JUNIE-NARCISSE/BRITANNICUS-JUNIE-NARCISSE/NÉRON-JUNIE-NARCISSE',
+      'string-id' => '#NERON,#NARCISSE;#NERON,#JUNIE;#NERON,#JUNIE,#NARCISSE;#JUNIE,#NARCISSE;#BRITANNICUS,#JUNIE,#NARCISSE;#NERON,#JUNIE,#NARCISSE',
     ),
   ),
   'racine_britannicus_II03' => 
@@ -24988,6 +23858,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'NÉRON-JUNIE/NÉRON-JUNIE-NARCISSE/JUNIE-NARCISSE/BRITANNICUS-JUNIE-NARCISSE/NÉRON-JUNIE-NARCISSE/NÉRON-NARCISSE',
+      'string-id' => '#NERON,#JUNIE;#NERON,#JUNIE,#NARCISSE;#JUNIE,#NARCISSE;#BRITANNICUS,#JUNIE,#NARCISSE;#NERON,#JUNIE,#NARCISSE;#NERON,#NARCISSE',
     ),
   ),
   'racine_britannicus_III01' => 
@@ -25046,6 +23917,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'NÉRON-BURRHUS/BURRHUS/AGRIPPINE-BURRHUS/AGRIPPINE/BRITANNICUS-AGRIPPINE-NARCISSE/BRITANNICUS-NARCISSE',
+      'string-id' => '#NERON,#BURRHUS;#BURRHUS;#AGRIPPINE,#BURRHUS;#AGRIPPINE;#BRITANNICUS,#AGRIPPINE,#NARCISSE;#BRITANNICUS,#NARCISSE',
     ),
   ),
   'racine_britannicus_III02' => 
@@ -25113,6 +23985,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'BURRHUS/AGRIPPINE-BURRHUS/AGRIPPINE/BRITANNICUS-AGRIPPINE-NARCISSE/BRITANNICUS-NARCISSE/BRITANNICUS-JUNIE',
+      'string-id' => '#BURRHUS;#AGRIPPINE,#BURRHUS;#AGRIPPINE;#BRITANNICUS,#AGRIPPINE,#NARCISSE;#BRITANNICUS,#NARCISSE;#BRITANNICUS,#JUNIE',
     ),
   ),
   'racine_britannicus_III03' => 
@@ -25189,6 +24062,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'AGRIPPINE-BURRHUS/AGRIPPINE/BRITANNICUS-AGRIPPINE-NARCISSE/BRITANNICUS-NARCISSE/BRITANNICUS-JUNIE/NÉRON-BRITANNICUS-JUNIE',
+      'string-id' => '#AGRIPPINE,#BURRHUS;#AGRIPPINE;#BRITANNICUS,#AGRIPPINE,#NARCISSE;#BRITANNICUS,#NARCISSE;#BRITANNICUS,#JUNIE;#NERON,#BRITANNICUS,#JUNIE',
     ),
   ),
   'racine_britannicus_III04' => 
@@ -25265,6 +24139,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'AGRIPPINE/BRITANNICUS-AGRIPPINE-NARCISSE/BRITANNICUS-NARCISSE/BRITANNICUS-JUNIE/NÉRON-BRITANNICUS-JUNIE/NÉRON-BURRHUS',
+      'string-id' => '#AGRIPPINE;#BRITANNICUS,#AGRIPPINE,#NARCISSE;#BRITANNICUS,#NARCISSE;#BRITANNICUS,#JUNIE;#NERON,#BRITANNICUS,#JUNIE;#NERON,#BURRHUS',
     ),
   ),
   'racine_britannicus_V01' => 
@@ -25332,6 +24207,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'BRITANNICUS-JUNIE/BRITANNICUS-AGRIPPINE-JUNIE/AGRIPPINE-JUNIE/AGRIPPINE-JUNIE-BURRHUS/AGRIPPINE-BURRHUS/NÉRON-AGRIPPINE-BURRHUS-NARCISSE',
+      'string-id' => '#BRITANNICUS,#JUNIE;#BRITANNICUS,#AGRIPPINE,#JUNIE;#AGRIPPINE,#JUNIE;#AGRIPPINE,#JUNIE,#BURRHUS;#AGRIPPINE,#BURRHUS;#NERON,#AGRIPPINE,#BURRHUS,#NARCISSE',
     ),
   ),
   'racine_britannicus_V02' => 
@@ -25399,6 +24275,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'BRITANNICUS-AGRIPPINE-JUNIE/AGRIPPINE-JUNIE/AGRIPPINE-JUNIE-BURRHUS/AGRIPPINE-BURRHUS/NÉRON-AGRIPPINE-BURRHUS-NARCISSE/AGRIPPINE-BURRHUS',
+      'string-id' => '#BRITANNICUS,#AGRIPPINE,#JUNIE;#AGRIPPINE,#JUNIE;#AGRIPPINE,#JUNIE,#BURRHUS;#AGRIPPINE,#BURRHUS;#NERON,#AGRIPPINE,#BURRHUS,#NARCISSE;#AGRIPPINE,#BURRHUS',
     ),
   ),
   'racine_britannicus_V03' => 
@@ -25457,6 +24334,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'AGRIPPINE-JUNIE/AGRIPPINE-JUNIE-BURRHUS/AGRIPPINE-BURRHUS/NÉRON-AGRIPPINE-BURRHUS-NARCISSE/AGRIPPINE-BURRHUS/AGRIPPINE-BURRHUS',
+      'string-id' => '#AGRIPPINE,#JUNIE;#AGRIPPINE,#JUNIE,#BURRHUS;#AGRIPPINE,#BURRHUS;#NERON,#AGRIPPINE,#BURRHUS,#NARCISSE;#AGRIPPINE,#BURRHUS;#AGRIPPINE,#BURRHUS',
     ),
   ),
   'racine_berenice_IV01' => 
@@ -25497,6 +24375,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'BÉRÉNICE/BÉRÉNICE/TITUS/TITUS/TITUS-BÉRÉNICE/TITUS',
+      'string-id' => '#BERENICE;#BERENICE;#TITUS;#TITUS;#TITUS,#BERENICE;#TITUS',
     ),
   ),
   'racine_berenice_IV02' => 
@@ -25546,6 +24425,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'BÉRÉNICE/TITUS/TITUS/TITUS-BÉRÉNICE/TITUS/TITUS-ANTIOCHUS',
+      'string-id' => '#BERENICE;#TITUS;#TITUS;#TITUS,#BERENICE;#TITUS;#TITUS,#ANTIOCHUS',
     ),
   ),
   'racine_berenice_IV03' => 
@@ -25604,6 +24484,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'TITUS/TITUS/TITUS-BÉRÉNICE/TITUS/TITUS-ANTIOCHUS/TITUS-ANTIOCHUS-RUTILE',
+      'string-id' => '#TITUS;#TITUS;#TITUS,#BERENICE;#TITUS;#TITUS,#ANTIOCHUS;#TITUS,#ANTIOCHUS,#RUTILE',
     ),
   ),
   'racine_berenice_V01' => 
@@ -25653,6 +24534,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => '/ANTIOCHUS/TITUS-ANTIOCHUS/ANTIOCHUS/TITUS-BÉRÉNICE/TITUS-BÉRÉNICE',
+      'string-id' => ';#ANTIOCHUS;#TITUS,#ANTIOCHUS;#ANTIOCHUS;#TITUS,#BERENICE;#TITUS,#BERENICE',
     ),
   ),
   'racine_berenice_V02' => 
@@ -25702,6 +24584,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'ANTIOCHUS/TITUS-ANTIOCHUS/ANTIOCHUS/TITUS-BÉRÉNICE/TITUS-BÉRÉNICE/TITUS-BÉRÉNICE-ANTIOCHUS',
+      'string-id' => '#ANTIOCHUS;#TITUS,#ANTIOCHUS;#ANTIOCHUS;#TITUS,#BERENICE;#TITUS,#BERENICE;#TITUS,#BERENICE,#ANTIOCHUS',
     ),
   ),
   'racine_bajazet_III01' => 
@@ -25769,6 +24652,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'ATALIDE-ZAÏRE/ATALIDE-ACOMAT-ZAÏRE/ATALIDE-ZAÏRE/BAJAZET-ATALIDE-ZAÏRE/BAJAZET-ROXANE-ATALIDE/ROXANE-ATALIDE',
+      'string-id' => '#ATALIDE,#ZAIRE;#ATALIDE,#ACOMAT,#ZAIRE;#ATALIDE,#ZAIRE;#BAJAZET,#ATALIDE,#ZAIRE;#BAJAZET,#ROXANE,#ATALIDE;#ROXANE,#ATALIDE',
     ),
   ),
   'racine_bajazet_III02' => 
@@ -25836,6 +24720,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'ATALIDE-ACOMAT-ZAÏRE/ATALIDE-ZAÏRE/BAJAZET-ATALIDE-ZAÏRE/BAJAZET-ROXANE-ATALIDE/ROXANE-ATALIDE/ROXANE',
+      'string-id' => '#ATALIDE,#ACOMAT,#ZAIRE;#ATALIDE,#ZAIRE;#BAJAZET,#ATALIDE,#ZAIRE;#BAJAZET,#ROXANE,#ATALIDE;#ROXANE,#ATALIDE;#ROXANE',
     ),
   ),
   'racine_bajazet_III03' => 
@@ -25903,6 +24788,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'ATALIDE-ZAÏRE/BAJAZET-ATALIDE-ZAÏRE/BAJAZET-ROXANE-ATALIDE/ROXANE-ATALIDE/ROXANE/ROXANE-ZATIME',
+      'string-id' => '#ATALIDE,#ZAIRE;#BAJAZET,#ATALIDE,#ZAIRE;#BAJAZET,#ROXANE,#ATALIDE;#ROXANE,#ATALIDE;#ROXANE;#ROXANE,#ZATIME',
     ),
   ),
   'racine_bajazet_IV01' => 
@@ -25970,6 +24856,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'ATALIDE-ZAÏRE/ROXANE-ATALIDE-ZATIME-ZAÏRE/ROXANE-ATALIDE-ZATIME/ROXANE/ROXANE-ZATIME/ROXANE-ACOMAT',
+      'string-id' => '#ATALIDE,#ZAIRE;#ROXANE,#ATALIDE,#ZATIME,#ZAIRE;#ROXANE,#ATALIDE,#ZATIME;#ROXANE;#ROXANE,#ZATIME;#ROXANE,#ACOMAT',
     ),
   ),
   'racine_bajazet_IV02' => 
@@ -26037,6 +24924,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'ROXANE-ATALIDE-ZATIME-ZAÏRE/ROXANE-ATALIDE-ZATIME/ROXANE/ROXANE-ZATIME/ROXANE-ACOMAT/ACOMAT',
+      'string-id' => '#ROXANE,#ATALIDE,#ZATIME,#ZAIRE;#ROXANE,#ATALIDE,#ZATIME;#ROXANE;#ROXANE,#ZATIME;#ROXANE,#ACOMAT;#ACOMAT',
     ),
   ),
   'racine_bajazet_V01' => 
@@ -26095,6 +24983,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'ATALIDE/ROXANE-ATALIDE-ZATIME/ROXANE-ZATIME/BAJAZET-ROXANE/ROXANE-ZATIME/ROXANE-ATALIDE',
+      'string-id' => '#ATALIDE;#ROXANE,#ATALIDE,#ZATIME;#ROXANE,#ZATIME;#BAJAZET,#ROXANE;#ROXANE,#ZATIME;#ROXANE,#ATALIDE',
     ),
   ),
   'racine_bajazet_V02' => 
@@ -26153,6 +25042,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'ROXANE-ATALIDE-ZATIME/ROXANE-ZATIME/BAJAZET-ROXANE/ROXANE-ZATIME/ROXANE-ATALIDE/ROXANE-ATALIDE-ZATIME',
+      'string-id' => '#ROXANE,#ATALIDE,#ZATIME;#ROXANE,#ZATIME;#BAJAZET,#ROXANE;#ROXANE,#ZATIME;#ROXANE,#ATALIDE;#ROXANE,#ATALIDE,#ZATIME',
     ),
   ),
   'racine_bajazet_V03' => 
@@ -26211,6 +25101,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'ROXANE-ZATIME/BAJAZET-ROXANE/ROXANE-ZATIME/ROXANE-ATALIDE/ROXANE-ATALIDE-ZATIME/ATALIDE-ZATIME',
+      'string-id' => '#ROXANE,#ZATIME;#BAJAZET,#ROXANE;#ROXANE,#ZATIME;#ROXANE,#ATALIDE;#ROXANE,#ATALIDE,#ZATIME;#ATALIDE,#ZATIME',
     ),
   ),
   'racine_bajazet_V04' => 
@@ -26278,6 +25169,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'BAJAZET-ROXANE/ROXANE-ZATIME/ROXANE-ATALIDE/ROXANE-ATALIDE-ZATIME/ATALIDE-ZATIME/ATALIDE-ACOMAT-ZATIME',
+      'string-id' => '#BAJAZET,#ROXANE;#ROXANE,#ZATIME;#ROXANE,#ATALIDE;#ROXANE,#ATALIDE,#ZATIME;#ATALIDE,#ZATIME;#ATALIDE,#ACOMAT,#ZATIME',
     ),
   ),
   'racine_bajazet_V05' => 
@@ -26345,6 +25237,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'ROXANE-ZATIME/ROXANE-ATALIDE/ROXANE-ATALIDE-ZATIME/ATALIDE-ZATIME/ATALIDE-ACOMAT-ZATIME/ATALIDE-ACOMAT-ZATIME-ZAÏRE',
+      'string-id' => '#ROXANE,#ZATIME;#ROXANE,#ATALIDE;#ROXANE,#ATALIDE,#ZATIME;#ATALIDE,#ZATIME;#ATALIDE,#ACOMAT,#ZATIME;#ATALIDE,#ACOMAT,#ZATIME,#ZAIRE',
     ),
   ),
   'racine_bajazet_V06' => 
@@ -26412,6 +25305,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'ROXANE-ATALIDE/ROXANE-ATALIDE-ZATIME/ATALIDE-ZATIME/ATALIDE-ACOMAT-ZATIME/ATALIDE-ACOMAT-ZATIME-ZAÏRE/ATALIDE-ACOMAT-ZAÏRE',
+      'string-id' => '#ROXANE,#ATALIDE;#ROXANE,#ATALIDE,#ZATIME;#ATALIDE,#ZATIME;#ATALIDE,#ACOMAT,#ZATIME;#ATALIDE,#ACOMAT,#ZATIME,#ZAIRE;#ATALIDE,#ACOMAT,#ZAIRE',
     ),
   ),
   'racine_bajazet_V07' => 
@@ -26479,13 +25373,14 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'ROXANE-ATALIDE-ZATIME/ATALIDE-ZATIME/ATALIDE-ACOMAT-ZATIME/ATALIDE-ACOMAT-ZATIME-ZAÏRE/ATALIDE-ACOMAT-ZAÏRE/ATALIDE-ZAÏRE',
+      'string-id' => '#ROXANE,#ATALIDE,#ZATIME;#ATALIDE,#ZATIME;#ATALIDE,#ACOMAT,#ZATIME;#ATALIDE,#ACOMAT,#ZATIME,#ZAIRE;#ATALIDE,#ACOMAT,#ZAIRE;#ATALIDE,#ZAIRE',
     ),
   ),
   'racine_andromaque68_III01' => 
   array (
     'pattern' => 
     array (
-      '#ANDROMAQUE' => 
+      '#andromaque' => 
       array (
         0 => 0,
         1 => 0,
@@ -26494,7 +25389,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#PYRRHUS' => 
+      '#pyrrhus' => 
       array (
         0 => 0,
         1 => 0,
@@ -26503,7 +25398,7 @@
         4 => 0,
         5 => 1,
       ),
-      '#ORESTE' => 
+      '#oreste' => 
       array (
         0 => 1,
         1 => 1,
@@ -26512,21 +25407,12 @@
         4 => 0,
         5 => 0,
       ),
-      '#HERMIONE' => 
+      '#hermione' => 
       array (
         0 => 0,
         1 => 1,
         2 => 1,
         3 => 1,
-        4 => 0,
-        5 => 0,
-      ),
-      '#PYLADE' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 0,
-        3 => 0,
         4 => 0,
         5 => 0,
       ),
@@ -26545,14 +25431,15 @@
       'titleId' => 'Andromaque',
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
-      'string' => 'ORESTE-PYLADE /ORESTE-HERMIONE /HERMIONE /ANDROMAQUE-HERMIONE /ANDROMAQUE/ANDROMAQUE-PYRRHUS',
+      'string' => 'ORESTE/ORESTE-HERMIONE/HERMIONE/ANDROMAQUE-HERMIONE/ANDROMAQUE/ANDROMAQUE-PYRRHUS',
+      'string-id' => '#oreste;#oreste,#hermione;#hermione;#andromaque,#hermione;#andromaque;#andromaque,#pyrrhus',
     ),
   ),
   'racine_andromaque68_III02' => 
   array (
     'pattern' => 
     array (
-      '#ANDROMAQUE' => 
+      '#andromaque' => 
       array (
         0 => 0,
         1 => 0,
@@ -26561,7 +25448,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#PYRRHUS' => 
+      '#pyrrhus' => 
       array (
         0 => 0,
         1 => 0,
@@ -26570,7 +25457,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#ORESTE' => 
+      '#oreste' => 
       array (
         0 => 1,
         1 => 0,
@@ -26579,7 +25466,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#HERMIONE' => 
+      '#hermione' => 
       array (
         0 => 1,
         1 => 1,
@@ -26603,14 +25490,15 @@
       'titleId' => 'Andromaque',
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
-      'string' => 'ORESTE-HERMIONE /HERMIONE /ANDROMAQUE-HERMIONE /ANDROMAQUE/ANDROMAQUE-PYRRHUS/ANDROMAQUE-PYRRHUS',
+      'string' => 'ORESTE-HERMIONE/HERMIONE/ANDROMAQUE-HERMIONE/ANDROMAQUE/ANDROMAQUE-PYRRHUS/ANDROMAQUE-PYRRHUS',
+      'string-id' => '#oreste,#hermione;#hermione;#andromaque,#hermione;#andromaque;#andromaque,#pyrrhus;#andromaque,#pyrrhus',
     ),
   ),
   'racine_andromaque68_III03' => 
   array (
     'pattern' => 
     array (
-      '#ANDROMAQUE' => 
+      '#andromaque' => 
       array (
         0 => 0,
         1 => 1,
@@ -26619,7 +25507,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#PYRRHUS' => 
+      '#pyrrhus' => 
       array (
         0 => 0,
         1 => 0,
@@ -26628,7 +25516,7 @@
         4 => 1,
         5 => 0,
       ),
-      '#HERMIONE' => 
+      '#hermione' => 
       array (
         0 => 1,
         1 => 1,
@@ -26652,14 +25540,15 @@
       'titleId' => 'Andromaque',
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
-      'string' => 'HERMIONE /ANDROMAQUE-HERMIONE /ANDROMAQUE/ANDROMAQUE-PYRRHUS/ANDROMAQUE-PYRRHUS/ANDROMAQUE',
+      'string' => 'HERMIONE/ANDROMAQUE-HERMIONE/ANDROMAQUE/ANDROMAQUE-PYRRHUS/ANDROMAQUE-PYRRHUS/ANDROMAQUE',
+      'string-id' => '#hermione;#andromaque,#hermione;#andromaque;#andromaque,#pyrrhus;#andromaque,#pyrrhus;#andromaque',
     ),
   ),
   'racine_andromaque68_IV01' => 
   array (
     'pattern' => 
     array (
-      '#ANDROMAQUE' => 
+      '#andromaque' => 
       array (
         0 => 1,
         1 => 0,
@@ -26668,7 +25557,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#PYRRHUS' => 
+      '#pyrrhus' => 
       array (
         0 => 0,
         1 => 0,
@@ -26677,7 +25566,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#ORESTE' => 
+      '#oreste' => 
       array (
         0 => 0,
         1 => 0,
@@ -26686,7 +25575,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#HERMIONE' => 
+      '#hermione' => 
       array (
         0 => 0,
         1 => 1,
@@ -26710,7 +25599,8 @@
       'titleId' => 'Andromaque',
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
-      'string' => 'ANDROMAQUE/HERMIONE /ORESTE-HERMIONE /HERMIONE /PYRRHUS-HERMIONE /PYRRHUS',
+      'string' => 'ANDROMAQUE/HERMIONE/ORESTE-HERMIONE/HERMIONE/PYRRHUS-HERMIONE/PYRRHUS',
+      'string-id' => '#andromaque;#hermione;#oreste,#hermione;#hermione;#pyrrhus,#hermione;#pyrrhus',
     ),
   ),
   'racine_alexandre66_III01' => 
@@ -26778,6 +25668,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'AXIANE-CLÉOFILE/TAXILE-AXIANE-CLÉOFILE/TAXILE-CLÉOFILE/ALEXANDRE-TAXILE-CLÉOFILE-ÉPHESTION/ALEXANDRE-TAXILE-CLÉOFILE/ALEXANDRE-CLÉOFILE',
+      'string-id' => '#AXIANE,#CLEOFILE;#TAXILE,#AXIANE,#CLEOFILE;#TAXILE,#CLEOFILE;#ALEXANDRE,#TAXILE,#CLEOFILE,#EPHESTION;#ALEXANDRE,#TAXILE,#CLEOFILE;#ALEXANDRE,#CLEOFILE',
     ),
   ),
   'racine_alexandre66_III02' => 
@@ -26845,6 +25736,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Racine',
       'string' => 'TAXILE-AXIANE-CLÉOFILE/TAXILE-CLÉOFILE/ALEXANDRE-TAXILE-CLÉOFILE-ÉPHESTION/ALEXANDRE-TAXILE-CLÉOFILE/ALEXANDRE-CLÉOFILE/ALEXANDRE-CLÉOFILE-ÉPHESTION',
+      'string-id' => '#TAXILE,#AXIANE,#CLEOFILE;#TAXILE,#CLEOFILE;#ALEXANDRE,#TAXILE,#CLEOFILE,#EPHESTION;#ALEXANDRE,#TAXILE,#CLEOFILE;#ALEXANDRE,#CLEOFILE;#ALEXANDRE,#CLEOFILE,#EPHESTION',
     ),
   ),
   'pradon_statira_I01' => 
@@ -26894,6 +25786,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Pradon',
       'string' => 'PERDICCAS/ROXANE/ROXANE/ROXANE/ROXANE-LÉONATUS-PERDICCAS/LÉONATUS',
+      'string-id' => '#PERDICCAS;#ROXANE;#ROXANE;#ROXANE;#ROXANE,#LEONATUS,#PERDICCAS;#LEONATUS',
     ),
   ),
   'pradon_statira_II01' => 
@@ -26934,6 +25827,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Pradon',
       'string' => 'STATIRA/STATIRA//ROXANE/ROXANE/ROXANE',
+      'string-id' => '#STATIRA;#STATIRA;;#ROXANE;#ROXANE;#ROXANE',
     ),
   ),
   'pradon_statira_II02' => 
@@ -26983,6 +25877,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Pradon',
       'string' => 'STATIRA//ROXANE/ROXANE/ROXANE/ROXANE-PERDICCAS',
+      'string-id' => '#STATIRA;;#ROXANE;#ROXANE;#ROXANE;#ROXANE,#PERDICCAS',
     ),
   ),
   'pradon_statira_III01' => 
@@ -27041,6 +25936,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Pradon',
       'string' => 'STATIRA/STATIRA-PERDICCAS/STATIRA/STATIRA-ROXANE/STATIRA-ROXANE-LÉONATUS/ROXANE-LÉONATUS',
+      'string-id' => '#STATIRA;#STATIRA,#PERDICCAS;#STATIRA;#STATIRA,#ROXANE;#STATIRA,#ROXANE,#LEONATUS;#ROXANE,#LEONATUS',
     ),
   ),
   'pradon_statira_IV01' => 
@@ -27099,6 +25995,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Pradon',
       'string' => 'PERDICCAS/STATIRA-PERDICCAS/STATIRA/STATIRA-LÉONATUS/STATIRA-ROXANE-LÉONATUS/STATIRA-ROXANE-LÉONATUS-PERDICCAS',
+      'string-id' => '#PERDICCAS;#STATIRA,#PERDICCAS;#STATIRA;#STATIRA,#LEONATUS;#STATIRA,#ROXANE,#LEONATUS;#STATIRA,#ROXANE,#LEONATUS,#PERDICCAS',
     ),
   ),
   'pradon_statira_IV02' => 
@@ -27157,6 +26054,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Pradon',
       'string' => 'STATIRA-PERDICCAS/STATIRA/STATIRA-LÉONATUS/STATIRA-ROXANE-LÉONATUS/STATIRA-ROXANE-LÉONATUS-PERDICCAS/ROXANE',
+      'string-id' => '#STATIRA,#PERDICCAS;#STATIRA;#STATIRA,#LEONATUS;#STATIRA,#ROXANE,#LEONATUS;#STATIRA,#ROXANE,#LEONATUS,#PERDICCAS;#ROXANE',
     ),
   ),
   'pradon_statira_V01' => 
@@ -27197,6 +26095,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Pradon',
       'string' => 'ROXANE/STATIRA-ROXANE/STATIRA-ROXANE/STATIRA-ROXANE/ROXANE/STATIRA-ROXANE',
+      'string-id' => '#ROXANE;#STATIRA,#ROXANE;#STATIRA,#ROXANE;#STATIRA,#ROXANE;#ROXANE;#STATIRA,#ROXANE',
     ),
   ),
   'pradon_statira_V02' => 
@@ -27237,6 +26136,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Pradon',
       'string' => 'STATIRA-ROXANE/STATIRA-ROXANE/STATIRA-ROXANE/ROXANE/STATIRA-ROXANE/STATIRA',
+      'string-id' => '#STATIRA,#ROXANE;#STATIRA,#ROXANE;#STATIRA,#ROXANE;#ROXANE;#STATIRA,#ROXANE;#STATIRA',
     ),
   ),
   'pradon_statira_V03' => 
@@ -27286,6 +26186,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Pradon',
       'string' => 'STATIRA-ROXANE/STATIRA-ROXANE/ROXANE/STATIRA-ROXANE/STATIRA/STATIRA-LÉONATUS',
+      'string-id' => '#STATIRA,#ROXANE;#STATIRA,#ROXANE;#ROXANE;#STATIRA,#ROXANE;#STATIRA;#STATIRA,#LEONATUS',
     ),
   ),
   'pradon_statira_V04' => 
@@ -27335,6 +26236,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Pradon',
       'string' => 'STATIRA-ROXANE/ROXANE/STATIRA-ROXANE/STATIRA/STATIRA-LÉONATUS/LÉONATUS',
+      'string-id' => '#STATIRA,#ROXANE;#ROXANE;#STATIRA,#ROXANE;#STATIRA;#STATIRA,#LEONATUS;#LEONATUS',
     ),
   ),
   'pradon_statira_V05' => 
@@ -27393,6 +26295,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Pradon',
       'string' => 'ROXANE/STATIRA-ROXANE/STATIRA/STATIRA-LÉONATUS/LÉONATUS/LÉONATUS-PERDICCAS',
+      'string-id' => '#ROXANE;#STATIRA,#ROXANE;#STATIRA;#STATIRA,#LEONATUS;#LEONATUS;#LEONATUS,#PERDICCAS',
     ),
   ),
   'pradon_phedre_II01' => 
@@ -27451,6 +26354,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Pradon',
       'string' => 'HIPPOLYTE-ARICIE/PHÈDRE-HIPPOLYTE-ARICIE/PHÈDRE-ARICIE/PHÈDRE-ARICIE/PHÈDRE-ARICIE/THÉSÉE-HIPPOLYTE-ARICIE',
+      'string-id' => '#HIPPOLYTE,#ARICIE;#PHEDRE,#HIPPOLYTE,#ARICIE;#PHEDRE,#ARICIE;#PHEDRE,#ARICIE;#PHEDRE,#ARICIE;#THESEE,#HIPPOLYTE,#ARICIE',
     ),
   ),
   'pradon_phedre_II02' => 
@@ -27509,6 +26413,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Pradon',
       'string' => 'PHÈDRE-HIPPOLYTE-ARICIE/PHÈDRE-ARICIE/PHÈDRE-ARICIE/PHÈDRE-ARICIE/THÉSÉE-HIPPOLYTE-ARICIE/THÉSÉE-HIPPOLYTE',
+      'string-id' => '#PHEDRE,#HIPPOLYTE,#ARICIE;#PHEDRE,#ARICIE;#PHEDRE,#ARICIE;#PHEDRE,#ARICIE;#THESEE,#HIPPOLYTE,#ARICIE;#THESEE,#HIPPOLYTE',
     ),
   ),
   'pradon_phedre_IV01' => 
@@ -27558,6 +26463,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Pradon',
       'string' => 'THÉSÉE/THÉSÉE-PHÈDRE/PHÈDRE/PHÈDRE-HIPPOLYTE/THÉSÉE-PHÈDRE-HIPPOLYTE/THÉSÉE-PHÈDRE',
+      'string-id' => '#THESEE;#THESEE,#PHEDRE;#PHEDRE;#PHEDRE,#HIPPOLYTE;#THESEE,#PHEDRE,#HIPPOLYTE;#THESEE,#PHEDRE',
     ),
   ),
   'pradon_mortdebajazet_III01' => 
@@ -27625,6 +26531,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Pradon',
       'string' => 'BAJAZET-ANDRONIC/TAMERLAN-BAJAZET-ANDRONIC-TAMUR/TAMERLAN-ANDRONIC/TAMERLAN-ASTÉRIE-ANDRONIC/ASTÉRIE-ANDRONIC/BAJAZET-ASTÉRIE',
+      'string-id' => '#BAJAZET,#ANDRONIC;#TAMERLAN,#BAJAZET,#ANDRONIC,#TAMUR;#TAMERLAN,#ANDRONIC;#TAMERLAN,#ASTERIE,#ANDRONIC;#ASTERIE,#ANDRONIC;#BAJAZET,#ASTERIE',
     ),
   ),
   'pradon_mortdebajazet_V01' => 
@@ -27692,12 +26599,22 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Pradon',
       'string' => 'ASTÉRIE/TAMERLAN-TAMUR/TAMERLAN-ASTÉRIE/TAMERLAN-ASTÉRIE-ANDRONIC/TAMERLAN-BAJAZET-ASTÉRIE-ANDRONIC-TAMUR-SUITE DE GARDES/TAMERLAN-ANDRONIC',
+      'string-id' => '#ASTERIE;#TAMERLAN,#TAMUR;#TAMERLAN,#ASTERIE;#TAMERLAN,#ASTERIE,#ANDRONIC;#TAMERLAN,#BAJAZET,#ASTERIE,#ANDRONIC,#TAMUR,#SUITEDEGARDES;#TAMERLAN,#ANDRONIC',
     ),
   ),
   'prade_arsace_I01' => 
   array (
     'pattern' => 
     array (
+      '#LEROI' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
       '#PHARASMANE' => 
       array (
         0 => 0,
@@ -27758,13 +26675,23 @@
       'titleId' => 'Arsace',
       'genreId' => 'Tragedie',
       'authorId' => 'Prade',
-      'string' => 'VOLOGESE/ARAXIE-MÉDONIE/ARAXIE-MÉDONIE/MÉDONIE/PHARASMANE-MÉDONIE/PHARASMANE-ARSACE-MÉDONIE',
+      'string' => 'ARTABAN-VOLOGESE/ARTABAN-ARAXIE-MÉDONIE/ARAXIE-MÉDONIE/MÉDONIE/PHARASMANE-MÉDONIE/PHARASMANE-ARSACE-MÉDONIE',
+      'string-id' => '#LEROI,#VOLOGESE;#LEROI,#ARAXIE,#MEDONIE;#ARAXIE,#MEDONIE;#MEDONIE;#PHARASMANE,#MEDONIE;#PHARASMANE,#ARSACE,#MEDONIE',
     ),
   ),
   'prade_arsace_I02' => 
   array (
     'pattern' => 
     array (
+      '#LEROI' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
       '#PHARASMANE' => 
       array (
         0 => 0,
@@ -27816,7 +26743,8 @@
       'titleId' => 'Arsace',
       'genreId' => 'Tragedie',
       'authorId' => 'Prade',
-      'string' => 'ARAXIE-MÉDONIE/ARAXIE-MÉDONIE/MÉDONIE/PHARASMANE-MÉDONIE/PHARASMANE-ARSACE-MÉDONIE/ARSACE-MÉDONIE',
+      'string' => 'ARTABAN-ARAXIE-MÉDONIE/ARAXIE-MÉDONIE/MÉDONIE/PHARASMANE-MÉDONIE/PHARASMANE-ARSACE-MÉDONIE/ARSACE-MÉDONIE',
+      'string-id' => '#LEROI,#ARAXIE,#MEDONIE;#ARAXIE,#MEDONIE;#MEDONIE;#PHARASMANE,#MEDONIE;#PHARASMANE,#ARSACE,#MEDONIE;#ARSACE,#MEDONIE',
     ),
   ),
   'prade_arsace_II01' => 
@@ -27875,6 +26803,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Prade',
       'string' => 'ARAXIE-MÉDONIE/ARSACE-ARAXIE-MÉDONIE/ARAXIE-MÉDONIE/ARAXIE/PHARASMANE-ARAXIE/PHARASMANE',
+      'string-id' => '#ARAXIE,#MEDONIE;#ARSACE,#ARAXIE,#MEDONIE;#ARAXIE,#MEDONIE;#ARAXIE;#PHARASMANE,#ARAXIE;#PHARASMANE',
     ),
   ),
   'prade_arsace_II02' => 
@@ -27933,12 +26862,22 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Prade',
       'string' => 'ARSACE-ARAXIE-MÉDONIE/ARAXIE-MÉDONIE/ARAXIE/PHARASMANE-ARAXIE/PHARASMANE/PHARASMANE-ARSACE',
+      'string-id' => '#ARSACE,#ARAXIE,#MEDONIE;#ARAXIE,#MEDONIE;#ARAXIE;#PHARASMANE,#ARAXIE;#PHARASMANE;#PHARASMANE,#ARSACE',
     ),
   ),
   'prade_arsace_II03' => 
   array (
     'pattern' => 
     array (
+      '#LEROI' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 1,
+      ),
       '#PHARASMANE' => 
       array (
         0 => 0,
@@ -27990,13 +26929,23 @@
       'titleId' => 'Arsace',
       'genreId' => 'Tragedie',
       'authorId' => 'Prade',
-      'string' => 'ARAXIE-MÉDONIE/ARAXIE/PHARASMANE-ARAXIE/PHARASMANE/PHARASMANE-ARSACE/PHARASMANE-ARSACE',
+      'string' => 'ARAXIE-MÉDONIE/ARAXIE/PHARASMANE-ARAXIE/PHARASMANE/PHARASMANE-ARSACE/ARTABAN-PHARASMANE-ARSACE',
+      'string-id' => '#ARAXIE,#MEDONIE;#ARAXIE;#PHARASMANE,#ARAXIE;#PHARASMANE;#PHARASMANE,#ARSACE;#LEROI,#PHARASMANE,#ARSACE',
     ),
   ),
   'prade_arsace_II04' => 
   array (
     'pattern' => 
     array (
+      '#LEROI' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 1,
+        5 => 1,
+      ),
       '#PHARASMANE' => 
       array (
         0 => 0,
@@ -28048,7 +26997,8 @@
       'titleId' => 'Arsace',
       'genreId' => 'Tragedie',
       'authorId' => 'Prade',
-      'string' => 'ARAXIE/PHARASMANE-ARAXIE/PHARASMANE/PHARASMANE-ARSACE/PHARASMANE-ARSACE/VOLOGESE',
+      'string' => 'ARAXIE/PHARASMANE-ARAXIE/PHARASMANE/PHARASMANE-ARSACE/ARTABAN-PHARASMANE-ARSACE/ARTABAN-VOLOGESE',
+      'string-id' => '#ARAXIE;#PHARASMANE,#ARAXIE;#PHARASMANE;#PHARASMANE,#ARSACE;#LEROI,#PHARASMANE,#ARSACE;#LEROI,#VOLOGESE',
     ),
   ),
   'prade_arsace_III01' => 
@@ -28115,7 +27065,8 @@
       'titleId' => 'Arsace',
       'genreId' => 'Tragedie',
       'authorId' => 'Prade',
-      'string' => 'PHARASMANE-ARAXIE/PHARASMANE/PHARASMANE-MÉDONIE/PHARASMANE-ARSACE/PHARASMANE/PHARASMANE-VOLOGESE-ARAXIE',
+      'string' => 'PHARASMANE-ARAXIE/PHARASMANE/PHARASMANE-MÉDONIE/PHARASMANE-ARSACE/PHARASMANE/ARTABAN-PHARASMANE-VOLOGESE-ARAXIE',
+      'string-id' => '#PHARASMANE,#ARAXIE;#PHARASMANE;#PHARASMANE,#MEDONIE;#PHARASMANE,#ARSACE;#PHARASMANE;#LEROI,#PHARASMANE,#VOLOGESE,#ARAXIE',
     ),
   ),
   'prade_arsace_III02' => 
@@ -28182,7 +27133,8 @@
       'titleId' => 'Arsace',
       'genreId' => 'Tragedie',
       'authorId' => 'Prade',
-      'string' => 'PHARASMANE/PHARASMANE-MÉDONIE/PHARASMANE-ARSACE/PHARASMANE/PHARASMANE-VOLOGESE-ARAXIE/VOLOGESE',
+      'string' => 'PHARASMANE/PHARASMANE-MÉDONIE/PHARASMANE-ARSACE/PHARASMANE/ARTABAN-PHARASMANE-VOLOGESE-ARAXIE/ARTABAN-VOLOGESE',
+      'string-id' => '#PHARASMANE;#PHARASMANE,#MEDONIE;#PHARASMANE,#ARSACE;#PHARASMANE;#LEROI,#PHARASMANE,#VOLOGESE,#ARAXIE;#LEROI,#VOLOGESE',
     ),
   ),
   'prade_arsace_III03' => 
@@ -28249,7 +27201,8 @@
       'titleId' => 'Arsace',
       'genreId' => 'Tragedie',
       'authorId' => 'Prade',
-      'string' => 'PHARASMANE-MÉDONIE/PHARASMANE-ARSACE/PHARASMANE/PHARASMANE-VOLOGESE-ARAXIE/VOLOGESE/PHARASMANE-ARSACE-VOLOGESE',
+      'string' => 'PHARASMANE-MÉDONIE/PHARASMANE-ARSACE/PHARASMANE/ARTABAN-PHARASMANE-VOLOGESE-ARAXIE/ARTABAN-VOLOGESE/ARTABAN-PHARASMANE-ARSACE-VOLOGESE',
+      'string-id' => '#PHARASMANE,#MEDONIE;#PHARASMANE,#ARSACE;#PHARASMANE;#LEROI,#PHARASMANE,#VOLOGESE,#ARAXIE;#LEROI,#VOLOGESE;#LEROI,#PHARASMANE,#ARSACE,#VOLOGESE',
     ),
   ),
   'prade_arsace_III04' => 
@@ -28307,13 +27260,23 @@
       'titleId' => 'Arsace',
       'genreId' => 'Tragedie',
       'authorId' => 'Prade',
-      'string' => 'PHARASMANE-ARSACE/PHARASMANE/PHARASMANE-VOLOGESE-ARAXIE/VOLOGESE/PHARASMANE-ARSACE-VOLOGESE/VOLOGESE',
+      'string' => 'PHARASMANE-ARSACE/PHARASMANE/ARTABAN-PHARASMANE-VOLOGESE-ARAXIE/ARTABAN-VOLOGESE/ARTABAN-PHARASMANE-ARSACE-VOLOGESE/ARTABAN-VOLOGESE',
+      'string-id' => '#PHARASMANE,#ARSACE;#PHARASMANE;#LEROI,#PHARASMANE,#VOLOGESE,#ARAXIE;#LEROI,#VOLOGESE;#LEROI,#PHARASMANE,#ARSACE,#VOLOGESE;#LEROI,#VOLOGESE',
     ),
   ),
   'prade_arsace_IV01' => 
   array (
     'pattern' => 
     array (
+      '#LEROI' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 1,
+      ),
       '#PHARASMANE' => 
       array (
         0 => 1,
@@ -28365,13 +27328,23 @@
       'titleId' => 'Arsace',
       'genreId' => 'Tragedie',
       'authorId' => 'Prade',
-      'string' => 'PHARASMANE-ARSACE-ARAXIE/PHARASMANE-ARSACE-ARAXIE/PHARASMANE-ARSACE/PHARASMANE-ARSACE-MÉDONIE/PHARASMANE-MÉDONIE/PHARASMANE',
+      'string' => 'ARTABAN-PHARASMANE-ARSACE-ARAXIE/PHARASMANE-ARSACE-ARAXIE/PHARASMANE-ARSACE/PHARASMANE-ARSACE-MÉDONIE/PHARASMANE-MÉDONIE/ARTABAN-PHARASMANE',
+      'string-id' => '#LEROI,#PHARASMANE,#ARSACE,#ARAXIE;#PHARASMANE,#ARSACE,#ARAXIE;#PHARASMANE,#ARSACE;#PHARASMANE,#ARSACE,#MEDONIE;#PHARASMANE,#MEDONIE;#LEROI,#PHARASMANE',
     ),
   ),
   'prade_arsace_IV02' => 
   array (
     'pattern' => 
     array (
+      '#LEROI' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 1,
+        5 => 0,
+      ),
       '#PHARASMANE' => 
       array (
         0 => 1,
@@ -28423,13 +27396,23 @@
       'titleId' => 'Arsace',
       'genreId' => 'Tragedie',
       'authorId' => 'Prade',
-      'string' => 'PHARASMANE-ARSACE-ARAXIE/PHARASMANE-ARSACE/PHARASMANE-ARSACE-MÉDONIE/PHARASMANE-MÉDONIE/PHARASMANE/PHARASMANE',
+      'string' => 'PHARASMANE-ARSACE-ARAXIE/PHARASMANE-ARSACE/PHARASMANE-ARSACE-MÉDONIE/PHARASMANE-MÉDONIE/ARTABAN-PHARASMANE/PHARASMANE',
+      'string-id' => '#PHARASMANE,#ARSACE,#ARAXIE;#PHARASMANE,#ARSACE;#PHARASMANE,#ARSACE,#MEDONIE;#PHARASMANE,#MEDONIE;#LEROI,#PHARASMANE;#PHARASMANE',
     ),
   ),
   'prade_arsace_V01' => 
   array (
     'pattern' => 
     array (
+      '#LEROI' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
       '#ARSACE' => 
       array (
         0 => 1,
@@ -28472,13 +27455,23 @@
       'titleId' => 'Arsace',
       'genreId' => 'Tragedie',
       'authorId' => 'Prade',
-      'string' => 'ARSACE-ARAXIE/ARAXIE/VOLOGESE-ARAXIE/ARAXIE/ARSACE-ARAXIE/ARSACE-VOLOGESE-ARAXIE',
+      'string' => 'ARSACE-ARAXIE/ARAXIE/VOLOGESE-ARAXIE/ARTABAN-ARAXIE/ARTABAN-ARSACE-ARAXIE/ARTABAN-ARSACE-VOLOGESE-ARAXIE',
+      'string-id' => '#ARSACE,#ARAXIE;#ARAXIE;#VOLOGESE,#ARAXIE;#LEROI,#ARAXIE;#LEROI,#ARSACE,#ARAXIE;#LEROI,#ARSACE,#VOLOGESE,#ARAXIE',
     ),
   ),
   'prade_arsace_V02' => 
   array (
     'pattern' => 
     array (
+      '#LEROI' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
       '#PHARASMANE' => 
       array (
         0 => 0,
@@ -28530,7 +27523,8 @@
       'titleId' => 'Arsace',
       'genreId' => 'Tragedie',
       'authorId' => 'Prade',
-      'string' => 'ARAXIE/VOLOGESE-ARAXIE/ARAXIE/ARSACE-ARAXIE/ARSACE-VOLOGESE-ARAXIE/PHARASMANE-ARSACE-VOLOGESE-ARAXIE',
+      'string' => 'ARAXIE/VOLOGESE-ARAXIE/ARTABAN-ARAXIE/ARTABAN-ARSACE-ARAXIE/ARTABAN-ARSACE-VOLOGESE-ARAXIE/ARTABAN-PHARASMANE-ARSACE-VOLOGESE-ARAXIE',
+      'string-id' => '#ARAXIE;#VOLOGESE,#ARAXIE;#LEROI,#ARAXIE;#LEROI,#ARSACE,#ARAXIE;#LEROI,#ARSACE,#VOLOGESE,#ARAXIE;#LEROI,#PHARASMANE,#ARSACE,#VOLOGESE,#ARAXIE',
     ),
   ),
   'poisson_holandemalade_I01' => 
@@ -28555,7 +27549,7 @@
         4 => 0,
         5 => 1,
       ),
-      '#FRELINGUE' => 
+      '#BADZIN' => 
       array (
         0 => 1,
         1 => 1,
@@ -28606,7 +27600,8 @@
       'titleId' => 'LaHollandemalade',
       'genreId' => 'Comedie',
       'authorId' => 'Poisson',
-      'string' => 'MARILLE-GOULEMER-FRELINGUE/MARILLE-GOULEMER-FRELINGUE-L\'HÔTE-PACOLE/LA HOLLANDE-MARILLE/LA HOLLANDE-PACOLE/LA HOLLANDE-LA FLAMANDE/LA HOLLANDE-MARILLE-PACOLE',
+      'string' => 'MARILLE-GOULEMER-FRELINGUE-BADZlN/MARILLE-GOULEMER-FRELINGUE-BADZlN-L\'HÔTE-PACOLE/LA HOLLANDE-MARILLE/LA HOLLANDE-PACOLE/LA HOLLANDE-LA FLAMANDE/LA HOLLANDE-MARILLE-PACOLE',
+      'string-id' => '#MARILLE,#GOULEMER,#FRELINGUE,#BADZIN;#MARILLE,#GOULEMER,#FRELINGUE,#BADZIN,#LHOTE,#PACOLE;#LAHOLLANDE,#MARILLE;#LAHOLLANDE,#PACOLE;#LAHOLLANDE,#LAFLAMANDE;#LAHOLLANDE,#MARILLE,#PACOLE',
     ),
   ),
   'poisson_holandemalade_I02' => 
@@ -28649,6 +27644,15 @@
         4 => 0,
         5 => 0,
       ),
+      '#BOURGUEMESTRE2' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 1,
+      ),
       '#PACOLE' => 
       array (
         0 => 1,
@@ -28673,7 +27677,8 @@
       'titleId' => 'LaHollandemalade',
       'genreId' => 'Comedie',
       'authorId' => 'Poisson',
-      'string' => 'MARILLE-GOULEMER-FRELINGUE-L\'HÔTE-PACOLE/LA HOLLANDE-MARILLE/LA HOLLANDE-PACOLE/LA HOLLANDE-LA FLAMANDE/LA HOLLANDE-MARILLE-PACOLE/LA HOLLANDE',
+      'string' => 'MARILLE-GOULEMER-FRELINGUE-BADZlN-L\'HÔTE-PACOLE/LA HOLLANDE-MARILLE/LA HOLLANDE-PACOLE/LA HOLLANDE-LA FLAMANDE/LA HOLLANDE-MARILLE-PACOLE/LA HOLLANDE-I. BOURGUEMESTRE-II.BOURGUEMESTRE',
+      'string-id' => '#MARILLE,#GOULEMER,#FRELINGUE,#BADZIN,#LHOTE,#PACOLE;#LAHOLLANDE,#MARILLE;#LAHOLLANDE,#PACOLE;#LAHOLLANDE,#LAFLAMANDE;#LAHOLLANDE,#MARILLE,#PACOLE;#LAHOLLANDE,#BOURGUEMESTRE1,#BOURGUEMESTRE2',
     ),
   ),
   'poisson_holandemalade_I03' => 
@@ -28707,7 +27712,16 @@
         4 => 0,
         5 => 0,
       ),
-      '#MEDECINANGLAIS' => 
+      '#BOURGUEMESTRE2' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 1,
+        5 => 1,
+      ),
+      '#ANGLAIS' => 
       array (
         0 => 0,
         1 => 0,
@@ -28740,7 +27754,8 @@
       'titleId' => 'LaHollandemalade',
       'genreId' => 'Comedie',
       'authorId' => 'Poisson',
-      'string' => 'LA HOLLANDE-MARILLE/LA HOLLANDE-PACOLE/LA HOLLANDE-LA FLAMANDE/LA HOLLANDE-MARILLE-PACOLE/LA HOLLANDE/LA HOLLANDE-MÉDECIN ANGLAIS-PACOLE',
+      'string' => 'LA HOLLANDE-MARILLE/LA HOLLANDE-PACOLE/LA HOLLANDE-LA FLAMANDE/LA HOLLANDE-MARILLE-PACOLE/LA HOLLANDE-I. BOURGUEMESTRE-II.BOURGUEMESTRE/LA HOLLANDE-I. BOURGUEMESTRE-II.BOURGUEMESTRE-MÉDECIN FRANÇAIS-MÉDECIN ANGLAIS-PACOLE',
+      'string-id' => '#LAHOLLANDE,#MARILLE;#LAHOLLANDE,#PACOLE;#LAHOLLANDE,#LAFLAMANDE;#LAHOLLANDE,#MARILLE,#PACOLE;#LAHOLLANDE,#BOURGUEMESTRE1,#BOURGUEMESTRE2;#LAHOLLANDE,#BOURGUEMESTRE1,#BOURGUEMESTRE2,#FRANCAIS,#ANGLAIS,#PACOLE',
     ),
   ),
   'poisson_holandemalade_I04' => 
@@ -28774,7 +27789,16 @@
         4 => 0,
         5 => 0,
       ),
-      '#MEDECINESPAGNOL' => 
+      '#BOURGUEMESTRE2' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 1,
+        4 => 1,
+        5 => 0,
+      ),
+      '#ESPAGNOL' => 
       array (
         0 => 0,
         1 => 0,
@@ -28783,7 +27807,7 @@
         4 => 0,
         5 => 1,
       ),
-      '#MEDECINANGLAIS' => 
+      '#ANGLAIS' => 
       array (
         0 => 0,
         1 => 0,
@@ -28816,7 +27840,8 @@
       'titleId' => 'LaHollandemalade',
       'genreId' => 'Comedie',
       'authorId' => 'Poisson',
-      'string' => 'LA HOLLANDE-PACOLE/LA HOLLANDE-LA FLAMANDE/LA HOLLANDE-MARILLE-PACOLE/LA HOLLANDE/LA HOLLANDE-MÉDECIN ANGLAIS-PACOLE/LA HOLLANDE-MARILLE-MÉDECIN ESPAGNOL-MÉDECIN ANGLAIS',
+      'string' => 'LA HOLLANDE-PACOLE/LA HOLLANDE-LA FLAMANDE/LA HOLLANDE-MARILLE-PACOLE/LA HOLLANDE-I. BOURGUEMESTRE-II.BOURGUEMESTRE/LA HOLLANDE-I. BOURGUEMESTRE-II.BOURGUEMESTRE-MÉDECIN FRANÇAIS-MÉDECIN ANGLAIS-PACOLE/LA HOLLANDE-MARILLE-MÉDECIN FRANÇAIS-MÉDECIN ESPAGNOL-MÉDECIN ANGLAIS',
+      'string-id' => '#LAHOLLANDE,#PACOLE;#LAHOLLANDE,#LAFLAMANDE;#LAHOLLANDE,#MARILLE,#PACOLE;#LAHOLLANDE,#BOURGUEMESTRE1,#BOURGUEMESTRE2;#LAHOLLANDE,#BOURGUEMESTRE1,#BOURGUEMESTRE2,#FRANCAIS,#ANGLAIS,#PACOLE;#LAHOLLANDE,#MARILLE,#FRANCAIS,#ESPAGNOL,#ANGLAIS',
     ),
   ),
   'poisson_holandemalade_I05' => 
@@ -28850,23 +27875,41 @@
         4 => 0,
         5 => 0,
       ),
-      '#MEDECINESPAGNOL' => 
+      '#BOURGUEMESTRE2' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 1,
+        4 => 0,
+        5 => 0,
+      ),
+      '#ESPAGNOL' => 
       array (
         0 => 0,
         1 => 0,
         2 => 0,
         3 => 0,
         4 => 1,
-        5 => 0,
+        5 => 1,
       ),
-      '#MEDECINANGLAIS' => 
+      '#ANGLAIS' => 
       array (
         0 => 0,
         1 => 0,
         2 => 0,
         3 => 1,
         4 => 1,
-        5 => 0,
+        5 => 1,
+      ),
+      '#ALLEMAND' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 1,
       ),
       '#PACOLE' => 
       array (
@@ -28892,7 +27935,8 @@
       'titleId' => 'LaHollandemalade',
       'genreId' => 'Comedie',
       'authorId' => 'Poisson',
-      'string' => 'LA HOLLANDE-LA FLAMANDE/LA HOLLANDE-MARILLE-PACOLE/LA HOLLANDE/LA HOLLANDE-MÉDECIN ANGLAIS-PACOLE/LA HOLLANDE-MARILLE-MÉDECIN ESPAGNOL-MÉDECIN ANGLAIS/LA HOLLANDE-MARILLE',
+      'string' => 'LA HOLLANDE-LA FLAMANDE/LA HOLLANDE-MARILLE-PACOLE/LA HOLLANDE-I. BOURGUEMESTRE-II.BOURGUEMESTRE/LA HOLLANDE-I. BOURGUEMESTRE-II.BOURGUEMESTRE-MÉDECIN FRANÇAIS-MÉDECIN ANGLAIS-PACOLE/LA HOLLANDE-MARILLE-MÉDECIN FRANÇAIS-MÉDECIN ESPAGNOL-MÉDECIN ANGLAIS/LA HOLLANDE-MARILLE-MÉDECIN FRANÇAIS-MÉDECIN ESPAGNOL-MÉDECIN ANGLAIS-MÉDECIN ALLEMAND',
+      'string-id' => '#LAHOLLANDE,#LAFLAMANDE;#LAHOLLANDE,#MARILLE,#PACOLE;#LAHOLLANDE,#BOURGUEMESTRE1,#BOURGUEMESTRE2;#LAHOLLANDE,#BOURGUEMESTRE1,#BOURGUEMESTRE2,#FRANCAIS,#ANGLAIS,#PACOLE;#LAHOLLANDE,#MARILLE,#FRANCAIS,#ESPAGNOL,#ANGLAIS;#LAHOLLANDE,#MARILLE,#FRANCAIS,#ESPAGNOL,#ANGLAIS,#ALLEMAND',
     ),
   ),
   'ouville_soupcons_I01' => 
@@ -28960,6 +28004,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'ALCIPE/ALCIPE-VIOLONS/ALCIPE-ASTRÉE/ALCIPE-ASTRÉE/LÉANDRE-FILEMON/FILEMON-ALCIPE-ASTRÉE',
+      'string-id' => '#ALCIPE;#ALCIPE,#VIOLONS;#ALCIPE,#ASTREE;#ALCIPE,#ASTREE;#LEANDRE,#FILEMON;#FILEMON,#ALCIPE,#ASTREE',
     ),
   ),
   'ouville_soupcons_I02' => 
@@ -29027,6 +28072,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'ALCIPE-VIOLONS/ALCIPE-ASTRÉE/ALCIPE-ASTRÉE/LÉANDRE-FILEMON/FILEMON-ALCIPE-ASTRÉE/LÉANDRE-FILEMON',
+      'string-id' => '#ALCIPE,#VIOLONS;#ALCIPE,#ASTREE;#ALCIPE,#ASTREE;#LEANDRE,#FILEMON;#FILEMON,#ALCIPE,#ASTREE;#LEANDRE,#FILEMON',
     ),
   ),
   'ouville_soupcons_II01' => 
@@ -29085,6 +28131,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'ALCIPE/LÉANDRE-FILEMON-ALCIPE/LÉANDRE-ALCIPE-ASTRÉE/ALCIPE-ASTRÉE/ALCIPE/LÉANDRE-FILEMON-ALCIPE',
+      'string-id' => '#ALCIPE;#LEANDRE,#FILEMON,#ALCIPE;#LEANDRE,#ALCIPE,#ASTREE;#ALCIPE,#ASTREE;#ALCIPE;#LEANDRE,#FILEMON,#ALCIPE',
     ),
   ),
   'ouville_soupcons_II02' => 
@@ -29143,6 +28190,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'LÉANDRE-FILEMON-ALCIPE/LÉANDRE-ALCIPE-ASTRÉE/ALCIPE-ASTRÉE/ALCIPE/LÉANDRE-FILEMON-ALCIPE/ALCIPE',
+      'string-id' => '#LEANDRE,#FILEMON,#ALCIPE;#LEANDRE,#ALCIPE,#ASTREE;#ALCIPE,#ASTREE;#ALCIPE;#LEANDRE,#FILEMON,#ALCIPE;#ALCIPE',
     ),
   ),
   'ouville_soupcons_III01' => 
@@ -29183,6 +28231,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'ASTRÉE-ORPHISE/ASTRÉE-ORPHISE/FILEMON-ASTRÉE-ORPHISE/FILEMON-ASTRÉE-ORPHISE/ASTRÉE-ORPHISE/ASTRÉE-ORPHISE',
+      'string-id' => '#ASTREE,#ORPHISE;#ASTREE,#ORPHISE;#FILEMON,#ASTREE,#ORPHISE;#FILEMON,#ASTREE,#ORPHISE;#ASTREE,#ORPHISE;#ASTREE,#ORPHISE',
     ),
   ),
   'ouville_soupcons_III02' => 
@@ -29232,6 +28281,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'ASTRÉE-ORPHISE/FILEMON-ASTRÉE-ORPHISE/FILEMON-ASTRÉE-ORPHISE/ASTRÉE-ORPHISE/ASTRÉE-ORPHISE/LÉANDRE-ASTRÉE-ORPHISE',
+      'string-id' => '#ASTREE,#ORPHISE;#FILEMON,#ASTREE,#ORPHISE;#FILEMON,#ASTREE,#ORPHISE;#ASTREE,#ORPHISE;#ASTREE,#ORPHISE;#LEANDRE,#ASTREE,#ORPHISE',
     ),
   ),
   'ouville_soupcons_III03' => 
@@ -29281,6 +28331,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'FILEMON-ASTRÉE-ORPHISE/FILEMON-ASTRÉE-ORPHISE/ASTRÉE-ORPHISE/ASTRÉE-ORPHISE/LÉANDRE-ASTRÉE-ORPHISE/ASTRÉE-ORPHISE',
+      'string-id' => '#FILEMON,#ASTREE,#ORPHISE;#FILEMON,#ASTREE,#ORPHISE;#ASTREE,#ORPHISE;#ASTREE,#ORPHISE;#LEANDRE,#ASTREE,#ORPHISE;#ASTREE,#ORPHISE',
     ),
   ),
   'ouville_soupcons_III04' => 
@@ -29330,6 +28381,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'FILEMON-ASTRÉE-ORPHISE/ASTRÉE-ORPHISE/ASTRÉE-ORPHISE/LÉANDRE-ASTRÉE-ORPHISE/ASTRÉE-ORPHISE/',
+      'string-id' => '#FILEMON,#ASTREE,#ORPHISE;#ASTREE,#ORPHISE;#ASTREE,#ORPHISE;#LEANDRE,#ASTREE,#ORPHISE;#ASTREE,#ORPHISE;',
     ),
   ),
   'ouville_soupcons_III05' => 
@@ -29370,6 +28422,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'ASTRÉE-ORPHISE/ASTRÉE-ORPHISE/LÉANDRE-ASTRÉE-ORPHISE/ASTRÉE-ORPHISE//',
+      'string-id' => '#ASTREE,#ORPHISE;#ASTREE,#ORPHISE;#LEANDRE,#ASTREE,#ORPHISE;#ASTREE,#ORPHISE;;',
     ),
   ),
   'ouville_soupcons_IV01' => 
@@ -29419,6 +28472,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'ASTRÉE-ORPHISE/LÉANDRE-ASTRÉE-ORPHISE/LÉANDRE/LÉANDRE/LÉANDRE-ALCIPE/LÉANDRE',
+      'string-id' => '#ASTREE,#ORPHISE;#LEANDRE,#ASTREE,#ORPHISE;#LEANDRE;#LEANDRE;#LEANDRE,#ALCIPE;#LEANDRE',
     ),
   ),
   'ouville_soupcons_IV02' => 
@@ -29468,6 +28522,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'LÉANDRE-ASTRÉE-ORPHISE/LÉANDRE/LÉANDRE/LÉANDRE-ALCIPE/LÉANDRE/LÉANDRE',
+      'string-id' => '#LEANDRE,#ASTREE,#ORPHISE;#LEANDRE;#LEANDRE;#LEANDRE,#ALCIPE;#LEANDRE;#LEANDRE',
     ),
   ),
   'ouville_soupcons_IV03' => 
@@ -29508,6 +28563,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'LÉANDRE/LÉANDRE/LÉANDRE-ALCIPE/LÉANDRE/LÉANDRE/LÉANDRE',
+      'string-id' => '#LEANDRE;#LEANDRE;#LEANDRE,#ALCIPE;#LEANDRE;#LEANDRE;#LEANDRE',
     ),
   ),
   'ouville_soupcons_IV04' => 
@@ -29557,6 +28613,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'LÉANDRE/LÉANDRE-ALCIPE/LÉANDRE/LÉANDRE/LÉANDRE/LÉANDRE-ASTRÉE',
+      'string-id' => '#LEANDRE;#LEANDRE,#ALCIPE;#LEANDRE;#LEANDRE;#LEANDRE;#LEANDRE,#ASTREE',
     ),
   ),
   'ouville_soupcons_IV05' => 
@@ -29606,6 +28663,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'LÉANDRE-ALCIPE/LÉANDRE/LÉANDRE/LÉANDRE/LÉANDRE-ASTRÉE/LÉANDRE-ASTRÉE',
+      'string-id' => '#LEANDRE,#ALCIPE;#LEANDRE;#LEANDRE;#LEANDRE;#LEANDRE,#ASTREE;#LEANDRE,#ASTREE',
     ),
   ),
   'ouville_soupcons_IV06' => 
@@ -29655,6 +28713,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'LÉANDRE/LÉANDRE/LÉANDRE/LÉANDRE-ASTRÉE/LÉANDRE-ASTRÉE/LÉANDRE-FILEMON-ASTRÉE-ORPHISE',
+      'string-id' => '#LEANDRE;#LEANDRE;#LEANDRE;#LEANDRE,#ASTREE;#LEANDRE,#ASTREE;#LEANDRE,#FILEMON,#ASTREE,#ORPHISE',
     ),
   ),
   'ouville_soupcons_IV07' => 
@@ -29704,6 +28763,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'LÉANDRE/LÉANDRE/LÉANDRE-ASTRÉE/LÉANDRE-ASTRÉE/LÉANDRE-FILEMON-ASTRÉE-ORPHISE/FILEMON-ASTRÉE-ORPHISE',
+      'string-id' => '#LEANDRE;#LEANDRE;#LEANDRE,#ASTREE;#LEANDRE,#ASTREE;#LEANDRE,#FILEMON,#ASTREE,#ORPHISE;#FILEMON,#ASTREE,#ORPHISE',
     ),
   ),
   'ouville_soupcons_IV08' => 
@@ -29762,6 +28822,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'LÉANDRE/LÉANDRE-ASTRÉE/LÉANDRE-ASTRÉE/LÉANDRE-FILEMON-ASTRÉE-ORPHISE/FILEMON-ASTRÉE-ORPHISE/ASTRÉE-ORPHISE',
+      'string-id' => '#LEANDRE;#LEANDRE,#ASTREE;#LEANDRE,#ASTREE;#LEANDRE,#FILEMON,#ASTREE,#ORPHISE;#FILEMON,#ASTREE,#ORPHISE;#ASTREE,#ORPHISE',
     ),
   ),
   'ouville_soupcons_V01' => 
@@ -29820,6 +28881,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'LÉANDRE/LÉANDRE-ALCIPE/ALCIPE/FILEMON-ALCIPE-ASTRÉE/ALCIPE-ASTRÉE/LÉANDRE-FILEMON',
+      'string-id' => '#LEANDRE;#LEANDRE,#ALCIPE;#ALCIPE;#FILEMON,#ALCIPE,#ASTREE;#ALCIPE,#ASTREE;#LEANDRE,#FILEMON',
     ),
   ),
   'ouville_soupcons_V02' => 
@@ -29887,6 +28949,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'LÉANDRE-ALCIPE/ALCIPE/FILEMON-ALCIPE-ASTRÉE/ALCIPE-ASTRÉE/LÉANDRE-FILEMON/ASTRÉE-ORPHISE',
+      'string-id' => '#LEANDRE,#ALCIPE;#ALCIPE;#FILEMON,#ALCIPE,#ASTREE;#ALCIPE,#ASTREE;#LEANDRE,#FILEMON;#ASTREE,#ORPHISE',
     ),
   ),
   'ouville_soupcons_V03' => 
@@ -29954,6 +29017,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'ALCIPE/FILEMON-ALCIPE-ASTRÉE/ALCIPE-ASTRÉE/LÉANDRE-FILEMON/ASTRÉE-ORPHISE/ALCIPE-ASTRÉE-ORPHISE',
+      'string-id' => '#ALCIPE;#FILEMON,#ALCIPE,#ASTREE;#ALCIPE,#ASTREE;#LEANDRE,#FILEMON;#ASTREE,#ORPHISE;#ALCIPE,#ASTREE,#ORPHISE',
     ),
   ),
   'ouville_soupcons_V04' => 
@@ -30021,6 +29085,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'FILEMON-ALCIPE-ASTRÉE/ALCIPE-ASTRÉE/LÉANDRE-FILEMON/ASTRÉE-ORPHISE/ALCIPE-ASTRÉE-ORPHISE/LÉANDRE-FILEMON-ASTRÉE-ORPHISE',
+      'string-id' => '#FILEMON,#ALCIPE,#ASTREE;#ALCIPE,#ASTREE;#LEANDRE,#FILEMON;#ASTREE,#ORPHISE;#ALCIPE,#ASTREE,#ORPHISE;#LEANDRE,#FILEMON,#ASTREE,#ORPHISE',
     ),
   ),
   'ouville_faussesverites_I01' => 
@@ -30079,6 +29144,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'FLORIMONDE/FLORIMONDE-LIDAMANT-LÉANDRE/FLORIMONDE-LIDAMANT-LÉANDRE/LÉANDRE/FLORIMONDE/ORASIE',
+      'string-id' => '#FLORIMONDE;#FLORIMONDE,#LIDAMANT,#LEANDRE;#FLORIMONDE,#LIDAMANT,#LEANDRE;#LEANDRE;#FLORIMONDE;#ORASIE',
     ),
   ),
   'ouville_faussesverites_I02' => 
@@ -30137,6 +29203,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'FLORIMONDE-LIDAMANT-LÉANDRE/FLORIMONDE-LIDAMANT-LÉANDRE/LÉANDRE/FLORIMONDE/ORASIE/LÉANDRE-ORASIE',
+      'string-id' => '#FLORIMONDE,#LIDAMANT,#LEANDRE;#FLORIMONDE,#LIDAMANT,#LEANDRE;#LEANDRE;#FLORIMONDE;#ORASIE;#LEANDRE,#ORASIE',
     ),
   ),
   'ouville_faussesverites_II01' => 
@@ -30195,6 +29262,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'FLORIMONDE-ORASIE/FLORIMONDE-ORASIE/FLORIMONDE-LIDAMANT/FLORIMONDE-LIDAMANT/FLORIMONDE-ORASIE/FLORIMONDE-ORASIE-TOMIRE',
+      'string-id' => '#FLORIMONDE,#ORASIE;#FLORIMONDE,#ORASIE;#FLORIMONDE,#LIDAMANT;#FLORIMONDE,#LIDAMANT;#FLORIMONDE,#ORASIE;#FLORIMONDE,#ORASIE,#TOMIRE',
     ),
   ),
   'ouville_faussesverites_II02' => 
@@ -30253,6 +29321,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'FLORIMONDE-ORASIE/FLORIMONDE-LIDAMANT/FLORIMONDE-LIDAMANT/FLORIMONDE-ORASIE/FLORIMONDE-ORASIE-TOMIRE/ORASIE',
+      'string-id' => '#FLORIMONDE,#ORASIE;#FLORIMONDE,#LIDAMANT;#FLORIMONDE,#LIDAMANT;#FLORIMONDE,#ORASIE;#FLORIMONDE,#ORASIE,#TOMIRE;#ORASIE',
     ),
   ),
   'ouville_faussesverites_II03' => 
@@ -30320,6 +29389,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'FLORIMONDE-LIDAMANT/FLORIMONDE-LIDAMANT/FLORIMONDE-ORASIE/FLORIMONDE-ORASIE-TOMIRE/ORASIE/LÉANDRE-ORASIE-TOMIRE',
+      'string-id' => '#FLORIMONDE,#LIDAMANT;#FLORIMONDE,#LIDAMANT;#FLORIMONDE,#ORASIE;#FLORIMONDE,#ORASIE,#TOMIRE;#ORASIE;#LEANDRE,#ORASIE,#TOMIRE',
     ),
   ),
   'ouville_faussesverites_II04' => 
@@ -30387,6 +29457,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'FLORIMONDE-LIDAMANT/FLORIMONDE-ORASIE/FLORIMONDE-ORASIE-TOMIRE/ORASIE/LÉANDRE-ORASIE-TOMIRE/LÉANDRE-ORASIE-TOMIRE',
+      'string-id' => '#FLORIMONDE,#LIDAMANT;#FLORIMONDE,#ORASIE;#FLORIMONDE,#ORASIE,#TOMIRE;#ORASIE;#LEANDRE,#ORASIE,#TOMIRE;#LEANDRE,#ORASIE,#TOMIRE',
     ),
   ),
   'ouville_faussesverites_II05' => 
@@ -30445,6 +29516,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'FLORIMONDE-ORASIE/FLORIMONDE-ORASIE-TOMIRE/ORASIE/LÉANDRE-ORASIE-TOMIRE/LÉANDRE-ORASIE-TOMIRE/LÉANDRE',
+      'string-id' => '#FLORIMONDE,#ORASIE;#FLORIMONDE,#ORASIE,#TOMIRE;#ORASIE;#LEANDRE,#ORASIE,#TOMIRE;#LEANDRE,#ORASIE,#TOMIRE;#LEANDRE',
     ),
   ),
   'ouville_faussesverites_II06' => 
@@ -30512,6 +29584,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'FLORIMONDE-ORASIE-TOMIRE/ORASIE/LÉANDRE-ORASIE-TOMIRE/LÉANDRE-ORASIE-TOMIRE/LÉANDRE/LIDAMANT',
+      'string-id' => '#FLORIMONDE,#ORASIE,#TOMIRE;#ORASIE;#LEANDRE,#ORASIE,#TOMIRE;#LEANDRE,#ORASIE,#TOMIRE;#LEANDRE;#LIDAMANT',
     ),
   ),
   'ouville_faussesverites_II07' => 
@@ -30570,6 +29643,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'ORASIE/LÉANDRE-ORASIE-TOMIRE/LÉANDRE-ORASIE-TOMIRE/LÉANDRE/LIDAMANT/LÉANDRE',
+      'string-id' => '#ORASIE;#LEANDRE,#ORASIE,#TOMIRE;#LEANDRE,#ORASIE,#TOMIRE;#LEANDRE;#LIDAMANT;#LEANDRE',
     ),
   ),
   'ouville_faussesverites_II08' => 
@@ -30628,6 +29702,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'LÉANDRE-ORASIE-TOMIRE/LÉANDRE-ORASIE-TOMIRE/LÉANDRE/LIDAMANT/LÉANDRE/ORASIE',
+      'string-id' => '#LEANDRE,#ORASIE,#TOMIRE;#LEANDRE,#ORASIE,#TOMIRE;#LEANDRE;#LIDAMANT;#LEANDRE;#ORASIE',
     ),
   ),
   'ouville_faussesverites_II09' => 
@@ -30686,6 +29761,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'LÉANDRE-ORASIE-TOMIRE/LÉANDRE/LIDAMANT/LÉANDRE/ORASIE/LÉANDRE-ORASIE',
+      'string-id' => '#LEANDRE,#ORASIE,#TOMIRE;#LEANDRE;#LIDAMANT;#LEANDRE;#ORASIE;#LEANDRE,#ORASIE',
     ),
   ),
   'ouville_faussesverites_II10' => 
@@ -30735,6 +29811,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'LÉANDRE/LIDAMANT/LÉANDRE/ORASIE/LÉANDRE-ORASIE/LÉANDRE-ORASIE',
+      'string-id' => '#LEANDRE;#LIDAMANT;#LEANDRE;#ORASIE;#LEANDRE,#ORASIE;#LEANDRE,#ORASIE',
     ),
   ),
   'ouville_faussesverites_III01' => 
@@ -30793,6 +29870,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'LIDAMANT-FABRICE/FLORIMONDE/FLORIMONDE-LIDAMANT-FABRICE/FLORIMONDE-LIDAMANT-LÉANDRE-FABRICE/LIDAMANT-LÉANDRE-ORASIE-FABRICE/FLORIMONDE-LÉANDRE-ORASIE',
+      'string-id' => '#LIDAMANT,#FABRICE;#FLORIMONDE;#FLORIMONDE,#LIDAMANT,#FABRICE;#FLORIMONDE,#LIDAMANT,#LEANDRE,#FABRICE;#LIDAMANT,#LEANDRE,#ORASIE,#FABRICE;#FLORIMONDE,#LEANDRE,#ORASIE',
     ),
   ),
   'ouville_faussesverites_IV01' => 
@@ -30851,6 +29929,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'FLORIMONDE/FLORIMONDE-LÉANDRE/FLORIMONDE-ORASIE/LIDAMANT-FABRICE/LIDAMANT-FABRICE/LIDAMANT-LÉANDRE-FABRICE',
+      'string-id' => '#FLORIMONDE;#FLORIMONDE,#LEANDRE;#FLORIMONDE,#ORASIE;#LIDAMANT,#FABRICE;#LIDAMANT,#FABRICE;#LIDAMANT,#LEANDRE,#FABRICE',
     ),
   ),
   'ouville_faussesverites_IV02' => 
@@ -30918,6 +29997,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'FLORIMONDE-LÉANDRE/FLORIMONDE-ORASIE/LIDAMANT-FABRICE/LIDAMANT-FABRICE/LIDAMANT-LÉANDRE-FABRICE/TOMIRE-LISIS',
+      'string-id' => '#FLORIMONDE,#LEANDRE;#FLORIMONDE,#ORASIE;#LIDAMANT,#FABRICE;#LIDAMANT,#FABRICE;#LIDAMANT,#LEANDRE,#FABRICE;#TOMIRE,#LISIS',
     ),
   ),
   'ouville_faussesverites_V01' => 
@@ -31003,6 +30083,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'LIDAMANT-LÉANDRE-FABRICE/LIDAMANT-LÉANDRE-FABRICE/FLORIMONDE-LIDAMANT-LÉANDRE-TOMIRE-FABRICE/FLORIMONDE-LÉANDRE-ORASIE/LIDAMANT-TOMIRE-FABRICE-LISIS/FLORIMONDE-LIDAMANT-LÉANDRE-ORASIE',
+      'string-id' => '#LIDAMANT,#LEANDRE,#FABRICE;#LIDAMANT,#LEANDRE,#FABRICE;#FLORIMONDE,#LIDAMANT,#LEANDRE,#TOMIRE,#FABRICE;#FLORIMONDE,#LEANDRE,#ORASIE;#LIDAMANT,#TOMIRE,#FABRICE,#LISIS;#FLORIMONDE,#LIDAMANT,#LEANDRE,#ORASIE',
     ),
   ),
   'ouville_faussesverites_V02' => 
@@ -31088,6 +30169,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'LIDAMANT-LÉANDRE-FABRICE/FLORIMONDE-LIDAMANT-LÉANDRE-TOMIRE-FABRICE/FLORIMONDE-LÉANDRE-ORASIE/LIDAMANT-TOMIRE-FABRICE-LISIS/FLORIMONDE-LIDAMANT-LÉANDRE-ORASIE/FLORIMONDE-LIDAMANT-LÉANDRE-ORASIE',
+      'string-id' => '#LIDAMANT,#LEANDRE,#FABRICE;#FLORIMONDE,#LIDAMANT,#LEANDRE,#TOMIRE,#FABRICE;#FLORIMONDE,#LEANDRE,#ORASIE;#LIDAMANT,#TOMIRE,#FABRICE,#LISIS;#FLORIMONDE,#LIDAMANT,#LEANDRE,#ORASIE;#FLORIMONDE,#LIDAMANT,#LEANDRE,#ORASIE',
     ),
   ),
   'ouville_faussesverites_V03' => 
@@ -31155,6 +30237,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'FLORIMONDE-LIDAMANT-LÉANDRE-TOMIRE-FABRICE/FLORIMONDE-LÉANDRE-ORASIE/LIDAMANT-TOMIRE-FABRICE-LISIS/FLORIMONDE-LIDAMANT-LÉANDRE-ORASIE/FLORIMONDE-LIDAMANT-LÉANDRE-ORASIE/FLORIMONDE-LIDAMANT-LÉANDRE-ORASIE-TOMIRE-FABRICE-LISIS',
+      'string-id' => '#FLORIMONDE,#LIDAMANT,#LEANDRE,#TOMIRE,#FABRICE;#FLORIMONDE,#LEANDRE,#ORASIE;#LIDAMANT,#TOMIRE,#FABRICE,#LISIS;#FLORIMONDE,#LIDAMANT,#LEANDRE,#ORASIE;#FLORIMONDE,#LIDAMANT,#LEANDRE,#ORASIE;#FLORIMONDE,#LIDAMANT,#LEANDRE,#ORASIE,#TOMIRE,#FABRICE,#LISIS',
     ),
   ),
   'ouville_absentchezsoi_I01' => 
@@ -31222,6 +30305,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'DIANE-ÉLISE//DIANE-ÉLISE/DIANE-CLITANDRE-ORMIN/CLORIMANT-GÉRASTE/CLORIMANT-GÉRASTE-POLEMAS-OCTAVE',
+      'string-id' => '#DIANE,#ELISE;;#DIANE,#ELISE;#DIANE,#CLITANDRE,#ORMIN;#CLORIMANT,#GERASTE;#CLORIMANT,#GERASTE,#POLEMAS,#OCTAVE',
     ),
   ),
   'ouville_absentchezsoi_I02' => 
@@ -31289,6 +30373,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => '/DIANE-ÉLISE/DIANE-CLITANDRE-ORMIN/CLORIMANT-GÉRASTE/CLORIMANT-GÉRASTE-POLEMAS-OCTAVE/ÉLISE-CLORIMANT-GÉRASTE',
+      'string-id' => ';#DIANE,#ELISE;#DIANE,#CLITANDRE,#ORMIN;#CLORIMANT,#GERASTE;#CLORIMANT,#GERASTE,#POLEMAS,#OCTAVE;#ELISE,#CLORIMANT,#GERASTE',
     ),
   ),
   'ouville_absentchezsoi_II01' => 
@@ -31356,6 +30441,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'ÉLISE-CLORIMANT-GÉRASTE/ÉLISE-CLORIMANT-CLITANDRE-GÉRASTE-ORMIN/ÉLISE-CLITANDRE-ORMIN-POLEMAS-OCTAVE/ÉLISE-CLORIMANT-GÉRASTE/DIANE/DIANE-CLITANDRE-ORMIN',
+      'string-id' => '#ELISE,#CLORIMANT,#GERASTE;#ELISE,#CLORIMANT,#CLITANDRE,#GERASTE,#ORMIN;#ELISE,#CLITANDRE,#ORMIN,#POLEMAS,#OCTAVE;#ELISE,#CLORIMANT,#GERASTE;#DIANE;#DIANE,#CLITANDRE,#ORMIN',
     ),
   ),
   'ouville_absentchezsoi_III01' => 
@@ -31405,6 +30491,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'CLORIMANT-GÉRASTE/CLORIMANT-GÉRASTE/CLORIMANT-GÉRASTE/CLITANDRE-ORMIN/ÉLISE-CLITANDRE-ORMIN-POLEMAS-OCTAVE/ÉLISE-CLORIMANT-CLITANDRE-GÉRASTE-ORMIN-POLEMAS-OCTAVE',
+      'string-id' => '#CLORIMANT,#GERASTE;#CLORIMANT,#GERASTE;#CLORIMANT,#GERASTE;#CLITANDRE,#ORMIN;#ELISE,#CLITANDRE,#ORMIN,#POLEMAS,#OCTAVE;#ELISE,#CLORIMANT,#CLITANDRE,#GERASTE,#ORMIN,#POLEMAS,#OCTAVE',
     ),
   ),
   'ouville_absentchezsoi_III02' => 
@@ -31454,6 +30541,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'CLORIMANT-GÉRASTE/CLORIMANT-GÉRASTE/CLITANDRE-ORMIN/ÉLISE-CLITANDRE-ORMIN-POLEMAS-OCTAVE/ÉLISE-CLORIMANT-CLITANDRE-GÉRASTE-ORMIN-POLEMAS-OCTAVE/ÉLISE-CLITANDRE-ORMIN-POLEMAS-OCTAVE',
+      'string-id' => '#CLORIMANT,#GERASTE;#CLORIMANT,#GERASTE;#CLITANDRE,#ORMIN;#ELISE,#CLITANDRE,#ORMIN,#POLEMAS,#OCTAVE;#ELISE,#CLORIMANT,#CLITANDRE,#GERASTE,#ORMIN,#POLEMAS,#OCTAVE;#ELISE,#CLITANDRE,#ORMIN,#POLEMAS,#OCTAVE',
     ),
   ),
   'ouville_absentchezsoi_III03' => 
@@ -31512,6 +30600,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'CLORIMANT-GÉRASTE/CLITANDRE-ORMIN/ÉLISE-CLITANDRE-ORMIN-POLEMAS-OCTAVE/ÉLISE-CLORIMANT-CLITANDRE-GÉRASTE-ORMIN-POLEMAS-OCTAVE/ÉLISE-CLITANDRE-ORMIN-POLEMAS-OCTAVE/ÉLISE-CLITANDRE-ORMIN',
+      'string-id' => '#CLORIMANT,#GERASTE;#CLITANDRE,#ORMIN;#ELISE,#CLITANDRE,#ORMIN,#POLEMAS,#OCTAVE;#ELISE,#CLORIMANT,#CLITANDRE,#GERASTE,#ORMIN,#POLEMAS,#OCTAVE;#ELISE,#CLITANDRE,#ORMIN,#POLEMAS,#OCTAVE;#ELISE,#CLITANDRE,#ORMIN',
     ),
   ),
   'ouville_absentchezsoi_III04' => 
@@ -31570,6 +30659,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'CLITANDRE-ORMIN/ÉLISE-CLITANDRE-ORMIN-POLEMAS-OCTAVE/ÉLISE-CLORIMANT-CLITANDRE-GÉRASTE-ORMIN-POLEMAS-OCTAVE/ÉLISE-CLITANDRE-ORMIN-POLEMAS-OCTAVE/ÉLISE-CLITANDRE-ORMIN/ÉLISE',
+      'string-id' => '#CLITANDRE,#ORMIN;#ELISE,#CLITANDRE,#ORMIN,#POLEMAS,#OCTAVE;#ELISE,#CLORIMANT,#CLITANDRE,#GERASTE,#ORMIN,#POLEMAS,#OCTAVE;#ELISE,#CLITANDRE,#ORMIN,#POLEMAS,#OCTAVE;#ELISE,#CLITANDRE,#ORMIN;#ELISE',
     ),
   ),
   'ouville_absentchezsoi_IV01' => 
@@ -31628,6 +30718,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'DIANE-CLORIMANT-GÉRASTE/DIANE-ÉLISE-CLORIMANT-GÉRASTE/DIANE-ÉLISE-CLORIMANT-CLITANDRE-GÉRASTE-OCTAVE/DIANE-ÉLISE-CLORIMANT-GÉRASTE/DIANE-CLORIMANT-GÉRASTE/DIANE',
+      'string-id' => '#DIANE,#CLORIMANT,#GERASTE;#DIANE,#ELISE,#CLORIMANT,#GERASTE;#DIANE,#ELISE,#CLORIMANT,#CLITANDRE,#GERASTE,#OCTAVE;#DIANE,#ELISE,#CLORIMANT,#GERASTE;#DIANE,#CLORIMANT,#GERASTE;#DIANE',
     ),
   ),
   'ouville_absentchezsoi_IV02' => 
@@ -31704,6 +30795,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'DIANE-ÉLISE-CLORIMANT-GÉRASTE/DIANE-ÉLISE-CLORIMANT-CLITANDRE-GÉRASTE-OCTAVE/DIANE-ÉLISE-CLORIMANT-GÉRASTE/DIANE-CLORIMANT-GÉRASTE/DIANE/CLITANDRE-ORMIN',
+      'string-id' => '#DIANE,#ELISE,#CLORIMANT,#GERASTE;#DIANE,#ELISE,#CLORIMANT,#CLITANDRE,#GERASTE,#OCTAVE;#DIANE,#ELISE,#CLORIMANT,#GERASTE;#DIANE,#CLORIMANT,#GERASTE;#DIANE;#CLITANDRE,#ORMIN',
     ),
   ),
   'ouville_absentchezsoi_IV03' => 
@@ -31780,6 +30872,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'DIANE-ÉLISE-CLORIMANT-CLITANDRE-GÉRASTE-OCTAVE/DIANE-ÉLISE-CLORIMANT-GÉRASTE/DIANE-CLORIMANT-GÉRASTE/DIANE/CLITANDRE-ORMIN/CLORIMANT-GÉRASTE',
+      'string-id' => '#DIANE,#ELISE,#CLORIMANT,#CLITANDRE,#GERASTE,#OCTAVE;#DIANE,#ELISE,#CLORIMANT,#GERASTE;#DIANE,#CLORIMANT,#GERASTE;#DIANE;#CLITANDRE,#ORMIN;#CLORIMANT,#GERASTE',
     ),
   ),
   'ouville_absentchezsoi_IV04' => 
@@ -31838,6 +30931,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'DIANE-ÉLISE-CLORIMANT-GÉRASTE/DIANE-CLORIMANT-GÉRASTE/DIANE/CLITANDRE-ORMIN/CLORIMANT-GÉRASTE/ÉLISE-CLORIMANT-GÉRASTE',
+      'string-id' => '#DIANE,#ELISE,#CLORIMANT,#GERASTE;#DIANE,#CLORIMANT,#GERASTE;#DIANE;#CLITANDRE,#ORMIN;#CLORIMANT,#GERASTE;#ELISE,#CLORIMANT,#GERASTE',
     ),
   ),
   'ouville_absentchezsoi_IV05' => 
@@ -31896,6 +30990,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'DIANE-CLORIMANT-GÉRASTE/DIANE/CLITANDRE-ORMIN/CLORIMANT-GÉRASTE/ÉLISE-CLORIMANT-GÉRASTE/ÉLISE',
+      'string-id' => '#DIANE,#CLORIMANT,#GERASTE;#DIANE;#CLITANDRE,#ORMIN;#CLORIMANT,#GERASTE;#ELISE,#CLORIMANT,#GERASTE;#ELISE',
     ),
   ),
   'ouville_absentchezsoi_V01' => 
@@ -31963,6 +31058,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'POLEMAS-OCTAVE/ÉLISE-POLEMAS-OCTAVE/CLITANDRE-ORMIN/DIANE-CLITANDRE-ORMIN/DIANE-CLITANDRE-ORMIN-OCTAVE/DIANE',
+      'string-id' => '#POLEMAS,#OCTAVE;#ELISE,#POLEMAS,#OCTAVE;#CLITANDRE,#ORMIN;#DIANE,#CLITANDRE,#ORMIN;#DIANE,#CLITANDRE,#ORMIN,#OCTAVE;#DIANE',
     ),
   ),
   'ouville_absentchezsoi_V02' => 
@@ -32030,6 +31126,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'ÉLISE-POLEMAS-OCTAVE/CLITANDRE-ORMIN/DIANE-CLITANDRE-ORMIN/DIANE-CLITANDRE-ORMIN-OCTAVE/DIANE/DIANE-CLORIMANT-GÉRASTE',
+      'string-id' => '#ELISE,#POLEMAS,#OCTAVE;#CLITANDRE,#ORMIN;#DIANE,#CLITANDRE,#ORMIN;#DIANE,#CLITANDRE,#ORMIN,#OCTAVE;#DIANE;#DIANE,#CLORIMANT,#GERASTE',
     ),
   ),
   'ouville_absentchezsoi_V03' => 
@@ -32106,6 +31203,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'CLITANDRE-ORMIN/DIANE-CLITANDRE-ORMIN/DIANE-CLITANDRE-ORMIN-OCTAVE/DIANE/DIANE-CLORIMANT-GÉRASTE/ÉLISE-CLITANDRE-GÉRASTE-ORMIN-POLEMAS-OCTAVE',
+      'string-id' => '#CLITANDRE,#ORMIN;#DIANE,#CLITANDRE,#ORMIN;#DIANE,#CLITANDRE,#ORMIN,#OCTAVE;#DIANE;#DIANE,#CLORIMANT,#GERASTE;#ELISE,#CLITANDRE,#GERASTE,#ORMIN,#POLEMAS,#OCTAVE',
     ),
   ),
   'ouville_absentchezsoi_V04' => 
@@ -32182,6 +31280,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Ouville',
       'string' => 'DIANE-CLITANDRE-ORMIN/DIANE-CLITANDRE-ORMIN-OCTAVE/DIANE/DIANE-CLORIMANT-GÉRASTE/ÉLISE-CLITANDRE-GÉRASTE-ORMIN-POLEMAS-OCTAVE/DIANE-ÉLISE-CLORIMANT-CLITANDRE-GÉRASTE-ORMIN-POLEMAS-OCTAVE',
+      'string-id' => '#DIANE,#CLITANDRE,#ORMIN;#DIANE,#CLITANDRE,#ORMIN,#OCTAVE;#DIANE;#DIANE,#CLORIMANT,#GERASTE;#ELISE,#CLITANDRE,#GERASTE,#ORMIN,#POLEMAS,#OCTAVE;#DIANE,#ELISE,#CLORIMANT,#CLITANDRE,#GERASTE,#ORMIN,#POLEMAS,#OCTAVE',
     ),
   ),
   'moliere_tartuffe64_II01' => 
@@ -32240,6 +31339,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'DAMIS/TARTUFFE/ELMIRE-TARTUFFE/ELMIRE-DAMIS-TARTUFFE/ELMIRE-ORGON -DAMIS-TARTUFFE/ORGON -DAMIS-TARTUFFE',
+      'string-id' => '#DAMIS;#TARTUFFE;#ELMIRE,#TARTUFFE;#ELMIRE,#DAMIS,#TARTUFFE;#ELMIRE,#ORGON,#DAMIS,#TARTUFFE;#ORGON,#DAMIS,#TARTUFFE',
     ),
   ),
   'moliere_tartuffe64_II02' => 
@@ -32298,6 +31398,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'TARTUFFE/ELMIRE-TARTUFFE/ELMIRE-DAMIS-TARTUFFE/ELMIRE-ORGON -DAMIS-TARTUFFE/ORGON -DAMIS-TARTUFFE/ORGON -TARTUFFE',
+      'string-id' => '#TARTUFFE;#ELMIRE,#TARTUFFE;#ELMIRE,#DAMIS,#TARTUFFE;#ELMIRE,#ORGON,#DAMIS,#TARTUFFE;#ORGON,#DAMIS,#TARTUFFE;#ORGON,#TARTUFFE',
     ),
   ),
   'moliere_tartuffe64_III01' => 
@@ -32365,6 +31466,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'CLÉANTE-TARTUFFE/ELMIRE-DAMIS-CLÉANTE/ELMIRE-ORGON -DAMIS-CLÉANTE/ELMIRE-ORGON /ELMIRE-ORGON -TARTUFFE/ELMIRE-ORGON ',
+      'string-id' => '#CLEANTE,#TARTUFFE;#ELMIRE,#DAMIS,#CLEANTE;#ELMIRE,#ORGON,#DAMIS,#CLEANTE;#ELMIRE,#ORGON;#ELMIRE,#ORGON,#TARTUFFE;#ELMIRE,#ORGON',
     ),
   ),
   'moliere_tartuffe64_III02' => 
@@ -32423,6 +31525,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ELMIRE-DAMIS-CLÉANTE/ELMIRE-ORGON -DAMIS-CLÉANTE/ELMIRE-ORGON /ELMIRE-ORGON -TARTUFFE/ELMIRE-ORGON /ELMIRE-ORGON -TARTUFFE',
+      'string-id' => '#ELMIRE,#DAMIS,#CLEANTE;#ELMIRE,#ORGON,#DAMIS,#CLEANTE;#ELMIRE,#ORGON;#ELMIRE,#ORGON,#TARTUFFE;#ELMIRE,#ORGON;#ELMIRE,#ORGON,#TARTUFFE',
     ),
   ),
   'moliere_tartuffe64_III03' => 
@@ -32472,6 +31575,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ELMIRE-ORGON -DAMIS-CLÉANTE/ELMIRE-ORGON /ELMIRE-ORGON -TARTUFFE/ELMIRE-ORGON /ELMIRE-ORGON -TARTUFFE/ELMIRE-ORGON -DAMIS-CLÉANTE-TARTUFFE',
+      'string-id' => '#ELMIRE,#ORGON,#DAMIS,#CLEANTE;#ELMIRE,#ORGON;#ELMIRE,#ORGON,#TARTUFFE;#ELMIRE,#ORGON;#ELMIRE,#ORGON,#TARTUFFE;#ELMIRE,#ORGON,#DAMIS,#CLEANTE,#TARTUFFE',
     ),
   ),
   'moliere_tartuffe64_III04' => 
@@ -32530,6 +31634,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ELMIRE-ORGON /ELMIRE-ORGON -TARTUFFE/ELMIRE-ORGON /ELMIRE-ORGON -TARTUFFE/ELMIRE-ORGON -DAMIS-CLÉANTE-TARTUFFE/MADAME PERNELLE-ELMIRE-ORGON -DAMIS-CLÉANTE',
+      'string-id' => '#ELMIRE,#ORGON;#ELMIRE,#ORGON,#TARTUFFE;#ELMIRE,#ORGON;#ELMIRE,#ORGON,#TARTUFFE;#ELMIRE,#ORGON,#DAMIS,#CLEANTE,#TARTUFFE;#MADAMEPERNELLE,#ELMIRE,#ORGON,#DAMIS,#CLEANTE',
     ),
   ),
   'moliere_sicilien_I01' => 
@@ -32588,6 +31693,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => '/ADRASTE-DEUX LAQUAIS/ADRASTE/ADRASTE-DON PÈDRE/ADRASTE/DON PÈDRE-ISIDORE',
+      'string-id' => ';#ADRASTE,#DEUXLAQUAIS;#ADRASTE;#ADRASTE,#DONPEDRE;#ADRASTE;#DONPEDRE,#ISIDORE',
     ),
   ),
   'moliere_sicilien_I02' => 
@@ -32646,6 +31752,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ADRASTE-DEUX LAQUAIS/ADRASTE/ADRASTE-DON PÈDRE/ADRASTE/DON PÈDRE-ISIDORE/DON PÈDRE-ISIDORE',
+      'string-id' => '#ADRASTE,#DEUXLAQUAIS;#ADRASTE;#ADRASTE,#DONPEDRE;#ADRASTE;#DONPEDRE,#ISIDORE;#DONPEDRE,#ISIDORE',
     ),
   ),
   'moliere_sicilien_I03' => 
@@ -32695,6 +31802,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ADRASTE/ADRASTE-DON PÈDRE/ADRASTE/DON PÈDRE-ISIDORE/DON PÈDRE-ISIDORE/DON PÈDRE',
+      'string-id' => '#ADRASTE;#ADRASTE,#DONPEDRE;#ADRASTE;#DONPEDRE,#ISIDORE;#DONPEDRE,#ISIDORE;#DONPEDRE',
     ),
   ),
   'moliere_sicilien_I04' => 
@@ -32744,6 +31852,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ADRASTE-DON PÈDRE/ADRASTE/DON PÈDRE-ISIDORE/DON PÈDRE-ISIDORE/DON PÈDRE/ADRASTE',
+      'string-id' => '#ADRASTE,#DONPEDRE;#ADRASTE;#DONPEDRE,#ISIDORE;#DONPEDRE,#ISIDORE;#DONPEDRE;#ADRASTE',
     ),
   ),
   'moliere_sicilien_I05' => 
@@ -32793,6 +31902,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ADRASTE/DON PÈDRE-ISIDORE/DON PÈDRE-ISIDORE/DON PÈDRE/ADRASTE/ADRASTE-DON PÈDRE',
+      'string-id' => '#ADRASTE;#DONPEDRE,#ISIDORE;#DONPEDRE,#ISIDORE;#DONPEDRE;#ADRASTE;#ADRASTE,#DONPEDRE',
     ),
   ),
   'moliere_sicilien_I06' => 
@@ -32851,6 +31961,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'DON PÈDRE-ISIDORE/DON PÈDRE-ISIDORE/DON PÈDRE/ADRASTE/ADRASTE-DON PÈDRE/ADRASTE-DON PÈDRE-ISIDORE-DEUX LAQUAIS',
+      'string-id' => '#DONPEDRE,#ISIDORE;#DONPEDRE,#ISIDORE;#DONPEDRE;#ADRASTE;#ADRASTE,#DONPEDRE;#ADRASTE,#DONPEDRE,#ISIDORE,#DEUXLAQUAIS',
     ),
   ),
   'moliere_sicilien_I07' => 
@@ -32909,6 +32020,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'DON PÈDRE-ISIDORE/DON PÈDRE/ADRASTE/ADRASTE-DON PÈDRE/ADRASTE-DON PÈDRE-ISIDORE-DEUX LAQUAIS/ADRASTE-DON PÈDRE-ISIDORE',
+      'string-id' => '#DONPEDRE,#ISIDORE;#DONPEDRE;#ADRASTE;#ADRASTE,#DONPEDRE;#ADRASTE,#DONPEDRE,#ISIDORE,#DEUXLAQUAIS;#ADRASTE,#DONPEDRE,#ISIDORE',
     ),
   ),
   'moliere_sicilien_I08' => 
@@ -32967,6 +32079,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'DON PÈDRE/ADRASTE/ADRASTE-DON PÈDRE/ADRASTE-DON PÈDRE-ISIDORE-DEUX LAQUAIS/ADRASTE-DON PÈDRE-ISIDORE/DON PÈDRE-ISIDORE',
+      'string-id' => '#DONPEDRE;#ADRASTE;#ADRASTE,#DONPEDRE;#ADRASTE,#DONPEDRE,#ISIDORE,#DEUXLAQUAIS;#ADRASTE,#DONPEDRE,#ISIDORE;#DONPEDRE,#ISIDORE',
     ),
   ),
   'moliere_sicilien_I09' => 
@@ -33034,6 +32147,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ADRASTE/ADRASTE-DON PÈDRE/ADRASTE-DON PÈDRE-ISIDORE-DEUX LAQUAIS/ADRASTE-DON PÈDRE-ISIDORE/DON PÈDRE-ISIDORE/DON PÈDRE-ISIDORE-CLIMÈNE',
+      'string-id' => '#ADRASTE;#ADRASTE,#DONPEDRE;#ADRASTE,#DONPEDRE,#ISIDORE,#DEUXLAQUAIS;#ADRASTE,#DONPEDRE,#ISIDORE;#DONPEDRE,#ISIDORE;#DONPEDRE,#ISIDORE,#CLIMENE',
     ),
   ),
   'moliere_sicilien_I10' => 
@@ -33101,6 +32215,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ADRASTE-DON PÈDRE/ADRASTE-DON PÈDRE-ISIDORE-DEUX LAQUAIS/ADRASTE-DON PÈDRE-ISIDORE/DON PÈDRE-ISIDORE/DON PÈDRE-ISIDORE-CLIMÈNE/ADRASTE-DON PÈDRE',
+      'string-id' => '#ADRASTE,#DONPEDRE;#ADRASTE,#DONPEDRE,#ISIDORE,#DEUXLAQUAIS;#ADRASTE,#DONPEDRE,#ISIDORE;#DONPEDRE,#ISIDORE;#DONPEDRE,#ISIDORE,#CLIMENE;#ADRASTE,#DONPEDRE',
     ),
   ),
   'moliere_sicilien_I11' => 
@@ -33168,6 +32283,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ADRASTE-DON PÈDRE-ISIDORE-DEUX LAQUAIS/ADRASTE-DON PÈDRE-ISIDORE/DON PÈDRE-ISIDORE/DON PÈDRE-ISIDORE-CLIMÈNE/ADRASTE-DON PÈDRE/ADRASTE-DON PÈDRE-CLIMÈNE',
+      'string-id' => '#ADRASTE,#DONPEDRE,#ISIDORE,#DEUXLAQUAIS;#ADRASTE,#DONPEDRE,#ISIDORE;#DONPEDRE,#ISIDORE;#DONPEDRE,#ISIDORE,#CLIMENE;#ADRASTE,#DONPEDRE;#ADRASTE,#DONPEDRE,#CLIMENE',
     ),
   ),
   'moliere_sicilien_I12' => 
@@ -33226,6 +32342,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ADRASTE-DON PÈDRE-ISIDORE/DON PÈDRE-ISIDORE/DON PÈDRE-ISIDORE-CLIMÈNE/ADRASTE-DON PÈDRE/ADRASTE-DON PÈDRE-CLIMÈNE/ADRASTE-DON PÈDRE-ISIDORE-CLIMÈNE',
+      'string-id' => '#ADRASTE,#DONPEDRE,#ISIDORE;#DONPEDRE,#ISIDORE;#DONPEDRE,#ISIDORE,#CLIMENE;#ADRASTE,#DONPEDRE;#ADRASTE,#DONPEDRE,#CLIMENE;#ADRASTE,#DONPEDRE,#ISIDORE,#CLIMENE',
     ),
   ),
   'moliere_sicilien_I13' => 
@@ -33284,6 +32401,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'DON PÈDRE-ISIDORE/DON PÈDRE-ISIDORE-CLIMÈNE/ADRASTE-DON PÈDRE/ADRASTE-DON PÈDRE-CLIMÈNE/ADRASTE-DON PÈDRE-ISIDORE-CLIMÈNE/DON PÈDRE-CLIMÈNE',
+      'string-id' => '#DONPEDRE,#ISIDORE;#DONPEDRE,#ISIDORE,#CLIMENE;#ADRASTE,#DONPEDRE;#ADRASTE,#DONPEDRE,#CLIMENE;#ADRASTE,#DONPEDRE,#ISIDORE,#CLIMENE;#DONPEDRE,#CLIMENE',
     ),
   ),
   'moliere_sicilien_I14' => 
@@ -33351,6 +32469,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'DON PÈDRE-ISIDORE-CLIMÈNE/ADRASTE-DON PÈDRE/ADRASTE-DON PÈDRE-CLIMÈNE/ADRASTE-DON PÈDRE-ISIDORE-CLIMÈNE/DON PÈDRE-CLIMÈNE/DON PÈDRE-LE SÉNATEUR',
+      'string-id' => '#DONPEDRE,#ISIDORE,#CLIMENE;#ADRASTE,#DONPEDRE;#ADRASTE,#DONPEDRE,#CLIMENE;#ADRASTE,#DONPEDRE,#ISIDORE,#CLIMENE;#DONPEDRE,#CLIMENE;#DONPEDRE,#LESENATEUR',
     ),
   ),
   'moliere_sganarelle_I01' => 
@@ -33409,6 +32528,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'GORGIBUS-CÉLIE/CÉLIE/SGANARELLE/SGANARELLE-SA FEMME//SGANARELLE-SA FEMME',
+      'string-id' => '#GORGIBUS,#CELIE;#CELIE;#SGANARELLE;#SGANARELLE,#SAFEMME;;#SGANARELLE,#SAFEMME',
     ),
   ),
   'moliere_sganarelle_I02' => 
@@ -33467,6 +32587,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'CÉLIE/SGANARELLE/SGANARELLE-SA FEMME//SGANARELLE-SA FEMME/LÉLIE',
+      'string-id' => '#CELIE;#SGANARELLE;#SGANARELLE,#SAFEMME;;#SGANARELLE,#SAFEMME;#LELIE',
     ),
   ),
   'moliere_sganarelle_I03' => 
@@ -33516,6 +32637,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'SGANARELLE/SGANARELLE-SA FEMME//SGANARELLE-SA FEMME/LÉLIE/LÉLIE',
+      'string-id' => '#SGANARELLE;#SGANARELLE,#SAFEMME;;#SGANARELLE,#SAFEMME;#LELIE;#LELIE',
     ),
   ),
   'moliere_sganarelle_I04' => 
@@ -33565,6 +32687,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'SGANARELLE-SA FEMME//SGANARELLE-SA FEMME/LÉLIE/LÉLIE/LÉLIE-SGANARELLE',
+      'string-id' => '#SGANARELLE,#SAFEMME;;#SGANARELLE,#SAFEMME;#LELIE;#LELIE;#LELIE,#SGANARELLE',
     ),
   ),
   'moliere_sganarelle_I05' => 
@@ -33614,6 +32737,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => '/SGANARELLE-SA FEMME/LÉLIE/LÉLIE/LÉLIE-SGANARELLE/LÉLIE',
+      'string-id' => ';#SGANARELLE,#SAFEMME;#LELIE;#LELIE;#LELIE,#SGANARELLE;#LELIE',
     ),
   ),
   'moliere_sganarelle_I06' => 
@@ -33663,6 +32787,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'SGANARELLE-SA FEMME/LÉLIE/LÉLIE/LÉLIE-SGANARELLE/LÉLIE/LÉLIE-SGANARELLE',
+      'string-id' => '#SGANARELLE,#SAFEMME;#LELIE;#LELIE;#LELIE,#SGANARELLE;#LELIE;#LELIE,#SGANARELLE',
     ),
   ),
   'moliere_sganarelle_I07' => 
@@ -33703,6 +32828,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LÉLIE/LÉLIE/LÉLIE-SGANARELLE/LÉLIE/LÉLIE-SGANARELLE/SGANARELLE',
+      'string-id' => '#LELIE;#LELIE;#LELIE,#SGANARELLE;#LELIE;#LELIE,#SGANARELLE;#SGANARELLE',
     ),
   ),
   'moliere_sganarelle_I08' => 
@@ -33743,6 +32869,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LÉLIE/LÉLIE-SGANARELLE/LÉLIE/LÉLIE-SGANARELLE/SGANARELLE/SGANARELLE',
+      'string-id' => '#LELIE;#LELIE,#SGANARELLE;#LELIE;#LELIE,#SGANARELLE;#SGANARELLE;#SGANARELLE',
     ),
   ),
   'moliere_sganarelle_I09' => 
@@ -33792,6 +32919,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LÉLIE-SGANARELLE/LÉLIE/LÉLIE-SGANARELLE/SGANARELLE/SGANARELLE/LÉLIE-SGANARELLE-SA FEMME',
+      'string-id' => '#LELIE,#SGANARELLE;#LELIE;#LELIE,#SGANARELLE;#SGANARELLE;#SGANARELLE;#LELIE,#SGANARELLE,#SAFEMME',
     ),
   ),
   'moliere_sganarelle_I10' => 
@@ -33841,6 +32969,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LÉLIE/LÉLIE-SGANARELLE/SGANARELLE/SGANARELLE/LÉLIE-SGANARELLE-SA FEMME/LÉLIE-SGANARELLE',
+      'string-id' => '#LELIE;#LELIE,#SGANARELLE;#SGANARELLE;#SGANARELLE;#LELIE,#SGANARELLE,#SAFEMME;#LELIE,#SGANARELLE',
     ),
   ),
   'moliere_sganarelle_I11' => 
@@ -33899,6 +33028,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LÉLIE-SGANARELLE/SGANARELLE/SGANARELLE/LÉLIE-SGANARELLE-SA FEMME/LÉLIE-SGANARELLE/CÉLIE-SGANARELLE',
+      'string-id' => '#LELIE,#SGANARELLE;#SGANARELLE;#SGANARELLE;#LELIE,#SGANARELLE,#SAFEMME;#LELIE,#SGANARELLE;#CELIE,#SGANARELLE',
     ),
   ),
   'moliere_sganarelle_I12' => 
@@ -33957,6 +33087,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'SGANARELLE/SGANARELLE/LÉLIE-SGANARELLE-SA FEMME/LÉLIE-SGANARELLE/CÉLIE-SGANARELLE/SGANARELLE',
+      'string-id' => '#SGANARELLE;#SGANARELLE;#LELIE,#SGANARELLE,#SAFEMME;#LELIE,#SGANARELLE;#CELIE,#SGANARELLE;#SGANARELLE',
     ),
   ),
   'moliere_sganarelle_I13' => 
@@ -34024,6 +33155,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'SGANARELLE/LÉLIE-SGANARELLE-SA FEMME/LÉLIE-SGANARELLE/CÉLIE-SGANARELLE/SGANARELLE/GORGIBUS-CÉLIE',
+      'string-id' => '#SGANARELLE;#LELIE,#SGANARELLE,#SAFEMME;#LELIE,#SGANARELLE;#CELIE,#SGANARELLE;#SGANARELLE;#GORGIBUS,#CELIE',
     ),
   ),
   'moliere_sganarelle_I14' => 
@@ -34091,6 +33223,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LÉLIE-SGANARELLE-SA FEMME/LÉLIE-SGANARELLE/CÉLIE-SGANARELLE/SGANARELLE/GORGIBUS-CÉLIE/CÉLIE',
+      'string-id' => '#LELIE,#SGANARELLE,#SAFEMME;#LELIE,#SGANARELLE;#CELIE,#SGANARELLE;#SGANARELLE;#GORGIBUS,#CELIE;#CELIE',
     ),
   ),
   'moliere_sganarelle_I15' => 
@@ -34149,6 +33282,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LÉLIE-SGANARELLE/CÉLIE-SGANARELLE/SGANARELLE/GORGIBUS-CÉLIE/CÉLIE/CÉLIE-LÉLIE',
+      'string-id' => '#LELIE,#SGANARELLE;#CELIE,#SGANARELLE;#SGANARELLE;#GORGIBUS,#CELIE;#CELIE;#CELIE,#LELIE',
     ),
   ),
   'moliere_sganarelle_I16' => 
@@ -34207,6 +33341,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'CÉLIE-SGANARELLE/SGANARELLE/GORGIBUS-CÉLIE/CÉLIE/CÉLIE-LÉLIE/CÉLIE-LÉLIE-SGANARELLE',
+      'string-id' => '#CELIE,#SGANARELLE;#SGANARELLE;#GORGIBUS,#CELIE;#CELIE;#CELIE,#LELIE;#CELIE,#LELIE,#SGANARELLE',
     ),
   ),
   'moliere_sganarelle_I17' => 
@@ -34274,6 +33409,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'SGANARELLE/GORGIBUS-CÉLIE/CÉLIE/CÉLIE-LÉLIE/CÉLIE-LÉLIE-SGANARELLE/CÉLIE-LÉLIE-SGANARELLE-SA FEMME',
+      'string-id' => '#SGANARELLE;#GORGIBUS,#CELIE;#CELIE;#CELIE,#LELIE;#CELIE,#LELIE,#SGANARELLE;#CELIE,#LELIE,#SGANARELLE,#SAFEMME',
     ),
   ),
   'moliere_sganarelle_I18' => 
@@ -34341,6 +33477,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'GORGIBUS-CÉLIE/CÉLIE/CÉLIE-LÉLIE/CÉLIE-LÉLIE-SGANARELLE/CÉLIE-LÉLIE-SGANARELLE-SA FEMME/GORGIBUS-CÉLIE-LÉLIE',
+      'string-id' => '#GORGIBUS,#CELIE;#CELIE;#CELIE,#LELIE;#CELIE,#LELIE,#SGANARELLE;#CELIE,#LELIE,#SGANARELLE,#SAFEMME;#GORGIBUS,#CELIE,#LELIE',
     ),
   ),
   'moliere_sganarelle_I19' => 
@@ -34417,6 +33554,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'CÉLIE/CÉLIE-LÉLIE/CÉLIE-LÉLIE-SGANARELLE/CÉLIE-LÉLIE-SGANARELLE-SA FEMME/GORGIBUS-CÉLIE-LÉLIE/GORGIBUS-LÉLIE-SGANARELLE-VILLEBREQUIN',
+      'string-id' => '#CELIE;#CELIE,#LELIE;#CELIE,#LELIE,#SGANARELLE;#CELIE,#LELIE,#SGANARELLE,#SAFEMME;#GORGIBUS,#CELIE,#LELIE;#GORGIBUS,#LELIE,#SGANARELLE,#VILLEBREQUIN',
     ),
   ),
   'moliere_psyche_II01' => 
@@ -34475,6 +33613,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Moliere',
       'string' => 'AGLAURE-CIDIPPE/AGLAURE-CIDIPPE-CLÉOMÈNE-AGÉNOR/PSYCHÉ-AGLAURE-CIDIPPE-CLÉOMÈNE-AGÉNOR/PSYCHÉ-AGLAURE-CIDIPPE-CLÉOMÈNE-AGÉNOR-LYCAS/AGLAURE-CIDIPPE-LYCAS/AGLAURE-CIDIPPE',
+      'string-id' => '#AGLAURE,#CIDIPPE;#AGLAURE,#CIDIPPE,#CLEOMENE,#AGENOR;#PSYCHE,#AGLAURE,#CIDIPPE,#CLEOMENE,#AGENOR;#PSYCHE,#AGLAURE,#CIDIPPE,#CLEOMENE,#AGENOR,#LYCAS;#AGLAURE,#CIDIPPE,#LYCAS;#AGLAURE,#CIDIPPE',
     ),
   ),
   'moliere_psyche_VI01' => 
@@ -34542,6 +33681,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Moliere',
       'string' => 'PSYCHÉ/PSYCHÉ-CLÉOMÈNE-AGÉNOR/PSYCHÉ/L\'AMOUR-PSYCHÉ/VÉNUS-L\'AMOUR-PSYCHÉ/VÉNUS-L\'AMOUR-JUPITER-PSYCHÉ-APOLLON-BACCHUS',
+      'string-id' => '#PSYCHE;#PSYCHE,#CLEOMENE,#AGENOR;#PSYCHE;#LAMOUR,#PSYCHE;#VENUS,#LAMOUR,#PSYCHE;#VENUS,#LAMOUR,#JUPITER,#PSYCHE,#APOLLON,#BACCHUS',
     ),
   ),
   'moliere_princessedelide_VIII01' => 
@@ -34600,6 +33740,7 @@
       'genreId' => 'Comediegalante',
       'authorId' => 'Moliere',
       'string' => 'EURYALE-MORON/MORON/AGLANTE-MORON/AGLANTE-ARISTOMÈNE-MORON/AGLANTE-MORON/',
+      'string-id' => '#EURYALE,#MORON;#MORON;#AGLANTE,#MORON;#AGLANTE,#ARISTOMENE,#MORON;#AGLANTE,#MORON;',
     ),
   ),
   'moliere_precieusesridicules_I01' => 
@@ -34658,6 +33799,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LA GRANGE-DU CROISY/LA GRANGE-DU CROISY-GORGIBUS/GORGIBUS-MAROTTE/GORGIBUS-MAGDELON-CATHOS/MAGDELON-CATHOS/MAGDELON-CATHOS-MAROTTE',
+      'string-id' => '#LAGRANGE,#DUCROISY;#LAGRANGE,#DUCROISY,#GORGIBUS;#GORGIBUS,#MAROTTE;#GORGIBUS,#MAGDELON,#CATHOS;#MAGDELON,#CATHOS;#MAGDELON,#CATHOS,#MAROTTE',
     ),
   ),
   'moliere_precieusesridicules_I02' => 
@@ -34716,6 +33858,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LA GRANGE-DU CROISY-GORGIBUS/GORGIBUS-MAROTTE/GORGIBUS-MAGDELON-CATHOS/MAGDELON-CATHOS/MAGDELON-CATHOS-MAROTTE/',
+      'string-id' => '#LAGRANGE,#DUCROISY,#GORGIBUS;#GORGIBUS,#MAROTTE;#GORGIBUS,#MAGDELON,#CATHOS;#MAGDELON,#CATHOS;#MAGDELON,#CATHOS,#MAROTTE;',
     ),
   ),
   'moliere_precieusesridicules_I03' => 
@@ -34765,6 +33908,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'GORGIBUS-MAROTTE/GORGIBUS-MAGDELON-CATHOS/MAGDELON-CATHOS/MAGDELON-CATHOS-MAROTTE//MAROTTE',
+      'string-id' => '#GORGIBUS,#MAROTTE;#GORGIBUS,#MAGDELON,#CATHOS;#MAGDELON,#CATHOS;#MAGDELON,#CATHOS,#MAROTTE;;#MAROTTE',
     ),
   ),
   'moliere_precieusesridicules_I04' => 
@@ -34823,6 +33967,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'GORGIBUS-MAGDELON-CATHOS/MAGDELON-CATHOS/MAGDELON-CATHOS-MAROTTE//MAROTTE/MAGDELON-CATHOS-ALMANZOR',
+      'string-id' => '#GORGIBUS,#MAGDELON,#CATHOS;#MAGDELON,#CATHOS;#MAGDELON,#CATHOS,#MAROTTE;;#MAROTTE;#MAGDELON,#CATHOS,#ALMANZOR',
     ),
   ),
   'moliere_precieusesridicules_I05' => 
@@ -34872,6 +34017,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'MAGDELON-CATHOS/MAGDELON-CATHOS-MAROTTE//MAROTTE/MAGDELON-CATHOS-ALMANZOR/MAGDELON-CATHOS-MAROTTE',
+      'string-id' => '#MAGDELON,#CATHOS;#MAGDELON,#CATHOS,#MAROTTE;;#MAROTTE;#MAGDELON,#CATHOS,#ALMANZOR;#MAGDELON,#CATHOS,#MAROTTE',
     ),
   ),
   'moliere_precieusesridicules_I06' => 
@@ -34921,6 +34067,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'MAGDELON-CATHOS-MAROTTE//MAROTTE/MAGDELON-CATHOS-ALMANZOR/MAGDELON-CATHOS-MAROTTE/MAGDELON-CATHOS-MAROTTE',
+      'string-id' => '#MAGDELON,#CATHOS,#MAROTTE;;#MAROTTE;#MAGDELON,#CATHOS,#ALMANZOR;#MAGDELON,#CATHOS,#MAROTTE;#MAGDELON,#CATHOS,#MAROTTE',
     ),
   ),
   'moliere_precieusesridicules_I07' => 
@@ -34970,6 +34117,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => '/MAROTTE/MAGDELON-CATHOS-ALMANZOR/MAGDELON-CATHOS-MAROTTE/MAGDELON-CATHOS-MAROTTE/MAGDELON-CATHOS-MAROTTE-ALMANZOR',
+      'string-id' => ';#MAROTTE;#MAGDELON,#CATHOS,#ALMANZOR;#MAGDELON,#CATHOS,#MAROTTE;#MAGDELON,#CATHOS,#MAROTTE;#MAGDELON,#CATHOS,#MAROTTE,#ALMANZOR',
     ),
   ),
   'moliere_precieusesridicules_I08' => 
@@ -35028,6 +34176,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'MAROTTE/MAGDELON-CATHOS-ALMANZOR/MAGDELON-CATHOS-MAROTTE/MAGDELON-CATHOS-MAROTTE/MAGDELON-CATHOS-MAROTTE-ALMANZOR/LA GRANGE-DU CROISY',
+      'string-id' => '#MAROTTE;#MAGDELON,#CATHOS,#ALMANZOR;#MAGDELON,#CATHOS,#MAROTTE;#MAGDELON,#CATHOS,#MAROTTE;#MAGDELON,#CATHOS,#MAROTTE,#ALMANZOR;#LAGRANGE,#DUCROISY',
     ),
   ),
   'moliere_precieusesridicules_I09' => 
@@ -35086,6 +34235,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'MAGDELON-CATHOS-ALMANZOR/MAGDELON-CATHOS-MAROTTE/MAGDELON-CATHOS-MAROTTE/MAGDELON-CATHOS-MAROTTE-ALMANZOR/LA GRANGE-DU CROISY/MAGDELON-CATHOS',
+      'string-id' => '#MAGDELON,#CATHOS,#ALMANZOR;#MAGDELON,#CATHOS,#MAROTTE;#MAGDELON,#CATHOS,#MAROTTE;#MAGDELON,#CATHOS,#MAROTTE,#ALMANZOR;#LAGRANGE,#DUCROISY;#MAGDELON,#CATHOS',
     ),
   ),
   'moliere_precieusesridicules_I10' => 
@@ -35153,6 +34303,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'MAGDELON-CATHOS-MAROTTE/MAGDELON-CATHOS-MAROTTE/MAGDELON-CATHOS-MAROTTE-ALMANZOR/LA GRANGE-DU CROISY/MAGDELON-CATHOS/LA GRANGE-DU CROISY-MAGDELON-CATHOS-VIOLONS',
+      'string-id' => '#MAGDELON,#CATHOS,#MAROTTE;#MAGDELON,#CATHOS,#MAROTTE;#MAGDELON,#CATHOS,#MAROTTE,#ALMANZOR;#LAGRANGE,#DUCROISY;#MAGDELON,#CATHOS;#LAGRANGE,#DUCROISY,#MAGDELON,#CATHOS,#VIOLONS',
     ),
   ),
   'moliere_precieusesridicules_I11' => 
@@ -35238,6 +34389,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'MAGDELON-CATHOS-MAROTTE/MAGDELON-CATHOS-MAROTTE-ALMANZOR/LA GRANGE-DU CROISY/MAGDELON-CATHOS/LA GRANGE-DU CROISY-MAGDELON-CATHOS-VIOLONS/GORGIBUS-MAGDELON',
+      'string-id' => '#MAGDELON,#CATHOS,#MAROTTE;#MAGDELON,#CATHOS,#MAROTTE,#ALMANZOR;#LAGRANGE,#DUCROISY;#MAGDELON,#CATHOS;#LAGRANGE,#DUCROISY,#MAGDELON,#CATHOS,#VIOLONS;#GORGIBUS,#MAGDELON',
     ),
   ),
   'moliere_precieusesridicules_I12' => 
@@ -35314,6 +34466,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'MAGDELON-CATHOS-MAROTTE-ALMANZOR/LA GRANGE-DU CROISY/MAGDELON-CATHOS/LA GRANGE-DU CROISY-MAGDELON-CATHOS-VIOLONS/GORGIBUS-MAGDELON/GORGIBUS-MAGDELON-CATHOS-VIOLONS',
+      'string-id' => '#MAGDELON,#CATHOS,#MAROTTE,#ALMANZOR;#LAGRANGE,#DUCROISY;#MAGDELON,#CATHOS;#LAGRANGE,#DUCROISY,#MAGDELON,#CATHOS,#VIOLONS;#GORGIBUS,#MAGDELON;#GORGIBUS,#MAGDELON,#CATHOS,#VIOLONS',
     ),
   ),
   'moliere_monsieurpourceaugnac_II01' => 
@@ -35390,6 +34543,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'JULIE-NÉRINE-ÉRASTE/JULIE-NÉRINE-ÉRASTE-SBRIGANI/MONSIEUR DE POURCEAUGNAC-SBRIGANI/MONSIEUR DE POURCEAUGNAC-ÉRASTE-SBRIGANI/ÉRASTE-L\'APOTHICAIRE/ÉRASTE-PREMIER MÉDECIN-L\'APOTHICAIRE-UN PAYSAN-UNE PAYSANNE',
+      'string-id' => '#JULIE,#NERINE,#ERASTE;#JULIE,#NERINE,#ERASTE,#SBRIGANI;#MONSIEURDEPOURCEAUGNAC,#SBRIGANI;#MONSIEURDEPOURCEAUGNAC,#ERASTE,#SBRIGANI;#ERASTE,#LAPOTHICAIRE;#ERASTE,#PREMIERMEDECIN,#LAPOTHICAIRE,#UNPAYSAN,#UNEPAYSANNE',
     ),
   ),
   'moliere_monsieurpourceaugnac_II02' => 
@@ -35475,6 +34629,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'JULIE-NÉRINE-ÉRASTE-SBRIGANI/MONSIEUR DE POURCEAUGNAC-SBRIGANI/MONSIEUR DE POURCEAUGNAC-ÉRASTE-SBRIGANI/ÉRASTE-L\'APOTHICAIRE/ÉRASTE-PREMIER MÉDECIN-L\'APOTHICAIRE-UN PAYSAN-UNE PAYSANNE/MONSIEUR DE POURCEAUGNAC-ÉRASTE-PREMIER MÉDECIN-L\'APOTHICAIRE',
+      'string-id' => '#JULIE,#NERINE,#ERASTE,#SBRIGANI;#MONSIEURDEPOURCEAUGNAC,#SBRIGANI;#MONSIEURDEPOURCEAUGNAC,#ERASTE,#SBRIGANI;#ERASTE,#LAPOTHICAIRE;#ERASTE,#PREMIERMEDECIN,#LAPOTHICAIRE,#UNPAYSAN,#UNEPAYSANNE;#MONSIEURDEPOURCEAUGNAC,#ERASTE,#PREMIERMEDECIN,#LAPOTHICAIRE',
     ),
   ),
   'moliere_monsieurpourceaugnac_II03' => 
@@ -35560,6 +34715,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'MONSIEUR DE POURCEAUGNAC-SBRIGANI/MONSIEUR DE POURCEAUGNAC-ÉRASTE-SBRIGANI/ÉRASTE-L\'APOTHICAIRE/ÉRASTE-PREMIER MÉDECIN-L\'APOTHICAIRE-UN PAYSAN-UNE PAYSANNE/MONSIEUR DE POURCEAUGNAC-ÉRASTE-PREMIER MÉDECIN-L\'APOTHICAIRE/MONSIEUR DE POURCEAUGNAC-PREMIER MÉDECIN-SECOND MÉDECIN-L\'APOTHICAIRE',
+      'string-id' => '#MONSIEURDEPOURCEAUGNAC,#SBRIGANI;#MONSIEURDEPOURCEAUGNAC,#ERASTE,#SBRIGANI;#ERASTE,#LAPOTHICAIRE;#ERASTE,#PREMIERMEDECIN,#LAPOTHICAIRE,#UNPAYSAN,#UNEPAYSANNE;#MONSIEURDEPOURCEAUGNAC,#ERASTE,#PREMIERMEDECIN,#LAPOTHICAIRE;#MONSIEURDEPOURCEAUGNAC,#PREMIERMEDECIN,#SECONDMEDECIN,#LAPOTHICAIRE',
     ),
   ),
   'moliere_monsieurpourceaugnac_II04' => 
@@ -35645,6 +34801,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'MONSIEUR DE POURCEAUGNAC-ÉRASTE-SBRIGANI/ÉRASTE-L\'APOTHICAIRE/ÉRASTE-PREMIER MÉDECIN-L\'APOTHICAIRE-UN PAYSAN-UNE PAYSANNE/MONSIEUR DE POURCEAUGNAC-ÉRASTE-PREMIER MÉDECIN-L\'APOTHICAIRE/MONSIEUR DE POURCEAUGNAC-PREMIER MÉDECIN-SECOND MÉDECIN-L\'APOTHICAIRE/MONSIEUR DE POURCEAUGNAC',
+      'string-id' => '#MONSIEURDEPOURCEAUGNAC,#ERASTE,#SBRIGANI;#ERASTE,#LAPOTHICAIRE;#ERASTE,#PREMIERMEDECIN,#LAPOTHICAIRE,#UNPAYSAN,#UNEPAYSANNE;#MONSIEURDEPOURCEAUGNAC,#ERASTE,#PREMIERMEDECIN,#LAPOTHICAIRE;#MONSIEURDEPOURCEAUGNAC,#PREMIERMEDECIN,#SECONDMEDECIN,#LAPOTHICAIRE;#MONSIEURDEPOURCEAUGNAC',
     ),
   ),
   'moliere_monsieurpourceaugnac_II05' => 
@@ -35730,6 +34887,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'ÉRASTE-L\'APOTHICAIRE/ÉRASTE-PREMIER MÉDECIN-L\'APOTHICAIRE-UN PAYSAN-UNE PAYSANNE/MONSIEUR DE POURCEAUGNAC-ÉRASTE-PREMIER MÉDECIN-L\'APOTHICAIRE/MONSIEUR DE POURCEAUGNAC-PREMIER MÉDECIN-SECOND MÉDECIN-L\'APOTHICAIRE/MONSIEUR DE POURCEAUGNAC/PREMIER MUSICIEN-SECOND MUSICIEN',
+      'string-id' => '#ERASTE,#LAPOTHICAIRE;#ERASTE,#PREMIERMEDECIN,#LAPOTHICAIRE,#UNPAYSAN,#UNEPAYSANNE;#MONSIEURDEPOURCEAUGNAC,#ERASTE,#PREMIERMEDECIN,#LAPOTHICAIRE;#MONSIEURDEPOURCEAUGNAC,#PREMIERMEDECIN,#SECONDMEDECIN,#LAPOTHICAIRE;#MONSIEURDEPOURCEAUGNAC;#PREMIERMUSICIEN,#SECONDMUSICIEN',
     ),
   ),
   'moliere_monsieurpourceaugnac_II06' => 
@@ -35815,6 +34973,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'ÉRASTE-PREMIER MÉDECIN-L\'APOTHICAIRE-UN PAYSAN-UNE PAYSANNE/MONSIEUR DE POURCEAUGNAC-ÉRASTE-PREMIER MÉDECIN-L\'APOTHICAIRE/MONSIEUR DE POURCEAUGNAC-PREMIER MÉDECIN-SECOND MÉDECIN-L\'APOTHICAIRE/MONSIEUR DE POURCEAUGNAC/PREMIER MUSICIEN-SECOND MUSICIEN/MONSIEUR DE POURCEAUGNAC-L\'APOTHICAIRE',
+      'string-id' => '#ERASTE,#PREMIERMEDECIN,#LAPOTHICAIRE,#UNPAYSAN,#UNEPAYSANNE;#MONSIEURDEPOURCEAUGNAC,#ERASTE,#PREMIERMEDECIN,#LAPOTHICAIRE;#MONSIEURDEPOURCEAUGNAC,#PREMIERMEDECIN,#SECONDMEDECIN,#LAPOTHICAIRE;#MONSIEURDEPOURCEAUGNAC;#PREMIERMUSICIEN,#SECONDMUSICIEN;#MONSIEURDEPOURCEAUGNAC,#LAPOTHICAIRE',
     ),
   ),
   'moliere_monsieurpourceaugnac_III01' => 
@@ -35882,6 +35041,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'SBRIGANI-PREMIER MÉDECIN/ORONTE-PREMIER MÉDECIN/ORONTE-SBRIGANI/MONSIEUR DE POURCEAUGNAC-SBRIGANI/MONSIEUR DE POURCEAUGNAC-ORONTE/MONSIEUR DE POURCEAUGNAC-ORONTE-JULIE',
+      'string-id' => '#SBRIGANI,#PREMIERMEDECIN;#ORONTE,#PREMIERMEDECIN;#ORONTE,#SBRIGANI;#MONSIEURDEPOURCEAUGNAC,#SBRIGANI;#MONSIEURDEPOURCEAUGNAC,#ORONTE;#MONSIEURDEPOURCEAUGNAC,#ORONTE,#JULIE',
     ),
   ),
   'moliere_monsieurpourceaugnac_III02' => 
@@ -35958,6 +35118,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'ORONTE-PREMIER MÉDECIN/ORONTE-SBRIGANI/MONSIEUR DE POURCEAUGNAC-SBRIGANI/MONSIEUR DE POURCEAUGNAC-ORONTE/MONSIEUR DE POURCEAUGNAC-ORONTE-JULIE/MONSIEUR DE POURCEAUGNAC-ORONTE-LUCETTE',
+      'string-id' => '#ORONTE,#PREMIERMEDECIN;#ORONTE,#SBRIGANI;#MONSIEURDEPOURCEAUGNAC,#SBRIGANI;#MONSIEURDEPOURCEAUGNAC,#ORONTE;#MONSIEURDEPOURCEAUGNAC,#ORONTE,#JULIE;#MONSIEURDEPOURCEAUGNAC,#ORONTE,#LUCETTE',
     ),
   ),
   'moliere_monsieurpourceaugnac_III03' => 
@@ -36034,6 +35195,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'ORONTE-SBRIGANI/MONSIEUR DE POURCEAUGNAC-SBRIGANI/MONSIEUR DE POURCEAUGNAC-ORONTE/MONSIEUR DE POURCEAUGNAC-ORONTE-JULIE/MONSIEUR DE POURCEAUGNAC-ORONTE-LUCETTE/MONSIEUR DE POURCEAUGNAC-ORONTE-NÉRINE-LUCETTE',
+      'string-id' => '#ORONTE,#SBRIGANI;#MONSIEURDEPOURCEAUGNAC,#SBRIGANI;#MONSIEURDEPOURCEAUGNAC,#ORONTE;#MONSIEURDEPOURCEAUGNAC,#ORONTE,#JULIE;#MONSIEURDEPOURCEAUGNAC,#ORONTE,#LUCETTE;#MONSIEURDEPOURCEAUGNAC,#ORONTE,#NERINE,#LUCETTE',
     ),
   ),
   'moliere_monsieurpourceaugnac_III04' => 
@@ -36110,6 +35272,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'MONSIEUR DE POURCEAUGNAC-SBRIGANI/MONSIEUR DE POURCEAUGNAC-ORONTE/MONSIEUR DE POURCEAUGNAC-ORONTE-JULIE/MONSIEUR DE POURCEAUGNAC-ORONTE-LUCETTE/MONSIEUR DE POURCEAUGNAC-ORONTE-NÉRINE-LUCETTE/SBRIGANI',
+      'string-id' => '#MONSIEURDEPOURCEAUGNAC,#SBRIGANI;#MONSIEURDEPOURCEAUGNAC,#ORONTE;#MONSIEURDEPOURCEAUGNAC,#ORONTE,#JULIE;#MONSIEURDEPOURCEAUGNAC,#ORONTE,#LUCETTE;#MONSIEURDEPOURCEAUGNAC,#ORONTE,#NERINE,#LUCETTE;#SBRIGANI',
     ),
   ),
   'moliere_monsieurpourceaugnac_III05' => 
@@ -36186,6 +35349,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'MONSIEUR DE POURCEAUGNAC-ORONTE/MONSIEUR DE POURCEAUGNAC-ORONTE-JULIE/MONSIEUR DE POURCEAUGNAC-ORONTE-LUCETTE/MONSIEUR DE POURCEAUGNAC-ORONTE-NÉRINE-LUCETTE/SBRIGANI/MONSIEUR DE POURCEAUGNAC-SBRIGANI',
+      'string-id' => '#MONSIEURDEPOURCEAUGNAC,#ORONTE;#MONSIEURDEPOURCEAUGNAC,#ORONTE,#JULIE;#MONSIEURDEPOURCEAUGNAC,#ORONTE,#LUCETTE;#MONSIEURDEPOURCEAUGNAC,#ORONTE,#NERINE,#LUCETTE;#SBRIGANI;#MONSIEURDEPOURCEAUGNAC,#SBRIGANI',
     ),
   ),
   'moliere_monsieurpourceaugnac_III06' => 
@@ -36262,6 +35426,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'MONSIEUR DE POURCEAUGNAC-ORONTE-JULIE/MONSIEUR DE POURCEAUGNAC-ORONTE-LUCETTE/MONSIEUR DE POURCEAUGNAC-ORONTE-NÉRINE-LUCETTE/SBRIGANI/MONSIEUR DE POURCEAUGNAC-SBRIGANI/MONSIEUR DE POURCEAUGNAC-SBRIGANI',
+      'string-id' => '#MONSIEURDEPOURCEAUGNAC,#ORONTE,#JULIE;#MONSIEURDEPOURCEAUGNAC,#ORONTE,#LUCETTE;#MONSIEURDEPOURCEAUGNAC,#ORONTE,#NERINE,#LUCETTE;#SBRIGANI;#MONSIEURDEPOURCEAUGNAC,#SBRIGANI;#MONSIEURDEPOURCEAUGNAC,#SBRIGANI',
     ),
   ),
   'moliere_monsieurpourceaugnac_IV01' => 
@@ -36338,6 +35503,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'ÉRASTE-SBRIGANI/MONSIEUR DE POURCEAUGNAC-SBRIGANI/MONSIEUR DE POURCEAUGNAC-PREMIER SUISSE-SECOND SUISSE/MONSIEUR DE POURCEAUGNAC-PREMIER SUISSE-SECOND SUISSE-UN EXEMPT-DEUX ARCHERS/MONSIEUR DE POURCEAUGNAC-SBRIGANI/ORONTE-SBRIGANI',
+      'string-id' => '#ERASTE,#SBRIGANI;#MONSIEURDEPOURCEAUGNAC,#SBRIGANI;#MONSIEURDEPOURCEAUGNAC,#PREMIERSUISSE,#SECONDSUISSE;#MONSIEURDEPOURCEAUGNAC,#PREMIERSUISSE,#SECONDSUISSE,#UNEXEMPT,#DEUXARCHERS;#MONSIEURDEPOURCEAUGNAC,#SBRIGANI;#ORONTE,#SBRIGANI',
     ),
   ),
   'moliere_monsieurpourceaugnac_IV02' => 
@@ -36414,6 +35580,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'MONSIEUR DE POURCEAUGNAC-SBRIGANI/MONSIEUR DE POURCEAUGNAC-PREMIER SUISSE-SECOND SUISSE/MONSIEUR DE POURCEAUGNAC-PREMIER SUISSE-SECOND SUISSE-UN EXEMPT-DEUX ARCHERS/MONSIEUR DE POURCEAUGNAC-SBRIGANI/ORONTE-SBRIGANI/ORONTE-JULIE-ÉRASTE-SBRIGANI',
+      'string-id' => '#MONSIEURDEPOURCEAUGNAC,#SBRIGANI;#MONSIEURDEPOURCEAUGNAC,#PREMIERSUISSE,#SECONDSUISSE;#MONSIEURDEPOURCEAUGNAC,#PREMIERSUISSE,#SECONDSUISSE,#UNEXEMPT,#DEUXARCHERS;#MONSIEURDEPOURCEAUGNAC,#SBRIGANI;#ORONTE,#SBRIGANI;#ORONTE,#JULIE,#ERASTE,#SBRIGANI',
     ),
   ),
   'moliere_monsieurpourceaugnac_IV03' => 
@@ -36490,6 +35657,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'MONSIEUR DE POURCEAUGNAC-PREMIER SUISSE-SECOND SUISSE/MONSIEUR DE POURCEAUGNAC-PREMIER SUISSE-SECOND SUISSE-UN EXEMPT-DEUX ARCHERS/MONSIEUR DE POURCEAUGNAC-SBRIGANI/ORONTE-SBRIGANI/ORONTE-JULIE-ÉRASTE-SBRIGANI/',
+      'string-id' => '#MONSIEURDEPOURCEAUGNAC,#PREMIERSUISSE,#SECONDSUISSE;#MONSIEURDEPOURCEAUGNAC,#PREMIERSUISSE,#SECONDSUISSE,#UNEXEMPT,#DEUXARCHERS;#MONSIEURDEPOURCEAUGNAC,#SBRIGANI;#ORONTE,#SBRIGANI;#ORONTE,#JULIE,#ERASTE,#SBRIGANI;',
     ),
   ),
   'moliere_misanthrope_II01' => 
@@ -36530,6 +35698,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ALCESTE-CÉLIMÈNE/ALCESTE-CÉLIMÈNE/ALCESTE-CÉLIMÈNE/ALCESTE-PHILINTE-CÉLIMÈNE-ÉLIANTE-ACASTE-CLITANDRE/ALCESTE-PHILINTE-CÉLIMÈNE-ÉLIANTE-ACASTE-CLITANDRE/ALCESTE-PHILINTE-CÉLIMÈNE-ÉLIANTE-ACASTE-CLITANDRE',
+      'string-id' => '#ALCESTE,#CELIMENE;#ALCESTE,#CELIMENE;#ALCESTE,#CELIMENE;#ALCESTE,#PHILINTE,#CELIMENE,#ELIANTE,#ACASTE,#CLITANDRE;#ALCESTE,#PHILINTE,#CELIMENE,#ELIANTE,#ACASTE,#CLITANDRE;#ALCESTE,#PHILINTE,#CELIMENE,#ELIANTE,#ACASTE,#CLITANDRE',
     ),
   ),
   'moliere_melicerte_II01' => 
@@ -36579,6 +35748,7 @@
       'genreId' => 'Comedieheroique',
       'authorId' => 'Moliere',
       'string' => 'MÉLICERTE/MÉLICERTE/MYRTIL-MÉLICERTE/MYRTIL-MÉLICERTE/MYRTIL/ACANTE-TYRÈNE-MYRTIL',
+      'string-id' => '#MELICERTE;#MELICERTE;#MYRTIL,#MELICERTE;#MYRTIL,#MELICERTE;#MYRTIL;#ACANTE,#TYRENE,#MYRTIL',
     ),
   ),
   'moliere_melicerte_II02' => 
@@ -36637,6 +35807,7 @@
       'genreId' => 'Comedieheroique',
       'authorId' => 'Moliere',
       'string' => 'MÉLICERTE/MYRTIL-MÉLICERTE/MYRTIL-MÉLICERTE/MYRTIL/ACANTE-TYRÈNE-MYRTIL/ACANTE-TYRÈNE-MYRTIL-NICANDRE',
+      'string-id' => '#MELICERTE;#MYRTIL,#MELICERTE;#MYRTIL,#MELICERTE;#MYRTIL;#ACANTE,#TYRENE,#MYRTIL;#ACANTE,#TYRENE,#MYRTIL,#NICANDRE',
     ),
   ),
   'moliere_medecinmalgrelui_III01' => 
@@ -36722,6 +35893,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'SGANARELLE-LÉANDRE/SGANARELLE-THIBAUT-PERRIN/SGANARELLE-LUCAS-JACQUELINE/LUCAS-GÉRONTE/SGANARELLE-GÉRONTE-LÉANDRE/SGANARELLE-GÉRONTE-JACQUELINE-LUCINDE-LÉANDRE',
+      'string-id' => '#SGANARELLE,#LEANDRE;#SGANARELLE,#THIBAUT,#PERRIN;#SGANARELLE,#LUCAS,#JACQUELINE;#LUCAS,#GERONTE;#SGANARELLE,#GERONTE,#LEANDRE;#SGANARELLE,#GERONTE,#JACQUELINE,#LUCINDE,#LEANDRE',
     ),
   ),
   'moliere_medecinmalgrelui_III02' => 
@@ -36807,6 +35979,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'SGANARELLE-THIBAUT-PERRIN/SGANARELLE-LUCAS-JACQUELINE/LUCAS-GÉRONTE/SGANARELLE-GÉRONTE-LÉANDRE/SGANARELLE-GÉRONTE-JACQUELINE-LUCINDE-LÉANDRE/SGANARELLE-GÉRONTE',
+      'string-id' => '#SGANARELLE,#THIBAUT,#PERRIN;#SGANARELLE,#LUCAS,#JACQUELINE;#LUCAS,#GERONTE;#SGANARELLE,#GERONTE,#LEANDRE;#SGANARELLE,#GERONTE,#JACQUELINE,#LUCINDE,#LEANDRE;#SGANARELLE,#GERONTE',
     ),
   ),
   'moliere_medecinmalgrelui_III03' => 
@@ -36883,6 +36056,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'SGANARELLE-LUCAS-JACQUELINE/LUCAS-GÉRONTE/SGANARELLE-GÉRONTE-LÉANDRE/SGANARELLE-GÉRONTE-JACQUELINE-LUCINDE-LÉANDRE/SGANARELLE-GÉRONTE/SGANARELLE-LUCAS-GÉRONTE',
+      'string-id' => '#SGANARELLE,#LUCAS,#JACQUELINE;#LUCAS,#GERONTE;#SGANARELLE,#GERONTE,#LEANDRE;#SGANARELLE,#GERONTE,#JACQUELINE,#LUCINDE,#LEANDRE;#SGANARELLE,#GERONTE;#SGANARELLE,#LUCAS,#GERONTE',
     ),
   ),
   'moliere_medecinmalgrelui_III04' => 
@@ -36959,6 +36133,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LUCAS-GÉRONTE/SGANARELLE-GÉRONTE-LÉANDRE/SGANARELLE-GÉRONTE-JACQUELINE-LUCINDE-LÉANDRE/SGANARELLE-GÉRONTE/SGANARELLE-LUCAS-GÉRONTE/SGANARELLE-MARTINE-LUCAS',
+      'string-id' => '#LUCAS,#GERONTE;#SGANARELLE,#GERONTE,#LEANDRE;#SGANARELLE,#GERONTE,#JACQUELINE,#LUCINDE,#LEANDRE;#SGANARELLE,#GERONTE;#SGANARELLE,#LUCAS,#GERONTE;#SGANARELLE,#MARTINE,#LUCAS',
     ),
   ),
   'moliere_medecinmalgrelui_III05' => 
@@ -37035,6 +36210,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'SGANARELLE-GÉRONTE-LÉANDRE/SGANARELLE-GÉRONTE-JACQUELINE-LUCINDE-LÉANDRE/SGANARELLE-GÉRONTE/SGANARELLE-LUCAS-GÉRONTE/SGANARELLE-MARTINE-LUCAS/SGANARELLE-MARTINE-LUCAS-GÉRONTE',
+      'string-id' => '#SGANARELLE,#GERONTE,#LEANDRE;#SGANARELLE,#GERONTE,#JACQUELINE,#LUCINDE,#LEANDRE;#SGANARELLE,#GERONTE;#SGANARELLE,#LUCAS,#GERONTE;#SGANARELLE,#MARTINE,#LUCAS;#SGANARELLE,#MARTINE,#LUCAS,#GERONTE',
     ),
   ),
   'moliere_medecinmalgrelui_III06' => 
@@ -37102,6 +36278,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'SGANARELLE-GÉRONTE-JACQUELINE-LUCINDE-LÉANDRE/SGANARELLE-GÉRONTE/SGANARELLE-LUCAS-GÉRONTE/SGANARELLE-MARTINE-LUCAS/SGANARELLE-MARTINE-LUCAS-GÉRONTE/SGANARELLE-MARTINE-LUCAS-GÉRONTE-JACQUELINE-LUCINDE-LÉANDRE',
+      'string-id' => '#SGANARELLE,#GERONTE,#JACQUELINE,#LUCINDE,#LEANDRE;#SGANARELLE,#GERONTE;#SGANARELLE,#LUCAS,#GERONTE;#SGANARELLE,#MARTINE,#LUCAS;#SGANARELLE,#MARTINE,#LUCAS,#GERONTE;#SGANARELLE,#MARTINE,#LUCAS,#GERONTE,#JACQUELINE,#LUCINDE,#LEANDRE',
     ),
   ),
   'moliere_mariageforce_I01' => 
@@ -37169,6 +36346,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'SGANARELLE-GÉRONIMO/SGANARELLE-DORIMÈNE/SGANARELLE-GÉRONIMO/SGANARELLE-PANCRACE /SGANARELLE-MARPHURIUS/SGANARELLE',
+      'string-id' => '#SGANARELLE,#GERONIMO;#SGANARELLE,#DORIMENE;#SGANARELLE,#GERONIMO;#SGANARELLE,#PANCRACE;#SGANARELLE,#MARPHURIUS;#SGANARELLE',
     ),
   ),
   'moliere_mariageforce_I02' => 
@@ -37245,6 +36423,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'SGANARELLE-DORIMÈNE/SGANARELLE-GÉRONIMO/SGANARELLE-PANCRACE /SGANARELLE-MARPHURIUS/SGANARELLE/SGANARELLE-DORIMÈNE-LYCASTE',
+      'string-id' => '#SGANARELLE,#DORIMENE;#SGANARELLE,#GERONIMO;#SGANARELLE,#PANCRACE;#SGANARELLE,#MARPHURIUS;#SGANARELLE;#SGANARELLE,#DORIMENE,#LYCASTE',
     ),
   ),
   'moliere_mariageforce_I03' => 
@@ -37321,6 +36500,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'SGANARELLE-GÉRONIMO/SGANARELLE-PANCRACE /SGANARELLE-MARPHURIUS/SGANARELLE/SGANARELLE-DORIMÈNE-LYCASTE/SGANARELLE-ALCANTOR',
+      'string-id' => '#SGANARELLE,#GERONIMO;#SGANARELLE,#PANCRACE;#SGANARELLE,#MARPHURIUS;#SGANARELLE;#SGANARELLE,#DORIMENE,#LYCASTE;#SGANARELLE,#ALCANTOR',
     ),
   ),
   'moliere_mariageforce_I04' => 
@@ -37397,6 +36577,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'SGANARELLE-PANCRACE /SGANARELLE-MARPHURIUS/SGANARELLE/SGANARELLE-DORIMÈNE-LYCASTE/SGANARELLE-ALCANTOR/SGANARELLE-ALCIDAS',
+      'string-id' => '#SGANARELLE,#PANCRACE;#SGANARELLE,#MARPHURIUS;#SGANARELLE;#SGANARELLE,#DORIMENE,#LYCASTE;#SGANARELLE,#ALCANTOR;#SGANARELLE,#ALCIDAS',
     ),
   ),
   'moliere_mariageforce_I05' => 
@@ -37464,6 +36645,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'SGANARELLE-MARPHURIUS/SGANARELLE/SGANARELLE-DORIMÈNE-LYCASTE/SGANARELLE-ALCANTOR/SGANARELLE-ALCIDAS/SGANARELLE-ALCANTOR-ALCIDAS',
+      'string-id' => '#SGANARELLE,#MARPHURIUS;#SGANARELLE;#SGANARELLE,#DORIMENE,#LYCASTE;#SGANARELLE,#ALCANTOR;#SGANARELLE,#ALCIDAS;#SGANARELLE,#ALCANTOR,#ALCIDAS',
     ),
   ),
   'moliere_maladeimaginaire_III01' => 
@@ -37522,6 +36704,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARGAN/ARGAN-TOINETTE/ARGAN-ANGÉLIQUE-TOINETTE/ANGÉLIQUE-TOINETTE/ARGAN-ANGÉLIQUE-TOINETTE/ARGAN-BÉLINE-ANGÉLIQUE-TOINETTE',
+      'string-id' => '#ARGAN;#ARGAN,#TOINETTE;#ARGAN,#ANGELIQUE,#TOINETTE;#ANGELIQUE,#TOINETTE;#ARGAN,#ANGELIQUE,#TOINETTE;#ARGAN,#BELINE,#ANGELIQUE,#TOINETTE',
     ),
   ),
   'moliere_maladeimaginaire_III02' => 
@@ -37580,6 +36763,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARGAN-TOINETTE/ARGAN-ANGÉLIQUE-TOINETTE/ANGÉLIQUE-TOINETTE/ARGAN-ANGÉLIQUE-TOINETTE/ARGAN-BÉLINE-ANGÉLIQUE-TOINETTE/ARGAN-BÉLINE',
+      'string-id' => '#ARGAN,#TOINETTE;#ARGAN,#ANGELIQUE,#TOINETTE;#ANGELIQUE,#TOINETTE;#ARGAN,#ANGELIQUE,#TOINETTE;#ARGAN,#BELINE,#ANGELIQUE,#TOINETTE;#ARGAN,#BELINE',
     ),
   ),
   'moliere_maladeimaginaire_III03' => 
@@ -37629,6 +36813,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARGAN-ANGÉLIQUE-TOINETTE/ANGÉLIQUE-TOINETTE/ARGAN-ANGÉLIQUE-TOINETTE/ARGAN-BÉLINE-ANGÉLIQUE-TOINETTE/ARGAN-BÉLINE/BÉLINE-ANGÉLIQUE-TOINETTE',
+      'string-id' => '#ARGAN,#ANGELIQUE,#TOINETTE;#ANGELIQUE,#TOINETTE;#ARGAN,#ANGELIQUE,#TOINETTE;#ARGAN,#BELINE,#ANGELIQUE,#TOINETTE;#ARGAN,#BELINE;#BELINE,#ANGELIQUE,#TOINETTE',
     ),
   ),
   'moliere_maladeimaginaire_V01' => 
@@ -37705,6 +36890,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'CLÉANTE-TOINETTE/ARGAN-CLÉANTE-TOINETTE/ARGAN-ANGÉLIQUE-CLÉANTE/ARGAN-ANGÉLIQUE-CLÉANTE-TOINETTE/ARGAN-ANGÉLIQUE-CLÉANTE-MONSIEUR DIAFOIRUS-THOMAS DIAFOIRUS-TOINETTE/ARGAN-BÉLINE-ANGÉLIQUE-MONSIEUR DIAFOIRUS-THOMAS DIAFOIRUS-TOINETTE',
+      'string-id' => '#CLEANTE,#TOINETTE;#ARGAN,#CLEANTE,#TOINETTE;#ARGAN,#ANGELIQUE,#CLEANTE;#ARGAN,#ANGELIQUE,#CLEANTE,#TOINETTE;#ARGAN,#ANGELIQUE,#CLEANTE,#MONSIEURDIAFOIRUS,#THOMASDIAFOIRUS,#TOINETTE;#ARGAN,#BELINE,#ANGELIQUE,#MONSIEURDIAFOIRUS,#THOMASDIAFOIRUS,#TOINETTE',
     ),
   ),
   'moliere_maladeimaginaire_V02' => 
@@ -37781,6 +36967,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARGAN-CLÉANTE-TOINETTE/ARGAN-ANGÉLIQUE-CLÉANTE/ARGAN-ANGÉLIQUE-CLÉANTE-TOINETTE/ARGAN-ANGÉLIQUE-CLÉANTE-MONSIEUR DIAFOIRUS-THOMAS DIAFOIRUS-TOINETTE/ARGAN-BÉLINE-ANGÉLIQUE-MONSIEUR DIAFOIRUS-THOMAS DIAFOIRUS-TOINETTE/ARGAN-BÉLINE',
+      'string-id' => '#ARGAN,#CLEANTE,#TOINETTE;#ARGAN,#ANGELIQUE,#CLEANTE;#ARGAN,#ANGELIQUE,#CLEANTE,#TOINETTE;#ARGAN,#ANGELIQUE,#CLEANTE,#MONSIEURDIAFOIRUS,#THOMASDIAFOIRUS,#TOINETTE;#ARGAN,#BELINE,#ANGELIQUE,#MONSIEURDIAFOIRUS,#THOMASDIAFOIRUS,#TOINETTE;#ARGAN,#BELINE',
     ),
   ),
   'moliere_maladeimaginaire_V03' => 
@@ -37866,6 +37053,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARGAN-ANGÉLIQUE-CLÉANTE/ARGAN-ANGÉLIQUE-CLÉANTE-TOINETTE/ARGAN-ANGÉLIQUE-CLÉANTE-MONSIEUR DIAFOIRUS-THOMAS DIAFOIRUS-TOINETTE/ARGAN-BÉLINE-ANGÉLIQUE-MONSIEUR DIAFOIRUS-THOMAS DIAFOIRUS-TOINETTE/ARGAN-BÉLINE/ARGAN-LOUISON',
+      'string-id' => '#ARGAN,#ANGELIQUE,#CLEANTE;#ARGAN,#ANGELIQUE,#CLEANTE,#TOINETTE;#ARGAN,#ANGELIQUE,#CLEANTE,#MONSIEURDIAFOIRUS,#THOMASDIAFOIRUS,#TOINETTE;#ARGAN,#BELINE,#ANGELIQUE,#MONSIEURDIAFOIRUS,#THOMASDIAFOIRUS,#TOINETTE;#ARGAN,#BELINE;#ARGAN,#LOUISON',
     ),
   ),
   'moliere_maladeimaginaire_V04' => 
@@ -37951,6 +37139,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARGAN-ANGÉLIQUE-CLÉANTE-TOINETTE/ARGAN-ANGÉLIQUE-CLÉANTE-MONSIEUR DIAFOIRUS-THOMAS DIAFOIRUS-TOINETTE/ARGAN-BÉLINE-ANGÉLIQUE-MONSIEUR DIAFOIRUS-THOMAS DIAFOIRUS-TOINETTE/ARGAN-BÉLINE/ARGAN-LOUISON/ARGAN-BÉRALDE',
+      'string-id' => '#ARGAN,#ANGELIQUE,#CLEANTE,#TOINETTE;#ARGAN,#ANGELIQUE,#CLEANTE,#MONSIEURDIAFOIRUS,#THOMASDIAFOIRUS,#TOINETTE;#ARGAN,#BELINE,#ANGELIQUE,#MONSIEURDIAFOIRUS,#THOMASDIAFOIRUS,#TOINETTE;#ARGAN,#BELINE;#ARGAN,#LOUISON;#ARGAN,#BERALDE',
     ),
   ),
   'moliere_maladeimaginaire_VII01' => 
@@ -38018,6 +37207,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARGAN-BÉRALDE-TOINETTE/BÉRALDE-TOINETTE/ARGAN-BÉRALDE/ARGAN-BÉRALDE-MONSIEUR FLEURANT/ARGAN-BÉRALDE-MONSIEUR PURGON-TOINETTE/ARGAN-BÉRALDE',
+      'string-id' => '#ARGAN,#BERALDE,#TOINETTE;#BERALDE,#TOINETTE;#ARGAN,#BERALDE;#ARGAN,#BERALDE,#MONSIEURFLEURANT;#ARGAN,#BERALDE,#MONSIEURPURGON,#TOINETTE;#ARGAN,#BERALDE',
     ),
   ),
   'moliere_maladeimaginaire_VII02' => 
@@ -38085,6 +37275,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'BÉRALDE-TOINETTE/ARGAN-BÉRALDE/ARGAN-BÉRALDE-MONSIEUR FLEURANT/ARGAN-BÉRALDE-MONSIEUR PURGON-TOINETTE/ARGAN-BÉRALDE/ARGAN-BÉRALDE-TOINETTE',
+      'string-id' => '#BERALDE,#TOINETTE;#ARGAN,#BERALDE;#ARGAN,#BERALDE,#MONSIEURFLEURANT;#ARGAN,#BERALDE,#MONSIEURPURGON,#TOINETTE;#ARGAN,#BERALDE;#ARGAN,#BERALDE,#TOINETTE',
     ),
   ),
   'moliere_maladeimaginaire_VII03' => 
@@ -38143,6 +37334,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARGAN-BÉRALDE/ARGAN-BÉRALDE-MONSIEUR FLEURANT/ARGAN-BÉRALDE-MONSIEUR PURGON-TOINETTE/ARGAN-BÉRALDE/ARGAN-BÉRALDE-TOINETTE/ARGAN-BÉRALDE-TOINETTE',
+      'string-id' => '#ARGAN,#BERALDE;#ARGAN,#BERALDE,#MONSIEURFLEURANT;#ARGAN,#BERALDE,#MONSIEURPURGON,#TOINETTE;#ARGAN,#BERALDE;#ARGAN,#BERALDE,#TOINETTE;#ARGAN,#BERALDE,#TOINETTE',
     ),
   ),
   'moliere_maladeimaginaire_VII04' => 
@@ -38201,6 +37393,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARGAN-BÉRALDE-MONSIEUR FLEURANT/ARGAN-BÉRALDE-MONSIEUR PURGON-TOINETTE/ARGAN-BÉRALDE/ARGAN-BÉRALDE-TOINETTE/ARGAN-BÉRALDE-TOINETTE/ARGAN-BÉRALDE-TOINETTE',
+      'string-id' => '#ARGAN,#BERALDE,#MONSIEURFLEURANT;#ARGAN,#BERALDE,#MONSIEURPURGON,#TOINETTE;#ARGAN,#BERALDE;#ARGAN,#BERALDE,#TOINETTE;#ARGAN,#BERALDE,#TOINETTE;#ARGAN,#BERALDE,#TOINETTE',
     ),
   ),
   'moliere_maladeimaginaire_VII05' => 
@@ -38250,6 +37443,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARGAN-BÉRALDE-MONSIEUR PURGON-TOINETTE/ARGAN-BÉRALDE/ARGAN-BÉRALDE-TOINETTE/ARGAN-BÉRALDE-TOINETTE/ARGAN-BÉRALDE-TOINETTE/ARGAN-BÉRALDE-TOINETTE',
+      'string-id' => '#ARGAN,#BERALDE,#MONSIEURPURGON,#TOINETTE;#ARGAN,#BERALDE;#ARGAN,#BERALDE,#TOINETTE;#ARGAN,#BERALDE,#TOINETTE;#ARGAN,#BERALDE,#TOINETTE;#ARGAN,#BERALDE,#TOINETTE',
     ),
   ),
   'moliere_maladeimaginaire_VII06' => 
@@ -38290,6 +37484,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARGAN-BÉRALDE/ARGAN-BÉRALDE-TOINETTE/ARGAN-BÉRALDE-TOINETTE/ARGAN-BÉRALDE-TOINETTE/ARGAN-BÉRALDE-TOINETTE/ARGAN-BÉRALDE-TOINETTE',
+      'string-id' => '#ARGAN,#BERALDE;#ARGAN,#BERALDE,#TOINETTE;#ARGAN,#BERALDE,#TOINETTE;#ARGAN,#BERALDE,#TOINETTE;#ARGAN,#BERALDE,#TOINETTE;#ARGAN,#BERALDE,#TOINETTE',
     ),
   ),
   'moliere_maladeimaginaire_VII07' => 
@@ -38330,6 +37525,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARGAN-BÉRALDE-TOINETTE/ARGAN-BÉRALDE-TOINETTE/ARGAN-BÉRALDE-TOINETTE/ARGAN-BÉRALDE-TOINETTE/ARGAN-BÉRALDE-TOINETTE/ARGAN-BÉLINE-BÉRALDE-TOINETTE',
+      'string-id' => '#ARGAN,#BERALDE,#TOINETTE;#ARGAN,#BERALDE,#TOINETTE;#ARGAN,#BERALDE,#TOINETTE;#ARGAN,#BERALDE,#TOINETTE;#ARGAN,#BERALDE,#TOINETTE;#ARGAN,#BELINE,#BERALDE,#TOINETTE',
     ),
   ),
   'moliere_maladeimaginaire_VII08' => 
@@ -38379,6 +37575,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARGAN-BÉRALDE-TOINETTE/ARGAN-BÉRALDE-TOINETTE/ARGAN-BÉRALDE-TOINETTE/ARGAN-BÉRALDE-TOINETTE/ARGAN-BÉLINE-BÉRALDE-TOINETTE/ARGAN-ANGÉLIQUE-BÉRALDE-TOINETTE',
+      'string-id' => '#ARGAN,#BERALDE,#TOINETTE;#ARGAN,#BERALDE,#TOINETTE;#ARGAN,#BERALDE,#TOINETTE;#ARGAN,#BERALDE,#TOINETTE;#ARGAN,#BELINE,#BERALDE,#TOINETTE;#ARGAN,#ANGELIQUE,#BERALDE,#TOINETTE',
     ),
   ),
   'moliere_maladeimaginaire_VII09' => 
@@ -38437,6 +37634,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARGAN-BÉRALDE-TOINETTE/ARGAN-BÉRALDE-TOINETTE/ARGAN-BÉRALDE-TOINETTE/ARGAN-BÉLINE-BÉRALDE-TOINETTE/ARGAN-ANGÉLIQUE-BÉRALDE-TOINETTE/ARGAN-ANGÉLIQUE-BÉRALDE-CLÉANTE-TOINETTE',
+      'string-id' => '#ARGAN,#BERALDE,#TOINETTE;#ARGAN,#BERALDE,#TOINETTE;#ARGAN,#BERALDE,#TOINETTE;#ARGAN,#BELINE,#BERALDE,#TOINETTE;#ARGAN,#ANGELIQUE,#BERALDE,#TOINETTE;#ARGAN,#ANGELIQUE,#BERALDE,#CLEANTE,#TOINETTE',
     ),
   ),
   'moliere_impromptuversailles_I01' => 
@@ -38522,6 +37720,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'MOLIÈRE-BRÉCOURT-DU CROISY-BÉJART-MADEMOISELLE DU PARC-MADEMOISELLE BÉJART-MADEMOISELLE DE BRIE-MADEMOISELLE MOLIÈRE-MADEMOISELLE DU CROISY-MADEMOISELLE HERVÉ/MOLIÈRE-LA THORILLIÈRE-MADEMOISELLE DE BRIE-MADEMOISELLE DU CROISY/MOLIÈRE/MOLIÈRE-BRÉCOURT-MADEMOISELLE DU PARC-MADEMOISELLE MOLIÈRE/MOLIÈRE-BRÉCOURT-DU CROISY-MADEMOISELLE DU PARC-MADEMOISELLE BÉJART-MADEMOISELLE DE BRIE-MADEMOISELLE MOLIÈRE-MADEMOISELLE DU CROISY-MADEMOISELLE HERVÉ/MOLIÈRE-BÉJART-MADEMOISELLE DU PARC',
+      'string-id' => '#MOLIERE,#BRECOURT,#DUCROISY,#BEJART,#MADEMOISELLEDUPARC,#MADEMOISELLEBEJART,#MADEMOISELLEDEBRIE,#MADEMOISELLEMOLIERE,#MADEMOISELLEDUCROISY,#MADEMOISELLEHERVE;#MOLIERE,#LATHORILLIERE,#MADEMOISELLEDEBRIE,#MADEMOISELLEDUCROISY;#MOLIERE;#MOLIERE,#BRECOURT,#MADEMOISELLEDUPARC,#MADEMOISELLEMOLIERE;#MOLIERE,#BRECOURT,#DUCROISY,#MADEMOISELLEDUPARC,#MADEMOISELLEBEJART,#MADEMOISELLEDEBRIE,#MADEMOISELLEMOLIERE,#MADEMOISELLEDUCROISY,#MADEMOISELLEHERVE;#MOLIERE,#BEJART,#MADEMOISELLEDUPARC',
     ),
   ),
   'moliere_impromptuversailles_I02' => 
@@ -38616,6 +37815,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'MOLIÈRE-LA THORILLIÈRE-MADEMOISELLE DE BRIE-MADEMOISELLE DU CROISY/MOLIÈRE/MOLIÈRE-BRÉCOURT-MADEMOISELLE DU PARC-MADEMOISELLE MOLIÈRE/MOLIÈRE-BRÉCOURT-DU CROISY-MADEMOISELLE DU PARC-MADEMOISELLE BÉJART-MADEMOISELLE DE BRIE-MADEMOISELLE MOLIÈRE-MADEMOISELLE DU CROISY-MADEMOISELLE HERVÉ/MOLIÈRE-BÉJART-MADEMOISELLE DU PARC/MOLIÈRE-BÉJART-MADEMOISELLE BÉJART',
+      'string-id' => '#MOLIERE,#LATHORILLIERE,#MADEMOISELLEDEBRIE,#MADEMOISELLEDUCROISY;#MOLIERE;#MOLIERE,#BRECOURT,#MADEMOISELLEDUPARC,#MADEMOISELLEMOLIERE;#MOLIERE,#BRECOURT,#DUCROISY,#MADEMOISELLEDUPARC,#MADEMOISELLEBEJART,#MADEMOISELLEDEBRIE,#MADEMOISELLEMOLIERE,#MADEMOISELLEDUCROISY,#MADEMOISELLEHERVE;#MOLIERE,#BEJART,#MADEMOISELLEDUPARC;#MOLIERE,#BEJART,#MADEMOISELLEBEJART',
     ),
   ),
   'moliere_impromptuversailles_I03' => 
@@ -38692,6 +37892,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'MOLIÈRE/MOLIÈRE-BRÉCOURT-MADEMOISELLE DU PARC-MADEMOISELLE MOLIÈRE/MOLIÈRE-BRÉCOURT-DU CROISY-MADEMOISELLE DU PARC-MADEMOISELLE BÉJART-MADEMOISELLE DE BRIE-MADEMOISELLE MOLIÈRE-MADEMOISELLE DU CROISY-MADEMOISELLE HERVÉ/MOLIÈRE-BÉJART-MADEMOISELLE DU PARC/MOLIÈRE-BÉJART-MADEMOISELLE BÉJART/MOLIÈRE-BÉJART-MADEMOISELLE BÉJART',
+      'string-id' => '#MOLIERE;#MOLIERE,#BRECOURT,#MADEMOISELLEDUPARC,#MADEMOISELLEMOLIERE;#MOLIERE,#BRECOURT,#DUCROISY,#MADEMOISELLEDUPARC,#MADEMOISELLEBEJART,#MADEMOISELLEDEBRIE,#MADEMOISELLEMOLIERE,#MADEMOISELLEDUCROISY,#MADEMOISELLEHERVE;#MOLIERE,#BEJART,#MADEMOISELLEDUPARC;#MOLIERE,#BEJART,#MADEMOISELLEBEJART;#MOLIERE,#BEJART,#MADEMOISELLEBEJART',
     ),
   ),
   'moliere_impromptuversailles_I04' => 
@@ -38768,6 +37969,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'MOLIÈRE-BRÉCOURT-MADEMOISELLE DU PARC-MADEMOISELLE MOLIÈRE/MOLIÈRE-BRÉCOURT-DU CROISY-MADEMOISELLE DU PARC-MADEMOISELLE BÉJART-MADEMOISELLE DE BRIE-MADEMOISELLE MOLIÈRE-MADEMOISELLE DU CROISY-MADEMOISELLE HERVÉ/MOLIÈRE-BÉJART-MADEMOISELLE DU PARC/MOLIÈRE-BÉJART-MADEMOISELLE BÉJART/MOLIÈRE-BÉJART-MADEMOISELLE BÉJART/MOLIÈRE-BÉJART-MADEMOISELLE BÉJART',
+      'string-id' => '#MOLIERE,#BRECOURT,#MADEMOISELLEDUPARC,#MADEMOISELLEMOLIERE;#MOLIERE,#BRECOURT,#DUCROISY,#MADEMOISELLEDUPARC,#MADEMOISELLEBEJART,#MADEMOISELLEDEBRIE,#MADEMOISELLEMOLIERE,#MADEMOISELLEDUCROISY,#MADEMOISELLEHERVE;#MOLIERE,#BEJART,#MADEMOISELLEDUPARC;#MOLIERE,#BEJART,#MADEMOISELLEBEJART;#MOLIERE,#BEJART,#MADEMOISELLEBEJART;#MOLIERE,#BEJART,#MADEMOISELLEBEJART',
     ),
   ),
   'moliere_impromptuversailles_I05' => 
@@ -38835,6 +38037,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'MOLIÈRE-BRÉCOURT-DU CROISY-MADEMOISELLE DU PARC-MADEMOISELLE BÉJART-MADEMOISELLE DE BRIE-MADEMOISELLE MOLIÈRE-MADEMOISELLE DU CROISY-MADEMOISELLE HERVÉ/MOLIÈRE-BÉJART-MADEMOISELLE DU PARC/MOLIÈRE-BÉJART-MADEMOISELLE BÉJART/MOLIÈRE-BÉJART-MADEMOISELLE BÉJART/MOLIÈRE-BÉJART-MADEMOISELLE BÉJART/MOLIÈRE-BÉJART-MADEMOISELLE BÉJART',
+      'string-id' => '#MOLIERE,#BRECOURT,#DUCROISY,#MADEMOISELLEDUPARC,#MADEMOISELLEBEJART,#MADEMOISELLEDEBRIE,#MADEMOISELLEMOLIERE,#MADEMOISELLEDUCROISY,#MADEMOISELLEHERVE;#MOLIERE,#BEJART,#MADEMOISELLEDUPARC;#MOLIERE,#BEJART,#MADEMOISELLEBEJART;#MOLIERE,#BEJART,#MADEMOISELLEBEJART;#MOLIERE,#BEJART,#MADEMOISELLEBEJART;#MOLIERE,#BEJART,#MADEMOISELLEBEJART',
     ),
   ),
   'moliere_impromptuversailles_I06' => 
@@ -38884,6 +38087,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'MOLIÈRE-BÉJART-MADEMOISELLE DU PARC/MOLIÈRE-BÉJART-MADEMOISELLE BÉJART/MOLIÈRE-BÉJART-MADEMOISELLE BÉJART/MOLIÈRE-BÉJART-MADEMOISELLE BÉJART/MOLIÈRE-BÉJART-MADEMOISELLE BÉJART/MOLIÈRE-BÉJART',
+      'string-id' => '#MOLIERE,#BEJART,#MADEMOISELLEDUPARC;#MOLIERE,#BEJART,#MADEMOISELLEBEJART;#MOLIERE,#BEJART,#MADEMOISELLEBEJART;#MOLIERE,#BEJART,#MADEMOISELLEBEJART;#MOLIERE,#BEJART,#MADEMOISELLEBEJART;#MOLIERE,#BEJART',
     ),
   ),
   'moliere_georgedandin_I01' => 
@@ -38960,6 +38164,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'GEORGE DANDIN/GEORGE DANDIN-LUBIN/GEORGE DANDIN/GEORGE DANDIN-MONSIEUR DE SOTENVILLE-MADAME DE SOTENVILLE/GEORGE DANDIN-MONSIEUR DE SOTENVILLE-CLITANDRE/GEORGE DANDIN-ANGÉLIQUE-MONSIEUR DE SOTENVILLE-MADAME DE SOTENVILLE-CLITANDRE',
+      'string-id' => '#GEORGEDANDIN;#GEORGEDANDIN,#LUBIN;#GEORGEDANDIN;#GEORGEDANDIN,#MONSIEURDESOTENVILLE,#MADAMEDESOTENVILLE;#GEORGEDANDIN,#MONSIEURDESOTENVILLE,#CLITANDRE;#GEORGEDANDIN,#ANGELIQUE,#MONSIEURDESOTENVILLE,#MADAMEDESOTENVILLE,#CLITANDRE',
     ),
   ),
   'moliere_georgedandin_I02' => 
@@ -39036,6 +38241,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'GEORGE DANDIN-LUBIN/GEORGE DANDIN/GEORGE DANDIN-MONSIEUR DE SOTENVILLE-MADAME DE SOTENVILLE/GEORGE DANDIN-MONSIEUR DE SOTENVILLE-CLITANDRE/GEORGE DANDIN-ANGÉLIQUE-MONSIEUR DE SOTENVILLE-MADAME DE SOTENVILLE-CLITANDRE/GEORGE DANDIN',
+      'string-id' => '#GEORGEDANDIN,#LUBIN;#GEORGEDANDIN;#GEORGEDANDIN,#MONSIEURDESOTENVILLE,#MADAMEDESOTENVILLE;#GEORGEDANDIN,#MONSIEURDESOTENVILLE,#CLITANDRE;#GEORGEDANDIN,#ANGELIQUE,#MONSIEURDESOTENVILLE,#MADAMEDESOTENVILLE,#CLITANDRE;#GEORGEDANDIN',
     ),
   ),
   'moliere_georgedandin_II01' => 
@@ -39094,6 +38300,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LUBIN/GEORGE DANDIN-ANGÉLIQUE-CLITANDRE/ANGÉLIQUE/CLITANDRE-LUBIN/GEORGE DANDIN-LUBIN/GEORGE DANDIN',
+      'string-id' => '#LUBIN;#GEORGEDANDIN,#ANGELIQUE,#CLITANDRE;#ANGELIQUE;#CLITANDRE,#LUBIN;#GEORGEDANDIN,#LUBIN;#GEORGEDANDIN',
     ),
   ),
   'moliere_georgedandin_II02' => 
@@ -39161,6 +38368,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'GEORGE DANDIN-ANGÉLIQUE-CLITANDRE/ANGÉLIQUE/CLITANDRE-LUBIN/GEORGE DANDIN-LUBIN/GEORGE DANDIN/GEORGE DANDIN-MONSIEUR DE SOTENVILLE-MADAME DE SOTENVILLE',
+      'string-id' => '#GEORGEDANDIN,#ANGELIQUE,#CLITANDRE;#ANGELIQUE;#CLITANDRE,#LUBIN;#GEORGEDANDIN,#LUBIN;#GEORGEDANDIN;#GEORGEDANDIN,#MONSIEURDESOTENVILLE,#MADAMEDESOTENVILLE',
     ),
   ),
   'moliere_georgedandin_II03' => 
@@ -39228,6 +38436,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ANGÉLIQUE/CLITANDRE-LUBIN/GEORGE DANDIN-LUBIN/GEORGE DANDIN/GEORGE DANDIN-MONSIEUR DE SOTENVILLE-MADAME DE SOTENVILLE/GEORGE DANDIN-ANGÉLIQUE-MONSIEUR DE SOTENVILLE-MADAME DE SOTENVILLE-CLITANDRE',
+      'string-id' => '#ANGELIQUE;#CLITANDRE,#LUBIN;#GEORGEDANDIN,#LUBIN;#GEORGEDANDIN;#GEORGEDANDIN,#MONSIEURDESOTENVILLE,#MADAMEDESOTENVILLE;#GEORGEDANDIN,#ANGELIQUE,#MONSIEURDESOTENVILLE,#MADAMEDESOTENVILLE,#CLITANDRE',
     ),
   ),
   'moliere_georgedandin_III01' => 
@@ -39286,6 +38495,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'CLITANDRE-LUBIN/ANGÉLIQUE-CLITANDRE-LUBIN/GEORGE DANDIN-LUBIN/GEORGE DANDIN/GEORGE DANDIN-ANGÉLIQUE-CLITANDRE-LUBIN/GEORGE DANDIN-ANGÉLIQUE',
+      'string-id' => '#CLITANDRE,#LUBIN;#ANGELIQUE,#CLITANDRE,#LUBIN;#GEORGEDANDIN,#LUBIN;#GEORGEDANDIN;#GEORGEDANDIN,#ANGELIQUE,#CLITANDRE,#LUBIN;#GEORGEDANDIN,#ANGELIQUE',
     ),
   ),
   'moliere_georgedandin_III02' => 
@@ -39353,6 +38563,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ANGÉLIQUE-CLITANDRE-LUBIN/GEORGE DANDIN-LUBIN/GEORGE DANDIN/GEORGE DANDIN-ANGÉLIQUE-CLITANDRE-LUBIN/GEORGE DANDIN-ANGÉLIQUE/GEORGE DANDIN-ANGÉLIQUE-MONSIEUR DE SOTENVILLE-MADAME DE SOTENVILLE',
+      'string-id' => '#ANGELIQUE,#CLITANDRE,#LUBIN;#GEORGEDANDIN,#LUBIN;#GEORGEDANDIN;#GEORGEDANDIN,#ANGELIQUE,#CLITANDRE,#LUBIN;#GEORGEDANDIN,#ANGELIQUE;#GEORGEDANDIN,#ANGELIQUE,#MONSIEURDESOTENVILLE,#MADAMEDESOTENVILLE',
     ),
   ),
   'moliere_georgedandin_III03' => 
@@ -39420,6 +38631,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'GEORGE DANDIN-LUBIN/GEORGE DANDIN/GEORGE DANDIN-ANGÉLIQUE-CLITANDRE-LUBIN/GEORGE DANDIN-ANGÉLIQUE/GEORGE DANDIN-ANGÉLIQUE-MONSIEUR DE SOTENVILLE-MADAME DE SOTENVILLE/GEORGE DANDIN',
+      'string-id' => '#GEORGEDANDIN,#LUBIN;#GEORGEDANDIN;#GEORGEDANDIN,#ANGELIQUE,#CLITANDRE,#LUBIN;#GEORGEDANDIN,#ANGELIQUE;#GEORGEDANDIN,#ANGELIQUE,#MONSIEURDESOTENVILLE,#MADAMEDESOTENVILLE;#GEORGEDANDIN',
     ),
   ),
   'moliere_fourberiesdescapin_II01' => 
@@ -39487,6 +38699,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARGANTE-GÉRONTE/GÉRONTE-LÉANDRE/OCTAVE-LÉANDRE/OCTAVE-LÉANDRE-CARLE/ARGANTE/ARGANTE',
+      'string-id' => '#ARGANTE,#GERONTE;#GERONTE,#LEANDRE;#OCTAVE,#LEANDRE;#OCTAVE,#LEANDRE,#CARLE;#ARGANTE;#ARGANTE',
     ),
   ),
   'moliere_fourberiesdescapin_II02' => 
@@ -39554,6 +38767,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'GÉRONTE-LÉANDRE/OCTAVE-LÉANDRE/OCTAVE-LÉANDRE-CARLE/ARGANTE/ARGANTE/GÉRONTE',
+      'string-id' => '#GERONTE,#LEANDRE;#OCTAVE,#LEANDRE;#OCTAVE,#LEANDRE,#CARLE;#ARGANTE;#ARGANTE;#GERONTE',
     ),
   ),
   'moliere_fourberiesdescapin_II03' => 
@@ -39612,6 +38826,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'OCTAVE-LÉANDRE/OCTAVE-LÉANDRE-CARLE/ARGANTE/ARGANTE/GÉRONTE/OCTAVE-LÉANDRE',
+      'string-id' => '#OCTAVE,#LEANDRE;#OCTAVE,#LEANDRE,#CARLE;#ARGANTE;#ARGANTE;#GERONTE;#OCTAVE,#LEANDRE',
     ),
   ),
   'moliere_fourberiesdescapin_III01' => 
@@ -39661,6 +38876,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ZERBINETTE/GÉRONTE/GÉRONTE-ZERBINETTE/ZERBINETTE/ARGANTE/ARGANTE-GÉRONTE',
+      'string-id' => '#ZERBINETTE;#GERONTE;#GERONTE,#ZERBINETTE;#ZERBINETTE;#ARGANTE;#ARGANTE,#GERONTE',
     ),
   ),
   'moliere_fourberiesdescapin_III02' => 
@@ -39719,6 +38935,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'GÉRONTE/GÉRONTE-ZERBINETTE/ZERBINETTE/ARGANTE/ARGANTE-GÉRONTE/ARGANTE-GÉRONTE-NÉRINE',
+      'string-id' => '#GERONTE;#GERONTE,#ZERBINETTE;#ZERBINETTE;#ARGANTE;#ARGANTE,#GERONTE;#ARGANTE,#GERONTE,#NERINE',
     ),
   ),
   'moliere_fourberiesdescapin_III03' => 
@@ -39777,6 +38994,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'GÉRONTE-ZERBINETTE/ZERBINETTE/ARGANTE/ARGANTE-GÉRONTE/ARGANTE-GÉRONTE-NÉRINE/',
+      'string-id' => '#GERONTE,#ZERBINETTE;#ZERBINETTE;#ARGANTE;#ARGANTE,#GERONTE;#ARGANTE,#GERONTE,#NERINE;',
     ),
   ),
   'moliere_fourberiesdescapin_III04' => 
@@ -39835,6 +39053,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ZERBINETTE/ARGANTE/ARGANTE-GÉRONTE/ARGANTE-GÉRONTE-NÉRINE//ARGANTE-GÉRONTE-NÉRINE',
+      'string-id' => '#ZERBINETTE;#ARGANTE;#ARGANTE,#GERONTE;#ARGANTE,#GERONTE,#NERINE;;#ARGANTE,#GERONTE,#NERINE',
     ),
   ),
   'moliere_fourberiesdescapin_III05' => 
@@ -39893,6 +39112,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARGANTE/ARGANTE-GÉRONTE/ARGANTE-GÉRONTE-NÉRINE//ARGANTE-GÉRONTE-NÉRINE/ARGANTE-GÉRONTE-OCTAVE-ZERBINETTE-NÉRINE',
+      'string-id' => '#ARGANTE;#ARGANTE,#GERONTE;#ARGANTE,#GERONTE,#NERINE;;#ARGANTE,#GERONTE,#NERINE;#ARGANTE,#GERONTE,#OCTAVE,#ZERBINETTE,#NERINE',
     ),
   ),
   'moliere_fourberiesdescapin_III06' => 
@@ -39951,6 +39171,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARGANTE-GÉRONTE/ARGANTE-GÉRONTE-NÉRINE//ARGANTE-GÉRONTE-NÉRINE/ARGANTE-GÉRONTE-OCTAVE-ZERBINETTE-NÉRINE/ARGANTE-GÉRONTE-OCTAVE-LÉANDRE-ZERBINETTE-NÉRINE',
+      'string-id' => '#ARGANTE,#GERONTE;#ARGANTE,#GERONTE,#NERINE;;#ARGANTE,#GERONTE,#NERINE;#ARGANTE,#GERONTE,#OCTAVE,#ZERBINETTE,#NERINE;#ARGANTE,#GERONTE,#OCTAVE,#LEANDRE,#ZERBINETTE,#NERINE',
     ),
   ),
   'moliere_fourberiesdescapin_III07' => 
@@ -40009,6 +39230,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARGANTE-GÉRONTE-NÉRINE//ARGANTE-GÉRONTE-NÉRINE/ARGANTE-GÉRONTE-OCTAVE-ZERBINETTE-NÉRINE/ARGANTE-GÉRONTE-OCTAVE-LÉANDRE-ZERBINETTE-NÉRINE/ARGANTE-GÉRONTE-OCTAVE-LÉANDRE-ZERBINETTE-NÉRINE-CARLE',
+      'string-id' => '#ARGANTE,#GERONTE,#NERINE;;#ARGANTE,#GERONTE,#NERINE;#ARGANTE,#GERONTE,#OCTAVE,#ZERBINETTE,#NERINE;#ARGANTE,#GERONTE,#OCTAVE,#LEANDRE,#ZERBINETTE,#NERINE;#ARGANTE,#GERONTE,#OCTAVE,#LEANDRE,#ZERBINETTE,#NERINE,#CARLE',
     ),
   ),
   'moliere_fourberiesdescapin_III08' => 
@@ -40076,6 +39298,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => '/ARGANTE-GÉRONTE-NÉRINE/ARGANTE-GÉRONTE-OCTAVE-ZERBINETTE-NÉRINE/ARGANTE-GÉRONTE-OCTAVE-LÉANDRE-ZERBINETTE-NÉRINE/ARGANTE-GÉRONTE-OCTAVE-LÉANDRE-ZERBINETTE-NÉRINE-CARLE/ARGANTE-GÉRONTE-CARLE',
+      'string-id' => ';#ARGANTE,#GERONTE,#NERINE;#ARGANTE,#GERONTE,#OCTAVE,#ZERBINETTE,#NERINE;#ARGANTE,#GERONTE,#OCTAVE,#LEANDRE,#ZERBINETTE,#NERINE;#ARGANTE,#GERONTE,#OCTAVE,#LEANDRE,#ZERBINETTE,#NERINE,#CARLE;#ARGANTE,#GERONTE,#CARLE',
     ),
   ),
   'moliere_festindepierre_IV01' => 
@@ -40143,6 +39366,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'DON JUAN/DON JUAN-LA VIOLETTE/DON JUAN-MONSIEUR DIMANCHE/DON JUAN-DON LOUIS-LA VIOLETTE/DON JUAN/DON JUAN-ELVIRE-RAGOTIN',
+      'string-id' => '#DONJUAN;#DONJUAN,#LAVIOLETTE;#DONJUAN,#MONSIEURDIMANCHE;#DONJUAN,#DONLOUIS,#LAVIOLETTE;#DONJUAN;#DONJUAN,#DONAELVIRE,#RAGOTIN',
     ),
   ),
   'moliere_festindepierre_IV02' => 
@@ -40210,6 +39434,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'DON JUAN-LA VIOLETTE/DON JUAN-MONSIEUR DIMANCHE/DON JUAN-DON LOUIS-LA VIOLETTE/DON JUAN/DON JUAN-ELVIRE-RAGOTIN/DON JUAN',
+      'string-id' => '#DONJUAN,#LAVIOLETTE;#DONJUAN,#MONSIEURDIMANCHE;#DONJUAN,#DONLOUIS,#LAVIOLETTE;#DONJUAN;#DONJUAN,#DONAELVIRE,#RAGOTIN;#DONJUAN',
     ),
   ),
   'moliere_festindepierre_IV03' => 
@@ -40252,7 +39477,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#LASTATUEDUCOMMANDEUR' => 
+      '#LASTATUE' => 
       array (
         0 => 0,
         1 => 0,
@@ -40277,6 +39502,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'DON JUAN-MONSIEUR DIMANCHE/DON JUAN-DON LOUIS-LA VIOLETTE/DON JUAN/DON JUAN-ELVIRE-RAGOTIN/DON JUAN/DON JUAN-LA STATUE DU COMMANDEUR',
+      'string-id' => '#DONJUAN,#MONSIEURDIMANCHE;#DONJUAN,#DONLOUIS,#LAVIOLETTE;#DONJUAN;#DONJUAN,#DONAELVIRE,#RAGOTIN;#DONJUAN;#DONJUAN,#LASTATUE',
     ),
   ),
   'moliere_festindepierre_V01' => 
@@ -40310,7 +39536,16 @@
         4 => 0,
         5 => 0,
       ),
-      '#UNSPECTRE' => 
+      '#LASTATUE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 1,
+      ),
+      '#LESPECTRE' => 
       array (
         0 => 0,
         1 => 0,
@@ -40334,7 +39569,8 @@
       'titleId' => 'LeFestindePierre',
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
-      'string' => 'DON JUAN-DON LOUIS/DON JUAN/DON JUAN-DON CARLOS/DON JUAN/DON JUAN-UN SPECTRE/DON JUAN',
+      'string' => 'DON JUAN-DON LOUIS/DON JUAN/DON JUAN-DON CARLOS/DON JUAN/DON JUAN-UN SPECTRE/DON JUAN-LA STATUE DU COMMANDEUR',
+      'string-id' => '#DONJUAN,#DONLOUIS;#DONJUAN;#DONJUAN,#DONCARLOS;#DONJUAN;#DONJUAN,#LESPECTRE;#DONJUAN,#LASTATUE',
     ),
   ),
   'moliere_femmessavantes_II01' => 
@@ -40402,6 +39638,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARISTE/CHRYSALE-ARISTE/CHRYSALE-ARISTE-BÉLISE/CHRYSALE-ARISTE/CHRYSALE-MARTINE/CHRYSALE-PHILAMINTE-BÉLISE-MARTINE',
+      'string-id' => '#ARISTE;#CHRYSALE,#ARISTE;#CHRYSALE,#ARISTE,#BELISE;#CHRYSALE,#ARISTE;#CHRYSALE,#MARTINE;#CHRYSALE,#PHILAMINTE,#BELISE,#MARTINE',
     ),
   ),
   'moliere_femmessavantes_II02' => 
@@ -40469,6 +39706,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'CHRYSALE-ARISTE/CHRYSALE-ARISTE-BÉLISE/CHRYSALE-ARISTE/CHRYSALE-MARTINE/CHRYSALE-PHILAMINTE-BÉLISE-MARTINE/CHRYSALE-PHILAMINTE-BÉLISE',
+      'string-id' => '#CHRYSALE,#ARISTE;#CHRYSALE,#ARISTE,#BELISE;#CHRYSALE,#ARISTE;#CHRYSALE,#MARTINE;#CHRYSALE,#PHILAMINTE,#BELISE,#MARTINE;#CHRYSALE,#PHILAMINTE,#BELISE',
     ),
   ),
   'moliere_femmessavantes_II03' => 
@@ -40536,6 +39774,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'CHRYSALE-ARISTE-BÉLISE/CHRYSALE-ARISTE/CHRYSALE-MARTINE/CHRYSALE-PHILAMINTE-BÉLISE-MARTINE/CHRYSALE-PHILAMINTE-BÉLISE/CHRYSALE-PHILAMINTE',
+      'string-id' => '#CHRYSALE,#ARISTE,#BELISE;#CHRYSALE,#ARISTE;#CHRYSALE,#MARTINE;#CHRYSALE,#PHILAMINTE,#BELISE,#MARTINE;#CHRYSALE,#PHILAMINTE,#BELISE;#CHRYSALE,#PHILAMINTE',
     ),
   ),
   'moliere_femmessavantes_II04' => 
@@ -40603,6 +39842,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'CHRYSALE-ARISTE/CHRYSALE-MARTINE/CHRYSALE-PHILAMINTE-BÉLISE-MARTINE/CHRYSALE-PHILAMINTE-BÉLISE/CHRYSALE-PHILAMINTE/CHRYSALE-ARISTE',
+      'string-id' => '#CHRYSALE,#ARISTE;#CHRYSALE,#MARTINE;#CHRYSALE,#PHILAMINTE,#BELISE,#MARTINE;#CHRYSALE,#PHILAMINTE,#BELISE;#CHRYSALE,#PHILAMINTE;#CHRYSALE,#ARISTE',
     ),
   ),
   'moliere_femmessavantes_III01' => 
@@ -40679,6 +39919,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'PHILAMINTE-ARMANDE-BÉLISE-TRISSOTIN-L\'ÉPINE/PHILAMINTE-ARMANDE-HENRIETTE-BÉLISE-TRISSOTIN-L\'ÉPINE/PHILAMINTE-ARMANDE-HENRIETTE-BÉLISE-TRISSOTIN-VADIUS-L\'ÉPINE/PHILAMINTE-ARMANDE-HENRIETTE-BÉLISE-TRISSOTIN/ARMANDE-HENRIETTE/CHRYSALE-ARMANDE-HENRIETTE-ARISTE-CLITANDRE',
+      'string-id' => '#PHILAMINTE,#ARMANDE,#BELISE,#TRISSOTIN,#LEPINE;#PHILAMINTE,#ARMANDE,#HENRIETTE,#BELISE,#TRISSOTIN,#LEPINE;#PHILAMINTE,#ARMANDE,#HENRIETTE,#BELISE,#TRISSOTIN,#VADIUS,#LEPINE;#PHILAMINTE,#ARMANDE,#HENRIETTE,#BELISE,#TRISSOTIN;#ARMANDE,#HENRIETTE;#CHRYSALE,#ARMANDE,#HENRIETTE,#ARISTE,#CLITANDRE',
     ),
   ),
   'moliere_facheux_II01' => 
@@ -40728,6 +39969,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'ÉRASTE/ÉRASTE-ALCIDOR-ORPHISE/ÉRASTE/ÉRASTE/ÉRASTE-LISANDRE/ÉRASTE',
+      'string-id' => '#ERASTE;#ERASTE,#ALCIDOR,#ORPHISE;#ERASTE;#ERASTE;#ERASTE,#LISANDRE;#ERASTE',
     ),
   ),
   'moliere_facheux_II02' => 
@@ -40777,6 +40019,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'ÉRASTE-ALCIDOR-ORPHISE/ÉRASTE/ÉRASTE/ÉRASTE-LISANDRE/ÉRASTE/ÉRASTE',
+      'string-id' => '#ERASTE,#ALCIDOR,#ORPHISE;#ERASTE;#ERASTE;#ERASTE,#LISANDRE;#ERASTE;#ERASTE',
     ),
   ),
   'moliere_facheux_II03' => 
@@ -40826,6 +40069,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'ÉRASTE/ÉRASTE/ÉRASTE-LISANDRE/ÉRASTE/ÉRASTE/ÉRASTE-ORPHISE',
+      'string-id' => '#ERASTE;#ERASTE;#ERASTE,#LISANDRE;#ERASTE;#ERASTE;#ERASTE,#ORPHISE',
     ),
   ),
   'moliere_facheux_II04' => 
@@ -40884,6 +40128,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'ÉRASTE/ÉRASTE-LISANDRE/ÉRASTE/ÉRASTE/ÉRASTE-ORPHISE/ÉRASTE-ORPHISE-ALCANDRE',
+      'string-id' => '#ERASTE;#ERASTE,#LISANDRE;#ERASTE;#ERASTE;#ERASTE,#ORPHISE;#ERASTE,#ORPHISE,#ALCANDRE',
     ),
   ),
   'moliere_facheux_II05' => 
@@ -40942,6 +40187,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'ÉRASTE-LISANDRE/ÉRASTE/ÉRASTE/ÉRASTE-ORPHISE/ÉRASTE-ORPHISE-ALCANDRE/ÉRASTE-ALCANDRE',
+      'string-id' => '#ERASTE,#LISANDRE;#ERASTE;#ERASTE;#ERASTE,#ORPHISE;#ERASTE,#ORPHISE,#ALCANDRE;#ERASTE,#ALCANDRE',
     ),
   ),
   'moliere_facheux_II06' => 
@@ -40991,6 +40237,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'ÉRASTE/ÉRASTE/ÉRASTE-ORPHISE/ÉRASTE-ORPHISE-ALCANDRE/ÉRASTE-ALCANDRE/ÉRASTE',
+      'string-id' => '#ERASTE;#ERASTE;#ERASTE,#ORPHISE;#ERASTE,#ORPHISE,#ALCANDRE;#ERASTE,#ALCANDRE;#ERASTE',
     ),
   ),
   'moliere_facheux_III01' => 
@@ -41049,6 +40296,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'ÉRASTE/ÉRASTE-ALCIPPE/ÉRASTE/ÉRASTE-ORANTE-CLIMÈNE/ÉRASTE-ORPHISE/ÉRASTE',
+      'string-id' => '#ERASTE;#ERASTE,#ALCIPPE;#ERASTE;#ERASTE,#ORANTE,#CLIMENE;#ERASTE,#ORPHISE;#ERASTE',
     ),
   ),
   'moliere_facheux_III02' => 
@@ -41125,6 +40373,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'ÉRASTE-ALCIPPE/ÉRASTE/ÉRASTE-ORANTE-CLIMÈNE/ÉRASTE-ORPHISE/ÉRASTE/ÉRASTE-ORANTE-DORANTE',
+      'string-id' => '#ERASTE,#ALCIPPE;#ERASTE;#ERASTE,#ORANTE,#CLIMENE;#ERASTE,#ORPHISE;#ERASTE;#ERASTE,#ORANTE,#DORANTE',
     ),
   ),
   'moliere_facheux_IV01' => 
@@ -41210,6 +40459,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'ÉRASTE/ÉRASTE-CARITIDÈS/ÉRASTE-ORMIN/ÉRASTE-FILINTE/ÉRASTE-DAMIS-LA RIVIÈRE/ÉRASTE-ORPHISE-DAMIS',
+      'string-id' => '#ERASTE;#ERASTE,#CARITIDES;#ERASTE,#ORMIN;#ERASTE,#FILINTE;#ERASTE,#DAMIS,#LARIVIERE;#ERASTE,#ORPHISE,#DAMIS',
     ),
   ),
   'moliere_etourdi_I01' => 
@@ -41259,6 +40509,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LÉLIE/LÉLIE/LÉLIE-CÉLIE-TRUFALDIN/LÉLIE-CÉLIE-TRUFALDIN/ANSELME/LÉLIE-ANSELME',
+      'string-id' => '#LELIE;#LELIE;#LELIE,#CELIE,#TRUFALDIN;#LELIE,#CELIE,#TRUFALDIN;#ANSELME;#LELIE,#ANSELME',
     ),
   ),
   'moliere_etourdi_I02' => 
@@ -41308,6 +40559,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LÉLIE/LÉLIE-CÉLIE-TRUFALDIN/LÉLIE-CÉLIE-TRUFALDIN/ANSELME/LÉLIE-ANSELME/',
+      'string-id' => '#LELIE;#LELIE,#CELIE,#TRUFALDIN;#LELIE,#CELIE,#TRUFALDIN;#ANSELME;#LELIE,#ANSELME;',
     ),
   ),
   'moliere_etourdi_I03' => 
@@ -41366,6 +40618,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LÉLIE-CÉLIE-TRUFALDIN/LÉLIE-CÉLIE-TRUFALDIN/ANSELME/LÉLIE-ANSELME//HIPPOLYTE',
+      'string-id' => '#LELIE,#CELIE,#TRUFALDIN;#LELIE,#CELIE,#TRUFALDIN;#ANSELME;#LELIE,#ANSELME;;#HIPPOLYTE',
     ),
   ),
   'moliere_etourdi_I04' => 
@@ -41424,6 +40677,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LÉLIE-CÉLIE-TRUFALDIN/ANSELME/LÉLIE-ANSELME//HIPPOLYTE/LÉLIE',
+      'string-id' => '#LELIE,#CELIE,#TRUFALDIN;#ANSELME;#LELIE,#ANSELME;;#HIPPOLYTE;#LELIE',
     ),
   ),
   'moliere_etourdi_II01' => 
@@ -41464,6 +40718,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LÉLIE/ANSELME/LÉLIE-ANSELME/ANSELME/LÉLIE-ANSELME/LÉLIE',
+      'string-id' => '#LELIE;#ANSELME;#LELIE,#ANSELME;#ANSELME;#LELIE,#ANSELME;#LELIE',
     ),
   ),
   'moliere_etourdi_II02' => 
@@ -41513,6 +40768,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ANSELME/LÉLIE-ANSELME/ANSELME/LÉLIE-ANSELME/LÉLIE/LÉLIE-TRUFALDIN-LÉANDRE',
+      'string-id' => '#ANSELME;#LELIE,#ANSELME;#ANSELME;#LELIE,#ANSELME;#LELIE;#LELIE,#TRUFALDIN,#LEANDRE',
     ),
   ),
   'moliere_etourdi_II03' => 
@@ -41580,6 +40836,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LÉLIE-ANSELME/ANSELME/LÉLIE-ANSELME/LÉLIE/LÉLIE-TRUFALDIN-LÉANDRE/HIPPOLYTE-LÉANDRE',
+      'string-id' => '#LELIE,#ANSELME;#ANSELME;#LELIE,#ANSELME;#LELIE;#LELIE,#TRUFALDIN,#LEANDRE;#HIPPOLYTE,#LEANDRE',
     ),
   ),
   'moliere_etourdi_II04' => 
@@ -41647,6 +40904,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ANSELME/LÉLIE-ANSELME/LÉLIE/LÉLIE-TRUFALDIN-LÉANDRE/HIPPOLYTE-LÉANDRE/TRUFALDIN',
+      'string-id' => '#ANSELME;#LELIE,#ANSELME;#LELIE;#LELIE,#TRUFALDIN,#LEANDRE;#HIPPOLYTE,#LEANDRE;#TRUFALDIN',
     ),
   ),
   'moliere_etourdi_II05' => 
@@ -41714,6 +40972,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LÉLIE-ANSELME/LÉLIE/LÉLIE-TRUFALDIN-LÉANDRE/HIPPOLYTE-LÉANDRE/TRUFALDIN/TRUFALDIN',
+      'string-id' => '#LELIE,#ANSELME;#LELIE;#LELIE,#TRUFALDIN,#LEANDRE;#HIPPOLYTE,#LEANDRE;#TRUFALDIN;#TRUFALDIN',
     ),
   ),
   'moliere_etourdi_II06' => 
@@ -41772,6 +41031,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LÉLIE/LÉLIE-TRUFALDIN-LÉANDRE/HIPPOLYTE-LÉANDRE/TRUFALDIN/TRUFALDIN/LÉLIE',
+      'string-id' => '#LELIE;#LELIE,#TRUFALDIN,#LEANDRE;#HIPPOLYTE,#LEANDRE;#TRUFALDIN;#TRUFALDIN;#LELIE',
     ),
   ),
   'moliere_etourdi_III01' => 
@@ -41812,6 +41072,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => '/LÉANDRE/LÉLIE-LÉANDRE/LÉLIE-LÉANDRE//LÉLIE',
+      'string-id' => ';#LEANDRE;#LELIE,#LEANDRE;#LELIE,#LEANDRE;;#LELIE',
     ),
   ),
   'moliere_etourdi_III02' => 
@@ -41861,6 +41122,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LÉANDRE/LÉLIE-LÉANDRE/LÉLIE-LÉANDRE//LÉLIE/LÉLIE-TRUFALDIN',
+      'string-id' => '#LEANDRE;#LELIE,#LEANDRE;#LELIE,#LEANDRE;;#LELIE;#LELIE,#TRUFALDIN',
     ),
   ),
   'moliere_etourdi_III03' => 
@@ -41910,6 +41172,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LÉLIE-LÉANDRE/LÉLIE-LÉANDRE//LÉLIE/LÉLIE-TRUFALDIN/LÉLIE-TRUFALDIN',
+      'string-id' => '#LELIE,#LEANDRE;#LELIE,#LEANDRE;;#LELIE;#LELIE,#TRUFALDIN;#LELIE,#TRUFALDIN',
     ),
   ),
   'moliere_etourdi_III04' => 
@@ -41959,6 +41222,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LÉLIE-LÉANDRE//LÉLIE/LÉLIE-TRUFALDIN/LÉLIE-TRUFALDIN/TRUFALDIN-LÉANDRE',
+      'string-id' => '#LELIE,#LEANDRE;;#LELIE;#LELIE,#TRUFALDIN;#LELIE,#TRUFALDIN;#TRUFALDIN,#LEANDRE',
     ),
   ),
   'moliere_etourdi_IV01' => 
@@ -42008,6 +41272,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LÉLIE/LÉLIE-TRUFALDIN/ANSELME-LÉANDRE/LÉLIE/LÉLIE-TRUFALDIN/LÉLIE-TRUFALDIN',
+      'string-id' => '#LELIE;#LELIE,#TRUFALDIN;#ANSELME,#LEANDRE;#LELIE;#LELIE,#TRUFALDIN;#LELIE,#TRUFALDIN',
     ),
   ),
   'moliere_etourdi_IV02' => 
@@ -42057,6 +41322,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LÉLIE-TRUFALDIN/ANSELME-LÉANDRE/LÉLIE/LÉLIE-TRUFALDIN/LÉLIE-TRUFALDIN/',
+      'string-id' => '#LELIE,#TRUFALDIN;#ANSELME,#LEANDRE;#LELIE;#LELIE,#TRUFALDIN;#LELIE,#TRUFALDIN;',
     ),
   ),
   'moliere_etourdi_V01' => 
@@ -42106,6 +41372,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => '/CÉLIE-ANDRÈS/ANDRÈS/LÉLIE-ANDRÈS/LÉLIE-ANDRÈS/LÉLIE-ANDRÈS',
+      'string-id' => ';#CELIE,#ANDRES;#ANDRES;#LELIE,#ANDRES;#LELIE,#ANDRES;#LELIE,#ANDRES',
     ),
   ),
   'moliere_etourdi_V02' => 
@@ -42155,6 +41422,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'CÉLIE-ANDRÈS/ANDRÈS/LÉLIE-ANDRÈS/LÉLIE-ANDRÈS/LÉLIE-ANDRÈS/CÉLIE',
+      'string-id' => '#CELIE,#ANDRES;#ANDRES;#LELIE,#ANDRES;#LELIE,#ANDRES;#LELIE,#ANDRES;#CELIE',
     ),
   ),
   'moliere_etourdi_V03' => 
@@ -42213,6 +41481,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ANDRÈS/LÉLIE-ANDRÈS/LÉLIE-ANDRÈS/LÉLIE-ANDRÈS/CÉLIE/CÉLIE-HIPPOLYTE',
+      'string-id' => '#ANDRES;#LELIE,#ANDRES;#LELIE,#ANDRES;#LELIE,#ANDRES;#CELIE;#CELIE,#HIPPOLYTE',
     ),
   ),
   'moliere_etourdi_V04' => 
@@ -42262,6 +41531,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LÉLIE-ANDRÈS/LÉLIE-ANDRÈS/LÉLIE-ANDRÈS/CÉLIE/CÉLIE-HIPPOLYTE/CÉLIE-HIPPOLYTE',
+      'string-id' => '#LELIE,#ANDRES;#LELIE,#ANDRES;#LELIE,#ANDRES;#CELIE;#CELIE,#HIPPOLYTE;#CELIE,#HIPPOLYTE',
     ),
   ),
   'moliere_etourdi_V05' => 
@@ -42329,6 +41599,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LÉLIE-ANDRÈS/LÉLIE-ANDRÈS/CÉLIE/CÉLIE-HIPPOLYTE/CÉLIE-HIPPOLYTE/CÉLIE-HIPPOLYTE-TRUFALDIN-LÉANDRE-ANDRÈS',
+      'string-id' => '#LELIE,#ANDRES;#LELIE,#ANDRES;#CELIE;#CELIE,#HIPPOLYTE;#CELIE,#HIPPOLYTE;#CELIE,#HIPPOLYTE,#TRUFALDIN,#LEANDRE,#ANDRES',
     ),
   ),
   'moliere_etourdi_V06' => 
@@ -42414,6 +41685,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LÉLIE-ANDRÈS/CÉLIE/CÉLIE-HIPPOLYTE/CÉLIE-HIPPOLYTE/CÉLIE-HIPPOLYTE-TRUFALDIN-LÉANDRE-ANDRÈS/LÉLIE-ANSELME-TRUFALDIN-ANDRÈS',
+      'string-id' => '#LELIE,#ANDRES;#CELIE;#CELIE,#HIPPOLYTE;#CELIE,#HIPPOLYTE;#CELIE,#HIPPOLYTE,#TRUFALDIN,#LEANDRE,#ANDRES;#LELIE,#ANSELME,#TRUFALDIN,#ANDRES',
     ),
   ),
   'moliere_ecoledesmaris_II01' => 
@@ -42454,6 +41726,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ISABELLE/VALÈRE/ISABELLE//VALÈRE/VALÈRE',
+      'string-id' => '#ISABELLE;#VALERE;#ISABELLE;;#VALERE;#VALERE',
     ),
   ),
   'moliere_ecoledesmaris_II02' => 
@@ -42494,6 +41767,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'VALÈRE/ISABELLE//VALÈRE/VALÈRE/ISABELLE',
+      'string-id' => '#VALERE;#ISABELLE;;#VALERE;#VALERE;#ISABELLE',
     ),
   ),
   'moliere_ecoledesmaris_II03' => 
@@ -42534,6 +41808,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ISABELLE//VALÈRE/VALÈRE/ISABELLE/VALÈRE',
+      'string-id' => '#ISABELLE;;#VALERE;#VALERE;#ISABELLE;#VALERE',
     ),
   ),
   'moliere_ecoledesmaris_II04' => 
@@ -42574,6 +41849,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => '/VALÈRE/VALÈRE/ISABELLE/VALÈRE/ISABELLE-VALÈRE',
+      'string-id' => ';#VALERE;#VALERE;#ISABELLE;#VALERE;#ISABELLE,#VALERE',
     ),
   ),
   'moliere_ecoledesmaris_II05' => 
@@ -42614,6 +41890,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'VALÈRE/VALÈRE/ISABELLE/VALÈRE/ISABELLE-VALÈRE/ISABELLE',
+      'string-id' => '#VALERE;#VALERE;#ISABELLE;#VALERE;#ISABELLE,#VALERE;#ISABELLE',
     ),
   ),
   'moliere_ecoledesmaris_III01' => 
@@ -42672,6 +41949,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ISABELLE/ISABELLE/ISABELLE-VALÈRE/LE COMMISSAIRE/ARISTE/ARISTE-LE COMMISSAIRE',
+      'string-id' => '#ISABELLE;#ISABELLE;#ISABELLE,#VALERE;#LECOMMISSAIRE;#ARISTE;#ARISTE,#LECOMMISSAIRE',
     ),
   ),
   'moliere_ecoledesmaris_III02' => 
@@ -42730,6 +42008,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ISABELLE/ISABELLE-VALÈRE/LE COMMISSAIRE/ARISTE/ARISTE-LE COMMISSAIRE/ARISTE-VALÈRE-LE COMMISSAIRE',
+      'string-id' => '#ISABELLE;#ISABELLE,#VALERE;#LECOMMISSAIRE;#ARISTE;#ARISTE,#LECOMMISSAIRE;#ARISTE,#VALERE,#LECOMMISSAIRE',
     ),
   ),
   'moliere_ecoledesmaris_III03' => 
@@ -42797,6 +42076,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ISABELLE-VALÈRE/LE COMMISSAIRE/ARISTE/ARISTE-LE COMMISSAIRE/ARISTE-VALÈRE-LE COMMISSAIRE/ARISTE-LÉONOR',
+      'string-id' => '#ISABELLE,#VALERE;#LECOMMISSAIRE;#ARISTE;#ARISTE,#LECOMMISSAIRE;#ARISTE,#VALERE,#LECOMMISSAIRE;#ARISTE,#LEONOR',
     ),
   ),
   'moliere_ecoledesmaris_III04' => 
@@ -42864,6 +42144,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LE COMMISSAIRE/ARISTE/ARISTE-LE COMMISSAIRE/ARISTE-VALÈRE-LE COMMISSAIRE/ARISTE-LÉONOR/ARISTE-ISABELLE-LÉONOR-VALÈRE-LE COMMISSAIRE-LE NOTAIRE',
+      'string-id' => '#LECOMMISSAIRE;#ARISTE;#ARISTE,#LECOMMISSAIRE;#ARISTE,#VALERE,#LECOMMISSAIRE;#ARISTE,#LEONOR;#ARISTE,#ISABELLE,#LEONOR,#VALERE,#LECOMMISSAIRE,#LENOTAIRE',
     ),
   ),
   'moliere_ecoledesfemmes_I01' => 
@@ -42931,6 +42212,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARNOLPHE-CHRYSALDE/ARNOLPHE-GEORGETTE/ARNOLPHE-GEORGETTE/ARNOLPHE-AGNÈS-GEORGETTE/ARNOLPHE/ARNOLPHE-HORACE',
+      'string-id' => '#ARNOLPHE,#CHRYSALDE;#ARNOLPHE,#GEORGETTE;#ARNOLPHE,#GEORGETTE;#ARNOLPHE,#AGNES,#GEORGETTE;#ARNOLPHE;#ARNOLPHE,#HORACE',
     ),
   ),
   'moliere_ecoledesfemmes_I02' => 
@@ -42989,6 +42271,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARNOLPHE-GEORGETTE/ARNOLPHE-GEORGETTE/ARNOLPHE-AGNÈS-GEORGETTE/ARNOLPHE/ARNOLPHE-HORACE/ARNOLPHE',
+      'string-id' => '#ARNOLPHE,#GEORGETTE;#ARNOLPHE,#GEORGETTE;#ARNOLPHE,#AGNES,#GEORGETTE;#ARNOLPHE;#ARNOLPHE,#HORACE;#ARNOLPHE',
     ),
   ),
   'moliere_ecoledesfemmes_II01' => 
@@ -43038,6 +42321,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARNOLPHE/ARNOLPHE-GEORGETTE/GEORGETTE/ARNOLPHE-GEORGETTE/ARNOLPHE-AGNÈS-GEORGETTE/ARNOLPHE-AGNÈS',
+      'string-id' => '#ARNOLPHE;#ARNOLPHE,#GEORGETTE;#GEORGETTE;#ARNOLPHE,#GEORGETTE;#ARNOLPHE,#AGNES,#GEORGETTE;#ARNOLPHE,#AGNES',
     ),
   ),
   'moliere_ecoledesfemmes_IV01' => 
@@ -43071,15 +42355,6 @@
         4 => 0,
         5 => 0,
       ),
-      '#LENOTAIRE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 1,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
     ),
     'id' => 
     array (
@@ -43095,7 +42370,8 @@
       'titleId' => 'LEcoledesfemmes',
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
-      'string' => 'ARNOLPHE/ARNOLPHE/GEORGETTE-LE NOTAIRE/ARNOLPHE-GEORGETTE/ARNOLPHE/ARNOLPHE-HORACE',
+      'string' => 'ARNOLPHE/ARNOLPHE/GEORGETTE/ARNOLPHE-GEORGETTE/ARNOLPHE/ARNOLPHE-HORACE',
+      'string-id' => '#ARNOLPHE;#ARNOLPHE;#GEORGETTE;#ARNOLPHE,#GEORGETTE;#ARNOLPHE;#ARNOLPHE,#HORACE',
     ),
   ),
   'moliere_ecoledesfemmes_IV02' => 
@@ -43129,15 +42405,6 @@
         4 => 0,
         5 => 0,
       ),
-      '#LENOTAIRE' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
     ),
     'id' => 
     array (
@@ -43153,7 +42420,8 @@
       'titleId' => 'LEcoledesfemmes',
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
-      'string' => 'ARNOLPHE/GEORGETTE-LE NOTAIRE/ARNOLPHE-GEORGETTE/ARNOLPHE/ARNOLPHE-HORACE/ARNOLPHE',
+      'string' => 'ARNOLPHE/GEORGETTE/ARNOLPHE-GEORGETTE/ARNOLPHE/ARNOLPHE-HORACE/ARNOLPHE',
+      'string-id' => '#ARNOLPHE;#GEORGETTE;#ARNOLPHE,#GEORGETTE;#ARNOLPHE;#ARNOLPHE,#HORACE;#ARNOLPHE',
     ),
   ),
   'moliere_ecoledesfemmes_IV03' => 
@@ -43196,15 +42464,6 @@
         4 => 0,
         5 => 0,
       ),
-      '#LENOTAIRE' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
     ),
     'id' => 
     array (
@@ -43220,7 +42479,8 @@
       'titleId' => 'LEcoledesfemmes',
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
-      'string' => 'GEORGETTE-LE NOTAIRE/ARNOLPHE-GEORGETTE/ARNOLPHE/ARNOLPHE-HORACE/ARNOLPHE/ARNOLPHE-CHRYSALDE',
+      'string' => 'GEORGETTE/ARNOLPHE-GEORGETTE/ARNOLPHE/ARNOLPHE-HORACE/ARNOLPHE/ARNOLPHE-CHRYSALDE',
+      'string-id' => '#GEORGETTE;#ARNOLPHE,#GEORGETTE;#ARNOLPHE;#ARNOLPHE,#HORACE;#ARNOLPHE;#ARNOLPHE,#CHRYSALDE',
     ),
   ),
   'moliere_ecoledesfemmes_IV04' => 
@@ -43279,6 +42539,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARNOLPHE-GEORGETTE/ARNOLPHE/ARNOLPHE-HORACE/ARNOLPHE/ARNOLPHE-CHRYSALDE/ARNOLPHE-GEORGETTE',
+      'string-id' => '#ARNOLPHE,#GEORGETTE;#ARNOLPHE;#ARNOLPHE,#HORACE;#ARNOLPHE;#ARNOLPHE,#CHRYSALDE;#ARNOLPHE,#GEORGETTE',
     ),
   ),
   'moliere_ecoledesfemmes_V01' => 
@@ -43337,6 +42598,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARNOLPHE-GEORGETTE/ARNOLPHE-HORACE/ARNOLPHE-AGNÈS-HORACE/ARNOLPHE-AGNÈS/ARNOLPHE-AGNÈS/ARNOLPHE-HORACE',
+      'string-id' => '#ARNOLPHE,#GEORGETTE;#ARNOLPHE,#HORACE;#ARNOLPHE,#AGNES,#HORACE;#ARNOLPHE,#AGNES;#ARNOLPHE,#AGNES;#ARNOLPHE,#HORACE',
     ),
   ),
   'moliere_ecoledesfemmes_V02' => 
@@ -43395,6 +42657,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARNOLPHE-HORACE/ARNOLPHE-AGNÈS-HORACE/ARNOLPHE-AGNÈS/ARNOLPHE-AGNÈS/ARNOLPHE-HORACE/ARNOLPHE-HORACE-CHRYSALDE-ENRIQUE-ORONTE',
+      'string-id' => '#ARNOLPHE,#HORACE;#ARNOLPHE,#AGNES,#HORACE;#ARNOLPHE,#AGNES;#ARNOLPHE,#AGNES;#ARNOLPHE,#HORACE;#ARNOLPHE,#HORACE,#CHRYSALDE,#ENRIQUE,#ORONTE',
     ),
   ),
   'moliere_ecoledesfemmes_V03' => 
@@ -43462,6 +42725,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARNOLPHE-AGNÈS-HORACE/ARNOLPHE-AGNÈS/ARNOLPHE-AGNÈS/ARNOLPHE-HORACE/ARNOLPHE-HORACE-CHRYSALDE-ENRIQUE-ORONTE/ARNOLPHE-HORACE-CHRYSALDE-ENRIQUE-ORONTE-GEORGETTE',
+      'string-id' => '#ARNOLPHE,#AGNES,#HORACE;#ARNOLPHE,#AGNES;#ARNOLPHE,#AGNES;#ARNOLPHE,#HORACE;#ARNOLPHE,#HORACE,#CHRYSALDE,#ENRIQUE,#ORONTE;#ARNOLPHE,#HORACE,#CHRYSALDE,#ENRIQUE,#ORONTE,#GEORGETTE',
     ),
   ),
   'moliere_ecoledesfemmes_V04' => 
@@ -43529,6 +42793,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARNOLPHE-AGNÈS/ARNOLPHE-AGNÈS/ARNOLPHE-HORACE/ARNOLPHE-HORACE-CHRYSALDE-ENRIQUE-ORONTE/ARNOLPHE-HORACE-CHRYSALDE-ENRIQUE-ORONTE-GEORGETTE/ARNOLPHE-AGNÈS-HORACE-CHRYSALDE-ENRIQUE-ORONTE-GEORGETTE',
+      'string-id' => '#ARNOLPHE,#AGNES;#ARNOLPHE,#AGNES;#ARNOLPHE,#HORACE;#ARNOLPHE,#HORACE,#CHRYSALDE,#ENRIQUE,#ORONTE;#ARNOLPHE,#HORACE,#CHRYSALDE,#ENRIQUE,#ORONTE,#GEORGETTE;#ARNOLPHE,#AGNES,#HORACE,#CHRYSALDE,#ENRIQUE,#ORONTE,#GEORGETTE',
     ),
   ),
   'moliere_ecoledesfemmes_V05' => 
@@ -43596,6 +42861,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ARNOLPHE-AGNÈS/ARNOLPHE-HORACE/ARNOLPHE-HORACE-CHRYSALDE-ENRIQUE-ORONTE/ARNOLPHE-HORACE-CHRYSALDE-ENRIQUE-ORONTE-GEORGETTE/ARNOLPHE-AGNÈS-HORACE-CHRYSALDE-ENRIQUE-ORONTE-GEORGETTE/AGNÈS-HORACE-CHRYSALDE-ENRIQUE-ORONTE',
+      'string-id' => '#ARNOLPHE,#AGNES;#ARNOLPHE,#HORACE;#ARNOLPHE,#HORACE,#CHRYSALDE,#ENRIQUE,#ORONTE;#ARNOLPHE,#HORACE,#CHRYSALDE,#ENRIQUE,#ORONTE,#GEORGETTE;#ARNOLPHE,#AGNES,#HORACE,#CHRYSALDE,#ENRIQUE,#ORONTE,#GEORGETTE;#AGNES,#HORACE,#CHRYSALDE,#ENRIQUE,#ORONTE',
     ),
   ),
   'moliere_domgarciedenavarre_II01' => 
@@ -43645,6 +42911,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ÉLISE//DON GARCIE-ÉLISE/DON GARCIE/DON GARCIE-ELVIRE/DON GARCIE-ELVIRE-ÉLISE',
+      'string-id' => '#ELISE;;#DONGARCIE,#ELISE;#DONGARCIE;#DONGARCIE,#ELVIRE;#DONGARCIE,#ELVIRE,#ELISE',
     ),
   ),
   'moliere_domgarciedenavarre_II02' => 
@@ -43694,6 +42961,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => '/DON GARCIE-ÉLISE/DON GARCIE/DON GARCIE-ELVIRE/DON GARCIE-ELVIRE-ÉLISE/DON GARCIE',
+      'string-id' => ';#DONGARCIE,#ELISE;#DONGARCIE;#DONGARCIE,#ELVIRE;#DONGARCIE,#ELVIRE,#ELISE;#DONGARCIE',
     ),
   ),
   'moliere_domgarciedenavarre_IV01' => 
@@ -43761,6 +43029,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ELVIRE/ELVIRE-ÉLISE/ÉLISE-DON PEDRE/ÉLISE-IGNÈS//DON GARCIE-ÉLISE',
+      'string-id' => '#ELVIRE;#ELVIRE,#ELISE;#ELISE,#DONPEDRE;#ELISE,#IGNES;;#DONGARCIE,#ELISE',
     ),
   ),
   'moliere_domgarciedenavarre_IV02' => 
@@ -43828,6 +43097,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ELVIRE-ÉLISE/ÉLISE-DON PEDRE/ÉLISE-IGNÈS//DON GARCIE-ÉLISE/DON GARCIE',
+      'string-id' => '#ELVIRE,#ELISE;#ELISE,#DONPEDRE;#ELISE,#IGNES;;#DONGARCIE,#ELISE;#DONGARCIE',
     ),
   ),
   'moliere_domgarciedenavarre_IV03' => 
@@ -43895,6 +43165,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ÉLISE-DON PEDRE/ÉLISE-IGNÈS//DON GARCIE-ÉLISE/DON GARCIE/DON GARCIE-ELVIRE-ÉLISE',
+      'string-id' => '#ELISE,#DONPEDRE;#ELISE,#IGNES;;#DONGARCIE,#ELISE;#DONGARCIE;#DONGARCIE,#ELVIRE,#ELISE',
     ),
   ),
   'moliere_domgarciedenavarre_IV04' => 
@@ -43953,6 +43224,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ÉLISE-IGNÈS//DON GARCIE-ÉLISE/DON GARCIE/DON GARCIE-ELVIRE-ÉLISE/DON GARCIE-ELVIRE-IGNÈS',
+      'string-id' => '#ELISE,#IGNES;;#DONGARCIE,#ELISE;#DONGARCIE;#DONGARCIE,#ELVIRE,#ELISE;#DONGARCIE,#ELVIRE,#IGNES',
     ),
   ),
   'moliere_domgarciedenavarre_V01' => 
@@ -44011,6 +43283,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ÉLISE/ELVIRE-IGNÈS/DON GARCIE-ELVIRE/ELVIRE-IGNÈS/ELVIRE-IGNÈS/DON GARCIE-IGNÈS',
+      'string-id' => '#ELISE;#ELVIRE,#IGNES;#DONGARCIE,#ELVIRE;#ELVIRE,#IGNES;#ELVIRE,#IGNES;#DONGARCIE,#IGNES',
     ),
   ),
   'moliere_depitamoureux_II01' => 
@@ -44078,6 +43351,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ASCAGNE/VALÈRE-ASCAGNE/LUCILE-ASCAGNE/LUCILE/ALBERT/ALBERT-MÉTAPHRASTE',
+      'string-id' => '#ASCAGNE;#VALERE,#ASCAGNE;#LUCILE,#ASCAGNE;#LUCILE;#ALBERT;#ALBERT,#METAPHRASTE',
     ),
   ),
   'moliere_depitamoureux_III01' => 
@@ -44127,6 +43401,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => '/ALBERT/ALBERT/ALBERT-POLYDORE/POLYDORE/VALÈRE-POLYDORE',
+      'string-id' => ';#ALBERT;#ALBERT;#ALBERT,#POLYDORE;#POLYDORE;#VALERE,#POLYDORE',
     ),
   ),
   'moliere_depitamoureux_III02' => 
@@ -44176,6 +43451,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ALBERT/ALBERT/ALBERT-POLYDORE/POLYDORE/VALÈRE-POLYDORE/VALÈRE',
+      'string-id' => '#ALBERT;#ALBERT;#ALBERT,#POLYDORE;#POLYDORE;#VALERE,#POLYDORE;#VALERE',
     ),
   ),
   'moliere_depitamoureux_III03' => 
@@ -44225,6 +43501,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ALBERT/ALBERT-POLYDORE/POLYDORE/VALÈRE-POLYDORE/VALÈRE/ALBERT-VALÈRE',
+      'string-id' => '#ALBERT;#ALBERT,#POLYDORE;#POLYDORE;#VALERE,#POLYDORE;#VALERE;#ALBERT,#VALERE',
     ),
   ),
   'moliere_depitamoureux_III04' => 
@@ -44283,6 +43560,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ALBERT-POLYDORE/POLYDORE/VALÈRE-POLYDORE/VALÈRE/ALBERT-VALÈRE/ALBERT-VALÈRE-LUCILE',
+      'string-id' => '#ALBERT,#POLYDORE;#POLYDORE;#VALERE,#POLYDORE;#VALERE;#ALBERT,#VALERE;#ALBERT,#VALERE,#LUCILE',
     ),
   ),
   'moliere_depitamoureux_III05' => 
@@ -44341,6 +43619,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'POLYDORE/VALÈRE-POLYDORE/VALÈRE/ALBERT-VALÈRE/ALBERT-VALÈRE-LUCILE/ALBERT',
+      'string-id' => '#POLYDORE;#VALERE,#POLYDORE;#VALERE;#ALBERT,#VALERE;#ALBERT,#VALERE,#LUCILE;#ALBERT',
     ),
   ),
   'moliere_depitamoureux_III06' => 
@@ -44399,6 +43678,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'VALÈRE-POLYDORE/VALÈRE/ALBERT-VALÈRE/ALBERT-VALÈRE-LUCILE/ALBERT/VALÈRE',
+      'string-id' => '#VALERE,#POLYDORE;#VALERE;#ALBERT,#VALERE;#ALBERT,#VALERE,#LUCILE;#ALBERT;#VALERE',
     ),
   ),
   'moliere_depitamoureux_V01' => 
@@ -44448,6 +43728,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => '/VALÈRE/VALÈRE/ASCAGNE/POLYDORE-ASCAGNE/VALÈRE-POLYDORE',
+      'string-id' => ';#VALERE;#VALERE;#ASCAGNE;#POLYDORE,#ASCAGNE;#VALERE,#POLYDORE',
     ),
   ),
   'moliere_depitamoureux_V02' => 
@@ -44506,6 +43787,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'VALÈRE/VALÈRE/ASCAGNE/POLYDORE-ASCAGNE/VALÈRE-POLYDORE/ALBERT-VALÈRE-LUCILE',
+      'string-id' => '#VALERE;#VALERE;#ASCAGNE;#POLYDORE,#ASCAGNE;#VALERE,#POLYDORE;#ALBERT,#VALERE,#LUCILE',
     ),
   ),
   'moliere_depitamoureux_V03' => 
@@ -44573,6 +43855,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'VALÈRE/ASCAGNE/POLYDORE-ASCAGNE/VALÈRE-POLYDORE/ALBERT-VALÈRE-LUCILE/ÉRASTE-ALBERT-VALÈRE-LUCILE-POLYDORE-ASCAGNE',
+      'string-id' => '#VALERE;#ASCAGNE;#POLYDORE,#ASCAGNE;#VALERE,#POLYDORE;#ALBERT,#VALERE,#LUCILE;#ERASTE,#ALBERT,#VALERE,#LUCILE,#POLYDORE,#ASCAGNE',
     ),
   ),
   'moliere_critiqueecoledesfemmes_I01' => 
@@ -44649,6 +43932,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'URANIE-ÉLISE/URANIE-ÉLISE-GALOPIN/URANIE-ÉLISE-CLIMÈNE-GALOPIN/URANIE-ÉLISE-CLIMÈNE-GALOPIN-LE MARQUIS/URANIE-ÉLISE-CLIMÈNE-LE MARQUIS-DORANTE/URANIE-ÉLISE-CLIMÈNE-LE MARQUIS-DORANTE-LYSIDAS',
+      'string-id' => '#URANIE,#ELISE;#URANIE,#ELISE,#GALOPIN;#URANIE,#ELISE,#CLIMENE,#GALOPIN;#URANIE,#ELISE,#CLIMENE,#GALOPIN,#LEMARQUIS;#URANIE,#ELISE,#CLIMENE,#LEMARQUIS,#DORANTE;#URANIE,#ELISE,#CLIMENE,#LEMARQUIS,#DORANTE,#LYSIDAS',
     ),
   ),
   'moliere_critiqueecoledesfemmes_I02' => 
@@ -44725,6 +44009,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'URANIE-ÉLISE-GALOPIN/URANIE-ÉLISE-CLIMÈNE-GALOPIN/URANIE-ÉLISE-CLIMÈNE-GALOPIN-LE MARQUIS/URANIE-ÉLISE-CLIMÈNE-LE MARQUIS-DORANTE/URANIE-ÉLISE-CLIMÈNE-LE MARQUIS-DORANTE-LYSIDAS/URANIE-ÉLISE-CLIMÈNE-GALOPIN-LE MARQUIS-DORANTE-LYSIDAS',
+      'string-id' => '#URANIE,#ELISE,#GALOPIN;#URANIE,#ELISE,#CLIMENE,#GALOPIN;#URANIE,#ELISE,#CLIMENE,#GALOPIN,#LEMARQUIS;#URANIE,#ELISE,#CLIMENE,#LEMARQUIS,#DORANTE;#URANIE,#ELISE,#CLIMENE,#LEMARQUIS,#DORANTE,#LYSIDAS;#URANIE,#ELISE,#CLIMENE,#GALOPIN,#LEMARQUIS,#DORANTE,#LYSIDAS',
     ),
   ),
   'moliere_comtesseescarbagnas_I01' => 
@@ -44792,6 +44077,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LE VICOMTE-JULIE/JULIE-CRIQUET/JULIE-JEANNOT-CRIQUET/LE VICOMTE-JULIE-CRIQUET/LE VICOMTE-JULIE-CRIQUET/LE VICOMTE-JULIE-MONSIEUR BOBINET-CRIQUET',
+      'string-id' => '#LEVICOMTE,#JULIE;#JULIE,#CRIQUET;#JULIE,#JEANNOT,#CRIQUET;#LEVICOMTE,#JULIE,#CRIQUET;#LEVICOMTE,#JULIE,#CRIQUET;#LEVICOMTE,#JULIE,#MONSIEURBOBINET,#CRIQUET',
     ),
   ),
   'moliere_comtesseescarbagnas_I02' => 
@@ -44859,6 +44145,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'JULIE-CRIQUET/JULIE-JEANNOT-CRIQUET/LE VICOMTE-JULIE-CRIQUET/LE VICOMTE-JULIE-CRIQUET/LE VICOMTE-JULIE-MONSIEUR BOBINET-CRIQUET/LE COMTE-LE VICOMTE-JULIE-MONSIEUR BOBINET-CRIQUET',
+      'string-id' => '#JULIE,#CRIQUET;#JULIE,#JEANNOT,#CRIQUET;#LEVICOMTE,#JULIE,#CRIQUET;#LEVICOMTE,#JULIE,#CRIQUET;#LEVICOMTE,#JULIE,#MONSIEURBOBINET,#CRIQUET;#LECOMTE,#LEVICOMTE,#JULIE,#MONSIEURBOBINET,#CRIQUET',
     ),
   ),
   'moliere_comtesseescarbagnas_I03' => 
@@ -44944,6 +44231,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'JULIE-JEANNOT-CRIQUET/LE VICOMTE-JULIE-CRIQUET/LE VICOMTE-JULIE-CRIQUET/LE VICOMTE-JULIE-MONSIEUR BOBINET-CRIQUET/LE COMTE-LE VICOMTE-JULIE-MONSIEUR BOBINET-CRIQUET/LE COMTE-LE VICOMTE-JULIE-MONSIEUR HARPIN-MONSIEUR BOBINET',
+      'string-id' => '#JULIE,#JEANNOT,#CRIQUET;#LEVICOMTE,#JULIE,#CRIQUET;#LEVICOMTE,#JULIE,#CRIQUET;#LEVICOMTE,#JULIE,#MONSIEURBOBINET,#CRIQUET;#LECOMTE,#LEVICOMTE,#JULIE,#MONSIEURBOBINET,#CRIQUET;#LECOMTE,#LEVICOMTE,#JULIE,#MONSIEURHARPIN,#MONSIEURBOBINET',
     ),
   ),
   'moliere_comtesseescarbagnas_I04' => 
@@ -45020,6 +44308,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'LE VICOMTE-JULIE-CRIQUET/LE VICOMTE-JULIE-CRIQUET/LE VICOMTE-JULIE-MONSIEUR BOBINET-CRIQUET/LE COMTE-LE VICOMTE-JULIE-MONSIEUR BOBINET-CRIQUET/LE COMTE-LE VICOMTE-JULIE-MONSIEUR HARPIN-MONSIEUR BOBINET/LE VICOMTE-JULIE-JEANNOT',
+      'string-id' => '#LEVICOMTE,#JULIE,#CRIQUET;#LEVICOMTE,#JULIE,#CRIQUET;#LEVICOMTE,#JULIE,#MONSIEURBOBINET,#CRIQUET;#LECOMTE,#LEVICOMTE,#JULIE,#MONSIEURBOBINET,#CRIQUET;#LECOMTE,#LEVICOMTE,#JULIE,#MONSIEURHARPIN,#MONSIEURBOBINET;#LEVICOMTE,#JULIE,#JEANNOT',
     ),
   ),
   'moliere_bourgeoisgentilhomme_III01' => 
@@ -45078,6 +44367,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'MONSIEUR JOURDAIN-/MONSIEUR JOURDAIN-NICOLE-/MONSIEUR JOURDAIN-MADAME JOURDAIN-NICOLE-/MONSIEUR JOURDAIN-MADAME JOURDAIN-NICOLE-/MADAME JOURDAIN-NICOLE-/MONSIEUR JOURDAIN-MADAME JOURDAIN-NICOLE',
+      'string-id' => '#MONSIEURJOURDAIN,#DORANTE;#MONSIEURJOURDAIN,#NICOLE,#DORANTE;#MONSIEURJOURDAIN,#MADAMEJOURDAIN,#NICOLE,#DORANTE;#MONSIEURJOURDAIN,#MADAMEJOURDAIN,#NICOLE,#DORANTE;#MADAMEJOURDAIN,#NICOLE,#DORANTE;#MONSIEURJOURDAIN,#MADAMEJOURDAIN,#NICOLE,#DORANTE',
     ),
   ),
   'moliere_bourgeoisgentilhomme_III02' => 
@@ -45127,6 +44417,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'MONSIEUR JOURDAIN-NICOLE-/MONSIEUR JOURDAIN-MADAME JOURDAIN-NICOLE-/MONSIEUR JOURDAIN-MADAME JOURDAIN-NICOLE-/MADAME JOURDAIN-NICOLE-/MONSIEUR JOURDAIN-MADAME JOURDAIN-NICOLE-/MADAME JOURDAIN-NICOLE',
+      'string-id' => '#MONSIEURJOURDAIN,#NICOLE,#DORANTE;#MONSIEURJOURDAIN,#MADAMEJOURDAIN,#NICOLE,#DORANTE;#MONSIEURJOURDAIN,#MADAMEJOURDAIN,#NICOLE,#DORANTE;#MADAMEJOURDAIN,#NICOLE,#DORANTE;#MONSIEURJOURDAIN,#MADAMEJOURDAIN,#NICOLE,#DORANTE;#MADAMEJOURDAIN,#NICOLE,#DORANTE',
     ),
   ),
   'moliere_bourgeoisgentilhomme_III03' => 
@@ -45185,6 +44476,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'MONSIEUR JOURDAIN-MADAME JOURDAIN-NICOLE-/MONSIEUR JOURDAIN-MADAME JOURDAIN-NICOLE-/MADAME JOURDAIN-NICOLE-/MONSIEUR JOURDAIN-MADAME JOURDAIN-NICOLE-/MADAME JOURDAIN-NICOLE-/NICOLE-CLÉONTE',
+      'string-id' => '#MONSIEURJOURDAIN,#MADAMEJOURDAIN,#NICOLE,#DORANTE;#MONSIEURJOURDAIN,#MADAMEJOURDAIN,#NICOLE,#DORANTE;#MADAMEJOURDAIN,#NICOLE,#DORANTE;#MONSIEURJOURDAIN,#MADAMEJOURDAIN,#NICOLE,#DORANTE;#MADAMEJOURDAIN,#NICOLE,#DORANTE;#NICOLE,#CLEONTE,#DORANTE',
     ),
   ),
   'moliere_bourgeoisgentilhomme_III04' => 
@@ -45252,6 +44544,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'MONSIEUR JOURDAIN-MADAME JOURDAIN-NICOLE-/MADAME JOURDAIN-NICOLE-/MONSIEUR JOURDAIN-MADAME JOURDAIN-NICOLE-/MADAME JOURDAIN-NICOLE-/NICOLE-CLÉONTE-/CLÉONTE',
+      'string-id' => '#MONSIEURJOURDAIN,#MADAMEJOURDAIN,#NICOLE,#DORANTE;#MADAMEJOURDAIN,#NICOLE,#DORANTE;#MONSIEURJOURDAIN,#MADAMEJOURDAIN,#NICOLE,#DORANTE;#MADAMEJOURDAIN,#NICOLE,#DORANTE;#NICOLE,#CLEONTE,#DORANTE;#CLEONTE,#DORANTE',
     ),
   ),
   'moliere_bourgeoisgentilhomme_III05' => 
@@ -45328,6 +44621,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'MADAME JOURDAIN-NICOLE-/MONSIEUR JOURDAIN-MADAME JOURDAIN-NICOLE-/MADAME JOURDAIN-NICOLE-/NICOLE-CLÉONTE-/CLÉONTE-/LUCILE-NICOLE-CLÉONTE',
+      'string-id' => '#MADAMEJOURDAIN,#NICOLE,#DORANTE;#MONSIEURJOURDAIN,#MADAMEJOURDAIN,#NICOLE,#DORANTE;#MADAMEJOURDAIN,#NICOLE,#DORANTE;#NICOLE,#CLEONTE,#DORANTE;#CLEONTE,#DORANTE;#LUCILE,#NICOLE,#CLEONTE,#DORANTE',
     ),
   ),
   'moliere_bourgeoisgentilhomme_III06' => 
@@ -45404,6 +44698,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'MONSIEUR JOURDAIN-MADAME JOURDAIN-NICOLE-/MADAME JOURDAIN-NICOLE-/NICOLE-CLÉONTE-/CLÉONTE-/LUCILE-NICOLE-CLÉONTE-/MADAME JOURDAIN-LUCILE-NICOLE-CLÉONTE',
+      'string-id' => '#MONSIEURJOURDAIN,#MADAMEJOURDAIN,#NICOLE,#DORANTE;#MADAMEJOURDAIN,#NICOLE,#DORANTE;#NICOLE,#CLEONTE,#DORANTE;#CLEONTE,#DORANTE;#LUCILE,#NICOLE,#CLEONTE,#DORANTE;#MADAMEJOURDAIN,#LUCILE,#NICOLE,#CLEONTE,#DORANTE',
     ),
   ),
   'moliere_bourgeoisgentilhomme_III07' => 
@@ -45480,6 +44775,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'MADAME JOURDAIN-NICOLE-/NICOLE-CLÉONTE-/CLÉONTE-/LUCILE-NICOLE-CLÉONTE-/MADAME JOURDAIN-LUCILE-NICOLE-CLÉONTE-/MONSIEUR JOURDAIN-MADAME JOURDAIN-LUCILE-NICOLE-CLÉONTE',
+      'string-id' => '#MADAMEJOURDAIN,#NICOLE,#DORANTE;#NICOLE,#CLEONTE,#DORANTE;#CLEONTE,#DORANTE;#LUCILE,#NICOLE,#CLEONTE,#DORANTE;#MADAMEJOURDAIN,#LUCILE,#NICOLE,#CLEONTE,#DORANTE;#MONSIEURJOURDAIN,#MADAMEJOURDAIN,#LUCILE,#NICOLE,#CLEONTE,#DORANTE',
     ),
   ),
   'moliere_bourgeoisgentilhomme_III08' => 
@@ -45547,6 +44843,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'NICOLE-CLÉONTE-/CLÉONTE-/LUCILE-NICOLE-CLÉONTE-/MADAME JOURDAIN-LUCILE-NICOLE-CLÉONTE-/MONSIEUR JOURDAIN-MADAME JOURDAIN-LUCILE-NICOLE-CLÉONTE-/CLÉONTE',
+      'string-id' => '#NICOLE,#CLEONTE,#DORANTE;#CLEONTE,#DORANTE;#LUCILE,#NICOLE,#CLEONTE,#DORANTE;#MADAMEJOURDAIN,#LUCILE,#NICOLE,#CLEONTE,#DORANTE;#MONSIEURJOURDAIN,#MADAMEJOURDAIN,#LUCILE,#NICOLE,#CLEONTE,#DORANTE;#CLEONTE,#DORANTE',
     ),
   ),
   'moliere_bourgeoisgentilhomme_III09' => 
@@ -45614,6 +44911,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'CLÉONTE-/LUCILE-NICOLE-CLÉONTE-/MADAME JOURDAIN-LUCILE-NICOLE-CLÉONTE-/MONSIEUR JOURDAIN-MADAME JOURDAIN-LUCILE-NICOLE-CLÉONTE-/CLÉONTE-/MONSIEUR JOURDAIN',
+      'string-id' => '#CLEONTE,#DORANTE;#LUCILE,#NICOLE,#CLEONTE,#DORANTE;#MADAMEJOURDAIN,#LUCILE,#NICOLE,#CLEONTE,#DORANTE;#MONSIEURJOURDAIN,#MADAMEJOURDAIN,#LUCILE,#NICOLE,#CLEONTE,#DORANTE;#CLEONTE,#DORANTE;#MONSIEURJOURDAIN,#DORANTE',
     ),
   ),
   'moliere_bourgeoisgentilhomme_III10' => 
@@ -45690,6 +44988,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'LUCILE-NICOLE-CLÉONTE-/MADAME JOURDAIN-LUCILE-NICOLE-CLÉONTE-/MONSIEUR JOURDAIN-MADAME JOURDAIN-LUCILE-NICOLE-CLÉONTE-/CLÉONTE-/MONSIEUR JOURDAIN-/-DORIMÈNE',
+      'string-id' => '#LUCILE,#NICOLE,#CLEONTE,#DORANTE;#MADAMEJOURDAIN,#LUCILE,#NICOLE,#CLEONTE,#DORANTE;#MONSIEURJOURDAIN,#MADAMEJOURDAIN,#LUCILE,#NICOLE,#CLEONTE,#DORANTE;#CLEONTE,#DORANTE;#MONSIEURJOURDAIN,#DORANTE;#DORANTE,#DORIMENE',
     ),
   ),
   'moliere_bourgeoisgentilhomme_III11' => 
@@ -45757,6 +45056,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'MADAME JOURDAIN-LUCILE-NICOLE-CLÉONTE-/MONSIEUR JOURDAIN-MADAME JOURDAIN-LUCILE-NICOLE-CLÉONTE-/CLÉONTE-/MONSIEUR JOURDAIN-/-DORIMÈNE/MONSIEUR JOURDAIN--DORIMÈNE',
+      'string-id' => '#MADAMEJOURDAIN,#LUCILE,#NICOLE,#CLEONTE,#DORANTE;#MONSIEURJOURDAIN,#MADAMEJOURDAIN,#LUCILE,#NICOLE,#CLEONTE,#DORANTE;#CLEONTE,#DORANTE;#MONSIEURJOURDAIN,#DORANTE;#DORANTE,#DORIMENE;#MONSIEURJOURDAIN,#DORANTE,#DORIMENE',
     ),
   ),
   'moliere_bourgeoisgentilhomme_V01' => 
@@ -45833,6 +45133,7 @@
       'genreId' => 'Comedie-ballet',
       'authorId' => 'Moliere',
       'string' => 'MONSIEUR JOURDAIN-MADAME JOURDAIN-/-DORIMÈNE/MONSIEUR JOURDAIN--DORIMÈNE/MONSIEUR JOURDAIN-CLÉONTE-/MONSIEUR JOURDAIN-LUCILE--DORIMÈNE/MONSIEUR JOURDAIN-MADAME JOURDAIN-LUCILE-CLÉONTE--DORIMÈNE',
+      'string-id' => '#MONSIEURJOURDAIN,#MADAMEJOURDAIN,#DORANTE;#DORANTE,#DORIMENE;#MONSIEURJOURDAIN,#DORANTE,#DORIMENE;#MONSIEURJOURDAIN,#CLEONTE,#DORANTE;#MONSIEURJOURDAIN,#LUCILE,#DORANTE,#DORIMENE;#MONSIEURJOURDAIN,#MADAMEJOURDAIN,#LUCILE,#CLEONTE,#DORANTE,#DORIMENE',
     ),
   ),
   'moliere_avare_III01' => 
@@ -45909,6 +45210,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'HARPAGON-CLÉANTE-ÉLISE-VALÈRE-MAÎTRE JACQUES-DAME CLAUDE-BRINDAVOINE-LA MERLUCHE/VALÈRE-MAÎTRE JACQUES/MARIANE-FROSINE-MAÎTRE JACQUES/MARIANE-FROSINE/HARPAGON-MARIANE-FROSINE/HARPAGON-ÉLISE-MARIANE-FROSINE',
+      'string-id' => '#HARPAGON,#CLEANTE,#ELISE,#VALERE,#MAITREJACQUES,#DAMECLAUDE,#BRINDAVOINE,#LAMERLUCHE;#VALERE,#MAITREJACQUES;#MARIANE,#FROSINE,#MAITREJACQUES;#MARIANE,#FROSINE;#HARPAGON,#MARIANE,#FROSINE;#HARPAGON,#ELISE,#MARIANE,#FROSINE',
     ),
   ),
   'moliere_avare_III02' => 
@@ -45985,6 +45287,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'VALÈRE-MAÎTRE JACQUES/MARIANE-FROSINE-MAÎTRE JACQUES/MARIANE-FROSINE/HARPAGON-MARIANE-FROSINE/HARPAGON-ÉLISE-MARIANE-FROSINE/HARPAGON-CLÉANTE-ÉLISE-VALÈRE-MARIANE-FROSINE',
+      'string-id' => '#VALERE,#MAITREJACQUES;#MARIANE,#FROSINE,#MAITREJACQUES;#MARIANE,#FROSINE;#HARPAGON,#MARIANE,#FROSINE;#HARPAGON,#ELISE,#MARIANE,#FROSINE;#HARPAGON,#CLEANTE,#ELISE,#VALERE,#MARIANE,#FROSINE',
     ),
   ),
   'moliere_avare_III03' => 
@@ -46070,6 +45373,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'MARIANE-FROSINE-MAÎTRE JACQUES/MARIANE-FROSINE/HARPAGON-MARIANE-FROSINE/HARPAGON-ÉLISE-MARIANE-FROSINE/HARPAGON-CLÉANTE-ÉLISE-VALÈRE-MARIANE-FROSINE/HARPAGON-CLÉANTE-ÉLISE-MARIANE-FROSINE-BRINDAVOINE',
+      'string-id' => '#MARIANE,#FROSINE,#MAITREJACQUES;#MARIANE,#FROSINE;#HARPAGON,#MARIANE,#FROSINE;#HARPAGON,#ELISE,#MARIANE,#FROSINE;#HARPAGON,#CLEANTE,#ELISE,#VALERE,#MARIANE,#FROSINE;#HARPAGON,#CLEANTE,#ELISE,#MARIANE,#FROSINE,#BRINDAVOINE',
     ),
   ),
   'moliere_avare_III04' => 
@@ -46155,6 +45459,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'MARIANE-FROSINE/HARPAGON-MARIANE-FROSINE/HARPAGON-ÉLISE-MARIANE-FROSINE/HARPAGON-CLÉANTE-ÉLISE-VALÈRE-MARIANE-FROSINE/HARPAGON-CLÉANTE-ÉLISE-MARIANE-FROSINE-BRINDAVOINE/HARPAGON-CLÉANTE-ÉLISE-VALÈRE-MARIANE-FROSINE-LA MERLUCHE',
+      'string-id' => '#MARIANE,#FROSINE;#HARPAGON,#MARIANE,#FROSINE;#HARPAGON,#ELISE,#MARIANE,#FROSINE;#HARPAGON,#CLEANTE,#ELISE,#VALERE,#MARIANE,#FROSINE;#HARPAGON,#CLEANTE,#ELISE,#MARIANE,#FROSINE,#BRINDAVOINE;#HARPAGON,#CLEANTE,#ELISE,#VALERE,#MARIANE,#FROSINE,#LAMERLUCHE',
     ),
   ),
   'moliere_avare_IV01' => 
@@ -46213,6 +45518,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'CLÉANTE-ÉLISE-MARIANE-FROSINE/HARPAGON-CLÉANTE-ÉLISE-MARIANE-FROSINE/HARPAGON-CLÉANTE/HARPAGON-CLÉANTE-MAÎTRE JACQUES/HARPAGON-CLÉANTE/CLÉANTE',
+      'string-id' => '#CLEANTE,#ELISE,#MARIANE,#FROSINE;#HARPAGON,#CLEANTE,#ELISE,#MARIANE,#FROSINE;#HARPAGON,#CLEANTE;#HARPAGON,#CLEANTE,#MAITREJACQUES;#HARPAGON,#CLEANTE;#CLEANTE',
     ),
   ),
   'moliere_avare_IV02' => 
@@ -46271,6 +45577,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'HARPAGON-CLÉANTE-ÉLISE-MARIANE-FROSINE/HARPAGON-CLÉANTE/HARPAGON-CLÉANTE-MAÎTRE JACQUES/HARPAGON-CLÉANTE/CLÉANTE/HARPAGON',
+      'string-id' => '#HARPAGON,#CLEANTE,#ELISE,#MARIANE,#FROSINE;#HARPAGON,#CLEANTE;#HARPAGON,#CLEANTE,#MAITREJACQUES;#HARPAGON,#CLEANTE;#CLEANTE;#HARPAGON',
     ),
   ),
   'moliere_avare_V01' => 
@@ -46347,6 +45654,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'HARPAGON-LE COMMISSAIRE/HARPAGON-MAÎTRE JACQUES-LE COMMISSAIRE/HARPAGON-VALÈRE-MAÎTRE JACQUES-LE COMMISSAIRE/HARPAGON-ÉLISE-VALÈRE-MARIANE-FROSINE-MAÎTRE JACQUES-LE COMMISSAIRE/HARPAGON-ÉLISE-VALÈRE-MARIANE-ANSELME-FROSINE-MAÎTRE JACQUES-LE COMMISSAIRE/HARPAGON-CLÉANTE-ÉLISE-VALÈRE-MARIANE-ANSELME-FROSINE-MAÎTRE JACQUES-LE COMMISSAIRE',
+      'string-id' => '#HARPAGON,#LECOMMISSAIRE;#HARPAGON,#MAITREJACQUES,#LECOMMISSAIRE;#HARPAGON,#VALERE,#MAITREJACQUES,#LECOMMISSAIRE;#HARPAGON,#ELISE,#VALERE,#MARIANE,#FROSINE,#MAITREJACQUES,#LECOMMISSAIRE;#HARPAGON,#ELISE,#VALERE,#MARIANE,#ANSELME,#FROSINE,#MAITREJACQUES,#LECOMMISSAIRE;#HARPAGON,#CLEANTE,#ELISE,#VALERE,#MARIANE,#ANSELME,#FROSINE,#MAITREJACQUES,#LECOMMISSAIRE',
     ),
   ),
   'moliere_amphitryon_III01' => 
@@ -46396,6 +45704,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'AMPHITRYON/AMPHITRYON-ALCMÈNE//JUPITER//JUPITER-ALCMÈNE',
+      'string-id' => '#AMPHITRYON;#AMPHITRYON,#ALCMENE;;#JUPITER;;#JUPITER,#ALCMENE',
     ),
   ),
   'moliere_amphitryon_III02' => 
@@ -46445,6 +45754,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'AMPHITRYON-ALCMÈNE//JUPITER//JUPITER-ALCMÈNE/',
+      'string-id' => '#AMPHITRYON,#ALCMENE;;#JUPITER;;#JUPITER,#ALCMENE;',
     ),
   ),
   'moliere_amphitryon_IV01' => 
@@ -46503,6 +45813,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'AMPHITRYON/MERCURE-AMPHITRYON/AMPHITRYON/AMPHITRYON-NAUCRATES-POLIDAS/JUPITER-AMPHITRYON-NAUCRATES-POLIDAS/MERCURE',
+      'string-id' => '#AMPHITRYON;#MERCURE,#AMPHITRYON;#AMPHITRYON;#AMPHITRYON,#NAUCRATES,#POLIDAS;#JUPITER,#AMPHITRYON,#NAUCRATES,#POLIDAS;#MERCURE',
     ),
   ),
   'moliere_amphitryon_IV02' => 
@@ -46570,6 +45881,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'MERCURE-AMPHITRYON/AMPHITRYON/AMPHITRYON-NAUCRATES-POLIDAS/JUPITER-AMPHITRYON-NAUCRATES-POLIDAS/MERCURE/AMPHITRYON-ARGATIPHONDITAS-POSICLES',
+      'string-id' => '#MERCURE,#AMPHITRYON;#AMPHITRYON;#AMPHITRYON,#NAUCRATES,#POLIDAS;#JUPITER,#AMPHITRYON,#NAUCRATES,#POLIDAS;#MERCURE;#AMPHITRYON,#ARGATIPHONDITAS,#POSICLES',
     ),
   ),
   'moliere_amphitryon_IV03' => 
@@ -46646,6 +45958,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'AMPHITRYON/AMPHITRYON-NAUCRATES-POLIDAS/JUPITER-AMPHITRYON-NAUCRATES-POLIDAS/MERCURE/AMPHITRYON-ARGATIPHONDITAS-POSICLES/AMPHITRYON-NAUCRATES',
+      'string-id' => '#AMPHITRYON;#AMPHITRYON,#NAUCRATES,#POLIDAS;#JUPITER,#AMPHITRYON,#NAUCRATES,#POLIDAS;#MERCURE;#AMPHITRYON,#ARGATIPHONDITAS,#POSICLES;#AMPHITRYON,#NAUCRATES',
     ),
   ),
   'moliere_amphitryon_IV04' => 
@@ -46722,6 +46035,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'AMPHITRYON-NAUCRATES-POLIDAS/JUPITER-AMPHITRYON-NAUCRATES-POLIDAS/MERCURE/AMPHITRYON-ARGATIPHONDITAS-POSICLES/AMPHITRYON-NAUCRATES/MERCURE',
+      'string-id' => '#AMPHITRYON,#NAUCRATES,#POLIDAS;#JUPITER,#AMPHITRYON,#NAUCRATES,#POLIDAS;#MERCURE;#AMPHITRYON,#ARGATIPHONDITAS,#POSICLES;#AMPHITRYON,#NAUCRATES;#MERCURE',
     ),
   ),
   'moliere_amphitryon_IV05' => 
@@ -46798,6 +46112,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'JUPITER-AMPHITRYON-NAUCRATES-POLIDAS/MERCURE/AMPHITRYON-ARGATIPHONDITAS-POSICLES/AMPHITRYON-NAUCRATES/MERCURE/JUPITER-NAUCRATES',
+      'string-id' => '#JUPITER,#AMPHITRYON,#NAUCRATES,#POLIDAS;#MERCURE;#AMPHITRYON,#ARGATIPHONDITAS,#POSICLES;#AMPHITRYON,#NAUCRATES;#MERCURE;#JUPITER,#NAUCRATES',
     ),
   ),
   'moliere_amourmedecin_II01' => 
@@ -46847,6 +46162,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'SGANARELLE-AMINTE-LUCRÈCE-MONSIEUR GUILLAUME-MONSIEUR JOSSE/SGANARELLE-LUCINDE/SGANARELLE-LUCINDE/LUCINDE/SGANARELLE/SGANARELLE',
+      'string-id' => '#SGANARELLE,#AMINTE,#LUCRECE,#MONSIEURGUILLAUME,#MONSIEURJOSSE;#SGANARELLE,#LUCINDE;#SGANARELLE,#LUCINDE;#LUCINDE;#SGANARELLE;#SGANARELLE',
     ),
   ),
   'moliere_amourmedecin_III01' => 
@@ -46896,6 +46212,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'SGANARELLE/SGANARELLE-MONSIEUR TOMÈS/MONSIEUR TOMÈS/SGANARELLE-MONSIEUR TOMÈS-MONSIEUR MACROTON-MONSIEUR BAHYS/SGANARELLE-MONSIEUR MACROTON-MONSIEUR BAHYS/SGANARELLE',
+      'string-id' => '#SGANARELLE;#SGANARELLE,#MONSIEURTOMES;#MONSIEURTOMES;#SGANARELLE,#MONSIEURTOMES,#MONSIEURMACROTON,#MONSIEURBAHYS;#SGANARELLE,#MONSIEURMACROTON,#MONSIEURBAHYS;#SGANARELLE',
     ),
   ),
   'moliere_amourmedecin_III02' => 
@@ -46945,6 +46262,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'SGANARELLE-MONSIEUR TOMÈS/MONSIEUR TOMÈS/SGANARELLE-MONSIEUR TOMÈS-MONSIEUR MACROTON-MONSIEUR BAHYS/SGANARELLE-MONSIEUR MACROTON-MONSIEUR BAHYS/SGANARELLE/SGANARELLE',
+      'string-id' => '#SGANARELLE,#MONSIEURTOMES;#MONSIEURTOMES;#SGANARELLE,#MONSIEURTOMES,#MONSIEURMACROTON,#MONSIEURBAHYS;#SGANARELLE,#MONSIEURMACROTON,#MONSIEURBAHYS;#SGANARELLE;#SGANARELLE',
     ),
   ),
   'moliere_amourmedecin_IV01' => 
@@ -47012,6 +46330,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'MONSIEUR TOMÈS-MONSIEUR FILERIN/MONSIEUR TOMÈS/CLITANDRE/SGANARELLE/SGANARELLE-CLITANDRE/SGANARELLE-LUCINDE-CLITANDRE',
+      'string-id' => '#MONSIEURTOMES,#MONSIEURFILERIN;#MONSIEURTOMES;#CLITANDRE;#SGANARELLE;#SGANARELLE,#CLITANDRE;#SGANARELLE,#LUCINDE,#CLITANDRE',
     ),
   ),
   'moliere_amourmedecin_IV02' => 
@@ -47070,6 +46389,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'MONSIEUR TOMÈS/CLITANDRE/SGANARELLE/SGANARELLE-CLITANDRE/SGANARELLE-LUCINDE-CLITANDRE/SGANARELLE-LUCINDE-CLITANDRE',
+      'string-id' => '#MONSIEURTOMES;#CLITANDRE;#SGANARELLE;#SGANARELLE,#CLITANDRE;#SGANARELLE,#LUCINDE,#CLITANDRE;#SGANARELLE,#LUCINDE,#CLITANDRE',
     ),
   ),
   'moliere_amantsmagnifiques_III01' => 
@@ -47146,6 +46466,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Moliere',
       'string' => 'ERIPHILE-CLITIDAS-CLÉON/ERIPHILE-CLITIDAS/ERIPHILE-CLITIDAS/ERIPHILE-SOSTRATE/ERIPHILE-CHORÈBE-SOSTRATE/ARISTIONE-ERIPHILE-IPHICRATE-TIMOCLÈS-CLITIDAS-SOSTRATE-ANAXARQUE',
+      'string-id' => '#ERIPHILE,#CLITIDAS,#CLEON;#ERIPHILE,#CLITIDAS;#ERIPHILE,#CLITIDAS;#ERIPHILE,#SOSTRATE;#ERIPHILE,#CHOREBE,#SOSTRATE;#ARISTIONE,#ERIPHILE,#IPHICRATE,#TIMOCLES,#CLITIDAS,#SOSTRATE,#ANAXARQUE',
     ),
   ),
   'mairet_sophonisbe_V01' => 
@@ -47204,6 +46525,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Mairet',
       'string' => 'MASSINISSE/MASSINISSE-LÉLIE/MASSINISSE-LÉLIE/SOPHONISBE/SOPHONISBE/MASSINISSE-SCIPION-LÉLIE',
+      'string-id' => '#MASSINISSE;#MASSINISSE,#LELIE;#MASSINISSE,#LELIE;#SOPHONISBE;#SOPHONISBE;#MASSINISSE,#SCIPION,#LELIE',
     ),
   ),
   'mairet_sophonisbe_V02' => 
@@ -47253,6 +46575,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Mairet',
       'string' => 'MASSINISSE-LÉLIE/MASSINISSE-LÉLIE/SOPHONISBE/SOPHONISBE/MASSINISSE-SCIPION-LÉLIE/MASSINISSE-SCIPION-LÉLIE',
+      'string-id' => '#MASSINISSE,#LELIE;#MASSINISSE,#LELIE;#SOPHONISBE;#SOPHONISBE;#MASSINISSE,#SCIPION,#LELIE;#MASSINISSE,#SCIPION,#LELIE',
     ),
   ),
   'mairet_sophonisbe_V03' => 
@@ -47311,13 +46634,14 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Mairet',
       'string' => 'MASSINISSE-LÉLIE/SOPHONISBE/SOPHONISBE/MASSINISSE-SCIPION-LÉLIE/MASSINISSE-SCIPION-LÉLIE/MASSINISSE-SOPHONISBE',
+      'string-id' => '#MASSINISSE,#LELIE;#SOPHONISBE;#SOPHONISBE;#MASSINISSE,#SCIPION,#LELIE;#MASSINISSE,#SCIPION,#LELIE;#MASSINISSE,#SOPHONISBE',
     ),
   ),
   'mairet_illustrecorsaire_II01' => 
   array (
     'pattern' => 
     array (
-      '#LEPANTE' => 
+      '#NICAS' => 
       array (
         0 => 0,
         1 => 0,
@@ -47395,7 +46719,8 @@
       'titleId' => 'LIllustreCorsaire',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Mairet',
-      'string' => 'ÉVANDRE-ISMÉNIE-ARMILLE/ISMÉNIE-ARMILLE-FÉLICE/TÉNARE-ISMÉNIE-CÉLIE/TÉNARE-ISMÉNIE-ARMILLE-FÉLICE-CÉLIE/LEPANTE-ÉVANDRE-TÉNARE-ISMÉNIE-ARMILLE-FÉLICE-CÉLIE/ÉVANDRE-ISMÉNIE-CÉLIE',
+      'string' => 'ÉVANDRE-ISMÉNIE-ARMILLE/ISMÉNIE-ARMILLE-FÉLICE/TÉNARE-ISMÉNIE-CÉLIE/TÉNARE-ISMÉNIE-ARMILLE-FÉLICE-CÉLIE/LEPANTE--ÉVANDRE-TÉNARE-ISMÉNIE-ARMILLE-FÉLICE-CÉLIE/ÉVANDRE-ISMÉNIE-CÉLIE',
+      'string-id' => '#EVANDRE,#ISMENIE,#ARMILLE;#ISMENIE,#ARMILLE,#FELICE;#TENARE,#ISMENIE,#CELIE;#TENARE,#ISMENIE,#ARMILLE,#FELICE,#CELIE;#LEPANTE,#NICAS,#EVANDRE,#TENARE,#ISMENIE,#ARMILLE,#FELICE,#CELIE;#EVANDRE,#ISMENIE,#CELIE',
     ),
   ),
   'mairet_illustrecorsaire_III01' => 
@@ -47490,6 +46815,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Mairet',
       'string' => 'ISMÉNIE/LEPANTE-ÉVANDRE-ISMÉNIE/ÉVANDRE-ISMÉNIE-ARMILLE/TÉNARE-ISMÉNIE-ARMILLE/DORANTE-LYPAS-TÉNARE-ISMÉNIE/LYPAS-TÉNARE-ISMÉNIE-ARMILLE-FÉLICE-CÉLIE',
+      'string-id' => '#ISMENIE;#LEPANTE,#EVANDRE,#ISMENIE;#EVANDRE,#ISMENIE,#ARMILLE;#TENARE,#ISMENIE,#ARMILLE;#DORANTE,#LYPAS,#TENARE,#ISMENIE;#LYPAS,#TENARE,#ISMENIE,#ARMILLE,#FELICE,#CELIE',
     ),
   ),
   'mairet_illustrecorsaire_III02' => 
@@ -47584,6 +46910,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Mairet',
       'string' => 'LEPANTE-ÉVANDRE-ISMÉNIE/ÉVANDRE-ISMÉNIE-ARMILLE/TÉNARE-ISMÉNIE-ARMILLE/DORANTE-LYPAS-TÉNARE-ISMÉNIE/LYPAS-TÉNARE-ISMÉNIE-ARMILLE-FÉLICE-CÉLIE/LEPANTE-ÉVANDRE-DORANTE-LYPAS-TÉNARE-ISMÉNIE-ARMILLE',
+      'string-id' => '#LEPANTE,#EVANDRE,#ISMENIE;#EVANDRE,#ISMENIE,#ARMILLE;#TENARE,#ISMENIE,#ARMILLE;#DORANTE,#LYPAS,#TENARE,#ISMENIE;#LYPAS,#TENARE,#ISMENIE,#ARMILLE,#FELICE,#CELIE;#LEPANTE,#EVANDRE,#DORANTE,#LYPAS,#TENARE,#ISMENIE,#ARMILLE',
     ),
   ),
   'mairet_illustrecorsaire_V01' => 
@@ -47669,6 +46996,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Mairet',
       'string' => 'ÉVANDRE-ARMILLE-FÉLICE/FÉLICE-CÉLIE/LYPAS/LEPANTE-ISMÉNIE-FÉLICE-CÉLIE/LEPANTE-DORANTE-LYPAS-CÉLIE/LEPANTE-ÉVANDRE-DORANTE-ISMÉNIE-ARMILLE',
+      'string-id' => '#EVANDRE,#ARMILLE,#FELICE;#FELICE,#CELIE;#LYPAS;#LEPANTE,#ISMENIE,#FELICE,#CELIE;#LEPANTE,#DORANTE,#LYPAS,#CELIE;#LEPANTE,#EVANDRE,#DORANTE,#ISMENIE,#ARMILLE',
     ),
   ),
   'mairet_illustrecorsaire_V02' => 
@@ -47772,6 +47100,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Mairet',
       'string' => 'FÉLICE-CÉLIE/LYPAS/LEPANTE-ISMÉNIE-FÉLICE-CÉLIE/LEPANTE-DORANTE-LYPAS-CÉLIE/LEPANTE-ÉVANDRE-DORANTE-ISMÉNIE-ARMILLE/ÉVANDRE-DORANTE-LYPAS-TÉNARE-ISMÉNIE',
+      'string-id' => '#FELICE,#CELIE;#LYPAS;#LEPANTE,#ISMENIE,#FELICE,#CELIE;#LEPANTE,#DORANTE,#LYPAS,#CELIE;#LEPANTE,#EVANDRE,#DORANTE,#ISMENIE,#ARMILLE;#EVANDRE,#DORANTE,#LYPAS,#TENARE,#ISMENIE',
     ),
   ),
   'magnon_tamerlan_II01' => 
@@ -47830,6 +47159,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Magnon',
       'string' => 'BAJAZET-SELIM/ZILIM-BAJAZET-SELIM/TAMERLAN-ZILIM-BAJAZET-SELIM/TAMERLAN-ZILIM-BAJAZET-ORCAZIE-SELIM/BAJAZET-ORCAZIE-SELIM/ZILIM-BAJAZET-ORCAZIE-SELIM',
+      'string-id' => '#BAJAZET,#SELIM;#ZILIM,#BAJAZET,#SELIM;#TAMERLAN,#ZILIM,#BAJAZET,#SELIM;#TAMERLAN,#ZILIM,#BAJAZET,#ORCAZIE,#SELIM;#BAJAZET,#ORCAZIE,#SELIM;#ZILIM,#BAJAZET,#ORCAZIE,#SELIM',
     ),
   ),
   'magnon_tamerlan_III01' => 
@@ -47863,6 +47193,15 @@
         4 => 0,
         5 => 0,
       ),
+      '#ROXALIE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 1,
+        5 => 0,
+      ),
       '#ORCAZIE' => 
       array (
         0 => 0,
@@ -47887,7 +47226,8 @@
       'titleId' => 'Tamerlan',
       'genreId' => 'Tragedie',
       'authorId' => 'Magnon',
-      'string' => 'TAMERLAN-MANSOR/TAMERLAN/TAMERLAN-INDARTHIZE/TAMERLAN-ORCAZIE/TAMERLAN-ORCAZIE/TAMERLAN-ORCAZIE',
+      'string' => 'TAMERLAN-MANSOR/TAMERLAN/TAMERLAN-INDARTHIZE/TAMERLAN-ORCAZIE/TAMERLAN-ROXALIE-ORCAZIE/TAMERLAN-ORCAZIE',
+      'string-id' => '#TAMERLAN,#MANSOR;#TAMERLAN;#TAMERLAN,#INDARTHIZE;#TAMERLAN,#ORCAZIE;#TAMERLAN,#ROXALIE,#ORCAZIE;#TAMERLAN,#ORCAZIE',
     ),
   ),
   'magnon_tamerlan_III02' => 
@@ -47921,6 +47261,15 @@
         4 => 0,
         5 => 0,
       ),
+      '#ROXALIE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 1,
+        4 => 0,
+        5 => 0,
+      ),
       '#ORCAZIE' => 
       array (
         0 => 0,
@@ -47945,7 +47294,8 @@
       'titleId' => 'Tamerlan',
       'genreId' => 'Tragedie',
       'authorId' => 'Magnon',
-      'string' => 'TAMERLAN/TAMERLAN-INDARTHIZE/TAMERLAN-ORCAZIE/TAMERLAN-ORCAZIE/TAMERLAN-ORCAZIE/TAMERLAN-THÉMIR-ORCAZIE',
+      'string' => 'TAMERLAN/TAMERLAN-INDARTHIZE/TAMERLAN-ORCAZIE/TAMERLAN-ROXALIE-ORCAZIE/TAMERLAN-ORCAZIE/TAMERLAN-THÉMIR-ORCAZIE',
+      'string-id' => '#TAMERLAN;#TAMERLAN,#INDARTHIZE;#TAMERLAN,#ORCAZIE;#TAMERLAN,#ROXALIE,#ORCAZIE;#TAMERLAN,#ORCAZIE;#TAMERLAN,#THEMIR,#ORCAZIE',
     ),
   ),
   'magnon_tamerlan_IV01' => 
@@ -47970,13 +47320,13 @@
         4 => 1,
         5 => 1,
       ),
-      '#BAJAZET' => 
+      '#ROXALIE' => 
       array (
         0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 1,
-        4 => 0,
+        1 => 1,
+        2 => 1,
+        3 => 0,
+        4 => 1,
         5 => 0,
       ),
       '#ORCAZIE' => 
@@ -47986,6 +47336,15 @@
         2 => 1,
         3 => 0,
         4 => 1,
+        5 => 0,
+      ),
+      '#SOLDATS' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 1,
+        4 => 0,
         5 => 0,
       ),
     ),
@@ -48003,7 +47362,8 @@
       'titleId' => 'Tamerlan',
       'genreId' => 'Tragedie',
       'authorId' => 'Magnon',
-      'string' => 'INDARTHIZE-ORCAZIE/INDARTHIZE-ORCAZIE/THÉMIR-INDARTHIZE-ORCAZIE/THÉMIR-BAJAZET/TAMERLAN-THÉMIR-INDARTHIZE-ORCAZIE/TAMERLAN-THÉMIR',
+      'string' => 'INDARTHIZE-ORCAZIE/INDARTHIZE-ROXALIE-ORCAZIE/THÉMIR-INDARTHIZE-ROXALIE-ORCAZIE/THÉMIR-BAJAZET-Toupes de soldats/TAMERLAN-THÉMIR-INDARTHIZE-ROXALIE-ORCAZIE/TAMERLAN-THÉMIR',
+      'string-id' => '#INDARTHIZE,#ORCAZIE;#INDARTHIZE,#ROXALIE,#ORCAZIE;#THEMIR,#INDARTHIZE,#ROXALIE,#ORCAZIE;#THEMIR,#BAJAZET,#SOLDATS;#TAMERLAN,#THEMIR,#INDARTHIZE,#ROXALIE,#ORCAZIE;#TAMERLAN,#THEMIR',
     ),
   ),
   'magnon_tamerlan_IV02' => 
@@ -48028,15 +47388,6 @@
         4 => 1,
         5 => 0,
       ),
-      '#BAJAZET' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 1,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
       '#ORCAZIE' => 
       array (
         0 => 1,
@@ -48055,6 +47406,15 @@
         4 => 0,
         5 => 1,
       ),
+      '#SOLDATS' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
     ),
     'id' => 
     array (
@@ -48070,7 +47430,8 @@
       'titleId' => 'Tamerlan',
       'genreId' => 'Tragedie',
       'authorId' => 'Magnon',
-      'string' => 'INDARTHIZE-ORCAZIE/THÉMIR-INDARTHIZE-ORCAZIE/THÉMIR-BAJAZET/TAMERLAN-THÉMIR-INDARTHIZE-ORCAZIE/TAMERLAN-THÉMIR/TAMERLAN-SELIM',
+      'string' => 'INDARTHIZE-ROXALIE-ORCAZIE/THÉMIR-INDARTHIZE-ROXALIE-ORCAZIE/THÉMIR-BAJAZET-Toupes de soldats/TAMERLAN-THÉMIR-INDARTHIZE-ROXALIE-ORCAZIE/TAMERLAN-THÉMIR/TAMERLAN-SELIM',
+      'string-id' => '#INDARTHIZE,#ROXALIE,#ORCAZIE;#THEMIR,#INDARTHIZE,#ROXALIE,#ORCAZIE;#THEMIR,#BAJAZET,#SOLDATS;#TAMERLAN,#THEMIR,#INDARTHIZE,#ROXALIE,#ORCAZIE;#TAMERLAN,#THEMIR;#TAMERLAN,#SELIM',
     ),
   ),
   'magnon_tamerlan_IV03' => 
@@ -48131,6 +47492,15 @@
         4 => 1,
         5 => 1,
       ),
+      '#SOLDATS' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
     ),
     'id' => 
     array (
@@ -48146,7 +47516,8 @@
       'titleId' => 'Tamerlan',
       'genreId' => 'Tragedie',
       'authorId' => 'Magnon',
-      'string' => 'THÉMIR-INDARTHIZE-ORCAZIE/THÉMIR-BAJAZET/TAMERLAN-THÉMIR-INDARTHIZE-ORCAZIE/TAMERLAN-THÉMIR/TAMERLAN-SELIM/TAMERLAN-THÉMIR-ZILIM-BAJAZET-SELIM',
+      'string' => 'THÉMIR-INDARTHIZE-ROXALIE-ORCAZIE/THÉMIR-BAJAZET-Toupes de soldats/TAMERLAN-THÉMIR-INDARTHIZE-ROXALIE-ORCAZIE/TAMERLAN-THÉMIR/TAMERLAN-SELIM/TAMERLAN-THÉMIR-ZILIM-BAJAZET-SELIM',
+      'string-id' => '#THEMIR,#INDARTHIZE,#ROXALIE,#ORCAZIE;#THEMIR,#BAJAZET,#SOLDATS;#TAMERLAN,#THEMIR,#INDARTHIZE,#ROXALIE,#ORCAZIE;#TAMERLAN,#THEMIR;#TAMERLAN,#SELIM;#TAMERLAN,#THEMIR,#ZILIM,#BAJAZET,#SELIM',
     ),
   ),
   'magnon_tamerlan_V01' => 
@@ -48198,6 +47569,15 @@
         4 => 0,
         5 => 0,
       ),
+      '#SOLDATS' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
     ),
     'id' => 
     array (
@@ -48213,7 +47593,8 @@
       'titleId' => 'Tamerlan',
       'genreId' => 'Tragedie',
       'authorId' => 'Magnon',
-      'string' => 'TAMERLAN-BAJAZET/ZILIM-BAJAZET-SELIM/ZILIM-BAJAZET/BAJAZET/BAJAZET-ORCAZIE/TAMERLAN-BAJAZET-ORCAZIE',
+      'string' => 'TAMERLAN-BAJAZET-Toupes de soldats/ZILIM-BAJAZET-SELIM/ZILIM-BAJAZET/BAJAZET/BAJAZET-ORCAZIE/TAMERLAN-BAJAZET-ORCAZIE',
+      'string-id' => '#TAMERLAN,#BAJAZET,#SOLDATS;#ZILIM,#BAJAZET,#SELIM;#ZILIM,#BAJAZET;#BAJAZET;#BAJAZET,#ORCAZIE;#TAMERLAN,#BAJAZET,#ORCAZIE',
     ),
   ),
   'magnon_sejanus_II01' => 
@@ -48272,6 +47653,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Magnon',
       'string' => 'DRUZE/DRUZE-LIVIE/LIVIE/LIVIE-APICATA-VOLUZIE/APICATA-VOLUZIE/APICATA-VOLUZIE-TERENCE',
+      'string-id' => '#DRUZE;#DRUZE,#LIVIE;#LIVIE;#LIVIE,#APICATA,#VOLUZIE;#APICATA,#VOLUZIE;#APICATA,#VOLUZIE,#TERENCE',
     ),
   ),
   'magnon_mariageoroondate_I01' => 
@@ -48330,6 +47712,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Magnon',
       'string' => 'ROXANE/ROXANE/ROXANE/ROXANE-PERDICAS/ROXANE-PERDICAS-CASSANDER-SELEUCUS/ROXANE-PERDICAS-CASSANDER',
+      'string-id' => '#ROXANE;#ROXANE;#ROXANE;#ROXANE,#PERDICAS;#ROXANE,#PERDICAS,#CASSANDER,#SELEUCUS;#ROXANE,#PERDICAS,#CASSANDER',
     ),
   ),
   'magnon_mariageoroondate_I02' => 
@@ -48388,6 +47771,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Magnon',
       'string' => 'ROXANE/ROXANE/ROXANE-PERDICAS/ROXANE-PERDICAS-CASSANDER-SELEUCUS/ROXANE-PERDICAS-CASSANDER/ROXANE-CASSANDER',
+      'string-id' => '#ROXANE;#ROXANE;#ROXANE,#PERDICAS;#ROXANE,#PERDICAS,#CASSANDER,#SELEUCUS;#ROXANE,#PERDICAS,#CASSANDER;#ROXANE,#CASSANDER',
     ),
   ),
   'magnon_mariageoroondate_I03' => 
@@ -48446,6 +47830,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Magnon',
       'string' => 'ROXANE/ROXANE-PERDICAS/ROXANE-PERDICAS-CASSANDER-SELEUCUS/ROXANE-PERDICAS-CASSANDER/ROXANE-CASSANDER/CASSANDER',
+      'string-id' => '#ROXANE;#ROXANE,#PERDICAS;#ROXANE,#PERDICAS,#CASSANDER,#SELEUCUS;#ROXANE,#PERDICAS,#CASSANDER;#ROXANE,#CASSANDER;#CASSANDER',
     ),
   ),
   'magnon_mariageoroondate_II01' => 
@@ -48504,6 +47889,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Magnon',
       'string' => 'OROONDATE-PERDICAS/OROONDATE/OROONDATE-CASSANDER/ROXANE-OROONDATE-CASSANDER/ROXANE-OROONDATE/ROXANE',
+      'string-id' => '#OROONDATE,#PERDICAS;#OROONDATE;#OROONDATE,#CASSANDER;#ROXANE,#OROONDATE,#CASSANDER;#ROXANE,#OROONDATE;#ROXANE',
     ),
   ),
   'magnon_mariageoroondate_II02' => 
@@ -48562,6 +47948,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Magnon',
       'string' => 'OROONDATE/OROONDATE-CASSANDER/ROXANE-OROONDATE-CASSANDER/ROXANE-OROONDATE/ROXANE/ROXANE-PERDICAS',
+      'string-id' => '#OROONDATE;#OROONDATE,#CASSANDER;#ROXANE,#OROONDATE,#CASSANDER;#ROXANE,#OROONDATE;#ROXANE;#ROXANE,#PERDICAS',
     ),
   ),
   'magnon_mariageoroondate_II03' => 
@@ -48629,6 +48016,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Magnon',
       'string' => 'OROONDATE-CASSANDER/ROXANE-OROONDATE-CASSANDER/ROXANE-OROONDATE/ROXANE/ROXANE-PERDICAS/STATIRA-PERDICAS',
+      'string-id' => '#OROONDATE,#CASSANDER;#ROXANE,#OROONDATE,#CASSANDER;#ROXANE,#OROONDATE;#ROXANE;#ROXANE,#PERDICAS;#STATIRA,#PERDICAS',
     ),
   ),
   'magnon_mariageoroondate_IV01' => 
@@ -48660,6 +48048,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Magnon',
       'string' => 'ROXANE/ROXANE/ROXANE/ROXANE/ROXANE/ROXANE',
+      'string-id' => '#ROXANE;#ROXANE;#ROXANE;#ROXANE;#ROXANE;#ROXANE',
     ),
   ),
   'magnon_mariageoroondate_IV02' => 
@@ -48691,6 +48080,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Magnon',
       'string' => 'ROXANE/ROXANE/ROXANE/ROXANE/ROXANE/ROXANE',
+      'string-id' => '#ROXANE;#ROXANE;#ROXANE;#ROXANE;#ROXANE;#ROXANE',
     ),
   ),
   'magnon_mariageoroondate_IV03' => 
@@ -48722,6 +48112,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Magnon',
       'string' => 'ROXANE/ROXANE/ROXANE/ROXANE/ROXANE/ROXANE',
+      'string-id' => '#ROXANE;#ROXANE;#ROXANE;#ROXANE;#ROXANE;#ROXANE',
     ),
   ),
   'magnon_mariageoroondate_IV04' => 
@@ -48762,6 +48153,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Magnon',
       'string' => 'ROXANE/ROXANE/ROXANE/ROXANE/ROXANE/ROXANE-OROONDATE',
+      'string-id' => '#ROXANE;#ROXANE;#ROXANE;#ROXANE;#ROXANE;#ROXANE,#OROONDATE',
     ),
   ),
   'magnon_mariageoroondate_IV05' => 
@@ -48802,6 +48194,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Magnon',
       'string' => 'ROXANE/ROXANE/ROXANE/ROXANE/ROXANE-OROONDATE/ROXANE-OROONDATE',
+      'string-id' => '#ROXANE;#ROXANE;#ROXANE;#ROXANE;#ROXANE,#OROONDATE;#ROXANE,#OROONDATE',
     ),
   ),
   'magnon_mariageoroondate_IV06' => 
@@ -48842,6 +48235,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Magnon',
       'string' => 'ROXANE/ROXANE/ROXANE/ROXANE-OROONDATE/ROXANE-OROONDATE/ROXANE-OROONDATE',
+      'string-id' => '#ROXANE;#ROXANE;#ROXANE;#ROXANE,#OROONDATE;#ROXANE,#OROONDATE;#ROXANE,#OROONDATE',
     ),
   ),
   'magnon_mariageoroondate_IV07' => 
@@ -48882,6 +48276,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Magnon',
       'string' => 'ROXANE/ROXANE/ROXANE-OROONDATE/ROXANE-OROONDATE/ROXANE-OROONDATE/ROXANE-OROONDATE',
+      'string-id' => '#ROXANE;#ROXANE;#ROXANE,#OROONDATE;#ROXANE,#OROONDATE;#ROXANE,#OROONDATE;#ROXANE,#OROONDATE',
     ),
   ),
   'magnon_mariageoroondate_IV08' => 
@@ -48922,6 +48317,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Magnon',
       'string' => 'ROXANE/ROXANE-OROONDATE/ROXANE-OROONDATE/ROXANE-OROONDATE/ROXANE-OROONDATE/ROXANE',
+      'string-id' => '#ROXANE;#ROXANE,#OROONDATE;#ROXANE,#OROONDATE;#ROXANE,#OROONDATE;#ROXANE,#OROONDATE;#ROXANE',
     ),
   ),
   'magnon_mariageoroondate_V01' => 
@@ -48980,6 +48376,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Magnon',
       'string' => 'ROXANE/ROXANE-CASSANDER/ROXANE/ROXANE-STATIRA-SELEUCUS/ROXANE-STATIRA-OROONDATE-SELEUCUS/ROXANE-STATIRA-OROONDATE-SELEUCUS',
+      'string-id' => '#ROXANE;#ROXANE,#CASSANDER;#ROXANE;#ROXANE,#STATIRA,#SELEUCUS;#ROXANE,#STATIRA,#OROONDATE,#SELEUCUS;#ROXANE,#STATIRA,#OROONDATE,#SELEUCUS',
     ),
   ),
   'magnon_josaphat_II01' => 
@@ -49038,6 +48435,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Magnon',
       'string' => 'JOSAPHAT/JOSAPHAT-ARACHE/JOSAPHAT-BARLAAM/JOSAPHAT-BARLAAM/JOSAPHAT/ABENNER-JOSAPHAT',
+      'string-id' => '#JOSAPHAT;#JOSAPHAT,#ARACHE;#JOSAPHAT,#BARLAAM;#JOSAPHAT,#BARLAAM;#JOSAPHAT;#ABENNER,#JOSAPHAT',
     ),
   ),
   'magnon_josaphat_II02' => 
@@ -49096,6 +48494,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Magnon',
       'string' => 'JOSAPHAT-ARACHE/JOSAPHAT-BARLAAM/JOSAPHAT-BARLAAM/JOSAPHAT/ABENNER-JOSAPHAT/ABENNER',
+      'string-id' => '#JOSAPHAT,#ARACHE;#JOSAPHAT,#BARLAAM;#JOSAPHAT,#BARLAAM;#JOSAPHAT;#ABENNER,#JOSAPHAT;#ABENNER',
     ),
   ),
   'magnon_josaphat_II03' => 
@@ -49154,6 +48553,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Magnon',
       'string' => 'JOSAPHAT-BARLAAM/JOSAPHAT-BARLAAM/JOSAPHAT/ABENNER-JOSAPHAT/ABENNER/ABENNER-ARACHE-AMALAZIE',
+      'string-id' => '#JOSAPHAT,#BARLAAM;#JOSAPHAT,#BARLAAM;#JOSAPHAT;#ABENNER,#JOSAPHAT;#ABENNER;#ABENNER,#ARACHE,#AMALAZIE',
     ),
   ),
   'magnon_artaxerxe_III01' => 
@@ -49221,6 +48621,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Magnon',
       'string' => 'ARTAXERXE-TIRIBAZE/TIRIBAZE/DARIE-ASPASIE-TIRIBAZE/DARIE-ASPASIE/DARIE-OCHUS-ASPASIE/DARIE-AMESTRIS-ASPASIE',
+      'string-id' => '#ARTAXERXE,#TIRIBAZE;#TIRIBAZE;#DARIE,#ASPASIE,#TIRIBAZE;#DARIE,#ASPASIE;#DARIE,#OCHUS,#ASPASIE;#DARIE,#AMESTRIS,#ASPASIE',
     ),
   ),
   'magnon_artaxerxe_III02' => 
@@ -49288,6 +48689,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Magnon',
       'string' => 'TIRIBAZE/DARIE-ASPASIE-TIRIBAZE/DARIE-ASPASIE/DARIE-OCHUS-ASPASIE/DARIE-AMESTRIS-ASPASIE/DARIE',
+      'string-id' => '#TIRIBAZE;#DARIE,#ASPASIE,#TIRIBAZE;#DARIE,#ASPASIE;#DARIE,#OCHUS,#ASPASIE;#DARIE,#AMESTRIS,#ASPASIE;#DARIE',
     ),
   ),
   'magnon_artaxerxe_IV01' => 
@@ -49355,6 +48757,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Magnon',
       'string' => 'OCHUS-TIRIBAZE/ARTAXERXE-OCHUS-TIRIBAZE/ARTAXERXE-OCHUS-AMESTRIS-ASPASIE-TIRIBAZE/ARTAXERXE-DARIE-OCHUS-AMESTRIS-ASPASIE-TIRIBAZE/DARIE-TIRIBAZE/TIRIBAZE',
+      'string-id' => '#OCHUS,#TIRIBAZE;#ARTAXERXE,#OCHUS,#TIRIBAZE;#ARTAXERXE,#OCHUS,#AMESTRIS,#ASPASIE,#TIRIBAZE;#ARTAXERXE,#DARIE,#OCHUS,#AMESTRIS,#ASPASIE,#TIRIBAZE;#DARIE,#TIRIBAZE;#TIRIBAZE',
     ),
   ),
   'levayer_grandselim_II01' => 
@@ -49388,16 +48791,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#HALY' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 1,
-      ),
-      '#ESCLAVEDESELIM' => 
+      '#ESCLAVESELIM' => 
       array (
         0 => 0,
         1 => 0,
@@ -49405,6 +48799,15 @@
         3 => 0,
         4 => 0,
         5 => 0,
+      ),
+      '#ESCLAVEHALY' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 1,
       ),
     ),
     'id' => 
@@ -49421,7 +48824,8 @@
       'titleId' => 'LeGrandSelim',
       'genreId' => 'Tragedie',
       'authorId' => 'LeVayerdeBoutigny',
-      'string' => 'SÉLIM-CORCHUT/SÉLIM/SÉLIM-ESCLAVE DE SELIM/LA SULTANE-SÉLIM/SÉLIM/L\'AGA DES JANISSAIRES-HALY',
+      'string' => 'SÉLIM-CORCHUT/SÉLIM/SÉLIM-ESCLAVE DE SELIM/LA SULTANE-SÉLIM/SÉLIM/L\'AGA DES JANISSAIRES-HALY-ESCLAVE DE HALY BASSA',
+      'string-id' => '#SELIM,#CORCHUT;#SELIM;#SELIM,#ESCLAVESELIM;#LASULTANE,#SELIM;#SELIM;#AGA,#HALY,#ESCLAVEHALY',
     ),
   ),
   'laforge_joueusedupee_I01' => 
@@ -49489,6 +48893,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'LaForge',
       'string' => 'CLIDAMANT/CLIDAMANT/CLIDAMANT-LE MARQUIS/CLIDAMANT-LE MARQUIS-URANIE-CLÉONICE/CLIDAMANT-LE MARQUIS-URANIE-CLÉONICE-POLIXÈNE/LE MARQUIS-URANIE-POLIXÈNE',
+      'string-id' => '#CLIDAMANT;#CLIDAMANT;#CLIDAMANT,#LEMARQUIS;#CLIDAMANT,#LEMARQUIS,#URANIE,#CLEONICE;#CLIDAMANT,#LEMARQUIS,#URANIE,#CLEONICE,#POLIXENE;#LEMARQUIS,#URANIE,#POLIXENE',
     ),
   ),
   'laforge_joueusedupee_I02' => 
@@ -49565,6 +48970,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'LaForge',
       'string' => 'CLIDAMANT/CLIDAMANT-LE MARQUIS/CLIDAMANT-LE MARQUIS-URANIE-CLÉONICE/CLIDAMANT-LE MARQUIS-URANIE-CLÉONICE-POLIXÈNE/LE MARQUIS-URANIE-POLIXÈNE/CLIDAMANT-URANIE-CLÉONICE-VALÈRE',
+      'string-id' => '#CLIDAMANT;#CLIDAMANT,#LEMARQUIS;#CLIDAMANT,#LEMARQUIS,#URANIE,#CLEONICE;#CLIDAMANT,#LEMARQUIS,#URANIE,#CLEONICE,#POLIXENE;#LEMARQUIS,#URANIE,#POLIXENE;#CLIDAMANT,#URANIE,#CLEONICE,#VALERE',
     ),
   ),
   'lacalprenede_phalante_IV01' => 
@@ -49650,6 +49056,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'LaCalprenede',
       'string' => 'HÉLÈNE-TIMANDRE-CLÉOMÈDE-ARATE/HÉLÈNE-TIMANDRE/PHILOXÈNE/PHALANTE-PHILOXÈNE-ARBANTE/TIMANDRE-CLÉOMÈDE-ARBANTE/PHALANTE-PHILOXÈNE',
+      'string-id' => '#HELENE,#TIMANDRE,#CLEOMEDE,#ARATE;#HELENE,#TIMANDRE;#PHILOXENE;#PHALANTE,#PHILOXENE,#ARBANTE;#TIMANDRE,#CLEOMEDE,#ARBANTE;#PHALANTE,#PHILOXENE',
     ),
   ),
   'lacalprenede_phalante_IV02' => 
@@ -49726,6 +49133,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'LaCalprenede',
       'string' => 'HÉLÈNE-TIMANDRE/PHILOXÈNE/PHALANTE-PHILOXÈNE-ARBANTE/TIMANDRE-CLÉOMÈDE-ARBANTE/PHALANTE-PHILOXÈNE/PHALANTE-PHILOXÈNE-TIMANDRE-CLÉOMÈDE-ARBANTE',
+      'string-id' => '#HELENE,#TIMANDRE;#PHILOXENE;#PHALANTE,#PHILOXENE,#ARBANTE;#TIMANDRE,#CLEOMEDE,#ARBANTE;#PHALANTE,#PHILOXENE;#PHALANTE,#PHILOXENE,#TIMANDRE,#CLEOMEDE,#ARBANTE',
     ),
   ),
   'lacalprenede_jeanne_I01' => 
@@ -49768,6 +49176,15 @@
         4 => 0,
         5 => 0,
       ),
+      '#SOLDATS' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 1,
+        4 => 0,
+        5 => 0,
+      ),
     ),
     'id' => 
     array (
@@ -49783,7 +49200,8 @@
       'titleId' => 'Jeanne',
       'genreId' => 'Tragedie',
       'authorId' => 'LaCalprenede',
-      'string' => 'LE COMTE D\'ARONDEL-UN ANGLAIS/JEANNE-GILFORT/JEANNE-GILFORT-LE DUC DE NORTHBELANT/JEANNE-GILFORT-LE DUC DE NORTHBELANT/JEANNE/JEANNE-GILFORT-LE DUC DE NORTHBELANT',
+      'string' => 'LE COMTE DE CLOCETRE-LE COMTE D\'ARONDEL-UN ANGLAIS/JEANNE-GILFORT/JEANNE-GILFORT-LE DUC DE NORTHBELANT/JEANNE-GILFORT-LE DUC DE NORTHBELANT-LES SOLDATS/JEANNE/JEANNE-GILFORT-LE DUC DE NORTHBELANT',
+      'string-id' => '#LECOMTEDECLOCESTRE,#LECOMTEDARONDEL,#UNANGLAIS;#JEANNE,#GILFORT;#JEANNE,#GILFORT,#LEDUCDENORTHBELANT;#JEANNE,#GILFORT,#LEDUCDENORTHBELANT,#SOLDATS;#JEANNE;#JEANNE,#GILFORT,#LEDUCDENORTHBELANT',
     ),
   ),
   'lacalprenede_jeanne_I02' => 
@@ -49817,6 +49235,24 @@
         4 => 1,
         5 => 1,
       ),
+      '#LECOMTEDECLOCESTRE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 1,
+      ),
+      '#SOLDATS' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
     ),
     'id' => 
     array (
@@ -49832,7 +49268,8 @@
       'titleId' => 'Jeanne',
       'genreId' => 'Tragedie',
       'authorId' => 'LaCalprenede',
-      'string' => 'JEANNE-GILFORT/JEANNE-GILFORT-LE DUC DE NORTHBELANT/JEANNE-GILFORT-LE DUC DE NORTHBELANT/JEANNE/JEANNE-GILFORT-LE DUC DE NORTHBELANT/JEANNE-GILFORT-LE DUC DE NORTHBELANT',
+      'string' => 'JEANNE-GILFORT/JEANNE-GILFORT-LE DUC DE NORTHBELANT/JEANNE-GILFORT-LE DUC DE NORTHBELANT-LES SOLDATS/JEANNE/JEANNE-GILFORT-LE DUC DE NORTHBELANT/JEANNE-GILFORT-LE DUC DE NORTHBELANT-LE COMTE DE CLOCETRE',
+      'string-id' => '#JEANNE,#GILFORT;#JEANNE,#GILFORT,#LEDUCDENORTHBELANT;#JEANNE,#GILFORT,#LEDUCDENORTHBELANT,#SOLDATS;#JEANNE;#JEANNE,#GILFORT,#LEDUCDENORTHBELANT;#JEANNE,#GILFORT,#LEDUCDENORTHBELANT,#LECOMTEDECLOCESTRE',
     ),
   ),
   'lacalprenede_hermenegilde_V01' => 
@@ -49900,6 +49337,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'LaCalprenede',
       'string' => 'HERMÉNÉGILDE-INDEGONDE-SIGERIC/HERMÉNÉGILDE-INDEGONDE-ATALARIC-SIGERIC/INDEGONDE-SIGERIC/INDEGONDE/INDEGONDE-GODOMAR/INDEGONDE-GODOMAR-SIGERIC',
+      'string-id' => '#HERMENEGILDE,#INDEGONDE,#SIGERIC;#HERMENEGILDE,#INDEGONDE,#ATALARIC,#SIGERIC;#INDEGONDE,#SIGERIC;#INDEGONDE;#INDEGONDE,#GODOMAR;#INDEGONDE,#GODOMAR,#SIGERIC',
     ),
   ),
   'lacalprenede_enfantsdherode_II01' => 
@@ -49985,6 +49423,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'LaCalprenede',
       'string' => 'ARISTOBULE-ANTIPATRE/ALEXANDRE-ARISTOBULE-GLAPHIRA/ANTIPATRE-DIOPHANTE/HÉRODE-SALOME/HÉRODE-ANTIPATRE-SALOME-DIOPHANTE/HÉRODE-ALEXANDRE-ARISTOBULE',
+      'string-id' => '#ARISTOBULE,#ANTIPATRE;#ALEXANDRE,#ARISTOBULE,#GLAPHIRA;#ANTIPATRE,#DIOPHANTE;#HERODE,#SALOME;#HERODE,#ANTIPATRE,#SALOME,#DIOPHANTE;#HERODE,#ALEXANDRE,#ARISTOBULE',
     ),
   ),
   'lacalprenede_comtedessex_I01' => 
@@ -50000,7 +49439,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#LECOMTEDESSEX' => 
+      '#ESSEX' => 
       array (
         0 => 1,
         1 => 0,
@@ -50009,13 +49448,22 @@
         4 => 1,
         5 => 1,
       ),
-      '#LECOMTEDESOUBTANTONNE' => 
+      '#SOUBTANTONNE' => 
       array (
         0 => 0,
         1 => 0,
         2 => 0,
         3 => 0,
         4 => 1,
+        5 => 1,
+      ),
+      '#CAPITAINE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 0,
+        4 => 0,
         5 => 1,
       ),
     ),
@@ -50033,7 +49481,8 @@
       'titleId' => 'LeComtedEssex',
       'genreId' => 'Tragedie',
       'authorId' => 'LaCalprenede',
-      'string' => 'ÉLISABETH-LE COMTE D\'ESSEX/ÉLISABETH/ÉLISABETH/ÉLISABETH/LE COMTE D\'ESSEX-LE COMTE DE SOUBTANTONNE/LE COMTE D\'ESSEX-LE COMTE DE SOUBTANTONNE',
+      'string' => 'ÉLISABETH-LE COMTE D\'ESSEX/ÉLISABETH/ÉLISABETH-Un Capitaine des Gardes/ÉLISABETH/LE COMTE D\'ESSEX-LE COMTE DE SOUBTANTONNE/LE COMTE D\'ESSEX-LE COMTE DE SOUBTANTONNE-Un Capitaine des Gardes',
+      'string-id' => '#ELISABETH,#ESSEX;#ELISABETH;#ELISABETH,#CAPITAINE;#ELISABETH;#ESSEX,#SOUBTANTONNE;#ESSEX,#SOUBTANTONNE,#CAPITAINE',
     ),
   ),
   'lacalprenede_comtedessex_IV01' => 
@@ -50049,7 +49498,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#LECOMTEDESSEX' => 
+      '#ESSEX' => 
       array (
         0 => 0,
         1 => 0,
@@ -50067,13 +49516,22 @@
         4 => 0,
         5 => 0,
       ),
-      '#MadameCECILE' => 
+      '#MADAMECECILE' => 
       array (
         0 => 0,
         1 => 0,
         2 => 0,
         3 => 0,
         4 => 1,
+        5 => 0,
+      ),
+      '#HUISSIER' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 0,
+        3 => 0,
+        4 => 0,
         5 => 0,
       ),
     ),
@@ -50091,7 +49549,8 @@
       'titleId' => 'LeComtedEssex',
       'genreId' => 'Tragedie',
       'authorId' => 'LaCalprenede',
-      'string' => 'ÉLISABETH/ÉLISABETH/ÉLISABETH-LE COMTE DE SOUBTANTONNE-RALEIG/LE COMTE DE SOUBTANTONNE-RALEIG/LE COMTE D\'ESSEX-CÉCILE-Madame CÉCILE/LE COMTE D\'ESSEX',
+      'string' => 'ÉLISABETH/ÉLISABETH-Un HUISSIER du Cabinet/ÉLISABETH-LE COMTE DE SOUBTANTONNE-RALEIG/LE COMTE DE SOUBTANTONNE-RALEIG/LE COMTE D\'ESSEX-CÉCILE-Madame CÉCILE/LE COMTE D\'ESSEX',
+      'string-id' => '#ELISABETH;#ELISABETH,#HUISSIER;#ELISABETH,#SOUBTANTONNE,#RALEIG;#SOUBTANTONNE,#RALEIG;#ESSEX,#CECILE,#MADAMECECILE;#ESSEX',
     ),
   ),
   'lacalprenede_comtedessex_IV02' => 
@@ -50107,13 +49566,22 @@
         4 => 0,
         5 => 0,
       ),
-      '#LECOMTEDESSEX' => 
+      '#ESSEX' => 
       array (
         0 => 0,
         1 => 0,
         2 => 0,
         3 => 1,
         4 => 1,
+        5 => 0,
+      ),
+      '#CECILE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 1,
+        4 => 0,
         5 => 0,
       ),
       '#RALEIG' => 
@@ -50125,12 +49593,21 @@
         4 => 0,
         5 => 0,
       ),
-      '#MadameCECILE' => 
+      '#MADAMECECILE' => 
       array (
         0 => 0,
         1 => 0,
         2 => 0,
         3 => 1,
+        4 => 0,
+        5 => 1,
+      ),
+      '#HUISSIER' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 0,
+        3 => 0,
         4 => 0,
         5 => 0,
       ),
@@ -50149,7 +49626,8 @@
       'titleId' => 'LeComtedEssex',
       'genreId' => 'Tragedie',
       'authorId' => 'LaCalprenede',
-      'string' => 'ÉLISABETH/ÉLISABETH-LE COMTE DE SOUBTANTONNE-RALEIG/LE COMTE DE SOUBTANTONNE-RALEIG/LE COMTE D\'ESSEX-CÉCILE-Madame CÉCILE/LE COMTE D\'ESSEX/',
+      'string' => 'ÉLISABETH-Un HUISSIER du Cabinet/ÉLISABETH-LE COMTE DE SOUBTANTONNE-RALEIG/LE COMTE DE SOUBTANTONNE-RALEIG/LE COMTE D\'ESSEX-CÉCILE-Madame CÉCILE/LE COMTE D\'ESSEX/Madame CÉCILE',
+      'string-id' => '#ELISABETH,#HUISSIER;#ELISABETH,#SOUBTANTONNE,#RALEIG;#SOUBTANTONNE,#RALEIG;#ESSEX,#CECILE,#MADAMECECILE;#ESSEX;#MADAMECECILE',
     ),
   ),
   'lacalprenede_comtedessex_IV03' => 
@@ -50165,7 +49643,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#LECOMTEDESSEX' => 
+      '#ESSEX' => 
       array (
         0 => 0,
         1 => 0,
@@ -50173,6 +49651,15 @@
         3 => 1,
         4 => 0,
         5 => 0,
+      ),
+      '#CECILE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 0,
+        4 => 0,
+        5 => 1,
       ),
       '#RALEIG' => 
       array (
@@ -50183,13 +49670,13 @@
         4 => 0,
         5 => 0,
       ),
-      '#MadameCECILE' => 
+      '#MADAMECECILE' => 
       array (
         0 => 0,
         1 => 0,
         2 => 1,
         3 => 0,
-        4 => 0,
+        4 => 1,
         5 => 1,
       ),
     ),
@@ -50207,7 +49694,8 @@
       'titleId' => 'LeComtedEssex',
       'genreId' => 'Tragedie',
       'authorId' => 'LaCalprenede',
-      'string' => 'ÉLISABETH-LE COMTE DE SOUBTANTONNE-RALEIG/LE COMTE DE SOUBTANTONNE-RALEIG/LE COMTE D\'ESSEX-CÉCILE-Madame CÉCILE/LE COMTE D\'ESSEX//CÉCILE-Madame CÉCILE',
+      'string' => 'ÉLISABETH-LE COMTE DE SOUBTANTONNE-RALEIG/LE COMTE DE SOUBTANTONNE-RALEIG/LE COMTE D\'ESSEX-CÉCILE-Madame CÉCILE/LE COMTE D\'ESSEX/Madame CÉCILE/CÉCILE-Madame CÉCILE',
+      'string-id' => '#ELISABETH,#SOUBTANTONNE,#RALEIG;#SOUBTANTONNE,#RALEIG;#ESSEX,#CECILE,#MADAMECECILE;#ESSEX;#MADAMECECILE;#CECILE,#MADAMECECILE',
     ),
   ),
   'lacalprenede_comtedessex_V01' => 
@@ -50223,16 +49711,7 @@
         4 => 0,
         5 => 1,
       ),
-      '#RALEIG' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#MadameCECILE' => 
+      '#MADAMECECILE' => 
       array (
         0 => 0,
         1 => 0,
@@ -50240,6 +49719,15 @@
         3 => 0,
         4 => 1,
         5 => 1,
+      ),
+      '#CAPITAINE' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
       ),
     ),
     'id' => 
@@ -50256,7 +49744,8 @@
       'titleId' => 'LeComtedEssex',
       'genreId' => 'Tragedie',
       'authorId' => 'LaCalprenede',
-      'string' => 'LE COMTE D\'ESSEX-RALEIG/ÉLISABETH/ÉLISABETH/ÉLISABETH/CÉCILE-Madame CÉCILE/ÉLISABETH-CÉCILE-Madame CÉCILE',
+      'string' => 'LE COMTE D\'ESSEX-RALEIG-Un Capitaine des Gardes/ÉLISABETH/ÉLISABETH/ÉLISABETH/CÉCILE-Madame CÉCILE/ÉLISABETH-CÉCILE-Madame CÉCILE',
+      'string-id' => '#ESSEX,#RALEIG,#CAPITAINE;#ELISABETH;#ELISABETH;#ELISABETH;#CECILE,#MADAMECECILE;#ELISABETH,#CECILE,#MADAMECECILE',
     ),
   ),
   'lacalprenede_comtedessex_V02' => 
@@ -50272,7 +49761,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#MadameCECILE' => 
+      '#MADAMECECILE' => 
       array (
         0 => 0,
         1 => 0,
@@ -50297,6 +49786,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'LaCalprenede',
       'string' => 'ÉLISABETH/ÉLISABETH/ÉLISABETH/CÉCILE-Madame CÉCILE/ÉLISABETH-CÉCILE-Madame CÉCILE/ÉLISABETH',
+      'string-id' => '#ELISABETH;#ELISABETH;#ELISABETH;#CECILE,#MADAMECECILE;#ELISABETH,#CECILE,#MADAMECECILE;#ELISABETH',
     ),
   ),
   'lacalprenede_clarionte_II01' => 
@@ -50355,6 +49845,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'LaCalprenede',
       'string' => 'CLARIONTE-MÉLIE/CLARIONTE/CLARIONTE-FIDAMANT/CLARIONTE/CLARIONTE-CALLIANTE/CALLIANTE',
+      'string-id' => '#CLARIONTE,#MELIE;#CLARIONTE;#CLARIONTE,#FIDAMANT;#CLARIONTE;#CLARIONTE,#CALLIANTE;#CALLIANTE',
     ),
   ),
   'lacalprenede_clarionte_V01' => 
@@ -50397,7 +49888,7 @@
         4 => 1,
         5 => 0,
       ),
-      '#UNSOLDAT' => 
+      '#SOLDAT' => 
       array (
         0 => 0,
         1 => 0,
@@ -50405,6 +49896,15 @@
         3 => 0,
         4 => 0,
         5 => 1,
+      ),
+      '#GEOLIER' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
       ),
       '#UNPAGE' => 
       array (
@@ -50430,7 +49930,8 @@
       'titleId' => 'LeClarionte',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'LaCalprenede',
-      'string' => 'FIDAMANT-LE ROI/MÉLIE-UN PAGE/MÉLIE/MÉLIE-UN PAGE/CLARIONTE-LE ROI-ROSIMÈNE-MÉLIE-LE SACRIFICATEUR/LE ROI-UN SOLDAT',
+      'string' => 'FIDAMANT-LE ROI/MÉLIE-UN GEÔLIER-UN PAGE/MÉLIE/MÉLIE-UN PAGE/CLARIONTE-LE ROI-ROSIMÈNE-MÉLIE-LE SACRIFICATEUR/LE ROI-UN SOLDAT',
+      'string-id' => '#FIDAMANT,#LEROI;#MELIE,#GEOLIER,#UNPAGE;#MELIE;#MELIE,#UNPAGE;#CLARIONTE,#LEROI,#ROSIMENE,#MELIE,#LESACRIFICATEUR;#LEROI,#SOLDAT',
     ),
   ),
   'lacalprenede_clarionte_V02' => 
@@ -50464,13 +49965,22 @@
         4 => 0,
         5 => 1,
       ),
-      '#UNSOLDAT' => 
+      '#SOLDAT' => 
       array (
         0 => 0,
         1 => 0,
         2 => 0,
         3 => 0,
         4 => 1,
+        5 => 0,
+      ),
+      '#GEOLIER' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
         5 => 0,
       ),
       '#UNPAGE' => 
@@ -50506,7 +50016,8 @@
       'titleId' => 'LeClarionte',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'LaCalprenede',
-      'string' => 'MÉLIE-UN PAGE/MÉLIE/MÉLIE-UN PAGE/CLARIONTE-LE ROI-ROSIMÈNE-MÉLIE-LE SACRIFICATEUR/LE ROI-UN SOLDAT/CLARIONTE-LE ROI-ROSIMÈNE-MÉLIE-LE SACRIFICATEUR-GÉRONTE',
+      'string' => 'MÉLIE-UN GEÔLIER-UN PAGE/MÉLIE/MÉLIE-UN PAGE/CLARIONTE-LE ROI-ROSIMÈNE-MÉLIE-LE SACRIFICATEUR/LE ROI-UN SOLDAT/CLARIONTE-LE ROI-ROSIMÈNE-MÉLIE-FLADIMORE-LE SACRIFICATEUR-GÉRONTE',
+      'string-id' => '#MELIE,#GEOLIER,#UNPAGE;#MELIE;#MELIE,#UNPAGE;#CLARIONTE,#LEROI,#ROSIMENE,#MELIE,#LESACRIFICATEUR;#LEROI,#SOLDAT;#CLARIONTE,#LEROI,#ROSIMENE,#MELIE,#FLAMIDORE,#LESACRIFICATEUR,#GERONTE',
     ),
   ),
   'lacalprenede_clarionte_V03' => 
@@ -50549,6 +50060,15 @@
         4 => 1,
         5 => 0,
       ),
+      '#FLAMIDORE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 1,
+        5 => 1,
+      ),
       '#LESACRIFICATEUR' => 
       array (
         0 => 0,
@@ -50558,7 +50078,7 @@
         4 => 1,
         5 => 0,
       ),
-      '#UNSOLDAT' => 
+      '#SOLDAT' => 
       array (
         0 => 0,
         1 => 0,
@@ -50600,7 +50120,8 @@
       'titleId' => 'LeClarionte',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'LaCalprenede',
-      'string' => 'MÉLIE/MÉLIE-UN PAGE/CLARIONTE-LE ROI-ROSIMÈNE-MÉLIE-LE SACRIFICATEUR/LE ROI-UN SOLDAT/CLARIONTE-LE ROI-ROSIMÈNE-MÉLIE-LE SACRIFICATEUR-GÉRONTE/CLARIONTE-FIDAMANT-LE ROI-ROSIMÈNE',
+      'string' => 'MÉLIE/MÉLIE-UN PAGE/CLARIONTE-LE ROI-ROSIMÈNE-MÉLIE-LE SACRIFICATEUR/LE ROI-UN SOLDAT/CLARIONTE-LE ROI-ROSIMÈNE-MÉLIE-FLADIMORE-LE SACRIFICATEUR-GÉRONTE/CLARIONTE-FIDAMANT-LE ROI-ROSIMÈNE-FLADIMORE',
+      'string-id' => '#MELIE;#MELIE,#UNPAGE;#CLARIONTE,#LEROI,#ROSIMENE,#MELIE,#LESACRIFICATEUR;#LEROI,#SOLDAT;#CLARIONTE,#LEROI,#ROSIMENE,#MELIE,#FLAMIDORE,#LESACRIFICATEUR,#GERONTE;#CLARIONTE,#FIDAMANT,#LEROI,#ROSIMENE,#FLAMIDORE',
     ),
   ),
   'lacalprenede_bradamante_I01' => 
@@ -50677,6 +50198,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'LaCalprenede',
       'string' => 'LÉON-ROGER/ROGER/BRADAMANTE/BRADAMANTE-HIPALQUE/CHARLES-AYMON-RENAUD/CHARLES-LÉON',
+      'string-id' => '#LEON,#ROGER;#ROGER;#BRADAMANTE;#BRADAMANTE,#HIPALQUE;#CHARLES,#AYMON,#RENAUD;#CHARLES,#LEON',
     ),
   ),
   'lacalprenede_bradamante_I02' => 
@@ -50762,6 +50284,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'LaCalprenede',
       'string' => 'ROGER/BRADAMANTE/BRADAMANTE-HIPALQUE/CHARLES-AYMON-RENAUD/CHARLES-LÉON/CHARLES-LÉON-AYMON-RENAUD-BRADAMANTE-MARPHISE',
+      'string-id' => '#ROGER;#BRADAMANTE;#BRADAMANTE,#HIPALQUE;#CHARLES,#AYMON,#RENAUD;#CHARLES,#LEON;#CHARLES,#LEON,#AYMON,#RENAUD,#BRADAMANTE,#MARPHISE',
     ),
   ),
   'lacalprenede_bradamante_II01' => 
@@ -50847,6 +50370,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'LaCalprenede',
       'string' => 'LÉON-ROGER/ROGER/AYMON-RENAUD-BRADAMANTE/BRADAMANTE-HIPALQUE/BRADAMANTE-MARPHISE/CHARLES-AYMON-RENAUD-NAYMES',
+      'string-id' => '#LEON,#ROGER;#ROGER;#AYMON,#RENAUD,#BRADAMANTE;#BRADAMANTE,#HIPALQUE;#BRADAMANTE,#MARPHISE;#CHARLES,#AYMON,#RENAUD,#NAYMES',
     ),
   ),
   'lacalprenede_bradamante_II02' => 
@@ -50932,6 +50456,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'LaCalprenede',
       'string' => 'ROGER/AYMON-RENAUD-BRADAMANTE/BRADAMANTE-HIPALQUE/BRADAMANTE-MARPHISE/CHARLES-AYMON-RENAUD-NAYMES/CHARLES-ROGER-AYMON-RENAUD-BRADAMANTE-MARPHISE-NAYMES-ZÉNON',
+      'string-id' => '#ROGER;#AYMON,#RENAUD,#BRADAMANTE;#BRADAMANTE,#HIPALQUE;#BRADAMANTE,#MARPHISE;#CHARLES,#AYMON,#RENAUD,#NAYMES;#CHARLES,#ROGER,#AYMON,#RENAUD,#BRADAMANTE,#MARPHISE,#NAYMES,#ZENON',
     ),
   ),
   'guerindebouscal_filsdesavoue_II01' => 
@@ -51008,6 +50533,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'GuerindeBouscal',
       'string' => 'THÉODORIC-SINDÉRIC-ÉMILE/SINDÉRIC-ÉMILE/MAXIME-JULIE/MAXIME-JULIE-HORACE/JULIE/SINDÉRIC-JULIE',
+      'string-id' => '#THEODORIC,#SINDERIC,#EMILE;#SINDERIC,#EMILE;#MAXIME,#JULIE;#MAXIME,#JULIE,#HORACE;#JULIE;#SINDERIC,#JULIE',
     ),
   ),
   'guerindebouscal_filsdesavoue_III01' => 
@@ -51066,6 +50592,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'GuerindeBouscal',
       'string' => 'MAXIME-HORACE/JULIE/MAXIME-JULIE/JULIE/SINDÉRIC-JULIE/SINDÉRIC',
+      'string-id' => '#MAXIME,#HORACE;#JULIE;#MAXIME,#JULIE;#JULIE;#SINDERIC,#JULIE;#SINDERIC',
     ),
   ),
   'guerindebouscal_filsdesavoue_III02' => 
@@ -51115,6 +50642,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'GuerindeBouscal',
       'string' => 'JULIE/MAXIME-JULIE/JULIE/SINDÉRIC-JULIE/SINDÉRIC/SINDÉRIC-MAXIME',
+      'string-id' => '#JULIE;#MAXIME,#JULIE;#JULIE;#SINDERIC,#JULIE;#SINDERIC;#SINDERIC,#MAXIME',
     ),
   ),
   'guerindebouscal_filsdesavoue_IV01' => 
@@ -51173,6 +50701,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'GuerindeBouscal',
       'string' => 'JULIE/JULIE-HORACE/SINDÉRIC-ÉMILE/JULIE/JULIE/SINDÉRIC-JULIE',
+      'string-id' => '#JULIE;#JULIE,#HORACE;#SINDERIC,#EMILE;#JULIE;#JULIE;#SINDERIC,#JULIE',
     ),
   ),
   'guerindebouscal_filsdesavoue_V01' => 
@@ -51240,6 +50769,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'GuerindeBouscal',
       'string' => 'MAXIME-HORACE/MAXIME-HORACE/MAXIME-HORACE/THÉODORIC-SINDÉRIC-JULIE-BOÈCE/THÉODORIC-BOÈCE/THÉODORIC-JULIE',
+      'string-id' => '#MAXIME,#HORACE;#MAXIME,#HORACE;#MAXIME,#HORACE;#THEODORIC,#SINDERIC,#JULIE,#BOECE;#THEODORIC,#BOECE;#THEODORIC,#JULIE',
     ),
   ),
   'guerindebouscal_filsdesavoue_V02' => 
@@ -51316,6 +50846,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'GuerindeBouscal',
       'string' => 'MAXIME-HORACE/MAXIME-HORACE/THÉODORIC-SINDÉRIC-JULIE-BOÈCE/THÉODORIC-BOÈCE/THÉODORIC-JULIE/THÉODORIC-SINDÉRIC-MAXIME-JULIE',
+      'string-id' => '#MAXIME,#HORACE;#MAXIME,#HORACE;#THEODORIC,#SINDERIC,#JULIE,#BOECE;#THEODORIC,#BOECE;#THEODORIC,#JULIE;#THEODORIC,#SINDERIC,#MAXIME,#JULIE',
     ),
   ),
   'guerindebouscal_domquixote2_II01' => 
@@ -51378,11 +50909,12 @@
       'title' => 'Don Quichotte de la Manche, seconde partie',
       'date' => 1639,
       'lustrum' => '1636-1640',
-      'genre' => 'Tragi-comédie',
+      'genre' => 'Comédie',
       'titleId' => 'DonQuichottedelaManchesecondepartie',
-      'genreId' => 'Tragi-comedie',
+      'genreId' => 'Comedie',
       'authorId' => 'GuerindeBouscal',
       'string' => 'DON LOPE-LE BARBIER/DON QUICHOTTE-SANCHE-DON LOPE-LE BARBIER/SANCHE-LE BARBIER/DON QUICHOTTE-DON LOPE/DON QUICHOTTE-DON LOPE-LE DUC-LA DUCHESSE/DON QUICHOTTE-SANCHE-DON LOPE-LE BARBIER-LE DUC-LA DUCHESSE',
+      'string-id' => '#DONLOPE,#LEBARBIER;#DONQUICHOTTE,#SANCHE,#DONLOPE,#LEBARBIER;#SANCHE,#LEBARBIER;#DONQUICHOTTE,#DONLOPE;#DONQUICHOTTE,#DONLOPE,#LEDUC,#LADUCHESSE;#DONQUICHOTTE,#SANCHE,#DONLOPE,#LEBARBIER,#LEDUC,#LADUCHESSE',
     ),
   ),
   'guerindebouscal_domquixote2_III01' => 
@@ -51448,7 +50980,7 @@
         0 => 0,
         1 => 0,
         2 => 1,
-        3 => 0,
+        3 => 1,
         4 => 0,
         5 => 0,
       ),
@@ -51463,11 +50995,12 @@
       'title' => 'Don Quichotte de la Manche, seconde partie',
       'date' => 1639,
       'lustrum' => '1636-1640',
-      'genre' => 'Tragi-comédie',
+      'genre' => 'Comédie',
       'titleId' => 'DonQuichottedelaManchesecondepartie',
-      'genreId' => 'Tragi-comedie',
+      'genreId' => 'Comedie',
       'authorId' => 'GuerindeBouscal',
-      'string' => 'DON QUICHOTTE-SANCHE-LE DUC/DON QUICHOTTE-SANCHE-LE DUC-LA DUCHESSE-L\'AUMONIER/SANCHE-LA DUCHESSE-RODRIGUE/DON QUICHOTTE-SANCHE-LE DUC-LA DUCHESSE-L\'AUMONIER/DON QUICHOTTE-SANCHE-DON LOPE-LE BARBIER-LE DUC-LA DUCHESSE/DON LOPE-LE BARBIER-LE DUC',
+      'string' => 'DON QUICHOTTE-SANCHE-LE DUC/DON QUICHOTTE-SANCHE-LE DUC-LA DUCHESSE-L\'AUMONIER/SANCHE-LA DUCHESSE-RODRIGUE/DON QUICHOTTE-SANCHE-LE DUC-LA DUCHESSE-L\'AUMONIER-RODRIGUE/DON QUICHOTTE-SANCHE-DON LOPE-LE BARBIER-LE DUC-LA DUCHESSE/DON LOPE-LE BARBIER-LE DUC',
+      'string-id' => '#DONQUICHOTTE,#SANCHE,#LEDUC;#DONQUICHOTTE,#SANCHE,#LEDUC,#LADUCHESSE,#LAUMONIER;#SANCHE,#LADUCHESSE,#RODRIGUE;#DONQUICHOTTE,#SANCHE,#LEDUC,#LADUCHESSE,#LAUMONIER,#RODRIGUE;#DONQUICHOTTE,#SANCHE,#DONLOPE,#LEBARBIER,#LEDUC,#LADUCHESSE;#DONLOPE,#LEBARBIER,#LEDUC',
     ),
   ),
   'guerindebouscal_domquixote2_V01' => 
@@ -51492,7 +51025,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#UNDEMON' => 
+      '#LEDIABLE' => 
       array (
         0 => 0,
         1 => 1,
@@ -51548,11 +51081,12 @@
       'title' => 'Don Quichotte de la Manche, seconde partie',
       'date' => 1639,
       'lustrum' => '1636-1640',
-      'genre' => 'Tragi-comédie',
+      'genre' => 'Comédie',
       'titleId' => 'DonQuichottedelaManchesecondepartie',
-      'genreId' => 'Tragi-comedie',
+      'genreId' => 'Comedie',
       'authorId' => 'GuerindeBouscal',
       'string' => 'DON QUICHOTTE-SANCHE-DON LOPE-LE BARBIER-LE DUC-LA DUCHESSE/DON QUICHOTTE-SANCHE-LE DUC-LA DUCHESSE-UN DÉMON/DON QUICHOTTE-SANCHE-LE DUC-LA DUCHESSE-LIRGANDÉE/DON QUICHOTTE-SANCHE-LE DUC-LA DUCHESSE-ALQUIF/DON QUICHOTTE-SANCHE-DON LOPE-LE BARBIER-LE DUC-LA DUCHESSE-ARCHELAUS/DON QUICHOTTE-SANCHE-DON LOPE-LE BARBIER-LE DUC-LA DUCHESSE-MERLIN',
+      'string-id' => '#DONQUICHOTTE,#SANCHE,#DONLOPE,#LEBARBIER,#LEDUC,#LADUCHESSE;#DONQUICHOTTE,#SANCHE,#LEDUC,#LADUCHESSE,#LEDIABLE;#DONQUICHOTTE,#SANCHE,#LEDUC,#LADUCHESSE,#LIRGANDEE;#DONQUICHOTTE,#SANCHE,#LEDUC,#LADUCHESSE,#ALQUIF;#DONQUICHOTTE,#SANCHE,#DONLOPE,#LEBARBIER,#LEDUC,#LADUCHESSE,#ARCHELAUS;#DONQUICHOTTE,#SANCHE,#DONLOPE,#LEBARBIER,#LEDUC,#LADUCHESSE,#MERLIN',
     ),
   ),
   'guerindebouscal_domquixote2_V02' => 
@@ -51586,7 +51120,7 @@
         4 => 1,
         5 => 0,
       ),
-      '#UNDEMON' => 
+      '#LEDIABLE' => 
       array (
         0 => 1,
         1 => 0,
@@ -51642,11 +51176,12 @@
       'title' => 'Don Quichotte de la Manche, seconde partie',
       'date' => 1639,
       'lustrum' => '1636-1640',
-      'genre' => 'Tragi-comédie',
+      'genre' => 'Comédie',
       'titleId' => 'DonQuichottedelaManchesecondepartie',
-      'genreId' => 'Tragi-comedie',
+      'genreId' => 'Comedie',
       'authorId' => 'GuerindeBouscal',
       'string' => 'DON QUICHOTTE-SANCHE-LE DUC-LA DUCHESSE-UN DÉMON/DON QUICHOTTE-SANCHE-LE DUC-LA DUCHESSE-LIRGANDÉE/DON QUICHOTTE-SANCHE-LE DUC-LA DUCHESSE-ALQUIF/DON QUICHOTTE-SANCHE-DON LOPE-LE BARBIER-LE DUC-LA DUCHESSE-ARCHELAUS/DON QUICHOTTE-SANCHE-DON LOPE-LE BARBIER-LE DUC-LA DUCHESSE-MERLIN/DON QUICHOTTE-SANCHE-DON LOPE-LE BARBIER',
+      'string-id' => '#DONQUICHOTTE,#SANCHE,#LEDUC,#LADUCHESSE,#LEDIABLE;#DONQUICHOTTE,#SANCHE,#LEDUC,#LADUCHESSE,#LIRGANDEE;#DONQUICHOTTE,#SANCHE,#LEDUC,#LADUCHESSE,#ALQUIF;#DONQUICHOTTE,#SANCHE,#DONLOPE,#LEBARBIER,#LEDUC,#LADUCHESSE,#ARCHELAUS;#DONQUICHOTTE,#SANCHE,#DONLOPE,#LEBARBIER,#LEDUC,#LADUCHESSE,#MERLIN;#DONQUICHOTTE,#SANCHE,#DONLOPE,#LEBARBIER',
     ),
   ),
   'guerindebouscal_domquixote2_V03' => 
@@ -51677,6 +51212,15 @@
         1 => 1,
         2 => 1,
         3 => 1,
+        4 => 0,
+        5 => 1,
+      ),
+      '#LEDIABLE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
         4 => 0,
         5 => 1,
       ),
@@ -51727,11 +51271,12 @@
       'title' => 'Don Quichotte de la Manche, seconde partie',
       'date' => 1639,
       'lustrum' => '1636-1640',
-      'genre' => 'Tragi-comédie',
+      'genre' => 'Comédie',
       'titleId' => 'DonQuichottedelaManchesecondepartie',
-      'genreId' => 'Tragi-comedie',
+      'genreId' => 'Comedie',
       'authorId' => 'GuerindeBouscal',
-      'string' => 'DON QUICHOTTE-SANCHE-LE DUC-LA DUCHESSE-LIRGANDÉE/DON QUICHOTTE-SANCHE-LE DUC-LA DUCHESSE-ALQUIF/DON QUICHOTTE-SANCHE-DON LOPE-LE BARBIER-LE DUC-LA DUCHESSE-ARCHELAUS/DON QUICHOTTE-SANCHE-DON LOPE-LE BARBIER-LE DUC-LA DUCHESSE-MERLIN/DON QUICHOTTE-SANCHE-DON LOPE-LE BARBIER/DON QUICHOTTE-SANCHE-DON LOPE-LE BARBIER-LE DUC-LA DUCHESSE-LIRGANDÉE-ALQUIF-ARCHELAUS-MERLIN',
+      'string' => 'DON QUICHOTTE-SANCHE-LE DUC-LA DUCHESSE-LIRGANDÉE/DON QUICHOTTE-SANCHE-LE DUC-LA DUCHESSE-ALQUIF/DON QUICHOTTE-SANCHE-DON LOPE-LE BARBIER-LE DUC-LA DUCHESSE-ARCHELAUS/DON QUICHOTTE-SANCHE-DON LOPE-LE BARBIER-LE DUC-LA DUCHESSE-MERLIN/DON QUICHOTTE-SANCHE-DON LOPE-LE BARBIER/DON QUICHOTTE-SANCHE-DON LOPE-LE BARBIER-LE DUC-LA DUCHESSE-UN DÉMON-LIRGANDÉE-ALQUIF-ARCHELAUS-MERLIN',
+      'string-id' => '#DONQUICHOTTE,#SANCHE,#LEDUC,#LADUCHESSE,#LIRGANDEE;#DONQUICHOTTE,#SANCHE,#LEDUC,#LADUCHESSE,#ALQUIF;#DONQUICHOTTE,#SANCHE,#DONLOPE,#LEBARBIER,#LEDUC,#LADUCHESSE,#ARCHELAUS;#DONQUICHOTTE,#SANCHE,#DONLOPE,#LEBARBIER,#LEDUC,#LADUCHESSE,#MERLIN;#DONQUICHOTTE,#SANCHE,#DONLOPE,#LEBARBIER;#DONQUICHOTTE,#SANCHE,#DONLOPE,#LEBARBIER,#LEDUC,#LADUCHESSE,#LEDIABLE,#LIRGANDEE,#ALQUIF,#ARCHELAUS,#MERLIN',
     ),
   ),
   'gillet_deniaise_II01' => 
@@ -51790,6 +51335,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'GilletdeLaTessonerie',
       'string' => 'ARISTE-OLYMPE/CLIMANTE-ORONTE/ARISTE-CLIMANTE-ORONTE-OLYMPE/CLIMANTE-ORONTE-OLYMPE/ORONTE-OLYMPE/CLIMANTE-ORONTE-OLYMPE',
+      'string-id' => '#ARISTE,#OLYMPE;#CLIMANTE,#ORONTE;#ARISTE,#CLIMANTE,#ORONTE,#OLYMPE;#CLIMANTE,#ORONTE,#OLYMPE;#ORONTE,#OLYMPE;#CLIMANTE,#ORONTE,#OLYMPE',
     ),
   ),
   'gillet_deniaise_II02' => 
@@ -51857,6 +51403,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'GilletdeLaTessonerie',
       'string' => 'CLIMANTE-ORONTE/ARISTE-CLIMANTE-ORONTE-OLYMPE/CLIMANTE-ORONTE-OLYMPE/ORONTE-OLYMPE/CLIMANTE-ORONTE-OLYMPE/PANCRACE-LISETTE',
+      'string-id' => '#CLIMANTE,#ORONTE;#ARISTE,#CLIMANTE,#ORONTE,#OLYMPE;#CLIMANTE,#ORONTE,#OLYMPE;#ORONTE,#OLYMPE;#CLIMANTE,#ORONTE,#OLYMPE;#PANCRACE,#LISETTE',
     ),
   ),
   'gillet_deniaise_III01' => 
@@ -51924,6 +51471,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'GilletdeLaTessonerie',
       'string' => 'CLIMANTE-OLYMPE/CLIMANTE-OLYMPE-LISETTE/CLIMANTE-PANCRACE-OLYMPE-LISETTE/PANCRACE/ARISTE-OLYMPE/',
+      'string-id' => '#CLIMANTE,#OLYMPE;#CLIMANTE,#OLYMPE,#LISETTE;#CLIMANTE,#PANCRACE,#OLYMPE,#LISETTE;#PANCRACE;#ARISTE,#OLYMPE;',
     ),
   ),
   'gillet_deniaise_III02' => 
@@ -51991,6 +51539,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'GilletdeLaTessonerie',
       'string' => 'CLIMANTE-OLYMPE-LISETTE/CLIMANTE-PANCRACE-OLYMPE-LISETTE/PANCRACE/ARISTE-OLYMPE//UN VIEIL CAPORAL',
+      'string-id' => '#CLIMANTE,#OLYMPE,#LISETTE;#CLIMANTE,#PANCRACE,#OLYMPE,#LISETTE;#PANCRACE;#ARISTE,#OLYMPE;;#CAPORAL',
     ),
   ),
   'gillet_deniaise_IV01' => 
@@ -52058,6 +51607,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'GilletdeLaTessonerie',
       'string' => 'ORONTE-PANCRACE/CLIMANTE-ORONTE/CLIMANTE-ORONTE-LISETTE/LISETTE/PANCRACE/ARISTE-CLIMANTE-PANCRACE-PREMIER VIOLON-SECOND VIOLON-TROISIÈME VIOLON-TROUPE DE Violons',
+      'string-id' => '#ORONTE,#PANCRACE;#CLIMANTE,#ORONTE;#CLIMANTE,#ORONTE,#LISETTE;#LISETTE;#PANCRACE;#ARISTE,#CLIMANTE,#PANCRACE,#PREMIERVIOLON,#SECONDVIOLON,#TROISIEMEVIOLON,#VIOLONS',
     ),
   ),
   'gillet_deniaise_IV02' => 
@@ -52134,6 +51684,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'GilletdeLaTessonerie',
       'string' => 'CLIMANTE-ORONTE/CLIMANTE-ORONTE-LISETTE/LISETTE/PANCRACE/ARISTE-CLIMANTE-PANCRACE-PREMIER VIOLON-SECOND VIOLON-TROISIÈME VIOLON-TROUPE DE Violons/ARISTE-CLIMANTE-ORONTE-PANCRACE',
+      'string-id' => '#CLIMANTE,#ORONTE;#CLIMANTE,#ORONTE,#LISETTE;#LISETTE;#PANCRACE;#ARISTE,#CLIMANTE,#PANCRACE,#PREMIERVIOLON,#SECONDVIOLON,#TROISIEMEVIOLON,#VIOLONS;#ARISTE,#CLIMANTE,#ORONTE,#PANCRACE',
     ),
   ),
   'gillet_deniaise_V01' => 
@@ -52183,6 +51734,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'GilletdeLaTessonerie',
       'string' => 'ARISTE-OLYMPE/ARISTE-CLIMANTE-OLYMPE/CLIMANTE-ORONTE/ARISTE-CLIMANTE-ORONTE-OLYMPE/ARISTE-OLYMPE/ARISTE-CLIMANTE-ORONTE-OLYMPE',
+      'string-id' => '#ARISTE,#OLYMPE;#ARISTE,#CLIMANTE,#OLYMPE;#CLIMANTE,#ORONTE;#ARISTE,#CLIMANTE,#ORONTE,#OLYMPE;#ARISTE,#OLYMPE;#ARISTE,#CLIMANTE,#ORONTE,#OLYMPE',
     ),
   ),
   'gillet_deniaise_V02' => 
@@ -52241,6 +51793,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'GilletdeLaTessonerie',
       'string' => 'ARISTE-CLIMANTE-OLYMPE/CLIMANTE-ORONTE/ARISTE-CLIMANTE-ORONTE-OLYMPE/ARISTE-OLYMPE/ARISTE-CLIMANTE-ORONTE-OLYMPE/ARISTE-ORONTE-PANCRACE-OLYMPE-LISETTE',
+      'string-id' => '#ARISTE,#CLIMANTE,#OLYMPE;#CLIMANTE,#ORONTE;#ARISTE,#CLIMANTE,#ORONTE,#OLYMPE;#ARISTE,#OLYMPE;#ARISTE,#CLIMANTE,#ORONTE,#OLYMPE;#ARISTE,#ORONTE,#PANCRACE,#OLYMPE,#LISETTE',
     ),
   ),
   'gillet_deniaise_V03' => 
@@ -52308,6 +51861,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'GilletdeLaTessonerie',
       'string' => 'CLIMANTE-ORONTE/ARISTE-CLIMANTE-ORONTE-OLYMPE/ARISTE-OLYMPE/ARISTE-CLIMANTE-ORONTE-OLYMPE/ARISTE-ORONTE-PANCRACE-OLYMPE-LISETTE/ARISTE-CLIMANTE-ORONTE-PANCRACE-OLYMPE-LISETTE-UN EXEMPT-TROUPE d\'ARCHERS',
+      'string-id' => '#CLIMANTE,#ORONTE;#ARISTE,#CLIMANTE,#ORONTE,#OLYMPE;#ARISTE,#OLYMPE;#ARISTE,#CLIMANTE,#ORONTE,#OLYMPE;#ARISTE,#ORONTE,#PANCRACE,#OLYMPE,#LISETTE;#ARISTE,#CLIMANTE,#ORONTE,#PANCRACE,#OLYMPE,#LISETTE,#EXEMPT,#ARCHERS',
     ),
   ),
   'gillet_campagnard_II01' => 
@@ -52366,6 +51920,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'GilletdeLaTessonerie',
       'string' => 'LE CAMPAGNARD-/LE CAMPAGNARD-UN PAGE de Bazile-/LE CAMPAGNARD-/BAZILE-LE CAMPAGNARD-PHÉNICE-PHILIS-/BAZILE-LE CAMPAGNARD-LÉANDRE-PHÉNICE-PHILIS-/BAZILE-LE CAMPAGNARD-LÉANDRE-UN PAGE de Bazile-PHÉNICE-PHILIS',
+      'string-id' => '#LECAMPAGNARD,#ALCIPE;#LECAMPAGNARD,#LEPAGE,#ALCIPE;#LECAMPAGNARD,#ALCIPE;#BAZILE,#LECAMPAGNARD,#PHENICE,#PHILIS,#ALCIPE;#BAZILE,#LECAMPAGNARD,#LEANDRE,#PHENICE,#PHILIS,#ALCIPE;#BAZILE,#LECAMPAGNARD,#LEANDRE,#LEPAGE,#PHENICE,#PHILIS,#ALCIPE',
     ),
   ),
   'gillet_campagnard_V01' => 
@@ -52451,6 +52006,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'GilletdeLaTessonerie',
       'string' => 'PHÉNICE-/PHÉNICE-PHILIS-/LÉANDRE-PHILIS-/LE CAMPAGNARD-LÉANDRE-PHILIS-/BAZILE-LE CAMPAGNARD-LÉANDRE-PHILIS-/BAZILE-LE CAMPAGNARD-LÉANDRE-SEIGNEUR ANSELME-PHILIS',
+      'string-id' => '#PHENICE,#ALCIPE;#PHENICE,#PHILIS,#ALCIPE;#LEANDRE,#PHILIS,#ALCIPE;#LECAMPAGNARD,#LEANDRE,#PHILIS,#ALCIPE;#BAZILE,#LECAMPAGNARD,#LEANDRE,#PHILIS,#ALCIPE;#BAZILE,#LECAMPAGNARD,#LEANDRE,#ANSELME,#PHILIS,#ALCIPE',
     ),
   ),
   'gillet_campagnard_V02' => 
@@ -52527,6 +52083,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'GilletdeLaTessonerie',
       'string' => 'PHÉNICE-PHILIS-/LÉANDRE-PHILIS-/LE CAMPAGNARD-LÉANDRE-PHILIS-/BAZILE-LE CAMPAGNARD-LÉANDRE-PHILIS-/BAZILE-LE CAMPAGNARD-LÉANDRE-SEIGNEUR ANSELME-PHILIS-/BAZILE-LE CAMPAGNARD-LÉANDRE-SEIGNEUR ANSELME-PHILIS',
+      'string-id' => '#PHENICE,#PHILIS,#ALCIPE;#LEANDRE,#PHILIS,#ALCIPE;#LECAMPAGNARD,#LEANDRE,#PHILIS,#ALCIPE;#BAZILE,#LECAMPAGNARD,#LEANDRE,#PHILIS,#ALCIPE;#BAZILE,#LECAMPAGNARD,#LEANDRE,#ANSELME,#PHILIS,#ALCIPE;#BAZILE,#LECAMPAGNARD,#LEANDRE,#ANSELME,#PHILIS,#ALCIPE',
     ),
   ),
   'gillet_artderegner_I01' => 
@@ -52602,7 +52159,8 @@
       'titleId' => 'LArtderegner',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'GilletdeLaTessonerie',
-      'string' => 'LE PRINCE/MINERVE/MINERVE-MÉGARE/PHILIPPE-ATALLE-MINERVE-MÉGARE/PHILIPPE-ALEXANDRE-ATALLE-MINERVE/PHILIPPE',
+      'string' => 'LE SAGE-LE PRINCE/MINERVE/MINERVE-MÉGARE/PHILIPPE-ATALLE-MINERVE-MÉGARE/PHILIPPE-ALEXANDRE-ATALLE-MINERVE/PHILIPPE',
+      'string-id' => '#LEGOUVERNEUR,#LEPRINCE;#MINERVE;#MINERVE,#MEGARE;#PHILIPPE,#ATALLE,#MINERVE,#MEGARE;#PHILIPPE,#ALEXANDRE,#ATALLE,#MINERVE;#PHILIPPE',
     ),
   ),
   'gillet_artderegner_I02' => 
@@ -52670,6 +52228,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'GilletdeLaTessonerie',
       'string' => 'MINERVE/MINERVE-MÉGARE/PHILIPPE-ATALLE-MINERVE-MÉGARE/PHILIPPE-ALEXANDRE-ATALLE-MINERVE/PHILIPPE/PHILIPPE-MINERVE-MÉGARE',
+      'string-id' => '#MINERVE;#MINERVE,#MEGARE;#PHILIPPE,#ATALLE,#MINERVE,#MEGARE;#PHILIPPE,#ALEXANDRE,#ATALLE,#MINERVE;#PHILIPPE;#PHILIPPE,#MINERVE,#MEGARE',
     ),
   ),
   'gillet_artderegner_II01' => 
@@ -52727,7 +52286,8 @@
       'titleId' => 'LArtderegner',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'GilletdeLaTessonerie',
-      'string' => 'LE PRINCE/CAMILLE-ARBAS/CAMILLE-ARBAS/FABIE-CAMILLE-ARBAS/FABIE-ARBAS/FABIE',
+      'string' => 'LE SAGE-LE PRINCE/CAMILLE-ARBAS/CAMILLE-ARBAS/FABIE-CAMILLE-ARBAS/FABIE-ARBAS/FABIE',
+      'string-id' => '#LEGOUVERNEUR,#LEPRINCE;#CAMILLE,#ARBAS;#CAMILLE,#ARBAS;#FABIE,#CAMILLE,#ARBAS;#FABIE,#ARBAS;#FABIE',
     ),
   ),
   'gillet_artderegner_II02' => 
@@ -52786,6 +52346,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'GilletdeLaTessonerie',
       'string' => 'CAMILLE-ARBAS/CAMILLE-ARBAS/FABIE-CAMILLE-ARBAS/FABIE-ARBAS/FABIE/FABIE-ARBAS-MIRANDE-LUCIPE',
+      'string-id' => '#CAMILLE,#ARBAS;#CAMILLE,#ARBAS;#FABIE,#CAMILLE,#ARBAS;#FABIE,#ARBAS;#FABIE;#FABIE,#ARBAS,#MIRANDE,#LUCIPE',
     ),
   ),
   'gillet_artderegner_II03' => 
@@ -52844,6 +52405,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'GilletdeLaTessonerie',
       'string' => 'CAMILLE-ARBAS/FABIE-CAMILLE-ARBAS/FABIE-ARBAS/FABIE/FABIE-ARBAS-MIRANDE-LUCIPE/FABIE-CAMILLE-ARBAS-MIRANDE-LUCIPE',
+      'string-id' => '#CAMILLE,#ARBAS;#FABIE,#CAMILLE,#ARBAS;#FABIE,#ARBAS;#FABIE;#FABIE,#ARBAS,#MIRANDE,#LUCIPE;#FABIE,#CAMILLE,#ARBAS,#MIRANDE,#LUCIPE',
     ),
   ),
   'gillet_artderegner_III01' => 
@@ -52901,7 +52463,8 @@
       'titleId' => 'LArtderegner',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'GilletdeLaTessonerie',
-      'string' => 'LE PRINCE/PTOLOMÉE-CLÉOPÂTRE/PTOLOMÉE/PTOLOMÉE/CÉSAR/CÉSAR',
+      'string' => 'LE SAGE-LE PRINCE/PTOLOMÉE-CLÉOPÂTRE/PTOLOMÉE/PTOLOMÉE/CÉSAR/CÉSAR',
+      'string-id' => '#LEGOUVERNEUR,#LEPRINCE;#PTOLOMEE,#CLEOPATRE;#PTOLOMEE;#PTOLOMEE;#CESAR;#CESAR',
     ),
   ),
   'gillet_artderegner_III02' => 
@@ -52951,6 +52514,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'GilletdeLaTessonerie',
       'string' => 'PTOLOMÉE-CLÉOPÂTRE/PTOLOMÉE/PTOLOMÉE/CÉSAR/CÉSAR/CÉSAR-PTOLOMÉE',
+      'string-id' => '#PTOLOMEE,#CLEOPATRE;#PTOLOMEE;#PTOLOMEE;#CESAR;#CESAR;#CESAR,#PTOLOMEE',
     ),
   ),
   'gillet_artderegner_III03' => 
@@ -52991,6 +52555,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'GilletdeLaTessonerie',
       'string' => 'PTOLOMÉE/PTOLOMÉE/CÉSAR/CÉSAR/CÉSAR-PTOLOMÉE/PTOLOMÉE',
+      'string-id' => '#PTOLOMEE;#PTOLOMEE;#CESAR;#CESAR;#CESAR,#PTOLOMEE;#PTOLOMEE',
     ),
   ),
   'gillet_artderegner_IV01' => 
@@ -53066,7 +52631,8 @@
       'titleId' => 'LArtderegner',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'GilletdeLaTessonerie',
-      'string' => 'LE PRINCE/STATIRA-OROONDATE/STATIRA-BÉRÉNICE-OROONDATE-HARMIN/ALEXANDRE-STATIRA-BÉRÉNICE-OROONDATE-CLITE-AMINTAS/ALEXANDRE-STATIRA-OROONDATE/STATIRA-OROONDATE',
+      'string' => 'LE SAGE-LE PRINCE/STATIRA-OROONDATE/STATIRA-BÉRÉNICE-OROONDATE-HARMIN/ALEXANDRE-STATIRA-BÉRÉNICE-OROONDATE-CLITE-AMINTAS/ALEXANDRE-STATIRA-OROONDATE/STATIRA-OROONDATE',
+      'string-id' => '#LEGOUVERNEUR,#LEPRINCE;#STATIRA,#OROONDATE;#STATIRA,#BERENICE,#OROONDATE,#HARMIN;#ALEXANDRE,#STATIRA,#BERENICE,#OROONDATE,#CLITE,#AMINTAS;#ALEXANDRE,#STATIRA,#OROONDATE;#STATIRA,#OROONDATE',
     ),
   ),
   'gillet_artderegner_IV02' => 
@@ -53134,6 +52700,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'GilletdeLaTessonerie',
       'string' => 'STATIRA-OROONDATE/STATIRA-BÉRÉNICE-OROONDATE-HARMIN/ALEXANDRE-STATIRA-BÉRÉNICE-OROONDATE-CLITE-AMINTAS/ALEXANDRE-STATIRA-OROONDATE/STATIRA-OROONDATE/ALEXANDRE',
+      'string-id' => '#STATIRA,#OROONDATE;#STATIRA,#BERENICE,#OROONDATE,#HARMIN;#ALEXANDRE,#STATIRA,#BERENICE,#OROONDATE,#CLITE,#AMINTAS;#ALEXANDRE,#STATIRA,#OROONDATE;#STATIRA,#OROONDATE;#ALEXANDRE',
     ),
   ),
   'gillet_artderegner_IV03' => 
@@ -53210,6 +52777,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'GilletdeLaTessonerie',
       'string' => 'STATIRA-BÉRÉNICE-OROONDATE-HARMIN/ALEXANDRE-STATIRA-BÉRÉNICE-OROONDATE-CLITE-AMINTAS/ALEXANDRE-STATIRA-OROONDATE/STATIRA-OROONDATE/ALEXANDRE/ALEXANDRE-OROONDATE',
+      'string-id' => '#STATIRA,#BERENICE,#OROONDATE,#HARMIN;#ALEXANDRE,#STATIRA,#BERENICE,#OROONDATE,#CLITE,#AMINTAS;#ALEXANDRE,#STATIRA,#OROONDATE;#STATIRA,#OROONDATE;#ALEXANDRE;#ALEXANDRE,#OROONDATE',
     ),
   ),
   'gillet_artderegner_IV04' => 
@@ -53268,6 +52836,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'GilletdeLaTessonerie',
       'string' => 'ALEXANDRE-STATIRA-BÉRÉNICE-OROONDATE-CLITE-AMINTAS/ALEXANDRE-STATIRA-OROONDATE/STATIRA-OROONDATE/ALEXANDRE/ALEXANDRE-OROONDATE/ALEXANDRE-STATIRA-OROONDATE',
+      'string-id' => '#ALEXANDRE,#STATIRA,#BERENICE,#OROONDATE,#CLITE,#AMINTAS;#ALEXANDRE,#STATIRA,#OROONDATE;#STATIRA,#OROONDATE;#ALEXANDRE;#ALEXANDRE,#OROONDATE;#ALEXANDRE,#STATIRA,#OROONDATE',
     ),
   ),
   'gillet_artderegner_V01' => 
@@ -53352,7 +52921,8 @@
       'titleId' => 'LArtderegner',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'GilletdeLaTessonerie',
-      'string' => 'LE PRINCE/PERSÉE-ALCMÈNE/PERSÉE-ALCMÈNE-EUCTÉE-LE CANDIOT/PERSÉE-ALCMÈNE-EUCTÉE-EUDÉE/PERSÉE-EUCTÉE-EUDÉE/PERSÉE-PAUL ÉMILE-TIBERE',
+      'string' => 'LE SAGE-LE PRINCE/PERSÉE-ALCMÈNE/PERSÉE-ALCMÈNE-EUCTÉE-LE CANDIOT/PERSÉE-ALCMÈNE-EUCTÉE-EUDÉE/PERSÉE-EUCTÉE-EUDÉE/PERSÉE-PAUL ÉMILE-TIBERE',
+      'string-id' => '#LEGOUVERNEUR,#LEPRINCE;#PERSEE,#ALCMENE;#PERSEE,#ALCMENE,#EUCTEE,#LECANDIOT;#PERSEE,#ALCMENE,#EUCTEE,#EUDEE;#PERSEE,#EUCTEE,#EUDEE;#PERSEE,#PAULEMILE,#TIBERE',
     ),
   ),
   'gillet_artderegner_V02' => 
@@ -53429,6 +52999,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'GilletdeLaTessonerie',
       'string' => 'PERSÉE-ALCMÈNE/PERSÉE-ALCMÈNE-EUCTÉE-LE CANDIOT/PERSÉE-ALCMÈNE-EUCTÉE-EUDÉE/PERSÉE-EUCTÉE-EUDÉE/PERSÉE-PAUL ÉMILE-TIBERE/PERSÉE',
+      'string-id' => '#PERSEE,#ALCMENE;#PERSEE,#ALCMENE,#EUCTEE,#LECANDIOT;#PERSEE,#ALCMENE,#EUCTEE,#EUDEE;#PERSEE,#EUCTEE,#EUDEE;#PERSEE,#PAULEMILE,#TIBERE;#PERSEE',
     ),
   ),
   'gillet_artderegner_V03' => 
@@ -53523,6 +53094,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'GilletdeLaTessonerie',
       'string' => 'PERSÉE-ALCMÈNE-EUCTÉE-LE CANDIOT/PERSÉE-ALCMÈNE-EUCTÉE-EUDÉE/PERSÉE-EUCTÉE-EUDÉE/PERSÉE-PAUL ÉMILE-TIBERE/PERSÉE/PERSÉE-TIBERE-UN ÉDILE',
+      'string-id' => '#PERSEE,#ALCMENE,#EUCTEE,#LECANDIOT;#PERSEE,#ALCMENE,#EUCTEE,#EUDEE;#PERSEE,#EUCTEE,#EUDEE;#PERSEE,#PAULEMILE,#TIBERE;#PERSEE;#PERSEE,#TIBERE,#UNEDILE',
     ),
   ),
   'gillet_artderegner_V04' => 
@@ -53607,7 +53179,8 @@
       'titleId' => 'LArtderegner',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'GilletdeLaTessonerie',
-      'string' => 'PERSÉE-ALCMÈNE-EUCTÉE-EUDÉE/PERSÉE-EUCTÉE-EUDÉE/PERSÉE-PAUL ÉMILE-TIBERE/PERSÉE/PERSÉE-TIBERE-UN ÉDILE/LE PRINCE',
+      'string' => 'PERSÉE-ALCMÈNE-EUCTÉE-EUDÉE/PERSÉE-EUCTÉE-EUDÉE/PERSÉE-PAUL ÉMILE-TIBERE/PERSÉE/PERSÉE-TIBERE-UN ÉDILE/LE SAGE-LE PRINCE',
+      'string-id' => '#PERSEE,#ALCMENE,#EUCTEE,#EUDEE;#PERSEE,#EUCTEE,#EUDEE;#PERSEE,#PAULEMILE,#TIBERE;#PERSEE;#PERSEE,#TIBERE,#UNEDILE;#LEGOUVERNEUR,#LEPRINCE',
     ),
   ),
   'gilbert_telephonte_IV01' => 
@@ -53657,6 +53230,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Gilbert',
       'string' => 'MÉROPE/MÉROPE/MÉROPE/MÉROPE/TÉLÉPHONTE/DEMOCHARE',
+      'string-id' => '#MEROPE;#MEROPE;#MEROPE;#MEROPE;#TELEPHONTE;#DEMOCHARE',
     ),
   ),
   'duryer_vendangesdesuresnes_I01' => 
@@ -53724,6 +53298,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DuRyer',
       'string' => 'TIRSIS-PHILÉMON/TIRSIS-POLIDOR/DORIMÈNE/TIRSIS-POLIDOR-DORIMÈNE/TIRSIS-PHILÉMON/FLORICE-LISETTE',
+      'string-id' => '#TIRSIS,#PHILEMON;#TIRSIS,#POLIDOR;#DORIMENE;#TIRSIS,#POLIDOR,#DORIMENE;#TIRSIS,#PHILEMON;#FLORICE,#LISETTE',
     ),
   ),
   'duryer_vendangesdesuresnes_I02' => 
@@ -53809,6 +53384,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DuRyer',
       'string' => 'TIRSIS-POLIDOR/DORIMÈNE/TIRSIS-POLIDOR-DORIMÈNE/TIRSIS-PHILÉMON/FLORICE-LISETTE/LISETTE-GUILLAUME',
+      'string-id' => '#TIRSIS,#POLIDOR;#DORIMENE;#TIRSIS,#POLIDOR,#DORIMENE;#TIRSIS,#PHILEMON;#FLORICE,#LISETTE;#LISETTE,#GUILLAUME',
     ),
   ),
   'duryer_vendangesdesuresnes_II01' => 
@@ -53903,6 +53479,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DuRyer',
       'string' => 'POLIDOR-GUILLAUME/POLIDOR-FLORICE-OLÉNIE/POLIDOR-DORIMÈNE-FLORICE-OLÉNIE-DORIPE/FLORICE-LISETTE/CRISÈRE-DORIPE/DORIMÈNE-CRISÈRE-DORIPE',
+      'string-id' => '#POLIDOR,#GUILLAUME;#POLIDOR,#FLORICE,#OLENIE;#POLIDOR,#DORIMENE,#FLORICE,#OLENIE,#DORIPE;#FLORICE,#LISETTE;#CRISERE,#DORIPE;#DORIMENE,#CRISERE,#DORIPE',
     ),
   ),
   'duryer_vendangesdesuresnes_II02' => 
@@ -53988,6 +53565,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DuRyer',
       'string' => 'POLIDOR-FLORICE-OLÉNIE/POLIDOR-DORIMÈNE-FLORICE-OLÉNIE-DORIPE/FLORICE-LISETTE/CRISÈRE-DORIPE/DORIMÈNE-CRISÈRE-DORIPE/POLIDOR-DORIMÈNE-CRISÈRE',
+      'string-id' => '#POLIDOR,#FLORICE,#OLENIE;#POLIDOR,#DORIMENE,#FLORICE,#OLENIE,#DORIPE;#FLORICE,#LISETTE;#CRISERE,#DORIPE;#DORIMENE,#CRISERE,#DORIPE;#POLIDOR,#DORIMENE,#CRISERE',
     ),
   ),
   'duryer_vendangesdesuresnes_IV01' => 
@@ -54064,6 +53642,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DuRyer',
       'string' => 'FLORICE-LISETTE/TIRSIS-FLORICE-LISETTE/POLIDOR-GUILLAUME/POLIDOR-DORIMÈNE/TIRSIS-POLIDOR-DORIMÈNE/CRISÈRE-DORIPE',
+      'string-id' => '#FLORICE,#LISETTE;#TIRSIS,#FLORICE,#LISETTE;#POLIDOR,#GUILLAUME;#POLIDOR,#DORIMENE;#TIRSIS,#POLIDOR,#DORIMENE;#CRISERE,#DORIPE',
     ),
   ),
   'duryer_vendangesdesuresnes_IV02' => 
@@ -54149,6 +53728,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DuRyer',
       'string' => 'TIRSIS-FLORICE-LISETTE/POLIDOR-GUILLAUME/POLIDOR-DORIMÈNE/TIRSIS-POLIDOR-DORIMÈNE/CRISÈRE-DORIPE/DORIMÈNE-OLÉNIE',
+      'string-id' => '#TIRSIS,#FLORICE,#LISETTE;#POLIDOR,#GUILLAUME;#POLIDOR,#DORIMENE;#TIRSIS,#POLIDOR,#DORIMENE;#CRISERE,#DORIPE;#DORIMENE,#OLENIE',
     ),
   ),
   'duryer_vendangesdesuresnes_IV03' => 
@@ -54225,6 +53805,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DuRyer',
       'string' => 'POLIDOR-GUILLAUME/POLIDOR-DORIMÈNE/TIRSIS-POLIDOR-DORIMÈNE/CRISÈRE-DORIPE/DORIMÈNE-OLÉNIE/DORIMÈNE-GUILLAUME-OLÉNIE',
+      'string-id' => '#POLIDOR,#GUILLAUME;#POLIDOR,#DORIMENE;#TIRSIS,#POLIDOR,#DORIMENE;#CRISERE,#DORIPE;#DORIMENE,#OLENIE;#DORIMENE,#GUILLAUME,#OLENIE',
     ),
   ),
   'duryer_vendangesdesuresnes_IV04' => 
@@ -54301,6 +53882,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DuRyer',
       'string' => 'POLIDOR-DORIMÈNE/TIRSIS-POLIDOR-DORIMÈNE/CRISÈRE-DORIPE/DORIMÈNE-OLÉNIE/DORIMÈNE-GUILLAUME-OLÉNIE/DORIMÈNE-GUILLAUME-OLÉNIE-CRISÈRE-DORIPE',
+      'string-id' => '#POLIDOR,#DORIMENE;#TIRSIS,#POLIDOR,#DORIMENE;#CRISERE,#DORIPE;#DORIMENE,#OLENIE;#DORIMENE,#GUILLAUME,#OLENIE;#DORIMENE,#GUILLAUME,#OLENIE,#CRISERE,#DORIPE',
     ),
   ),
   'duryer_vendangesdesuresnes_V01' => 
@@ -54386,6 +53968,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DuRyer',
       'string' => 'DORIMÈNE-FLORICE-LISETTE/TIRSIS-GUILLAUME/TIRSIS-PHILÉMON-POLIDOR-GUILLAUME/LISETTE-CRISÈRE-DORIPE/LISETTE-CRISÈRE-DORIPE/TIRSIS-POLIDOR-DORIMÈNE-FLORICE',
+      'string-id' => '#DORIMENE,#FLORICE,#LISETTE;#TIRSIS,#GUILLAUME;#TIRSIS,#PHILEMON,#POLIDOR,#GUILLAUME;#LISETTE,#CRISERE,#DORIPE;#LISETTE,#CRISERE,#DORIPE;#TIRSIS,#POLIDOR,#DORIMENE,#FLORICE',
     ),
   ),
   'duryer_vendangesdesuresnes_V02' => 
@@ -54462,6 +54045,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DuRyer',
       'string' => 'TIRSIS-GUILLAUME/TIRSIS-PHILÉMON-POLIDOR-GUILLAUME/LISETTE-CRISÈRE-DORIPE/LISETTE-CRISÈRE-DORIPE/TIRSIS-POLIDOR-DORIMÈNE-FLORICE/TIRSIS-PHILÉMON-POLIDOR-DORIMÈNE-FLORICE-GUILLAUME',
+      'string-id' => '#TIRSIS,#GUILLAUME;#TIRSIS,#PHILEMON,#POLIDOR,#GUILLAUME;#LISETTE,#CRISERE,#DORIPE;#LISETTE,#CRISERE,#DORIPE;#TIRSIS,#POLIDOR,#DORIMENE,#FLORICE;#TIRSIS,#PHILEMON,#POLIDOR,#DORIMENE,#FLORICE,#GUILLAUME',
     ),
   ),
   'duryer_vendangesdesuresnes_V03' => 
@@ -54538,12 +54122,22 @@
       'genreId' => 'Comedie',
       'authorId' => 'DuRyer',
       'string' => 'TIRSIS-PHILÉMON-POLIDOR-GUILLAUME/LISETTE-CRISÈRE-DORIPE/LISETTE-CRISÈRE-DORIPE/TIRSIS-POLIDOR-DORIMÈNE-FLORICE/TIRSIS-PHILÉMON-POLIDOR-DORIMÈNE-FLORICE-GUILLAUME/TIRSIS-POLIDOR-DORIMÈNE-FLORICE-LISETTE-GUILLAUME-CRISÈRE-DORIPE-ORMIN',
+      'string-id' => '#TIRSIS,#PHILEMON,#POLIDOR,#GUILLAUME;#LISETTE,#CRISERE,#DORIPE;#LISETTE,#CRISERE,#DORIPE;#TIRSIS,#POLIDOR,#DORIMENE,#FLORICE;#TIRSIS,#PHILEMON,#POLIDOR,#DORIMENE,#FLORICE,#GUILLAUME;#TIRSIS,#POLIDOR,#DORIMENE,#FLORICE,#LISETTE,#GUILLAUME,#CRISERE,#DORIPE,#ORMIN',
     ),
   ),
   'duryer_themistocle_IV01' => 
   array (
     'pattern' => 
     array (
+      '#LEROI' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 1,
+        5 => 1,
+      ),
       '#PALMIS' => 
       array (
         0 => 1,
@@ -54586,13 +54180,23 @@
       'titleId' => 'Themistocle',
       'genreId' => 'Tragedie',
       'authorId' => 'DuRyer',
-      'string' => 'PALMIS-ARTABAZE/ARTABAZE/MANDANE-ROXANE-ARTABAZE/MANDANE-ROXANE/ARTABAZE/MANDANE-PALMIS-ROXANE-ARTABAZE',
+      'string' => 'PALMIS-ARTABAZE/ARTABAZE/MANDANE-ROXANE-ARTABAZE/MANDANE-ROXANE/XERCÈS-ARTABAZE/XERCÈS-MANDANE-PALMIS-ROXANE-ARTABAZE',
+      'string-id' => '#PALMIS,#ARTABAZE;#ARTABAZE;#MANDANE,#ROXANE,#ARTABAZE;#MANDANE,#ROXANE;#LEROI,#ARTABAZE;#LEROI,#MANDANE,#PALMIS,#ROXANE,#ARTABAZE',
     ),
   ),
   'duryer_themistocle_IV02' => 
   array (
     'pattern' => 
     array (
+      '#LEROI' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
       '#PALMIS' => 
       array (
         0 => 0,
@@ -54644,13 +54248,23 @@
       'titleId' => 'Themistocle',
       'genreId' => 'Tragedie',
       'authorId' => 'DuRyer',
-      'string' => 'ARTABAZE/MANDANE-ROXANE-ARTABAZE/MANDANE-ROXANE/ARTABAZE/MANDANE-PALMIS-ROXANE-ARTABAZE/THÉMISTOCLE-ARTABAZE',
+      'string' => 'ARTABAZE/MANDANE-ROXANE-ARTABAZE/MANDANE-ROXANE/XERCÈS-ARTABAZE/XERCÈS-MANDANE-PALMIS-ROXANE-ARTABAZE/XERCÈS-THÉMISTOCLE-ARTABAZE',
+      'string-id' => '#ARTABAZE;#MANDANE,#ROXANE,#ARTABAZE;#MANDANE,#ROXANE;#LEROI,#ARTABAZE;#LEROI,#MANDANE,#PALMIS,#ROXANE,#ARTABAZE;#LEROI,#THEMISTOCLE,#ARTABAZE',
     ),
   ),
   'duryer_themistocle_IV03' => 
   array (
     'pattern' => 
     array (
+      '#LEROI' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 0,
+      ),
       '#PALMIS' => 
       array (
         0 => 0,
@@ -54702,13 +54316,23 @@
       'titleId' => 'Themistocle',
       'genreId' => 'Tragedie',
       'authorId' => 'DuRyer',
-      'string' => 'MANDANE-ROXANE-ARTABAZE/MANDANE-ROXANE/ARTABAZE/MANDANE-PALMIS-ROXANE-ARTABAZE/THÉMISTOCLE-ARTABAZE/PALMIS-THÉMISTOCLE',
+      'string' => 'MANDANE-ROXANE-ARTABAZE/MANDANE-ROXANE/XERCÈS-ARTABAZE/XERCÈS-MANDANE-PALMIS-ROXANE-ARTABAZE/XERCÈS-THÉMISTOCLE-ARTABAZE/PALMIS-THÉMISTOCLE',
+      'string-id' => '#MANDANE,#ROXANE,#ARTABAZE;#MANDANE,#ROXANE;#LEROI,#ARTABAZE;#LEROI,#MANDANE,#PALMIS,#ROXANE,#ARTABAZE;#LEROI,#THEMISTOCLE,#ARTABAZE;#PALMIS,#THEMISTOCLE',
     ),
   ),
   'duryer_themistocle_V01' => 
   array (
     'pattern' => 
     array (
+      '#LEROI' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 1,
+        5 => 1,
+      ),
       '#MANDANE' => 
       array (
         0 => 0,
@@ -54769,13 +54393,23 @@
       'titleId' => 'Themistocle',
       'genreId' => 'Tragedie',
       'authorId' => 'DuRyer',
-      'string' => 'ROXANE-THÉMISTOCLE/MANDANE-THÉMISTOCLE/THÉMISTOCLE-ARTABAZE/THÉMISTOCLE/ARTABAZE/MANDANE-PALMIS',
+      'string' => 'ROXANE-THÉMISTOCLE/MANDANE-THÉMISTOCLE/THÉMISTOCLE-ARTABAZE/THÉMISTOCLE/XERCÈS-ARTABAZE/XERCÈS-MANDANE-PALMIS',
+      'string-id' => '#ROXANE,#THEMISTOCLE;#MANDANE,#THEMISTOCLE;#THEMISTOCLE,#ARTABAZE;#THEMISTOCLE;#LEROI,#ARTABAZE;#LEROI,#MANDANE,#PALMIS',
     ),
   ),
   'duryer_themistocle_V02' => 
   array (
     'pattern' => 
     array (
+      '#LEROI' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
       '#MANDANE' => 
       array (
         0 => 1,
@@ -54827,7 +54461,8 @@
       'titleId' => 'Themistocle',
       'genreId' => 'Tragedie',
       'authorId' => 'DuRyer',
-      'string' => 'MANDANE-THÉMISTOCLE/THÉMISTOCLE-ARTABAZE/THÉMISTOCLE/ARTABAZE/MANDANE-PALMIS/MANDANE-PALMIS-THÉMISTOCLE-ARTABAZE',
+      'string' => 'MANDANE-THÉMISTOCLE/THÉMISTOCLE-ARTABAZE/THÉMISTOCLE/XERCÈS-ARTABAZE/XERCÈS-MANDANE-PALMIS/XERCÈS-MANDANE-PALMIS-THÉMISTOCLE-ARTABAZE',
+      'string-id' => '#MANDANE,#THEMISTOCLE;#THEMISTOCLE,#ARTABAZE;#THEMISTOCLE;#LEROI,#ARTABAZE;#LEROI,#MANDANE,#PALMIS;#LEROI,#MANDANE,#PALMIS,#THEMISTOCLE,#ARTABAZE',
     ),
   ),
   'duryer_scevole_V01' => 
@@ -54904,6 +54539,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'DuRyer',
       'string' => 'ARONS/ARONS-JUNIE/MARCILE-ARONS/PORSENNE-ARONS-JUNIE/TARQUIN-PORSENNE-ARONS-JUNIE-SCÉVOLE/PORSENNE-ARONS-JUNIE-SCÉVOLE',
+      'string-id' => '#ARONS;#ARONS,#JUNIE;#MARCILE,#ARONS;#PORSENNE,#ARONS,#JUNIE;#TARQUIN,#PORSENNE,#ARONS,#JUNIE,#SCEVOLE;#PORSENNE,#ARONS,#JUNIE,#SCEVOLE',
     ),
   ),
   'duryer_saul_III01' => 
@@ -54971,6 +54607,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'DuRyer',
       'string' => 'JONATHAS-ABNER/SAÜL-JONATHAS-ABNER-PHALTI/SAÜL-PHALTI/SAÜL-ABNER/SAÜL-LA PYTHONISSE/SAÜL',
+      'string-id' => '#JONATHAS,#ABNER;#SAUL,#JONATHAS,#ABNER,#PHALTI;#SAUL,#PHALTI;#SAUL,#ABNER;#SAUL,#LAPYTHONISSE;#SAUL',
     ),
   ),
   'duryer_saul_III02' => 
@@ -55038,6 +54675,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'DuRyer',
       'string' => 'SAÜL-JONATHAS-ABNER-PHALTI/SAÜL-PHALTI/SAÜL-ABNER/SAÜL-LA PYTHONISSE/SAÜL/SAÜL-LA PYTHONISSE',
+      'string-id' => '#SAUL,#JONATHAS,#ABNER,#PHALTI;#SAUL,#PHALTI;#SAUL,#ABNER;#SAUL,#LAPYTHONISSE;#SAUL;#SAUL,#LAPYTHONISSE',
     ),
   ),
   'duryer_saul_III03' => 
@@ -55080,7 +54718,7 @@
         4 => 1,
         5 => 0,
       ),
-      '#LOMBREdeSamuel' => 
+      '#LOMBRE' => 
       array (
         0 => 0,
         1 => 0,
@@ -55105,6 +54743,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'DuRyer',
       'string' => 'SAÜL-PHALTI/SAÜL-ABNER/SAÜL-LA PYTHONISSE/SAÜL/SAÜL-LA PYTHONISSE/SAÜL-L\'OMBRE de Samuel',
+      'string-id' => '#SAUL,#PHALTI;#SAUL,#ABNER;#SAUL,#LAPYTHONISSE;#SAUL;#SAUL,#LAPYTHONISSE;#SAUL,#LOMBRE',
     ),
   ),
   'duryer_saul_III04' => 
@@ -55147,7 +54786,7 @@
         4 => 0,
         5 => 1,
       ),
-      '#LOMBREdeSamuel' => 
+      '#LOMBRE' => 
       array (
         0 => 0,
         1 => 0,
@@ -55172,6 +54811,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'DuRyer',
       'string' => 'SAÜL-ABNER/SAÜL-LA PYTHONISSE/SAÜL/SAÜL-LA PYTHONISSE/SAÜL-L\'OMBRE de Samuel/SAÜL-ABNER-PHALTI-LA PYTHONISSE',
+      'string-id' => '#SAUL,#ABNER;#SAUL,#LAPYTHONISSE;#SAUL;#SAUL,#LAPYTHONISSE;#SAUL,#LOMBRE;#SAUL,#ABNER,#PHALTI,#LAPYTHONISSE',
     ),
   ),
   'duryer_nitocris_II01' => 
@@ -55230,6 +54870,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
       'string' => 'NITOCRIS/NITOCRIS-ARAXE/ARAXE/ARAXE-ALCINE/ALCINE/NITOCRIS-AXIANE-ALCINE',
+      'string-id' => '#NITOCRIS;#NITOCRIS,#ARAXE;#ARAXE;#ARAXE,#ALCINE;#ALCINE;#NITOCRIS,#AXIANE,#ALCINE',
     ),
   ),
   'duryer_nitocris_III01' => 
@@ -55297,6 +54938,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
       'string' => 'CLÉODATE-ACHATE/CLÉODATE-AXIANE/CLÉODATE/CLÉODATE-ACHATE/NITOCRIS-CLÉODATE-ARAXE/CLÉODATE-ARAXE',
+      'string-id' => '#CLEODATE,#ACHATE;#CLEODATE,#AXIANE;#CLEODATE;#CLEODATE,#ACHATE;#NITOCRIS,#CLEODATE,#ARAXE;#CLEODATE,#ARAXE',
     ),
   ),
   'duryer_nitocris_IV01' => 
@@ -55364,6 +55006,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
       'string' => 'NITOCRIS-ALCINE-ACHATE/NITOCRIS-ARAXE-ALCINE/NITOCRIS-ALCINE/NITOCRIS-ACHATE/NITOCRIS-CLÉODATE/NITOCRIS-ACHATE',
+      'string-id' => '#NITOCRIS,#ALCINE,#ACHATE;#NITOCRIS,#ARAXE,#ALCINE;#NITOCRIS,#ALCINE;#NITOCRIS,#ACHATE;#NITOCRIS,#CLEODATE;#NITOCRIS,#ACHATE',
     ),
   ),
   'duryer_nitocris_IV02' => 
@@ -55431,6 +55074,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
       'string' => 'NITOCRIS-ARAXE-ALCINE/NITOCRIS-ALCINE/NITOCRIS-ACHATE/NITOCRIS-CLÉODATE/NITOCRIS-ACHATE/NITOCRIS',
+      'string-id' => '#NITOCRIS,#ARAXE,#ALCINE;#NITOCRIS,#ALCINE;#NITOCRIS,#ACHATE;#NITOCRIS,#CLEODATE;#NITOCRIS,#ACHATE;#NITOCRIS',
     ),
   ),
   'duryer_nitocris_IV03' => 
@@ -55489,6 +55133,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
       'string' => 'NITOCRIS-ALCINE/NITOCRIS-ACHATE/NITOCRIS-CLÉODATE/NITOCRIS-ACHATE/NITOCRIS/NITOCRIS-ALCINE',
+      'string-id' => '#NITOCRIS,#ALCINE;#NITOCRIS,#ACHATE;#NITOCRIS,#CLEODATE;#NITOCRIS,#ACHATE;#NITOCRIS;#NITOCRIS,#ALCINE',
     ),
   ),
   'duryer_lucrece_II01' => 
@@ -55556,6 +55201,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'DuRyer',
       'string' => 'TARQUIN/TARQUIN-BRUTE/TARQUIN/TARQUIN-LIBANE/TARQUIN-COLLATIN/TARQUIN-COLLATIN-LUCRÈCE-BRUTE',
+      'string-id' => '#TARQUIN;#TARQUIN,#BRUTE;#TARQUIN;#TARQUIN,#LIBANE;#TARQUIN,#COLLATIN;#TARQUIN,#COLLATIN,#LUCRECE,#BRUTE',
     ),
   ),
   'duryer_lucrece_III01' => 
@@ -55605,6 +55251,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'DuRyer',
       'string' => '/LIBANE/LUCRÈCE-LIBANE/LUCRÈCE/TARQUIN-LUCRÈCE/TARQUIN-LIBANE',
+      'string-id' => ';#LIBANE;#LUCRECE,#LIBANE;#LUCRECE;#TARQUIN,#LUCRECE;#TARQUIN,#LIBANE',
     ),
   ),
   'duryer_lisandrecaliste_I01' => 
@@ -55690,6 +55337,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
       'string' => 'LISANDRE-CRISANTE/LÉON-BÉRONTE-PAGE-CLARINDE/LISANDRE-LÉON-BÉRONTE-CRISANTE/LISANDRE-CALISTE-CLÉANDRE/BÉRONTE/CALISTE-LÉON-BÉRONTE-CLÉANDRE-CLARINDE',
+      'string-id' => '#LISANDRE,#CRISANTE;#LEON,#BERONTE,#PAGE,#CLARINDE;#LISANDRE,#LEON,#BERONTE,#CRISANTE;#LISANDRE,#CALISTE,#CLEANDRE;#BERONTE;#CALISTE,#LEON,#BERONTE,#CLEANDRE,#CLARINDE',
     ),
   ),
   'duryer_esther_III01' => 
@@ -55732,6 +55380,15 @@
         4 => 0,
         5 => 0,
       ),
+      '#LEROI' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
       '#ZETHAR' => 
       array (
         0 => 0,
@@ -55756,7 +55413,8 @@
       'titleId' => 'Esther',
       'genreId' => 'Tragedie',
       'authorId' => 'DuRyer',
-      'string' => 'ESTHER-HAMAN/ESTHER-MARDOCHÉE-VASTHI/ESTHER-MARDOCHÉE-VASTHI/ESTHER-MARDOCHÉE/ESTHER-MARDOCHÉE-HAMAN/ESTHER-MARDOCHÉE-HAMAN-ZÉTHAR',
+      'string' => 'ESTHER-HAMAN-ASSURÉUS/ESTHER-MARDOCHÉE-VASTHI-ASSURÉUS/ESTHER-MARDOCHÉE-VASTHI/ESTHER-MARDOCHÉE/ESTHER-MARDOCHÉE-HAMAN/ESTHER-MARDOCHÉE-HAMAN-ZÉTHAR',
+      'string-id' => '#ESTHER,#HAMAN,#LEROI;#ESTHER,#MARDOCHEE,#VASTHI,#LEROI;#ESTHER,#MARDOCHEE,#VASTHI;#ESTHER,#MARDOCHEE;#ESTHER,#MARDOCHEE,#HAMAN;#ESTHER,#MARDOCHEE,#HAMAN,#ZETHAR',
     ),
   ),
   'duryer_esther_III02' => 
@@ -55799,6 +55457,15 @@
         4 => 0,
         5 => 0,
       ),
+      '#LEROI' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
       '#ZETHAR' => 
       array (
         0 => 0,
@@ -55823,7 +55490,8 @@
       'titleId' => 'Esther',
       'genreId' => 'Tragedie',
       'authorId' => 'DuRyer',
-      'string' => 'ESTHER-MARDOCHÉE-VASTHI/ESTHER-MARDOCHÉE-VASTHI/ESTHER-MARDOCHÉE/ESTHER-MARDOCHÉE-HAMAN/ESTHER-MARDOCHÉE-HAMAN-ZÉTHAR/MARDOCHÉE-HAMAN',
+      'string' => 'ESTHER-MARDOCHÉE-VASTHI-ASSURÉUS/ESTHER-MARDOCHÉE-VASTHI/ESTHER-MARDOCHÉE/ESTHER-MARDOCHÉE-HAMAN/ESTHER-MARDOCHÉE-HAMAN-ZÉTHAR/MARDOCHÉE-HAMAN',
+      'string-id' => '#ESTHER,#MARDOCHEE,#VASTHI,#LEROI;#ESTHER,#MARDOCHEE,#VASTHI;#ESTHER,#MARDOCHEE;#ESTHER,#MARDOCHEE,#HAMAN;#ESTHER,#MARDOCHEE,#HAMAN,#ZETHAR;#MARDOCHEE,#HAMAN',
     ),
   ),
   'duryer_esther_III03' => 
@@ -55891,6 +55559,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'DuRyer',
       'string' => 'ESTHER-MARDOCHÉE-VASTHI/ESTHER-MARDOCHÉE/ESTHER-MARDOCHÉE-HAMAN/ESTHER-MARDOCHÉE-HAMAN-ZÉTHAR/MARDOCHÉE-HAMAN/HAMAN',
+      'string-id' => '#ESTHER,#MARDOCHEE,#VASTHI;#ESTHER,#MARDOCHEE;#ESTHER,#MARDOCHEE,#HAMAN;#ESTHER,#MARDOCHEE,#HAMAN,#ZETHAR;#MARDOCHEE,#HAMAN;#HAMAN',
     ),
   ),
   'duryer_dynamis_III01' => 
@@ -55949,6 +55618,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
       'string' => 'PROXÈNE-POLIANTE/DYNAMIS/TRASILE-DYNAMIS/TRASILE/PROXÈNE-TRASILE/TRASILE',
+      'string-id' => '#PROXENE,#POLIANTE;#DYNAMIS;#TRASILE,#DYNAMIS;#TRASILE;#PROXENE,#TRASILE;#TRASILE',
     ),
   ),
   'duryer_dynamis_III02' => 
@@ -55998,6 +55668,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
       'string' => 'DYNAMIS/TRASILE-DYNAMIS/TRASILE/PROXÈNE-TRASILE/TRASILE/TRASILE',
+      'string-id' => '#DYNAMIS;#TRASILE,#DYNAMIS;#TRASILE;#PROXENE,#TRASILE;#TRASILE;#TRASILE',
     ),
   ),
   'duryer_dynamis_III03' => 
@@ -56047,6 +55718,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
       'string' => 'TRASILE-DYNAMIS/TRASILE/PROXÈNE-TRASILE/TRASILE/TRASILE/TRASILE-DYNAMIS',
+      'string-id' => '#TRASILE,#DYNAMIS;#TRASILE;#PROXENE,#TRASILE;#TRASILE;#TRASILE;#TRASILE,#DYNAMIS',
     ),
   ),
   'duryer_dynamis_III04' => 
@@ -56105,6 +55777,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
       'string' => 'TRASILE/PROXÈNE-TRASILE/TRASILE/TRASILE/TRASILE-DYNAMIS/TRASILE-DYNAMIS-EURISTÈNE',
+      'string-id' => '#TRASILE;#PROXENE,#TRASILE;#TRASILE;#TRASILE;#TRASILE,#DYNAMIS;#TRASILE,#DYNAMIS,#EURISTENE',
     ),
   ),
   'duryer_dynamis_IV01' => 
@@ -56129,6 +55802,15 @@
         4 => 1,
         5 => 1,
       ),
+      '#DEPUTES' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 1,
+        4 => 0,
+        5 => 0,
+      ),
     ),
     'id' => 
     array (
@@ -56144,7 +55826,8 @@
       'titleId' => 'Dynamis',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
-      'string' => 'DYNAMIS/DYNAMIS/TRASILE-DYNAMIS/DYNAMIS/TRASILE-DYNAMIS/DYNAMIS',
+      'string' => 'DYNAMIS/DYNAMIS/TRASILE-DYNAMIS/DYNAMIS-Des Députés/TRASILE-DYNAMIS/DYNAMIS',
+      'string-id' => '#DYNAMIS;#DYNAMIS;#TRASILE,#DYNAMIS;#DYNAMIS,#DEPUTES;#TRASILE,#DYNAMIS;#DYNAMIS',
     ),
   ),
   'duryer_dynamis_IV02' => 
@@ -56178,6 +55861,15 @@
         4 => 0,
         5 => 1,
       ),
+      '#DEPUTES' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
     ),
     'id' => 
     array (
@@ -56193,7 +55885,8 @@
       'titleId' => 'Dynamis',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
-      'string' => 'DYNAMIS/TRASILE-DYNAMIS/DYNAMIS/TRASILE-DYNAMIS/DYNAMIS/DYNAMIS-POLIANTE',
+      'string' => 'DYNAMIS/TRASILE-DYNAMIS/DYNAMIS-Des Députés/TRASILE-DYNAMIS/DYNAMIS/DYNAMIS-POLIANTE',
+      'string-id' => '#DYNAMIS;#TRASILE,#DYNAMIS;#DYNAMIS,#DEPUTES;#TRASILE,#DYNAMIS;#DYNAMIS;#DYNAMIS,#POLIANTE',
     ),
   ),
   'duryer_dynamis_IV03' => 
@@ -56227,6 +55920,15 @@
         4 => 1,
         5 => 0,
       ),
+      '#DEPUTES' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
     ),
     'id' => 
     array (
@@ -56242,7 +55944,8 @@
       'titleId' => 'Dynamis',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
-      'string' => 'TRASILE-DYNAMIS/DYNAMIS/TRASILE-DYNAMIS/DYNAMIS/DYNAMIS-POLIANTE/DYNAMIS',
+      'string' => 'TRASILE-DYNAMIS/DYNAMIS-Des Députés/TRASILE-DYNAMIS/DYNAMIS/DYNAMIS-POLIANTE/DYNAMIS',
+      'string-id' => '#TRASILE,#DYNAMIS;#DYNAMIS,#DEPUTES;#TRASILE,#DYNAMIS;#DYNAMIS;#DYNAMIS,#POLIANTE;#DYNAMIS',
     ),
   ),
   'duryer_berenice_I01' => 
@@ -56292,6 +55995,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
       'string' => 'BÉRÉNICE-AMASIE/BÉRÉNICE-AMASIE-TIRINTE/BÉRÉNICE-AMASIE/TIRINTE-CRITON/BÉRÉNICE-AMASIE-CRITON/BÉRÉNICE-AMASIE',
+      'string-id' => '#BERENICE,#AMASIE;#BERENICE,#AMASIE,#TIRINTE;#BERENICE,#AMASIE;#TIRINTE,#CRITON;#BERENICE,#AMASIE,#CRITON;#BERENICE,#AMASIE',
     ),
   ),
   'duryer_berenice_I02' => 
@@ -56359,6 +56063,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
       'string' => 'BÉRÉNICE-AMASIE-TIRINTE/BÉRÉNICE-AMASIE/TIRINTE-CRITON/BÉRÉNICE-AMASIE-CRITON/BÉRÉNICE-AMASIE/BÉRÉNICE-TARSIS',
+      'string-id' => '#BERENICE,#AMASIE,#TIRINTE;#BERENICE,#AMASIE;#TIRINTE,#CRITON;#BERENICE,#AMASIE,#CRITON;#BERENICE,#AMASIE;#BERENICE,#TARSIS',
     ),
   ),
   'duryer_berenice_II01' => 
@@ -56426,6 +56131,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
       'string' => 'TIRINTE-LE ROI/TIRINTE-TARSIS-LE ROI/TIRINTE-LE ROI/TIRINTE/AMASIE-TIRINTE/AMASIE-TIRINTE-LÉONIDE',
+      'string-id' => '#TIRINTE,#LEROI;#TIRINTE,#TARSIS,#LEROI;#TIRINTE,#LEROI;#TIRINTE;#AMASIE,#TIRINTE;#AMASIE,#TIRINTE,#LEONIDE',
     ),
   ),
   'duryer_berenice_IV01' => 
@@ -56502,6 +56208,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
       'string' => 'AMASIE-TIRINTE/TIRINTE/TIRINTE-TARSIS/BÉRÉNICE-TARSIS/CRITON-TARSIS/CRITON-LÉONIDE',
+      'string-id' => '#AMASIE,#TIRINTE;#TIRINTE;#TIRINTE,#TARSIS;#BERENICE,#TARSIS;#CRITON,#TARSIS;#CRITON,#LEONIDE',
     ),
   ),
   'duryer_berenice_IV02' => 
@@ -56569,6 +56276,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
       'string' => 'TIRINTE/TIRINTE-TARSIS/BÉRÉNICE-TARSIS/CRITON-TARSIS/CRITON-LÉONIDE/TARSIS',
+      'string-id' => '#TIRINTE;#TIRINTE,#TARSIS;#BERENICE,#TARSIS;#CRITON,#TARSIS;#CRITON,#LEONIDE;#TARSIS',
     ),
   ),
   'duryer_berenice_V01' => 
@@ -56645,6 +56353,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
       'string' => 'BÉRÉNICE-AMASIE/BÉRÉNICE-TARSIS/TARSIS/TIRINTE-TARSIS/TARSIS-LE ROI/BÉRÉNICE-AMASIE-TIRINTE-CRITON-TARSIS-LE ROI',
+      'string-id' => '#BERENICE,#AMASIE;#BERENICE,#TARSIS;#TARSIS;#TIRINTE,#TARSIS;#TARSIS,#LEROI;#BERENICE,#AMASIE,#TIRINTE,#CRITON,#TARSIS,#LEROI',
     ),
   ),
   'duryer_anaxandre_I01' => 
@@ -56678,6 +56387,15 @@
         4 => 1,
         5 => 1,
       ),
+      '#ALPHENOR' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
       '#PRODOTE' => 
       array (
         0 => 0,
@@ -56702,7 +56420,8 @@
       'titleId' => 'Anaxandre',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
-      'string' => 'CÉPHISE/CÉPHISE-ASTÉRIE/LE ROI-CÉPHISE/CÉPHISE/CÉPHISE-ASTÉRIE-PRODOTE/ASTÉRIE-PRODOTE',
+      'string' => 'CÉPHISE-APHÉNOR/CÉPHISE-ASTÉRIE/LE ROI-CÉPHISE/CÉPHISE/CÉPHISE-ASTÉRIE-PRODOTE/ASTÉRIE-PRODOTE',
+      'string-id' => '#CEPHISE,#ALPHENOR;#CEPHISE,#ASTERIE;#LEROI,#CEPHISE;#CEPHISE;#CEPHISE,#ASTERIE,#PRODOTE;#ASTERIE,#PRODOTE',
     ),
   ),
   'duryer_anaxandre_II01' => 
@@ -56745,6 +56464,15 @@
         4 => 1,
         5 => 0,
       ),
+      '#ALPHENOR' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 1,
+        4 => 0,
+        5 => 0,
+      ),
     ),
     'id' => 
     array (
@@ -56760,7 +56488,8 @@
       'titleId' => 'Anaxandre',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
-      'string' => 'ANAXANDRE-PHÉDIME/ALCIONE-ANAXANDRE/ANAXANDRE-PHÉDIME/ANAXANDRE/ANAXANDRE-PHÉDIME/ASTÉRIE-ANAXANDRE',
+      'string' => 'ANAXANDRE-PHÉDIME/ALCIONE-ANAXANDRE/ANAXANDRE-PHÉDIME/ANAXANDRE-APHÉNOR/ANAXANDRE-PHÉDIME/ASTÉRIE-ANAXANDRE',
+      'string-id' => '#ANAXANDRE,#PHEDIME;#ALCIONE,#ANAXANDRE;#ANAXANDRE,#PHEDIME;#ANAXANDRE,#ALPHENOR;#ANAXANDRE,#PHEDIME;#ASTERIE,#ANAXANDRE',
     ),
   ),
   'duryer_anaxandre_II02' => 
@@ -56803,6 +56532,15 @@
         4 => 0,
         5 => 1,
       ),
+      '#ALPHENOR' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
     ),
     'id' => 
     array (
@@ -56818,7 +56556,8 @@
       'titleId' => 'Anaxandre',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
-      'string' => 'ALCIONE-ANAXANDRE/ANAXANDRE-PHÉDIME/ANAXANDRE/ANAXANDRE-PHÉDIME/ASTÉRIE-ANAXANDRE/ANAXANDRE-PHÉDIME',
+      'string' => 'ALCIONE-ANAXANDRE/ANAXANDRE-PHÉDIME/ANAXANDRE-APHÉNOR/ANAXANDRE-PHÉDIME/ASTÉRIE-ANAXANDRE/ANAXANDRE-PHÉDIME',
+      'string-id' => '#ALCIONE,#ANAXANDRE;#ANAXANDRE,#PHEDIME;#ANAXANDRE,#ALPHENOR;#ANAXANDRE,#PHEDIME;#ASTERIE,#ANAXANDRE;#ANAXANDRE,#PHEDIME',
     ),
   ),
   'duryer_anaxandre_II03' => 
@@ -56852,6 +56591,15 @@
         4 => 1,
         5 => 1,
       ),
+      '#ALPHENOR' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
       '#PRODOTE' => 
       array (
         0 => 0,
@@ -56876,7 +56624,8 @@
       'titleId' => 'Anaxandre',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
-      'string' => 'ANAXANDRE-PHÉDIME/ANAXANDRE/ANAXANDRE-PHÉDIME/ASTÉRIE-ANAXANDRE/ANAXANDRE-PHÉDIME/ANAXANDRE-PHÉDIME-PRODOTE',
+      'string' => 'ANAXANDRE-PHÉDIME/ANAXANDRE-APHÉNOR/ANAXANDRE-PHÉDIME/ASTÉRIE-ANAXANDRE/ANAXANDRE-PHÉDIME/ANAXANDRE-PHÉDIME-PRODOTE',
+      'string-id' => '#ANAXANDRE,#PHEDIME;#ANAXANDRE,#ALPHENOR;#ANAXANDRE,#PHEDIME;#ASTERIE,#ANAXANDRE;#ANAXANDRE,#PHEDIME;#ANAXANDRE,#PHEDIME,#PRODOTE',
     ),
   ),
   'duryer_anaxandre_IV01' => 
@@ -56944,6 +56693,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
       'string' => 'ALCIONE/CÉPHISE-ALCIONE-ASTÉRIE/CÉPHISE-ALCIONE-ANAXANDRE/CÉPHISE-ASTÉRIE-ANAXANDRE/CÉPHISE-ASTÉRIE/CÉPHISE-ASTÉRIE-PRODOTE',
+      'string-id' => '#ALCIONE;#CEPHISE,#ALCIONE,#ASTERIE;#CEPHISE,#ALCIONE,#ANAXANDRE;#CEPHISE,#ASTERIE,#ANAXANDRE;#CEPHISE,#ASTERIE;#CEPHISE,#ASTERIE,#PRODOTE',
     ),
   ),
   'duryer_anaxandre_V01' => 
@@ -56977,6 +56727,15 @@
         4 => 0,
         5 => 0,
       ),
+      '#ALPHENOR' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 1,
+        4 => 1,
+        5 => 0,
+      ),
       '#PRODOTE' => 
       array (
         0 => 0,
@@ -57001,7 +56760,8 @@
       'titleId' => 'Anaxandre',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
-      'string' => 'ALCIONE-ANAXANDRE/ANAXANDRE-PRODOTE/PRODOTE/PRODOTE/CÉPHISE/CÉPHISE',
+      'string' => 'ALCIONE-ANAXANDRE/ANAXANDRE-PRODOTE/PRODOTE/APHÉNOR-PRODOTE/CÉPHISE-APHÉNOR/CÉPHISE',
+      'string-id' => '#ALCIONE,#ANAXANDRE;#ANAXANDRE,#PRODOTE;#PRODOTE;#ALPHENOR,#PRODOTE;#CEPHISE,#ALPHENOR;#CEPHISE',
     ),
   ),
   'duryer_anaxandre_V02' => 
@@ -57035,6 +56795,15 @@
         4 => 0,
         5 => 0,
       ),
+      '#ALPHENOR' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 1,
+        4 => 0,
+        5 => 0,
+      ),
       '#PRODOTE' => 
       array (
         0 => 1,
@@ -57059,7 +56828,8 @@
       'titleId' => 'Anaxandre',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
-      'string' => 'ANAXANDRE-PRODOTE/PRODOTE/PRODOTE/CÉPHISE/CÉPHISE/LE ROI-CÉPHISE-ALCIONE-PRODOTE',
+      'string' => 'ANAXANDRE-PRODOTE/PRODOTE/APHÉNOR-PRODOTE/CÉPHISE-APHÉNOR/CÉPHISE/LE ROI-CÉPHISE-ALCIONE-PRODOTE',
+      'string-id' => '#ANAXANDRE,#PRODOTE;#PRODOTE;#ALPHENOR,#PRODOTE;#CEPHISE,#ALPHENOR;#CEPHISE;#LEROI,#CEPHISE,#ALCIONE,#PRODOTE',
     ),
   ),
   'duryer_anaxandre_V03' => 
@@ -57093,6 +56863,15 @@
         4 => 0,
         5 => 1,
       ),
+      '#ALPHENOR' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 1,
+        3 => 0,
+        4 => 0,
+        5 => 1,
+      ),
       '#PRODOTE' => 
       array (
         0 => 1,
@@ -57117,7 +56896,8 @@
       'titleId' => 'Anaxandre',
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
-      'string' => 'PRODOTE/PRODOTE/CÉPHISE/CÉPHISE/LE ROI-CÉPHISE-ALCIONE-PRODOTE/LE ROI-CÉPHISE-ALCIONE-ANAXANDRE-PRODOTE',
+      'string' => 'PRODOTE/APHÉNOR-PRODOTE/CÉPHISE-APHÉNOR/CÉPHISE/LE ROI-CÉPHISE-ALCIONE-PRODOTE/LE ROI-CÉPHISE-ALCIONE-ANAXANDRE-APHÉNOR-PRODOTE',
+      'string-id' => '#PRODOTE;#ALPHENOR,#PRODOTE;#CEPHISE,#ALPHENOR;#CEPHISE;#LEROI,#CEPHISE,#ALCIONE,#PRODOTE;#LEROI,#CEPHISE,#ALCIONE,#ANAXANDRE,#ALPHENOR,#PRODOTE',
     ),
   ),
   'duryer_alcionee_IV01' => 
@@ -57194,6 +56974,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'DuRyer',
       'string' => 'ALCIONÉE-ACHATE-CALLISTHENE/ALCIONÉE-ACHATE-ALCIRE/ALCIONÉE-ACHATE/LYDIE-LE ROI-ALCIRE-CALLISTHENE/ALCIONÉE-LE ROI/ALCIONÉE',
+      'string-id' => '#ALCIONEE,#ACHATE,#CALLISTHENE;#ALCIONEE,#ACHATE,#ALCIRE;#ALCIONEE,#ACHATE;#LYDIE,#LEROI,#ALCIRE,#CALLISTHENE;#ALCIONEE,#LEROI;#ALCIONEE',
     ),
   ),
   'duryer_alcimedon_II01' => 
@@ -57261,6 +57042,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
       'string' => 'DAPHNÉ/DAPHNÉ-SCAMANDRE-PHILANTE/DAPHNÉ-SCAMANDRE-PHILANTE/DAPHNÉ-SCAMANDRE/DAPHNÉ-SCAMANDRE-RODOPE/DAPHNÉ-SCAMANDRE-RODOPE-TIRÈNE',
+      'string-id' => '#DAPHNE;#DAPHNE,#SCAMANDRE,#PHILANTE;#DAPHNE,#SCAMANDRE,#PHILANTE;#DAPHNE,#SCAMANDRE;#DAPHNE,#SCAMANDRE,#RODOPE;#DAPHNE,#SCAMANDRE,#RODOPE,#TIRENE',
     ),
   ),
   'duryer_alcimedon_IV01' => 
@@ -57319,6 +57101,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
       'string' => 'TIRÈNE/RODOPE-TIRÈNE/DAPHNÉ-TIRÈNE/DAPHNÉ-SCAMANDRE-PHILANTE-TIRÈNE/SCAMANDRE-PHILANTE-RODOPE/RODOPE-TIRÈNE',
+      'string-id' => '#TIRENE;#RODOPE,#TIRENE;#DAPHNE,#TIRENE;#DAPHNE,#SCAMANDRE,#PHILANTE,#TIRENE;#SCAMANDRE,#PHILANTE,#RODOPE;#RODOPE,#TIRENE',
     ),
   ),
   'duryer_alcimedon_IV02' => 
@@ -57377,6 +57160,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuRyer',
       'string' => 'RODOPE-TIRÈNE/DAPHNÉ-TIRÈNE/DAPHNÉ-SCAMANDRE-PHILANTE-TIRÈNE/SCAMANDRE-PHILANTE-RODOPE/RODOPE-TIRÈNE/RODOPE',
+      'string-id' => '#RODOPE,#TIRENE;#DAPHNE,#TIRENE;#DAPHNE,#SCAMANDRE,#PHILANTE,#TIRENE;#SCAMANDRE,#PHILANTE,#RODOPE;#RODOPE,#TIRENE;#RODOPE',
     ),
   ),
   'dubosc_balancedetat_II01' => 
@@ -57426,6 +57210,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuBoscdeMontandre',
       'string' => 'THÉMIDE-PAMPHAGE/THÉMIDE/ANDRIGENE-THÉMIDE/ANDRIGENE/ANDRIGENE/',
+      'string-id' => '#THEMIDE,#PAMPHAGE;#THEMIDE;#ANDRIGENE,#THEMIDE;#ANDRIGENE;#ANDRIGENE;',
     ),
   ),
   'dubosc_balancedetat_IV01' => 
@@ -57475,6 +57260,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'DuBoscdeMontandre',
       'string' => 'PROTARQUE/ANDRIGENE-PROTARQUE/ANDRIGENE/THÉMIDE-PROTARQUE/ANDRIGENE-PROTARQUE/ANDRIGENE',
+      'string-id' => '#PROTARQUE;#ANDRIGENE,#PROTARQUE;#ANDRIGENE;#THEMIDE,#PROTARQUE;#ANDRIGENE,#PROTARQUE;#ANDRIGENE',
     ),
   ),
   'donneaudevise_zelinde_I01' => 
@@ -57533,6 +57319,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'ORIANE-ARGIMONT/ORIANE-ARGIMONT-DAMIS/ORIANE-ARGIMONT/ORIANE-ARGIMONT-ÉGISTE/ORIANE/ORIANE-ARGIMONT',
+      'string-id' => '#ORIANE,#ARGIMONT;#ORIANE,#ARGIMONT,#DAMIS;#ORIANE,#ARGIMONT;#ORIANE,#ARGIMONT,#EGISTE;#ORIANE;#ORIANE,#ARGIMONT',
     ),
   ),
   'donneaudevise_zelinde_I02' => 
@@ -57600,6 +57387,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'ORIANE-ARGIMONT-DAMIS/ORIANE-ARGIMONT/ORIANE-ARGIMONT-ÉGISTE/ORIANE/ORIANE-ARGIMONT/ORIANE-ARGIMONT-ARISTIDE',
+      'string-id' => '#ORIANE,#ARGIMONT,#DAMIS;#ORIANE,#ARGIMONT;#ORIANE,#ARGIMONT,#EGISTE;#ORIANE;#ORIANE,#ARGIMONT;#ORIANE,#ARGIMONT,#ARISTIDE',
     ),
   ),
   'donneaudevise_zelinde_I03' => 
@@ -57667,6 +57455,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'ORIANE-ARGIMONT/ORIANE-ARGIMONT-ÉGISTE/ORIANE/ORIANE-ARGIMONT/ORIANE-ARGIMONT-ARISTIDE/ORIANE-ARGIMONT-ZÉLINDE-ARISTIDE-ÉGISTE',
+      'string-id' => '#ORIANE,#ARGIMONT;#ORIANE,#ARGIMONT,#EGISTE;#ORIANE;#ORIANE,#ARGIMONT;#ORIANE,#ARGIMONT,#ARISTIDE;#ORIANE,#ARGIMONT,#ZELINDE,#ARISTIDE,#EGISTE',
     ),
   ),
   'donneaudevise_zelinde_I04' => 
@@ -57743,6 +57532,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'ORIANE-ARGIMONT-ÉGISTE/ORIANE/ORIANE-ARGIMONT/ORIANE-ARGIMONT-ARISTIDE/ORIANE-ARGIMONT-ZÉLINDE-ARISTIDE-ÉGISTE/ORIANE-ARGIMONT-ZÉLINDE-ARISTIDE-CLÉRONTE',
+      'string-id' => '#ORIANE,#ARGIMONT,#EGISTE;#ORIANE;#ORIANE,#ARGIMONT;#ORIANE,#ARGIMONT,#ARISTIDE;#ORIANE,#ARGIMONT,#ZELINDE,#ARISTIDE,#EGISTE;#ORIANE,#ARGIMONT,#ZELINDE,#ARISTIDE,#CLERONTE',
     ),
   ),
   'donneaudevise_zelinde_I05' => 
@@ -57828,6 +57618,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'ORIANE/ORIANE-ARGIMONT/ORIANE-ARGIMONT-ARISTIDE/ORIANE-ARGIMONT-ZÉLINDE-ARISTIDE-ÉGISTE/ORIANE-ARGIMONT-ZÉLINDE-ARISTIDE-CLÉRONTE/ORIANE-MÉLANTE-ARGIMONT-ZÉLINDE-ARISTIDE',
+      'string-id' => '#ORIANE;#ORIANE,#ARGIMONT;#ORIANE,#ARGIMONT,#ARISTIDE;#ORIANE,#ARGIMONT,#ZELINDE,#ARISTIDE,#EGISTE;#ORIANE,#ARGIMONT,#ZELINDE,#ARISTIDE,#CLERONTE;#ORIANE,#MELANTE,#ARGIMONT,#ZELINDE,#ARISTIDE',
     ),
   ),
   'donneaudevise_zelinde_I06' => 
@@ -57913,6 +57704,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'ORIANE-ARGIMONT/ORIANE-ARGIMONT-ARISTIDE/ORIANE-ARGIMONT-ZÉLINDE-ARISTIDE-ÉGISTE/ORIANE-ARGIMONT-ZÉLINDE-ARISTIDE-CLÉRONTE/ORIANE-MÉLANTE-ARGIMONT-ZÉLINDE-ARISTIDE/ORIANE-MÉLANTE',
+      'string-id' => '#ORIANE,#ARGIMONT;#ORIANE,#ARGIMONT,#ARISTIDE;#ORIANE,#ARGIMONT,#ZELINDE,#ARISTIDE,#EGISTE;#ORIANE,#ARGIMONT,#ZELINDE,#ARISTIDE,#CLERONTE;#ORIANE,#MELANTE,#ARGIMONT,#ZELINDE,#ARISTIDE;#ORIANE,#MELANTE',
     ),
   ),
   'donneaudevise_zelinde_I07' => 
@@ -57998,6 +57790,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'ORIANE-ARGIMONT-ARISTIDE/ORIANE-ARGIMONT-ZÉLINDE-ARISTIDE-ÉGISTE/ORIANE-ARGIMONT-ZÉLINDE-ARISTIDE-CLÉRONTE/ORIANE-MÉLANTE-ARGIMONT-ZÉLINDE-ARISTIDE/ORIANE-MÉLANTE/ORIANE-MÉLANTE-CLÉARQUE',
+      'string-id' => '#ORIANE,#ARGIMONT,#ARISTIDE;#ORIANE,#ARGIMONT,#ZELINDE,#ARISTIDE,#EGISTE;#ORIANE,#ARGIMONT,#ZELINDE,#ARISTIDE,#CLERONTE;#ORIANE,#MELANTE,#ARGIMONT,#ZELINDE,#ARISTIDE;#ORIANE,#MELANTE;#ORIANE,#MELANTE,#CLEARQUE',
     ),
   ),
   'donneaudevise_zelinde_I08' => 
@@ -58074,6 +57867,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'ORIANE-ARGIMONT-ZÉLINDE-ARISTIDE-ÉGISTE/ORIANE-ARGIMONT-ZÉLINDE-ARISTIDE-CLÉRONTE/ORIANE-MÉLANTE-ARGIMONT-ZÉLINDE-ARISTIDE/ORIANE-MÉLANTE/ORIANE-MÉLANTE-CLÉARQUE/ORIANE-MÉLANTE-CLÉARQUE',
+      'string-id' => '#ORIANE,#ARGIMONT,#ZELINDE,#ARISTIDE,#EGISTE;#ORIANE,#ARGIMONT,#ZELINDE,#ARISTIDE,#CLERONTE;#ORIANE,#MELANTE,#ARGIMONT,#ZELINDE,#ARISTIDE;#ORIANE,#MELANTE;#ORIANE,#MELANTE,#CLEARQUE;#ORIANE,#MELANTE,#CLEARQUE',
     ),
   ),
   'donneaudevise_vengeancedesmarquis_I01' => 
@@ -58132,6 +57926,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'ALCIPE/CLÉANTE-ARISTE-ALCIPE/CLÉANTE-ORPHISE-LUCILE-ARISTE-ALCIPE/CLÉANTE-ORPHISE-LUCILE-ARISTE-ALCIPE/CLÉANTE-ORPHISE-LUCILE-ARISTE-ALCIPE-CLARICE/CLÉANTE-ORPHISE-LUCILE-ARISTE-ALCIPE-CLARICE',
+      'string-id' => '#ALCIPE;#CLEANTE,#ARISTE,#ALCIPE;#CLEANTE,#ORPHISE,#LUCILE,#ARISTE,#ALCIPE;#CLEANTE,#ORPHISE,#LUCILE,#ARISTE,#ALCIPE;#CLEANTE,#ORPHISE,#LUCILE,#ARISTE,#ALCIPE,#CLARICE;#CLEANTE,#ORPHISE,#LUCILE,#ARISTE,#ALCIPE,#CLARICE',
     ),
   ),
   'donneaudevise_vengeancedesmarquis_I02' => 
@@ -58181,12 +57976,31 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'CLÉANTE-ARISTE-ALCIPE/CLÉANTE-ORPHISE-LUCILE-ARISTE-ALCIPE/CLÉANTE-ORPHISE-LUCILE-ARISTE-ALCIPE/CLÉANTE-ORPHISE-LUCILE-ARISTE-ALCIPE-CLARICE/CLÉANTE-ORPHISE-LUCILE-ARISTE-ALCIPE-CLARICE/CLÉANTE-ORPHISE-LUCILE-ARISTE-ALCIPE-CLARICE',
+      'string-id' => '#CLEANTE,#ARISTE,#ALCIPE;#CLEANTE,#ORPHISE,#LUCILE,#ARISTE,#ALCIPE;#CLEANTE,#ORPHISE,#LUCILE,#ARISTE,#ALCIPE;#CLEANTE,#ORPHISE,#LUCILE,#ARISTE,#ALCIPE,#CLARICE;#CLEANTE,#ORPHISE,#LUCILE,#ARISTE,#ALCIPE,#CLARICE;#CLEANTE,#ORPHISE,#LUCILE,#ARISTE,#ALCIPE,#CLARICE',
     ),
   ),
   'donneaudevise_gentilhommeguepin_I01' => 
   array (
     'pattern' => 
     array (
+      '#LEVICOMTE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#CLARICE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 0,
+        4 => 1,
+        5 => 1,
+      ),
       '#LISETTE' => 
       array (
         0 => 0,
@@ -58196,7 +58010,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#MONSIEURDECORNANVILLE' => 
+      '#CORNANVILLE' => 
       array (
         0 => 0,
         1 => 0,
@@ -58205,7 +58019,7 @@
         4 => 1,
         5 => 0,
       ),
-      '#SONFILS' => 
+      '#BOISDOUILLETFILS' => 
       array (
         0 => 0,
         1 => 0,
@@ -58229,13 +58043,32 @@
       'titleId' => 'LeGentilhommeGuespin',
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
-      'string' => '/LISETTE/LISETTE/LISETTE/LISETTE-MONSIEUR DE CORNANVILLE/LISETTE-MONSIEUR DE BOIS-DOUILLET-SON FILS',
+      'string' => 'LUCRÈCE, sa femme-CLARICE, soeur du Vicomte/LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE/LE VICOMTE DE LA SABLONNIERE-LISETTE/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CORNANVILLE/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE BOIS-DOUILLET-SON FILS',
+      'string-id' => '#LUCRECE,#CLARICE;#LUCRECE,#CLARICE,#LISETTE;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE;#LEVICOMTE,#LISETTE;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE,#CORNANVILLE;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE,#BOISDOUILLET,#BOISDOUILLETFILS',
     ),
   ),
   'donneaudevise_gentilhommeguepin_I02' => 
   array (
     'pattern' => 
     array (
+      '#LEVICOMTE' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#CLARICE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 0,
+        3 => 1,
+        4 => 1,
+        5 => 0,
+      ),
       '#LISETTE' => 
       array (
         0 => 1,
@@ -58245,7 +58078,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#MONSIEURDECORNANVILLE' => 
+      '#CORNANVILLE' => 
       array (
         0 => 0,
         1 => 0,
@@ -58254,7 +58087,16 @@
         4 => 0,
         5 => 0,
       ),
-      '#SONFILS' => 
+      '#BOISDOUILLET' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 1,
+        5 => 1,
+      ),
+      '#BOISDOUILLETFILS' => 
       array (
         0 => 0,
         1 => 0,
@@ -58278,13 +58120,23 @@
       'titleId' => 'LeGentilhommeGuespin',
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
-      'string' => 'LISETTE/LISETTE/LISETTE/LISETTE-MONSIEUR DE CORNANVILLE/LISETTE-MONSIEUR DE BOIS-DOUILLET-SON FILS/LISETTE',
+      'string' => 'LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE/LE VICOMTE DE LA SABLONNIERE-LISETTE/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CORNANVILLE/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE BOIS-DOUILLET-SON FILS/LE VICOMTE DE LA SABLONNIERE-LISETTE-MONSIEUR DE BOIS-DOUILLET',
+      'string-id' => '#LUCRECE,#CLARICE,#LISETTE;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE;#LEVICOMTE,#LISETTE;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE,#CORNANVILLE;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE,#BOISDOUILLET,#BOISDOUILLETFILS;#LEVICOMTE,#LISETTE,#BOISDOUILLET',
     ),
   ),
   'donneaudevise_gentilhommeguepin_I03' => 
   array (
     'pattern' => 
     array (
+      '#CLARICE' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 1,
+        3 => 1,
+        4 => 0,
+        5 => 1,
+      ),
       '#LISETTE' => 
       array (
         0 => 1,
@@ -58294,7 +58146,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#MONSIEURDECORNANVILLE' => 
+      '#CORNANVILLE' => 
       array (
         0 => 0,
         1 => 0,
@@ -58303,7 +58155,16 @@
         4 => 0,
         5 => 0,
       ),
-      '#SONFILS' => 
+      '#BOISDOUILLET' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 1,
+        4 => 1,
+        5 => 0,
+      ),
+      '#BOISDOUILLETFILS' => 
       array (
         0 => 0,
         1 => 0,
@@ -58327,13 +58188,32 @@
       'titleId' => 'LeGentilhommeGuespin',
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
-      'string' => 'LISETTE/LISETTE/LISETTE-MONSIEUR DE CORNANVILLE/LISETTE-MONSIEUR DE BOIS-DOUILLET-SON FILS/LISETTE/LISETTE',
+      'string' => 'LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE/LE VICOMTE DE LA SABLONNIERE-LISETTE/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CORNANVILLE/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE BOIS-DOUILLET-SON FILS/LE VICOMTE DE LA SABLONNIERE-LISETTE-MONSIEUR DE BOIS-DOUILLET/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE',
+      'string-id' => '#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE;#LEVICOMTE,#LISETTE;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE,#CORNANVILLE;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE,#BOISDOUILLET,#BOISDOUILLETFILS;#LEVICOMTE,#LISETTE,#BOISDOUILLET;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE',
     ),
   ),
   'donneaudevise_gentilhommeguepin_I04' => 
   array (
     'pattern' => 
     array (
+      '#LUCRECE' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 1,
+        3 => 0,
+        4 => 1,
+        5 => 1,
+      ),
+      '#CLARICE' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 1,
+        3 => 0,
+        4 => 1,
+        5 => 0,
+      ),
       '#LISETTE' => 
       array (
         0 => 1,
@@ -58343,7 +58223,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#MONSIEURDECORNANVILLE' => 
+      '#CORNANVILLE' => 
       array (
         0 => 0,
         1 => 1,
@@ -58352,7 +58232,16 @@
         4 => 0,
         5 => 0,
       ),
-      '#SONFILS' => 
+      '#BOISDOUILLET' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 1,
+        4 => 0,
+        5 => 0,
+      ),
+      '#BOISDOUILLETFILS' => 
       array (
         0 => 0,
         1 => 0,
@@ -58376,13 +58265,32 @@
       'titleId' => 'LeGentilhommeGuespin',
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
-      'string' => 'LISETTE/LISETTE-MONSIEUR DE CORNANVILLE/LISETTE-MONSIEUR DE BOIS-DOUILLET-SON FILS/LISETTE/LISETTE/LISETTE',
+      'string' => 'LE VICOMTE DE LA SABLONNIERE-LISETTE/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CORNANVILLE/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE BOIS-DOUILLET-SON FILS/LE VICOMTE DE LA SABLONNIERE-LISETTE-MONSIEUR DE BOIS-DOUILLET/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-LISETTE',
+      'string-id' => '#LEVICOMTE,#LISETTE;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE,#CORNANVILLE;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE,#BOISDOUILLET,#BOISDOUILLETFILS;#LEVICOMTE,#LISETTE,#BOISDOUILLET;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE;#LEVICOMTE,#LUCRECE,#LISETTE',
     ),
   ),
   'donneaudevise_gentilhommeguepin_I05' => 
   array (
     'pattern' => 
     array (
+      '#LUCRECE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 0,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#CLARICE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 0,
+        3 => 1,
+        4 => 0,
+        5 => 1,
+      ),
       '#LISETTE' => 
       array (
         0 => 1,
@@ -58392,7 +58300,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#MONSIEURDECORNANVILLE' => 
+      '#CORNANVILLE' => 
       array (
         0 => 1,
         1 => 0,
@@ -58401,7 +58309,16 @@
         4 => 0,
         5 => 0,
       ),
-      '#SONFILS' => 
+      '#BOISDOUILLET' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 1,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
+      '#BOISDOUILLETFILS' => 
       array (
         0 => 0,
         1 => 1,
@@ -58410,7 +58327,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#MONSIEURDECHANTEPIE' => 
+      '#COCHONVILAIN' => 
       array (
         0 => 0,
         1 => 0,
@@ -58434,13 +58351,32 @@
       'titleId' => 'LeGentilhommeGuespin',
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
-      'string' => 'LISETTE-MONSIEUR DE CORNANVILLE/LISETTE-MONSIEUR DE BOIS-DOUILLET-SON FILS/LISETTE/LISETTE/LISETTE/LISETTE-MONSIEUR DE CHANTE-PIE',
+      'string' => 'LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CORNANVILLE/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE BOIS-DOUILLET-SON FILS/LE VICOMTE DE LA SABLONNIERE-LISETTE-MONSIEUR DE BOIS-DOUILLET/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-LISETTE/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CHANTE-PIE-MONSIEUR DE COCHON-VILAIN',
+      'string-id' => '#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE,#CORNANVILLE;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE,#BOISDOUILLET,#BOISDOUILLETFILS;#LEVICOMTE,#LISETTE,#BOISDOUILLET;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE;#LEVICOMTE,#LUCRECE,#LISETTE;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE,#CHANTEPIE,#COCHONVILAIN',
     ),
   ),
   'donneaudevise_gentilhommeguepin_I06' => 
   array (
     'pattern' => 
     array (
+      '#LUCRECE' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#CLARICE' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 1,
+        3 => 0,
+        4 => 1,
+        5 => 1,
+      ),
       '#LISETTE' => 
       array (
         0 => 1,
@@ -58450,7 +58386,16 @@
         4 => 1,
         5 => 1,
       ),
-      '#SONFILS' => 
+      '#BOISDOUILLET' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
+      '#BOISDOUILLETFILS' => 
       array (
         0 => 1,
         1 => 0,
@@ -58459,14 +58404,14 @@
         4 => 0,
         5 => 0,
       ),
-      '#MONSIEURDECHANTEPIE' => 
+      '#COCHONVILAIN' => 
       array (
         0 => 0,
         1 => 0,
         2 => 0,
         3 => 0,
         4 => 1,
-        5 => 0,
+        5 => 1,
       ),
     ),
     'id' => 
@@ -58483,13 +58428,41 @@
       'titleId' => 'LeGentilhommeGuespin',
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
-      'string' => 'LISETTE-MONSIEUR DE BOIS-DOUILLET-SON FILS/LISETTE/LISETTE/LISETTE/LISETTE-MONSIEUR DE CHANTE-PIE/LISETTE',
+      'string' => 'LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE BOIS-DOUILLET-SON FILS/LE VICOMTE DE LA SABLONNIERE-LISETTE-MONSIEUR DE BOIS-DOUILLET/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-LISETTE/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CHANTE-PIE-MONSIEUR DE COCHON-VILAIN/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CHANTE-PIE-MONSIEUR DE COCHON-VILAIN',
+      'string-id' => '#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE,#BOISDOUILLET,#BOISDOUILLETFILS;#LEVICOMTE,#LISETTE,#BOISDOUILLET;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE;#LEVICOMTE,#LUCRECE,#LISETTE;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE,#CHANTEPIE,#COCHONVILAIN;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE,#CHANTEPIE,#COCHONVILAIN',
     ),
   ),
   'donneaudevise_gentilhommeguepin_I07' => 
   array (
     'pattern' => 
     array (
+      '#LEVICOMTE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#LUCRECE' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 0,
+      ),
+      '#CLARICE' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 0,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
       '#LISETTE' => 
       array (
         0 => 1,
@@ -58499,13 +58472,31 @@
         4 => 1,
         5 => 0,
       ),
-      '#MONSIEURDECHANTEPIE' => 
+      '#BOISDOUILLET' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
+      '#CHANTEPIE' => 
       array (
         0 => 0,
         1 => 0,
         2 => 0,
         3 => 1,
-        4 => 0,
+        4 => 1,
+        5 => 1,
+      ),
+      '#COCHONVILAIN' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 1,
+        4 => 1,
         5 => 0,
       ),
     ),
@@ -58523,13 +58514,32 @@
       'titleId' => 'LeGentilhommeGuespin',
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
-      'string' => 'LISETTE/LISETTE/LISETTE/LISETTE-MONSIEUR DE CHANTE-PIE/LISETTE/',
+      'string' => 'LE VICOMTE DE LA SABLONNIERE-LISETTE-MONSIEUR DE BOIS-DOUILLET/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-LISETTE/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CHANTE-PIE-MONSIEUR DE COCHON-VILAIN/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CHANTE-PIE-MONSIEUR DE COCHON-VILAIN/LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-MONSIEUR DE CHANTE-PIE',
+      'string-id' => '#LEVICOMTE,#LISETTE,#BOISDOUILLET;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE;#LEVICOMTE,#LUCRECE,#LISETTE;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE,#CHANTEPIE,#COCHONVILAIN;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE,#CHANTEPIE,#COCHONVILAIN;#LEVICOMTE,#CLARICE,#CHANTEPIE',
     ),
   ),
   'donneaudevise_gentilhommeguepin_I08' => 
   array (
     'pattern' => 
     array (
+      '#LEVICOMTE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 0,
+      ),
+      '#CLARICE' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
       '#LISETTE' => 
       array (
         0 => 1,
@@ -58539,12 +58549,21 @@
         4 => 0,
         5 => 0,
       ),
-      '#MONSIEURDECHANTEPIE' => 
+      '#CHANTEPIE' => 
       array (
         0 => 0,
         1 => 0,
         2 => 1,
-        3 => 0,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#COCHONVILAIN' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 1,
         4 => 0,
         5 => 0,
       ),
@@ -58563,13 +58582,32 @@
       'titleId' => 'LeGentilhommeGuespin',
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
-      'string' => 'LISETTE/LISETTE/LISETTE-MONSIEUR DE CHANTE-PIE/LISETTE//',
+      'string' => 'LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-LISETTE/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CHANTE-PIE-MONSIEUR DE COCHON-VILAIN/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CHANTE-PIE-MONSIEUR DE COCHON-VILAIN/LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-MONSIEUR DE CHANTE-PIE/CLARICE, soeur du Vicomte-MONSIEUR DE CHANTE-PIE',
+      'string-id' => '#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE;#LEVICOMTE,#LUCRECE,#LISETTE;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE,#CHANTEPIE,#COCHONVILAIN;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE,#CHANTEPIE,#COCHONVILAIN;#LEVICOMTE,#CLARICE,#CHANTEPIE;#CLARICE,#CHANTEPIE',
     ),
   ),
   'donneaudevise_gentilhommeguepin_I09' => 
   array (
     'pattern' => 
     array (
+      '#LEVICOMTE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 0,
+        5 => 0,
+      ),
+      '#CLARICE' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
       '#LISETTE' => 
       array (
         0 => 1,
@@ -58579,11 +58617,20 @@
         4 => 0,
         5 => 0,
       ),
-      '#MONSIEURDECHANTEPIE' => 
+      '#CHANTEPIE' => 
       array (
         0 => 0,
         1 => 1,
-        2 => 0,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 0,
+      ),
+      '#COCHONVILAIN' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 1,
         3 => 0,
         4 => 0,
         5 => 0,
@@ -58603,14 +58650,42 @@
       'titleId' => 'LeGentilhommeGuespin',
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
-      'string' => 'LISETTE/LISETTE-MONSIEUR DE CHANTE-PIE/LISETTE///',
+      'string' => 'LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-LISETTE/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CHANTE-PIE-MONSIEUR DE COCHON-VILAIN/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CHANTE-PIE-MONSIEUR DE COCHON-VILAIN/LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-MONSIEUR DE CHANTE-PIE/CLARICE, soeur du Vicomte-MONSIEUR DE CHANTE-PIE/CLARICE, soeur du Vicomte',
+      'string-id' => '#LEVICOMTE,#LUCRECE,#LISETTE;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE,#CHANTEPIE,#COCHONVILAIN;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE,#CHANTEPIE,#COCHONVILAIN;#LEVICOMTE,#CLARICE,#CHANTEPIE;#CLARICE,#CHANTEPIE;#CLARICE',
     ),
   ),
   'donneaudevise_gentilhommeguepin_I10' => 
   array (
     'pattern' => 
     array (
-      '#LISETTE' => 
+      '#LEVICOMTE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
+      '#CLARICE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#CHANTEPIE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 0,
+        5 => 0,
+      ),
+      '#COCHONVILAIN' => 
       array (
         0 => 1,
         1 => 1,
@@ -58619,16 +58694,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#MONSIEURDECHANTEPIE' => 
-      array (
-        0 => 1,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#MONSIEURDEBOISLEROUX' => 
+      '#BOISLEROUX' => 
       array (
         0 => 0,
         1 => 0,
@@ -58652,14 +58718,42 @@
       'titleId' => 'LeGentilhommeGuespin',
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
-      'string' => 'LISETTE-MONSIEUR DE CHANTE-PIE/LISETTE////MONSIEUR DE BOIS-LE-ROUX',
+      'string' => 'LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CHANTE-PIE-MONSIEUR DE COCHON-VILAIN/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CHANTE-PIE-MONSIEUR DE COCHON-VILAIN/LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-MONSIEUR DE CHANTE-PIE/CLARICE, soeur du Vicomte-MONSIEUR DE CHANTE-PIE/CLARICE, soeur du Vicomte/CLARICE, soeur du Vicomte-MONSIEUR DE BOIS-LE-ROUX',
+      'string-id' => '#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE,#CHANTEPIE,#COCHONVILAIN;#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE,#CHANTEPIE,#COCHONVILAIN;#LEVICOMTE,#CLARICE,#CHANTEPIE;#CLARICE,#CHANTEPIE;#CLARICE;#CLARICE,#BOISLEROUX',
     ),
   ),
   'donneaudevise_gentilhommeguepin_I11' => 
   array (
     'pattern' => 
     array (
-      '#LISETTE' => 
+      '#LEVICOMTE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 1,
+      ),
+      '#CLARICE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 0,
+      ),
+      '#CHANTEPIE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
+      '#COCHONVILAIN' => 
       array (
         0 => 1,
         1 => 0,
@@ -58668,14 +58762,14 @@
         4 => 0,
         5 => 0,
       ),
-      '#MONSIEURDEBOISLEROUX' => 
+      '#BOISLEROUX' => 
       array (
         0 => 0,
         1 => 0,
         2 => 0,
         3 => 0,
         4 => 1,
-        5 => 0,
+        5 => 1,
       ),
     ),
     'id' => 
@@ -58692,13 +58786,32 @@
       'titleId' => 'LeGentilhommeGuespin',
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
-      'string' => 'LISETTE////MONSIEUR DE BOIS-LE-ROUX/',
+      'string' => 'LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CHANTE-PIE-MONSIEUR DE COCHON-VILAIN/LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-MONSIEUR DE CHANTE-PIE/CLARICE, soeur du Vicomte-MONSIEUR DE CHANTE-PIE/CLARICE, soeur du Vicomte/CLARICE, soeur du Vicomte-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-MONSIEUR DE BOIS-LE-ROUX',
+      'string-id' => '#LEVICOMTE,#LUCRECE,#CLARICE,#LISETTE,#CHANTEPIE,#COCHONVILAIN;#LEVICOMTE,#CLARICE,#CHANTEPIE;#CLARICE,#CHANTEPIE;#CLARICE;#CLARICE,#BOISLEROUX;#LEVICOMTE,#BOISLEROUX',
     ),
   ),
   'donneaudevise_gentilhommeguepin_I12' => 
   array (
     'pattern' => 
     array (
+      '#LEVICOMTE' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 1,
+        5 => 1,
+      ),
+      '#CLARICE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 0,
+        5 => 0,
+      ),
       '#LISETTE' => 
       array (
         0 => 0,
@@ -58708,14 +58821,23 @@
         4 => 0,
         5 => 1,
       ),
-      '#MONSIEURDEBOISLEROUX' => 
+      '#CHANTEPIE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
+      '#BOISLEROUX' => 
       array (
         0 => 0,
         1 => 0,
         2 => 0,
         3 => 1,
-        4 => 0,
-        5 => 0,
+        4 => 1,
+        5 => 1,
       ),
     ),
     'id' => 
@@ -58732,13 +58854,32 @@
       'titleId' => 'LeGentilhommeGuespin',
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
-      'string' => '///MONSIEUR DE BOIS-LE-ROUX//LISETTE',
+      'string' => 'LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-MONSIEUR DE CHANTE-PIE/CLARICE, soeur du Vicomte-MONSIEUR DE CHANTE-PIE/CLARICE, soeur du Vicomte/CLARICE, soeur du Vicomte-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-LISETTE-MONSIEUR DE BOIS-LE-ROUX',
+      'string-id' => '#LEVICOMTE,#CLARICE,#CHANTEPIE;#CLARICE,#CHANTEPIE;#CLARICE;#CLARICE,#BOISLEROUX;#LEVICOMTE,#BOISLEROUX;#LEVICOMTE,#LISETTE,#BOISLEROUX',
     ),
   ),
   'donneaudevise_gentilhommeguepin_I13' => 
   array (
     'pattern' => 
     array (
+      '#LEVICOMTE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#CLARICE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 0,
+        4 => 0,
+        5 => 1,
+      ),
       '#LISETTE' => 
       array (
         0 => 0,
@@ -58748,13 +58889,22 @@
         4 => 1,
         5 => 1,
       ),
-      '#MONSIEURDEBOISLEROUX' => 
+      '#CHANTEPIE' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
+      '#BOISLEROUX' => 
       array (
         0 => 0,
         1 => 0,
         2 => 1,
-        3 => 0,
-        4 => 0,
+        3 => 1,
+        4 => 1,
         5 => 0,
       ),
     ),
@@ -58772,13 +58922,32 @@
       'titleId' => 'LeGentilhommeGuespin',
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
-      'string' => '//MONSIEUR DE BOIS-LE-ROUX//LISETTE/LISETTE',
+      'string' => 'CLARICE, soeur du Vicomte-MONSIEUR DE CHANTE-PIE/CLARICE, soeur du Vicomte/CLARICE, soeur du Vicomte-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-LISETTE-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-LISETTE',
+      'string-id' => '#CLARICE,#CHANTEPIE;#CLARICE;#CLARICE,#BOISLEROUX;#LEVICOMTE,#BOISLEROUX;#LEVICOMTE,#LISETTE,#BOISLEROUX;#LEVICOMTE,#CLARICE,#LISETTE',
     ),
   ),
   'donneaudevise_gentilhommeguepin_I14' => 
   array (
     'pattern' => 
     array (
+      '#LEVICOMTE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#CLARICE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 0,
+        3 => 0,
+        4 => 1,
+        5 => 1,
+      ),
       '#LISETTE' => 
       array (
         0 => 0,
@@ -58788,14 +58957,14 @@
         4 => 1,
         5 => 1,
       ),
-      '#MONSIEURDEBOISLEROUX' => 
+      '#BOISLEROUX' => 
       array (
         0 => 0,
         1 => 1,
-        2 => 0,
-        3 => 0,
+        2 => 1,
+        3 => 1,
         4 => 0,
-        5 => 0,
+        5 => 1,
       ),
     ),
     'id' => 
@@ -58812,13 +58981,41 @@
       'titleId' => 'LeGentilhommeGuespin',
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
-      'string' => '/MONSIEUR DE BOIS-LE-ROUX//LISETTE/LISETTE/LISETTE',
+      'string' => 'CLARICE, soeur du Vicomte/CLARICE, soeur du Vicomte-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-LISETTE-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-LISETTE/LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE BOIS-LE-ROUX',
+      'string-id' => '#CLARICE;#CLARICE,#BOISLEROUX;#LEVICOMTE,#BOISLEROUX;#LEVICOMTE,#LISETTE,#BOISLEROUX;#LEVICOMTE,#CLARICE,#LISETTE;#LEVICOMTE,#CLARICE,#LISETTE,#BOISLEROUX',
     ),
   ),
   'donneaudevise_gentilhommeguepin_I15' => 
   array (
     'pattern' => 
     array (
+      '#LEVICOMTE' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#LUCRECE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 1,
+      ),
+      '#CLARICE' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 0,
+        3 => 1,
+        4 => 1,
+        5 => 0,
+      ),
       '#LISETTE' => 
       array (
         0 => 0,
@@ -58828,13 +59025,13 @@
         4 => 1,
         5 => 1,
       ),
-      '#MONSIEURDEBOISLEROUX' => 
+      '#BOISLEROUX' => 
       array (
         0 => 1,
-        1 => 0,
-        2 => 0,
+        1 => 1,
+        2 => 1,
         3 => 0,
-        4 => 0,
+        4 => 1,
         5 => 0,
       ),
     ),
@@ -58852,13 +59049,41 @@
       'titleId' => 'LeGentilhommeGuespin',
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
-      'string' => 'MONSIEUR DE BOIS-LE-ROUX//LISETTE/LISETTE/LISETTE/LISETTE',
+      'string' => 'CLARICE, soeur du Vicomte-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-LISETTE-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-LISETTE/LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-LISETTE',
+      'string-id' => '#CLARICE,#BOISLEROUX;#LEVICOMTE,#BOISLEROUX;#LEVICOMTE,#LISETTE,#BOISLEROUX;#LEVICOMTE,#CLARICE,#LISETTE;#LEVICOMTE,#CLARICE,#LISETTE,#BOISLEROUX;#LEVICOMTE,#LUCRECE,#LISETTE',
     ),
   ),
   'donneaudevise_gentilhommeguepin_I16' => 
   array (
     'pattern' => 
     array (
+      '#LEVICOMTE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#LUCRECE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 1,
+        5 => 0,
+      ),
+      '#CLARICE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 1,
+        4 => 0,
+        5 => 0,
+      ),
       '#LISETTE' => 
       array (
         0 => 0,
@@ -58866,6 +59091,15 @@
         2 => 1,
         3 => 1,
         4 => 1,
+        5 => 0,
+      ),
+      '#BOISLEROUX' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 0,
+        3 => 1,
+        4 => 0,
         5 => 0,
       ),
     ),
@@ -58883,13 +59117,41 @@
       'titleId' => 'LeGentilhommeGuespin',
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
-      'string' => '/LISETTE/LISETTE/LISETTE/LISETTE/',
+      'string' => 'LE VICOMTE DE LA SABLONNIERE-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-LISETTE-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-LISETTE/LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-LISETTE/LE VICOMTE DE LA SABLONNIERE',
+      'string-id' => '#LEVICOMTE,#BOISLEROUX;#LEVICOMTE,#LISETTE,#BOISLEROUX;#LEVICOMTE,#CLARICE,#LISETTE;#LEVICOMTE,#CLARICE,#LISETTE,#BOISLEROUX;#LEVICOMTE,#LUCRECE,#LISETTE;#LEVICOMTE',
     ),
   ),
   'donneaudevise_gentilhommeguepin_I17' => 
   array (
     'pattern' => 
     array (
+      '#LEVICOMTE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#LUCRECE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 1,
+        4 => 0,
+        5 => 0,
+      ),
+      '#CLARICE' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 1,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
       '#LISETTE' => 
       array (
         0 => 1,
@@ -58898,6 +59160,15 @@
         3 => 1,
         4 => 0,
         5 => 1,
+      ),
+      '#BOISLEROUX' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 1,
+        3 => 0,
+        4 => 0,
+        5 => 0,
       ),
     ),
     'id' => 
@@ -58914,13 +59185,41 @@
       'titleId' => 'LeGentilhommeGuespin',
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
-      'string' => 'LISETTE/LISETTE/LISETTE/LISETTE//LISETTE',
+      'string' => 'LE VICOMTE DE LA SABLONNIERE-LISETTE-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-LISETTE/LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-LISETTE/LE VICOMTE DE LA SABLONNIERE/LE VICOMTE DE LA SABLONNIERE-LISETTE',
+      'string-id' => '#LEVICOMTE,#LISETTE,#BOISLEROUX;#LEVICOMTE,#CLARICE,#LISETTE;#LEVICOMTE,#CLARICE,#LISETTE,#BOISLEROUX;#LEVICOMTE,#LUCRECE,#LISETTE;#LEVICOMTE;#LEVICOMTE,#LISETTE',
     ),
   ),
   'donneaudevise_gentilhommeguepin_I18' => 
   array (
     'pattern' => 
     array (
+      '#LEVICOMTE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#LUCRECE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
+      '#CLARICE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
       '#LISETTE' => 
       array (
         0 => 1,
@@ -58928,6 +59227,15 @@
         2 => 1,
         3 => 0,
         4 => 1,
+        5 => 0,
+      ),
+      '#BOISLEROUX' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 0,
+        3 => 0,
+        4 => 0,
         5 => 0,
       ),
     ),
@@ -58945,19 +59253,56 @@
       'titleId' => 'LeGentilhommeGuespin',
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
-      'string' => 'LISETTE/LISETTE/LISETTE//LISETTE/',
+      'string' => 'LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-LISETTE/LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-LISETTE/LE VICOMTE DE LA SABLONNIERE/LE VICOMTE DE LA SABLONNIERE-LISETTE/LE VICOMTE DE LA SABLONNIERE',
+      'string-id' => '#LEVICOMTE,#CLARICE,#LISETTE;#LEVICOMTE,#CLARICE,#LISETTE,#BOISLEROUX;#LEVICOMTE,#LUCRECE,#LISETTE;#LEVICOMTE;#LEVICOMTE,#LISETTE;#LEVICOMTE',
     ),
   ),
   'donneaudevise_gentilhommeguepin_I19' => 
   array (
     'pattern' => 
     array (
+      '#LEVICOMTE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#LUCRECE' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
       '#LISETTE' => 
       array (
         0 => 1,
         1 => 1,
         2 => 0,
         3 => 1,
+        4 => 0,
+        5 => 1,
+      ),
+      '#COCHONVILAIN' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 1,
+      ),
+      '#BOISLEROUX' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 0,
+        3 => 0,
         4 => 0,
         5 => 1,
       ),
@@ -58976,18 +59321,46 @@
       'titleId' => 'LeGentilhommeGuespin',
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
-      'string' => 'LISETTE/LISETTE//LISETTE//LISETTE',
+      'string' => 'LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-LISETTE/LE VICOMTE DE LA SABLONNIERE/LE VICOMTE DE LA SABLONNIERE-LISETTE/LE VICOMTE DE LA SABLONNIERE/LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CHANTE-PIE-MONSIEUR DE COCHON-VILAIN-MONSIEUR DE BOIS-LE-ROUX',
+      'string-id' => '#LEVICOMTE,#CLARICE,#LISETTE,#BOISLEROUX;#LEVICOMTE,#LUCRECE,#LISETTE;#LEVICOMTE;#LEVICOMTE,#LISETTE;#LEVICOMTE;#LEVICOMTE,#CLARICE,#LISETTE,#CHANTEPIE,#COCHONVILAIN,#BOISLEROUX',
     ),
   ),
   'donneaudevise_gentilhommeguepin_I20' => 
   array (
     'pattern' => 
     array (
+      '#LEVICOMTE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#LUCRECE' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
       '#LISETTE' => 
       array (
         0 => 1,
         1 => 0,
         2 => 1,
+        3 => 0,
+        4 => 1,
+        5 => 1,
+      ),
+      '#BOISLEROUX' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
         3 => 0,
         4 => 1,
         5 => 1,
@@ -59007,13 +59380,23 @@
       'titleId' => 'LeGentilhommeGuespin',
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
-      'string' => 'LISETTE//LISETTE//LISETTE/LISETTE',
+      'string' => 'LE VICOMTE DE LA SABLONNIERE-LUCRÈCE, sa femme-LISETTE/LE VICOMTE DE LA SABLONNIERE/LE VICOMTE DE LA SABLONNIERE-LISETTE/LE VICOMTE DE LA SABLONNIERE/LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CHANTE-PIE-MONSIEUR DE COCHON-VILAIN-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CHANTE-PIE-MONSIEUR DE COCHON-VILAIN-MONSIEUR DE BOIS-LE-ROUX',
+      'string-id' => '#LEVICOMTE,#LUCRECE,#LISETTE;#LEVICOMTE;#LEVICOMTE,#LISETTE;#LEVICOMTE;#LEVICOMTE,#CLARICE,#LISETTE,#CHANTEPIE,#COCHONVILAIN,#BOISLEROUX;#LEVICOMTE,#CLARICE,#LISETTE,#CHANTEPIE,#COCHONVILAIN,#BOISLEROUX',
     ),
   ),
   'donneaudevise_gentilhommeguepin_I21' => 
   array (
     'pattern' => 
     array (
+      '#LEVICOMTE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
       '#LISETTE' => 
       array (
         0 => 0,
@@ -59021,6 +59404,24 @@
         2 => 0,
         3 => 1,
         4 => 1,
+        5 => 1,
+      ),
+      '#BOISLEROUX' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#CLAMPIN' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
         5 => 1,
       ),
     ),
@@ -59038,13 +59439,23 @@
       'titleId' => 'LeGentilhommeGuespin',
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
-      'string' => '/LISETTE//LISETTE/LISETTE/LISETTE',
+      'string' => 'LE VICOMTE DE LA SABLONNIERE/LE VICOMTE DE LA SABLONNIERE-LISETTE/LE VICOMTE DE LA SABLONNIERE/LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CHANTE-PIE-MONSIEUR DE COCHON-VILAIN-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CHANTE-PIE-MONSIEUR DE COCHON-VILAIN-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CHANTE-PIE-MONSIEUR DE COCHON-VILAIN-MONSIEUR DE BOIS-LE-ROUX-BLAISE CLAMPIN',
+      'string-id' => '#LEVICOMTE;#LEVICOMTE,#LISETTE;#LEVICOMTE;#LEVICOMTE,#CLARICE,#LISETTE,#CHANTEPIE,#COCHONVILAIN,#BOISLEROUX;#LEVICOMTE,#CLARICE,#LISETTE,#CHANTEPIE,#COCHONVILAIN,#BOISLEROUX;#LEVICOMTE,#CLARICE,#LISETTE,#CHANTEPIE,#COCHONVILAIN,#BOISLEROUX,#CLAMPIN',
     ),
   ),
   'donneaudevise_gentilhommeguepin_I22' => 
   array (
     'pattern' => 
     array (
+      '#LEVICOMTE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 0,
+      ),
       '#LISETTE' => 
       array (
         0 => 1,
@@ -59054,7 +59465,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#SONFILS' => 
+      '#BOISDOUILLETFILS' => 
       array (
         0 => 0,
         1 => 0,
@@ -59062,6 +59473,33 @@
         3 => 0,
         4 => 0,
         5 => 1,
+      ),
+      '#COCHONVILAIN' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#BOISLEROUX' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 0,
+      ),
+      '#CLAMPIN' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 1,
+        5 => 0,
       ),
     ),
     'id' => 
@@ -59078,7 +59516,8 @@
       'titleId' => 'LeGentilhommeGuespin',
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
-      'string' => 'LISETTE//LISETTE/LISETTE/LISETTE/LISETTE-SON FILS',
+      'string' => 'LE VICOMTE DE LA SABLONNIERE-LISETTE/LE VICOMTE DE LA SABLONNIERE/LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CHANTE-PIE-MONSIEUR DE COCHON-VILAIN-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CHANTE-PIE-MONSIEUR DE COCHON-VILAIN-MONSIEUR DE BOIS-LE-ROUX/LE VICOMTE DE LA SABLONNIERE-CLARICE, soeur du Vicomte-LISETTE-MONSIEUR DE CHANTE-PIE-MONSIEUR DE COCHON-VILAIN-MONSIEUR DE BOIS-LE-ROUX-BLAISE CLAMPIN/LISETTE-MONSIEUR DE BOIS-DOUILLET-SON FILS-MONSIEUR DE CHANTE-PIE-MONSIEUR DE COCHON-VILAIN',
+      'string-id' => '#LEVICOMTE,#LISETTE;#LEVICOMTE;#LEVICOMTE,#CLARICE,#LISETTE,#CHANTEPIE,#COCHONVILAIN,#BOISLEROUX;#LEVICOMTE,#CLARICE,#LISETTE,#CHANTEPIE,#COCHONVILAIN,#BOISLEROUX;#LEVICOMTE,#CLARICE,#LISETTE,#CHANTEPIE,#COCHONVILAIN,#BOISLEROUX,#CLAMPIN;#LISETTE,#BOISDOUILLET,#BOISDOUILLETFILS,#CHANTEPIE,#COCHONVILAIN',
     ),
   ),
   'donneaudevise_cocueimaginaire_I01' => 
@@ -59146,6 +59585,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'ALCIPPE-GÉRONTE/ALCIPPE/ALCIPPE-PAQUETTE-SPADARILLE/SPADARILLE/PAQUETTE-SPADARILLE/CÉPHISE',
+      'string-id' => '#ALCIPPE,#GERONTE;#ALCIPPE;#ALCIPPE,#PAQUETTE,#SPADARILLE;#SPADARILLE;#PAQUETTE,#SPADARILLE;#CEPHISE',
     ),
   ),
   'donneaudevise_cocueimaginaire_I02' => 
@@ -59204,6 +59644,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'ALCIPPE/ALCIPPE-PAQUETTE-SPADARILLE/SPADARILLE/PAQUETTE-SPADARILLE/CÉPHISE/CÉPHISE',
+      'string-id' => '#ALCIPPE;#ALCIPPE,#PAQUETTE,#SPADARILLE;#SPADARILLE;#PAQUETTE,#SPADARILLE;#CEPHISE;#CEPHISE',
     ),
   ),
   'donneaudevise_cocueimaginaire_I03' => 
@@ -59262,6 +59703,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'ALCIPPE-PAQUETTE-SPADARILLE/SPADARILLE/PAQUETTE-SPADARILLE/CÉPHISE/CÉPHISE/CÉPHISE-PAQUETTE',
+      'string-id' => '#ALCIPPE,#PAQUETTE,#SPADARILLE;#SPADARILLE;#PAQUETTE,#SPADARILLE;#CEPHISE;#CEPHISE;#CEPHISE,#PAQUETTE',
     ),
   ),
   'donneaudevise_cocueimaginaire_I04' => 
@@ -59311,6 +59753,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'SPADARILLE/PAQUETTE-SPADARILLE/CÉPHISE/CÉPHISE/CÉPHISE-PAQUETTE/CÉPHISE',
+      'string-id' => '#SPADARILLE;#PAQUETTE,#SPADARILLE;#CEPHISE;#CEPHISE;#CEPHISE,#PAQUETTE;#CEPHISE',
     ),
   ),
   'donneaudevise_cocueimaginaire_I05' => 
@@ -59360,6 +59803,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'PAQUETTE-SPADARILLE/CÉPHISE/CÉPHISE/CÉPHISE-PAQUETTE/CÉPHISE/CÉPHISE-SPADARILLE',
+      'string-id' => '#PAQUETTE,#SPADARILLE;#CEPHISE;#CEPHISE;#CEPHISE,#PAQUETTE;#CEPHISE;#CEPHISE,#SPADARILLE',
     ),
   ),
   'donneaudevise_cocueimaginaire_I06' => 
@@ -59418,6 +59862,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'CÉPHISE/CÉPHISE/CÉPHISE-PAQUETTE/CÉPHISE/CÉPHISE-SPADARILLE/PAQUETTE-LUCRESSE',
+      'string-id' => '#CEPHISE;#CEPHISE;#CEPHISE,#PAQUETTE;#CEPHISE;#CEPHISE,#SPADARILLE;#PAQUETTE,#LUCRESSE',
     ),
   ),
   'donneaudevise_cocueimaginaire_I07' => 
@@ -59476,6 +59921,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'CÉPHISE/CÉPHISE-PAQUETTE/CÉPHISE/CÉPHISE-SPADARILLE/PAQUETTE-LUCRESSE/PAQUETTE',
+      'string-id' => '#CEPHISE;#CEPHISE,#PAQUETTE;#CEPHISE;#CEPHISE,#SPADARILLE;#PAQUETTE,#LUCRESSE;#PAQUETTE',
     ),
   ),
   'donneaudevise_cocueimaginaire_I08' => 
@@ -59534,6 +59980,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'CÉPHISE-PAQUETTE/CÉPHISE/CÉPHISE-SPADARILLE/PAQUETTE-LUCRESSE/PAQUETTE/CÉPHISE-PAQUETTE-SPADARILLE',
+      'string-id' => '#CEPHISE,#PAQUETTE;#CEPHISE;#CEPHISE,#SPADARILLE;#PAQUETTE,#LUCRESSE;#PAQUETTE;#CEPHISE,#PAQUETTE,#SPADARILLE',
     ),
   ),
   'donneaudevise_cocueimaginaire_I09' => 
@@ -59592,6 +60039,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'CÉPHISE/CÉPHISE-SPADARILLE/PAQUETTE-LUCRESSE/PAQUETTE/CÉPHISE-PAQUETTE-SPADARILLE/CÉPHISE-PAQUETTE',
+      'string-id' => '#CEPHISE;#CEPHISE,#SPADARILLE;#PAQUETTE,#LUCRESSE;#PAQUETTE;#CEPHISE,#PAQUETTE,#SPADARILLE;#CEPHISE,#PAQUETTE',
     ),
   ),
   'donneaudevise_cocueimaginaire_I10' => 
@@ -59659,6 +60107,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'CÉPHISE-SPADARILLE/PAQUETTE-LUCRESSE/PAQUETTE/CÉPHISE-PAQUETTE-SPADARILLE/CÉPHISE-PAQUETTE/ALCIPPE-PAQUETTE',
+      'string-id' => '#CEPHISE,#SPADARILLE;#PAQUETTE,#LUCRESSE;#PAQUETTE;#CEPHISE,#PAQUETTE,#SPADARILLE;#CEPHISE,#PAQUETTE;#ALCIPPE,#PAQUETTE',
     ),
   ),
   'donneaudevise_cocueimaginaire_I11' => 
@@ -59726,6 +60175,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'PAQUETTE-LUCRESSE/PAQUETTE/CÉPHISE-PAQUETTE-SPADARILLE/CÉPHISE-PAQUETTE/ALCIPPE-PAQUETTE/PAQUETTE',
+      'string-id' => '#PAQUETTE,#LUCRESSE;#PAQUETTE;#CEPHISE,#PAQUETTE,#SPADARILLE;#CEPHISE,#PAQUETTE;#ALCIPPE,#PAQUETTE;#PAQUETTE',
     ),
   ),
   'donneaudevise_cocueimaginaire_I12' => 
@@ -59793,6 +60243,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'PAQUETTE/CÉPHISE-PAQUETTE-SPADARILLE/CÉPHISE-PAQUETTE/ALCIPPE-PAQUETTE/PAQUETTE/ALCIPPE-GÉRONTE',
+      'string-id' => '#PAQUETTE;#CEPHISE,#PAQUETTE,#SPADARILLE;#CEPHISE,#PAQUETTE;#ALCIPPE,#PAQUETTE;#PAQUETTE;#ALCIPPE,#GERONTE',
     ),
   ),
   'donneaudevise_cocueimaginaire_I13' => 
@@ -59860,6 +60311,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'CÉPHISE-PAQUETTE-SPADARILLE/CÉPHISE-PAQUETTE/ALCIPPE-PAQUETTE/PAQUETTE/ALCIPPE-GÉRONTE/ALCIPPE',
+      'string-id' => '#CEPHISE,#PAQUETTE,#SPADARILLE;#CEPHISE,#PAQUETTE;#ALCIPPE,#PAQUETTE;#PAQUETTE;#ALCIPPE,#GERONTE;#ALCIPPE',
     ),
   ),
   'donneaudevise_cocueimaginaire_I14' => 
@@ -59918,6 +60370,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'CÉPHISE-PAQUETTE/ALCIPPE-PAQUETTE/PAQUETTE/ALCIPPE-GÉRONTE/ALCIPPE/ALCIPPE-CÉPHISE',
+      'string-id' => '#CEPHISE,#PAQUETTE;#ALCIPPE,#PAQUETTE;#PAQUETTE;#ALCIPPE,#GERONTE;#ALCIPPE;#ALCIPPE,#CEPHISE',
     ),
   ),
   'donneaudevise_cocueimaginaire_I15' => 
@@ -59976,6 +60429,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'ALCIPPE-PAQUETTE/PAQUETTE/ALCIPPE-GÉRONTE/ALCIPPE/ALCIPPE-CÉPHISE/ALCIPPE-CÉPHISE-PAQUETTE',
+      'string-id' => '#ALCIPPE,#PAQUETTE;#PAQUETTE;#ALCIPPE,#GERONTE;#ALCIPPE;#ALCIPPE,#CEPHISE;#ALCIPPE,#CEPHISE,#PAQUETTE',
     ),
   ),
   'donneaudevise_cocueimaginaire_I16' => 
@@ -60043,6 +60497,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'PAQUETTE/ALCIPPE-GÉRONTE/ALCIPPE/ALCIPPE-CÉPHISE/ALCIPPE-CÉPHISE-PAQUETTE/ALCIPPE-CÉPHISE-PAQUETTE-SPADARILLE',
+      'string-id' => '#PAQUETTE;#ALCIPPE,#GERONTE;#ALCIPPE;#ALCIPPE,#CEPHISE;#ALCIPPE,#CEPHISE,#PAQUETTE;#ALCIPPE,#CEPHISE,#PAQUETTE,#SPADARILLE',
     ),
   ),
   'donneaudevise_cocueimaginaire_I17' => 
@@ -60110,6 +60565,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DonneaudeVise',
       'string' => 'ALCIPPE-GÉRONTE/ALCIPPE/ALCIPPE-CÉPHISE/ALCIPPE-CÉPHISE-PAQUETTE/ALCIPPE-CÉPHISE-PAQUETTE-SPADARILLE/ALCIPPE-GÉRONTE-CÉPHISE-PAQUETTE-SPADARILLE',
+      'string-id' => '#ALCIPPE,#GERONTE;#ALCIPPE;#ALCIPPE,#CEPHISE;#ALCIPPE,#CEPHISE,#PAQUETTE;#ALCIPPE,#CEPHISE,#PAQUETTE,#SPADARILLE;#ALCIPPE,#GERONTE,#CEPHISE,#PAQUETTE,#SPADARILLE',
     ),
   ),
   'discret_nocesdevaugirard_III01' => 
@@ -60186,6 +60642,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Discret',
       'string' => 'POLYDAS-PYSANDRE/FLORIDON-AMARILLE/PANCRACE-LUCIANE/PYSANDRE-LIDIANE/PANCRACE-POLYDAS-PYSANDRE-LUCIANE/PANCRACE',
+      'string-id' => '#POLYDAS,#PYSANDRE;#FLORIDON,#AMARILLE;#PANCRACE,#LUCIANE;#PYSANDRE,#LIDIANE;#PANCRACE,#POLYDAS,#PYSANDRE,#LUCIANE;#PANCRACE',
     ),
   ),
   'discret_nocesdevaugirard_IV01' => 
@@ -60271,6 +60728,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Discret',
       'string' => 'POLYDAS/PANCRACE-PYSANDRE-LUCIANE/POLYDAS-LIDIANE/LUCIANE/AMARILLE/PYSANDRE-CLÉANIDE',
+      'string-id' => '#POLYDAS;#PANCRACE,#PYSANDRE,#LUCIANE;#POLYDAS,#LIDIANE;#LUCIANE;#AMARILLE;#PYSANDRE,#CLEANIDE',
     ),
   ),
   'discret_nocesdevaugirard_IV02' => 
@@ -60356,6 +60814,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Discret',
       'string' => 'PANCRACE-PYSANDRE-LUCIANE/POLYDAS-LIDIANE/LUCIANE/AMARILLE/PYSANDRE-CLÉANIDE/PANCRACE-FLORIDON',
+      'string-id' => '#PANCRACE,#PYSANDRE,#LUCIANE;#POLYDAS,#LIDIANE;#LUCIANE;#AMARILLE;#PYSANDRE,#CLEANIDE;#PANCRACE,#FLORIDON',
     ),
   ),
   'desmarets_visionnaires_I01' => 
@@ -60414,6 +60873,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DesmaretsdeSaint-Sorlin',
       'string' => 'ARTABAZE/ARTABAZE-AMIDOR/AMIDOR/AMIDOR-FILIDAN/FILIDAN/FILIDAN-HESPÉRIE',
+      'string-id' => '#ARTABAZE;#ARTABAZE,#AMIDOR;#AMIDOR;#AMIDOR,#FILIDAN;#FILIDAN;#FILIDAN,#HESPERIE',
     ),
   ),
   'desmarets_visionnaires_I02' => 
@@ -60481,6 +60941,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DesmaretsdeSaint-Sorlin',
       'string' => 'ARTABAZE-AMIDOR/AMIDOR/AMIDOR-FILIDAN/FILIDAN/FILIDAN-HESPÉRIE/FILIDAN-ALCIDON-LYSANDRE',
+      'string-id' => '#ARTABAZE,#AMIDOR;#AMIDOR;#AMIDOR,#FILIDAN;#FILIDAN;#FILIDAN,#HESPERIE;#FILIDAN,#ALCIDON,#LYSANDRE',
     ),
   ),
   'desmarets_visionnaires_II01' => 
@@ -60557,6 +61018,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DesmaretsdeSaint-Sorlin',
       'string' => 'PHALANTE-MÉLISSE/MÉLISSE-HESPÉRIE/MÉLISSE-HESPÉRIE-SESTIANE/AMIDOR-MÉLISSE-HESPÉRIE-SESTIANE/SESTIANE-ALCIDON/AMIDOR-ALCIDON',
+      'string-id' => '#PHALANTE,#MELISSE;#MELISSE,#HESPERIE;#MELISSE,#HESPERIE,#SESTIANE;#AMIDOR,#MELISSE,#HESPERIE,#SESTIANE;#SESTIANE,#ALCIDON;#AMIDOR,#ALCIDON',
     ),
   ),
   'desmarets_visionnaires_IV01' => 
@@ -60642,6 +61104,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DesmaretsdeSaint-Sorlin',
       'string' => 'MÉLISSE/ARTABAZE-MÉLISSE/AMIDOR-FILIDAN/AMIDOR-FILIDAN-HESPÉRIE-SESTIANE/ARTABAZE-FILIDAN-MÉLISSE-HESPÉRIE/HESPÉRIE-ALCIDON',
+      'string-id' => '#MELISSE;#ARTABAZE,#MELISSE;#AMIDOR,#FILIDAN;#AMIDOR,#FILIDAN,#HESPERIE,#SESTIANE;#ARTABAZE,#FILIDAN,#MELISSE,#HESPERIE;#HESPERIE,#ALCIDON',
     ),
   ),
   'desmarets_visionnaires_IV02' => 
@@ -60727,6 +61190,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DesmaretsdeSaint-Sorlin',
       'string' => 'ARTABAZE-MÉLISSE/AMIDOR-FILIDAN/AMIDOR-FILIDAN-HESPÉRIE-SESTIANE/ARTABAZE-FILIDAN-MÉLISSE-HESPÉRIE/HESPÉRIE-ALCIDON/ARTABAZE-ALCIDON',
+      'string-id' => '#ARTABAZE,#MELISSE;#AMIDOR,#FILIDAN;#AMIDOR,#FILIDAN,#HESPERIE,#SESTIANE;#ARTABAZE,#FILIDAN,#MELISSE,#HESPERIE;#HESPERIE,#ALCIDON;#ARTABAZE,#ALCIDON',
     ),
   ),
   'desmarets_visionnaires_V01' => 
@@ -60803,6 +61267,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DesmaretsdeSaint-Sorlin',
       'string' => 'ALCIDON/ALCIDON-LYSANDRE/MÉLISSE-ALCIDON-LYSANDRE/MÉLISSE-HESPÉRIE-ALCIDON-LYSANDRE/MÉLISSE-HESPÉRIE-SESTIANE-ALCIDON-LYSANDRE/FILIDAN-MÉLISSE-HESPÉRIE-SESTIANE-ALCIDON-LYSANDRE',
+      'string-id' => '#ALCIDON;#ALCIDON,#LYSANDRE;#MELISSE,#ALCIDON,#LYSANDRE;#MELISSE,#HESPERIE,#ALCIDON,#LYSANDRE;#MELISSE,#HESPERIE,#SESTIANE,#ALCIDON,#LYSANDRE;#FILIDAN,#MELISSE,#HESPERIE,#SESTIANE,#ALCIDON,#LYSANDRE',
     ),
   ),
   'desmarets_visionnaires_V02' => 
@@ -60879,6 +61344,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DesmaretsdeSaint-Sorlin',
       'string' => 'ALCIDON-LYSANDRE/MÉLISSE-ALCIDON-LYSANDRE/MÉLISSE-HESPÉRIE-ALCIDON-LYSANDRE/MÉLISSE-HESPÉRIE-SESTIANE-ALCIDON-LYSANDRE/FILIDAN-MÉLISSE-HESPÉRIE-SESTIANE-ALCIDON-LYSANDRE/AMIDOR-FILIDAN-MÉLISSE-HESPÉRIE-SESTIANE-ALCIDON-LYSANDRE',
+      'string-id' => '#ALCIDON,#LYSANDRE;#MELISSE,#ALCIDON,#LYSANDRE;#MELISSE,#HESPERIE,#ALCIDON,#LYSANDRE;#MELISSE,#HESPERIE,#SESTIANE,#ALCIDON,#LYSANDRE;#FILIDAN,#MELISSE,#HESPERIE,#SESTIANE,#ALCIDON,#LYSANDRE;#AMIDOR,#FILIDAN,#MELISSE,#HESPERIE,#SESTIANE,#ALCIDON,#LYSANDRE',
     ),
   ),
   'desmarets_visionnaires_V03' => 
@@ -60955,6 +61421,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DesmaretsdeSaint-Sorlin',
       'string' => 'MÉLISSE-ALCIDON-LYSANDRE/MÉLISSE-HESPÉRIE-ALCIDON-LYSANDRE/MÉLISSE-HESPÉRIE-SESTIANE-ALCIDON-LYSANDRE/FILIDAN-MÉLISSE-HESPÉRIE-SESTIANE-ALCIDON-LYSANDRE/AMIDOR-FILIDAN-MÉLISSE-HESPÉRIE-SESTIANE-ALCIDON-LYSANDRE/AMIDOR-FILIDAN-PHALANTE-MÉLISSE-HESPÉRIE-SESTIANE-ALCIDON-LYSANDRE',
+      'string-id' => '#MELISSE,#ALCIDON,#LYSANDRE;#MELISSE,#HESPERIE,#ALCIDON,#LYSANDRE;#MELISSE,#HESPERIE,#SESTIANE,#ALCIDON,#LYSANDRE;#FILIDAN,#MELISSE,#HESPERIE,#SESTIANE,#ALCIDON,#LYSANDRE;#AMIDOR,#FILIDAN,#MELISSE,#HESPERIE,#SESTIANE,#ALCIDON,#LYSANDRE;#AMIDOR,#FILIDAN,#PHALANTE,#MELISSE,#HESPERIE,#SESTIANE,#ALCIDON,#LYSANDRE',
     ),
   ),
   'desmarets_visionnaires_V04' => 
@@ -61031,6 +61498,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'DesmaretsdeSaint-Sorlin',
       'string' => 'MÉLISSE-HESPÉRIE-ALCIDON-LYSANDRE/MÉLISSE-HESPÉRIE-SESTIANE-ALCIDON-LYSANDRE/FILIDAN-MÉLISSE-HESPÉRIE-SESTIANE-ALCIDON-LYSANDRE/AMIDOR-FILIDAN-MÉLISSE-HESPÉRIE-SESTIANE-ALCIDON-LYSANDRE/AMIDOR-FILIDAN-PHALANTE-MÉLISSE-HESPÉRIE-SESTIANE-ALCIDON-LYSANDRE/ARTABAZE-AMIDOR-FILIDAN-PHALANTE-MÉLISSE-HESPÉRIE-SESTIANE-ALCIDON-LYSANDRE',
+      'string-id' => '#MELISSE,#HESPERIE,#ALCIDON,#LYSANDRE;#MELISSE,#HESPERIE,#SESTIANE,#ALCIDON,#LYSANDRE;#FILIDAN,#MELISSE,#HESPERIE,#SESTIANE,#ALCIDON,#LYSANDRE;#AMIDOR,#FILIDAN,#MELISSE,#HESPERIE,#SESTIANE,#ALCIDON,#LYSANDRE;#AMIDOR,#FILIDAN,#PHALANTE,#MELISSE,#HESPERIE,#SESTIANE,#ALCIDON,#LYSANDRE;#ARTABAZE,#AMIDOR,#FILIDAN,#PHALANTE,#MELISSE,#HESPERIE,#SESTIANE,#ALCIDON,#LYSANDRE',
     ),
   ),
   'desjardins_manlius_I01' => 
@@ -61098,6 +61566,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Desjardins',
       'string' => 'CAMILLE-PISON/TORQUATUS-CAMILLE/TORQUATUS-OMPHALE/OMPHALE/MANLIUS-OMPHALE/OMPHALE',
+      'string-id' => '#CAMILLE,#PISON;#TORQUATUS,#CAMILLE;#TORQUATUS,#OMPHALE;#OMPHALE;#MANLIUS,#OMPHALE;#OMPHALE',
     ),
   ),
   'desjardins_manlius_II01' => 
@@ -61165,6 +61634,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Desjardins',
       'string' => 'TORQUATUS/TORQUATUS-JUNIUS/TORQUATUS-MANLIUS-JUNIUS/TORQUATUS-JUNIUS/TORQUATUS-OMPHALE/CAMILLE-OMPHALE',
+      'string-id' => '#TORQUATUS;#TORQUATUS,#JUNIUS;#TORQUATUS,#MANLIUS,#JUNIUS;#TORQUATUS,#JUNIUS;#TORQUATUS,#OMPHALE;#CAMILLE,#OMPHALE',
     ),
   ),
   'desjardins_manlius_V01' => 
@@ -61232,6 +61702,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Desjardins',
       'string' => 'TORQUATUS-OMPHALE/TORQUATUS-OMPHALE-PISON/TORQUATUS-MANLIUS-OMPHALE-PISON/TORQUATUS-CAMILLE-OMPHALE/TORQUATUS-CAMILLE-OMPHALE-JUNIUS/TORQUATUS-CAMILLE-OMPHALE-JUNIUS-PISON',
+      'string-id' => '#TORQUATUS,#OMPHALE;#TORQUATUS,#OMPHALE,#PISON;#TORQUATUS,#MANLIUS,#OMPHALE,#PISON;#TORQUATUS,#CAMILLE,#OMPHALE;#TORQUATUS,#CAMILLE,#OMPHALE,#JUNIUS;#TORQUATUS,#CAMILLE,#OMPHALE,#JUNIUS,#PISON',
     ),
   ),
   'desjardins_manlius_V02' => 
@@ -61299,6 +61770,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Desjardins',
       'string' => 'TORQUATUS-OMPHALE-PISON/TORQUATUS-MANLIUS-OMPHALE-PISON/TORQUATUS-CAMILLE-OMPHALE/TORQUATUS-CAMILLE-OMPHALE-JUNIUS/TORQUATUS-CAMILLE-OMPHALE-JUNIUS-PISON/TORQUATUS-MANLIUS-CAMILLE-OMPHALE-JUNIUS-PISON',
+      'string-id' => '#TORQUATUS,#OMPHALE,#PISON;#TORQUATUS,#MANLIUS,#OMPHALE,#PISON;#TORQUATUS,#CAMILLE,#OMPHALE;#TORQUATUS,#CAMILLE,#OMPHALE,#JUNIUS;#TORQUATUS,#CAMILLE,#OMPHALE,#JUNIUS,#PISON;#TORQUATUS,#MANLIUS,#CAMILLE,#OMPHALE,#JUNIUS,#PISON',
     ),
   ),
   'desjardins_favori_I01' => 
@@ -61357,6 +61829,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Desjardins',
       'string' => 'MONCADE-DON ALVAR/MONCADE-CLOTAIRE-DON ALVAR/MONCADE-DON ALVAR/MONCADE-LINDAMIRE/MONCADE-LINDAMIRE-DON ALVAR/MONCADE',
+      'string-id' => '#MONCADE,#DONALVAR;#MONCADE,#CLOTAIRE,#DONALVAR;#MONCADE,#DONALVAR;#MONCADE,#LINDAMIRE;#MONCADE,#LINDAMIRE,#DONALVAR;#MONCADE',
     ),
   ),
   'desjardins_favori_II01' => 
@@ -61424,6 +61897,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Desjardins',
       'string' => 'DONA ELVIRE-LÉONOR/MONCADE-DONA ELVIRE-LÉONOR/MONCADE-DONA ELVIRE-LÉONOR-DON ALVAR/MONCADE-CLOTAIRE-DONA ELVIRE-LÉONOR-DON ALVAR/MONCADE-CLOTAIRE-DONA ELVIRE-LÉONOR-DON ALVAR-CARLOS/MONCADE-CLOTAIRE-DONA ELVIRE-LÉONOR-DON ALVAR',
+      'string-id' => '#DONAELVIRE,#LEONOR;#MONCADE,#DONAELVIRE,#LEONOR;#MONCADE,#DONAELVIRE,#LEONOR,#DONALVAR;#MONCADE,#CLOTAIRE,#DONAELVIRE,#LEONOR,#DONALVAR;#MONCADE,#CLOTAIRE,#DONAELVIRE,#LEONOR,#DONALVAR,#CARLOS;#MONCADE,#CLOTAIRE,#DONAELVIRE,#LEONOR,#DONALVAR',
     ),
   ),
   'desjardins_favori_III01' => 
@@ -61491,6 +61965,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Desjardins',
       'string' => 'LINDAMIRE-DON ALVAR/LINDAMIRE/CLOTAIRE-LINDAMIRE/LINDAMIRE-DONA ELVIRE/LINDAMIRE/MONCADE-LINDAMIRE',
+      'string-id' => '#LINDAMIRE,#DONALVAR;#LINDAMIRE;#CLOTAIRE,#LINDAMIRE;#LINDAMIRE,#DONAELVIRE;#LINDAMIRE;#MONCADE,#LINDAMIRE',
     ),
   ),
   'desjardins_favori_IV01' => 
@@ -61549,6 +62024,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Desjardins',
       'string' => 'DONA ELVIRE-LÉONOR/DONA ELVIRE-LÉONOR/DONA ELVIRE-LÉONOR/CLOTAIRE-DONA ELVIRE-LÉONOR/CLOTAIRE-DONA ELVIRE-LÉONOR-CARLOS/CLOTAIRE-LINDAMIRE-DONA ELVIRE-LÉONOR-CARLOS',
+      'string-id' => '#DONAELVIRE,#LEONOR;#DONAELVIRE,#LEONOR;#DONAELVIRE,#LEONOR;#CLOTAIRE,#DONAELVIRE,#LEONOR;#CLOTAIRE,#DONAELVIRE,#LEONOR,#CARLOS;#CLOTAIRE,#LINDAMIRE,#DONAELVIRE,#LEONOR,#CARLOS',
     ),
   ),
   'desjardins_favori_V01' => 
@@ -61616,6 +62092,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Desjardins',
       'string' => 'LINDAMIRE-DON ALVAR/LINDAMIRE-DON ALVAR-CARLOS/CLOTAIRE-LINDAMIRE-DON ALVAR-CARLOS/CLOTAIRE-LINDAMIRE-DON ALVAR/MONCADE-CLOTAIRE-LINDAMIRE-DON ALVAR/MONCADE-CLOTAIRE-LINDAMIRE-DONA ELVIRE-LÉONOR-DON ALVAR-CARLOS',
+      'string-id' => '#LINDAMIRE,#DONALVAR;#LINDAMIRE,#DONALVAR,#CARLOS;#CLOTAIRE,#LINDAMIRE,#DONALVAR,#CARLOS;#CLOTAIRE,#LINDAMIRE,#DONALVAR;#MONCADE,#CLOTAIRE,#LINDAMIRE,#DONALVAR;#MONCADE,#CLOTAIRE,#LINDAMIRE,#DONAELVIRE,#LEONOR,#DONALVAR,#CARLOS',
     ),
   ),
   'desjardins_favori_V02' => 
@@ -61683,6 +62160,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Desjardins',
       'string' => 'LINDAMIRE-DON ALVAR-CARLOS/CLOTAIRE-LINDAMIRE-DON ALVAR-CARLOS/CLOTAIRE-LINDAMIRE-DON ALVAR/MONCADE-CLOTAIRE-LINDAMIRE-DON ALVAR/MONCADE-CLOTAIRE-LINDAMIRE-DONA ELVIRE-LÉONOR-DON ALVAR-CARLOS/MONCADE-LINDAMIRE-DONA ELVIRE-LÉONOR-DON ALVAR',
+      'string-id' => '#LINDAMIRE,#DONALVAR,#CARLOS;#CLOTAIRE,#LINDAMIRE,#DONALVAR,#CARLOS;#CLOTAIRE,#LINDAMIRE,#DONALVAR;#MONCADE,#CLOTAIRE,#LINDAMIRE,#DONALVAR;#MONCADE,#CLOTAIRE,#LINDAMIRE,#DONAELVIRE,#LEONOR,#DONALVAR,#CARLOS;#MONCADE,#LINDAMIRE,#DONAELVIRE,#LEONOR,#DONALVAR',
     ),
   ),
   'desjardins_favori_V03' => 
@@ -61750,6 +62228,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Desjardins',
       'string' => 'CLOTAIRE-LINDAMIRE-DON ALVAR-CARLOS/CLOTAIRE-LINDAMIRE-DON ALVAR/MONCADE-CLOTAIRE-LINDAMIRE-DON ALVAR/MONCADE-CLOTAIRE-LINDAMIRE-DONA ELVIRE-LÉONOR-DON ALVAR-CARLOS/MONCADE-LINDAMIRE-DONA ELVIRE-LÉONOR-DON ALVAR/DONA ELVIRE-LÉONOR',
+      'string-id' => '#CLOTAIRE,#LINDAMIRE,#DONALVAR,#CARLOS;#CLOTAIRE,#LINDAMIRE,#DONALVAR;#MONCADE,#CLOTAIRE,#LINDAMIRE,#DONALVAR;#MONCADE,#CLOTAIRE,#LINDAMIRE,#DONAELVIRE,#LEONOR,#DONALVAR,#CARLOS;#MONCADE,#LINDAMIRE,#DONAELVIRE,#LEONOR,#DONALVAR;#DONAELVIRE,#LEONOR',
     ),
   ),
   'desfontaines_veritablesemiramis_IV01' => 
@@ -61808,6 +62287,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Desfontaines',
       'string' => 'MELISTRATE-ORONCLIDE-PALMÉDON/ORONCLIDE/PRAZIMÈNE-MELISTRATE-ORONCLIDE-PALMÉDON/SÉMIRAMIS-MERZABANE/SÉMIRAMIS-ORONCLIDE-MERZABANE/SÉMIRAMIS-MERZABANE',
+      'string-id' => '#MELISTRATE,#ORONCLIDE,#PALMEDON;#ORONCLIDE;#PRAZIMENE,#MELISTRATE,#ORONCLIDE,#PALMEDON;#SEMIRAMIS,#MERZABANE;#SEMIRAMIS,#ORONCLIDE,#MERZABANE;#SEMIRAMIS,#MERZABANE',
     ),
   ),
   'desfontaines_perside_III01' => 
@@ -61875,6 +62355,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Desfontaines',
       'string' => 'HERMINIE-ALCOMIRE/ACHMAT-ALCOMIRE/ALCOMIRE/SOLIMAN-ACHMAT-PERSIDE-HERMINIE/SOLIMAN-PERSIDE/SOLIMAN',
+      'string-id' => '#HERMINIE,#ALCOMIRE;#ACHMAT,#ALCOMIRE;#ALCOMIRE;#SOLIMAN,#ACHMAT,#PERSIDE,#HERMINIE;#SOLIMAN,#PERSIDE;#SOLIMAN',
     ),
   ),
   'desfontaines_perside_IV01' => 
@@ -61942,6 +62423,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Desfontaines',
       'string' => 'ACHMAT-HERMINIE/ACHMAT/PERSIDE/ERASTE-PERSIDE/PERSIDE/SOLIMAN-ACHMAT-PIRRUS-HALY',
+      'string-id' => '#ACHMAT,#HERMINIE;#ACHMAT;#PERSIDE;#ERASTE,#PERSIDE;#PERSIDE;#SOLIMAN,#ACHMAT,#PIRRUS,#HALY',
     ),
   ),
   'desfontaines_perside_IV02' => 
@@ -62009,6 +62491,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Desfontaines',
       'string' => 'ACHMAT/PERSIDE/ERASTE-PERSIDE/PERSIDE/SOLIMAN-ACHMAT-PIRRUS-HALY/SOLIMAN-ACHMAT-HALY',
+      'string-id' => '#ACHMAT;#PERSIDE;#ERASTE,#PERSIDE;#PERSIDE;#SOLIMAN,#ACHMAT,#PIRRUS,#HALY;#SOLIMAN,#ACHMAT,#HALY',
     ),
   ),
   'desfontaines_perside_IV03' => 
@@ -62076,6 +62559,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Desfontaines',
       'string' => 'PERSIDE/ERASTE-PERSIDE/PERSIDE/SOLIMAN-ACHMAT-PIRRUS-HALY/SOLIMAN-ACHMAT-HALY/SOLIMAN-ERASTE-HALY',
+      'string-id' => '#PERSIDE;#ERASTE,#PERSIDE;#PERSIDE;#SOLIMAN,#ACHMAT,#PIRRUS,#HALY;#SOLIMAN,#ACHMAT,#HALY;#SOLIMAN,#ERASTE,#HALY',
     ),
   ),
   'desfontaines_perside_IV04' => 
@@ -62143,6 +62627,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Desfontaines',
       'string' => 'ERASTE-PERSIDE/PERSIDE/SOLIMAN-ACHMAT-PIRRUS-HALY/SOLIMAN-ACHMAT-HALY/SOLIMAN-ERASTE-HALY/SOLIMAN-ACHMAT-HALY',
+      'string-id' => '#ERASTE,#PERSIDE;#PERSIDE;#SOLIMAN,#ACHMAT,#PIRRUS,#HALY;#SOLIMAN,#ACHMAT,#HALY;#SOLIMAN,#ERASTE,#HALY;#SOLIMAN,#ACHMAT,#HALY',
     ),
   ),
   'desfontaines_perside_V01' => 
@@ -62210,6 +62695,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Desfontaines',
       'string' => 'PIRRUS-ALCOMIRE/ACHMAT/ACHMAT-HERMINIE/PIRRUS-HERMINIE/HERMINIE/PERSIDE-HERMINIE',
+      'string-id' => '#PIRRUS,#ALCOMIRE;#ACHMAT;#ACHMAT,#HERMINIE;#PIRRUS,#HERMINIE;#HERMINIE;#PERSIDE,#HERMINIE',
     ),
   ),
   'desfontaines_perside_V02' => 
@@ -62277,6 +62763,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Desfontaines',
       'string' => 'ACHMAT/ACHMAT-HERMINIE/PIRRUS-HERMINIE/HERMINIE/PERSIDE-HERMINIE/SOLIMAN-PIRRUS-HALY-TROUPE DE JANISSAIRES',
+      'string-id' => '#ACHMAT;#ACHMAT,#HERMINIE;#PIRRUS,#HERMINIE;#HERMINIE;#PERSIDE,#HERMINIE;#SOLIMAN,#PIRRUS,#HALY,#TROUPEDEJANISSAIRES',
     ),
   ),
   'desfontaines_perside_V03' => 
@@ -62353,6 +62840,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Desfontaines',
       'string' => 'ACHMAT-HERMINIE/PIRRUS-HERMINIE/HERMINIE/PERSIDE-HERMINIE/SOLIMAN-PIRRUS-HALY-TROUPE DE JANISSAIRES/SOLIMAN-PIRRUS-HALY-PERSIDE',
+      'string-id' => '#ACHMAT,#HERMINIE;#PIRRUS,#HERMINIE;#HERMINIE;#PERSIDE,#HERMINIE;#SOLIMAN,#PIRRUS,#HALY,#TROUPEDEJANISSAIRES;#SOLIMAN,#PIRRUS,#HALY,#PERSIDE',
     ),
   ),
   'desfontaines_perside_V04' => 
@@ -62420,6 +62908,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Desfontaines',
       'string' => 'PIRRUS-HERMINIE/HERMINIE/PERSIDE-HERMINIE/SOLIMAN-PIRRUS-HALY-TROUPE DE JANISSAIRES/SOLIMAN-PIRRUS-HALY-PERSIDE/SOLIMAN-PIRRUS-HALY-HERMINIE',
+      'string-id' => '#PIRRUS,#HERMINIE;#HERMINIE;#PERSIDE,#HERMINIE;#SOLIMAN,#PIRRUS,#HALY,#TROUPEDEJANISSAIRES;#SOLIMAN,#PIRRUS,#HALY,#PERSIDE;#SOLIMAN,#PIRRUS,#HALY,#HERMINIE',
     ),
   ),
   'desfontaines_perside_V05' => 
@@ -62478,6 +62967,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Desfontaines',
       'string' => 'HERMINIE/PERSIDE-HERMINIE/SOLIMAN-PIRRUS-HALY-TROUPE DE JANISSAIRES/SOLIMAN-PIRRUS-HALY-PERSIDE/SOLIMAN-PIRRUS-HALY-HERMINIE/SOLIMAN-PIRRUS-HALY-PERSIDE-HERMINIE',
+      'string-id' => '#HERMINIE;#PERSIDE,#HERMINIE;#SOLIMAN,#PIRRUS,#HALY,#TROUPEDEJANISSAIRES;#SOLIMAN,#PIRRUS,#HALY,#PERSIDE;#SOLIMAN,#PIRRUS,#HALY,#HERMINIE;#SOLIMAN,#PIRRUS,#HALY,#PERSIDE,#HERMINIE',
     ),
   ),
   'desfontaines_eurimedon_II01' => 
@@ -62545,6 +63035,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Desfontaines',
       'string' => 'EURIMÉDON-PASITHÉE-ALERINE/EURIMÉDON-TYGRANE-PASITHÉE/TYGRANE/CÉLIANE/CÉLIANE-ARGAMOR/TYGRANE-CÉLIANE',
+      'string-id' => '#EURIMEDON,#PASITHEE,#ALERINE;#EURIMEDON,#TYGRANE,#PASITHEE;#TYGRANE;#CELIANE;#CELIANE,#ARGAMOR;#TYGRANE,#CELIANE',
     ),
   ),
   'desfontaines_eurimedon_II02' => 
@@ -62603,6 +63094,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Desfontaines',
       'string' => 'EURIMÉDON-TYGRANE-PASITHÉE/TYGRANE/CÉLIANE/CÉLIANE-ARGAMOR/TYGRANE-CÉLIANE/CÉLIANE',
+      'string-id' => '#EURIMEDON,#TYGRANE,#PASITHEE;#TYGRANE;#CELIANE;#CELIANE,#ARGAMOR;#TYGRANE,#CELIANE;#CELIANE',
     ),
   ),
   'desfontaines_eurimedon_III01' => 
@@ -62679,6 +63171,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Desfontaines',
       'string' => 'EURIMÉDON-PASITHÉE/ARCHELAS-EURIMÉDON-FALANTE-PASITHÉE/EURIMÉDON/EURIMÉDON-CÉLIANE/EURIMÉDON-LYSANOR-CÉLIANE/PASITHÉE-ALERINE',
+      'string-id' => '#EURIMEDON,#PASITHEE;#ARCHELAS,#EURIMEDON,#FALANTE,#PASITHEE;#EURIMEDON;#EURIMEDON,#CELIANE;#EURIMEDON,#LYSANOR,#CELIANE;#PASITHEE,#ALERINE',
     ),
   ),
   'desfontaines_eurimedon_IV01' => 
@@ -62746,6 +63239,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Desfontaines',
       'string' => 'ARCHELAS-FALANTE/ARCHELAS-EURIMÉDON-TYGRANE-FALANTE-CÉLIANE/ARCHELAS-EURIMÉDON/EURIMÉDON-PASITHÉE-ALERINE/EURIMÉDON-PASITHÉE-ALERINE/EURIMÉDON-PASITHÉE-ALERINE',
+      'string-id' => '#ARCHELAS,#FALANTE;#ARCHELAS,#EURIMEDON,#TYGRANE,#FALANTE,#CELIANE;#ARCHELAS,#EURIMEDON;#EURIMEDON,#PASITHEE,#ALERINE;#EURIMEDON,#PASITHEE,#ALERINE;#EURIMEDON,#PASITHEE,#ALERINE',
     ),
   ),
   'dalibray_soliman_II01' => 
@@ -62831,6 +63325,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Dalibray',
       'string' => 'SOLIMAN-RUSTAN-ACMAT-OSMAN-MUSTAPHA/RUSTAN-OSMAN/RUSTAN-LA REINE/SOLIMAN-RUSTAN-LA REINE/PERSINE-ALVANTE/OSMAN-ALVANTE',
+      'string-id' => '#SOLIMAN,#RUSTAN,#ACMAT,#OSMAN,#MUSTAPHA;#RUSTAN,#OSMAN;#RUSTAN,#LAREINE;#SOLIMAN,#RUSTAN,#LAREINE;#PERSINE,#ALVANTE;#OSMAN,#ALVANTE',
     ),
   ),
   'dalibray_soliman_III01' => 
@@ -62916,6 +63411,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Dalibray',
       'string' => 'PERSINE-ALVANTE/SOLIMAN-ACMAT/SOLIMAN-RUSTAN/MUSTAPHA-ORMÈNE/RUSTAN-MUSTAPHA-ORMÈNE-ADRASTE/RUSTAN-MUSTAPHA-ORMÈNE-ADRASTE-MESSAGER',
+      'string-id' => '#PERSINE,#ALVANTE;#SOLIMAN,#ACMAT;#SOLIMAN,#RUSTAN;#MUSTAPHA,#ORMENE;#RUSTAN,#MUSTAPHA,#ORMENE,#ADRASTE;#RUSTAN,#MUSTAPHA,#ORMENE,#ADRASTE,#MESSAGER',
     ),
   ),
   'dalibray_soliman_IV01' => 
@@ -62983,6 +63479,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Dalibray',
       'string' => 'SOLIMAN-RUSTAN-ACMAT/SOLIMAN-RUSTAN-ACMAT-LE DEVIN/SOLIMAN-RUSTAN-ACMAT-PERSINE/SOLIMAN-RUSTAN-ACMAT-PERSINE-ALVANTE/PERSINE/PERSINE-MUSTAPHA',
+      'string-id' => '#SOLIMAN,#RUSTAN,#ACMAT;#SOLIMAN,#RUSTAN,#ACMAT,#LEDEVIN;#SOLIMAN,#RUSTAN,#ACMAT,#PERSINE;#SOLIMAN,#RUSTAN,#ACMAT,#PERSINE,#ALVANTE;#PERSINE;#PERSINE,#MUSTAPHA',
     ),
   ),
   'dalibray_soliman_V01' => 
@@ -63050,6 +63547,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Dalibray',
       'string' => 'PERSINE-MUSTAPHA/LA REINE/LA REINE-ORMÈNE/SOLIMAN-ACMAT/SOLIMAN-RUSTAN-ACMAT-LA REINE-ORMÈNE/SOLIMAN-ACMAT',
+      'string-id' => '#PERSINE,#MUSTAPHA;#LAREINE;#LAREINE,#ORMENE;#SOLIMAN,#ACMAT;#SOLIMAN,#RUSTAN,#ACMAT,#LAREINE,#ORMENE;#SOLIMAN,#ACMAT',
     ),
   ),
   'dalibray_soliman_V02' => 
@@ -63117,6 +63615,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Dalibray',
       'string' => 'LA REINE/LA REINE-ORMÈNE/SOLIMAN-ACMAT/SOLIMAN-RUSTAN-ACMAT-LA REINE-ORMÈNE/SOLIMAN-ACMAT/SOLIMAN-ACMAT-PERSINE-ALVANTE-LA REINE-MUSTAPHA',
+      'string-id' => '#LAREINE;#LAREINE,#ORMENE;#SOLIMAN,#ACMAT;#SOLIMAN,#RUSTAN,#ACMAT,#LAREINE,#ORMENE;#SOLIMAN,#ACMAT;#SOLIMAN,#ACMAT,#PERSINE,#ALVANTE,#LAREINE,#MUSTAPHA',
     ),
   ),
   'dalibray_soliman_V03' => 
@@ -63193,6 +63692,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Dalibray',
       'string' => 'LA REINE-ORMÈNE/SOLIMAN-ACMAT/SOLIMAN-RUSTAN-ACMAT-LA REINE-ORMÈNE/SOLIMAN-ACMAT/SOLIMAN-ACMAT-PERSINE-ALVANTE-LA REINE-MUSTAPHA/SOLIMAN-ACMAT-OSMAN-PERSINE-ALVANTE-LA REINE-MUSTAPHA',
+      'string-id' => '#LAREINE,#ORMENE;#SOLIMAN,#ACMAT;#SOLIMAN,#RUSTAN,#ACMAT,#LAREINE,#ORMENE;#SOLIMAN,#ACMAT;#SOLIMAN,#ACMAT,#PERSINE,#ALVANTE,#LAREINE,#MUSTAPHA;#SOLIMAN,#ACMAT,#OSMAN,#PERSINE,#ALVANTE,#LAREINE,#MUSTAPHA',
     ),
   ),
   'dalibray_soliman_V04' => 
@@ -63269,6 +63769,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Dalibray',
       'string' => 'SOLIMAN-ACMAT/SOLIMAN-RUSTAN-ACMAT-LA REINE-ORMÈNE/SOLIMAN-ACMAT/SOLIMAN-ACMAT-PERSINE-ALVANTE-LA REINE-MUSTAPHA/SOLIMAN-ACMAT-OSMAN-PERSINE-ALVANTE-LA REINE-MUSTAPHA/SOLIMAN-ACMAT-PERSINE-ALVANTE-LA REINE-MUSTAPHA-L’AMBASSADEUR DE PERSE',
+      'string-id' => '#SOLIMAN,#ACMAT;#SOLIMAN,#RUSTAN,#ACMAT,#LAREINE,#ORMENE;#SOLIMAN,#ACMAT;#SOLIMAN,#ACMAT,#PERSINE,#ALVANTE,#LAREINE,#MUSTAPHA;#SOLIMAN,#ACMAT,#OSMAN,#PERSINE,#ALVANTE,#LAREINE,#MUSTAPHA;#SOLIMAN,#ACMAT,#PERSINE,#ALVANTE,#LAREINE,#MUSTAPHA,#LAMBASSADEURDEPERSE',
     ),
   ),
   'cyrano_pedantjoue_I01' => 
@@ -63327,6 +63828,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Cyrano',
       'string' => 'GRANGER-CHASTEAUFORT/GRANGER/GRANGER/GRANGER LE JEUNE/GRANGER-GRANGER LE JEUNE/GRANGER-FLEURY',
+      'string-id' => '#GRANGER,#CHASTEAUFORT;#GRANGER;#GRANGER;#CHARLOT;#GRANGER,#CHARLOT;#GRANGER,#FLEURY',
     ),
   ),
   'cyrano_pedantjoue_I02' => 
@@ -63376,6 +63878,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Cyrano',
       'string' => 'GRANGER/GRANGER/GRANGER LE JEUNE/GRANGER-GRANGER LE JEUNE/GRANGER-FLEURY/GRANGER-GRANGER LE JEUNE-FLEURY',
+      'string-id' => '#GRANGER;#GRANGER;#CHARLOT;#GRANGER,#CHARLOT;#GRANGER,#FLEURY;#GRANGER,#CHARLOT,#FLEURY',
     ),
   ),
   'cyrano_pedantjoue_I03' => 
@@ -63425,6 +63928,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Cyrano',
       'string' => 'GRANGER/GRANGER LE JEUNE/GRANGER-GRANGER LE JEUNE/GRANGER-FLEURY/GRANGER-GRANGER LE JEUNE-FLEURY/GRANGER LE JEUNE',
+      'string-id' => '#GRANGER;#CHARLOT;#GRANGER,#CHARLOT;#GRANGER,#FLEURY;#GRANGER,#CHARLOT,#FLEURY;#CHARLOT',
     ),
   ),
   'cyrano_pedantjoue_I04' => 
@@ -63474,6 +63978,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Cyrano',
       'string' => 'GRANGER LE JEUNE/GRANGER-GRANGER LE JEUNE/GRANGER-FLEURY/GRANGER-GRANGER LE JEUNE-FLEURY/GRANGER LE JEUNE/GRANGER LE JEUNE',
+      'string-id' => '#CHARLOT;#GRANGER,#CHARLOT;#GRANGER,#FLEURY;#GRANGER,#CHARLOT,#FLEURY;#CHARLOT;#CHARLOT',
     ),
   ),
   'cyrano_pedantjoue_II01' => 
@@ -63532,6 +64037,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Cyrano',
       'string' => 'CHASTEAUFORT/CHASTEAUFORT-MATHIEU GAREAU/GRANGER-MATHIEU GAREAU-FLEURY-MANON/GRANGER//GRANGER',
+      'string-id' => '#CHASTEAUFORT;#CHASTEAUFORT,#GAREAU;#GRANGER,#GAREAU,#FLEURY,#MANON;#GRANGER;;#GRANGER',
     ),
   ),
   'cyrano_pedantjoue_II02' => 
@@ -63599,6 +64105,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Cyrano',
       'string' => 'CHASTEAUFORT-MATHIEU GAREAU/GRANGER-MATHIEU GAREAU-FLEURY-MANON/GRANGER//GRANGER/GRANGER LE JEUNE',
+      'string-id' => '#CHASTEAUFORT,#GAREAU;#GRANGER,#GAREAU,#FLEURY,#MANON;#GRANGER;;#GRANGER;#CHARLOT',
     ),
   ),
   'cyrano_pedantjoue_II03' => 
@@ -63648,6 +64155,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Cyrano',
       'string' => 'GRANGER-MATHIEU GAREAU-FLEURY-MANON/GRANGER//GRANGER/GRANGER LE JEUNE/GRANGER',
+      'string-id' => '#GRANGER,#GAREAU,#FLEURY,#MANON;#GRANGER;;#GRANGER;#CHARLOT;#GRANGER',
     ),
   ),
   'cyrano_pedantjoue_II04' => 
@@ -63697,6 +64205,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Cyrano',
       'string' => 'GRANGER//GRANGER/GRANGER LE JEUNE/GRANGER/GENEVOTE',
+      'string-id' => '#GRANGER;;#GRANGER;#CHARLOT;#GRANGER;#GENEVOTE',
     ),
   ),
   'cyrano_pedantjoue_II05' => 
@@ -63755,6 +64264,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Cyrano',
       'string' => '/GRANGER/GRANGER LE JEUNE/GRANGER/GENEVOTE/CHASTEAUFORT',
+      'string-id' => ';#GRANGER;#CHARLOT;#GRANGER;#GENEVOTE;#CHASTEAUFORT',
     ),
   ),
   'cyrano_pedantjoue_IV01' => 
@@ -63813,6 +64323,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Cyrano',
       'string' => 'GRANGER/GRANGER-CHASTEAUFORT-DE LA TREMBLAYE/GRANGER-CHASTEAUFORT-DE LA TREMBLAYE-MANON/GRANGER/GRANGER-GRANGER LE JEUNE/GRANGER',
+      'string-id' => '#GRANGER;#GRANGER,#CHASTEAUFORT,#LATREMBLAYE;#GRANGER,#CHASTEAUFORT,#LATREMBLAYE,#MANON;#GRANGER;#GRANGER,#CHARLOT;#GRANGER',
     ),
   ),
   'cyrano_pedantjoue_IV02' => 
@@ -63880,6 +64391,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Cyrano',
       'string' => 'GRANGER-CHASTEAUFORT-DE LA TREMBLAYE/GRANGER-CHASTEAUFORT-DE LA TREMBLAYE-MANON/GRANGER/GRANGER-GRANGER LE JEUNE/GRANGER/GRANGER-DE LA TREMBLAYE',
+      'string-id' => '#GRANGER,#CHASTEAUFORT,#LATREMBLAYE;#GRANGER,#CHASTEAUFORT,#LATREMBLAYE,#MANON;#GRANGER;#GRANGER,#CHARLOT;#GRANGER;#GRANGER,#LATREMBLAYE',
     ),
   ),
   'cyrano_pedantjoue_IV03' => 
@@ -63938,6 +64450,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Cyrano',
       'string' => 'GRANGER-CHASTEAUFORT-DE LA TREMBLAYE-MANON/GRANGER/GRANGER-GRANGER LE JEUNE/GRANGER/GRANGER-DE LA TREMBLAYE/GRANGER-GRANGER LE JEUNE',
+      'string-id' => '#GRANGER,#CHASTEAUFORT,#LATREMBLAYE,#MANON;#GRANGER;#GRANGER,#CHARLOT;#GRANGER;#GRANGER,#LATREMBLAYE;#GRANGER,#CHARLOT',
     ),
   ),
   'cyrano_pedantjoue_IV04' => 
@@ -63987,6 +64500,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Cyrano',
       'string' => 'GRANGER/GRANGER-GRANGER LE JEUNE/GRANGER/GRANGER-DE LA TREMBLAYE/GRANGER-GRANGER LE JEUNE/GRANGER-DE LA TREMBLAYE-GRANGER LE JEUNE',
+      'string-id' => '#GRANGER;#GRANGER,#CHARLOT;#GRANGER;#GRANGER,#LATREMBLAYE;#GRANGER,#CHARLOT;#GRANGER,#LATREMBLAYE,#CHARLOT',
     ),
   ),
   'cyrano_pedantjoue_V01' => 
@@ -64027,6 +64541,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Cyrano',
       'string' => 'GRANGER/GRANGER/GRANGER-GENEVOTE/GENEVOTE/GRANGER-GENEVOTE/',
+      'string-id' => '#GRANGER;#GRANGER;#GRANGER,#GENEVOTE;#GENEVOTE;#GRANGER,#GENEVOTE;',
     ),
   ),
   'cyrano_pedantjoue_V02' => 
@@ -64076,6 +64591,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Cyrano',
       'string' => 'GRANGER/GRANGER-GENEVOTE/GENEVOTE/GRANGER-GENEVOTE//CHASTEAUFORT',
+      'string-id' => '#GRANGER;#GRANGER,#GENEVOTE;#GENEVOTE;#GRANGER,#GENEVOTE;;#CHASTEAUFORT',
     ),
   ),
   'cyrano_pedantjoue_V03' => 
@@ -64134,6 +64650,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Cyrano',
       'string' => 'GRANGER-GENEVOTE/GENEVOTE/GRANGER-GENEVOTE//CHASTEAUFORT/CHASTEAUFORT-MATHIEU GAREAU',
+      'string-id' => '#GRANGER,#GENEVOTE;#GENEVOTE;#GRANGER,#GENEVOTE;;#CHASTEAUFORT;#CHASTEAUFORT,#GAREAU',
     ),
   ),
   'cyrano_pedantjoue_V04' => 
@@ -64192,6 +64709,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Cyrano',
       'string' => 'GENEVOTE/GRANGER-GENEVOTE//CHASTEAUFORT/CHASTEAUFORT-MATHIEU GAREAU/GRANGER-CHASTEAUFORT-MATHIEU GAREAU',
+      'string-id' => '#GENEVOTE;#GRANGER,#GENEVOTE;;#CHASTEAUFORT;#CHASTEAUFORT,#GAREAU;#GRANGER,#CHASTEAUFORT,#GAREAU',
     ),
   ),
   'cyrano_pedantjoue_V05' => 
@@ -64259,6 +64777,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Cyrano',
       'string' => 'GRANGER-GENEVOTE//CHASTEAUFORT/CHASTEAUFORT-MATHIEU GAREAU/GRANGER-CHASTEAUFORT-MATHIEU GAREAU/GRANGER-CHASTEAUFORT-MATHIEU GAREAU-DE LA TREMBLAYE-GRANGER LE JEUNE-MANON-GENEVOTE',
+      'string-id' => '#GRANGER,#GENEVOTE;;#CHASTEAUFORT;#CHASTEAUFORT,#GAREAU;#GRANGER,#CHASTEAUFORT,#GAREAU;#GRANGER,#CHASTEAUFORT,#GAREAU,#LATREMBLAYE,#CHARLOT,#MANON,#GENEVOTE',
     ),
   ),
   'cyrano_lamortdagrippine_III01' => 
@@ -64317,6 +64836,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Cyrano',
       'string' => 'AGRIPPINE/TIBÈRE-AGRIPPINE/TIBÈRE-SÉJANUS-AGRIPPINE/SÉJANUS-AGRIPPINE/AGRIPPINE-LIVILLA/LIVILLA',
+      'string-id' => '#AGRIPPINE;#TIBERE,#AGRIPPINE;#TIBERE,#SEJANUS,#AGRIPPINE;#SEJANUS,#AGRIPPINE;#AGRIPPINE,#LIVILLA;#LIVILLA',
     ),
   ),
   'cyrano_lamortdagrippine_V01' => 
@@ -64384,6 +64904,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Cyrano',
       'string' => 'TIBÈRE-LIVILLA/TIBÈRE-NERVA-LIVILLA/TIBÈRE-LIVILLA/LIVILLA/SÉJANUS-NERVA-LIVILLA/SÉJANUS-NERVA-AGRIPPINE',
+      'string-id' => '#TIBERE,#LIVILLA;#TIBERE,#NERVA,#LIVILLA;#TIBERE,#LIVILLA;#LIVILLA;#SEJANUS,#NERVA,#LIVILLA;#SEJANUS,#NERVA,#AGRIPPINE',
     ),
   ),
   'cyrano_lamortdagrippine_V02' => 
@@ -64451,6 +64972,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Cyrano',
       'string' => 'TIBÈRE-NERVA-LIVILLA/TIBÈRE-LIVILLA/LIVILLA/SÉJANUS-NERVA-LIVILLA/SÉJANUS-NERVA-AGRIPPINE/TIBÈRE-AGRIPPINE',
+      'string-id' => '#TIBERE,#NERVA,#LIVILLA;#TIBERE,#LIVILLA;#LIVILLA;#SEJANUS,#NERVA,#LIVILLA;#SEJANUS,#NERVA,#AGRIPPINE;#TIBERE,#AGRIPPINE',
     ),
   ),
   'cyrano_lamortdagrippine_V03' => 
@@ -64509,6 +65031,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Cyrano',
       'string' => 'TIBÈRE-LIVILLA/LIVILLA/SÉJANUS-NERVA-LIVILLA/SÉJANUS-NERVA-AGRIPPINE/TIBÈRE-AGRIPPINE/TIBÈRE',
+      'string-id' => '#TIBERE,#LIVILLA;#LIVILLA;#SEJANUS,#NERVA,#LIVILLA;#SEJANUS,#NERVA,#AGRIPPINE;#TIBERE,#AGRIPPINE;#TIBERE',
     ),
   ),
   'cyrano_lamortdagrippine_V04' => 
@@ -64576,6 +65099,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Cyrano',
       'string' => 'LIVILLA/SÉJANUS-NERVA-LIVILLA/SÉJANUS-NERVA-AGRIPPINE/TIBÈRE-AGRIPPINE/TIBÈRE/TIBÈRE-NERVA',
+      'string-id' => '#LIVILLA;#SEJANUS,#NERVA,#LIVILLA;#SEJANUS,#NERVA,#AGRIPPINE;#TIBERE,#AGRIPPINE;#TIBERE;#TIBERE,#NERVA',
     ),
   ),
   'corneillet_timocrate_III01' => 
@@ -64634,6 +65158,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ERIPHILE-/ERIPHILE-/LA REINE d\'ARGOS-ERIPHILE-/LA REINE d\'ARGOS-ERIPHILE-/LA REINE d\'ARGOS-NICANDRE-/LA REINE d\'ARGOS-NICANDRE',
+      'string-id' => '#ERIPHILE,#CLEOMENE;#ERIPHILE,#CLEOMENE;#LAREINE,#ERIPHILE,#CLEOMENE;#LAREINE,#ERIPHILE,#CLEOMENE;#LAREINE,#NICANDRE,#CLEOMENE;#LAREINE,#NICANDRE,#CLEOMENE',
     ),
   ),
   'corneillet_timocrate_III02' => 
@@ -64692,6 +65217,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ERIPHILE-/LA REINE d\'ARGOS-ERIPHILE-/LA REINE d\'ARGOS-ERIPHILE-/LA REINE d\'ARGOS-NICANDRE-/LA REINE d\'ARGOS-NICANDRE-/NICANDRE',
+      'string-id' => '#ERIPHILE,#CLEOMENE;#LAREINE,#ERIPHILE,#CLEOMENE;#LAREINE,#ERIPHILE,#CLEOMENE;#LAREINE,#NICANDRE,#CLEOMENE;#LAREINE,#NICANDRE,#CLEOMENE;#NICANDRE,#CLEOMENE',
     ),
   ),
   'corneillet_timocrate_IV01' => 
@@ -64759,6 +65285,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'NICANDRE-/NICANDRE-/NICANDRE-/ERIPHILE-/LA REINE d\'ARGOS-/LA REINE d\'ARGOS-TRASILE',
+      'string-id' => '#NICANDRE,#CLEOMENE;#NICANDRE,#CLEOMENE;#NICANDRE,#CLEOMENE;#ERIPHILE,#CLEOMENE;#LAREINE,#CLEOMENE;#LAREINE,#TRASILLE,#CLEOMENE',
     ),
   ),
   'corneillet_timocrate_IV02' => 
@@ -64835,6 +65362,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'NICANDRE-/NICANDRE-/ERIPHILE-/LA REINE d\'ARGOS-/LA REINE d\'ARGOS-TRASILE-/TIMOCRATE-LA REINE d\'ARGOS',
+      'string-id' => '#NICANDRE,#CLEOMENE;#NICANDRE,#CLEOMENE;#ERIPHILE,#CLEOMENE;#LAREINE,#CLEOMENE;#LAREINE,#TRASILLE,#CLEOMENE;#TIMOCRATE,#LAREINE,#CLEOMENE',
     ),
   ),
   'corneillet_timocrate_V01' => 
@@ -64893,6 +65421,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ERIPHILE-/ERIPHILE-NICANDRE-/ERIPHILE-/TIMOCRATE-ERIPHILE-/TIMOCRATE-LA REINE d\'ARGOS-ERIPHILE-/TIMOCRATE-LA REINE d\'ARGOS-ERIPHILE',
+      'string-id' => '#ERIPHILE,#CLEOMENE;#ERIPHILE,#NICANDRE,#CLEOMENE;#ERIPHILE,#CLEOMENE;#TIMOCRATE,#ERIPHILE,#CLEOMENE;#TIMOCRATE,#LAREINE,#ERIPHILE,#CLEOMENE;#TIMOCRATE,#LAREINE,#ERIPHILE,#CLEOMENE',
     ),
   ),
   'corneillet_timocrate_V02' => 
@@ -64951,6 +65480,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ERIPHILE-NICANDRE-/ERIPHILE-/TIMOCRATE-ERIPHILE-/TIMOCRATE-LA REINE d\'ARGOS-ERIPHILE-/TIMOCRATE-LA REINE d\'ARGOS-ERIPHILE-/TIMOCRATE-LA REINE d\'ARGOS-ERIPHILE-NICANDRE',
+      'string-id' => '#ERIPHILE,#NICANDRE,#CLEOMENE;#ERIPHILE,#CLEOMENE;#TIMOCRATE,#ERIPHILE,#CLEOMENE;#TIMOCRATE,#LAREINE,#ERIPHILE,#CLEOMENE;#TIMOCRATE,#LAREINE,#ERIPHILE,#CLEOMENE;#TIMOCRATE,#LAREINE,#ERIPHILE,#NICANDRE,#CLEOMENE',
     ),
   ),
   'corneillet_timocrate_V03' => 
@@ -65018,6 +65548,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ERIPHILE-/TIMOCRATE-ERIPHILE-/TIMOCRATE-LA REINE d\'ARGOS-ERIPHILE-/TIMOCRATE-LA REINE d\'ARGOS-ERIPHILE-/TIMOCRATE-LA REINE d\'ARGOS-ERIPHILE-NICANDRE-/TIMOCRATE-LA REINE d\'ARGOS-ERIPHILE-NICANDRE-TRASILE',
+      'string-id' => '#ERIPHILE,#CLEOMENE;#TIMOCRATE,#ERIPHILE,#CLEOMENE;#TIMOCRATE,#LAREINE,#ERIPHILE,#CLEOMENE;#TIMOCRATE,#LAREINE,#ERIPHILE,#CLEOMENE;#TIMOCRATE,#LAREINE,#ERIPHILE,#NICANDRE,#CLEOMENE;#TIMOCRATE,#LAREINE,#ERIPHILE,#NICANDRE,#TRASILLE,#CLEOMENE',
     ),
   ),
   'corneillet_theodat_III01' => 
@@ -65085,6 +65616,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'AMALASONTE-HONORIC/AMALASONTE-THÉODAT-HONORIC/AMALASONTE-THÉODAT-ILDEGONDE-HONORIC/AMALASONTE-THÉODAT-HONORIC/AMALASONTE-THÉODAT/AMALASONTE-ATAULPHE',
+      'string-id' => '#AMALASONTE,#HONORIC;#AMALASONTE,#THEODAT,#HONORIC;#AMALASONTE,#THEODAT,#ILDEGONDE,#HONORIC;#AMALASONTE,#THEODAT,#HONORIC;#AMALASONTE,#THEODAT;#AMALASONTE,#ATAULPHE',
     ),
   ),
   'corneillet_theodat_IV01' => 
@@ -65143,6 +65675,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'AMALASONTE/AMALASONTE-ATAULPHE/AMALASONTE/AMALASONTE-HONORIC/AMALASONTE/AMALASONTE-THÉODAT',
+      'string-id' => '#AMALASONTE;#AMALASONTE,#ATAULPHE;#AMALASONTE;#AMALASONTE,#HONORIC;#AMALASONTE;#AMALASONTE,#THEODAT',
     ),
   ),
   'corneillet_theodat_IV02' => 
@@ -65210,6 +65743,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'AMALASONTE-ATAULPHE/AMALASONTE/AMALASONTE-HONORIC/AMALASONTE/AMALASONTE-THÉODAT/AMALASONTE-THÉODAT-ILDEGONDE',
+      'string-id' => '#AMALASONTE,#ATAULPHE;#AMALASONTE;#AMALASONTE,#HONORIC;#AMALASONTE;#AMALASONTE,#THEODAT;#AMALASONTE,#THEODAT,#ILDEGONDE',
     ),
   ),
   'corneillet_theodat_IV03' => 
@@ -65268,6 +65802,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'AMALASONTE/AMALASONTE-HONORIC/AMALASONTE/AMALASONTE-THÉODAT/AMALASONTE-THÉODAT-ILDEGONDE/THÉODAT-ILDEGONDE',
+      'string-id' => '#AMALASONTE;#AMALASONTE,#HONORIC;#AMALASONTE;#AMALASONTE,#THEODAT;#AMALASONTE,#THEODAT,#ILDEGONDE;#THEODAT,#ILDEGONDE',
     ),
   ),
   'corneillet_theodat_IV04' => 
@@ -65326,6 +65861,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'AMALASONTE-HONORIC/AMALASONTE/AMALASONTE-THÉODAT/AMALASONTE-THÉODAT-ILDEGONDE/THÉODAT-ILDEGONDE/THÉODAT-ILDEGONDE',
+      'string-id' => '#AMALASONTE,#HONORIC;#AMALASONTE;#AMALASONTE,#THEODAT;#AMALASONTE,#THEODAT,#ILDEGONDE;#THEODAT,#ILDEGONDE;#THEODAT,#ILDEGONDE',
     ),
   ),
   'corneillet_stlicon_I01' => 
@@ -65411,6 +65947,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'THERMANTIE-EUCHERIUS-/HONORIUS-THERMANTIE-EUCHERIUS-MARCELLIN-/HONORIUS-THERMANTIE-/HONORIUS-PLACIDIE-/PLACIDIE-STILICON-/STILICON',
+      'string-id' => '#THERMANTIE,#EUCHERIUS,#ZENON;#HONORIUS,#THERMANTIE,#EUCHERIUS,#MARCELLIN,#ZENON;#HONORIUS,#THERMANTIE,#ZENON;#HONORIUS,#PLACIDIE,#ZENON;#PLACIDIE,#STILICON,#ZENON;#STILICON,#ZENON',
     ),
   ),
   'corneillet_stlicon_II01' => 
@@ -65487,6 +66024,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'PLACIDIE-/PLACIDIE-EUCHERIUS-/HONORIUS-EUCHERIUS-/HONORIUS-MARCELLIN-/HONORIUS-STILICON-/HONORIUS-STILICON-EUCHERIUS',
+      'string-id' => '#PLACIDIE,#ZENON;#PLACIDIE,#EUCHERIUS,#ZENON;#HONORIUS,#EUCHERIUS,#ZENON;#HONORIUS,#MARCELLIN,#ZENON;#HONORIUS,#STILICON,#ZENON;#HONORIUS,#STILICON,#EUCHERIUS,#ZENON',
     ),
   ),
   'corneillet_stlicon_IV01' => 
@@ -65563,6 +66101,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'PLACIDIE-/PLACIDIE-MARCELLIN-/PLACIDIE-EUCHERIUS-/HONORIUS-PLACIDIE-EUCHERIUS-MARCELLIN-/HONORIUS-EUCHERIUS-MARCELLIN-/HONORIUS-THERMANTIE-EUCHERIUS-MARCELLIN',
+      'string-id' => '#PLACIDIE,#ZENON;#PLACIDIE,#MARCELLIN,#ZENON;#PLACIDIE,#EUCHERIUS,#ZENON;#HONORIUS,#PLACIDIE,#EUCHERIUS,#MARCELLIN,#ZENON;#HONORIUS,#EUCHERIUS,#MARCELLIN,#ZENON;#HONORIUS,#THERMANTIE,#EUCHERIUS,#MARCELLIN,#ZENON',
     ),
   ),
   'corneillet_stlicon_IV02' => 
@@ -65648,6 +66187,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'PLACIDIE-MARCELLIN-/PLACIDIE-EUCHERIUS-/HONORIUS-PLACIDIE-EUCHERIUS-MARCELLIN-/HONORIUS-EUCHERIUS-MARCELLIN-/HONORIUS-THERMANTIE-EUCHERIUS-MARCELLIN-/HONORIUS-THERMANTIE-STILICON-EUCHERIUS-MARCELLIN',
+      'string-id' => '#PLACIDIE,#MARCELLIN,#ZENON;#PLACIDIE,#EUCHERIUS,#ZENON;#HONORIUS,#PLACIDIE,#EUCHERIUS,#MARCELLIN,#ZENON;#HONORIUS,#EUCHERIUS,#MARCELLIN,#ZENON;#HONORIUS,#THERMANTIE,#EUCHERIUS,#MARCELLIN,#ZENON;#HONORIUS,#THERMANTIE,#STILICON,#EUCHERIUS,#MARCELLIN,#ZENON',
     ),
   ),
   'corneillet_stlicon_V01' => 
@@ -65715,6 +66255,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'STILICON-/PLACIDIE-STILICON-/PLACIDIE-STILICON-/HONORIUS-PLACIDIE-STILICON-/HONORIUS-PLACIDIE-MARCELLIN-/HONORIUS-PLACIDIE-STILICON-MARCELLIN',
+      'string-id' => '#STILICON,#ZENON;#PLACIDIE,#STILICON,#ZENON;#PLACIDIE,#STILICON,#ZENON;#HONORIUS,#PLACIDIE,#STILICON,#ZENON;#HONORIUS,#PLACIDIE,#MARCELLIN,#ZENON;#HONORIUS,#PLACIDIE,#STILICON,#MARCELLIN,#ZENON',
     ),
   ),
   'corneillet_stlicon_V02' => 
@@ -65773,6 +66314,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'PLACIDIE-STILICON-/PLACIDIE-STILICON-/HONORIUS-PLACIDIE-STILICON-/HONORIUS-PLACIDIE-MARCELLIN-/HONORIUS-PLACIDIE-STILICON-MARCELLIN-/HONORIUS-PLACIDIE',
+      'string-id' => '#PLACIDIE,#STILICON,#ZENON;#PLACIDIE,#STILICON,#ZENON;#HONORIUS,#PLACIDIE,#STILICON,#ZENON;#HONORIUS,#PLACIDIE,#MARCELLIN,#ZENON;#HONORIUS,#PLACIDIE,#STILICON,#MARCELLIN,#ZENON;#HONORIUS,#PLACIDIE,#ZENON',
     ),
   ),
   'corneillet_stlicon_V03' => 
@@ -65831,6 +66373,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'PLACIDIE-STILICON-/HONORIUS-PLACIDIE-STILICON-/HONORIUS-PLACIDIE-MARCELLIN-/HONORIUS-PLACIDIE-STILICON-MARCELLIN-/HONORIUS-PLACIDIE-/HONORIUS-PLACIDIE-MARCELLIN',
+      'string-id' => '#PLACIDIE,#STILICON,#ZENON;#HONORIUS,#PLACIDIE,#STILICON,#ZENON;#HONORIUS,#PLACIDIE,#MARCELLIN,#ZENON;#HONORIUS,#PLACIDIE,#STILICON,#MARCELLIN,#ZENON;#HONORIUS,#PLACIDIE,#ZENON;#HONORIUS,#PLACIDIE,#MARCELLIN,#ZENON',
     ),
   ),
   'corneillet_pyrrhus_I01' => 
@@ -65889,6 +66432,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ANTIGONE/PYRRHUS-HIPPIAS-ANTIGONE/PYRRHUS-HIPPIAS-DÉIDAMIE/DÉIDAMIE/PYRRHUS-HIPPIAS-DÉIDAMIE/DÉIDAMIE-ANDROCLIDE',
+      'string-id' => '#ANTIGONE;#PYRRHUS,#HIPPIAS,#ANTIGONE;#PYRRHUS,#HIPPIAS,#DEIDAMIE;#DEIDAMIE;#PYRRHUS,#HIPPIAS,#DEIDAMIE;#DEIDAMIE,#ANDROCLIDE',
     ),
   ),
   'corneillet_pyrrhus_III01' => 
@@ -65956,6 +66500,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'PYRRHUS-HIPPIAS-ANTIGONE/NÉOPTOLEMUS-PYRRHUS-HIPPIAS-ANTIGONE/NÉOPTOLEMUS-PYRRHUS-HIPPIAS/NÉOPTOLEMUS-PYRRHUS-HIPPIAS-ANDROCLIDE/NÉOPTOLEMUS-PYRRHUS-HIPPIAS-DÉIDAMIE-ANDROCLIDE/PYRRHUS-HIPPIAS-DÉIDAMIE',
+      'string-id' => '#PYRRHUS,#HIPPIAS,#ANTIGONE;#NEOPTOLEMUS,#PYRRHUS,#HIPPIAS,#ANTIGONE;#NEOPTOLEMUS,#PYRRHUS,#HIPPIAS;#NEOPTOLEMUS,#PYRRHUS,#HIPPIAS,#ANDROCLIDE;#NEOPTOLEMUS,#PYRRHUS,#HIPPIAS,#DEIDAMIE,#ANDROCLIDE;#PYRRHUS,#HIPPIAS,#DEIDAMIE',
     ),
   ),
   'corneillet_pyrrhus_V01' => 
@@ -66023,6 +66568,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'NÉOPTOLEMUS-DÉIDAMIE/NÉOPTOLEMUS-DÉIDAMIE/NÉOPTOLEMUS-ANTIGONE-DÉIDAMIE/NÉOPTOLEMUS-PYRRHUS-ANTIGONE-DÉIDAMIE/NÉOPTOLEMUS-PYRRHUS-ANTIGONE-DÉIDAMIE-ANDROCLIDE/NÉOPTOLEMUS-PYRRHUS-HIPPIAS-ANTIGONE-DÉIDAMIE',
+      'string-id' => '#NEOPTOLEMUS,#DEIDAMIE;#NEOPTOLEMUS,#DEIDAMIE;#NEOPTOLEMUS,#ANTIGONE,#DEIDAMIE;#NEOPTOLEMUS,#PYRRHUS,#ANTIGONE,#DEIDAMIE;#NEOPTOLEMUS,#PYRRHUS,#ANTIGONE,#DEIDAMIE,#ANDROCLIDE;#NEOPTOLEMUS,#PYRRHUS,#HIPPIAS,#ANTIGONE,#DEIDAMIE',
     ),
   ),
   'corneillet_perseedemetrius_III01' => 
@@ -66081,6 +66627,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ÉRIXÈNE/PHILIPPE-ÉRIXÈNE/PHILIPPE-ÉRIXÈNE-DIDAS/PHILIPPE-ÉRIXÈNE-DIDAS/ÉRIXÈNE/DÉMÉTRIUS-ÉRIXÈNE',
+      'string-id' => '#ERIXENE;#PHILIPPE,#ERIXENE;#PHILIPPE,#ERIXENE,#DIDAS;#PHILIPPE,#ERIXENE,#DIDAS;#ERIXENE;#DEMETRIUS,#ERIXENE',
     ),
   ),
   'corneillet_perseedemetrius_IV01' => 
@@ -66139,6 +66686,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DÉMÉTRIUS-ÉRIXÈNE/PERSÉE-DÉMÉTRIUS-ÉRIXÈNE/PERSÉE-DÉMÉTRIUS/PHILIPPE-PERSÉE-DÉMÉTRIUS-DIDAS/PHILIPPE-DÉMÉTRIUS-DIDAS/PHILIPPE-DIDAS',
+      'string-id' => '#DEMETRIUS,#ERIXENE;#PERSEE,#DEMETRIUS,#ERIXENE;#PERSEE,#DEMETRIUS;#PHILIPPE,#PERSEE,#DEMETRIUS,#DIDAS;#PHILIPPE,#DEMETRIUS,#DIDAS;#PHILIPPE,#DIDAS',
     ),
   ),
   'corneillet_perseedemetrius_IV02' => 
@@ -66206,6 +66754,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'PERSÉE-DÉMÉTRIUS-ÉRIXÈNE/PERSÉE-DÉMÉTRIUS/PHILIPPE-PERSÉE-DÉMÉTRIUS-DIDAS/PHILIPPE-DÉMÉTRIUS-DIDAS/PHILIPPE-DIDAS/PHILIPPE',
+      'string-id' => '#PERSEE,#DEMETRIUS,#ERIXENE;#PERSEE,#DEMETRIUS;#PHILIPPE,#PERSEE,#DEMETRIUS,#DIDAS;#PHILIPPE,#DEMETRIUS,#DIDAS;#PHILIPPE,#DIDAS;#PHILIPPE',
     ),
   ),
   'corneillet_perseedemetrius_IV03' => 
@@ -66264,6 +66813,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'PERSÉE-DÉMÉTRIUS/PHILIPPE-PERSÉE-DÉMÉTRIUS-DIDAS/PHILIPPE-DÉMÉTRIUS-DIDAS/PHILIPPE-DIDAS/PHILIPPE/PHILIPPE',
+      'string-id' => '#PERSEE,#DEMETRIUS;#PHILIPPE,#PERSEE,#DEMETRIUS,#DIDAS;#PHILIPPE,#DEMETRIUS,#DIDAS;#PHILIPPE,#DIDAS;#PHILIPPE;#PHILIPPE',
     ),
   ),
   'corneillet_perseedemetrius_V01' => 
@@ -66313,6 +66863,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ÉRIXÈNE/ÉRIXÈNE/PERSÉE-ÉRIXÈNE/PHILIPPE-PERSÉE-ÉRIXÈNE/PHILIPPE-PERSÉE-ÉRIXÈNE/PHILIPPE-ÉRIXÈNE',
+      'string-id' => '#ERIXENE;#ERIXENE;#PERSEE,#ERIXENE;#PHILIPPE,#PERSEE,#ERIXENE;#PHILIPPE,#PERSEE,#ERIXENE;#PHILIPPE,#ERIXENE',
     ),
   ),
   'corneillet_perseedemetrius_V02' => 
@@ -66362,6 +66913,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ÉRIXÈNE/PERSÉE-ÉRIXÈNE/PHILIPPE-PERSÉE-ÉRIXÈNE/PHILIPPE-PERSÉE-ÉRIXÈNE/PHILIPPE-ÉRIXÈNE/PHILIPPE',
+      'string-id' => '#ERIXENE;#PERSEE,#ERIXENE;#PHILIPPE,#PERSEE,#ERIXENE;#PHILIPPE,#PERSEE,#ERIXENE;#PHILIPPE,#ERIXENE;#PHILIPPE',
     ),
   ),
   'corneillet_mortempereurcommode_II01' => 
@@ -66429,6 +66981,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'MARCIA/ELECTUS-MARCIA/ELECTUS-LAETUS/COMMODE-ELECTUS-LAETUS-FLAVIAN/LAETUS/LAETUS-HELVIE',
+      'string-id' => '#MARCIA;#ELECTUS,#MARCIA;#ELECTUS,#LAETUS;#COMMODE,#ELECTUS,#LAETUS,#FLAVIAN;#LAETUS;#LAETUS,#HELVIE',
     ),
   ),
   'corneillet_mortempereurcommode_III01' => 
@@ -66496,6 +67049,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'HELVIE-FLAVIAN/COMMODE-HELVIE-FLAVIAN/HELVIE-FLAVIAN/HELVIE/MARCIA-HELVIE/ELECTUS-MARCIA',
+      'string-id' => '#HELVIE,#FLAVIAN;#COMMODE,#HELVIE,#FLAVIAN;#HELVIE,#FLAVIAN;#HELVIE;#MARCIA,#HELVIE;#ELECTUS,#MARCIA',
     ),
   ),
   'corneillet_mortempereurcommode_IV01' => 
@@ -66563,6 +67117,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'COMMODE-HELVIE-FLAVIAN/COMMODE-HELVIE-FLAVIAN/COMMODE-LAETUS-HELVIE-FLAVIAN/COMMODE-LAETUS-MARCIA-HELVIE-FLAVIAN/LAETUS-MARCIA-HELVIE/ELECTUS-MARCIA-HELVIE',
+      'string-id' => '#COMMODE,#HELVIE,#FLAVIAN;#COMMODE,#HELVIE,#FLAVIAN;#COMMODE,#LAETUS,#HELVIE,#FLAVIAN;#COMMODE,#LAETUS,#MARCIA,#HELVIE,#FLAVIAN;#LAETUS,#MARCIA,#HELVIE;#ELECTUS,#MARCIA,#HELVIE',
     ),
   ),
   'corneillet_mortempereurcommode_V01' => 
@@ -66630,6 +67185,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LAETUS-MARCIA/ELECTUS-LAETUS-MARCIA/ELECTUS-MARCIA/COMMODE-ELECTUS-MARCIA-FLAVIAN/ELECTUS-MARCIA/MARCIA-HELVIE',
+      'string-id' => '#LAETUS,#MARCIA;#ELECTUS,#LAETUS,#MARCIA;#ELECTUS,#MARCIA;#COMMODE,#ELECTUS,#MARCIA,#FLAVIAN;#ELECTUS,#MARCIA;#MARCIA,#HELVIE',
     ),
   ),
   'corneillet_mortempereurcommode_V02' => 
@@ -66706,6 +67262,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ELECTUS-LAETUS-MARCIA/ELECTUS-MARCIA/COMMODE-ELECTUS-MARCIA-FLAVIAN/ELECTUS-MARCIA/MARCIA-HELVIE/MARCIA-HELVIE-FLAVIAN',
+      'string-id' => '#ELECTUS,#LAETUS,#MARCIA;#ELECTUS,#MARCIA;#COMMODE,#ELECTUS,#MARCIA,#FLAVIAN;#ELECTUS,#MARCIA;#MARCIA,#HELVIE;#MARCIA,#HELVIE,#FLAVIAN',
     ),
   ),
   'corneillet_mortempereurcommode_V03' => 
@@ -66773,6 +67330,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ELECTUS-MARCIA/COMMODE-ELECTUS-MARCIA-FLAVIAN/ELECTUS-MARCIA/MARCIA-HELVIE/MARCIA-HELVIE-FLAVIAN/MARCIA-HELVIE-FLAVIAN',
+      'string-id' => '#ELECTUS,#MARCIA;#COMMODE,#ELECTUS,#MARCIA,#FLAVIAN;#ELECTUS,#MARCIA;#MARCIA,#HELVIE;#MARCIA,#HELVIE,#FLAVIAN;#MARCIA,#HELVIE,#FLAVIAN',
     ),
   ),
   'corneillet_mortempereurcommode_V04' => 
@@ -66849,6 +67407,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'COMMODE-ELECTUS-MARCIA-FLAVIAN/ELECTUS-MARCIA/MARCIA-HELVIE/MARCIA-HELVIE-FLAVIAN/MARCIA-HELVIE-FLAVIAN/ELECTUS-LAETUS-MARCIA-HELVIE-FLAVIAN',
+      'string-id' => '#COMMODE,#ELECTUS,#MARCIA,#FLAVIAN;#ELECTUS,#MARCIA;#MARCIA,#HELVIE;#MARCIA,#HELVIE,#FLAVIAN;#MARCIA,#HELVIE,#FLAVIAN;#ELECTUS,#LAETUS,#MARCIA,#HELVIE,#FLAVIAN',
     ),
   ),
   'corneillet_mortdachille_III01' => 
@@ -66907,6 +67466,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'PYRRHUS/ACHILLE-PYRRHUS/PYRRHUS/PYRRHUS-BRISEIS/PYRRHUS-POLIXÈNE-BRISEIS/PYRRHUS-BRISEIS',
+      'string-id' => '#PYRRHUS;#ACHILLE,#PYRRHUS;#PYRRHUS;#PYRRHUS,#BRISEIS;#PYRRHUS,#POLIXENE,#BRISEIS;#PYRRHUS,#BRISEIS',
     ),
   ),
   'corneillet_mortdachille_V01' => 
@@ -66956,6 +67516,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'POLIXÈNE/PYRRHUS-POLIXÈNE/PYRRHUS-POLIXÈNE-BRISEIS/PYRRHUS-BRISEIS/PYRRHUS-BRISEIS/BRISEIS',
+      'string-id' => '#POLIXENE;#PYRRHUS,#POLIXENE;#PYRRHUS,#POLIXENE,#BRISEIS;#PYRRHUS,#BRISEIS;#PYRRHUS,#BRISEIS;#BRISEIS',
     ),
   ),
   'corneillet_mortdachille_V02' => 
@@ -67005,6 +67566,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'PYRRHUS-POLIXÈNE/PYRRHUS-POLIXÈNE-BRISEIS/PYRRHUS-BRISEIS/PYRRHUS-BRISEIS/BRISEIS/BRISEIS',
+      'string-id' => '#PYRRHUS,#POLIXENE;#PYRRHUS,#POLIXENE,#BRISEIS;#PYRRHUS,#BRISEIS;#PYRRHUS,#BRISEIS;#BRISEIS;#BRISEIS',
     ),
   ),
   'corneillet_mortannibal_I01' => 
@@ -67063,6 +67625,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'PRUSIAS-ATTALE-ARAXE/PRUSIAS-ARAXE/PRUSIAS-NICOMÈDE-ARAXE/PRUSIAS-ARAXE/PRUSIAS-ÉLISE-ALCINE-ARAXE/PRUSIAS-ARAXE',
+      'string-id' => '#PRUSIAS,#ATTALE,#ARAXE;#PRUSIAS,#ARAXE;#PRUSIAS,#NICOMEDE,#ARAXE;#PRUSIAS,#ARAXE;#PRUSIAS,#ELISE,#ALCINE,#ARAXE;#PRUSIAS,#ARAXE',
     ),
   ),
   'corneillet_mortannibal_II01' => 
@@ -67130,6 +67693,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ÉLISE-ALCINE/NICOMÈDE-ÉLISE-ALCINE/ANNIBAL-NICOMÈDE-ÉLISE/ANNIBAL-NICOMÈDE/PRUSIAS-ANNIBAL-ARAXE/PRUSIAS-ARAXE',
+      'string-id' => '#ELISE,#ALCINE;#NICOMEDE,#ELISE,#ALCINE;#ANNIBAL,#NICOMEDE,#ELISE;#ANNIBAL,#NICOMEDE;#PRUSIAS,#ANNIBAL,#ARAXE;#PRUSIAS,#ARAXE',
     ),
   ),
   'corneillet_mortannibal_III01' => 
@@ -67197,6 +67761,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ATTALE-ÉLISE-ALCINE/ATTALE-ANNIBAL/ATTALE-ANNIBAL-FLAMINIUS/PRUSIAS-ATTALE-ANNIBAL-FLAMINIUS-ARAXE/PRUSIAS-ATTALE-FLAMINIUS-ARAXE/PRUSIAS-FLAMINIUS-ARAXE',
+      'string-id' => '#ATTALE,#ELISE,#ALCINE;#ATTALE,#ANNIBAL;#ATTALE,#ANNIBAL,#FLAMINIUS;#PRUSIAS,#ATTALE,#ANNIBAL,#FLAMINIUS,#ARAXE;#PRUSIAS,#ATTALE,#FLAMINIUS,#ARAXE;#PRUSIAS,#FLAMINIUS,#ARAXE',
     ),
   ),
   'corneillet_mortannibal_III02' => 
@@ -67264,6 +67829,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ATTALE-ANNIBAL/ATTALE-ANNIBAL-FLAMINIUS/PRUSIAS-ATTALE-ANNIBAL-FLAMINIUS-ARAXE/PRUSIAS-ATTALE-FLAMINIUS-ARAXE/PRUSIAS-FLAMINIUS-ARAXE/FLAMINIUS-PROCULE',
+      'string-id' => '#ATTALE,#ANNIBAL;#ATTALE,#ANNIBAL,#FLAMINIUS;#PRUSIAS,#ATTALE,#ANNIBAL,#FLAMINIUS,#ARAXE;#PRUSIAS,#ATTALE,#FLAMINIUS,#ARAXE;#PRUSIAS,#FLAMINIUS,#ARAXE;#FLAMINIUS,#PROCULE',
     ),
   ),
   'corneillet_mortannibal_IV01' => 
@@ -67331,6 +67897,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'FLAMINIUS-PROCULE/ATTALE-FLAMINIUS-PROCULE/PRUSIAS-ATTALE-ARAXE/PRUSIAS-ARAXE/PRUSIAS-NICOMÈDE-ARAXE/NICOMÈDE-ÉLISE',
+      'string-id' => '#FLAMINIUS,#PROCULE;#ATTALE,#FLAMINIUS,#PROCULE;#PRUSIAS,#ATTALE,#ARAXE;#PRUSIAS,#ARAXE;#PRUSIAS,#NICOMEDE,#ARAXE;#NICOMEDE,#ELISE',
     ),
   ),
   'corneillet_mortannibal_IV02' => 
@@ -67407,6 +67974,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ATTALE-FLAMINIUS-PROCULE/PRUSIAS-ATTALE-ARAXE/PRUSIAS-ARAXE/PRUSIAS-NICOMÈDE-ARAXE/NICOMÈDE-ÉLISE/ATTALE-ANNIBAL-ÉLISE',
+      'string-id' => '#ATTALE,#FLAMINIUS,#PROCULE;#PRUSIAS,#ATTALE,#ARAXE;#PRUSIAS,#ARAXE;#PRUSIAS,#NICOMEDE,#ARAXE;#NICOMEDE,#ELISE;#ATTALE,#ANNIBAL,#ELISE',
     ),
   ),
   'corneillet_mortannibal_IV03' => 
@@ -67483,6 +68051,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'PRUSIAS-ATTALE-ARAXE/PRUSIAS-ARAXE/PRUSIAS-NICOMÈDE-ARAXE/NICOMÈDE-ÉLISE/ATTALE-ANNIBAL-ÉLISE/ATTALE-ANNIBAL-ÉLISE-ALCINE',
+      'string-id' => '#PRUSIAS,#ATTALE,#ARAXE;#PRUSIAS,#ARAXE;#PRUSIAS,#NICOMEDE,#ARAXE;#NICOMEDE,#ELISE;#ATTALE,#ANNIBAL,#ELISE;#ATTALE,#ANNIBAL,#ELISE,#ALCINE',
     ),
   ),
   'corneillet_mortannibal_V01' => 
@@ -67559,6 +68128,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'PRUSIAS-ÉLISE-ARAXE/PRUSIAS-ATTALE-ÉLISE-ARAXE/PRUSIAS-ATTALE-FLAMINIUS-ÉLISE-PROCULE-ARAXE/PRUSIAS-FLAMINIUS-ÉLISE-ARAXE/PRUSIAS-FLAMINIUS-ÉLISE-ALCINE-ARAXE/FLAMINIUS-ÉLISE-ALCINE',
+      'string-id' => '#PRUSIAS,#ELISE,#ARAXE;#PRUSIAS,#ATTALE,#ELISE,#ARAXE;#PRUSIAS,#ATTALE,#FLAMINIUS,#ELISE,#PROCULE,#ARAXE;#PRUSIAS,#FLAMINIUS,#ELISE,#ARAXE;#PRUSIAS,#FLAMINIUS,#ELISE,#ALCINE,#ARAXE;#FLAMINIUS,#ELISE,#ALCINE',
     ),
   ),
   'corneillet_mortannibal_V02' => 
@@ -67635,6 +68205,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'PRUSIAS-ATTALE-ÉLISE-ARAXE/PRUSIAS-ATTALE-FLAMINIUS-ÉLISE-PROCULE-ARAXE/PRUSIAS-FLAMINIUS-ÉLISE-ARAXE/PRUSIAS-FLAMINIUS-ÉLISE-ALCINE-ARAXE/FLAMINIUS-ÉLISE-ALCINE/ÉLISE-ALCINE',
+      'string-id' => '#PRUSIAS,#ATTALE,#ELISE,#ARAXE;#PRUSIAS,#ATTALE,#FLAMINIUS,#ELISE,#PROCULE,#ARAXE;#PRUSIAS,#FLAMINIUS,#ELISE,#ARAXE;#PRUSIAS,#FLAMINIUS,#ELISE,#ALCINE,#ARAXE;#FLAMINIUS,#ELISE,#ALCINE;#ELISE,#ALCINE',
     ),
   ),
   'corneillet_mortannibal_V03' => 
@@ -67711,6 +68282,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'PRUSIAS-ATTALE-FLAMINIUS-ÉLISE-PROCULE-ARAXE/PRUSIAS-FLAMINIUS-ÉLISE-ARAXE/PRUSIAS-FLAMINIUS-ÉLISE-ALCINE-ARAXE/FLAMINIUS-ÉLISE-ALCINE/ÉLISE-ALCINE/ANNIBAL-NICOMÈDE-ÉLISE-ALCINE',
+      'string-id' => '#PRUSIAS,#ATTALE,#FLAMINIUS,#ELISE,#PROCULE,#ARAXE;#PRUSIAS,#FLAMINIUS,#ELISE,#ARAXE;#PRUSIAS,#FLAMINIUS,#ELISE,#ALCINE,#ARAXE;#FLAMINIUS,#ELISE,#ALCINE;#ELISE,#ALCINE;#ANNIBAL,#NICOMEDE,#ELISE,#ALCINE',
     ),
   ),
   'corneillet_mortannibal_V04' => 
@@ -67787,6 +68359,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'PRUSIAS-FLAMINIUS-ÉLISE-ARAXE/PRUSIAS-FLAMINIUS-ÉLISE-ALCINE-ARAXE/FLAMINIUS-ÉLISE-ALCINE/ÉLISE-ALCINE/ANNIBAL-NICOMÈDE-ÉLISE-ALCINE/ANNIBAL-NICOMÈDE-ÉLISE-ALCINE-ARAXE',
+      'string-id' => '#PRUSIAS,#FLAMINIUS,#ELISE,#ARAXE;#PRUSIAS,#FLAMINIUS,#ELISE,#ALCINE,#ARAXE;#FLAMINIUS,#ELISE,#ALCINE;#ELISE,#ALCINE;#ANNIBAL,#NICOMEDE,#ELISE,#ALCINE;#ANNIBAL,#NICOMEDE,#ELISE,#ALCINE,#ARAXE',
     ),
   ),
   'corneillet_maximian_I01' => 
@@ -67854,6 +68427,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'MAXIMIAN-LICINE/MAXIMIAN-LICINE-MAXIME/MAXIMIAN/MAXIMIAN-FAUSTE/FAUSTE/FAUSTE-SÉVÈRE',
+      'string-id' => '#MAXIMIAN,#LICINE;#MAXIMIAN,#LICINE,#MAXIME;#MAXIMIAN;#MAXIMIAN,#FAUSTE;#FAUSTE;#FAUSTE,#SEVERE',
     ),
   ),
   'corneillet_maximian_II01' => 
@@ -67921,6 +68495,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'CONSTANTIN-MAXIME/CONSTANTIN-CONSTANCE-MAXIME/CONSTANCE/CONSTANCE-LICINE/CONSTANCE-SÉVÈRE/MAXIMIAN-SÉVÈRE',
+      'string-id' => '#CONSTANTIN,#MAXIME;#CONSTANTIN,#CONSTANCE,#MAXIME;#CONSTANCE;#CONSTANCE,#LICINE;#CONSTANCE,#SEVERE;#MAXIMIAN,#SEVERE',
     ),
   ),
   'corneillet_maximian_III01' => 
@@ -67997,6 +68572,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'FAUSTE-SÉVÈRE/MAXIMIAN-FAUSTE-SÉVÈRE/MAXIMIAN-FAUSTE-LICINE/CONSTANTIN-MAXIMIAN-FAUSTE-LICINE/CONSTANTIN-MAXIMIAN-FAUSTE-LICINE-MAXIME/CONSTANTIN-MAXIMIAN-FAUSTE',
+      'string-id' => '#FAUSTE,#SEVERE;#MAXIMIAN,#FAUSTE,#SEVERE;#MAXIMIAN,#FAUSTE,#LICINE;#CONSTANTIN,#MAXIMIAN,#FAUSTE,#LICINE;#CONSTANTIN,#MAXIMIAN,#FAUSTE,#LICINE,#MAXIME;#CONSTANTIN,#MAXIMIAN,#FAUSTE',
     ),
   ),
   'corneillet_maximian_V01' => 
@@ -68064,6 +68640,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'CONSTANTIN-CONSTANCE/CONSTANTIN-FAUSTE-CONSTANCE/CONSTANTIN-MAXIMIAN-FAUSTE-CONSTANCE/CONSTANTIN-MAXIMIAN-FAUSTE-CONSTANCE-MAXIME/CONSTANTIN-MAXIMIAN-FAUSTE-CONSTANCE-SÉVÈRE-MAXIME/CONSTANTIN-MAXIMIAN-FAUSTE-CONSTANCE',
+      'string-id' => '#CONSTANTIN,#CONSTANCE;#CONSTANTIN,#FAUSTE,#CONSTANCE;#CONSTANTIN,#MAXIMIAN,#FAUSTE,#CONSTANCE;#CONSTANTIN,#MAXIMIAN,#FAUSTE,#CONSTANCE,#MAXIME;#CONSTANTIN,#MAXIMIAN,#FAUSTE,#CONSTANCE,#SEVERE,#MAXIME;#CONSTANTIN,#MAXIMIAN,#FAUSTE,#CONSTANCE',
     ),
   ),
   'corneillet_maximian_V02' => 
@@ -68131,6 +68708,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'CONSTANTIN-FAUSTE-CONSTANCE/CONSTANTIN-MAXIMIAN-FAUSTE-CONSTANCE/CONSTANTIN-MAXIMIAN-FAUSTE-CONSTANCE-MAXIME/CONSTANTIN-MAXIMIAN-FAUSTE-CONSTANCE-SÉVÈRE-MAXIME/CONSTANTIN-MAXIMIAN-FAUSTE-CONSTANCE/CONSTANTIN-MAXIMIAN-FAUSTE-CONSTANCE-LICINE',
+      'string-id' => '#CONSTANTIN,#FAUSTE,#CONSTANCE;#CONSTANTIN,#MAXIMIAN,#FAUSTE,#CONSTANCE;#CONSTANTIN,#MAXIMIAN,#FAUSTE,#CONSTANCE,#MAXIME;#CONSTANTIN,#MAXIMIAN,#FAUSTE,#CONSTANCE,#SEVERE,#MAXIME;#CONSTANTIN,#MAXIMIAN,#FAUSTE,#CONSTANCE;#CONSTANTIN,#MAXIMIAN,#FAUSTE,#CONSTANCE,#LICINE',
     ),
   ),
   'corneillet_illustresennemis_I01' => 
@@ -68207,6 +68785,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ENRIQUE-ALONSE DE ROXAS-/ALONSE DE ROXAS-/JACINTE-/DON LOPE de Guzman-JACINTE-/ALONSE DE ROXAS-DON SANCHE-/DON SANCHE-JACINTE',
+      'string-id' => '#ENRIQUE,#ALONSE,#BRAVES;#ALONSE,#BRAVES;#JACINTE,#BRAVES;#DONLOPE,#JACINTE,#BRAVES;#ALONSE,#DONSANCHE,#BRAVES;#DONSANCHE,#JACINTE,#BRAVES',
     ),
   ),
   'corneillet_illustresennemis_I02' => 
@@ -68274,6 +68853,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ALONSE DE ROXAS-/JACINTE-/DON LOPE de Guzman-JACINTE-/ALONSE DE ROXAS-DON SANCHE-/DON SANCHE-JACINTE-/DON LOPE de Guzman-JACINTE',
+      'string-id' => '#ALONSE,#BRAVES;#JACINTE,#BRAVES;#DONLOPE,#JACINTE,#BRAVES;#ALONSE,#DONSANCHE,#BRAVES;#DONSANCHE,#JACINTE,#BRAVES;#DONLOPE,#JACINTE,#BRAVES',
     ),
   ),
   'corneillet_illustresennemis_III01' => 
@@ -68341,6 +68921,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON SANCHE-DON RAMIRE-/DON SANCHE-DON RAMIRE-JACINTE-/JACINTE-/CASSANDRE-JACINTE-/CASSANDRE-/DON ALVAR-CASSANDRE',
+      'string-id' => '#DONSANCHE,#DONRAMIRE,#BRAVES;#DONSANCHE,#DONRAMIRE,#JACINTE,#BRAVES;#JACINTE,#BRAVES;#CASSANDRE,#JACINTE,#BRAVES;#CASSANDRE,#BRAVES;#DONALVAR,#CASSANDRE,#BRAVES',
     ),
   ),
   'corneillet_illustresennemis_III02' => 
@@ -68417,6 +68998,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON SANCHE-DON RAMIRE-JACINTE-/JACINTE-/CASSANDRE-JACINTE-/CASSANDRE-/DON ALVAR-CASSANDRE-/ENRIQUE-DON ALVAR-CASSANDRE',
+      'string-id' => '#DONSANCHE,#DONRAMIRE,#JACINTE,#BRAVES;#JACINTE,#BRAVES;#CASSANDRE,#JACINTE,#BRAVES;#CASSANDRE,#BRAVES;#DONALVAR,#CASSANDRE,#BRAVES;#ENRIQUE,#DONALVAR,#CASSANDRE,#BRAVES',
     ),
   ),
   'corneillet_illustresennemis_III03' => 
@@ -68493,6 +69075,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'JACINTE-/CASSANDRE-JACINTE-/CASSANDRE-/DON ALVAR-CASSANDRE-/ENRIQUE-DON ALVAR-CASSANDRE-/DON LOPE de Guzman-CASSANDRE',
+      'string-id' => '#JACINTE,#BRAVES;#CASSANDRE,#JACINTE,#BRAVES;#CASSANDRE,#BRAVES;#DONALVAR,#CASSANDRE,#BRAVES;#ENRIQUE,#DONALVAR,#CASSANDRE,#BRAVES;#DONLOPE,#CASSANDRE,#BRAVES',
     ),
   ),
   'corneillet_illustresennemis_III04' => 
@@ -68569,6 +69152,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'CASSANDRE-JACINTE-/CASSANDRE-/DON ALVAR-CASSANDRE-/ENRIQUE-DON ALVAR-CASSANDRE-/DON LOPE de Guzman-CASSANDRE-/DON LOPE de Guzman-DON ALVAR',
+      'string-id' => '#CASSANDRE,#JACINTE,#BRAVES;#CASSANDRE,#BRAVES;#DONALVAR,#CASSANDRE,#BRAVES;#ENRIQUE,#DONALVAR,#CASSANDRE,#BRAVES;#DONLOPE,#CASSANDRE,#BRAVES;#DONLOPE,#DONALVAR,#BRAVES',
     ),
   ),
   'corneillet_illustresennemis_III05' => 
@@ -68645,6 +69229,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'CASSANDRE-/DON ALVAR-CASSANDRE-/ENRIQUE-DON ALVAR-CASSANDRE-/DON LOPE de Guzman-CASSANDRE-/DON LOPE de Guzman-DON ALVAR-/DON LOPE de Guzman-DON ALVAR-DON LOUIS',
+      'string-id' => '#CASSANDRE,#BRAVES;#DONALVAR,#CASSANDRE,#BRAVES;#ENRIQUE,#DONALVAR,#CASSANDRE,#BRAVES;#DONLOPE,#CASSANDRE,#BRAVES;#DONLOPE,#DONALVAR,#BRAVES;#DONLOPE,#DONALVAR,#DONLOUIS,#BRAVES',
     ),
   ),
   'corneillet_illustresennemis_III06' => 
@@ -68721,6 +69306,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON ALVAR-CASSANDRE-/ENRIQUE-DON ALVAR-CASSANDRE-/DON LOPE de Guzman-CASSANDRE-/DON LOPE de Guzman-DON ALVAR-/DON LOPE de Guzman-DON ALVAR-DON LOUIS-/DON LOPE de Guzman-DON ALVAR',
+      'string-id' => '#DONALVAR,#CASSANDRE,#BRAVES;#ENRIQUE,#DONALVAR,#CASSANDRE,#BRAVES;#DONLOPE,#CASSANDRE,#BRAVES;#DONLOPE,#DONALVAR,#BRAVES;#DONLOPE,#DONALVAR,#DONLOUIS,#BRAVES;#DONLOPE,#DONALVAR,#BRAVES',
     ),
   ),
   'corneillet_illustresennemis_IV01' => 
@@ -68788,6 +69374,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON LOPE de Guzman-ALONSE DE ROXAS-/DON LOPE de Guzman-DON ALVAR-/DON LOPE de Guzman-/DON LOPE de Guzman-DON ALVAR-/DON LOPE de Guzman-DON ALVAR-/DON SANCHE-DON ALVAR',
+      'string-id' => '#DONLOPE,#ALONSE,#BRAVES;#DONLOPE,#DONALVAR,#BRAVES;#DONLOPE,#BRAVES;#DONLOPE,#DONALVAR,#BRAVES;#DONLOPE,#DONALVAR,#BRAVES;#DONSANCHE,#DONALVAR,#BRAVES',
     ),
   ),
   'corneillet_illustresennemis_IV02' => 
@@ -68846,6 +69433,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON LOPE de Guzman-DON ALVAR-/DON LOPE de Guzman-/DON LOPE de Guzman-DON ALVAR-/DON LOPE de Guzman-DON ALVAR-/DON SANCHE-DON ALVAR-/DON LOPE de Guzman-DON ALVAR',
+      'string-id' => '#DONLOPE,#DONALVAR,#BRAVES;#DONLOPE,#BRAVES;#DONLOPE,#DONALVAR,#BRAVES;#DONLOPE,#DONALVAR,#BRAVES;#DONSANCHE,#DONALVAR,#BRAVES;#DONLOPE,#DONALVAR,#BRAVES',
     ),
   ),
   'corneillet_illustresennemis_IV03' => 
@@ -68913,6 +69501,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON LOPE de Guzman-/DON LOPE de Guzman-DON ALVAR-/DON LOPE de Guzman-DON ALVAR-/DON SANCHE-DON ALVAR-/DON LOPE de Guzman-DON ALVAR-/DON SANCHE-DON ALVAR-JACINTE',
+      'string-id' => '#DONLOPE,#BRAVES;#DONLOPE,#DONALVAR,#BRAVES;#DONLOPE,#DONALVAR,#BRAVES;#DONSANCHE,#DONALVAR,#BRAVES;#DONLOPE,#DONALVAR,#BRAVES;#DONSANCHE,#DONALVAR,#JACINTE,#BRAVES',
     ),
   ),
   'corneillet_illustresennemis_V01' => 
@@ -68980,6 +69569,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON LOPE de Guzman-CASSANDRE-/DON LOPE de Guzman-CASSANDRE-JACINTE-/DON LOPE de Guzman-DON ALVAR-/DON LOPE de Guzman-DON ALVAR-CASSANDRE-/DON LOPE de Guzman-DON SANCHE-DON ALVAR-CASSANDRE-/DON LOPE de Guzman-DON SANCHE-DON ALVAR-CASSANDRE-JACINTE',
+      'string-id' => '#DONLOPE,#CASSANDRE,#BRAVES;#DONLOPE,#CASSANDRE,#JACINTE,#BRAVES;#DONLOPE,#DONALVAR,#BRAVES;#DONLOPE,#DONALVAR,#CASSANDRE,#BRAVES;#DONLOPE,#DONSANCHE,#DONALVAR,#CASSANDRE,#BRAVES;#DONLOPE,#DONSANCHE,#DONALVAR,#CASSANDRE,#JACINTE,#BRAVES',
     ),
   ),
   'corneillet_geolierdesoismeme_I01' => 
@@ -69038,6 +69628,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'FÉDÉRIC-OCTAVE/ISABELLE/FÉDÉRIC-ISABELLE/FÉDÉRIC-ISABELLE//ENRIQUE-SOLDATS',
+      'string-id' => '#FEDERIC,#OCTAVE;#ISABELLE;#FEDERIC,#ISABELLE;#FEDERIC,#ISABELLE;;#ENRIQUE,#SOLDATS',
     ),
   ),
   'corneillet_geolierdesoismeme_I02' => 
@@ -69087,6 +69678,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ISABELLE/FÉDÉRIC-ISABELLE/FÉDÉRIC-ISABELLE//ENRIQUE-SOLDATS/ENRIQUE-SOLDATS',
+      'string-id' => '#ISABELLE;#FEDERIC,#ISABELLE;#FEDERIC,#ISABELLE;;#ENRIQUE,#SOLDATS;#ENRIQUE,#SOLDATS',
     ),
   ),
   'corneillet_geolierdesoismeme_II01' => 
@@ -69163,6 +69755,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LAURE/LE ROI de Naples-LAURE/LE ROI de Naples-LAURE-OCTAVE-SANCHE/LE ROI de Naples-LAURE-OCTAVE-ENRIQUE-SANCHE/LE ROI de Naples-OCTAVE-ENRIQUE-SANCHE-SOLDATS/OCTAVE-ENRIQUE-SOLDATS',
+      'string-id' => '#LAURE;#LEROI,#LAURE;#LEROI,#LAURE,#OCTAVE,#SANCHE;#LEROI,#LAURE,#OCTAVE,#ENRIQUE,#SANCHE;#LEROI,#OCTAVE,#ENRIQUE,#SANCHE,#SOLDATS;#OCTAVE,#ENRIQUE,#SOLDATS',
     ),
   ),
   'corneillet_geolierdesoismeme_III01' => 
@@ -69239,6 +69832,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'FÉDÉRIC-ISABELLE/FÉDÉRIC-ISABELLE-ENRIQUE/FÉDÉRIC-ISABELLE-OCTAVE-ENRIQUE-SOLDATS/FÉDÉRIC-OCTAVE/FÉDÉRIC-LAURE-OCTAVE/FÉDÉRIC-LAURE-OCTAVE',
+      'string-id' => '#FEDERIC,#ISABELLE;#FEDERIC,#ISABELLE,#ENRIQUE;#FEDERIC,#ISABELLE,#OCTAVE,#ENRIQUE,#SOLDATS;#FEDERIC,#OCTAVE;#FEDERIC,#LAURE,#OCTAVE;#FEDERIC,#LAURE,#OCTAVE',
     ),
   ),
   'corneillet_geolierdesoismeme_III02' => 
@@ -69306,6 +69900,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'FÉDÉRIC-ISABELLE-ENRIQUE/FÉDÉRIC-ISABELLE-OCTAVE-ENRIQUE-SOLDATS/FÉDÉRIC-OCTAVE/FÉDÉRIC-LAURE-OCTAVE/FÉDÉRIC-LAURE-OCTAVE/FÉDÉRIC-OCTAVE',
+      'string-id' => '#FEDERIC,#ISABELLE,#ENRIQUE;#FEDERIC,#ISABELLE,#OCTAVE,#ENRIQUE,#SOLDATS;#FEDERIC,#OCTAVE;#FEDERIC,#LAURE,#OCTAVE;#FEDERIC,#LAURE,#OCTAVE;#FEDERIC,#OCTAVE',
     ),
   ),
   'corneillet_geolierdesoismeme_V01' => 
@@ -69373,6 +69968,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'FÉDÉRIC-OCTAVE/FÉDÉRIC-ISABELLE-OCTAVE/LE ROI de Naples-ISABELLE-SANCHE/LE ROI de Naples-ENRIQUE-SANCHE/LE ROI de Naples-ÉDOUARD-SANCHE/ÉDOUARD',
+      'string-id' => '#FEDERIC,#OCTAVE;#FEDERIC,#ISABELLE,#OCTAVE;#LEROI,#ISABELLE,#SANCHE;#LEROI,#ENRIQUE,#SANCHE;#LEROI,#EDOUARD,#SANCHE;#EDOUARD',
     ),
   ),
   'corneillet_geolierdesoismeme_V02' => 
@@ -69458,6 +70054,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'FÉDÉRIC-ISABELLE-OCTAVE/LE ROI de Naples-ISABELLE-SANCHE/LE ROI de Naples-ENRIQUE-SANCHE/LE ROI de Naples-ÉDOUARD-SANCHE/ÉDOUARD/LE ROI de Naples-ÉDOUARD-LAURE-SOLDATS',
+      'string-id' => '#FEDERIC,#ISABELLE,#OCTAVE;#LEROI,#ISABELLE,#SANCHE;#LEROI,#ENRIQUE,#SANCHE;#LEROI,#EDOUARD,#SANCHE;#EDOUARD;#LEROI,#EDOUARD,#LAURE,#SOLDATS',
     ),
   ),
   'corneillet_geolierdesoismeme_V03' => 
@@ -69552,6 +70149,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LE ROI de Naples-ISABELLE-SANCHE/LE ROI de Naples-ENRIQUE-SANCHE/LE ROI de Naples-ÉDOUARD-SANCHE/ÉDOUARD/LE ROI de Naples-ÉDOUARD-LAURE-SOLDATS/LE ROI de Naples-FÉDÉRIC-ÉDOUARD-LAURE-OCTAVE-ENRIQUE-SANCHE',
+      'string-id' => '#LEROI,#ISABELLE,#SANCHE;#LEROI,#ENRIQUE,#SANCHE;#LEROI,#EDOUARD,#SANCHE;#EDOUARD;#LEROI,#EDOUARD,#LAURE,#SOLDATS;#LEROI,#FEDERIC,#EDOUARD,#LAURE,#OCTAVE,#ENRIQUE,#SANCHE',
     ),
   ),
   'corneillet_galantdouble_I01' => 
@@ -69592,6 +70190,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FERNAND de Solis/DON FERNAND de Solis/DON FERNAND de Solis/DON FERNAND de Solis/DON FERNAND de Solis-DON JUAN de Torrès/DON FERNAND de Solis-DON JUAN de Torrès',
+      'string-id' => '#DONFERNAND;#DONFERNAND;#DONFERNAND;#DONFERNAND;#DONFERNAND,#DONJUAN;#DONFERNAND,#DONJUAN',
     ),
   ),
   'corneillet_galantdouble_II01' => 
@@ -69650,6 +70249,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON DIÈGUE-ISABELLE/ISABELLE/LÉONOR-ISABELLE/LÉONOR-ISABELLE/DON FERNAND de Solis-LÉONOR/DON FERNAND de Solis-LÉONOR-ISABELLE',
+      'string-id' => '#DONDIEGUE,#ISABELLE;#ISABELLE;#LEONOR,#ISABELLE;#LEONOR,#ISABELLE;#DONFERNAND,#LEONOR;#DONFERNAND,#LEONOR,#ISABELLE',
     ),
   ),
   'corneillet_galantdouble_II02' => 
@@ -69699,6 +70299,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ISABELLE/LÉONOR-ISABELLE/LÉONOR-ISABELLE/DON FERNAND de Solis-LÉONOR/DON FERNAND de Solis-LÉONOR-ISABELLE/DON FERNAND de Solis-ISABELLE',
+      'string-id' => '#ISABELLE;#LEONOR,#ISABELLE;#LEONOR,#ISABELLE;#DONFERNAND,#LEONOR;#DONFERNAND,#LEONOR,#ISABELLE;#DONFERNAND,#ISABELLE',
     ),
   ),
   'corneillet_galantdouble_III01' => 
@@ -69757,6 +70358,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FERNAND de Solis/DON FERNAND de Solis-ISABELLE/DON FERNAND de Solis-DON JUAN de Torrès-ISABELLE/DON FERNAND de Solis-DON JUAN de Torrès/DON FERNAND de Solis/DON FERNAND de Solis-LÉONOR',
+      'string-id' => '#DONFERNAND;#DONFERNAND,#ISABELLE;#DONFERNAND,#DONJUAN,#ISABELLE;#DONFERNAND,#DONJUAN;#DONFERNAND;#DONFERNAND,#LEONOR',
     ),
   ),
   'corneillet_galantdouble_III02' => 
@@ -69815,6 +70417,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FERNAND de Solis-ISABELLE/DON FERNAND de Solis-DON JUAN de Torrès-ISABELLE/DON FERNAND de Solis-DON JUAN de Torrès/DON FERNAND de Solis/DON FERNAND de Solis-LÉONOR/LÉONOR',
+      'string-id' => '#DONFERNAND,#ISABELLE;#DONFERNAND,#DONJUAN,#ISABELLE;#DONFERNAND,#DONJUAN;#DONFERNAND;#DONFERNAND,#LEONOR;#LEONOR',
     ),
   ),
   'corneillet_galantdouble_IV01' => 
@@ -69873,6 +70476,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => '/DON FERNAND de Solis/DON FERNAND de Solis-ISABELLE/DON FERNAND de Solis-ISABELLE-Un exempt/ISABELLE/DON JUAN de Torrès-ISABELLE',
+      'string-id' => ';#DONFERNAND;#DONFERNAND,#ISABELLE;#DONFERNAND,#ISABELLE,#EXEMPT;#ISABELLE;#DONJUAN,#ISABELLE',
     ),
   ),
   'corneillet_galantdouble_IV02' => 
@@ -69931,6 +70535,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FERNAND de Solis/DON FERNAND de Solis-ISABELLE/DON FERNAND de Solis-ISABELLE-Un exempt/ISABELLE/DON JUAN de Torrès-ISABELLE/DON FERNAND de Solis-DON JUAN de Torrès-ISABELLE',
+      'string-id' => '#DONFERNAND;#DONFERNAND,#ISABELLE;#DONFERNAND,#ISABELLE,#EXEMPT;#ISABELLE;#DONJUAN,#ISABELLE;#DONFERNAND,#DONJUAN,#ISABELLE',
     ),
   ),
   'corneillet_galantdouble_IV03' => 
@@ -69989,6 +70594,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FERNAND de Solis-ISABELLE/DON FERNAND de Solis-ISABELLE-Un exempt/ISABELLE/DON JUAN de Torrès-ISABELLE/DON FERNAND de Solis-DON JUAN de Torrès-ISABELLE/DON FERNAND de Solis-ISABELLE',
+      'string-id' => '#DONFERNAND,#ISABELLE;#DONFERNAND,#ISABELLE,#EXEMPT;#ISABELLE;#DONJUAN,#ISABELLE;#DONFERNAND,#DONJUAN,#ISABELLE;#DONFERNAND,#ISABELLE',
     ),
   ),
   'corneillet_galantdouble_IV04' => 
@@ -70047,6 +70653,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FERNAND de Solis-ISABELLE-Un exempt/ISABELLE/DON JUAN de Torrès-ISABELLE/DON FERNAND de Solis-DON JUAN de Torrès-ISABELLE/DON FERNAND de Solis-ISABELLE/DON FERNAND de Solis-DON JUAN de Torrès',
+      'string-id' => '#DONFERNAND,#ISABELLE,#EXEMPT;#ISABELLE;#DONJUAN,#ISABELLE;#DONFERNAND,#DONJUAN,#ISABELLE;#DONFERNAND,#ISABELLE;#DONFERNAND,#DONJUAN',
     ),
   ),
   'corneillet_galantdouble_IV05' => 
@@ -70096,6 +70703,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ISABELLE/DON JUAN de Torrès-ISABELLE/DON FERNAND de Solis-DON JUAN de Torrès-ISABELLE/DON FERNAND de Solis-ISABELLE/DON FERNAND de Solis-DON JUAN de Torrès/DON FERNAND de Solis',
+      'string-id' => '#ISABELLE;#DONJUAN,#ISABELLE;#DONFERNAND,#DONJUAN,#ISABELLE;#DONFERNAND,#ISABELLE;#DONFERNAND,#DONJUAN;#DONFERNAND',
     ),
   ),
   'corneillet_galantdouble_IV06' => 
@@ -70145,13 +70753,14 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON JUAN de Torrès-ISABELLE/DON FERNAND de Solis-DON JUAN de Torrès-ISABELLE/DON FERNAND de Solis-ISABELLE/DON FERNAND de Solis-DON JUAN de Torrès/DON FERNAND de Solis/DON FERNAND de Solis',
+      'string-id' => '#DONJUAN,#ISABELLE;#DONFERNAND,#DONJUAN,#ISABELLE;#DONFERNAND,#ISABELLE;#DONFERNAND,#DONJUAN;#DONFERNAND;#DONFERNAND',
     ),
   ),
   'corneillet_festinpierre_II01' => 
   array (
     'pattern' => 
     array (
-      '#DONJUAN' => 
+      '#donjuan' => 
       array (
         0 => 0,
         1 => 1,
@@ -70160,7 +70769,16 @@
         4 => 1,
         5 => 0,
       ),
-      '#MATHURINE' => 
+      '#charlotte' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#mathurine' => 
       array (
         0 => 0,
         1 => 0,
@@ -70169,7 +70787,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#PIERROT' => 
+      '#pierrot' => 
       array (
         0 => 1,
         1 => 0,
@@ -70178,9 +70796,9 @@
         4 => 0,
         5 => 0,
       ),
-      '#MDIMANCHE' => 
+      '#sganarelle' => 
       array (
-        0 => 1,
+        0 => 0,
         1 => 1,
         2 => 1,
         3 => 1,
@@ -70194,22 +70812,23 @@
       'act' => '2',
       'scene' => '1',
       'sceneId' => 'II01',
-      'author' => 'Corneille, Thomas',
+      'author' => 'Corneille',
       'title' => 'Le Festin de Pierre',
       'date' => 1677,
       'lustrum' => '1676-1680',
       'genre' => 'Comédie',
       'titleId' => 'LeFestindePierre',
       'genreId' => 'Comedie',
-      'authorId' => 'CorneilleThomas',
-      'string' => 'CHARLOTTE-PIERROT-/DON JUAN-CHARLOTTE-/DON JUAN-CHARLOTTE-PIERROT-/DON JUAN-CHARLOTTE-/DON JUAN-CHARLOTTE-MATHURINE-/CHARLOTTE-MATHURINE',
+      'authorId' => 'Corneille',
+      'string' => 'CHARLOTTE-PIERROT/DON JUAN-CHARLOTTE-SGANARELLE/DON JUAN-CHARLOTTE-PIERROT-SGANARELLE/DON JUAN-CHARLOTTE-SGANARELLE/DON JUAN-CHARLOTTE-MATHURINE-SGANARELLE/CHARLOTTE-MATHURINE-SGANARELLE',
+      'string-id' => '#charlotte,#pierrot;#donjuan,#charlotte,#sganarelle;#donjuan,#charlotte,#pierrot,#sganarelle;#donjuan,#charlotte,#sganarelle;#donjuan,#charlotte,#mathurine,#sganarelle;#charlotte,#mathurine,#sganarelle',
     ),
   ),
   'corneillet_festinpierre_II02' => 
   array (
     'pattern' => 
     array (
-      '#DONJUAN' => 
+      '#donjuan' => 
       array (
         0 => 1,
         1 => 1,
@@ -70218,7 +70837,7 @@
         4 => 0,
         5 => 1,
       ),
-      '#MATHURINE' => 
+      '#mathurine' => 
       array (
         0 => 0,
         1 => 0,
@@ -70227,7 +70846,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#PIERROT' => 
+      '#pierrot' => 
       array (
         0 => 0,
         1 => 1,
@@ -70236,7 +70855,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#MDIMANCHE' => 
+      '#sganarelle' => 
       array (
         0 => 1,
         1 => 1,
@@ -70252,22 +70871,23 @@
       'act' => '2',
       'scene' => '2',
       'sceneId' => 'II02',
-      'author' => 'Corneille, Thomas',
+      'author' => 'Corneille',
       'title' => 'Le Festin de Pierre',
       'date' => 1677,
       'lustrum' => '1676-1680',
       'genre' => 'Comédie',
       'titleId' => 'LeFestindePierre',
       'genreId' => 'Comedie',
-      'authorId' => 'CorneilleThomas',
-      'string' => 'DON JUAN-CHARLOTTE-/DON JUAN-CHARLOTTE-PIERROT-/DON JUAN-CHARLOTTE-/DON JUAN-CHARLOTTE-MATHURINE-/CHARLOTTE-MATHURINE-/DON JUAN-CHARLOTTE-MATHURINE',
+      'authorId' => 'Corneille',
+      'string' => 'DON JUAN-CHARLOTTE-SGANARELLE/DON JUAN-CHARLOTTE-PIERROT-SGANARELLE/DON JUAN-CHARLOTTE-SGANARELLE/DON JUAN-CHARLOTTE-MATHURINE-SGANARELLE/CHARLOTTE-MATHURINE-SGANARELLE/DON JUAN-CHARLOTTE-MATHURINE-SGANARELLE',
+      'string-id' => '#donjuan,#charlotte,#sganarelle;#donjuan,#charlotte,#pierrot,#sganarelle;#donjuan,#charlotte,#sganarelle;#donjuan,#charlotte,#mathurine,#sganarelle;#charlotte,#mathurine,#sganarelle;#donjuan,#charlotte,#mathurine,#sganarelle',
     ),
   ),
   'corneillet_festinpierre_II03' => 
   array (
     'pattern' => 
     array (
-      '#DONJUAN' => 
+      '#donjuan' => 
       array (
         0 => 1,
         1 => 1,
@@ -70276,7 +70896,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#MATHURINE' => 
+      '#mathurine' => 
       array (
         0 => 0,
         1 => 0,
@@ -70285,7 +70905,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#PIERROT' => 
+      '#pierrot' => 
       array (
         0 => 1,
         1 => 0,
@@ -70294,7 +70914,16 @@
         4 => 0,
         5 => 0,
       ),
-      '#MDIMANCHE' => 
+      '#laramee' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 1,
+      ),
+      '#sganarelle' => 
       array (
         0 => 1,
         1 => 1,
@@ -70310,22 +70939,23 @@
       'act' => '2',
       'scene' => '3',
       'sceneId' => 'II03',
-      'author' => 'Corneille, Thomas',
+      'author' => 'Corneille',
       'title' => 'Le Festin de Pierre',
       'date' => 1677,
       'lustrum' => '1676-1680',
       'genre' => 'Comédie',
       'titleId' => 'LeFestindePierre',
       'genreId' => 'Comedie',
-      'authorId' => 'CorneilleThomas',
-      'string' => 'DON JUAN-CHARLOTTE-PIERROT-/DON JUAN-CHARLOTTE-/DON JUAN-CHARLOTTE-MATHURINE-/CHARLOTTE-MATHURINE-/DON JUAN-CHARLOTTE-MATHURINE-/DON JUAN-CHARLOTTE-MATHURINE',
+      'authorId' => 'Corneille',
+      'string' => 'DON JUAN-CHARLOTTE-PIERROT-SGANARELLE/DON JUAN-CHARLOTTE-SGANARELLE/DON JUAN-CHARLOTTE-MATHURINE-SGANARELLE/CHARLOTTE-MATHURINE-SGANARELLE/DON JUAN-CHARLOTTE-MATHURINE-SGANARELLE/DON JUAN-CHARLOTTE-MATHURINE-LA RAMÉE-SGANARELLE',
+      'string-id' => '#donjuan,#charlotte,#pierrot,#sganarelle;#donjuan,#charlotte,#sganarelle;#donjuan,#charlotte,#mathurine,#sganarelle;#charlotte,#mathurine,#sganarelle;#donjuan,#charlotte,#mathurine,#sganarelle;#donjuan,#charlotte,#mathurine,#laramee,#sganarelle',
     ),
   ),
   'corneillet_festinpierre_II04' => 
   array (
     'pattern' => 
     array (
-      '#DONJUAN' => 
+      '#donjuan' => 
       array (
         0 => 1,
         1 => 1,
@@ -70334,7 +70964,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#MATHURINE' => 
+      '#mathurine' => 
       array (
         0 => 0,
         1 => 1,
@@ -70343,7 +70973,16 @@
         4 => 1,
         5 => 1,
       ),
-      '#MDIMANCHE' => 
+      '#laramee' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 1,
+        5 => 0,
+      ),
+      '#sganarelle' => 
       array (
         0 => 1,
         1 => 1,
@@ -70359,22 +70998,23 @@
       'act' => '2',
       'scene' => '4',
       'sceneId' => 'II04',
-      'author' => 'Corneille, Thomas',
+      'author' => 'Corneille',
       'title' => 'Le Festin de Pierre',
       'date' => 1677,
       'lustrum' => '1676-1680',
       'genre' => 'Comédie',
       'titleId' => 'LeFestindePierre',
       'genreId' => 'Comedie',
-      'authorId' => 'CorneilleThomas',
-      'string' => 'DON JUAN-CHARLOTTE-/DON JUAN-CHARLOTTE-MATHURINE-/CHARLOTTE-MATHURINE-/DON JUAN-CHARLOTTE-MATHURINE-/DON JUAN-CHARLOTTE-MATHURINE-/DON JUAN-CHARLOTTE-MATHURINE',
+      'authorId' => 'Corneille',
+      'string' => 'DON JUAN-CHARLOTTE-SGANARELLE/DON JUAN-CHARLOTTE-MATHURINE-SGANARELLE/CHARLOTTE-MATHURINE-SGANARELLE/DON JUAN-CHARLOTTE-MATHURINE-SGANARELLE/DON JUAN-CHARLOTTE-MATHURINE-LA RAMÉE-SGANARELLE/DON JUAN-CHARLOTTE-MATHURINE-SGANARELLE',
+      'string-id' => '#donjuan,#charlotte,#sganarelle;#donjuan,#charlotte,#mathurine,#sganarelle;#charlotte,#mathurine,#sganarelle;#donjuan,#charlotte,#mathurine,#sganarelle;#donjuan,#charlotte,#mathurine,#laramee,#sganarelle;#donjuan,#charlotte,#mathurine,#sganarelle',
     ),
   ),
   'corneillet_festinpierre_II05' => 
   array (
     'pattern' => 
     array (
-      '#DONJUAN' => 
+      '#donjuan' => 
       array (
         0 => 1,
         1 => 0,
@@ -70383,7 +71023,7 @@
         4 => 1,
         5 => 1,
       ),
-      '#MATHURINE' => 
+      '#mathurine' => 
       array (
         0 => 1,
         1 => 1,
@@ -70392,7 +71032,16 @@
         4 => 1,
         5 => 0,
       ),
-      '#MDIMANCHE' => 
+      '#laramee' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 1,
+        4 => 0,
+        5 => 0,
+      ),
+      '#sganarelle' => 
       array (
         0 => 1,
         1 => 1,
@@ -70408,22 +71057,23 @@
       'act' => '2',
       'scene' => '5',
       'sceneId' => 'II05',
-      'author' => 'Corneille, Thomas',
+      'author' => 'Corneille',
       'title' => 'Le Festin de Pierre',
       'date' => 1677,
       'lustrum' => '1676-1680',
       'genre' => 'Comédie',
       'titleId' => 'LeFestindePierre',
       'genreId' => 'Comedie',
-      'authorId' => 'CorneilleThomas',
-      'string' => 'DON JUAN-CHARLOTTE-MATHURINE-/CHARLOTTE-MATHURINE-/DON JUAN-CHARLOTTE-MATHURINE-/DON JUAN-CHARLOTTE-MATHURINE-/DON JUAN-CHARLOTTE-MATHURINE-/DON JUAN',
+      'authorId' => 'Corneille',
+      'string' => 'DON JUAN-CHARLOTTE-MATHURINE-SGANARELLE/CHARLOTTE-MATHURINE-SGANARELLE/DON JUAN-CHARLOTTE-MATHURINE-SGANARELLE/DON JUAN-CHARLOTTE-MATHURINE-LA RAMÉE-SGANARELLE/DON JUAN-CHARLOTTE-MATHURINE-SGANARELLE/DON JUAN-SGANARELLE',
+      'string-id' => '#donjuan,#charlotte,#mathurine,#sganarelle;#charlotte,#mathurine,#sganarelle;#donjuan,#charlotte,#mathurine,#sganarelle;#donjuan,#charlotte,#mathurine,#laramee,#sganarelle;#donjuan,#charlotte,#mathurine,#sganarelle;#donjuan,#sganarelle',
     ),
   ),
   'corneillet_festinpierre_II06' => 
   array (
     'pattern' => 
     array (
-      '#DONJUAN' => 
+      '#donjuan' => 
       array (
         0 => 0,
         1 => 1,
@@ -70432,7 +71082,7 @@
         4 => 1,
         5 => 0,
       ),
-      '#MATHURINE' => 
+      '#mathurine' => 
       array (
         0 => 1,
         1 => 1,
@@ -70441,7 +71091,16 @@
         4 => 0,
         5 => 0,
       ),
-      '#MDIMANCHE' => 
+      '#laramee' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
+      '#sganarelle' => 
       array (
         0 => 1,
         1 => 1,
@@ -70457,58 +71116,23 @@
       'act' => '2',
       'scene' => '6',
       'sceneId' => 'II06',
-      'author' => 'Corneille, Thomas',
+      'author' => 'Corneille',
       'title' => 'Le Festin de Pierre',
       'date' => 1677,
       'lustrum' => '1676-1680',
       'genre' => 'Comédie',
       'titleId' => 'LeFestindePierre',
       'genreId' => 'Comedie',
-      'authorId' => 'CorneilleThomas',
-      'string' => 'CHARLOTTE-MATHURINE-/DON JUAN-CHARLOTTE-MATHURINE-/DON JUAN-CHARLOTTE-MATHURINE-/DON JUAN-CHARLOTTE-MATHURINE-/DON JUAN-/',
+      'authorId' => 'Corneille',
+      'string' => 'CHARLOTTE-MATHURINE-SGANARELLE/DON JUAN-CHARLOTTE-MATHURINE-SGANARELLE/DON JUAN-CHARLOTTE-MATHURINE-LA RAMÉE-SGANARELLE/DON JUAN-CHARLOTTE-MATHURINE-SGANARELLE/DON JUAN-SGANARELLE/SGANARELLE',
+      'string-id' => '#charlotte,#mathurine,#sganarelle;#donjuan,#charlotte,#mathurine,#sganarelle;#donjuan,#charlotte,#mathurine,#laramee,#sganarelle;#donjuan,#charlotte,#mathurine,#sganarelle;#donjuan,#sganarelle;#sganarelle',
     ),
   ),
   'corneillet_festinpierre_III01' => 
   array (
     'pattern' => 
     array (
-      '#DONCARLOS' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 1,
-        5 => 1,
-      ),
-      '#ALONSE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 1,
-      ),
-      '#THERESE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 1,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#LEONOR' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 1,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#MDIMANCHE' => 
+      '#donjuan' => 
       array (
         0 => 1,
         1 => 1,
@@ -70516,6 +71140,60 @@
         3 => 1,
         4 => 1,
         5 => 1,
+      ),
+      '#doncarlos' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 1,
+        5 => 1,
+      ),
+      '#alonse' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 1,
+      ),
+      '#therese' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
+      '#leonor' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 1,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
+      '#gusman' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
+      '#sganarelle' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 0,
+        5 => 0,
       ),
     ),
     'id' => 
@@ -70524,64 +71202,83 @@
       'act' => '3',
       'scene' => '1',
       'sceneId' => 'III01',
-      'author' => 'Corneille, Thomas',
+      'author' => 'Corneille',
       'title' => 'Le Festin de Pierre',
       'date' => 1677,
       'lustrum' => '1676-1680',
       'genre' => 'Comédie',
       'titleId' => 'LeFestindePierre',
       'genreId' => 'Comedie',
-      'authorId' => 'CorneilleThomas',
-      'string' => 'DON JUAN-/DON JUAN-LÉONOR-/DON JUAN-THÉRÈSE-LÉONOR-/DON JUAN-/DON JUAN-DON CARLOS-/DON JUAN-DON CARLOS-ALONSE',
+      'authorId' => 'Corneille',
+      'string' => 'DON JUAN-SGANARELLE/DON JUAN-LÉONOR-GUSMAN-SGANARELLE/DON JUAN-THÉRÈSE-LÉONOR-SGANARELLE/DON JUAN-SGANARELLE/DON JUAN-DON CARLOS/DON JUAN-DON CARLOS-ALONSE',
+      'string-id' => '#donjuan,#sganarelle;#donjuan,#leonor,#gusman,#sganarelle;#donjuan,#therese,#leonor,#sganarelle;#donjuan,#sganarelle;#donjuan,#doncarlos;#donjuan,#doncarlos,#alonse',
     ),
   ),
   'corneillet_festinpierre_III02' => 
   array (
     'pattern' => 
     array (
-      '#DONCARLOS' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 1,
-        4 => 1,
-        5 => 0,
-      ),
-      '#ALONSE' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 1,
-        5 => 0,
-      ),
-      '#THERESE' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#LEONOR' => 
-      array (
-        0 => 1,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#MDIMANCHE' => 
+      '#donjuan' => 
       array (
         0 => 1,
         1 => 1,
         2 => 1,
         3 => 1,
         4 => 1,
+        5 => 1,
+      ),
+      '#doncarlos' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 1,
+        4 => 1,
+        5 => 0,
+      ),
+      '#alonse' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 1,
+        5 => 0,
+      ),
+      '#therese' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
+      '#leonor' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
+      '#gusman' => 
+      array (
+        0 => 1,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
+      '#sganarelle' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 0,
+        4 => 0,
         5 => 1,
       ),
     ),
@@ -70591,22 +71288,23 @@
       'act' => '3',
       'scene' => '2',
       'sceneId' => 'III02',
-      'author' => 'Corneille, Thomas',
+      'author' => 'Corneille',
       'title' => 'Le Festin de Pierre',
       'date' => 1677,
       'lustrum' => '1676-1680',
       'genre' => 'Comédie',
       'titleId' => 'LeFestindePierre',
       'genreId' => 'Comedie',
-      'authorId' => 'CorneilleThomas',
-      'string' => 'DON JUAN-LÉONOR-/DON JUAN-THÉRÈSE-LÉONOR-/DON JUAN-/DON JUAN-DON CARLOS-/DON JUAN-DON CARLOS-ALONSE-/DON JUAN',
+      'authorId' => 'Corneille',
+      'string' => 'DON JUAN-LÉONOR-GUSMAN-SGANARELLE/DON JUAN-THÉRÈSE-LÉONOR-SGANARELLE/DON JUAN-SGANARELLE/DON JUAN-DON CARLOS/DON JUAN-DON CARLOS-ALONSE/DON JUAN-SGANARELLE',
+      'string-id' => '#donjuan,#leonor,#gusman,#sganarelle;#donjuan,#therese,#leonor,#sganarelle;#donjuan,#sganarelle;#donjuan,#doncarlos;#donjuan,#doncarlos,#alonse;#donjuan,#sganarelle',
     ),
   ),
   'corneillet_festinpierre_IV01' => 
   array (
     'pattern' => 
     array (
-      '#DONLOUIS' => 
+      '#donlouis' => 
       array (
         0 => 0,
         1 => 1,
@@ -70615,7 +71313,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#ELVIRE' => 
+      '#elvire' => 
       array (
         0 => 0,
         1 => 0,
@@ -70624,7 +71322,16 @@
         4 => 0,
         5 => 1,
       ),
-      '#LAVIOLETTE' => 
+      '#sganarelle' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#laviolette' => 
       array (
         0 => 0,
         1 => 1,
@@ -70633,14 +71340,14 @@
         4 => 0,
         5 => 0,
       ),
-      '#MDIMANCHE' => 
+      '#mdimanche' => 
       array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
-        3 => 1,
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
         4 => 1,
-        5 => 1,
+        5 => 0,
       ),
     ),
     'id' => 
@@ -70649,22 +71356,23 @@
       'act' => '4',
       'scene' => '1',
       'sceneId' => 'IV01',
-      'author' => 'Corneille, Thomas',
+      'author' => 'Corneille',
       'title' => 'Le Festin de Pierre',
       'date' => 1677,
       'lustrum' => '1676-1680',
       'genre' => 'Comédie',
       'titleId' => 'LeFestindePierre',
       'genreId' => 'Comedie',
-      'authorId' => 'CorneilleThomas',
-      'string' => 'DON JUAN-/DON JUAN-DON LOUIS-LA VIOLETTE-/DON JUAN-/DON JUAN-LA VIOLETTE-/DON JUAN-/DON JUAN-ELVIRE',
+      'authorId' => 'Corneille',
+      'string' => 'DON JUAN-SGANARELLE/DON JUAN-DON LOUIS-SGANARELLE-LA VIOLETTE/DON JUAN-SGANARELLE/DON JUAN-SGANARELLE-LA VIOLETTE/DON JUAN-SGANARELLE-/DON JUAN-ELVIRE-SGANARELLE',
+      'string-id' => '#donjuan,#sganarelle;#donjuan,#donlouis,#sganarelle,#laviolette;#donjuan,#sganarelle;#donjuan,#sganarelle,#laviolette;#donjuan,#sganarelle,#mdimanche;#donjuan,#elvire,#sganarelle',
     ),
   ),
   'corneillet_festinpierre_IV02' => 
   array (
     'pattern' => 
     array (
-      '#DONLOUIS' => 
+      '#donlouis' => 
       array (
         0 => 1,
         1 => 0,
@@ -70673,7 +71381,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#ELVIRE' => 
+      '#elvire' => 
       array (
         0 => 0,
         1 => 0,
@@ -70682,7 +71390,16 @@
         4 => 1,
         5 => 0,
       ),
-      '#LAVIOLETTE' => 
+      '#sganarelle' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
+      '#laviolette' => 
       array (
         0 => 1,
         1 => 0,
@@ -70691,14 +71408,14 @@
         4 => 0,
         5 => 0,
       ),
-      '#MDIMANCHE' => 
+      '#mdimanche' => 
       array (
-        0 => 1,
-        1 => 1,
-        2 => 1,
+        0 => 0,
+        1 => 0,
+        2 => 0,
         3 => 1,
-        4 => 1,
-        5 => 1,
+        4 => 0,
+        5 => 0,
       ),
     ),
     'id' => 
@@ -70707,22 +71424,23 @@
       'act' => '4',
       'scene' => '2',
       'sceneId' => 'IV02',
-      'author' => 'Corneille, Thomas',
+      'author' => 'Corneille',
       'title' => 'Le Festin de Pierre',
       'date' => 1677,
       'lustrum' => '1676-1680',
       'genre' => 'Comédie',
       'titleId' => 'LeFestindePierre',
       'genreId' => 'Comedie',
-      'authorId' => 'CorneilleThomas',
-      'string' => 'DON JUAN-DON LOUIS-LA VIOLETTE-/DON JUAN-/DON JUAN-LA VIOLETTE-/DON JUAN-/DON JUAN-ELVIRE-/DON JUAN',
+      'authorId' => 'Corneille',
+      'string' => 'DON JUAN-DON LOUIS-SGANARELLE-LA VIOLETTE/DON JUAN-SGANARELLE/DON JUAN-SGANARELLE-LA VIOLETTE/DON JUAN-SGANARELLE-/DON JUAN-ELVIRE-SGANARELLE/DON JUAN-SGANARELLE',
+      'string-id' => '#donjuan,#donlouis,#sganarelle,#laviolette;#donjuan,#sganarelle;#donjuan,#sganarelle,#laviolette;#donjuan,#sganarelle,#mdimanche;#donjuan,#elvire,#sganarelle;#donjuan,#sganarelle',
     ),
   ),
   'corneillet_festinpierre_IV03' => 
   array (
     'pattern' => 
     array (
-      '#ELVIRE' => 
+      '#elvire' => 
       array (
         0 => 0,
         1 => 0,
@@ -70731,25 +71449,7 @@
         4 => 0,
         5 => 0,
       ),
-      '#COMMANDEUR' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 1,
-      ),
-      '#LAVIOLETTE' => 
-      array (
-        0 => 0,
-        1 => 1,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 0,
-      ),
-      '#MDIMANCHE' => 
+      '#sganarelle' => 
       array (
         0 => 1,
         1 => 1,
@@ -70758,6 +71458,33 @@
         4 => 1,
         5 => 1,
       ),
+      '#commandeur' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 1,
+      ),
+      '#laviolette' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
+      '#mdimanche' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
     ),
     'id' => 
     array (
@@ -70765,15 +71492,16 @@
       'act' => '4',
       'scene' => '3',
       'sceneId' => 'IV03',
-      'author' => 'Corneille, Thomas',
+      'author' => 'Corneille',
       'title' => 'Le Festin de Pierre',
       'date' => 1677,
       'lustrum' => '1676-1680',
       'genre' => 'Comédie',
       'titleId' => 'LeFestindePierre',
       'genreId' => 'Comedie',
-      'authorId' => 'CorneilleThomas',
-      'string' => 'DON JUAN-/DON JUAN-LA VIOLETTE-/DON JUAN-/DON JUAN-ELVIRE-/DON JUAN-/DON JUAN-LA STATUE du Commandeur',
+      'authorId' => 'Corneille',
+      'string' => 'DON JUAN-SGANARELLE/DON JUAN-SGANARELLE-LA VIOLETTE/DON JUAN-SGANARELLE-/DON JUAN-ELVIRE-SGANARELLE/DON JUAN-SGANARELLE/DON JUAN-SGANARELLE-LA STATUE du Commandeur',
+      'string-id' => '#donjuan,#sganarelle;#donjuan,#sganarelle,#laviolette;#donjuan,#sganarelle,#mdimanche;#donjuan,#elvire,#sganarelle;#donjuan,#sganarelle;#donjuan,#sganarelle,#commandeur',
     ),
   ),
   'corneillet_feintastrologue_I01' => 
@@ -70832,6 +71560,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FERNAND/BÉATRIX//DON FERNAND/DON FERNAND-DON LOUIS/DON LOPE-DON LOUIS',
+      'string-id' => '#DONFERNAND;#BEATRIX;;#DONFERNAND;#DONFERNAND,#DONLOUYS;#DONLOPE,#DONLOUYS',
     ),
   ),
   'corneillet_feintastrologue_I02' => 
@@ -70890,6 +71619,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'BÉATRIX//DON FERNAND/DON FERNAND-DON LOUIS/DON LOPE-DON LOUIS/DON LOPE',
+      'string-id' => '#BEATRIX;;#DONFERNAND;#DONFERNAND,#DONLOUYS;#DONLOPE,#DONLOUYS;#DONLOPE',
     ),
   ),
   'corneillet_feintastrologue_I03' => 
@@ -70948,6 +71678,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => '/DON FERNAND/DON FERNAND-DON LOUIS/DON LOPE-DON LOUIS/DON LOPE/DON LOPE-LÉONOR',
+      'string-id' => ';#DONFERNAND;#DONFERNAND,#DONLOUYS;#DONLOPE,#DONLOUYS;#DONLOPE;#DONLOPE,#LEONOR',
     ),
   ),
   'corneillet_feintastrologue_II01' => 
@@ -71015,6 +71746,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LUCRÈCE-BÉATRIX/DON FERNAND-LUCRÈCE-BÉATRIX/LÉONARD-DON FERNAND-LUCRÈCE-BÉATRIX/LÉONARD-DON FERNAND-DON LOUIS-LUCRÈCE-BÉATRIX/DON FERNAND-DON LOUIS/DON LOPE-DON LOUIS',
+      'string-id' => '#LUCRECE,#BEATRIX;#DONFERNAND,#LUCRECE,#BEATRIX;#LEONARD,#DONFERNAND,#LUCRECE,#BEATRIX;#LEONARD,#DONFERNAND,#DONLOUYS,#LUCRECE,#BEATRIX;#DONFERNAND,#DONLOUYS;#DONLOPE,#DONLOUYS',
     ),
   ),
   'corneillet_feintastrologue_II02' => 
@@ -71082,6 +71814,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FERNAND-LUCRÈCE-BÉATRIX/LÉONARD-DON FERNAND-LUCRÈCE-BÉATRIX/LÉONARD-DON FERNAND-DON LOUIS-LUCRÈCE-BÉATRIX/DON FERNAND-DON LOUIS/DON LOPE-DON LOUIS/DON LOPE',
+      'string-id' => '#DONFERNAND,#LUCRECE,#BEATRIX;#LEONARD,#DONFERNAND,#LUCRECE,#BEATRIX;#LEONARD,#DONFERNAND,#DONLOUYS,#LUCRECE,#BEATRIX;#DONFERNAND,#DONLOUYS;#DONLOPE,#DONLOUYS;#DONLOPE',
     ),
   ),
   'corneillet_feintastrologue_III01' => 
@@ -71140,6 +71873,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FERNAND-DON LOUIS/DON FERNAND-LÉONOR/DON FERNAND-DON LOUIS-LÉONOR//DON JUAN/DON JUAN',
+      'string-id' => '#DONFERNAND,#DONLOUYS;#DONFERNAND,#LEONOR;#DONFERNAND,#DONLOUYS,#LEONOR;;#DONJUAN;#DONJUAN',
     ),
   ),
   'corneillet_feintastrologue_III02' => 
@@ -71198,6 +71932,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FERNAND-LÉONOR/DON FERNAND-DON LOUIS-LÉONOR//DON JUAN/DON JUAN/LÉONOR',
+      'string-id' => '#DONFERNAND,#LEONOR;#DONFERNAND,#DONLOUYS,#LEONOR;;#DONJUAN;#DONJUAN;#LEONOR',
     ),
   ),
   'corneillet_feintastrologue_III03' => 
@@ -71247,6 +71982,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FERNAND-DON LOUIS-LÉONOR//DON JUAN/DON JUAN/LÉONOR/DON JUAN-LÉONOR',
+      'string-id' => '#DONFERNAND,#DONLOUYS,#LEONOR;;#DONJUAN;#DONJUAN;#LEONOR;#DONJUAN,#LEONOR',
     ),
   ),
   'corneillet_feintastrologue_IV01' => 
@@ -71314,6 +72050,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON JUAN-LUCRÈCE-BÉATRIX/LÉONARD-DON JUAN-LUCRÈCE-BÉATRIX/LÉONARD-LUCRÈCE-BÉATRIX/LUCRÈCE-BÉATRIX/DON FERNAND-DON LOUIS/DON FERNAND-DON LOUIS-LÉONOR',
+      'string-id' => '#DONJUAN,#LUCRECE,#BEATRIX;#LEONARD,#DONJUAN,#LUCRECE,#BEATRIX;#LEONARD,#LUCRECE,#BEATRIX;#LUCRECE,#BEATRIX;#DONFERNAND,#DONLOUYS;#DONFERNAND,#DONLOUYS,#LEONOR',
     ),
   ),
   'corneillet_feintastrologue_IV02' => 
@@ -71381,6 +72118,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LÉONARD-DON JUAN-LUCRÈCE-BÉATRIX/LÉONARD-LUCRÈCE-BÉATRIX/LUCRÈCE-BÉATRIX/DON FERNAND-DON LOUIS/DON FERNAND-DON LOUIS-LÉONOR/DON FERNAND-DON LOUIS',
+      'string-id' => '#LEONARD,#DONJUAN,#LUCRECE,#BEATRIX;#LEONARD,#LUCRECE,#BEATRIX;#LUCRECE,#BEATRIX;#DONFERNAND,#DONLOUYS;#DONFERNAND,#DONLOUYS,#LEONOR;#DONFERNAND,#DONLOUYS',
     ),
   ),
   'corneillet_feintastrologue_IV03' => 
@@ -71439,6 +72177,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LÉONARD-LUCRÈCE-BÉATRIX/LUCRÈCE-BÉATRIX/DON FERNAND-DON LOUIS/DON FERNAND-DON LOUIS-LÉONOR/DON FERNAND-DON LOUIS/LÉONARD-DON FERNAND-DON LOUIS',
+      'string-id' => '#LEONARD,#LUCRECE,#BEATRIX;#LUCRECE,#BEATRIX;#DONFERNAND,#DONLOUYS;#DONFERNAND,#DONLOUYS,#LEONOR;#DONFERNAND,#DONLOUYS;#LEONARD,#DONFERNAND,#DONLOUYS',
     ),
   ),
   'corneillet_feintastrologue_IV04' => 
@@ -71497,6 +72236,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LUCRÈCE-BÉATRIX/DON FERNAND-DON LOUIS/DON FERNAND-DON LOUIS-LÉONOR/DON FERNAND-DON LOUIS/LÉONARD-DON FERNAND-DON LOUIS/LÉONARD-DON FERNAND-DON LOUIS',
+      'string-id' => '#LUCRECE,#BEATRIX;#DONFERNAND,#DONLOUYS;#DONFERNAND,#DONLOUYS,#LEONOR;#DONFERNAND,#DONLOUYS;#LEONARD,#DONFERNAND,#DONLOUYS;#LEONARD,#DONFERNAND,#DONLOUYS',
     ),
   ),
   'corneillet_feintastrologue_IV05' => 
@@ -71546,6 +72286,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FERNAND-DON LOUIS/DON FERNAND-DON LOUIS-LÉONOR/DON FERNAND-DON LOUIS/LÉONARD-DON FERNAND-DON LOUIS/LÉONARD-DON FERNAND-DON LOUIS/DON FERNAND-DON LOUIS',
+      'string-id' => '#DONFERNAND,#DONLOUYS;#DONFERNAND,#DONLOUYS,#LEONOR;#DONFERNAND,#DONLOUYS;#LEONARD,#DONFERNAND,#DONLOUYS;#LEONARD,#DONFERNAND,#DONLOUYS;#DONFERNAND,#DONLOUYS',
     ),
   ),
   'corneillet_feintastrologue_IV06' => 
@@ -71595,6 +72336,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FERNAND-DON LOUIS-LÉONOR/DON FERNAND-DON LOUIS/LÉONARD-DON FERNAND-DON LOUIS/LÉONARD-DON FERNAND-DON LOUIS/DON FERNAND-DON LOUIS/DON FERNAND-DON LOUIS',
+      'string-id' => '#DONFERNAND,#DONLOUYS,#LEONOR;#DONFERNAND,#DONLOUYS;#LEONARD,#DONFERNAND,#DONLOUYS;#LEONARD,#DONFERNAND,#DONLOUYS;#DONFERNAND,#DONLOUYS;#DONFERNAND,#DONLOUYS',
     ),
   ),
   'corneillet_feintastrologue_IV07' => 
@@ -71635,6 +72377,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FERNAND-DON LOUIS/LÉONARD-DON FERNAND-DON LOUIS/LÉONARD-DON FERNAND-DON LOUIS/DON FERNAND-DON LOUIS/DON FERNAND-DON LOUIS/',
+      'string-id' => '#DONFERNAND,#DONLOUYS;#LEONARD,#DONFERNAND,#DONLOUYS;#LEONARD,#DONFERNAND,#DONLOUYS;#DONFERNAND,#DONLOUYS;#DONFERNAND,#DONLOUYS;',
     ),
   ),
   'corneillet_feintastrologue_V01' => 
@@ -71693,6 +72436,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON JUAN/LÉONARD-DON JUAN/DON JUAN-LÉONOR/LÉONOR/DON LOPE-LÉONOR/',
+      'string-id' => '#DONJUAN;#LEONARD,#DONJUAN;#DONJUAN,#LEONOR;#LEONOR;#DONLOPE,#LEONOR;',
     ),
   ),
   'corneillet_feintastrologue_V02' => 
@@ -71751,6 +72495,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LÉONARD-DON JUAN/DON JUAN-LÉONOR/LÉONOR/DON LOPE-LÉONOR//',
+      'string-id' => '#LEONARD,#DONJUAN;#DONJUAN,#LEONOR;#LEONOR;#DONLOPE,#LEONOR;;',
     ),
   ),
   'corneillet_feintastrologue_V03' => 
@@ -71809,6 +72554,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON JUAN-LÉONOR/LÉONOR/DON LOPE-LÉONOR///DON JUAN-LUCRÈCE-BÉATRIX',
+      'string-id' => '#DONJUAN,#LEONOR;#LEONOR;#DONLOPE,#LEONOR;;;#DONJUAN,#LUCRECE,#BEATRIX',
     ),
   ),
   'corneillet_feintastrologue_V04' => 
@@ -71876,6 +72622,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LÉONOR/DON LOPE-LÉONOR///DON JUAN-LUCRÈCE-BÉATRIX/LÉONARD-DON FERNAND-LUCRÈCE-BÉATRIX',
+      'string-id' => '#LEONOR;#DONLOPE,#LEONOR;;;#DONJUAN,#LUCRECE,#BEATRIX;#LEONARD,#DONFERNAND,#LUCRECE,#BEATRIX',
     ),
   ),
   'corneillet_feintastrologue_V05' => 
@@ -71934,6 +72681,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON LOPE-LÉONOR///DON JUAN-LUCRÈCE-BÉATRIX/LÉONARD-DON FERNAND-LUCRÈCE-BÉATRIX/LÉONARD-DON FERNAND-DON LOPE-LUCRÈCE-LÉONOR-BÉATRIX',
+      'string-id' => '#DONLOPE,#LEONOR;;;#DONJUAN,#LUCRECE,#BEATRIX;#LEONARD,#DONFERNAND,#LUCRECE,#BEATRIX;#LEONARD,#DONFERNAND,#DONLOPE,#LUCRECE,#LEONOR,#BEATRIX',
     ),
   ),
   'corneillet_feintastrologue_V06' => 
@@ -71992,6 +72740,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => '//DON JUAN-LUCRÈCE-BÉATRIX/LÉONARD-DON FERNAND-LUCRÈCE-BÉATRIX/LÉONARD-DON FERNAND-DON LOPE-LUCRÈCE-LÉONOR-BÉATRIX/LÉONARD-DON JUAN-DON FERNAND-DON LOPE-LUCRÈCE-LÉONOR-BÉATRIX',
+      'string-id' => ';;#DONJUAN,#LUCRECE,#BEATRIX;#LEONARD,#DONFERNAND,#LUCRECE,#BEATRIX;#LEONARD,#DONFERNAND,#DONLOPE,#LUCRECE,#LEONOR,#BEATRIX;#LEONARD,#DONJUAN,#DONFERNAND,#DONLOPE,#LUCRECE,#LEONOR,#BEATRIX',
     ),
   ),
   'corneillet_feintastrologue_V07' => 
@@ -72059,6 +72808,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => '/DON JUAN-LUCRÈCE-BÉATRIX/LÉONARD-DON FERNAND-LUCRÈCE-BÉATRIX/LÉONARD-DON FERNAND-DON LOPE-LUCRÈCE-LÉONOR-BÉATRIX/LÉONARD-DON JUAN-DON FERNAND-DON LOPE-LUCRÈCE-LÉONOR-BÉATRIX/LÉONARD-DON JUAN-DON FERNAND-BÉATRIX',
+      'string-id' => ';#DONJUAN,#LUCRECE,#BEATRIX;#LEONARD,#DONFERNAND,#LUCRECE,#BEATRIX;#LEONARD,#DONFERNAND,#DONLOPE,#LUCRECE,#LEONOR,#BEATRIX;#LEONARD,#DONJUAN,#DONFERNAND,#DONLOPE,#LUCRECE,#LEONOR,#BEATRIX;#LEONARD,#DONJUAN,#DONFERNAND,#BEATRIX',
     ),
   ),
   'corneillet_engagementsduhasard_I01' => 
@@ -72112,11 +72862,12 @@
       'title' => 'Les Engagements du hasard',
       'date' => 1649,
       'lustrum' => '1646-1650',
-      'genre' => 'Tragédie',
+      'genre' => 'Comédie',
       'titleId' => 'LesEngagementsduhasard',
-      'genreId' => 'Tragedie',
+      'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => '/DON FADRIQUE-ELVIRE/DON FADRIQUE/DON FADRIQUE-DON CÉSAR//DON FÉLIX',
+      'string-id' => ';#DONFADRIQUE,#ELVIRE;#DONFADRIQUE;#DONFADRIQUE,#DONCESAR;;#DONFELIX',
     ),
   ),
   'corneillet_engagementsduhasard_I02' => 
@@ -72179,11 +72930,12 @@
       'title' => 'Les Engagements du hasard',
       'date' => 1649,
       'lustrum' => '1646-1650',
-      'genre' => 'Tragédie',
+      'genre' => 'Comédie',
       'titleId' => 'LesEngagementsduhasard',
-      'genreId' => 'Tragedie',
+      'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FADRIQUE-ELVIRE/DON FADRIQUE/DON FADRIQUE-DON CÉSAR//DON FÉLIX/DON FÉLIX-ISABELLE',
+      'string-id' => '#DONFADRIQUE,#ELVIRE;#DONFADRIQUE;#DONFADRIQUE,#DONCESAR;;#DONFELIX;#DONFELIX,#ISABELLE',
     ),
   ),
   'corneillet_engagementsduhasard_II01' => 
@@ -72228,11 +72980,12 @@
       'title' => 'Les Engagements du hasard',
       'date' => 1649,
       'lustrum' => '1646-1650',
-      'genre' => 'Tragédie',
+      'genre' => 'Comédie',
       'titleId' => 'LesEngagementsduhasard',
-      'genreId' => 'Tragedie',
+      'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ELVIRE/DON FADRIQUE-DON CÉSAR-ELVIRE/DON FADRIQUE-ELVIRE/DON FADRIQUE-DON CÉSAR/DON FADRIQUE-DON CÉSAR/ELVIRE',
+      'string-id' => '#ELVIRE;#DONFADRIQUE,#DONCESAR,#ELVIRE;#DONFADRIQUE,#ELVIRE;#DONFADRIQUE,#DONCESAR;#DONFADRIQUE,#DONCESAR;#ELVIRE',
     ),
   ),
   'corneillet_engagementsduhasard_III01' => 
@@ -72295,11 +73048,12 @@
       'title' => 'Les Engagements du hasard',
       'date' => 1649,
       'lustrum' => '1646-1650',
-      'genre' => 'Tragédie',
+      'genre' => 'Comédie',
       'titleId' => 'LesEngagementsduhasard',
-      'genreId' => 'Tragedie',
+      'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LEONEL-DON FÉLIX/DON FÉLIX/DON FÉLIX-ELVIRE/DON FÉLIX-ELVIRE-ISABELLE/DON FÉLIX-ISABELLE/DON FÉLIX-DON FADRIQUE',
+      'string-id' => '#LEONEL,#DONFELIX;#DONFELIX;#DONFELIX,#ELVIRE;#DONFELIX,#ELVIRE,#ISABELLE;#DONFELIX,#ISABELLE;#DONFELIX,#DONFADRIQUE',
     ),
   ),
   'corneillet_engagementsduhasard_IV01' => 
@@ -72362,11 +73116,12 @@
       'title' => 'Les Engagements du hasard',
       'date' => 1649,
       'lustrum' => '1646-1650',
-      'genre' => 'Tragédie',
+      'genre' => 'Comédie',
       'titleId' => 'LesEngagementsduhasard',
-      'genreId' => 'Tragedie',
+      'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ELVIRE-ISABELLE/ELVIRE/DON FADRIQUE-ELVIRE/LEONEL-ELVIRE-ISABELLE/LEONEL-DON FÉLIX-ISABELLE/LEONEL-DON FÉLIX-ISABELLE',
+      'string-id' => '#ELVIRE,#ISABELLE;#ELVIRE;#DONFADRIQUE,#ELVIRE;#LEONEL,#ELVIRE,#ISABELLE;#LEONEL,#DONFELIX,#ISABELLE;#LEONEL,#DONFELIX,#ISABELLE',
     ),
   ),
   'corneillet_engagementsduhasard_IV02' => 
@@ -72420,11 +73175,12 @@
       'title' => 'Les Engagements du hasard',
       'date' => 1649,
       'lustrum' => '1646-1650',
-      'genre' => 'Tragédie',
+      'genre' => 'Comédie',
       'titleId' => 'LesEngagementsduhasard',
-      'genreId' => 'Tragedie',
+      'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ELVIRE/DON FADRIQUE-ELVIRE/LEONEL-ELVIRE-ISABELLE/LEONEL-DON FÉLIX-ISABELLE/LEONEL-DON FÉLIX-ISABELLE/DON FADRIQUE',
+      'string-id' => '#ELVIRE;#DONFADRIQUE,#ELVIRE;#LEONEL,#ELVIRE,#ISABELLE;#LEONEL,#DONFELIX,#ISABELLE;#LEONEL,#DONFELIX,#ISABELLE;#DONFADRIQUE',
     ),
   ),
   'corneillet_engagementsduhasard_IV03' => 
@@ -72478,11 +73234,12 @@
       'title' => 'Les Engagements du hasard',
       'date' => 1649,
       'lustrum' => '1646-1650',
-      'genre' => 'Tragédie',
+      'genre' => 'Comédie',
       'titleId' => 'LesEngagementsduhasard',
-      'genreId' => 'Tragedie',
+      'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FADRIQUE-ELVIRE/LEONEL-ELVIRE-ISABELLE/LEONEL-DON FÉLIX-ISABELLE/LEONEL-DON FÉLIX-ISABELLE/DON FADRIQUE/DON FÉLIX',
+      'string-id' => '#DONFADRIQUE,#ELVIRE;#LEONEL,#ELVIRE,#ISABELLE;#LEONEL,#DONFELIX,#ISABELLE;#LEONEL,#DONFELIX,#ISABELLE;#DONFADRIQUE;#DONFELIX',
     ),
   ),
   'corneillet_engagementsduhasard_IV04' => 
@@ -72545,11 +73302,12 @@
       'title' => 'Les Engagements du hasard',
       'date' => 1649,
       'lustrum' => '1646-1650',
-      'genre' => 'Tragédie',
+      'genre' => 'Comédie',
       'titleId' => 'LesEngagementsduhasard',
-      'genreId' => 'Tragedie',
+      'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LEONEL-ELVIRE-ISABELLE/LEONEL-DON FÉLIX-ISABELLE/LEONEL-DON FÉLIX-ISABELLE/DON FADRIQUE/DON FÉLIX/ISABELLE',
+      'string-id' => '#LEONEL,#ELVIRE,#ISABELLE;#LEONEL,#DONFELIX,#ISABELLE;#LEONEL,#DONFELIX,#ISABELLE;#DONFADRIQUE;#DONFELIX;#ISABELLE',
     ),
   ),
   'corneillet_engagementsduhasard_IV05' => 
@@ -72603,11 +73361,12 @@
       'title' => 'Les Engagements du hasard',
       'date' => 1649,
       'lustrum' => '1646-1650',
-      'genre' => 'Tragédie',
+      'genre' => 'Comédie',
       'titleId' => 'LesEngagementsduhasard',
-      'genreId' => 'Tragedie',
+      'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LEONEL-DON FÉLIX-ISABELLE/LEONEL-DON FÉLIX-ISABELLE/DON FADRIQUE/DON FÉLIX/ISABELLE/DON FÉLIX-ISABELLE',
+      'string-id' => '#LEONEL,#DONFELIX,#ISABELLE;#LEONEL,#DONFELIX,#ISABELLE;#DONFADRIQUE;#DONFELIX;#ISABELLE;#DONFELIX,#ISABELLE',
     ),
   ),
   'corneillet_engagementsduhasard_IV06' => 
@@ -72661,11 +73420,12 @@
       'title' => 'Les Engagements du hasard',
       'date' => 1649,
       'lustrum' => '1646-1650',
-      'genre' => 'Tragédie',
+      'genre' => 'Comédie',
       'titleId' => 'LesEngagementsduhasard',
-      'genreId' => 'Tragedie',
+      'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LEONEL-DON FÉLIX-ISABELLE/DON FADRIQUE/DON FÉLIX/ISABELLE/DON FÉLIX-ISABELLE/DON FÉLIX-ISABELLE',
+      'string-id' => '#LEONEL,#DONFELIX,#ISABELLE;#DONFADRIQUE;#DONFELIX;#ISABELLE;#DONFELIX,#ISABELLE;#DONFELIX,#ISABELLE',
     ),
   ),
   'corneillet_engagementsduhasard_IV07' => 
@@ -72719,11 +73479,12 @@
       'title' => 'Les Engagements du hasard',
       'date' => 1649,
       'lustrum' => '1646-1650',
-      'genre' => 'Tragédie',
+      'genre' => 'Comédie',
       'titleId' => 'LesEngagementsduhasard',
-      'genreId' => 'Tragedie',
+      'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FADRIQUE/DON FÉLIX/ISABELLE/DON FÉLIX-ISABELLE/DON FÉLIX-ISABELLE/LEONEL-DON FÉLIX-ISABELLE',
+      'string-id' => '#DONFADRIQUE;#DONFELIX;#ISABELLE;#DONFELIX,#ISABELLE;#DONFELIX,#ISABELLE;#LEONEL,#DONFELIX,#ISABELLE',
     ),
   ),
   'corneillet_engagementsduhasard_IV08' => 
@@ -72768,11 +73529,12 @@
       'title' => 'Les Engagements du hasard',
       'date' => 1649,
       'lustrum' => '1646-1650',
-      'genre' => 'Tragédie',
+      'genre' => 'Comédie',
       'titleId' => 'LesEngagementsduhasard',
-      'genreId' => 'Tragedie',
+      'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FÉLIX/ISABELLE/DON FÉLIX-ISABELLE/DON FÉLIX-ISABELLE/LEONEL-DON FÉLIX-ISABELLE/ISABELLE',
+      'string-id' => '#DONFELIX;#ISABELLE;#DONFELIX,#ISABELLE;#DONFELIX,#ISABELLE;#LEONEL,#DONFELIX,#ISABELLE;#ISABELLE',
     ),
   ),
   'corneillet_engagementsduhasard_V01' => 
@@ -72844,11 +73606,12 @@
       'title' => 'Les Engagements du hasard',
       'date' => 1649,
       'lustrum' => '1646-1650',
-      'genre' => 'Tragédie',
+      'genre' => 'Comédie',
       'titleId' => 'LesEngagementsduhasard',
-      'genreId' => 'Tragedie',
+      'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FADRIQUE-ISABELLE/DON FADRIQUE-ELVIRE/DON FADRIQUE-DON CÉSAR-ELVIRE-ISABELLE/DON FÉLIX-DON FADRIQUE-DON CÉSAR-ELVIRE-ISABELLE/DON FADRIQUE-DON CÉSAR-ELVIRE/LEONEL-DON FÉLIX-DON FADRIQUE-DON CÉSAR-ELVIRE-ISABELLE',
+      'string-id' => '#DONFADRIQUE,#ISABELLE;#DONFADRIQUE,#ELVIRE;#DONFADRIQUE,#DONCESAR,#ELVIRE,#ISABELLE;#DONFELIX,#DONFADRIQUE,#DONCESAR,#ELVIRE,#ISABELLE;#DONFADRIQUE,#DONCESAR,#ELVIRE;#LEONEL,#DONFELIX,#DONFADRIQUE,#DONCESAR,#ELVIRE,#ISABELLE',
     ),
   ),
   'corneillet_domcesardavalos_I01' => 
@@ -72898,6 +73661,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ISABELLE/DON FERNAND DE VARGAS-ISABELLE/DON FERNAND DE VARGAS-ISABELLE/DON FERNAND DE VARGAS-DON PASCAL GIRON-ISABELLE/DON FERNAND DE VARGAS-DON PASCAL GIRON/DON PASCAL GIRON',
+      'string-id' => '#ISABELLE;#DONFERNAND,#ISABELLE;#DONFERNAND,#ISABELLE;#DONFERNAND,#DONPASCAL,#ISABELLE;#DONFERNAND,#DONPASCAL;#DONPASCAL',
     ),
   ),
   'corneillet_domcesardavalos_II01' => 
@@ -72947,6 +73711,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON CÉSAR D\'AVALOS/DON CÉSAR D\'AVALOS/DON CÉSAR D\'AVALOS/DON FERNAND DE VARGAS-DON CÉSAR D\'AVALOS/DON FERNAND DE VARGAS-DON CÉSAR D\'AVALOS-DON PASCAL GIRON-ISABELLE/',
+      'string-id' => '#DONCESAR;#DONCESAR;#DONCESAR;#DONFERNAND,#DONCESAR;#DONFERNAND,#DONCESAR,#DONPASCAL,#ISABELLE;',
     ),
   ),
   'corneillet_domcesardavalos_III01' => 
@@ -73005,6 +73770,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FERNAND DE VARGAS-DON CÉSAR D\'AVALOS/DON FERNAND DE VARGAS-DON CÉSAR D\'AVALOS/DON CÉSAR D\'AVALOS/DON CÉSAR D\'AVALOS-ISABELLE/DON CÉSAR D\'AVALOS-DON PASCAL GIRON-ISABELLE/DON CÉSAR D\'AVALOS-DON PASCAL GIRON',
+      'string-id' => '#DONFERNAND,#DONCESAR;#DONFERNAND,#DONCESAR;#DONCESAR;#DONCESAR,#ISABELLE;#DONCESAR,#DONPASCAL,#ISABELLE;#DONCESAR,#DONPASCAL',
     ),
   ),
   'corneillet_domcesardavalos_III02' => 
@@ -73063,6 +73829,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FERNAND DE VARGAS-DON CÉSAR D\'AVALOS/DON CÉSAR D\'AVALOS/DON CÉSAR D\'AVALOS-ISABELLE/DON CÉSAR D\'AVALOS-DON PASCAL GIRON-ISABELLE/DON CÉSAR D\'AVALOS-DON PASCAL GIRON/DON CÉSAR D\'AVALOS',
+      'string-id' => '#DONFERNAND,#DONCESAR;#DONCESAR;#DONCESAR,#ISABELLE;#DONCESAR,#DONPASCAL,#ISABELLE;#DONCESAR,#DONPASCAL;#DONCESAR',
     ),
   ),
   'corneillet_domcesardavalos_IV01' => 
@@ -73130,6 +73897,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FERNAND DE VARGAS-ENRIQUE/DON FERNAND DE VARGAS-DON CÉSAR D\'AVALOS-ENRIQUE/DON FERNAND DE VARGAS-DON PASCAL GIRON/DON FERNAND DE VARGAS-DON PASCAL GIRON-ISABELLE/DON FERNAND DE VARGAS-ISABELLE/DON FERNAND DE VARGAS-ISABELLE',
+      'string-id' => '#DONFERNAND,#ENRIQUE;#DONFERNAND,#DONCESAR,#ENRIQUE;#DONFERNAND,#DONPASCAL;#DONFERNAND,#DONPASCAL,#ISABELLE;#DONFERNAND,#ISABELLE;#DONFERNAND,#ISABELLE',
     ),
   ),
   'corneillet_domcesardavalos_IV02' => 
@@ -73197,6 +73965,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FERNAND DE VARGAS-DON CÉSAR D\'AVALOS-ENRIQUE/DON FERNAND DE VARGAS-DON PASCAL GIRON/DON FERNAND DE VARGAS-DON PASCAL GIRON-ISABELLE/DON FERNAND DE VARGAS-ISABELLE/DON FERNAND DE VARGAS-ISABELLE/DON FERNAND DE VARGAS-DON CÉSAR D\'AVALOS-ISABELLE',
+      'string-id' => '#DONFERNAND,#DONCESAR,#ENRIQUE;#DONFERNAND,#DONPASCAL;#DONFERNAND,#DONPASCAL,#ISABELLE;#DONFERNAND,#ISABELLE;#DONFERNAND,#ISABELLE;#DONFERNAND,#DONCESAR,#ISABELLE',
     ),
   ),
   'corneillet_domcesardavalos_IV03' => 
@@ -73255,6 +74024,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FERNAND DE VARGAS-DON PASCAL GIRON/DON FERNAND DE VARGAS-DON PASCAL GIRON-ISABELLE/DON FERNAND DE VARGAS-ISABELLE/DON FERNAND DE VARGAS-ISABELLE/DON FERNAND DE VARGAS-DON CÉSAR D\'AVALOS-ISABELLE/DON CÉSAR D\'AVALOS-ISABELLE',
+      'string-id' => '#DONFERNAND,#DONPASCAL;#DONFERNAND,#DONPASCAL,#ISABELLE;#DONFERNAND,#ISABELLE;#DONFERNAND,#ISABELLE;#DONFERNAND,#DONCESAR,#ISABELLE;#DONCESAR,#ISABELLE',
     ),
   ),
   'corneillet_domcesardavalos_V01' => 
@@ -73322,6 +74092,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FERNAND DE VARGAS-DON CÉSAR D\'AVALOS/DON FERNAND DE VARGAS-ENRIQUE/DON FERNAND DE VARGAS-ENRIQUE/DON FERNAND DE VARGAS-DON PASCAL GIRON-ENRIQUE/DON FERNAND DE VARGAS-ENRIQUE/DON FERNAND DE VARGAS-DON CÉSAR D\'AVALOS-ENRIQUE-ISABELLE',
+      'string-id' => '#DONFERNAND,#DONCESAR;#DONFERNAND,#ENRIQUE;#DONFERNAND,#ENRIQUE;#DONFERNAND,#DONPASCAL,#ENRIQUE;#DONFERNAND,#ENRIQUE;#DONFERNAND,#DONCESAR,#ENRIQUE,#ISABELLE',
     ),
   ),
   'corneillet_domcesardavalos_V02' => 
@@ -73371,6 +74142,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FERNAND DE VARGAS-ENRIQUE/DON FERNAND DE VARGAS-ENRIQUE/DON FERNAND DE VARGAS-DON PASCAL GIRON-ENRIQUE/DON FERNAND DE VARGAS-ENRIQUE/DON FERNAND DE VARGAS-DON CÉSAR D\'AVALOS-ENRIQUE-ISABELLE/DON FERNAND DE VARGAS-DON CÉSAR D\'AVALOS-DON PASCAL GIRON-ENRIQUE-ISABELLE',
+      'string-id' => '#DONFERNAND,#ENRIQUE;#DONFERNAND,#ENRIQUE;#DONFERNAND,#DONPASCAL,#ENRIQUE;#DONFERNAND,#ENRIQUE;#DONFERNAND,#DONCESAR,#ENRIQUE,#ISABELLE;#DONFERNAND,#DONCESAR,#DONPASCAL,#ENRIQUE,#ISABELLE',
     ),
   ),
   'corneillet_dombertrandecigarral_I01' => 
@@ -73420,6 +74192,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ISABELLE/ISABELLE/DON GARCIE-ISABELLE/DON GARCIE-ISABELLE/DON GARCIE-ISABELLE/DON GARCIE-DON ALVAR-ISABELLE',
+      'string-id' => '#ISABELLE;#ISABELLE;#DONGARCIE,#ISABELLE;#DONGARCIE,#ISABELLE;#DONGARCIE,#ISABELLE;#DONGARCIE,#DONALVAR,#ISABELLE',
     ),
   ),
   'corneillet_dombertrandecigarral_II01' => 
@@ -73478,6 +74251,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FÉLIX/DON BERTRAN-DON FÉLIX-LÉONOR/DON BERTRAN-DON FÉLIX-LÉONOR/DON GARCIE-DON BERTRAN-DON ALVAR-DON FÉLIX-LÉONOR-ISABELLE/DON GARCIE-DON BERTRAN-DON ALVAR-DON FÉLIX-LÉONOR-ISABELLE/DON ALVAR',
+      'string-id' => '#DONFELIX;#DONBERTRAN,#DONFELIX,#LEONOR;#DONBERTRAN,#DONFELIX,#LEONOR;#DONGARCIE,#DONBERTRAN,#DONALVAR,#DONFELIX,#LEONOR,#ISABELLE;#DONGARCIE,#DONBERTRAN,#DONALVAR,#DONFELIX,#LEONOR,#ISABELLE;#DONALVAR',
     ),
   ),
   'corneillet_dombertrandecigarral_III01' => 
@@ -73545,6 +74319,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON ALVAR/DON ALVAR-ISABELLE/DON FÉLIX/DON BERTRAN-DON FÉLIX-LÉONOR/DON ALVAR/DON BERTRAN-DON ALVAR',
+      'string-id' => '#DONALVAR;#DONALVAR,#ISABELLE;#DONFELIX;#DONBERTRAN,#DONFELIX,#LEONOR;#DONALVAR;#DONBERTRAN,#DONALVAR',
     ),
   ),
   'corneillet_dombertrandecigarral_III02' => 
@@ -73612,6 +74387,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON ALVAR-ISABELLE/DON FÉLIX/DON BERTRAN-DON FÉLIX-LÉONOR/DON ALVAR/DON BERTRAN-DON ALVAR/DON BERTRAN-ISABELLE',
+      'string-id' => '#DONALVAR,#ISABELLE;#DONFELIX;#DONBERTRAN,#DONFELIX,#LEONOR;#DONALVAR;#DONBERTRAN,#DONALVAR;#DONBERTRAN,#ISABELLE',
     ),
   ),
   'corneillet_dombertrandecigarral_III03' => 
@@ -73679,6 +74455,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FÉLIX/DON BERTRAN-DON FÉLIX-LÉONOR/DON ALVAR/DON BERTRAN-DON ALVAR/DON BERTRAN-ISABELLE/DON BERTRAN-DON ALVAR-DON FÉLIX-LÉONOR-ISABELLE',
+      'string-id' => '#DONFELIX;#DONBERTRAN,#DONFELIX,#LEONOR;#DONALVAR;#DONBERTRAN,#DONALVAR;#DONBERTRAN,#ISABELLE;#DONBERTRAN,#DONALVAR,#DONFELIX,#LEONOR,#ISABELLE',
     ),
   ),
   'corneillet_dombertrandecigarral_III04' => 
@@ -73746,6 +74523,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON BERTRAN-DON FÉLIX-LÉONOR/DON ALVAR/DON BERTRAN-DON ALVAR/DON BERTRAN-ISABELLE/DON BERTRAN-DON ALVAR-DON FÉLIX-LÉONOR-ISABELLE/DON BERTRAN-DON ALVAR-LÉONOR-ISABELLE',
+      'string-id' => '#DONBERTRAN,#DONFELIX,#LEONOR;#DONALVAR;#DONBERTRAN,#DONALVAR;#DONBERTRAN,#ISABELLE;#DONBERTRAN,#DONALVAR,#DONFELIX,#LEONOR,#ISABELLE;#DONBERTRAN,#DONALVAR,#LEONOR,#ISABELLE',
     ),
   ),
   'corneillet_dombertrandecigarral_III05' => 
@@ -73813,6 +74591,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON ALVAR/DON BERTRAN-DON ALVAR/DON BERTRAN-ISABELLE/DON BERTRAN-DON ALVAR-DON FÉLIX-LÉONOR-ISABELLE/DON BERTRAN-DON ALVAR-LÉONOR-ISABELLE/DON ALVAR-LÉONOR',
+      'string-id' => '#DONALVAR;#DONBERTRAN,#DONALVAR;#DONBERTRAN,#ISABELLE;#DONBERTRAN,#DONALVAR,#DONFELIX,#LEONOR,#ISABELLE;#DONBERTRAN,#DONALVAR,#LEONOR,#ISABELLE;#DONALVAR,#LEONOR',
     ),
   ),
   'corneillet_dombertrandecigarral_III06' => 
@@ -73880,6 +74659,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON BERTRAN-DON ALVAR/DON BERTRAN-ISABELLE/DON BERTRAN-DON ALVAR-DON FÉLIX-LÉONOR-ISABELLE/DON BERTRAN-DON ALVAR-LÉONOR-ISABELLE/DON ALVAR-LÉONOR/DON ALVAR-LÉONOR-ISABELLE',
+      'string-id' => '#DONBERTRAN,#DONALVAR;#DONBERTRAN,#ISABELLE;#DONBERTRAN,#DONALVAR,#DONFELIX,#LEONOR,#ISABELLE;#DONBERTRAN,#DONALVAR,#LEONOR,#ISABELLE;#DONALVAR,#LEONOR;#DONALVAR,#LEONOR,#ISABELLE',
     ),
   ),
   'corneillet_dombertrandecigarral_III07' => 
@@ -73938,6 +74718,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON BERTRAN-ISABELLE/DON BERTRAN-DON ALVAR-DON FÉLIX-LÉONOR-ISABELLE/DON BERTRAN-DON ALVAR-LÉONOR-ISABELLE/DON ALVAR-LÉONOR/DON ALVAR-LÉONOR-ISABELLE/DON BERTRAN-DON ALVAR-LÉONOR-ISABELLE',
+      'string-id' => '#DONBERTRAN,#ISABELLE;#DONBERTRAN,#DONALVAR,#DONFELIX,#LEONOR,#ISABELLE;#DONBERTRAN,#DONALVAR,#LEONOR,#ISABELLE;#DONALVAR,#LEONOR;#DONALVAR,#LEONOR,#ISABELLE;#DONBERTRAN,#DONALVAR,#LEONOR,#ISABELLE',
     ),
   ),
   'corneillet_dombertrandecigarral_IV01' => 
@@ -74005,6 +74786,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON GARCIE-DON BERTRAN/DON BERTRAN/DON BERTRAN-DON FÉLIX/DON BERTRAN-DON FÉLIX-LÉONOR-ISABELLE/DON BERTRAN-DON FÉLIX-ISABELLE/DON BERTRAN-ISABELLE',
+      'string-id' => '#DONGARCIE,#DONBERTRAN;#DONBERTRAN;#DONBERTRAN,#DONFELIX;#DONBERTRAN,#DONFELIX,#LEONOR,#ISABELLE;#DONBERTRAN,#DONFELIX,#ISABELLE;#DONBERTRAN,#ISABELLE',
     ),
   ),
   'corneillet_dombertrandecigarral_IV02' => 
@@ -74063,6 +74845,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON BERTRAN/DON BERTRAN-DON FÉLIX/DON BERTRAN-DON FÉLIX-LÉONOR-ISABELLE/DON BERTRAN-DON FÉLIX-ISABELLE/DON BERTRAN-ISABELLE/ISABELLE',
+      'string-id' => '#DONBERTRAN;#DONBERTRAN,#DONFELIX;#DONBERTRAN,#DONFELIX,#LEONOR,#ISABELLE;#DONBERTRAN,#DONFELIX,#ISABELLE;#DONBERTRAN,#ISABELLE;#ISABELLE',
     ),
   ),
   'corneillet_dombertrandecigarral_V01' => 
@@ -74121,6 +74904,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON ALVAR/DON ALVAR//LÉONOR/DON FÉLIX-LÉONOR/DON BERTRAN-DON FÉLIX-LÉONOR',
+      'string-id' => '#DONALVAR;#DONALVAR;;#LEONOR;#DONFELIX,#LEONOR;#DONBERTRAN,#DONFELIX,#LEONOR',
     ),
   ),
   'corneillet_dombertrandecigarral_V02' => 
@@ -74179,6 +74963,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON ALVAR//LÉONOR/DON FÉLIX-LÉONOR/DON BERTRAN-DON FÉLIX-LÉONOR/DON BERTRAN-DON FÉLIX-LÉONOR',
+      'string-id' => '#DONALVAR;;#LEONOR;#DONFELIX,#LEONOR;#DONBERTRAN,#DONFELIX,#LEONOR;#DONBERTRAN,#DONFELIX,#LEONOR',
     ),
   ),
   'corneillet_dombertrandecigarral_V03' => 
@@ -74228,6 +75013,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => '/LÉONOR/DON FÉLIX-LÉONOR/DON BERTRAN-DON FÉLIX-LÉONOR/DON BERTRAN-DON FÉLIX-LÉONOR/DON BERTRAN-LÉONOR',
+      'string-id' => ';#LEONOR;#DONFELIX,#LEONOR;#DONBERTRAN,#DONFELIX,#LEONOR;#DONBERTRAN,#DONFELIX,#LEONOR;#DONBERTRAN,#LEONOR',
     ),
   ),
   'corneillet_dombertrandecigarral_V04' => 
@@ -74286,6 +75072,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LÉONOR/DON FÉLIX-LÉONOR/DON BERTRAN-DON FÉLIX-LÉONOR/DON BERTRAN-DON FÉLIX-LÉONOR/DON BERTRAN-LÉONOR/DON GARCIE-DON BERTRAN-LÉONOR',
+      'string-id' => '#LEONOR;#DONFELIX,#LEONOR;#DONBERTRAN,#DONFELIX,#LEONOR;#DONBERTRAN,#DONFELIX,#LEONOR;#DONBERTRAN,#LEONOR;#DONGARCIE,#DONBERTRAN,#LEONOR',
     ),
   ),
   'corneillet_dombertrandecigarral_V05' => 
@@ -74353,6 +75140,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON FÉLIX-LÉONOR/DON BERTRAN-DON FÉLIX-LÉONOR/DON BERTRAN-DON FÉLIX-LÉONOR/DON BERTRAN-LÉONOR/DON GARCIE-DON BERTRAN-LÉONOR/DON GARCIE-DON BERTRAN-LÉONOR-ISABELLE',
+      'string-id' => '#DONFELIX,#LEONOR;#DONBERTRAN,#DONFELIX,#LEONOR;#DONBERTRAN,#DONFELIX,#LEONOR;#DONBERTRAN,#LEONOR;#DONGARCIE,#DONBERTRAN,#LEONOR;#DONGARCIE,#DONBERTRAN,#LEONOR,#ISABELLE',
     ),
   ),
   'corneillet_dombertrandecigarral_V06' => 
@@ -74420,6 +75208,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON BERTRAN-DON FÉLIX-LÉONOR/DON BERTRAN-DON FÉLIX-LÉONOR/DON BERTRAN-LÉONOR/DON GARCIE-DON BERTRAN-LÉONOR/DON GARCIE-DON BERTRAN-LÉONOR-ISABELLE/DON GARCIE-DON BERTRAN-DON ALVAR-LÉONOR-ISABELLE',
+      'string-id' => '#DONBERTRAN,#DONFELIX,#LEONOR;#DONBERTRAN,#DONFELIX,#LEONOR;#DONBERTRAN,#LEONOR;#DONGARCIE,#DONBERTRAN,#LEONOR;#DONGARCIE,#DONBERTRAN,#LEONOR,#ISABELLE;#DONGARCIE,#DONBERTRAN,#DONALVAR,#LEONOR,#ISABELLE',
     ),
   ),
   'corneillet_dombertrandecigarral_V07' => 
@@ -74496,6 +75285,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DON BERTRAN-DON FÉLIX-LÉONOR/DON BERTRAN-LÉONOR/DON GARCIE-DON BERTRAN-LÉONOR/DON GARCIE-DON BERTRAN-LÉONOR-ISABELLE/DON GARCIE-DON BERTRAN-DON ALVAR-LÉONOR-ISABELLE/DON GARCIE-DON BERTRAN-DON ALVAR-ISABELLE',
+      'string-id' => '#DONBERTRAN,#DONFELIX,#LEONOR;#DONBERTRAN,#LEONOR;#DONGARCIE,#DONBERTRAN,#LEONOR;#DONGARCIE,#DONBERTRAN,#LEONOR,#ISABELLE;#DONGARCIE,#DONBERTRAN,#DONALVAR,#LEONOR,#ISABELLE;#DONGARCIE,#DONBERTRAN,#DONALVAR,#ISABELLE',
     ),
   ),
   'corneillet_darius_III01' => 
@@ -74554,6 +75344,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'OCHUS-OROPASTE/OCHUS-STATIRA-OROPASTE/STATIRA/DARIUS-STATIRA/DARIUS-MÉGABISE/MÉGABISE',
+      'string-id' => '#OCHUS,#OROPASTE;#OCHUS,#STATIRA,#OROPASTE;#STATIRA;#DARIUS,#STATIRA;#DARIUS,#MEGABISE;#MEGABISE',
     ),
   ),
   'corneillet_darius_III02' => 
@@ -74621,6 +75412,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'OCHUS-STATIRA-OROPASTE/STATIRA/DARIUS-STATIRA/DARIUS-MÉGABISE/MÉGABISE/AMESTRIS-MÉGABISE',
+      'string-id' => '#OCHUS,#STATIRA,#OROPASTE;#STATIRA;#DARIUS,#STATIRA;#DARIUS,#MEGABISE;#MEGABISE;#AMESTRIS,#MEGABISE',
     ),
   ),
   'corneillet_darius_IV01' => 
@@ -74697,6 +75489,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'STATIRA-MÉGABISE/STATIRA-MÉGABISE-OROPASTE/MÉGABISE-OROPASTE/AMESTRIS-MÉGABISE-OROPASTE/OCHUS-AMESTRIS-MÉGABISE-OROPASTE/OCHUS-DARIUS-AMESTRIS-MÉGABISE-OROPASTE',
+      'string-id' => '#STATIRA,#MEGABISE;#STATIRA,#MEGABISE,#OROPASTE;#MEGABISE,#OROPASTE;#AMESTRIS,#MEGABISE,#OROPASTE;#OCHUS,#AMESTRIS,#MEGABISE,#OROPASTE;#OCHUS,#DARIUS,#AMESTRIS,#MEGABISE,#OROPASTE',
     ),
   ),
   'corneillet_darius_IV02' => 
@@ -74764,6 +75557,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'STATIRA-MÉGABISE-OROPASTE/MÉGABISE-OROPASTE/AMESTRIS-MÉGABISE-OROPASTE/OCHUS-AMESTRIS-MÉGABISE-OROPASTE/OCHUS-DARIUS-AMESTRIS-MÉGABISE-OROPASTE/DARIUS-AMESTRIS',
+      'string-id' => '#STATIRA,#MEGABISE,#OROPASTE;#MEGABISE,#OROPASTE;#AMESTRIS,#MEGABISE,#OROPASTE;#OCHUS,#AMESTRIS,#MEGABISE,#OROPASTE;#OCHUS,#DARIUS,#AMESTRIS,#MEGABISE,#OROPASTE;#DARIUS,#AMESTRIS',
     ),
   ),
   'corneillet_comtesseorgueil_I01' => 
@@ -74831,6 +75625,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => '/LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-LE CHEVALIER-/LE CHEVALIER-/LE CHEVALIER-ORONTE-/ORONTE-OLIMPE-LUCRÈCE',
+      'string-id' => '#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#LECHEVALIER,#CASCARET;#LECHEVALIER,#CASCARET;#LECHEVALIER,#ORONTE,#CASCARET;#ORONTE,#OLIMPE,#LUCRECE,#CASCARET',
     ),
   ),
   'corneillet_comtesseorgueil_I02' => 
@@ -74898,6 +75693,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-LE CHEVALIER-/LE CHEVALIER-/LE CHEVALIER-ORONTE-/ORONTE-OLIMPE-LUCRÈCE-/ORONTE-OLIMPE-LUCRÈCE',
+      'string-id' => '#LEMARQUIS,#CASCARET;#LEMARQUIS,#LECHEVALIER,#CASCARET;#LECHEVALIER,#CASCARET;#LECHEVALIER,#ORONTE,#CASCARET;#ORONTE,#OLIMPE,#LUCRECE,#CASCARET;#ORONTE,#OLIMPE,#LUCRECE,#CASCARET',
     ),
   ),
   'corneillet_comtesseorgueil_II01' => 
@@ -74947,6 +75743,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LE MARQUIS de Lorgnac-ANSELME-/LE MARQUIS de Lorgnac-ANSELME-/LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-LE CHEVALIER',
+      'string-id' => '#LEMARQUIS,#ANSELME,#CASCARET;#LEMARQUIS,#ANSELME,#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#LECHEVALIER,#CASCARET',
     ),
   ),
   'corneillet_comtesseorgueil_II02' => 
@@ -75014,6 +75811,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LE MARQUIS de Lorgnac-ANSELME-/LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-LE CHEVALIER-/OLIMPE-LUCRÈCE',
+      'string-id' => '#LEMARQUIS,#ANSELME,#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#LECHEVALIER,#CASCARET;#OLIMPE,#LUCRECE,#CASCARET',
     ),
   ),
   'corneillet_comtesseorgueil_II03' => 
@@ -75081,6 +75879,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-LE CHEVALIER-/OLIMPE-LUCRÈCE-/OLIMPE',
+      'string-id' => '#LEMARQUIS,#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#LECHEVALIER,#CASCARET;#OLIMPE,#LUCRECE,#CASCARET;#OLIMPE,#CASCARET',
     ),
   ),
   'corneillet_comtesseorgueil_II04' => 
@@ -75148,6 +75947,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-LE CHEVALIER-/OLIMPE-LUCRÈCE-/OLIMPE-/LE CHEVALIER-OLIMPE',
+      'string-id' => '#LEMARQUIS,#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#LECHEVALIER,#CASCARET;#OLIMPE,#LUCRECE,#CASCARET;#OLIMPE,#CASCARET;#LECHEVALIER,#OLIMPE,#CASCARET',
     ),
   ),
   'corneillet_comtesseorgueil_II05' => 
@@ -75215,6 +76015,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-LE CHEVALIER-/OLIMPE-LUCRÈCE-/OLIMPE-/LE CHEVALIER-OLIMPE-/LE MARQUIS de Lorgnac-LE CHEVALIER-OLIMPE',
+      'string-id' => '#LEMARQUIS,#CASCARET;#LEMARQUIS,#LECHEVALIER,#CASCARET;#OLIMPE,#LUCRECE,#CASCARET;#OLIMPE,#CASCARET;#LECHEVALIER,#OLIMPE,#CASCARET;#LEMARQUIS,#LECHEVALIER,#OLIMPE,#CASCARET',
     ),
   ),
   'corneillet_comtesseorgueil_III01' => 
@@ -75273,6 +76074,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ORONTE-LUCRÈCE-/ORONTE-OLIMPE-LUCRÈCE-/OLIMPE-LUCRÈCE-/OLIMPE-LUCRÈCE-/LE CHEVALIER-OLIMPE-LUCRÈCE-/OLIMPE-LUCRÈCE',
+      'string-id' => '#ORONTE,#LUCRECE,#CASCARET;#ORONTE,#OLIMPE,#LUCRECE,#CASCARET;#OLIMPE,#LUCRECE,#CASCARET;#OLIMPE,#LUCRECE,#CASCARET;#LECHEVALIER,#OLIMPE,#LUCRECE,#CASCARET;#OLIMPE,#LUCRECE,#CASCARET',
     ),
   ),
   'corneillet_comtesseorgueil_III02' => 
@@ -75322,6 +76124,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ORONTE-OLIMPE-LUCRÈCE-/OLIMPE-LUCRÈCE-/OLIMPE-LUCRÈCE-/LE CHEVALIER-OLIMPE-LUCRÈCE-/OLIMPE-LUCRÈCE-/OLIMPE-LUCRÈCE',
+      'string-id' => '#ORONTE,#OLIMPE,#LUCRECE,#CASCARET;#OLIMPE,#LUCRECE,#CASCARET;#OLIMPE,#LUCRECE,#CASCARET;#LECHEVALIER,#OLIMPE,#LUCRECE,#CASCARET;#OLIMPE,#LUCRECE,#CASCARET;#OLIMPE,#LUCRECE,#CASCARET',
     ),
   ),
   'corneillet_comtesseorgueil_III03' => 
@@ -75371,6 +76174,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'OLIMPE-LUCRÈCE-/OLIMPE-LUCRÈCE-/LE CHEVALIER-OLIMPE-LUCRÈCE-/OLIMPE-LUCRÈCE-/OLIMPE-LUCRÈCE-/LE MARQUIS de Lorgnac-OLIMPE-LUCRÈCE',
+      'string-id' => '#OLIMPE,#LUCRECE,#CASCARET;#OLIMPE,#LUCRECE,#CASCARET;#LECHEVALIER,#OLIMPE,#LUCRECE,#CASCARET;#OLIMPE,#LUCRECE,#CASCARET;#OLIMPE,#LUCRECE,#CASCARET;#LEMARQUIS,#OLIMPE,#LUCRECE,#CASCARET',
     ),
   ),
   'corneillet_comtesseorgueil_III04' => 
@@ -75429,6 +76233,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'OLIMPE-LUCRÈCE-/LE CHEVALIER-OLIMPE-LUCRÈCE-/OLIMPE-LUCRÈCE-/OLIMPE-LUCRÈCE-/LE MARQUIS de Lorgnac-OLIMPE-LUCRÈCE-/LE MARQUIS de Lorgnac-ANSELME-OLIMPE-LUCRÈCE',
+      'string-id' => '#OLIMPE,#LUCRECE,#CASCARET;#LECHEVALIER,#OLIMPE,#LUCRECE,#CASCARET;#OLIMPE,#LUCRECE,#CASCARET;#OLIMPE,#LUCRECE,#CASCARET;#LEMARQUIS,#OLIMPE,#LUCRECE,#CASCARET;#LEMARQUIS,#ANSELME,#OLIMPE,#LUCRECE,#CASCARET',
     ),
   ),
   'corneillet_comtesseorgueil_III05' => 
@@ -75487,6 +76292,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LE CHEVALIER-OLIMPE-LUCRÈCE-/OLIMPE-LUCRÈCE-/OLIMPE-LUCRÈCE-/LE MARQUIS de Lorgnac-OLIMPE-LUCRÈCE-/LE MARQUIS de Lorgnac-ANSELME-OLIMPE-LUCRÈCE-/OLIMPE-LUCRÈCE',
+      'string-id' => '#LECHEVALIER,#OLIMPE,#LUCRECE,#CASCARET;#OLIMPE,#LUCRECE,#CASCARET;#OLIMPE,#LUCRECE,#CASCARET;#LEMARQUIS,#OLIMPE,#LUCRECE,#CASCARET;#LEMARQUIS,#ANSELME,#OLIMPE,#LUCRECE,#CASCARET;#OLIMPE,#LUCRECE,#CASCARET',
     ),
   ),
   'corneillet_comtesseorgueil_IV01' => 
@@ -75536,6 +76342,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LE CHEVALIER-LUCRÈCE-/LE CHEVALIER-LUCRÈCE-/LE CHEVALIER-LUCRÈCE-/LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac',
+      'string-id' => '#LECHEVALIER,#LUCRECE,#CASCARET;#LECHEVALIER,#LUCRECE,#CASCARET;#LECHEVALIER,#LUCRECE,#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#CASCARET',
     ),
   ),
   'corneillet_comtesseorgueil_IV02' => 
@@ -75594,6 +76401,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LE CHEVALIER-LUCRÈCE-/LE CHEVALIER-LUCRÈCE-/LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-ORONTE',
+      'string-id' => '#LECHEVALIER,#LUCRECE,#CASCARET;#LECHEVALIER,#LUCRECE,#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#ORONTE,#CASCARET',
     ),
   ),
   'corneillet_comtesseorgueil_IV03' => 
@@ -75661,6 +76469,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LE CHEVALIER-LUCRÈCE-/LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-ORONTE-/LE MARQUIS de Lorgnac-ORONTE-ANSELME',
+      'string-id' => '#LECHEVALIER,#LUCRECE,#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#ORONTE,#CASCARET;#LEMARQUIS,#ORONTE,#ANSELME,#CASCARET',
     ),
   ),
   'corneillet_comtesseorgueil_IV04' => 
@@ -75710,6 +76519,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-ORONTE-/LE MARQUIS de Lorgnac-ORONTE-ANSELME-/LE MARQUIS de Lorgnac-ANSELME',
+      'string-id' => '#LEMARQUIS,#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#ORONTE,#CASCARET;#LEMARQUIS,#ORONTE,#ANSELME,#CASCARET;#LEMARQUIS,#ANSELME,#CASCARET',
     ),
   ),
   'corneillet_comtesseorgueil_IV05' => 
@@ -75759,6 +76569,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-ORONTE-/LE MARQUIS de Lorgnac-ORONTE-ANSELME-/LE MARQUIS de Lorgnac-ANSELME-/LE MARQUIS de Lorgnac',
+      'string-id' => '#LEMARQUIS,#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#ORONTE,#CASCARET;#LEMARQUIS,#ORONTE,#ANSELME,#CASCARET;#LEMARQUIS,#ANSELME,#CASCARET;#LEMARQUIS,#CASCARET',
     ),
   ),
   'corneillet_comtesseorgueil_V01' => 
@@ -75826,6 +76637,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'OLIMPE-/OLIMPE-/OLIMPE-LUCRÈCE-//LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-ANSELME',
+      'string-id' => '#OLIMPE,#CASCARET;#OLIMPE,#CASCARET;#OLIMPE,#LUCRECE,#CASCARET;#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#ANSELME,#CASCARET',
     ),
   ),
   'corneillet_comtesseorgueil_V02' => 
@@ -75893,6 +76705,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'OLIMPE-/OLIMPE-LUCRÈCE-//LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-ANSELME-/LE MARQUIS de Lorgnac-ANSELME',
+      'string-id' => '#OLIMPE,#CASCARET;#OLIMPE,#LUCRECE,#CASCARET;#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#ANSELME,#CASCARET;#LEMARQUIS,#ANSELME,#CASCARET',
     ),
   ),
   'corneillet_comtesseorgueil_V03' => 
@@ -75960,6 +76773,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'OLIMPE-LUCRÈCE-//LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-ANSELME-/LE MARQUIS de Lorgnac-ANSELME-/LE MARQUIS de Lorgnac-ANSELME-OLIMPE',
+      'string-id' => '#OLIMPE,#LUCRECE,#CASCARET;#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#ANSELME,#CASCARET;#LEMARQUIS,#ANSELME,#CASCARET;#LEMARQUIS,#ANSELME,#OLIMPE,#CASCARET',
     ),
   ),
   'corneillet_comtesseorgueil_V04' => 
@@ -76027,6 +76841,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => '/LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-ANSELME-/LE MARQUIS de Lorgnac-ANSELME-/LE MARQUIS de Lorgnac-ANSELME-OLIMPE-/LE MARQUIS de Lorgnac-LE CHEVALIER-ANSELME-OLIMPE-LUCRÈCE',
+      'string-id' => '#CASCARET;#LEMARQUIS,#CASCARET;#LEMARQUIS,#ANSELME,#CASCARET;#LEMARQUIS,#ANSELME,#CASCARET;#LEMARQUIS,#ANSELME,#OLIMPE,#CASCARET;#LEMARQUIS,#LECHEVALIER,#ANSELME,#OLIMPE,#LUCRECE,#CASCARET',
     ),
   ),
   'corneillet_comtesseorgueil_V05' => 
@@ -76094,6 +76909,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LE MARQUIS de Lorgnac-/LE MARQUIS de Lorgnac-ANSELME-/LE MARQUIS de Lorgnac-ANSELME-/LE MARQUIS de Lorgnac-ANSELME-OLIMPE-/LE MARQUIS de Lorgnac-LE CHEVALIER-ANSELME-OLIMPE-LUCRÈCE-/LE MARQUIS de Lorgnac-LE CHEVALIER-ORONTE-ANSELME-OLIMPE-LUCRÈCE',
+      'string-id' => '#LEMARQUIS,#CASCARET;#LEMARQUIS,#ANSELME,#CASCARET;#LEMARQUIS,#ANSELME,#CASCARET;#LEMARQUIS,#ANSELME,#OLIMPE,#CASCARET;#LEMARQUIS,#LECHEVALIER,#ANSELME,#OLIMPE,#LUCRECE,#CASCARET;#LEMARQUIS,#LECHEVALIER,#ORONTE,#ANSELME,#OLIMPE,#LUCRECE,#CASCARET',
     ),
   ),
   'corneillet_comtedessex_II01' => 
@@ -76152,6 +76968,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ÉLISABETH/ÉLISABETH-LA DUCHESSE D\'IRTON/ÉLISABETH-LA DUCHESSE D\'IRTON-CÉCILE/ÉLISABETH-LA DUCHESSE D\'IRTON/ÉLISABETH-LE COMTE D\'ESSEX/LA DUCHESSE D\'IRTON-LE COMTE D\'ESSEX',
+      'string-id' => '#ELISABETH;#ELISABETH,#LADUCHESSE;#ELISABETH,#LADUCHESSE,#CECILE;#ELISABETH,#LADUCHESSE;#ELISABETH,#LECOMTE;#LADUCHESSE,#LECOMTE',
     ),
   ),
   'corneillet_comtedessex_II02' => 
@@ -76219,6 +77036,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ÉLISABETH-LA DUCHESSE D\'IRTON/ÉLISABETH-LA DUCHESSE D\'IRTON-CÉCILE/ÉLISABETH-LA DUCHESSE D\'IRTON/ÉLISABETH-LE COMTE D\'ESSEX/LA DUCHESSE D\'IRTON-LE COMTE D\'ESSEX/LE COMTE D\'ESSEX-CROMMER-SUITE',
+      'string-id' => '#ELISABETH,#LADUCHESSE;#ELISABETH,#LADUCHESSE,#CECILE;#ELISABETH,#LADUCHESSE;#ELISABETH,#LECOMTE;#LADUCHESSE,#LECOMTE;#LECOMTE,#CROMMER,#SUITE',
     ),
   ),
   'corneillet_comtedessex_V01' => 
@@ -76277,6 +77095,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ÉLISABETH/ÉLISABETH-LA DUCHESSE D\'IRTON/ÉLISABETH-CÉCILE/ÉLISABETH/ÉLISABETH-LA DUCHESSE D\'IRTON/ÉLISABETH-LE COMTE DE SALSBURY',
+      'string-id' => '#ELISABETH;#ELISABETH,#LADUCHESSE;#ELISABETH,#CECILE;#ELISABETH;#ELISABETH,#LADUCHESSE;#ELISABETH,#SALSBURY',
     ),
   ),
   'corneillet_circe_I01' => 
@@ -76362,6 +77181,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'GLAUCUS-PALÉMON-------------/----GLAUCUS-PALÉMON-CÉLIE-MÉLISSE-------------/----GLAUCUS-PALÉMON-SILLA-CÉLIE-MÉLISSE-------------/----PALÉMON-CÉLIE-------------/----DORINE-FLORISE-ASTÉRIE-------------/----DORINE-FLORISE-ASTÉRIE',
+      'string-id' => '#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#CELIE,#MELISSE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#SILLA,#CELIE,#MELISSE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#PALEMON,#CELIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#DORINE,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#DORINE,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES',
     ),
   ),
   'corneillet_circe_I02' => 
@@ -76429,12 +77249,22 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'GLAUCUS-PALÉMON-CÉLIE-MÉLISSE-------------/----GLAUCUS-PALÉMON-SILLA-CÉLIE-MÉLISSE-------------/----PALÉMON-CÉLIE-------------/----DORINE-FLORISE-ASTÉRIE-------------/----DORINE-FLORISE-ASTÉRIE-------------/----DORINE-FLORISE-ASTÉRIE',
+      'string-id' => '#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#CELIE,#MELISSE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#SILLA,#CELIE,#MELISSE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#PALEMON,#CELIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#DORINE,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#DORINE,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#DORINE,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES',
     ),
   ),
   'corneillet_circe_I03' => 
   array (
     'pattern' => 
     array (
+      '#CIRCE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 1,
+      ),
       '#ASTERIE' => 
       array (
         0 => 0,
@@ -76462,15 +77292,6 @@
         4 => 0,
         5 => 0,
       ),
-      '#CINQ SATYRES' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 0,
-        5 => 1,
-      ),
       '#DIVINITES' => 
       array (
         0 => 1,
@@ -76495,7 +77316,8 @@
       'titleId' => 'Circe',
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
-      'string' => 'GLAUCUS-PALÉMON-SILLA-CÉLIE-MÉLISSE-------------/----PALÉMON-CÉLIE-------------/----DORINE-FLORISE-ASTÉRIE-------------/----DORINE-FLORISE-ASTÉRIE-------------/----DORINE-FLORISE-ASTÉRIE-------------/----CIRCÉ-DORINE-FLORISE-ASTÉRIE-CINQ SATYRES',
+      'string' => 'GLAUCUS-PALÉMON-SILLA-CÉLIE-MÉLISSE-------------/----PALÉMON-CÉLIE-------------/----DORINE-FLORISE-ASTÉRIE-------------/----DORINE-FLORISE-ASTÉRIE-------------/----DORINE-FLORISE-ASTÉRIE-------------/----CIRCÉ-DORINE-FLORISE-ASTÉRIE',
+      'string-id' => '#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#SILLA,#CELIE,#MELISSE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#PALEMON,#CELIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#DORINE,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#DORINE,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#DORINE,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES',
     ),
   ),
   'corneillet_circe_I04' => 
@@ -76538,15 +77360,6 @@
         4 => 0,
         5 => 0,
       ),
-      '#CINQ SATYRES' => 
-      array (
-        0 => 0,
-        1 => 0,
-        2 => 0,
-        3 => 0,
-        4 => 1,
-        5 => 0,
-      ),
       '#DIVINITES' => 
       array (
         0 => 1,
@@ -76571,7 +77384,8 @@
       'titleId' => 'Circe',
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
-      'string' => 'PALÉMON-CÉLIE-------------/----DORINE-FLORISE-ASTÉRIE-------------/----DORINE-FLORISE-ASTÉRIE-------------/----DORINE-FLORISE-ASTÉRIE-------------/----CIRCÉ-DORINE-FLORISE-ASTÉRIE-CINQ SATYRES-------------/----GLAUCUS-CIRCÉ',
+      'string' => 'PALÉMON-CÉLIE-------------/----DORINE-FLORISE-ASTÉRIE-------------/----DORINE-FLORISE-ASTÉRIE-------------/----DORINE-FLORISE-ASTÉRIE-------------/----CIRCÉ-DORINE-FLORISE-ASTÉRIE-------------/----GLAUCUS-CIRCÉ',
+      'string-id' => '#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#PALEMON,#CELIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#DORINE,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#DORINE,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#DORINE,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#CIRCE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES',
     ),
   ),
   'corneillet_circe_II01' => 
@@ -76639,6 +77453,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'PALÉMON-DORINE-FLORISE-ASTÉRIE-------------/----DORINE-FLORISE-ASTÉRIE-------------/----CIRCÉ-DORINE-FLORISE-ASTÉRIE-------------/----CIRCÉ-DORINE-------------/----CIRCÉ-DORINE-------------/----GLAUCUS-PALÉMON-CIRCÉ-DORINE',
+      'string-id' => '#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#PALEMON,#DORINE,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#DORINE,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES',
     ),
   ),
   'corneillet_circe_II02' => 
@@ -76706,6 +77521,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DORINE-FLORISE-ASTÉRIE-------------/----CIRCÉ-DORINE-FLORISE-ASTÉRIE-------------/----CIRCÉ-DORINE-------------/----CIRCÉ-DORINE-------------/----GLAUCUS-PALÉMON-CIRCÉ-DORINE-------------/----GLAUCUS-PALÉMON-CIRCÉ-DORINE-ASTÉRIE',
+      'string-id' => '#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#DORINE,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#CIRCE,#DORINE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES',
     ),
   ),
   'corneillet_circe_II03' => 
@@ -76764,6 +77580,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'CIRCÉ-DORINE-FLORISE-ASTÉRIE-------------/----CIRCÉ-DORINE-------------/----CIRCÉ-DORINE-------------/----GLAUCUS-PALÉMON-CIRCÉ-DORINE-------------/----GLAUCUS-PALÉMON-CIRCÉ-DORINE-ASTÉRIE-------------/----CIRCÉ-DORINE',
+      'string-id' => '#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#CIRCE,#DORINE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES',
     ),
   ),
   'corneillet_circe_III01' => 
@@ -76840,6 +77657,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ASTÉRIE-------------/----PALÉMON-ASTÉRIE-------------/----CIRCÉ-DORINE-ASTÉRIE-------------/----CIRCÉ-DORINE-------------/----CIRCÉ-DORINE-FLORISE-------------/----CIRCÉ-SILLA-DORINE',
+      'string-id' => '#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#PALEMON,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#FLORISE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#SILLA,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES',
     ),
   ),
   'corneillet_circe_III02' => 
@@ -76925,6 +77743,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'PALÉMON-ASTÉRIE-------------/----CIRCÉ-DORINE-ASTÉRIE-------------/----CIRCÉ-DORINE-------------/----CIRCÉ-DORINE-FLORISE-------------/----CIRCÉ-SILLA-DORINE-------------/----GLAUCUS-PALÉMON-CIRCÉ-SILLA-DORINE',
+      'string-id' => '#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#PALEMON,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#FLORISE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#SILLA,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#CIRCE,#SILLA,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES',
     ),
   ),
   'corneillet_circe_III03' => 
@@ -77001,6 +77820,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'CIRCÉ-DORINE-ASTÉRIE-------------/----CIRCÉ-DORINE-------------/----CIRCÉ-DORINE-FLORISE-------------/----CIRCÉ-SILLA-DORINE-------------/----GLAUCUS-PALÉMON-CIRCÉ-SILLA-DORINE-------------/----GLAUCUS-PALÉMON',
+      'string-id' => '#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#FLORISE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#SILLA,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#CIRCE,#SILLA,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES',
     ),
   ),
   'corneillet_circe_III04' => 
@@ -77077,6 +77897,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'CIRCÉ-DORINE-------------/----CIRCÉ-DORINE-FLORISE-------------/----CIRCÉ-SILLA-DORINE-------------/----GLAUCUS-PALÉMON-CIRCÉ-SILLA-DORINE-------------/----GLAUCUS-PALÉMON-------------/----VÉNUS-GLAUCUS-PALÉMON',
+      'string-id' => '#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#FLORISE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#SILLA,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#CIRCE,#SILLA,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#VENUS,#GLAUCUS,#PALEMON,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES',
     ),
   ),
   'corneillet_circe_IV01' => 
@@ -77162,6 +77983,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'PALÉMON-ASTÉRIE-------------/----ASTÉRIE-------------/----FLORISE-ASTÉRIE-------------/----CIRCÉ-SILLA-FLORISE-ASTÉRIE-------------/----CIRCÉ-SILLA-DORINE-------------/----CIRCÉ-DORINE',
+      'string-id' => '#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#PALEMON,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#SILLA,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#SILLA,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES',
     ),
   ),
   'corneillet_circe_IV02' => 
@@ -77238,6 +78060,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ASTÉRIE-------------/----FLORISE-ASTÉRIE-------------/----CIRCÉ-SILLA-FLORISE-ASTÉRIE-------------/----CIRCÉ-SILLA-DORINE-------------/----CIRCÉ-DORINE-------------/----CIRCÉ-DORINE',
+      'string-id' => '#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#SILLA,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#SILLA,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES',
     ),
   ),
   'corneillet_circe_IV03' => 
@@ -77314,6 +78137,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'FLORISE-ASTÉRIE-------------/----CIRCÉ-SILLA-FLORISE-ASTÉRIE-------------/----CIRCÉ-SILLA-DORINE-------------/----CIRCÉ-DORINE-------------/----CIRCÉ-DORINE-------------/----GLAUCUS-CIRCÉ-DORINE',
+      'string-id' => '#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#SILLA,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#SILLA,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES',
     ),
   ),
   'corneillet_circe_IV04' => 
@@ -77390,6 +78214,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'CIRCÉ-SILLA-FLORISE-ASTÉRIE-------------/----CIRCÉ-SILLA-DORINE-------------/----CIRCÉ-DORINE-------------/----CIRCÉ-DORINE-------------/----GLAUCUS-CIRCÉ-DORINE-------------/----GLAUCUS-PALÉMON-CIRCÉ-DORINE',
+      'string-id' => '#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#SILLA,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#SILLA,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES',
     ),
   ),
   'corneillet_circe_IV05' => 
@@ -77448,6 +78273,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'CIRCÉ-SILLA-DORINE-------------/----CIRCÉ-DORINE-------------/----CIRCÉ-DORINE-------------/----GLAUCUS-CIRCÉ-DORINE-------------/----GLAUCUS-PALÉMON-CIRCÉ-DORINE-------------/----CIRCÉ-DORINE',
+      'string-id' => '#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#SILLA,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES',
     ),
   ),
   'corneillet_circe_V01' => 
@@ -77542,6 +78368,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'SILLA-FLORISE-ASTÉRIE-------------/----SILLA-FLORISE-------------/----PALÉMON-SILLA-FLORISE-ASTÉRIE-------------/----DORINE-FLORISE-ASTÉRIE-------------/----CIRCÉ-DORINE-------------/----GLAUCUS-CIRCÉ-DORINE',
+      'string-id' => '#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#SILLA,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#SILLA,#FLORISE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#PALEMON,#SILLA,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#DORINE,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES',
     ),
   ),
   'corneillet_circe_V02' => 
@@ -77636,6 +78463,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'SILLA-FLORISE-------------/----PALÉMON-SILLA-FLORISE-ASTÉRIE-------------/----DORINE-FLORISE-ASTÉRIE-------------/----CIRCÉ-DORINE-------------/----GLAUCUS-CIRCÉ-DORINE-------------/----GLAUCUS-PALÉMON-CIRCÉ-DORINE',
+      'string-id' => '#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#SILLA,#FLORISE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#PALEMON,#SILLA,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#DORINE,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES',
     ),
   ),
   'corneillet_circe_V03' => 
@@ -77721,6 +78549,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'PALÉMON-SILLA-FLORISE-ASTÉRIE-------------/----DORINE-FLORISE-ASTÉRIE-------------/----CIRCÉ-DORINE-------------/----GLAUCUS-CIRCÉ-DORINE-------------/----GLAUCUS-PALÉMON-CIRCÉ-DORINE-------------/----GLAUCUS-PALÉMON',
+      'string-id' => '#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#PALEMON,#SILLA,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#DORINE,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES',
     ),
   ),
   'corneillet_circe_V04' => 
@@ -77806,6 +78635,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DORINE-FLORISE-ASTÉRIE-------------/----CIRCÉ-DORINE-------------/----GLAUCUS-CIRCÉ-DORINE-------------/----GLAUCUS-PALÉMON-CIRCÉ-DORINE-------------/----GLAUCUS-PALÉMON-------------/----NEPTUNE-GLAUCUS',
+      'string-id' => '#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#DORINE,#FLORISE,#ASTERIE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#NEPTUNE,#GLAUCUS,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES',
     ),
   ),
   'corneillet_circe_V05' => 
@@ -77882,6 +78712,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'CIRCÉ-DORINE-------------/----GLAUCUS-CIRCÉ-DORINE-------------/----GLAUCUS-PALÉMON-CIRCÉ-DORINE-------------/----GLAUCUS-PALÉMON-------------/----NEPTUNE-GLAUCUS-------------/----JUPITER-NEPTUNE-GLAUCUS',
+      'string-id' => '#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#NEPTUNE,#GLAUCUS,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#JUPITER,#NEPTUNE,#GLAUCUS,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES',
     ),
   ),
   'corneillet_circe_V06' => 
@@ -77958,6 +78789,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'GLAUCUS-CIRCÉ-DORINE-------------/----GLAUCUS-PALÉMON-CIRCÉ-DORINE-------------/----GLAUCUS-PALÉMON-------------/----NEPTUNE-GLAUCUS-------------/----JUPITER-NEPTUNE-GLAUCUS-------------/----NEPTUNE-GLAUCUS-SILLA',
+      'string-id' => '#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#CIRCE,#DORINE,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#GLAUCUS,#PALEMON,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#NEPTUNE,#GLAUCUS,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#JUPITER,#NEPTUNE,#GLAUCUS,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES;#LACOMEDIE,#LAMUSIQUE,#ARTS,#PLAISIRS,#NEPTUNE,#GLAUCUS,#SILLA,#SATYRE1,#SATYRE2,#SATYRE3,#SATYRE4,#SATYRE5,#MELICERTE,#FAUNE,#DRYADE,#SILVIE,#TIRCIS,#SOLEIL,#SYLVAIN,#DIVINITES',
     ),
   ),
   'corneillet_charmedelavoix_I01' => 
@@ -78025,6 +78857,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'FENISE/FEDERIC-FENISE/LE DUC-FEDERIC-FABRICE/LE DUC-FENISE-FABRICE/LE DUC-CARLOS-FABRICE-CAMILLE/CARLOS-FABRICE-CAMILLE',
+      'string-id' => '#FENISE;#FEDERIC,#FENISE;#LEDUC,#FEDERIC,#FABRICE;#LEDUC,#FENISE,#FABRICE;#LEDUC,#CARLOS,#FABRICE,#CAMILLE;#CARLOS,#FABRICE,#CAMILLE',
     ),
   ),
   'corneillet_charmedelavoix_I02' => 
@@ -78092,6 +78925,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'FEDERIC-FENISE/LE DUC-FEDERIC-FABRICE/LE DUC-FENISE-FABRICE/LE DUC-CARLOS-FABRICE-CAMILLE/CARLOS-FABRICE-CAMILLE/CARLOS-CAMILLE',
+      'string-id' => '#FEDERIC,#FENISE;#LEDUC,#FEDERIC,#FABRICE;#LEDUC,#FENISE,#FABRICE;#LEDUC,#CARLOS,#FABRICE,#CAMILLE;#CARLOS,#FABRICE,#CAMILLE;#CARLOS,#CAMILLE',
     ),
   ),
   'corneillet_charmedelavoix_II01' => 
@@ -78159,6 +78993,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LE DUC-FABRICE/LE DUC-FENISE-FABRICE/FENISE/FENISE-CAMILLE/CARLOS-FENISE-CAMILLE/FEDERIC-CARLOS-FENISE-CAMILLE',
+      'string-id' => '#LEDUC,#FABRICE;#LEDUC,#FENISE,#FABRICE;#FENISE;#FENISE,#CAMILLE;#CARLOS,#FENISE,#CAMILLE;#FEDERIC,#CARLOS,#FENISE,#CAMILLE',
     ),
   ),
   'corneillet_charmedelavoix_II02' => 
@@ -78226,6 +79061,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LE DUC-FENISE-FABRICE/FENISE/FENISE-CAMILLE/CARLOS-FENISE-CAMILLE/FEDERIC-CARLOS-FENISE-CAMILLE/FEDERIC-CARLOS-CAMILLE',
+      'string-id' => '#LEDUC,#FENISE,#FABRICE;#FENISE;#FENISE,#CAMILLE;#CARLOS,#FENISE,#CAMILLE;#FEDERIC,#CARLOS,#FENISE,#CAMILLE;#FEDERIC,#CARLOS,#CAMILLE',
     ),
   ),
   'corneillet_charmedelavoix_III01' => 
@@ -78284,6 +79120,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LA DUCHESSE-FENISE/LE DUC-LA DUCHESSE-FENISE-FABRICE/LE DUC-FENISE-FABRICE/LE DUC-FABRICE/LE DUC-FEDERIC-FABRICE/LE DUC-FABRICE',
+      'string-id' => '#LADUCHESSE,#FENISE;#LEDUC,#LADUCHESSE,#FENISE,#FABRICE;#LEDUC,#FENISE,#FABRICE;#LEDUC,#FABRICE;#LEDUC,#FEDERIC,#FABRICE;#LEDUC,#FABRICE',
     ),
   ),
   'corneillet_charmedelavoix_III02' => 
@@ -78351,6 +79188,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LE DUC-LA DUCHESSE-FENISE-FABRICE/LE DUC-FENISE-FABRICE/LE DUC-FABRICE/LE DUC-FEDERIC-FABRICE/LE DUC-FABRICE/LE DUC-CARLOS-FABRICE-CAMILLE',
+      'string-id' => '#LEDUC,#LADUCHESSE,#FENISE,#FABRICE;#LEDUC,#FENISE,#FABRICE;#LEDUC,#FABRICE;#LEDUC,#FEDERIC,#FABRICE;#LEDUC,#FABRICE;#LEDUC,#CARLOS,#FABRICE,#CAMILLE',
     ),
   ),
   'corneillet_charmedelavoix_IV01' => 
@@ -78409,6 +79247,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'FEDERIC-FENISE/FENISE/FENISE-FABRICE/FABRICE/LE DUC-LA DUCHESSE-FABRICE/LE DUC-LA DUCHESSE',
+      'string-id' => '#FEDERIC,#FENISE;#FENISE;#FENISE,#FABRICE;#FABRICE;#LEDUC,#LADUCHESSE,#FABRICE;#LEDUC,#LADUCHESSE',
     ),
   ),
   'corneillet_charmedelavoix_IV02' => 
@@ -78467,6 +79306,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'FENISE/FENISE-FABRICE/FABRICE/LE DUC-LA DUCHESSE-FABRICE/LE DUC-LA DUCHESSE/LE DUC-LA DUCHESSE-CARLOS-FABRICE-CAMILLE',
+      'string-id' => '#FENISE;#FENISE,#FABRICE;#FABRICE;#LEDUC,#LADUCHESSE,#FABRICE;#LEDUC,#LADUCHESSE;#LEDUC,#LADUCHESSE,#CARLOS,#FABRICE,#CAMILLE',
     ),
   ),
   'corneillet_charmedelavoix_IV03' => 
@@ -78534,6 +79374,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'FENISE-FABRICE/FABRICE/LE DUC-LA DUCHESSE-FABRICE/LE DUC-LA DUCHESSE/LE DUC-LA DUCHESSE-CARLOS-FABRICE-CAMILLE/LA DUCHESSE-CARLOS-CAMILLE',
+      'string-id' => '#FENISE,#FABRICE;#FABRICE;#LEDUC,#LADUCHESSE,#FABRICE;#LEDUC,#LADUCHESSE;#LEDUC,#LADUCHESSE,#CARLOS,#FABRICE,#CAMILLE;#LADUCHESSE,#CARLOS,#CAMILLE',
     ),
   ),
   'corneillet_charmedelavoix_IV04' => 
@@ -78592,6 +79433,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'FABRICE/LE DUC-LA DUCHESSE-FABRICE/LE DUC-LA DUCHESSE/LE DUC-LA DUCHESSE-CARLOS-FABRICE-CAMILLE/LA DUCHESSE-CARLOS-CAMILLE/CARLOS-CAMILLE',
+      'string-id' => '#FABRICE;#LEDUC,#LADUCHESSE,#FABRICE;#LEDUC,#LADUCHESSE;#LEDUC,#LADUCHESSE,#CARLOS,#FABRICE,#CAMILLE;#LADUCHESSE,#CARLOS,#CAMILLE;#CARLOS,#CAMILLE',
     ),
   ),
   'corneillet_charmedelavoix_V01' => 
@@ -78641,6 +79483,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LA DUCHESSE-FENISE/LE DUC-LA DUCHESSE-FENISE-FABRICE/LE DUC-LA DUCHESSE-FENISE-FABRICE/LE DUC-FABRICE/LE DUC-FENISE-FABRICE/LE DUC-FABRICE',
+      'string-id' => '#LADUCHESSE,#FENISE;#LEDUC,#LADUCHESSE,#FENISE,#FABRICE;#LEDUC,#LADUCHESSE,#FENISE,#FABRICE;#LEDUC,#FABRICE;#LEDUC,#FENISE,#FABRICE;#LEDUC,#FABRICE',
     ),
   ),
   'corneillet_charmedelavoix_V02' => 
@@ -78699,6 +79542,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LE DUC-LA DUCHESSE-FENISE-FABRICE/LE DUC-LA DUCHESSE-FENISE-FABRICE/LE DUC-FABRICE/LE DUC-FENISE-FABRICE/LE DUC-FABRICE/LE DUC-FABRICE-CAMILLE',
+      'string-id' => '#LEDUC,#LADUCHESSE,#FENISE,#FABRICE;#LEDUC,#LADUCHESSE,#FENISE,#FABRICE;#LEDUC,#FABRICE;#LEDUC,#FENISE,#FABRICE;#LEDUC,#FABRICE;#LEDUC,#FABRICE,#CAMILLE',
     ),
   ),
   'corneillet_charmedelavoix_V03' => 
@@ -78766,6 +79610,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LE DUC-LA DUCHESSE-FENISE-FABRICE/LE DUC-FABRICE/LE DUC-FENISE-FABRICE/LE DUC-FABRICE/LE DUC-FABRICE-CAMILLE/LE DUC-LA DUCHESSE-CARLOS-FABRICE',
+      'string-id' => '#LEDUC,#LADUCHESSE,#FENISE,#FABRICE;#LEDUC,#FABRICE;#LEDUC,#FENISE,#FABRICE;#LEDUC,#FABRICE;#LEDUC,#FABRICE,#CAMILLE;#LEDUC,#LADUCHESSE,#CARLOS,#FABRICE',
     ),
   ),
   'corneillet_charmedelavoix_V04' => 
@@ -78833,6 +79678,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LE DUC-FABRICE/LE DUC-FENISE-FABRICE/LE DUC-FABRICE/LE DUC-FABRICE-CAMILLE/LE DUC-LA DUCHESSE-CARLOS-FABRICE/LE DUC-LA DUCHESSE-FEDERIC-CARLOS-FENISE-FABRICE-CAMILLE',
+      'string-id' => '#LEDUC,#FABRICE;#LEDUC,#FENISE,#FABRICE;#LEDUC,#FABRICE;#LEDUC,#FABRICE,#CAMILLE;#LEDUC,#LADUCHESSE,#CARLOS,#FABRICE;#LEDUC,#LADUCHESSE,#FEDERIC,#CARLOS,#FENISE,#FABRICE,#CAMILLE',
     ),
   ),
   'corneillet_camma_IV01' => 
@@ -78900,6 +79746,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'CAMMA/CAMMA-SINORIX/CAMMA-SINORIX-SOSTRATE-Gardes/CAMMA-SOSTRATE/CAMMA-HÉSIONE-SOSTRATE/HÉSIONE-SOSTRATE',
+      'string-id' => '#CAMMA;#CAMMA,#SINORIX;#CAMMA,#SINORIX,#SOSTRATE,#Gardes;#CAMMA,#SOSTRATE;#CAMMA,#HESIONE,#SOSTRATE;#HESIONE,#SOSTRATE',
     ),
   ),
   'corneillet_camma_V01' => 
@@ -78949,6 +79796,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'SOSTRATE/SINORIX-SOSTRATE/CAMMA-SINORIX-SOSTRATE/CAMMA-SINORIX-SOSTRATE/CAMMA-SOSTRATE/CAMMA-SOSTRATE',
+      'string-id' => '#SOSTRATE;#SINORIX,#SOSTRATE;#CAMMA,#SINORIX,#SOSTRATE;#CAMMA,#SINORIX,#SOSTRATE;#CAMMA,#SOSTRATE;#CAMMA,#SOSTRATE',
     ),
   ),
   'corneillet_bergerextravagant_II01' => 
@@ -79025,6 +79873,7 @@
       'genreId' => 'Pastorale',
       'authorId' => 'CorneilleThomas',
       'string' => 'MONTENOR-LUCIDE-/ANGÉLIQUE-MONTENOR-ANSELME-LUCIDE-CHARITE-/LISIS-LUCIDE-/LISIS-ANGÉLIQUE-MONTENOR-ANSELME-LUCIDE-CHARITE-/LISIS-ANGÉLIQUE-MONTENOR-ANSELME-CLARIMOND-LUCIDE-CHARITE-/LISIS',
+      'string-id' => '#MONTENOR,#LUCIDE,#SATYRE;#ANGELIQUE,#MONTENOR,#ANSELME,#LUCIDE,#CHARITE,#SATYRE;#LISIS,#LUCIDE,#SATYRE;#LISIS,#ANGELIQUE,#MONTENOR,#ANSELME,#LUCIDE,#CHARITE,#SATYRE;#LISIS,#ANGELIQUE,#MONTENOR,#ANSELME,#CLARIMOND,#LUCIDE,#CHARITE,#SATYRE;#LISIS,#SATYRE',
     ),
   ),
   'corneillet_bergerextravagant_II02' => 
@@ -79101,6 +79950,7 @@
       'genreId' => 'Pastorale',
       'authorId' => 'CorneilleThomas',
       'string' => 'ANGÉLIQUE-MONTENOR-ANSELME-LUCIDE-CHARITE-/LISIS-LUCIDE-/LISIS-ANGÉLIQUE-MONTENOR-ANSELME-LUCIDE-CHARITE-/LISIS-ANGÉLIQUE-MONTENOR-ANSELME-CLARIMOND-LUCIDE-CHARITE-/LISIS-/LISIS-HIRCAN',
+      'string-id' => '#ANGELIQUE,#MONTENOR,#ANSELME,#LUCIDE,#CHARITE,#SATYRE;#LISIS,#LUCIDE,#SATYRE;#LISIS,#ANGELIQUE,#MONTENOR,#ANSELME,#LUCIDE,#CHARITE,#SATYRE;#LISIS,#ANGELIQUE,#MONTENOR,#ANSELME,#CLARIMOND,#LUCIDE,#CHARITE,#SATYRE;#LISIS,#SATYRE;#LISIS,#HIRCAN,#SATYRE',
     ),
   ),
   'corneillet_bergerextravagant_III01' => 
@@ -79177,6 +80027,7 @@
       'genreId' => 'Pastorale',
       'authorId' => 'CorneilleThomas',
       'string' => 'ANGÉLIQUE-HIRCAN-/ANGÉLIQUE-HIRCAN-CLARIMOND-CHARITE-/ANGÉLIQUE-HIRCAN-MONTENOR-CLARIMOND-CHARITE-/LISIS-ANGÉLIQUE-MONTENOR-CLARIMOND-LUCIDE-CHARITE-/LISIS-ANGÉLIQUE-MONTENOR-ANSELME-CLARIMOND-LUCIDE-CHARITE-/LISIS-ANGÉLIQUE-MONTENOR-ANSELME-CLARIMOND-LUCIDE-CHARITE',
+      'string-id' => '#ANGELIQUE,#HIRCAN,#SATYRE;#ANGELIQUE,#HIRCAN,#CLARIMOND,#CHARITE,#SATYRE;#ANGELIQUE,#HIRCAN,#MONTENOR,#CLARIMOND,#CHARITE,#SATYRE;#LISIS,#ANGELIQUE,#MONTENOR,#CLARIMOND,#LUCIDE,#CHARITE,#SATYRE;#LISIS,#ANGELIQUE,#MONTENOR,#ANSELME,#CLARIMOND,#LUCIDE,#CHARITE,#SATYRE;#LISIS,#ANGELIQUE,#MONTENOR,#ANSELME,#CLARIMOND,#LUCIDE,#CHARITE,#SATYRE',
     ),
   ),
   'corneillet_bergerextravagant_III02' => 
@@ -79262,6 +80113,7 @@
       'genreId' => 'Pastorale',
       'authorId' => 'CorneilleThomas',
       'string' => 'ANGÉLIQUE-HIRCAN-CLARIMOND-CHARITE-/ANGÉLIQUE-HIRCAN-MONTENOR-CLARIMOND-CHARITE-/LISIS-ANGÉLIQUE-MONTENOR-CLARIMOND-LUCIDE-CHARITE-/LISIS-ANGÉLIQUE-MONTENOR-ANSELME-CLARIMOND-LUCIDE-CHARITE-/LISIS-ANGÉLIQUE-MONTENOR-ANSELME-CLARIMOND-LUCIDE-CHARITE-/LISIS-HIRCAN',
+      'string-id' => '#ANGELIQUE,#HIRCAN,#CLARIMOND,#CHARITE,#SATYRE;#ANGELIQUE,#HIRCAN,#MONTENOR,#CLARIMOND,#CHARITE,#SATYRE;#LISIS,#ANGELIQUE,#MONTENOR,#CLARIMOND,#LUCIDE,#CHARITE,#SATYRE;#LISIS,#ANGELIQUE,#MONTENOR,#ANSELME,#CLARIMOND,#LUCIDE,#CHARITE,#SATYRE;#LISIS,#ANGELIQUE,#MONTENOR,#ANSELME,#CLARIMOND,#LUCIDE,#CHARITE,#SATYRE;#LISIS,#HIRCAN,#SATYRE',
     ),
   ),
   'corneillet_bergerextravagant_IV01' => 
@@ -79356,6 +80208,7 @@
       'genreId' => 'Pastorale',
       'authorId' => 'CorneilleThomas',
       'string' => 'HIRCAN-ANSELME-/ANSELME-LUCIDE-CHARITE-/LUCIDE-CHARITE-/CLARIMOND-CHARITE-/LISIS-CHARITE-/LISIS-MONTENOR',
+      'string-id' => '#HIRCAN,#ANSELME,#SATYRE;#ANSELME,#LUCIDE,#CHARITE,#SATYRE;#LUCIDE,#CHARITE,#SATYRE;#CLARIMOND,#CHARITE,#SATYRE;#LISIS,#CHARITE,#SATYRE;#LISIS,#MONTENOR,#SATYRE',
     ),
   ),
   'corneillet_bergerextravagant_IV02' => 
@@ -79450,6 +80303,7 @@
       'genreId' => 'Pastorale',
       'authorId' => 'CorneilleThomas',
       'string' => 'ANSELME-LUCIDE-CHARITE-/LUCIDE-CHARITE-/CLARIMOND-CHARITE-/LISIS-CHARITE-/LISIS-MONTENOR-/LISIS-MONTENOR-CLARIMOND-ADRIAN',
+      'string-id' => '#ANSELME,#LUCIDE,#CHARITE,#SATYRE;#LUCIDE,#CHARITE,#SATYRE;#CLARIMOND,#CHARITE,#SATYRE;#LISIS,#CHARITE,#SATYRE;#LISIS,#MONTENOR,#SATYRE;#LISIS,#MONTENOR,#CLARIMOND,#ADRIAN,#SATYRE',
     ),
   ),
   'corneillet_bergerextravagant_V01' => 
@@ -79535,6 +80389,7 @@
       'genreId' => 'Pastorale',
       'authorId' => 'CorneilleThomas',
       'string' => 'ANGÉLIQUE-ANSELME-/ANGÉLIQUE-ANSELME-CLARIMOND-ADRIAN-/ANGÉLIQUE-ANSELME-CLARIMOND-/ANGÉLIQUE-ANSELME-CLARIMOND-LUCIDE-CHARITE-/LISIS-SINOPE-CLORISE-/LISIS-MONTENOR-SINOPE-CLORISE',
+      'string-id' => '#ANGELIQUE,#ANSELME,#SATYRE;#ANGELIQUE,#ANSELME,#CLARIMOND,#ADRIAN,#SATYRE;#ANGELIQUE,#ANSELME,#CLARIMOND,#SATYRE;#ANGELIQUE,#ANSELME,#CLARIMOND,#LUCIDE,#CHARITE,#SATYRE;#LISIS,#SINOPE,#CLORISE,#SATYRE;#LISIS,#MONTENOR,#SINOPE,#CLORISE,#SATYRE',
     ),
   ),
   'corneillet_bergerextravagant_V02' => 
@@ -79611,6 +80466,7 @@
       'genreId' => 'Pastorale',
       'authorId' => 'CorneilleThomas',
       'string' => 'ANGÉLIQUE-ANSELME-CLARIMOND-ADRIAN-/ANGÉLIQUE-ANSELME-CLARIMOND-/ANGÉLIQUE-ANSELME-CLARIMOND-LUCIDE-CHARITE-/LISIS-SINOPE-CLORISE-/LISIS-MONTENOR-SINOPE-CLORISE-/LISIS-ANGÉLIQUE-MONTENOR-ANSELME-CLARIMOND-LUCIDE-CHARITE-SINOPE-CLORISE',
+      'string-id' => '#ANGELIQUE,#ANSELME,#CLARIMOND,#ADRIAN,#SATYRE;#ANGELIQUE,#ANSELME,#CLARIMOND,#SATYRE;#ANGELIQUE,#ANSELME,#CLARIMOND,#LUCIDE,#CHARITE,#SATYRE;#LISIS,#SINOPE,#CLORISE,#SATYRE;#LISIS,#MONTENOR,#SINOPE,#CLORISE,#SATYRE;#LISIS,#ANGELIQUE,#MONTENOR,#ANSELME,#CLARIMOND,#LUCIDE,#CHARITE,#SINOPE,#CLORISE,#SATYRE',
     ),
   ),
   'corneillet_berenice_II01' => 
@@ -79678,6 +80534,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'BÉRÉNICE-ANAXARIS/ANAXARIS/PHILOCLÉE-ANAXARIS/PHILOCLÉE-ANAXARIS/LÉARQUE-PHILOCLÉE-ANAXARIS/LÉARQUE-PHILOXÈNE-PHILOCLÉE-ANAXARIS',
+      'string-id' => '#BERENICE,#ANAXARIS;#ANAXARIS;#PHILOCLEE,#ANAXARIS;#PHILOCLEE,#ANAXARIS;#LEROI,#PHILOCLEE,#ANAXARIS;#LEROI,#PHILOXENE,#PHILOCLEE,#ANAXARIS',
     ),
   ),
   'corneillet_berenice_II02' => 
@@ -79736,6 +80593,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ANAXARIS/PHILOCLÉE-ANAXARIS/PHILOCLÉE-ANAXARIS/LÉARQUE-PHILOCLÉE-ANAXARIS/LÉARQUE-PHILOXÈNE-PHILOCLÉE-ANAXARIS/LÉARQUE-PHILOCLÉE-ANAXARIS',
+      'string-id' => '#ANAXARIS;#PHILOCLEE,#ANAXARIS;#PHILOCLEE,#ANAXARIS;#LEROI,#PHILOCLEE,#ANAXARIS;#LEROI,#PHILOXENE,#PHILOCLEE,#ANAXARIS;#LEROI,#PHILOCLEE,#ANAXARIS',
     ),
   ),
   'corneillet_berenice_IV01' => 
@@ -79803,6 +80661,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'LÉARQUE-BÉRÉNICE-ARAXE/BÉRÉNICE/PHILOXÈNE-BÉRÉNICE/PHILOXÈNE-ANAXARIS/PHILOCLÉE-ANAXARIS/ANAXARIS',
+      'string-id' => '#LEROI,#BERENICE,#ARAXE;#BERENICE;#PHILOXENE,#BERENICE;#PHILOXENE,#ANAXARIS;#PHILOCLEE,#ANAXARIS;#ANAXARIS',
     ),
   ),
   'corneillet_berenice_V01' => 
@@ -79861,6 +80720,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'BÉRÉNICE/BÉRÉNICE-ANAXARIS/ANAXARIS/PHILOCLÉE-ANAXARIS/PHILOCLÉE/LÉARQUE-PHILOCLÉE',
+      'string-id' => '#BERENICE;#BERENICE,#ANAXARIS;#ANAXARIS;#PHILOCLEE,#ANAXARIS;#PHILOCLEE;#LEROI,#PHILOCLEE',
     ),
   ),
   'corneillet_berenice_V02' => 
@@ -79919,6 +80779,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'BÉRÉNICE-ANAXARIS/ANAXARIS/PHILOCLÉE-ANAXARIS/PHILOCLÉE/LÉARQUE-PHILOCLÉE/LÉARQUE-PHILOCLÉE',
+      'string-id' => '#BERENICE,#ANAXARIS;#ANAXARIS;#PHILOCLEE,#ANAXARIS;#PHILOCLEE;#LEROI,#PHILOCLEE;#LEROI,#PHILOCLEE',
     ),
   ),
   'corneillet_berenice_V03' => 
@@ -79977,6 +80838,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ANAXARIS/PHILOCLÉE-ANAXARIS/PHILOCLÉE/LÉARQUE-PHILOCLÉE/LÉARQUE-PHILOCLÉE/LÉARQUE-PHILOCLÉE-ARAXE',
+      'string-id' => '#ANAXARIS;#PHILOCLEE,#ANAXARIS;#PHILOCLEE;#LEROI,#PHILOCLEE;#LEROI,#PHILOCLEE;#LEROI,#PHILOCLEE,#ARAXE',
     ),
   ),
   'corneillet_berenice_V04' => 
@@ -80044,6 +80906,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'PHILOCLÉE-ANAXARIS/PHILOCLÉE/LÉARQUE-PHILOCLÉE/LÉARQUE-PHILOCLÉE/LÉARQUE-PHILOCLÉE-ARAXE/LÉARQUE-PHILOXÈNE-BÉRÉNICE-PHILOCLÉE-ARAXE',
+      'string-id' => '#PHILOCLEE,#ANAXARIS;#PHILOCLEE;#LEROI,#PHILOCLEE;#LEROI,#PHILOCLEE;#LEROI,#PHILOCLEE,#ARAXE;#LEROI,#PHILOXENE,#BERENICE,#PHILOCLEE,#ARAXE',
     ),
   ),
   'corneillet_berenice_V05' => 
@@ -80102,6 +80965,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'PHILOCLÉE/LÉARQUE-PHILOCLÉE/LÉARQUE-PHILOCLÉE/LÉARQUE-PHILOCLÉE-ARAXE/LÉARQUE-PHILOXÈNE-BÉRÉNICE-PHILOCLÉE-ARAXE/LÉARQUE-PHILOXÈNE-BÉRÉNICE-PHILOCLÉE-ARAXE',
+      'string-id' => '#PHILOCLEE;#LEROI,#PHILOCLEE;#LEROI,#PHILOCLEE;#LEROI,#PHILOCLEE,#ARAXE;#LEROI,#PHILOXENE,#BERENICE,#PHILOCLEE,#ARAXE;#LEROI,#PHILOXENE,#BERENICE,#PHILOCLEE,#ARAXE',
     ),
   ),
   'corneillet_ariane_II01' => 
@@ -80160,6 +81024,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ARIANE/OENARUS-ARIANE/OENARUS-THÉSÉE-ARIANE/THÉSÉE-ARIANE/PIRITHOÜS-ARIANE/ARIANE',
+      'string-id' => '#ARIANE;#OENARUS,#ARIANE;#OENARUS,#THESEE,#ARIANE;#THESEE,#ARIANE;#PIRITHOUS,#ARIANE;#ARIANE',
     ),
   ),
   'corneillet_ariane_II02' => 
@@ -80227,6 +81092,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'OENARUS-ARIANE/OENARUS-THÉSÉE-ARIANE/THÉSÉE-ARIANE/PIRITHOÜS-ARIANE/ARIANE/ARIANE-PHÈDRE',
+      'string-id' => '#OENARUS,#ARIANE;#OENARUS,#THESEE,#ARIANE;#THESEE,#ARIANE;#PIRITHOUS,#ARIANE;#ARIANE;#ARIANE,#PHEDRE',
     ),
   ),
   'corneillet_ariane_V01' => 
@@ -80285,6 +81151,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ARIANE/PIRITHOÜS-ARIANE/ARIANE/THÉSÉE-PIRITHOÜS-ARIANE/ARIANE/OENARUS-PIRITHOÜS-ARIANE',
+      'string-id' => '#ARIANE;#PIRITHOUS,#ARIANE;#ARIANE;#THESEE,#PIRITHOUS,#ARIANE;#ARIANE;#OENARUS,#PIRITHOUS,#ARIANE',
     ),
   ),
   'corneillet_amouralamode_II01' => 
@@ -80352,6 +81219,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'FLORAME-LUCIE/FLORAME/DOROTÉE/ARGANTE-ORONTE/ORONTE/ORONTE',
+      'string-id' => '#FLORAME,#LUCIE;#FLORAME;#DOROTEE;#ARGANTE,#ORONTE;#ORONTE;#ORONTE',
     ),
   ),
   'corneillet_amouralamode_II02' => 
@@ -80410,6 +81278,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'FLORAME/DOROTÉE/ARGANTE-ORONTE/ORONTE/ORONTE/DOROTÉE',
+      'string-id' => '#FLORAME;#DOROTEE;#ARGANTE,#ORONTE;#ORONTE;#ORONTE;#DOROTEE',
     ),
   ),
   'corneillet_amouralamode_II03' => 
@@ -80459,6 +81328,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DOROTÉE/ARGANTE-ORONTE/ORONTE/ORONTE/DOROTÉE/ORONTE-DOROTÉE',
+      'string-id' => '#DOROTEE;#ARGANTE,#ORONTE;#ORONTE;#ORONTE;#DOROTEE;#ORONTE,#DOROTEE',
     ),
   ),
   'corneillet_amouralamode_II04' => 
@@ -80517,6 +81387,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ARGANTE-ORONTE/ORONTE/ORONTE/DOROTÉE/ORONTE-DOROTÉE/ORONTE-ÉRASTE',
+      'string-id' => '#ARGANTE,#ORONTE;#ORONTE;#ORONTE;#DOROTEE;#ORONTE,#DOROTEE;#ORONTE,#ERASTE',
     ),
   ),
   'corneillet_amouralamode_II05' => 
@@ -80566,6 +81437,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ORONTE/ORONTE/DOROTÉE/ORONTE-DOROTÉE/ORONTE-ÉRASTE/ORONTE',
+      'string-id' => '#ORONTE;#ORONTE;#DOROTEE;#ORONTE,#DOROTEE;#ORONTE,#ERASTE;#ORONTE',
     ),
   ),
   'corneillet_amouralamode_III01' => 
@@ -80633,6 +81505,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ORONTE/ORONTE-LUCIE/ORONTE-FLORAME/DOROTÉE/ÉRASTE-DOROTÉE/ORONTE-DOROTÉE',
+      'string-id' => '#ORONTE;#ORONTE,#LUCIE;#ORONTE,#FLORAME;#DOROTEE;#ERASTE,#DOROTEE;#ORONTE,#DOROTEE',
     ),
   ),
   'corneillet_amouralamode_III02' => 
@@ -80700,6 +81573,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ORONTE-LUCIE/ORONTE-FLORAME/DOROTÉE/ÉRASTE-DOROTÉE/ORONTE-DOROTÉE/ORONTE-DOROTÉE',
+      'string-id' => '#ORONTE,#LUCIE;#ORONTE,#FLORAME;#DOROTEE;#ERASTE,#DOROTEE;#ORONTE,#DOROTEE;#ORONTE,#DOROTEE',
     ),
   ),
   'corneillet_amouralamode_III03' => 
@@ -80767,6 +81641,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ORONTE-FLORAME/DOROTÉE/ÉRASTE-DOROTÉE/ORONTE-DOROTÉE/ORONTE-DOROTÉE/ARGANTE-ORONTE-DOROTÉE',
+      'string-id' => '#ORONTE,#FLORAME;#DOROTEE;#ERASTE,#DOROTEE;#ORONTE,#DOROTEE;#ORONTE,#DOROTEE;#ARGANTE,#ORONTE,#DOROTEE',
     ),
   ),
   'corneillet_amouralamode_III04' => 
@@ -80825,6 +81700,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DOROTÉE/ÉRASTE-DOROTÉE/ORONTE-DOROTÉE/ORONTE-DOROTÉE/ARGANTE-ORONTE-DOROTÉE/ARGANTE-ORONTE',
+      'string-id' => '#DOROTEE;#ERASTE,#DOROTEE;#ORONTE,#DOROTEE;#ORONTE,#DOROTEE;#ARGANTE,#ORONTE,#DOROTEE;#ARGANTE,#ORONTE',
     ),
   ),
   'corneillet_amouralamode_III05' => 
@@ -80883,6 +81759,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ÉRASTE-DOROTÉE/ORONTE-DOROTÉE/ORONTE-DOROTÉE/ARGANTE-ORONTE-DOROTÉE/ARGANTE-ORONTE/ARGANTE-ÉRASTE',
+      'string-id' => '#ERASTE,#DOROTEE;#ORONTE,#DOROTEE;#ORONTE,#DOROTEE;#ARGANTE,#ORONTE,#DOROTEE;#ARGANTE,#ORONTE;#ARGANTE,#ERASTE',
     ),
   ),
   'corneillet_amouralamode_IV01' => 
@@ -80941,6 +81818,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ORONTE/ORONTE-FLORAME/ORONTE/ORONTE/ORONTE-LUCIE/ORONTE-ÉRASTE-LUCIE',
+      'string-id' => '#ORONTE;#ORONTE,#FLORAME;#ORONTE;#ORONTE;#ORONTE,#LUCIE;#ORONTE,#ERASTE,#LUCIE',
     ),
   ),
   'corneillet_amouralamode_IV02' => 
@@ -80999,6 +81877,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ORONTE-FLORAME/ORONTE/ORONTE/ORONTE-LUCIE/ORONTE-ÉRASTE-LUCIE/',
+      'string-id' => '#ORONTE,#FLORAME;#ORONTE;#ORONTE;#ORONTE,#LUCIE;#ORONTE,#ERASTE,#LUCIE;',
     ),
   ),
   'corneillet_amouralamode_V01' => 
@@ -81057,6 +81936,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ARGANTE-DOROTÉE/DOROTÉE/DOROTÉE-LUCIE/ÉRASTE-DOROTÉE/DOROTÉE/DOROTÉE',
+      'string-id' => '#ARGANTE,#DOROTEE;#DOROTEE;#DOROTEE,#LUCIE;#ERASTE,#DOROTEE;#DOROTEE;#DOROTEE',
     ),
   ),
   'corneillet_amouralamode_V02' => 
@@ -81115,6 +81995,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DOROTÉE/DOROTÉE-LUCIE/ÉRASTE-DOROTÉE/DOROTÉE/DOROTÉE/ORONTE-DOROTÉE-LUCIE',
+      'string-id' => '#DOROTEE;#DOROTEE,#LUCIE;#ERASTE,#DOROTEE;#DOROTEE;#DOROTEE;#ORONTE,#DOROTEE,#LUCIE',
     ),
   ),
   'corneillet_amouralamode_V03' => 
@@ -81173,6 +82054,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DOROTÉE-LUCIE/ÉRASTE-DOROTÉE/DOROTÉE/DOROTÉE/ORONTE-DOROTÉE-LUCIE/ORONTE-DOROTÉE-LUCIE',
+      'string-id' => '#DOROTEE,#LUCIE;#ERASTE,#DOROTEE;#DOROTEE;#DOROTEE;#ORONTE,#DOROTEE,#LUCIE;#ORONTE,#DOROTEE,#LUCIE',
     ),
   ),
   'corneillet_amouralamode_V04' => 
@@ -81231,6 +82113,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'ÉRASTE-DOROTÉE/DOROTÉE/DOROTÉE/ORONTE-DOROTÉE-LUCIE/ORONTE-DOROTÉE-LUCIE/ARGANTE-ORONTE-FLORAME-ÉRASTE-DOROTÉE-LUCIE',
+      'string-id' => '#ERASTE,#DOROTEE;#DOROTEE;#DOROTEE;#ORONTE,#DOROTEE,#LUCIE;#ORONTE,#DOROTEE,#LUCIE;#ARGANTE,#ORONTE,#FLORAME,#ERASTE,#DOROTEE,#LUCIE',
     ),
   ),
   'corneillet_amouralamode_V05' => 
@@ -81298,6 +82181,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneilleThomas',
       'string' => 'DOROTÉE/DOROTÉE/ORONTE-DOROTÉE-LUCIE/ORONTE-DOROTÉE-LUCIE/ARGANTE-ORONTE-FLORAME-ÉRASTE-DOROTÉE-LUCIE/ARGANTE-ORONTE-DOROTÉE',
+      'string-id' => '#DOROTEE;#DOROTEE;#ORONTE,#DOROTEE,#LUCIE;#ORONTE,#DOROTEE,#LUCIE;#ARGANTE,#ORONTE,#FLORAME,#ERASTE,#DOROTEE,#LUCIE;#ARGANTE,#ORONTE,#DOROTEE',
     ),
   ),
   'corneillep_veuve34_I01' => 
@@ -81383,6 +82267,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'PHILISTE-ALCIDON/ALCIDON-LA NOURRICE de Clarice/CHRYSANTE-DORIS/CHRYSANTE-GÉRON/PHILISTE-CLARICE/CLARICE',
+      'string-id' => '#PHILISTE,#ALCIDON;#ALCIDON,#NOURRICE;#CHRYSANTE,#DORIS;#CHRYSANTE,#GERON;#PHILISTE,#CLARICE;#CLARICE',
     ),
   ),
   'corneillep_veuve34_II01' => 
@@ -81450,6 +82335,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'PHILISTE/CLARICE-LA NOURRICE de Clarice/PHILISTE-LA NOURRICE de Clarice/PHILISTE-CLARICE-LA NOURRICE de Clarice/ALCIDON-DORIS/ALCIDON-LA NOURRICE de Clarice',
+      'string-id' => '#PHILISTE;#CLARICE,#NOURRICE;#PHILISTE,#NOURRICE;#PHILISTE,#CLARICE,#NOURRICE;#ALCIDON,#DORIS;#ALCIDON,#NOURRICE',
     ),
   ),
   'corneillep_veuve34_III01' => 
@@ -81535,6 +82421,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ALCIDON-CÉLIDAN/ALCIDON/PHILISTE-ALCIDON/CHRYSANTE-DORIS/CHRYSANTE-GÉRON/PHILISTE-CHRYSANTE-GÉRON-LYCAS',
+      'string-id' => '#ALCIDON,#CELIDAN;#ALCIDON;#PHILISTE,#ALCIDON;#CHRYSANTE,#DORIS;#CHRYSANTE,#GERON;#PHILISTE,#CHRYSANTE,#GERON,#LYCAS',
     ),
   ),
   'corneillep_veuve34_III02' => 
@@ -81611,6 +82498,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ALCIDON/PHILISTE-ALCIDON/CHRYSANTE-DORIS/CHRYSANTE-GÉRON/PHILISTE-CHRYSANTE-GÉRON-LYCAS/PHILISTE-CHRYSANTE-LYCAS',
+      'string-id' => '#ALCIDON;#PHILISTE,#ALCIDON;#CHRYSANTE,#DORIS;#CHRYSANTE,#GERON;#PHILISTE,#CHRYSANTE,#GERON,#LYCAS;#PHILISTE,#CHRYSANTE,#LYCAS',
     ),
   ),
   'corneillep_veuve34_III03' => 
@@ -81696,6 +82584,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'PHILISTE-ALCIDON/CHRYSANTE-DORIS/CHRYSANTE-GÉRON/PHILISTE-CHRYSANTE-GÉRON-LYCAS/PHILISTE-CHRYSANTE-LYCAS/CLARICE',
+      'string-id' => '#PHILISTE,#ALCIDON;#CHRYSANTE,#DORIS;#CHRYSANTE,#GERON;#PHILISTE,#CHRYSANTE,#GERON,#LYCAS;#PHILISTE,#CHRYSANTE,#LYCAS;#CLARICE',
     ),
   ),
   'corneillep_veuve34_III04' => 
@@ -81772,6 +82661,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CHRYSANTE-DORIS/CHRYSANTE-GÉRON/PHILISTE-CHRYSANTE-GÉRON-LYCAS/PHILISTE-CHRYSANTE-LYCAS/CLARICE/ALCIDON-CÉLIDAN-CLARICE-LA NOURRICE de Clarice',
+      'string-id' => '#CHRYSANTE,#DORIS;#CHRYSANTE,#GERON;#PHILISTE,#CHRYSANTE,#GERON,#LYCAS;#PHILISTE,#CHRYSANTE,#LYCAS;#CLARICE;#ALCIDON,#CELIDAN,#CLARICE,#NOURRICE',
     ),
   ),
   'corneillep_veuve34_III05' => 
@@ -81857,6 +82747,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CHRYSANTE-GÉRON/PHILISTE-CHRYSANTE-GÉRON-LYCAS/PHILISTE-CHRYSANTE-LYCAS/CLARICE/ALCIDON-CÉLIDAN-CLARICE-LA NOURRICE de Clarice/LA NOURRICE de Clarice-POLYMAS-DORASTE-LISTOR',
+      'string-id' => '#CHRYSANTE,#GERON;#PHILISTE,#CHRYSANTE,#GERON,#LYCAS;#PHILISTE,#CHRYSANTE,#LYCAS;#CLARICE;#ALCIDON,#CELIDAN,#CLARICE,#NOURRICE;#NOURRICE,#POLYMAS,#DORASTE,#LISTOR',
     ),
   ),
   'corneillep_veuve34_IV01' => 
@@ -81933,6 +82824,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'PHILISTE-LYCAS/PHILISTE-POLYMAS-DORASTE-LISTOR/PHILISTE-ALCIDON-CÉLIDAN/ALCIDON-CÉLIDAN/CÉLIDAN/CÉLIDAN-LA NOURRICE de Clarice',
+      'string-id' => '#PHILISTE,#LYCAS;#PHILISTE,#POLYMAS,#DORASTE,#LISTOR;#PHILISTE,#ALCIDON,#CELIDAN;#ALCIDON,#CELIDAN;#CELIDAN;#CELIDAN,#NOURRICE',
     ),
   ),
   'corneillep_veuve34_IV02' => 
@@ -82000,6 +82892,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'PHILISTE-POLYMAS-DORASTE-LISTOR/PHILISTE-ALCIDON-CÉLIDAN/ALCIDON-CÉLIDAN/CÉLIDAN/CÉLIDAN-LA NOURRICE de Clarice/CÉLIDAN',
+      'string-id' => '#PHILISTE,#POLYMAS,#DORASTE,#LISTOR;#PHILISTE,#ALCIDON,#CELIDAN;#ALCIDON,#CELIDAN;#CELIDAN;#CELIDAN,#NOURRICE;#CELIDAN',
     ),
   ),
   'corneillep_veuve34_IV03' => 
@@ -82067,6 +82960,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'PHILISTE-ALCIDON-CÉLIDAN/ALCIDON-CÉLIDAN/CÉLIDAN/CÉLIDAN-LA NOURRICE de Clarice/CÉLIDAN/ALCIDON-DORIS',
+      'string-id' => '#PHILISTE,#ALCIDON,#CELIDAN;#ALCIDON,#CELIDAN;#CELIDAN;#CELIDAN,#NOURRICE;#CELIDAN;#ALCIDON,#DORIS',
     ),
   ),
   'corneillep_veuve34_IV04' => 
@@ -82125,6 +83019,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ALCIDON-CÉLIDAN/CÉLIDAN/CÉLIDAN-LA NOURRICE de Clarice/CÉLIDAN/ALCIDON-DORIS/DORIS',
+      'string-id' => '#ALCIDON,#CELIDAN;#CELIDAN;#CELIDAN,#NOURRICE;#CELIDAN;#ALCIDON,#DORIS;#DORIS',
     ),
   ),
   'corneillep_veuve34_V01' => 
@@ -82192,6 +83087,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CÉLIDAN-CLARICE/CÉLIDAN/ALCIDON-CÉLIDAN/PHILISTE-CHRYSANTE-DORIS/PHILISTE-CÉLIDAN-CHRYSANTE-DORIS/CÉLIDAN-CHRYSANTE-DORIS',
+      'string-id' => '#CELIDAN,#CLARICE;#CELIDAN;#ALCIDON,#CELIDAN;#PHILISTE,#CHRYSANTE,#DORIS;#PHILISTE,#CELIDAN,#CHRYSANTE,#DORIS;#CELIDAN,#CHRYSANTE,#DORIS',
     ),
   ),
   'corneillep_veuve34_V02' => 
@@ -82259,6 +83155,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CÉLIDAN/ALCIDON-CÉLIDAN/PHILISTE-CHRYSANTE-DORIS/PHILISTE-CÉLIDAN-CHRYSANTE-DORIS/CÉLIDAN-CHRYSANTE-DORIS/PHILISTE-CLARICE',
+      'string-id' => '#CELIDAN;#ALCIDON,#CELIDAN;#PHILISTE,#CHRYSANTE,#DORIS;#PHILISTE,#CELIDAN,#CHRYSANTE,#DORIS;#CELIDAN,#CHRYSANTE,#DORIS;#PHILISTE,#CLARICE',
     ),
   ),
   'corneillep_veuve34_V03' => 
@@ -82326,6 +83223,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ALCIDON-CÉLIDAN/PHILISTE-CHRYSANTE-DORIS/PHILISTE-CÉLIDAN-CHRYSANTE-DORIS/CÉLIDAN-CHRYSANTE-DORIS/PHILISTE-CLARICE/PHILISTE-CÉLIDAN-CLARICE-CHRYSANTE-DORIS',
+      'string-id' => '#ALCIDON,#CELIDAN;#PHILISTE,#CHRYSANTE,#DORIS;#PHILISTE,#CELIDAN,#CHRYSANTE,#DORIS;#CELIDAN,#CHRYSANTE,#DORIS;#PHILISTE,#CLARICE;#PHILISTE,#CELIDAN,#CLARICE,#CHRYSANTE,#DORIS',
     ),
   ),
   'corneillep_veuve34_V04' => 
@@ -82393,6 +83291,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'PHILISTE-CHRYSANTE-DORIS/PHILISTE-CÉLIDAN-CHRYSANTE-DORIS/CÉLIDAN-CHRYSANTE-DORIS/PHILISTE-CLARICE/PHILISTE-CÉLIDAN-CLARICE-CHRYSANTE-DORIS/PHILISTE-ALCIDON-CÉLIDAN-CLARICE-CHRYSANTE-DORIS',
+      'string-id' => '#PHILISTE,#CHRYSANTE,#DORIS;#PHILISTE,#CELIDAN,#CHRYSANTE,#DORIS;#CELIDAN,#CHRYSANTE,#DORIS;#PHILISTE,#CLARICE;#PHILISTE,#CELIDAN,#CLARICE,#CHRYSANTE,#DORIS;#PHILISTE,#ALCIDON,#CELIDAN,#CLARICE,#CHRYSANTE,#DORIS',
     ),
   ),
   'corneillep_toison_I01' => 
@@ -82487,6 +83386,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CHALCIOPE-MÉDÉE-----------/AAETE-ABSYRTE-CHALCIOPE-MÉDÉE-----------/AAETE-ABSYRTE-MÉDÉE-JASON-PÉLÉE-IPHITE-ORPHÉE-----------/MÉDÉE-JASON-----------/JASON-PÉLÉE-IPHITE-ORPHÉE-----------/JASON-PÉLÉE-ORPHÉE-IRIS-JUNON',
+      'string-id' => '#CHALCIOPE,#MEDEE,#PAIX,#FRANCE,#VICTOIRE,#HYMENEE,#DISCORDE,#ENVIE,#AMOUR,#VOIX,#SIRENES,#PALLAS,#CHOEUR;#AAETE,#ABSYRTE,#CHALCIOPE,#MEDEE,#PAIX,#FRANCE,#VICTOIRE,#HYMENEE,#DISCORDE,#ENVIE,#AMOUR,#VOIX,#SIRENES,#PALLAS,#CHOEUR;#AAETE,#ABSYRTE,#MEDEE,#JASON,#PELEE,#IPHITE,#ORPHEE,#PAIX,#FRANCE,#VICTOIRE,#HYMENEE,#DISCORDE,#ENVIE,#AMOUR,#VOIX,#SIRENES,#PALLAS,#CHOEUR;#MEDEE,#JASON,#PAIX,#FRANCE,#VICTOIRE,#HYMENEE,#DISCORDE,#ENVIE,#AMOUR,#VOIX,#SIRENES,#PALLAS,#CHOEUR;#JASON,#PELEE,#IPHITE,#ORPHEE,#PAIX,#FRANCE,#VICTOIRE,#HYMENEE,#DISCORDE,#ENVIE,#AMOUR,#VOIX,#SIRENES,#PALLAS,#CHOEUR;#JASON,#PELEE,#ORPHEE,#IRIS,#JUNON,#PAIX,#FRANCE,#VICTOIRE,#HYMENEE,#DISCORDE,#ENVIE,#AMOUR,#VOIX,#SIRENES,#PALLAS,#CHOEUR',
     ),
   ),
   'corneillep_toison_III01' => 
@@ -82563,6 +83463,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'AAETE-JASON-----------/AAETE-HYPSIPYLE-JASON-----------/HYPSIPYLE-JASON-----------/MÉDÉE-HYPSIPYLE-----------/HYPSIPYLE-----------/ABSYRTE-HYPSIPYLE',
+      'string-id' => '#AAETE,#JASON,#PAIX,#FRANCE,#VICTOIRE,#HYMENEE,#DISCORDE,#ENVIE,#AMOUR,#VOIX,#SIRENES,#PALLAS,#CHOEUR;#AAETE,#HYPSIPYLE,#JASON,#PAIX,#FRANCE,#VICTOIRE,#HYMENEE,#DISCORDE,#ENVIE,#AMOUR,#VOIX,#SIRENES,#PALLAS,#CHOEUR;#HYPSIPYLE,#JASON,#PAIX,#FRANCE,#VICTOIRE,#HYMENEE,#DISCORDE,#ENVIE,#AMOUR,#VOIX,#SIRENES,#PALLAS,#CHOEUR;#MEDEE,#HYPSIPYLE,#PAIX,#FRANCE,#VICTOIRE,#HYMENEE,#DISCORDE,#ENVIE,#AMOUR,#VOIX,#SIRENES,#PALLAS,#CHOEUR;#HYPSIPYLE,#PAIX,#FRANCE,#VICTOIRE,#HYMENEE,#DISCORDE,#ENVIE,#AMOUR,#VOIX,#SIRENES,#PALLAS,#CHOEUR;#ABSYRTE,#HYPSIPYLE,#PAIX,#FRANCE,#VICTOIRE,#HYMENEE,#DISCORDE,#ENVIE,#AMOUR,#VOIX,#SIRENES,#PALLAS,#CHOEUR',
     ),
   ),
   'corneillep_toison_V01' => 
@@ -82648,6 +83549,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ABSYRTE-HYPSIPYLE-----------/AAETE-ABSYRTE-HYPSIPYLE-----------/AAETE-ABSYRTE-HYPSIPYLE-JASON-ORPHÉE-ZÉTHÈS-CALAIS-----------/AAETE-ABSYRTE-MÉDÉE-HYPSIPYLE-JASON-ORPHÉE-ZÉTHÈS-----------/AAETE-ABSYRTE-MÉDÉE-HYPSIPYLE-ORPHÉE-ZÉTHÈS-CALAIS-----------/AAETE-ABSYRTE-HYPSIPYLE-JUNON',
+      'string-id' => '#ABSYRTE,#HYPSIPYLE,#PAIX,#FRANCE,#VICTOIRE,#HYMENEE,#DISCORDE,#ENVIE,#AMOUR,#VOIX,#SIRENES,#PALLAS,#CHOEUR;#AAETE,#ABSYRTE,#HYPSIPYLE,#PAIX,#FRANCE,#VICTOIRE,#HYMENEE,#DISCORDE,#ENVIE,#AMOUR,#VOIX,#SIRENES,#PALLAS,#CHOEUR;#AAETE,#ABSYRTE,#HYPSIPYLE,#JASON,#ORPHEE,#ZETHES,#CALAIS,#PAIX,#FRANCE,#VICTOIRE,#HYMENEE,#DISCORDE,#ENVIE,#AMOUR,#VOIX,#SIRENES,#PALLAS,#CHOEUR;#AAETE,#ABSYRTE,#MEDEE,#HYPSIPYLE,#JASON,#ORPHEE,#ZETHES,#PAIX,#FRANCE,#VICTOIRE,#HYMENEE,#DISCORDE,#ENVIE,#AMOUR,#VOIX,#SIRENES,#PALLAS,#CHOEUR;#AAETE,#ABSYRTE,#MEDEE,#HYPSIPYLE,#ORPHEE,#ZETHES,#CALAIS,#PAIX,#FRANCE,#VICTOIRE,#HYMENEE,#DISCORDE,#ENVIE,#AMOUR,#VOIX,#SIRENES,#PALLAS,#CHOEUR;#AAETE,#ABSYRTE,#HYPSIPYLE,#JUNON,#PAIX,#FRANCE,#VICTOIRE,#HYMENEE,#DISCORDE,#ENVIE,#AMOUR,#VOIX,#SIRENES,#PALLAS,#CHOEUR',
     ),
   ),
   'corneillep_toison_V02' => 
@@ -82733,6 +83635,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'AAETE-ABSYRTE-HYPSIPYLE-----------/AAETE-ABSYRTE-HYPSIPYLE-JASON-ORPHÉE-ZÉTHÈS-CALAIS-----------/AAETE-ABSYRTE-MÉDÉE-HYPSIPYLE-JASON-ORPHÉE-ZÉTHÈS-----------/AAETE-ABSYRTE-MÉDÉE-HYPSIPYLE-ORPHÉE-ZÉTHÈS-CALAIS-----------/AAETE-ABSYRTE-HYPSIPYLE-JUNON-----------/AAETE-ABSYRTE-HYPSIPYLE-SOLEIL-JUNON-JUPITER',
+      'string-id' => '#AAETE,#ABSYRTE,#HYPSIPYLE,#PAIX,#FRANCE,#VICTOIRE,#HYMENEE,#DISCORDE,#ENVIE,#AMOUR,#VOIX,#SIRENES,#PALLAS,#CHOEUR;#AAETE,#ABSYRTE,#HYPSIPYLE,#JASON,#ORPHEE,#ZETHES,#CALAIS,#PAIX,#FRANCE,#VICTOIRE,#HYMENEE,#DISCORDE,#ENVIE,#AMOUR,#VOIX,#SIRENES,#PALLAS,#CHOEUR;#AAETE,#ABSYRTE,#MEDEE,#HYPSIPYLE,#JASON,#ORPHEE,#ZETHES,#PAIX,#FRANCE,#VICTOIRE,#HYMENEE,#DISCORDE,#ENVIE,#AMOUR,#VOIX,#SIRENES,#PALLAS,#CHOEUR;#AAETE,#ABSYRTE,#MEDEE,#HYPSIPYLE,#ORPHEE,#ZETHES,#CALAIS,#PAIX,#FRANCE,#VICTOIRE,#HYMENEE,#DISCORDE,#ENVIE,#AMOUR,#VOIX,#SIRENES,#PALLAS,#CHOEUR;#AAETE,#ABSYRTE,#HYPSIPYLE,#JUNON,#PAIX,#FRANCE,#VICTOIRE,#HYMENEE,#DISCORDE,#ENVIE,#AMOUR,#VOIX,#SIRENES,#PALLAS,#CHOEUR;#AAETE,#ABSYRTE,#HYPSIPYLE,#SOLEIL,#JUNON,#JUPITER,#PAIX,#FRANCE,#VICTOIRE,#HYMENEE,#DISCORDE,#ENVIE,#AMOUR,#VOIX,#SIRENES,#PALLAS,#CHOEUR',
     ),
   ),
   'corneillep_tite_II01' => 
@@ -82800,6 +83703,7 @@
       'genreId' => 'Comedieheroique',
       'authorId' => 'CorneillePierre',
       'string' => 'TITE/TITE-DOMITIAN/TITE-DOMITIAN-DOMITIE/TITE-DOMITIAN-DOMITIE/TITE-DOMITIAN-BÉRÉNICE-DOMITIE-PHILON/TITE-DOMITIE-PHILON',
+      'string-id' => '#TITE;#TITE,#DOMITIAN;#TITE,#DOMITIAN,#DOMITIE;#TITE,#DOMITIAN,#DOMITIE;#TITE,#DOMITIAN,#BERENICE,#DOMITIE,#PHILON;#TITE,#DOMITIE,#PHILON',
     ),
   ),
   'corneillep_tite_II02' => 
@@ -82867,6 +83771,7 @@
       'genreId' => 'Comedieheroique',
       'authorId' => 'CorneillePierre',
       'string' => 'TITE-DOMITIAN/TITE-DOMITIAN-DOMITIE/TITE-DOMITIAN-DOMITIE/TITE-DOMITIAN-BÉRÉNICE-DOMITIE-PHILON/TITE-DOMITIE-PHILON/DOMITIE',
+      'string-id' => '#TITE,#DOMITIAN;#TITE,#DOMITIAN,#DOMITIE;#TITE,#DOMITIAN,#DOMITIE;#TITE,#DOMITIAN,#BERENICE,#DOMITIE,#PHILON;#TITE,#DOMITIE,#PHILON;#DOMITIE',
     ),
   ),
   'corneillep_theodore_II01' => 
@@ -82934,6 +83839,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'THÉODORE-STÉPHANIE/CLÉOBULE-THÉODORE/CLÉOBULE-MARCELLE/MARCELLE-THÉODORE/VALENS-MARCELLE-THÉODORE/VALENS-MARCELLE',
+      'string-id' => '#THEODORE,#STEPHANIE;#CLEOBULE,#THEODORE;#CLEOBULE,#MARCELLE;#MARCELLE,#THEODORE;#VALENS,#MARCELLE,#THEODORE;#VALENS,#MARCELLE',
     ),
   ),
   'corneillep_theodore_II02' => 
@@ -83001,6 +83907,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CLÉOBULE-THÉODORE/CLÉOBULE-MARCELLE/MARCELLE-THÉODORE/VALENS-MARCELLE-THÉODORE/VALENS-MARCELLE/VALENS-PAULIN',
+      'string-id' => '#CLEOBULE,#THEODORE;#CLEOBULE,#MARCELLE;#MARCELLE,#THEODORE;#VALENS,#MARCELLE,#THEODORE;#VALENS,#MARCELLE;#VALENS,#PAULIN',
     ),
   ),
   'corneillep_theodore_III01' => 
@@ -83068,6 +83975,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'PAULIN-THÉODORE/PLACIDE-PAULIN-THÉODORE/PLACIDE-THÉODORE/PLACIDE-PAULIN-MARCELLE/PLACIDE-MARCELLE/MARCELLE-STÉPHANIE',
+      'string-id' => '#PAULIN,#THEODORE;#PLACIDE,#PAULIN,#THEODORE;#PLACIDE,#THEODORE;#PLACIDE,#PAULIN,#MARCELLE;#PLACIDE,#MARCELLE;#MARCELLE,#STEPHANIE',
     ),
   ),
   'corneillep_theodore_V01' => 
@@ -83144,6 +84052,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CLÉOBULE-PAULIN/CLÉOBULE-LYCANTE/CLÉOBULE-DIDYME/CLÉOBULE-DIDYME-THÉODORE/DIDYME-THÉODORE/DIDYME-PAULIN-MARCELLE-THÉODORE',
+      'string-id' => '#CLEOBULE,#PAULIN;#CLEOBULE,#LYCANTE;#CLEOBULE,#DIDYME;#CLEOBULE,#DIDYME,#THEODORE;#DIDYME,#THEODORE;#DIDYME,#PAULIN,#MARCELLE,#THEODORE',
     ),
   ),
   'corneillep_theodore_V02' => 
@@ -83229,6 +84138,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CLÉOBULE-LYCANTE/CLÉOBULE-DIDYME/CLÉOBULE-DIDYME-THÉODORE/DIDYME-THÉODORE/DIDYME-PAULIN-MARCELLE-THÉODORE/VALENS-PAULIN',
+      'string-id' => '#CLEOBULE,#LYCANTE;#CLEOBULE,#DIDYME;#CLEOBULE,#DIDYME,#THEODORE;#DIDYME,#THEODORE;#DIDYME,#PAULIN,#MARCELLE,#THEODORE;#VALENS,#PAULIN',
     ),
   ),
   'corneillep_theodore_V03' => 
@@ -83314,6 +84224,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CLÉOBULE-DIDYME/CLÉOBULE-DIDYME-THÉODORE/DIDYME-THÉODORE/DIDYME-PAULIN-MARCELLE-THÉODORE/VALENS-PAULIN/VALENS-STÉPHANIE',
+      'string-id' => '#CLEOBULE,#DIDYME;#CLEOBULE,#DIDYME,#THEODORE;#DIDYME,#THEODORE;#DIDYME,#PAULIN,#MARCELLE,#THEODORE;#VALENS,#PAULIN;#VALENS,#STEPHANIE',
     ),
   ),
   'corneillep_theodore_V04' => 
@@ -83399,6 +84310,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CLÉOBULE-DIDYME-THÉODORE/DIDYME-THÉODORE/DIDYME-PAULIN-MARCELLE-THÉODORE/VALENS-PAULIN/VALENS-STÉPHANIE/VALENS-PLACIDE-CLÉOBULE',
+      'string-id' => '#CLEOBULE,#DIDYME,#THEODORE;#DIDYME,#THEODORE;#DIDYME,#PAULIN,#MARCELLE,#THEODORE;#VALENS,#PAULIN;#VALENS,#STEPHANIE;#VALENS,#PLACIDE,#CLEOBULE',
     ),
   ),
   'corneillep_suivante_I01' => 
@@ -83457,6 +84369,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'THÉANTE-DAMON/THÉANTE/FLORAME-THÉANTE/FLORAME-THÉANTE/FLORAME/THÉANTE-DAPHNIS',
+      'string-id' => '#THEANTE,#DAMON;#THEANTE;#FLORAME,#THEANTE;#FLORAME,#THEANTE;#FLORAME;#THEANTE,#DAPHNIS',
     ),
   ),
   'corneillep_suivante_I02' => 
@@ -83506,6 +84419,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'THÉANTE/FLORAME-THÉANTE/FLORAME-THÉANTE/FLORAME/THÉANTE-DAPHNIS/FLORAME-THÉANTE-DAPHNIS',
+      'string-id' => '#THEANTE;#FLORAME,#THEANTE;#FLORAME,#THEANTE;#FLORAME;#THEANTE,#DAPHNIS;#FLORAME,#THEANTE,#DAPHNIS',
     ),
   ),
   'corneillep_suivante_I03' => 
@@ -83555,6 +84469,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'FLORAME-THÉANTE/FLORAME-THÉANTE/FLORAME/THÉANTE-DAPHNIS/FLORAME-THÉANTE-DAPHNIS/DAPHNIS',
+      'string-id' => '#FLORAME,#THEANTE;#FLORAME,#THEANTE;#FLORAME;#THEANTE,#DAPHNIS;#FLORAME,#THEANTE,#DAPHNIS;#DAPHNIS',
     ),
   ),
   'corneillep_suivante_I04' => 
@@ -83604,6 +84519,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'FLORAME-THÉANTE/FLORAME/THÉANTE-DAPHNIS/FLORAME-THÉANTE-DAPHNIS/DAPHNIS/',
+      'string-id' => '#FLORAME,#THEANTE;#FLORAME;#THEANTE,#DAPHNIS;#FLORAME,#THEANTE,#DAPHNIS;#DAPHNIS;',
     ),
   ),
   'corneillep_suivante_II01' => 
@@ -83653,6 +84569,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'GÉRASTE/FLORAME/FLORAME/FLORAME-DAPHNIS/FLORAME-DAPHNIS/DAPHNIS',
+      'string-id' => '#GERASTE;#FLORAME;#FLORAME;#FLORAME,#DAPHNIS;#FLORAME,#DAPHNIS;#DAPHNIS',
     ),
   ),
   'corneillep_suivante_II02' => 
@@ -83693,6 +84610,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'FLORAME/FLORAME/FLORAME-DAPHNIS/FLORAME-DAPHNIS/DAPHNIS/DAPHNIS',
+      'string-id' => '#FLORAME;#FLORAME;#FLORAME,#DAPHNIS;#FLORAME,#DAPHNIS;#DAPHNIS;#DAPHNIS',
     ),
   ),
   'corneillep_suivante_II03' => 
@@ -83742,6 +84660,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'FLORAME/FLORAME-DAPHNIS/FLORAME-DAPHNIS/DAPHNIS/DAPHNIS/THÉANTE',
+      'string-id' => '#FLORAME;#FLORAME,#DAPHNIS;#FLORAME,#DAPHNIS;#DAPHNIS;#DAPHNIS;#THEANTE',
     ),
   ),
   'corneillep_suivante_II04' => 
@@ -83800,6 +84719,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'FLORAME-DAPHNIS/FLORAME-DAPHNIS/DAPHNIS/DAPHNIS/THÉANTE/THÉANTE-DAMON',
+      'string-id' => '#FLORAME,#DAPHNIS;#FLORAME,#DAPHNIS;#DAPHNIS;#DAPHNIS;#THEANTE;#THEANTE,#DAMON',
     ),
   ),
   'corneillep_suivante_III01' => 
@@ -83858,6 +84778,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'FLORAME/CLARIMOND-DAPHNIS/CLARIMOND/CLARIMOND//GÉRASTE',
+      'string-id' => '#FLORAME;#CLARIMOND,#DAPHNIS;#CLARIMOND;#CLARIMOND;;#GERASTE',
     ),
   ),
   'corneillep_suivante_III02' => 
@@ -83907,6 +84828,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CLARIMOND-DAPHNIS/CLARIMOND/CLARIMOND//GÉRASTE/GÉRASTE',
+      'string-id' => '#CLARIMOND,#DAPHNIS;#CLARIMOND;#CLARIMOND;;#GERASTE;#GERASTE',
     ),
   ),
   'corneillep_suivante_III03' => 
@@ -83956,6 +84878,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CLARIMOND/CLARIMOND//GÉRASTE/GÉRASTE/DAPHNIS',
+      'string-id' => '#CLARIMOND;#CLARIMOND;;#GERASTE;#GERASTE;#DAPHNIS',
     ),
   ),
   'corneillep_suivante_III04' => 
@@ -84014,6 +84937,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CLARIMOND//GÉRASTE/GÉRASTE/DAPHNIS/FLORAME-DAPHNIS',
+      'string-id' => '#CLARIMOND;;#GERASTE;#GERASTE;#DAPHNIS;#FLORAME,#DAPHNIS',
     ),
   ),
   'corneillep_suivante_III05' => 
@@ -84063,6 +84987,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => '/GÉRASTE/GÉRASTE/DAPHNIS/FLORAME-DAPHNIS/DAPHNIS',
+      'string-id' => ';#GERASTE;#GERASTE;#DAPHNIS;#FLORAME,#DAPHNIS;#DAPHNIS',
     ),
   ),
   'corneillep_suivante_III06' => 
@@ -84112,6 +85037,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'GÉRASTE/GÉRASTE/DAPHNIS/FLORAME-DAPHNIS/DAPHNIS/',
+      'string-id' => '#GERASTE;#GERASTE;#DAPHNIS;#FLORAME,#DAPHNIS;#DAPHNIS;',
     ),
   ),
   'corneillep_suivante_IV01' => 
@@ -84179,6 +85105,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'DAPHNIS/GÉRASTE-DAPHNIS/GÉRASTE//FLORAME-DAMON/FLORAME-THÉANTE',
+      'string-id' => '#DAPHNIS;#GERASTE,#DAPHNIS;#GERASTE;;#FLORAME,#DAMON;#FLORAME,#THEANTE',
     ),
   ),
   'corneillep_suivante_IV02' => 
@@ -84246,6 +85173,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'GÉRASTE-DAPHNIS/GÉRASTE//FLORAME-DAMON/FLORAME-THÉANTE/FLORAME-DAPHNIS',
+      'string-id' => '#GERASTE,#DAPHNIS;#GERASTE;;#FLORAME,#DAMON;#FLORAME,#THEANTE;#FLORAME,#DAPHNIS',
     ),
   ),
   'corneillep_suivante_IV03' => 
@@ -84313,6 +85241,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'GÉRASTE//FLORAME-DAMON/FLORAME-THÉANTE/FLORAME-DAPHNIS/FLORAME',
+      'string-id' => '#GERASTE;;#FLORAME,#DAMON;#FLORAME,#THEANTE;#FLORAME,#DAPHNIS;#FLORAME',
     ),
   ),
   'corneillep_suivante_IV04' => 
@@ -84371,6 +85300,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => '/FLORAME-DAMON/FLORAME-THÉANTE/FLORAME-DAPHNIS/FLORAME/FLORAME',
+      'string-id' => ';#FLORAME,#DAMON;#FLORAME,#THEANTE;#FLORAME,#DAPHNIS;#FLORAME;#FLORAME',
     ),
   ),
   'corneillep_suivante_V01' => 
@@ -84429,6 +85359,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'THÉANTE-DAMON/FLORAME/FLORAME//GÉRASTE-POLÉMON/GÉRASTE',
+      'string-id' => '#THEANTE,#DAMON;#FLORAME;#FLORAME;;#GERASTE,#POLEMON;#GERASTE',
     ),
   ),
   'corneillep_suivante_V02' => 
@@ -84487,6 +85418,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'FLORAME/FLORAME//GÉRASTE-POLÉMON/GÉRASTE/GÉRASTE-DAPHNIS',
+      'string-id' => '#FLORAME;#FLORAME;;#GERASTE,#POLEMON;#GERASTE;#GERASTE,#DAPHNIS',
     ),
   ),
   'corneillep_suivante_V03' => 
@@ -84545,6 +85477,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'FLORAME//GÉRASTE-POLÉMON/GÉRASTE/GÉRASTE-DAPHNIS/GÉRASTE-FLORAME-DAPHNIS',
+      'string-id' => '#FLORAME;;#GERASTE,#POLEMON;#GERASTE;#GERASTE,#DAPHNIS;#GERASTE,#FLORAME,#DAPHNIS',
     ),
   ),
   'corneillep_suivante_V04' => 
@@ -84603,6 +85536,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => '/GÉRASTE-POLÉMON/GÉRASTE/GÉRASTE-DAPHNIS/GÉRASTE-FLORAME-DAPHNIS/',
+      'string-id' => ';#GERASTE,#POLEMON;#GERASTE;#GERASTE,#DAPHNIS;#GERASTE,#FLORAME,#DAPHNIS;',
     ),
   ),
   'corneillep_suitementeur_I01' => 
@@ -84661,6 +85595,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'DORANTE/DORANTE-LYSE/DORANTE/DORANTE-CLÉANDRE-UN PRÉVÔT/DORANTE-CLÉANDRE/DORANTE',
+      'string-id' => '#DORANTE;#DORANTE,#LYSE;#DORANTE;#DORANTE,#CLEANDRE,#PREVOT;#DORANTE,#CLEANDRE;#DORANTE',
     ),
   ),
   'corneillep_suitementeur_II01' => 
@@ -84728,6 +85663,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'MÉLISSE-LYSE/CLÉANDRE-MÉLISSE-LYSE/MÉLISSE-LYSE/DORANTE-PHILISTE/DORANTE/DORANTE-LYSE',
+      'string-id' => '#MELISSE,#LYSE;#CLEANDRE,#MELISSE,#LYSE;#MELISSE,#LYSE;#DORANTE,#PHILISTE;#DORANTE;#DORANTE,#LYSE',
     ),
   ),
   'corneillep_suitementeur_II02' => 
@@ -84795,6 +85731,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CLÉANDRE-MÉLISSE-LYSE/MÉLISSE-LYSE/DORANTE-PHILISTE/DORANTE/DORANTE-LYSE/DORANTE',
+      'string-id' => '#CLEANDRE,#MELISSE,#LYSE;#MELISSE,#LYSE;#DORANTE,#PHILISTE;#DORANTE;#DORANTE,#LYSE;#DORANTE',
     ),
   ),
   'corneillep_suitementeur_IV01' => 
@@ -84853,6 +85790,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'MÉLISSE-LYSE/CLÉANDRE-MÉLISSE-LYSE/MÉLISSE-LYSE/DORANTE-PHILISTE/DORANTE-MÉLISSE-PHILISTE-LYSE/DORANTE-MÉLISSE-LYSE',
+      'string-id' => '#MELISSE,#LYSE;#CLEANDRE,#MELISSE,#LYSE;#MELISSE,#LYSE;#DORANTE,#PHILISTE;#DORANTE,#MELISSE,#PHILISTE,#LYSE;#DORANTE,#MELISSE,#LYSE',
     ),
   ),
   'corneillep_suitementeur_IV02' => 
@@ -84911,6 +85849,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CLÉANDRE-MÉLISSE-LYSE/MÉLISSE-LYSE/DORANTE-PHILISTE/DORANTE-MÉLISSE-PHILISTE-LYSE/DORANTE-MÉLISSE-LYSE/DORANTE-PHILISTE',
+      'string-id' => '#CLEANDRE,#MELISSE,#LYSE;#MELISSE,#LYSE;#DORANTE,#PHILISTE;#DORANTE,#MELISSE,#PHILISTE,#LYSE;#DORANTE,#MELISSE,#LYSE;#DORANTE,#PHILISTE',
     ),
   ),
   'corneillep_suitementeur_IV03' => 
@@ -84960,6 +85899,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'MÉLISSE-LYSE/DORANTE-PHILISTE/DORANTE-MÉLISSE-PHILISTE-LYSE/DORANTE-MÉLISSE-LYSE/DORANTE-PHILISTE/DORANTE',
+      'string-id' => '#MELISSE,#LYSE;#DORANTE,#PHILISTE;#DORANTE,#MELISSE,#PHILISTE,#LYSE;#DORANTE,#MELISSE,#LYSE;#DORANTE,#PHILISTE;#DORANTE',
     ),
   ),
   'corneillep_sophonisbe_III01' => 
@@ -85036,6 +85976,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'MASSINISSE-MÉZÉTULLE/MASSINISSE-ÉRYXE-BARCÉE/MASSINISSE-MÉZÉTULLE-SOPHONISBE-ÉRYXE-BARCÉE/MASSINISSE-SOPHONISBE-HERMINIE/SYPHAX-MASSINISSE-LÉPIDE-MÉZÉTULLE-SOPHONISBE-HERMINIE/SYPHAX-LÉPIDE-SOPHONISBE-HERMINIE',
+      'string-id' => '#MASSINISSE,#MEZETULLE;#MASSINISSE,#ERYXE,#BARCEE;#MASSINISSE,#MEZETULLE,#SOPHONISBE,#ERYXE,#BARCEE;#MASSINISSE,#SOPHONISBE,#HERMINIE;#SYPHAX,#MASSINISSE,#LEPIDE,#MEZETULLE,#SOPHONISBE,#HERMINIE;#SYPHAX,#LEPIDE,#SOPHONISBE,#HERMINIE',
     ),
   ),
   'corneillep_sophonisbe_III02' => 
@@ -85112,6 +86053,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'MASSINISSE-ÉRYXE-BARCÉE/MASSINISSE-MÉZÉTULLE-SOPHONISBE-ÉRYXE-BARCÉE/MASSINISSE-SOPHONISBE-HERMINIE/SYPHAX-MASSINISSE-LÉPIDE-MÉZÉTULLE-SOPHONISBE-HERMINIE/SYPHAX-LÉPIDE-SOPHONISBE-HERMINIE/SYPHAX-LÉPIDE',
+      'string-id' => '#MASSINISSE,#ERYXE,#BARCEE;#MASSINISSE,#MEZETULLE,#SOPHONISBE,#ERYXE,#BARCEE;#MASSINISSE,#SOPHONISBE,#HERMINIE;#SYPHAX,#MASSINISSE,#LEPIDE,#MEZETULLE,#SOPHONISBE,#HERMINIE;#SYPHAX,#LEPIDE,#SOPHONISBE,#HERMINIE;#SYPHAX,#LEPIDE',
     ),
   ),
   'corneillep_sophonisbe_V01' => 
@@ -85197,6 +86139,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'SOPHONISBE-HERMINIE/MÉZÉTULLE-SOPHONISBE-HERMINIE/MÉZÉTULLE-SOPHONISBE-ÉRYXE-BARCÉE-Page de Sophonisbe/SOPHONISBE-ÉRYXE-HERMINIE-BARCÉE/LÉLIUS-LÉPIDE-ÉRYXE-BARCÉE/LÉLIUS-ÉRYXE-BARCÉE',
+      'string-id' => '#SOPHONISBE,#HERMINIE;#MEZETULLE,#SOPHONISBE,#HERMINIE;#MEZETULLE,#SOPHONISBE,#ERYXE,#BARCEE,#PAGE;#SOPHONISBE,#ERYXE,#HERMINIE,#BARCEE;#LELIUS,#LEPIDE,#ERYXE,#BARCEE;#LELIUS,#ERYXE,#BARCEE',
     ),
   ),
   'corneillep_sophonisbe_V02' => 
@@ -85282,6 +86225,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'MÉZÉTULLE-SOPHONISBE-HERMINIE/MÉZÉTULLE-SOPHONISBE-ÉRYXE-BARCÉE-Page de Sophonisbe/SOPHONISBE-ÉRYXE-HERMINIE-BARCÉE/LÉLIUS-LÉPIDE-ÉRYXE-BARCÉE/LÉLIUS-ÉRYXE-BARCÉE/LÉLIUS-LÉPIDE-ÉRYXE-BARCÉE',
+      'string-id' => '#MEZETULLE,#SOPHONISBE,#HERMINIE;#MEZETULLE,#SOPHONISBE,#ERYXE,#BARCEE,#PAGE;#SOPHONISBE,#ERYXE,#HERMINIE,#BARCEE;#LELIUS,#LEPIDE,#ERYXE,#BARCEE;#LELIUS,#ERYXE,#BARCEE;#LELIUS,#LEPIDE,#ERYXE,#BARCEE',
     ),
   ),
   'corneillep_sertorius_V01' => 
@@ -85358,6 +86302,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ARISTIE-VIRIATE/ARISTIE-VIRIATE-ARCAS/ARISTIE-VIRIATE-THAMIRE-ARCAS/PERPENNA-ARISTIE-VIRIATE-THAMIRE-ARCAS/PERPENNA-AUFIDE-ARISTIE-VIRIATE-THAMIRE-ARCAS/PERPENNA-POMPÉE-ARISTIE-VIRIATE-THAMIRE-CELSUS-ARCAS',
+      'string-id' => '#ARISTIE,#VIRIATE;#ARISTIE,#VIRIATE,#ARCAS;#ARISTIE,#VIRIATE,#THAMIRE,#ARCAS;#PERPENNA,#ARISTIE,#VIRIATE,#THAMIRE,#ARCAS;#PERPENNA,#AUFIDE,#ARISTIE,#VIRIATE,#THAMIRE,#ARCAS;#PERPENNA,#POMPEE,#ARISTIE,#VIRIATE,#THAMIRE,#CELSUS,#ARCAS',
     ),
   ),
   'corneillep_sertorius_V02' => 
@@ -85434,6 +86379,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ARISTIE-VIRIATE-ARCAS/ARISTIE-VIRIATE-THAMIRE-ARCAS/PERPENNA-ARISTIE-VIRIATE-THAMIRE-ARCAS/PERPENNA-AUFIDE-ARISTIE-VIRIATE-THAMIRE-ARCAS/PERPENNA-POMPÉE-ARISTIE-VIRIATE-THAMIRE-CELSUS-ARCAS/POMPÉE-ARISTIE-VIRIATE-THAMIRE-ARCAS',
+      'string-id' => '#ARISTIE,#VIRIATE,#ARCAS;#ARISTIE,#VIRIATE,#THAMIRE,#ARCAS;#PERPENNA,#ARISTIE,#VIRIATE,#THAMIRE,#ARCAS;#PERPENNA,#AUFIDE,#ARISTIE,#VIRIATE,#THAMIRE,#ARCAS;#PERPENNA,#POMPEE,#ARISTIE,#VIRIATE,#THAMIRE,#CELSUS,#ARCAS;#POMPEE,#ARISTIE,#VIRIATE,#THAMIRE,#ARCAS',
     ),
   ),
   'corneillep_sertorius_V03' => 
@@ -85501,6 +86447,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ARISTIE-VIRIATE-THAMIRE-ARCAS/PERPENNA-ARISTIE-VIRIATE-THAMIRE-ARCAS/PERPENNA-AUFIDE-ARISTIE-VIRIATE-THAMIRE-ARCAS/PERPENNA-POMPÉE-ARISTIE-VIRIATE-THAMIRE-CELSUS-ARCAS/POMPÉE-ARISTIE-VIRIATE-THAMIRE-ARCAS/POMPÉE-ARISTIE-VIRIATE-THAMIRE-CELSUS-ARCAS',
+      'string-id' => '#ARISTIE,#VIRIATE,#THAMIRE,#ARCAS;#PERPENNA,#ARISTIE,#VIRIATE,#THAMIRE,#ARCAS;#PERPENNA,#AUFIDE,#ARISTIE,#VIRIATE,#THAMIRE,#ARCAS;#PERPENNA,#POMPEE,#ARISTIE,#VIRIATE,#THAMIRE,#CELSUS,#ARCAS;#POMPEE,#ARISTIE,#VIRIATE,#THAMIRE,#ARCAS;#POMPEE,#ARISTIE,#VIRIATE,#THAMIRE,#CELSUS,#ARCAS',
     ),
   ),
   'corneillep_rodogune_III01' => 
@@ -85559,6 +86506,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'RODOGUNE-ORONTE/RODOGUNE-ORONTE/RODOGUNE/SÉLEUCUS-ANTIOCHUS-RODOGUNE/SÉLEUCUS-ANTIOCHUS/ANTIOCHUS',
+      'string-id' => '#RODOGUNE,#ORONTE;#RODOGUNE,#ORONTE;#RODOGUNE;#SELEUCUS,#ANTIOCHUS,#RODOGUNE;#SELEUCUS,#ANTIOCHUS;#ANTIOCHUS',
     ),
   ),
   'corneillep_rodogune_IV01' => 
@@ -85617,6 +86565,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ANTIOCHUS-RODOGUNE/ANTIOCHUS/CLÉOPÂTRE-ANTIOCHUS/CLÉOPÂTRE/CLÉOPÂTRE/CLÉOPÂTRE-SÉLEUCUS',
+      'string-id' => '#ANTIOCHUS,#RODOGUNE;#ANTIOCHUS;#CLEOPATRE,#ANTIOCHUS;#CLEOPATRE;#CLEOPATRE;#CLEOPATRE,#SELEUCUS',
     ),
   ),
   'corneillep_rodogune_IV02' => 
@@ -85666,6 +86615,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ANTIOCHUS/CLÉOPÂTRE-ANTIOCHUS/CLÉOPÂTRE/CLÉOPÂTRE/CLÉOPÂTRE-SÉLEUCUS/CLÉOPÂTRE',
+      'string-id' => '#ANTIOCHUS;#CLEOPATRE,#ANTIOCHUS;#CLEOPATRE;#CLEOPATRE;#CLEOPATRE,#SELEUCUS;#CLEOPATRE',
     ),
   ),
   'corneillep_pulcherie_V01' => 
@@ -85724,6 +86674,7 @@
       'genreId' => 'Comedieheroique',
       'authorId' => 'CorneillePierre',
       'string' => 'PULCHÉRIE-JUSTINE/PULCHÉRIE-MARTIAN-ASPAR-JUSTINE/PULCHÉRIE-MARTIAN-JUSTINE/PULCHÉRIE-ASPAR-JUSTINE/PULCHÉRIE-JUSTINE/PULCHÉRIE-LÉON-JUSTINE',
+      'string-id' => '#PULCHERIE,#JUSTINE;#PULCHERIE,#MARTIAN,#ASPAR,#JUSTINE;#PULCHERIE,#MARTIAN,#JUSTINE;#PULCHERIE,#ASPAR,#JUSTINE;#PULCHERIE,#JUSTINE;#PULCHERIE,#LEON,#JUSTINE',
     ),
   ),
   'corneillep_pulcherie_V02' => 
@@ -85782,6 +86733,7 @@
       'genreId' => 'Comedieheroique',
       'authorId' => 'CorneillePierre',
       'string' => 'PULCHÉRIE-MARTIAN-ASPAR-JUSTINE/PULCHÉRIE-MARTIAN-JUSTINE/PULCHÉRIE-ASPAR-JUSTINE/PULCHÉRIE-JUSTINE/PULCHÉRIE-LÉON-JUSTINE/PULCHÉRIE-MARTIAN-LÉON-JUSTINE',
+      'string-id' => '#PULCHERIE,#MARTIAN,#ASPAR,#JUSTINE;#PULCHERIE,#MARTIAN,#JUSTINE;#PULCHERIE,#ASPAR,#JUSTINE;#PULCHERIE,#JUSTINE;#PULCHERIE,#LEON,#JUSTINE;#PULCHERIE,#MARTIAN,#LEON,#JUSTINE',
     ),
   ),
   'corneillep_polyeucte_II01' => 
@@ -85831,6 +86783,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'SÉVÈRE/SÉVÈRE-PAULINE/PAULINE/POLYEUCTE-NÉARQUE-PAULINE/POLYEUCTE-NÉARQUE-PAULINE/POLYEUCTE-NÉARQUE',
+      'string-id' => '#SEVERE;#SEVERE,#PAULINE;#PAULINE;#POLYEUCTE,#NEARQUE,#PAULINE;#POLYEUCTE,#NEARQUE,#PAULINE;#POLYEUCTE,#NEARQUE',
     ),
   ),
   'corneillep_polyeucte_IV01' => 
@@ -85880,6 +86833,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'POLYEUCTE/POLYEUCTE/POLYEUCTE-PAULINE/POLYEUCTE-SÉVÈRE-PAULINE/SÉVÈRE-PAULINE/SÉVÈRE',
+      'string-id' => '#POLYEUCTE;#POLYEUCTE;#POLYEUCTE,#PAULINE;#POLYEUCTE,#SEVERE,#PAULINE;#SEVERE,#PAULINE;#SEVERE',
     ),
   ),
   'corneillep_polyeucte_V01' => 
@@ -85938,6 +86892,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'FÉLIX/FÉLIX-POLYEUCTE/FÉLIX-POLYEUCTE-PAULINE/FÉLIX/FÉLIX-PAULINE/FÉLIX-SÉVÈRE-PAULINE',
+      'string-id' => '#FELIX;#FELIX,#POLYEUCTE;#FELIX,#POLYEUCTE,#PAULINE;#FELIX;#FELIX,#PAULINE;#FELIX,#SEVERE,#PAULINE',
     ),
   ),
   'corneillep_placeroyale_II01' => 
@@ -86005,6 +86960,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ANGÉLIQUE/ALIDOR-ANGÉLIQUE/ANGÉLIQUE/ANGÉLIQUE-PHILIS/DORASTE-PHILIS/LYSIS-PHILIS',
+      'string-id' => '#ANGELIQUE;#ALIDOR,#ANGELIQUE;#ANGELIQUE;#ANGELIQUE,#PHILIS;#DORASTE,#PHILIS;#LYSIS,#PHILIS',
     ),
   ),
   'corneillep_placeroyale_II02' => 
@@ -86081,6 +87037,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ALIDOR-ANGÉLIQUE/ANGÉLIQUE/ANGÉLIQUE-PHILIS/DORASTE-PHILIS/LYSIS-PHILIS/CLÉANDRE-LYSIS-PHILIS',
+      'string-id' => '#ALIDOR,#ANGELIQUE;#ANGELIQUE;#ANGELIQUE,#PHILIS;#DORASTE,#PHILIS;#LYSIS,#PHILIS;#CLEANDRE,#LYSIS,#PHILIS',
     ),
   ),
   'corneillep_placeroyale_II03' => 
@@ -86148,6 +87105,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ANGÉLIQUE/ANGÉLIQUE-PHILIS/DORASTE-PHILIS/LYSIS-PHILIS/CLÉANDRE-LYSIS-PHILIS/CLÉANDRE-PHILIS',
+      'string-id' => '#ANGELIQUE;#ANGELIQUE,#PHILIS;#DORASTE,#PHILIS;#LYSIS,#PHILIS;#CLEANDRE,#LYSIS,#PHILIS;#CLEANDRE,#PHILIS',
     ),
   ),
   'corneillep_placeroyale_III01' => 
@@ -86215,6 +87173,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CLÉANDRE-PHILIS/CLÉANDRE-DORASTE-PHILIS/CLÉANDRE/ALIDOR-CLÉANDRE/ANGÉLIQUE/ALIDOR-ANGÉLIQUE',
+      'string-id' => '#CLEANDRE,#PHILIS;#CLEANDRE,#DORASTE,#PHILIS;#CLEANDRE;#ALIDOR,#CLEANDRE;#ANGELIQUE;#ALIDOR,#ANGELIQUE',
     ),
   ),
   'corneillep_placeroyale_III02' => 
@@ -86282,6 +87241,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CLÉANDRE-DORASTE-PHILIS/CLÉANDRE/ALIDOR-CLÉANDRE/ANGÉLIQUE/ALIDOR-ANGÉLIQUE/PHILIS',
+      'string-id' => '#CLEANDRE,#DORASTE,#PHILIS;#CLEANDRE;#ALIDOR,#CLEANDRE;#ANGELIQUE;#ALIDOR,#ANGELIQUE;#PHILIS',
     ),
   ),
   'corneillep_placeroyale_III03' => 
@@ -86349,6 +87309,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CLÉANDRE/ALIDOR-CLÉANDRE/ANGÉLIQUE/ALIDOR-ANGÉLIQUE/PHILIS/LYSIS-PHILIS',
+      'string-id' => '#CLEANDRE;#ALIDOR,#CLEANDRE;#ANGELIQUE;#ALIDOR,#ANGELIQUE;#PHILIS;#LYSIS,#PHILIS',
     ),
   ),
   'corneillep_placeroyale_IV01' => 
@@ -86407,6 +87368,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ALIDOR/ALIDOR-CLÉANDRE/ALIDOR-ANGÉLIQUE/PHILIS/ALIDOR/ALIDOR-ANGÉLIQUE',
+      'string-id' => '#ALIDOR;#ALIDOR,#CLEANDRE;#ALIDOR,#ANGELIQUE;#PHILIS;#ALIDOR;#ALIDOR,#ANGELIQUE',
     ),
   ),
   'corneillep_placeroyale_IV02' => 
@@ -86474,6 +87436,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ALIDOR-CLÉANDRE/ALIDOR-ANGÉLIQUE/PHILIS/ALIDOR/ALIDOR-ANGÉLIQUE/DORASTE-ANGÉLIQUE',
+      'string-id' => '#ALIDOR,#CLEANDRE;#ALIDOR,#ANGELIQUE;#PHILIS;#ALIDOR;#ALIDOR,#ANGELIQUE;#DORASTE,#ANGELIQUE',
     ),
   ),
   'corneillep_placeroyale_IV03' => 
@@ -86532,6 +87495,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ALIDOR-ANGÉLIQUE/PHILIS/ALIDOR/ALIDOR-ANGÉLIQUE/DORASTE-ANGÉLIQUE/ANGÉLIQUE',
+      'string-id' => '#ALIDOR,#ANGELIQUE;#PHILIS;#ALIDOR;#ALIDOR,#ANGELIQUE;#DORASTE,#ANGELIQUE;#ANGELIQUE',
     ),
   ),
   'corneillep_placeroyale_V01' => 
@@ -86590,6 +87554,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CLÉANDRE-PHILIS/ALIDOR-CLÉANDRE-PHILIS/ALIDOR/DORASTE/DORASTE-PHILIS/CLÉANDRE-DORASTE-PHILIS',
+      'string-id' => '#CLEANDRE,#PHILIS;#ALIDOR,#CLEANDRE,#PHILIS;#ALIDOR;#DORASTE;#DORASTE,#PHILIS;#CLEANDRE,#DORASTE,#PHILIS',
     ),
   ),
   'corneillep_placeroyale_V02' => 
@@ -86657,6 +87622,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ALIDOR-CLÉANDRE-PHILIS/ALIDOR/DORASTE/DORASTE-PHILIS/CLÉANDRE-DORASTE-PHILIS/ALIDOR-CLÉANDRE-DORASTE-ANGÉLIQUE-PHILIS',
+      'string-id' => '#ALIDOR,#CLEANDRE,#PHILIS;#ALIDOR;#DORASTE;#DORASTE,#PHILIS;#CLEANDRE,#DORASTE,#PHILIS;#ALIDOR,#CLEANDRE,#DORASTE,#ANGELIQUE,#PHILIS',
     ),
   ),
   'corneillep_placeroyale_V03' => 
@@ -86724,6 +87690,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ALIDOR/DORASTE/DORASTE-PHILIS/CLÉANDRE-DORASTE-PHILIS/ALIDOR-CLÉANDRE-DORASTE-ANGÉLIQUE-PHILIS/ALIDOR',
+      'string-id' => '#ALIDOR;#DORASTE;#DORASTE,#PHILIS;#CLEANDRE,#DORASTE,#PHILIS;#ALIDOR,#CLEANDRE,#DORASTE,#ANGELIQUE,#PHILIS;#ALIDOR',
     ),
   ),
   'corneillep_pertharite_III01' => 
@@ -86791,6 +87758,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'GARIBALDE-RODELINDE/RODELINDE-ÉDVIGE/GRIMOALD-GARIBALDE-UNULPHE-RODELINDE/PERTHARITE-GRIMOALD-GARIBALDE-UNULPHE-RODELINDE/PERTHARITE-GRIMOALD-GARIBALDE-UNULPHE/GARIBALDE',
+      'string-id' => '#GARIBALDE,#RODELINDE;#RODELINDE,#EDWIGE;#GRIMOALD,#GARIBALDE,#UNULPHE,#RODELINDE;#PERTHARITE,#GRIMOALD,#GARIBALDE,#UNULPHE,#RODELINDE;#PERTHARITE,#GRIMOALD,#GARIBALDE,#UNULPHE;#GARIBALDE',
     ),
   ),
   'corneillep_pertharite_IV01' => 
@@ -86849,6 +87817,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'GRIMOALD-GARIBALDE/GRIMOALD-GARIBALDE-ÉDVIGE/GRIMOALD-GARIBALDE-UNULPHE/PERTHARITE-GRIMOALD-GARIBALDE-UNULPHE-RODELINDE/PERTHARITE-RODELINDE/PERTHARITE-UNULPHE-RODELINDE',
+      'string-id' => '#GRIMOALD,#GARIBALDE;#GRIMOALD,#GARIBALDE,#EDWIGE;#GRIMOALD,#GARIBALDE,#UNULPHE;#PERTHARITE,#GRIMOALD,#GARIBALDE,#UNULPHE,#RODELINDE;#PERTHARITE,#RODELINDE;#PERTHARITE,#UNULPHE,#RODELINDE',
     ),
   ),
   'corneillep_othon_II01' => 
@@ -86907,6 +87876,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'PLAUTINE-FLAVIE/PLAUTINE-MARTIAN-FLAVIE/LACUS-PLAUTINE-MARTIAN-FLAVIE/LACUS-MARTIAN/LACUS-CAMILLE-MARTIAN-ALBIANE/LACUS-MARTIAN',
+      'string-id' => '#PLAUTINE,#FLAVIE;#PLAUTINE,#MARTIAN,#FLAVIE;#LACUS,#PLAUTINE,#MARTIAN,#FLAVIE;#LACUS,#MARTIAN;#LACUS,#CAMILLE,#MARTIAN,#ALBIANE;#LACUS,#MARTIAN',
     ),
   ),
   'corneillep_othon_IV01' => 
@@ -86974,6 +87944,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'OTHON-PLAUTINE/VINIUS-OTHON-PLAUTINE/VINIUS-PLAUTINE/CAMILLE-PLAUTINE-ALBIANE/CAMILLE-MARTIAN-ALBIANE/CAMILLE-ALBIANE',
+      'string-id' => '#OTHON,#PLAUTINE;#VINIUS,#OTHON,#PLAUTINE;#VINIUS,#PLAUTINE;#CAMILLE,#PLAUTINE,#ALBIANE;#CAMILLE,#MARTIAN,#ALBIANE;#CAMILLE,#ALBIANE',
     ),
   ),
   'corneillep_othon_IV02' => 
@@ -87050,6 +88021,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'VINIUS-OTHON-PLAUTINE/VINIUS-PLAUTINE/CAMILLE-PLAUTINE-ALBIANE/CAMILLE-MARTIAN-ALBIANE/CAMILLE-ALBIANE/CAMILLE-ALBIANE-RUTILE',
+      'string-id' => '#VINIUS,#OTHON,#PLAUTINE;#VINIUS,#PLAUTINE;#CAMILLE,#PLAUTINE,#ALBIANE;#CAMILLE,#MARTIAN,#ALBIANE;#CAMILLE,#ALBIANE;#CAMILLE,#ALBIANE,#RUTILE',
     ),
   ),
   'corneillep_othon_V01' => 
@@ -87144,6 +88116,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'GALBA-CAMILLE-ALBIANE-RUTILE/GALBA-VINIUS-LACUS-CAMILLE-ALBIANE/GALBA-VINIUS-LACUS-CAMILLE-PLAUTINE-ALBIANE-RUTILE/GALBA-VINIUS-CAMILLE-MARTIAN-ATTICUS/PLAUTINE-MARTIAN-ATTICUS/PLAUTINE-FLAVIE',
+      'string-id' => '#GALBA,#CAMILLE,#ALBIANE,#RUTILE;#GALBA,#VINIUS,#LACUS,#CAMILLE,#ALBIANE;#GALBA,#VINIUS,#LACUS,#CAMILLE,#PLAUTINE,#ALBIANE,#RUTILE;#GALBA,#VINIUS,#CAMILLE,#MARTIAN,#ATTICUS;#PLAUTINE,#MARTIAN,#ATTICUS;#PLAUTINE,#FLAVIE',
     ),
   ),
   'corneillep_othon_V02' => 
@@ -87229,6 +88202,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'GALBA-VINIUS-LACUS-CAMILLE-ALBIANE/GALBA-VINIUS-LACUS-CAMILLE-PLAUTINE-ALBIANE-RUTILE/GALBA-VINIUS-CAMILLE-MARTIAN-ATTICUS/PLAUTINE-MARTIAN-ATTICUS/PLAUTINE-FLAVIE/OTHON-PLAUTINE-FLAVIE',
+      'string-id' => '#GALBA,#VINIUS,#LACUS,#CAMILLE,#ALBIANE;#GALBA,#VINIUS,#LACUS,#CAMILLE,#PLAUTINE,#ALBIANE,#RUTILE;#GALBA,#VINIUS,#CAMILLE,#MARTIAN,#ATTICUS;#PLAUTINE,#MARTIAN,#ATTICUS;#PLAUTINE,#FLAVIE;#OTHON,#PLAUTINE,#FLAVIE',
     ),
   ),
   'corneillep_othon_V03' => 
@@ -87314,6 +88288,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'GALBA-VINIUS-LACUS-CAMILLE-PLAUTINE-ALBIANE-RUTILE/GALBA-VINIUS-CAMILLE-MARTIAN-ATTICUS/PLAUTINE-MARTIAN-ATTICUS/PLAUTINE-FLAVIE/OTHON-PLAUTINE-FLAVIE/OTHON-ALBIN',
+      'string-id' => '#GALBA,#VINIUS,#LACUS,#CAMILLE,#PLAUTINE,#ALBIANE,#RUTILE;#GALBA,#VINIUS,#CAMILLE,#MARTIAN,#ATTICUS;#PLAUTINE,#MARTIAN,#ATTICUS;#PLAUTINE,#FLAVIE;#OTHON,#PLAUTINE,#FLAVIE;#OTHON,#ALBIN',
     ),
   ),
   'corneillep_oedipe_V01' => 
@@ -87390,6 +88365,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'OEDIPE-UN PAGE/OEDIPE-IPHICRATE/OEDIPE-PHORBAS-IPHICRATE/OEDIPE-IPHICRATE/OEDIPE-DIRCÉ-IPHICRATE/OEDIPE-THÉSÉE-DIRCÉ-IPHICRATE',
+      'string-id' => '#OEDIPE,#PAGE;#OEDIPE,#IPHICRATE;#OEDIPE,#PHORBAS,#IPHICRATE;#OEDIPE,#IPHICRATE;#OEDIPE,#DIRCE,#IPHICRATE;#OEDIPE,#THESEE,#DIRCE,#IPHICRATE',
     ),
   ),
   'corneillep_oedipe_V02' => 
@@ -87448,6 +88424,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'OEDIPE-IPHICRATE/OEDIPE-PHORBAS-IPHICRATE/OEDIPE-IPHICRATE/OEDIPE-DIRCÉ-IPHICRATE/OEDIPE-THÉSÉE-DIRCÉ-IPHICRATE/THÉSÉE-DIRCÉ',
+      'string-id' => '#OEDIPE,#IPHICRATE;#OEDIPE,#PHORBAS,#IPHICRATE;#OEDIPE,#IPHICRATE;#OEDIPE,#DIRCE,#IPHICRATE;#OEDIPE,#THESEE,#DIRCE,#IPHICRATE;#THESEE,#DIRCE',
     ),
   ),
   'corneillep_oedipe_V03' => 
@@ -87515,6 +88492,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'OEDIPE-PHORBAS-IPHICRATE/OEDIPE-IPHICRATE/OEDIPE-DIRCÉ-IPHICRATE/OEDIPE-THÉSÉE-DIRCÉ-IPHICRATE/THÉSÉE-DIRCÉ/THÉSÉE-DIRCÉ-NÉRINE',
+      'string-id' => '#OEDIPE,#PHORBAS,#IPHICRATE;#OEDIPE,#IPHICRATE;#OEDIPE,#DIRCE,#IPHICRATE;#OEDIPE,#THESEE,#DIRCE,#IPHICRATE;#THESEE,#DIRCE;#THESEE,#DIRCE,#NERINE',
     ),
   ),
   'corneillep_oedipe_V04' => 
@@ -87573,6 +88551,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'OEDIPE-IPHICRATE/OEDIPE-DIRCÉ-IPHICRATE/OEDIPE-THÉSÉE-DIRCÉ-IPHICRATE/THÉSÉE-DIRCÉ/THÉSÉE-DIRCÉ-NÉRINE/THÉSÉE-DIRCÉ-NÉRINE',
+      'string-id' => '#OEDIPE,#IPHICRATE;#OEDIPE,#DIRCE,#IPHICRATE;#OEDIPE,#THESEE,#DIRCE,#IPHICRATE;#THESEE,#DIRCE;#THESEE,#DIRCE,#NERINE;#THESEE,#DIRCE,#NERINE',
     ),
   ),
   'corneillep_nicomede_III01' => 
@@ -87640,6 +88619,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'PRUSIAS-FLAMINIUS-LAODICE/FLAMINIUS-LAODICE/FLAMINIUS-LAODICE-NICOMÈDE/LAODICE-NICOMÈDE/LAODICE-NICOMÈDE-ATTALE/NICOMÈDE-ATTALE',
+      'string-id' => '#PRUSIAS,#FLAMINIUS,#LAODICE;#FLAMINIUS,#LAODICE;#FLAMINIUS,#LAODICE,#NICOMEDE;#LAODICE,#NICOMEDE;#LAODICE,#NICOMEDE,#ATTALE;#NICOMEDE,#ATTALE',
     ),
   ),
   'corneillep_nicomede_III02' => 
@@ -87707,6 +88687,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'FLAMINIUS-LAODICE/FLAMINIUS-LAODICE-NICOMÈDE/LAODICE-NICOMÈDE/LAODICE-NICOMÈDE-ATTALE/NICOMÈDE-ATTALE/ARSINOÉ-NICOMÈDE-ATTALE-ARASPE',
+      'string-id' => '#FLAMINIUS,#LAODICE;#FLAMINIUS,#LAODICE,#NICOMEDE;#LAODICE,#NICOMEDE;#LAODICE,#NICOMEDE,#ATTALE;#NICOMEDE,#ATTALE;#ARSINOE,#NICOMEDE,#ATTALE,#ARASPE',
     ),
   ),
   'corneillep_nicomede_III03' => 
@@ -87783,6 +88764,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'FLAMINIUS-LAODICE-NICOMÈDE/LAODICE-NICOMÈDE/LAODICE-NICOMÈDE-ATTALE/NICOMÈDE-ATTALE/ARSINOÉ-NICOMÈDE-ATTALE-ARASPE/ARSINOÉ-ATTALE',
+      'string-id' => '#FLAMINIUS,#LAODICE,#NICOMEDE;#LAODICE,#NICOMEDE;#LAODICE,#NICOMEDE,#ATTALE;#NICOMEDE,#ATTALE;#ARSINOE,#NICOMEDE,#ATTALE,#ARASPE;#ARSINOE,#ATTALE',
     ),
   ),
   'corneillep_nicomede_IV01' => 
@@ -87850,6 +88832,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'PRUSIAS-ARSINOÉ-ARASPE/PRUSIAS-ARSINOÉ-NICOMÈDE-ARASPE/PRUSIAS-NICOMÈDE-ARASPE/PRUSIAS-FLAMINIUS-NICOMÈDE-ATTALE-ARASPE/FLAMINIUS-ATTALE/ATTALE',
+      'string-id' => '#PRUSIAS,#ARSINOE,#ARASPE;#PRUSIAS,#ARSINOE,#NICOMEDE,#ARASPE;#PRUSIAS,#NICOMEDE,#ARASPE;#PRUSIAS,#FLAMINIUS,#NICOMEDE,#ATTALE,#ARASPE;#FLAMINIUS,#ATTALE;#ATTALE',
     ),
   ),
   'corneillep_nicomede_V01' => 
@@ -87926,6 +88909,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ARSINOÉ-ATTALE/FLAMINIUS-ARSINOÉ-ATTALE/PRUSIAS-FLAMINIUS-ARSINOÉ-ATTALE/PRUSIAS-FLAMINIUS-ARSINOÉ-ATTALE/PRUSIAS-FLAMINIUS-ARSINOÉ-ATTALE-ARASPE/ARSINOÉ-LAODICE',
+      'string-id' => '#ARSINOE,#ATTALE;#FLAMINIUS,#ARSINOE,#ATTALE;#PRUSIAS,#FLAMINIUS,#ARSINOE,#ATTALE;#PRUSIAS,#FLAMINIUS,#ARSINOE,#ATTALE;#PRUSIAS,#FLAMINIUS,#ARSINOE,#ATTALE,#ARASPE;#ARSINOE,#LAODICE',
     ),
   ),
   'corneillep_nicomede_V02' => 
@@ -88002,6 +88986,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'FLAMINIUS-ARSINOÉ-ATTALE/PRUSIAS-FLAMINIUS-ARSINOÉ-ATTALE/PRUSIAS-FLAMINIUS-ARSINOÉ-ATTALE/PRUSIAS-FLAMINIUS-ARSINOÉ-ATTALE-ARASPE/ARSINOÉ-LAODICE/ARSINOÉ-LAODICE-ATTALE',
+      'string-id' => '#FLAMINIUS,#ARSINOE,#ATTALE;#PRUSIAS,#FLAMINIUS,#ARSINOE,#ATTALE;#PRUSIAS,#FLAMINIUS,#ARSINOE,#ATTALE;#PRUSIAS,#FLAMINIUS,#ARSINOE,#ATTALE,#ARASPE;#ARSINOE,#LAODICE;#ARSINOE,#LAODICE,#ATTALE',
     ),
   ),
   'corneillep_nicomede_V03' => 
@@ -88069,6 +89054,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'PRUSIAS-FLAMINIUS-ARSINOÉ-ATTALE/PRUSIAS-FLAMINIUS-ARSINOÉ-ATTALE/PRUSIAS-FLAMINIUS-ARSINOÉ-ATTALE-ARASPE/ARSINOÉ-LAODICE/ARSINOÉ-LAODICE-ATTALE/PRUSIAS-FLAMINIUS-ARSINOÉ-LAODICE-ATTALE',
+      'string-id' => '#PRUSIAS,#FLAMINIUS,#ARSINOE,#ATTALE;#PRUSIAS,#FLAMINIUS,#ARSINOE,#ATTALE;#PRUSIAS,#FLAMINIUS,#ARSINOE,#ATTALE,#ARASPE;#ARSINOE,#LAODICE;#ARSINOE,#LAODICE,#ATTALE;#PRUSIAS,#FLAMINIUS,#ARSINOE,#LAODICE,#ATTALE',
     ),
   ),
   'corneillep_nicomede_V04' => 
@@ -88145,6 +89131,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'PRUSIAS-FLAMINIUS-ARSINOÉ-ATTALE/PRUSIAS-FLAMINIUS-ARSINOÉ-ATTALE-ARASPE/ARSINOÉ-LAODICE/ARSINOÉ-LAODICE-ATTALE/PRUSIAS-FLAMINIUS-ARSINOÉ-LAODICE-ATTALE/PRUSIAS-FLAMINIUS-ARSINOÉ-LAODICE-NICOMÈDE-ATTALE',
+      'string-id' => '#PRUSIAS,#FLAMINIUS,#ARSINOE,#ATTALE;#PRUSIAS,#FLAMINIUS,#ARSINOE,#ATTALE,#ARASPE;#ARSINOE,#LAODICE;#ARSINOE,#LAODICE,#ATTALE;#PRUSIAS,#FLAMINIUS,#ARSINOE,#LAODICE,#ATTALE;#PRUSIAS,#FLAMINIUS,#ARSINOE,#LAODICE,#NICOMEDE,#ATTALE',
     ),
   ),
   'corneillep_menteur_I01' => 
@@ -88194,6 +89181,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'DORANTE/DORANTE-CLARICE-LUCRÈCE/DORANTE-CLARICE-LUCRÈCE/DORANTE/DORANTE-ALCIPPE-PHILISTE/DORANTE',
+      'string-id' => '#DORANTE;#DORANTE,#CLARICE,#LUCRECE;#DORANTE,#CLARICE,#LUCRECE;#DORANTE;#DORANTE,#ALCIPPE,#PHILISTE;#DORANTE',
     ),
   ),
   'corneillep_menteur_II01' => 
@@ -88252,6 +89240,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'GÉRONTE-CLARICE/CLARICE/ALCIPPE-CLARICE/ALCIPPE/GÉRONTE-DORANTE/DORANTE',
+      'string-id' => '#GERONTE,#CLARICE;#CLARICE;#ALCIPPE,#CLARICE;#ALCIPPE;#GERONTE,#DORANTE;#DORANTE',
     ),
   ),
   'corneillep_menteur_II02' => 
@@ -88319,6 +89308,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CLARICE/ALCIPPE-CLARICE/ALCIPPE/GÉRONTE-DORANTE/DORANTE/DORANTE-SABINE',
+      'string-id' => '#CLARICE;#ALCIPPE,#CLARICE;#ALCIPPE;#GERONTE,#DORANTE;#DORANTE;#DORANTE,#SABINE',
     ),
   ),
   'corneillep_menteur_II03' => 
@@ -88386,6 +89376,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ALCIPPE-CLARICE/ALCIPPE/GÉRONTE-DORANTE/DORANTE/DORANTE-SABINE/DORANTE',
+      'string-id' => '#ALCIPPE,#CLARICE;#ALCIPPE;#GERONTE,#DORANTE;#DORANTE;#DORANTE,#SABINE;#DORANTE',
     ),
   ),
   'corneillep_menteur_III01' => 
@@ -88444,6 +89435,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'DORANTE-ALCIPPE-PHILISTE/ALCIPPE-PHILISTE/CLARICE/DORANTE/DORANTE-CLARICE-LUCRÈCE/DORANTE',
+      'string-id' => '#DORANTE,#ALCIPPE,#PHILISTE;#ALCIPPE,#PHILISTE;#CLARICE;#DORANTE;#DORANTE,#CLARICE,#LUCRECE;#DORANTE',
     ),
   ),
   'corneillep_menteur_IV01' => 
@@ -88502,6 +89494,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'DORANTE/DORANTE-ALCIPPE/DORANTE/GÉRONTE-DORANTE/DORANTE/DORANTE-SABINE',
+      'string-id' => '#DORANTE;#DORANTE,#ALCIPPE;#DORANTE;#GERONTE,#DORANTE;#DORANTE;#DORANTE,#SABINE',
     ),
   ),
   'corneillep_menteur_IV02' => 
@@ -88560,6 +89553,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'DORANTE-ALCIPPE/DORANTE/GÉRONTE-DORANTE/DORANTE/DORANTE-SABINE/SABINE',
+      'string-id' => '#DORANTE,#ALCIPPE;#DORANTE;#GERONTE,#DORANTE;#DORANTE;#DORANTE,#SABINE;#SABINE',
     ),
   ),
   'corneillep_menteur_IV03' => 
@@ -88618,6 +89612,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'DORANTE/GÉRONTE-DORANTE/DORANTE/DORANTE-SABINE/SABINE/LUCRÈCE-SABINE',
+      'string-id' => '#DORANTE;#GERONTE,#DORANTE;#DORANTE;#DORANTE,#SABINE;#SABINE;#LUCRECE,#SABINE',
     ),
   ),
   'corneillep_menteur_IV04' => 
@@ -88685,6 +89680,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'GÉRONTE-DORANTE/DORANTE/DORANTE-SABINE/SABINE/LUCRÈCE-SABINE/CLARICE-LUCRÈCE-SABINE',
+      'string-id' => '#GERONTE,#DORANTE;#DORANTE;#DORANTE,#SABINE;#SABINE;#LUCRECE,#SABINE;#CLARICE,#LUCRECE,#SABINE',
     ),
   ),
   'corneillep_menteur_V01' => 
@@ -88752,6 +89748,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'GÉRONTE-PHILISTE/GÉRONTE/GÉRONTE-DORANTE/DORANTE/DORANTE-SABINE/DORANTE-CLARICE-LUCRÈCE-SABINE',
+      'string-id' => '#GERONTE,#PHILISTE;#GERONTE;#GERONTE,#DORANTE;#DORANTE;#DORANTE,#SABINE;#DORANTE,#CLARICE,#LUCRECE,#SABINE',
     ),
   ),
   'corneillep_menteur_V02' => 
@@ -88819,6 +89816,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'GÉRONTE/GÉRONTE-DORANTE/DORANTE/DORANTE-SABINE/DORANTE-CLARICE-LUCRÈCE-SABINE/GÉRONTE-DORANTE-ALCIPPE-CLARICE-LUCRÈCE-SABINE',
+      'string-id' => '#GERONTE;#GERONTE,#DORANTE;#DORANTE;#DORANTE,#SABINE;#DORANTE,#CLARICE,#LUCRECE,#SABINE;#GERONTE,#DORANTE,#ALCIPPE,#CLARICE,#LUCRECE,#SABINE',
     ),
   ),
   'corneillep_melite_II01' => 
@@ -88886,6 +89884,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ERASTE/ERASTE-MÉLITE/ERASTE/TIRCIS-CHLORIS/ERASTE-CLITON/ERASTE-PHILANDRE-CLITON',
+      'string-id' => '#ERASTE;#ERASTE,#MELITE;#ERASTE;#TIRCIS,#CHLORIS;#ERASTE,#CLITON;#ERASTE,#PHILANDRE,#CLITON',
     ),
   ),
   'corneillep_melite_II02' => 
@@ -88962,6 +89961,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ERASTE-MÉLITE/ERASTE/TIRCIS-CHLORIS/ERASTE-CLITON/ERASTE-PHILANDRE-CLITON/ERASTE-TIRCIS-MÉLITE',
+      'string-id' => '#ERASTE,#MELITE;#ERASTE;#TIRCIS,#CHLORIS;#ERASTE,#CLITON;#ERASTE,#PHILANDRE,#CLITON;#ERASTE,#TIRCIS,#MELITE',
     ),
   ),
   'corneillep_melite_II03' => 
@@ -89038,6 +90038,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ERASTE/TIRCIS-CHLORIS/ERASTE-CLITON/ERASTE-PHILANDRE-CLITON/ERASTE-TIRCIS-MÉLITE/TIRCIS-MÉLITE',
+      'string-id' => '#ERASTE;#TIRCIS,#CHLORIS;#ERASTE,#CLITON;#ERASTE,#PHILANDRE,#CLITON;#ERASTE,#TIRCIS,#MELITE;#TIRCIS,#MELITE',
     ),
   ),
   'corneillep_melite_III01' => 
@@ -89087,6 +90088,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'PHILANDRE/TIRCIS-PHILANDRE/TIRCIS/TIRCIS-CHLORIS/CHLORIS/PHILANDRE-CHLORIS',
+      'string-id' => '#PHILANDRE;#TIRCIS,#PHILANDRE;#TIRCIS;#TIRCIS,#CHLORIS;#CHLORIS;#PHILANDRE,#CHLORIS',
     ),
   ),
   'corneillep_melite_IV01' => 
@@ -89163,6 +90165,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'MÉLITE-LA NOURRICE DE MÉLITE/MÉLITE-CHLORIS/MÉLITE-CHLORIS-LISIS/MÉLITE-CHLORIS-LISIS-CLITON-LA NOURRICE DE MÉLITE/ERASTE/ERASTE-CLITON',
+      'string-id' => '#MELITE,#NOURRICE;#MELITE,#CHLORIS;#MELITE,#CHLORIS,#LISIS;#MELITE,#CHLORIS,#LISIS,#CLITON,#NOURRICE;#ERASTE;#ERASTE,#CLITON',
     ),
   ),
   'corneillep_melite_IV02' => 
@@ -89239,6 +90242,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'MÉLITE-CHLORIS/MÉLITE-CHLORIS-LISIS/MÉLITE-CHLORIS-LISIS-CLITON-LA NOURRICE DE MÉLITE/ERASTE/ERASTE-CLITON/PHILANDRE',
+      'string-id' => '#MELITE,#CHLORIS;#MELITE,#CHLORIS,#LISIS;#MELITE,#CHLORIS,#LISIS,#CLITON,#NOURRICE;#ERASTE;#ERASTE,#CLITON;#PHILANDRE',
     ),
   ),
   'corneillep_melite_IV03' => 
@@ -89306,6 +90310,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'MÉLITE-CHLORIS-LISIS/MÉLITE-CHLORIS-LISIS-CLITON-LA NOURRICE DE MÉLITE/ERASTE/ERASTE-CLITON/PHILANDRE/ERASTE-PHILANDRE',
+      'string-id' => '#MELITE,#CHLORIS,#LISIS;#MELITE,#CHLORIS,#LISIS,#CLITON,#NOURRICE;#ERASTE;#ERASTE,#CLITON;#PHILANDRE;#ERASTE,#PHILANDRE',
     ),
   ),
   'corneillep_melite_IV04' => 
@@ -89364,6 +90369,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'MÉLITE-CHLORIS-LISIS-CLITON-LA NOURRICE DE MÉLITE/ERASTE/ERASTE-CLITON/PHILANDRE/ERASTE-PHILANDRE/ERASTE',
+      'string-id' => '#MELITE,#CHLORIS,#LISIS,#CLITON,#NOURRICE;#ERASTE;#ERASTE,#CLITON;#PHILANDRE;#ERASTE,#PHILANDRE;#ERASTE',
     ),
   ),
   'corneillep_melite_IV05' => 
@@ -89422,6 +90428,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ERASTE/ERASTE-CLITON/PHILANDRE/ERASTE-PHILANDRE/ERASTE/CHLORIS-LISIS',
+      'string-id' => '#ERASTE;#ERASTE,#CLITON;#PHILANDRE;#ERASTE,#PHILANDRE;#ERASTE;#CHLORIS,#LISIS',
     ),
   ),
   'corneillep_melite_V01' => 
@@ -89489,6 +90496,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ERASTE-CLITON-LA NOURRICE DE MÉLITE/ERASTE-LA NOURRICE DE MÉLITE/PHILANDRE-CHLORIS/TIRCIS-MÉLITE/TIRCIS-MÉLITE-CHLORIS/ERASTE-TIRCIS-MÉLITE-CHLORIS-LA NOURRICE DE MÉLITE',
+      'string-id' => '#ERASTE,#CLITON,#NOURRICE;#ERASTE,#NOURRICE;#PHILANDRE,#CHLORIS;#TIRCIS,#MELITE;#TIRCIS,#MELITE,#CHLORIS;#ERASTE,#TIRCIS,#MELITE,#CHLORIS,#NOURRICE',
     ),
   ),
   'corneillep_medee39_V01' => 
@@ -89547,6 +90555,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'MÉDÉE/CRÉON/CRÉON-CRÉUSE-CLÉONE/JASON-CRÉUSE-CLÉONE/JASON-MÉDÉE/JASON',
+      'string-id' => '#MEDEE;#CREON;#CREON,#CREUSE,#CLEONE;#JASON,#CREUSE,#CLEONE;#JASON,#MEDEE;#JASON',
     ),
   ),
   'corneillep_illusioncomique_II01' => 
@@ -89623,6 +90632,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ALCANDRE-PRIDAMANT/MATAMORE-CLINDOR/ADRASTE-ISABELLE/MATAMORE-CLINDOR-ISABELLE/MATAMORE-CLINDOR-ISABELLE-PAGE du CAPITAN/CLINDOR-ISABELLE',
+      'string-id' => '#ALCANDRE,#PRIDAMANT;#MATAMORE,#CLINDOR;#ADRASTE,#ISABELLE;#MATAMORE,#CLINDOR,#ISABELLE;#MATAMORE,#CLINDOR,#ISABELLE,#PAGE;#CLINDOR,#ISABELLE',
     ),
   ),
   'corneillep_illusioncomique_II02' => 
@@ -89690,6 +90700,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'MATAMORE-CLINDOR/ADRASTE-ISABELLE/MATAMORE-CLINDOR-ISABELLE/MATAMORE-CLINDOR-ISABELLE-PAGE du CAPITAN/CLINDOR-ISABELLE/CLINDOR-ADRASTE',
+      'string-id' => '#MATAMORE,#CLINDOR;#ADRASTE,#ISABELLE;#MATAMORE,#CLINDOR,#ISABELLE;#MATAMORE,#CLINDOR,#ISABELLE,#PAGE;#CLINDOR,#ISABELLE;#CLINDOR,#ADRASTE',
     ),
   ),
   'corneillep_illusioncomique_II03' => 
@@ -89766,6 +90777,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ADRASTE-ISABELLE/MATAMORE-CLINDOR-ISABELLE/MATAMORE-CLINDOR-ISABELLE-PAGE du CAPITAN/CLINDOR-ISABELLE/CLINDOR-ADRASTE/ADRASTE-LYSE',
+      'string-id' => '#ADRASTE,#ISABELLE;#MATAMORE,#CLINDOR,#ISABELLE;#MATAMORE,#CLINDOR,#ISABELLE,#PAGE;#CLINDOR,#ISABELLE;#CLINDOR,#ADRASTE;#ADRASTE,#LYSE',
     ),
   ),
   'corneillep_illusioncomique_II04' => 
@@ -89842,6 +90854,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'MATAMORE-CLINDOR-ISABELLE/MATAMORE-CLINDOR-ISABELLE-PAGE du CAPITAN/CLINDOR-ISABELLE/CLINDOR-ADRASTE/ADRASTE-LYSE/LYSE',
+      'string-id' => '#MATAMORE,#CLINDOR,#ISABELLE;#MATAMORE,#CLINDOR,#ISABELLE,#PAGE;#CLINDOR,#ISABELLE;#CLINDOR,#ADRASTE;#ADRASTE,#LYSE;#LYSE',
     ),
   ),
   'corneillep_illusioncomique_II05' => 
@@ -89918,6 +90931,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'MATAMORE-CLINDOR-ISABELLE-PAGE du CAPITAN/CLINDOR-ISABELLE/CLINDOR-ADRASTE/ADRASTE-LYSE/LYSE/ALCANDRE-PRIDAMANT',
+      'string-id' => '#MATAMORE,#CLINDOR,#ISABELLE,#PAGE;#CLINDOR,#ISABELLE;#CLINDOR,#ADRASTE;#ADRASTE,#LYSE;#LYSE;#ALCANDRE,#PRIDAMANT',
     ),
   ),
   'corneillep_illusioncomique_III01' => 
@@ -89985,6 +90999,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'GÉRONTE-ISABELLE/GÉRONTE/MATAMORE-CLINDOR-GÉRONTE/MATAMORE-CLINDOR/CLINDOR-LYSE/LYSE',
+      'string-id' => '#GERONTE,#ISABELLE;#GERONTE;#MATAMORE,#CLINDOR,#GERONTE;#MATAMORE,#CLINDOR;#CLINDOR,#LYSE;#LYSE',
     ),
   ),
   'corneillep_illusioncomique_III02' => 
@@ -90043,6 +91058,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'GÉRONTE/MATAMORE-CLINDOR-GÉRONTE/MATAMORE-CLINDOR/CLINDOR-LYSE/LYSE/MATAMORE',
+      'string-id' => '#GERONTE;#MATAMORE,#CLINDOR,#GERONTE;#MATAMORE,#CLINDOR;#CLINDOR,#LYSE;#LYSE;#MATAMORE',
     ),
   ),
   'corneillep_illusioncomique_III03' => 
@@ -90110,6 +91126,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'MATAMORE-CLINDOR-GÉRONTE/MATAMORE-CLINDOR/CLINDOR-LYSE/LYSE/MATAMORE/MATAMORE-CLINDOR-ISABELLE',
+      'string-id' => '#MATAMORE,#CLINDOR,#GERONTE;#MATAMORE,#CLINDOR;#CLINDOR,#LYSE;#LYSE;#MATAMORE;#MATAMORE,#CLINDOR,#ISABELLE',
     ),
   ),
   'corneillep_illusioncomique_III04' => 
@@ -90168,6 +91185,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'MATAMORE-CLINDOR/CLINDOR-LYSE/LYSE/MATAMORE/MATAMORE-CLINDOR-ISABELLE/MATAMORE-CLINDOR',
+      'string-id' => '#MATAMORE,#CLINDOR;#CLINDOR,#LYSE;#LYSE;#MATAMORE;#MATAMORE,#CLINDOR,#ISABELLE;#MATAMORE,#CLINDOR',
     ),
   ),
   'corneillep_illusioncomique_III05' => 
@@ -90226,6 +91244,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CLINDOR-LYSE/LYSE/MATAMORE/MATAMORE-CLINDOR-ISABELLE/MATAMORE-CLINDOR/MATAMORE-CLINDOR-ISABELLE',
+      'string-id' => '#CLINDOR,#LYSE;#LYSE;#MATAMORE;#MATAMORE,#CLINDOR,#ISABELLE;#MATAMORE,#CLINDOR;#MATAMORE,#CLINDOR,#ISABELLE',
     ),
   ),
   'corneillep_illusioncomique_III06' => 
@@ -90293,6 +91312,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'LYSE/MATAMORE/MATAMORE-CLINDOR-ISABELLE/MATAMORE-CLINDOR/MATAMORE-CLINDOR-ISABELLE/MATAMORE-CLINDOR-ADRASTE-GÉRONTE-ISABELLE-LYSE',
+      'string-id' => '#LYSE;#MATAMORE;#MATAMORE,#CLINDOR,#ISABELLE;#MATAMORE,#CLINDOR;#MATAMORE,#CLINDOR,#ISABELLE;#MATAMORE,#CLINDOR,#ADRASTE,#GERONTE,#ISABELLE,#LYSE',
     ),
   ),
   'corneillep_illusioncomique_III07' => 
@@ -90360,6 +91380,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'MATAMORE/MATAMORE-CLINDOR-ISABELLE/MATAMORE-CLINDOR/MATAMORE-CLINDOR-ISABELLE/MATAMORE-CLINDOR-ADRASTE-GÉRONTE-ISABELLE-LYSE/ALCANDRE-PRIDAMANT',
+      'string-id' => '#MATAMORE;#MATAMORE,#CLINDOR,#ISABELLE;#MATAMORE,#CLINDOR;#MATAMORE,#CLINDOR,#ISABELLE;#MATAMORE,#CLINDOR,#ADRASTE,#GERONTE,#ISABELLE,#LYSE;#ALCANDRE,#PRIDAMANT',
     ),
   ),
   'corneillep_illusioncomique_IV01' => 
@@ -90418,6 +91439,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ISABELLE/ISABELLE-LYSE/LYSE/MATAMORE-ISABELLE-LYSE/ISABELLE-LYSE/ISABELLE-LYSE-LE GEÔLIER',
+      'string-id' => '#ISABELLE;#ISABELLE,#LYSE;#LYSE;#MATAMORE,#ISABELLE,#LYSE;#ISABELLE,#LYSE;#ISABELLE,#LYSE,#GEOLIER',
     ),
   ),
   'corneillep_illusioncomique_IV02' => 
@@ -90485,6 +91507,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ISABELLE-LYSE/LYSE/MATAMORE-ISABELLE-LYSE/ISABELLE-LYSE/ISABELLE-LYSE-LE GEÔLIER/CLINDOR',
+      'string-id' => '#ISABELLE,#LYSE;#LYSE;#MATAMORE,#ISABELLE,#LYSE;#ISABELLE,#LYSE;#ISABELLE,#LYSE,#GEOLIER;#CLINDOR',
     ),
   ),
   'corneillep_illusioncomique_IV03' => 
@@ -90552,6 +91575,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'LYSE/MATAMORE-ISABELLE-LYSE/ISABELLE-LYSE/ISABELLE-LYSE-LE GEÔLIER/CLINDOR/CLINDOR-LE GEÔLIER',
+      'string-id' => '#LYSE;#MATAMORE,#ISABELLE,#LYSE;#ISABELLE,#LYSE;#ISABELLE,#LYSE,#GEOLIER;#CLINDOR;#CLINDOR,#GEOLIER',
     ),
   ),
   'corneillep_illusioncomique_IV04' => 
@@ -90610,6 +91634,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'MATAMORE-ISABELLE-LYSE/ISABELLE-LYSE/ISABELLE-LYSE-LE GEÔLIER/CLINDOR/CLINDOR-LE GEÔLIER/CLINDOR-ISABELLE-LYSE-LE GEÔLIER',
+      'string-id' => '#MATAMORE,#ISABELLE,#LYSE;#ISABELLE,#LYSE;#ISABELLE,#LYSE,#GEOLIER;#CLINDOR;#CLINDOR,#GEOLIER;#CLINDOR,#ISABELLE,#LYSE,#GEOLIER',
     ),
   ),
   'corneillep_illusioncomique_IV05' => 
@@ -90668,6 +91693,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ISABELLE-LYSE/ISABELLE-LYSE-LE GEÔLIER/CLINDOR/CLINDOR-LE GEÔLIER/CLINDOR-ISABELLE-LYSE-LE GEÔLIER/ALCANDRE-PRIDAMANT',
+      'string-id' => '#ISABELLE,#LYSE;#ISABELLE,#LYSE,#GEOLIER;#CLINDOR;#CLINDOR,#GEOLIER;#CLINDOR,#ISABELLE,#LYSE,#GEOLIER;#ALCANDRE,#PRIDAMANT',
     ),
   ),
   'corneillep_horace_II01' => 
@@ -90735,6 +91761,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'HORACE-CURIACE/HORACE-CURIACE-FLAVIAN/HORACE-CURIACE/HORACE-CURIACE-CAMILLE/CURIACE-CAMILLE/HORACE-CURIACE-SABINE-CAMILLE',
+      'string-id' => '#HORACE,#CURIACE;#HORACE,#CURIACE,#FLAVIAN;#HORACE,#CURIACE;#HORACE,#CURIACE,#CAMILLE;#CURIACE,#CAMILLE;#HORACE,#CURIACE,#SABINE,#CAMILLE',
     ),
   ),
   'corneillep_horace_II02' => 
@@ -90811,6 +91838,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'HORACE-CURIACE-FLAVIAN/HORACE-CURIACE/HORACE-CURIACE-CAMILLE/CURIACE-CAMILLE/HORACE-CURIACE-SABINE-CAMILLE/Le vieil HORACE-HORACE-CURIACE-SABINE',
+      'string-id' => '#HORACE,#CURIACE,#FLAVIAN;#HORACE,#CURIACE;#HORACE,#CURIACE,#CAMILLE;#CURIACE,#CAMILLE;#HORACE,#CURIACE,#SABINE,#CAMILLE;#VIEILHORACE,#HORACE,#CURIACE,#SABINE',
     ),
   ),
   'corneillep_horace_II03' => 
@@ -90878,6 +91906,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'HORACE-CURIACE/HORACE-CURIACE-CAMILLE/CURIACE-CAMILLE/HORACE-CURIACE-SABINE-CAMILLE/Le vieil HORACE-HORACE-CURIACE-SABINE/Le vieil HORACE-HORACE-CURIACE',
+      'string-id' => '#HORACE,#CURIACE;#HORACE,#CURIACE,#CAMILLE;#CURIACE,#CAMILLE;#HORACE,#CURIACE,#SABINE,#CAMILLE;#VIEILHORACE,#HORACE,#CURIACE,#SABINE;#VIEILHORACE,#HORACE,#CURIACE',
     ),
   ),
   'corneillep_horace_III01' => 
@@ -90927,6 +91956,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'SABINE/SABINE/SABINE-CAMILLE/SABINE-CAMILLE/Le vieil HORACE-HORACE-SABINE-CAMILLE/Le vieil HORACE-HORACE-SABINE-CAMILLE',
+      'string-id' => '#SABINE;#SABINE;#SABINE,#CAMILLE;#SABINE,#CAMILLE;#VIEILHORACE,#HORACE,#SABINE,#CAMILLE;#VIEILHORACE,#HORACE,#SABINE,#CAMILLE',
     ),
   ),
   'corneillep_horace_IV01' => 
@@ -91003,6 +92033,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'Le vieil HORACE-HORACE-CAMILLE/Le vieil HORACE-HORACE-VALÈRE-CAMILLE/Le vieil HORACE-HORACE-CAMILLE/CAMILLE/HORACE-CURIACE-CAMILLE-PROCULE/HORACE-PROCULE',
+      'string-id' => '#VIEILHORACE,#HORACE,#CAMILLE;#VIEILHORACE,#HORACE,#VALERE,#CAMILLE;#VIEILHORACE,#HORACE,#CAMILLE;#CAMILLE;#HORACE,#CURIACE,#CAMILLE,#PROCULE;#HORACE,#PROCULE',
     ),
   ),
   'corneillep_horace_IV02' => 
@@ -91088,6 +92119,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'Le vieil HORACE-HORACE-VALÈRE-CAMILLE/Le vieil HORACE-HORACE-CAMILLE/CAMILLE/HORACE-CURIACE-CAMILLE-PROCULE/HORACE-PROCULE/HORACE-SABINE-PROCULE',
+      'string-id' => '#VIEILHORACE,#HORACE,#VALERE,#CAMILLE;#VIEILHORACE,#HORACE,#CAMILLE;#CAMILLE;#HORACE,#CURIACE,#CAMILLE,#PROCULE;#HORACE,#PROCULE;#HORACE,#SABINE,#PROCULE',
     ),
   ),
   'corneillep_heraclius_II01' => 
@@ -91155,6 +92187,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'LÉONTINE-EUDOXE/HÉRACLIUS-LÉONTINE-EUDOXE/LÉONTINE-EUDOXE-UN PAGE/LÉONTINE-EUDOXE-EXUPÈRE/MARTIAN-LÉONTINE-EUDOXE-EXUPÈRE/MARTIAN-LÉONTINE-EUDOXE',
+      'string-id' => '#LEONTINE,#EUDOXE;#HERACLIUS,#LEONTINE,#EUDOXE;#LEONTINE,#EUDOXE,#PAGE;#LEONTINE,#EUDOXE,#EXUPERE;#MARTIAN,#LEONTINE,#EUDOXE,#EXUPERE;#MARTIAN,#LEONTINE,#EUDOXE',
     ),
   ),
   'corneillep_heraclius_II02' => 
@@ -91222,6 +92255,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'HÉRACLIUS-LÉONTINE-EUDOXE/LÉONTINE-EUDOXE-UN PAGE/LÉONTINE-EUDOXE-EXUPÈRE/MARTIAN-LÉONTINE-EUDOXE-EXUPÈRE/MARTIAN-LÉONTINE-EUDOXE/LÉONTINE-EUDOXE',
+      'string-id' => '#HERACLIUS,#LEONTINE,#EUDOXE;#LEONTINE,#EUDOXE,#PAGE;#LEONTINE,#EUDOXE,#EXUPERE;#MARTIAN,#LEONTINE,#EUDOXE,#EXUPERE;#MARTIAN,#LEONTINE,#EUDOXE;#LEONTINE,#EUDOXE',
     ),
   ),
   'corneillep_heraclius_V01' => 
@@ -91289,6 +92323,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'HÉRACLIUS/HÉRACLIUS-PULCHÉRIE/PHOCAS-HÉRACLIUS-MARTIAN-PULCHÉRIE/PHOCAS-HÉRACLIUS-MARTIAN-PULCHÉRIE-CRISPE/HÉRACLIUS-MARTIAN-PULCHÉRIE/HÉRACLIUS-MARTIAN-PULCHÉRIE',
+      'string-id' => '#HERACLIUS;#HERACLIUS,#PULCHERIE;#PHOCAS,#HERACLIUS,#MARTIAN,#PULCHERIE;#PHOCAS,#HERACLIUS,#MARTIAN,#PULCHERIE,#CRISPE;#HERACLIUS,#MARTIAN,#PULCHERIE;#HERACLIUS,#MARTIAN,#PULCHERIE',
     ),
   ),
   'corneillep_heraclius_V02' => 
@@ -91356,6 +92391,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'HÉRACLIUS-PULCHÉRIE/PHOCAS-HÉRACLIUS-MARTIAN-PULCHÉRIE/PHOCAS-HÉRACLIUS-MARTIAN-PULCHÉRIE-CRISPE/HÉRACLIUS-MARTIAN-PULCHÉRIE/HÉRACLIUS-MARTIAN-PULCHÉRIE/HÉRACLIUS-MARTIAN-PULCHÉRIE-LÉONTINE-EUDOXE-EXUPÈRE',
+      'string-id' => '#HERACLIUS,#PULCHERIE;#PHOCAS,#HERACLIUS,#MARTIAN,#PULCHERIE;#PHOCAS,#HERACLIUS,#MARTIAN,#PULCHERIE,#CRISPE;#HERACLIUS,#MARTIAN,#PULCHERIE;#HERACLIUS,#MARTIAN,#PULCHERIE;#HERACLIUS,#MARTIAN,#PULCHERIE,#LEONTINE,#EUDOXE,#EXUPERE',
     ),
   ),
   'corneillep_galeriedupalais_I01' => 
@@ -91441,6 +92477,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ARONTE/PLEIRANTE-CÉLIDÉE/CÉLIDÉE-ARONTE/Le Libraire du palais -La Lingère du palais/DORIMANT-Le Libraire du palais /DORIMANT-HIPPOLYTE-CLÉANTE-Le Libraire du palais -La Lingère du palais',
+      'string-id' => '#ARONTE;#PLEIRANTE,#CELIDEE;#CELIDEE,#ARONTE;#LIBRAIRE,#LINGERE;#DORIMANT,#LIBRAIRE;#DORIMANT,#HIPPOLYTE,#CLEANTE,#LIBRAIRE,#LINGERE',
     ),
   ),
   'corneillep_galeriedupalais_I02' => 
@@ -91535,6 +92572,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'PLEIRANTE-CÉLIDÉE/CÉLIDÉE-ARONTE/Le Libraire du palais -La Lingère du palais/DORIMANT-Le Libraire du palais /DORIMANT-HIPPOLYTE-CLÉANTE-Le Libraire du palais -La Lingère du palais/LYSANDRE-DORIMANT-Le Libraire du palais -Le Mercier du palais',
+      'string-id' => '#PLEIRANTE,#CELIDEE;#CELIDEE,#ARONTE;#LIBRAIRE,#LINGERE;#DORIMANT,#LIBRAIRE;#DORIMANT,#HIPPOLYTE,#CLEANTE,#LIBRAIRE,#LINGERE;#LYSANDRE,#DORIMANT,#LIBRAIRE,#MERCIER',
     ),
   ),
   'corneillep_galeriedupalais_I03' => 
@@ -91620,6 +92658,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CÉLIDÉE-ARONTE/Le Libraire du palais -La Lingère du palais/DORIMANT-Le Libraire du palais /DORIMANT-HIPPOLYTE-CLÉANTE-Le Libraire du palais -La Lingère du palais/LYSANDRE-DORIMANT-Le Libraire du palais -Le Mercier du palais/LYSANDRE-DORIMANT',
+      'string-id' => '#CELIDEE,#ARONTE;#LIBRAIRE,#LINGERE;#DORIMANT,#LIBRAIRE;#DORIMANT,#HIPPOLYTE,#CLEANTE,#LIBRAIRE,#LINGERE;#LYSANDRE,#DORIMANT,#LIBRAIRE,#MERCIER;#LYSANDRE,#DORIMANT',
     ),
   ),
   'corneillep_galeriedupalais_I04' => 
@@ -91705,6 +92744,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'Le Libraire du palais -La Lingère du palais/DORIMANT-Le Libraire du palais /DORIMANT-HIPPOLYTE-CLÉANTE-Le Libraire du palais -La Lingère du palais/LYSANDRE-DORIMANT-Le Libraire du palais -Le Mercier du palais/LYSANDRE-DORIMANT/LYSANDRE-DORIMANT-CLÉANTE',
+      'string-id' => '#LIBRAIRE,#LINGERE;#DORIMANT,#LIBRAIRE;#DORIMANT,#HIPPOLYTE,#CLEANTE,#LIBRAIRE,#LINGERE;#LYSANDRE,#DORIMANT,#LIBRAIRE,#MERCIER;#LYSANDRE,#DORIMANT;#LYSANDRE,#DORIMANT,#CLEANTE',
     ),
   ),
   'corneillep_galeriedupalais_I05' => 
@@ -91790,6 +92830,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'DORIMANT-Le Libraire du palais /DORIMANT-HIPPOLYTE-CLÉANTE-Le Libraire du palais -La Lingère du palais/LYSANDRE-DORIMANT-Le Libraire du palais -Le Mercier du palais/LYSANDRE-DORIMANT/LYSANDRE-DORIMANT-CLÉANTE/HIPPOLYTE',
+      'string-id' => '#DORIMANT,#LIBRAIRE;#DORIMANT,#HIPPOLYTE,#CLEANTE,#LIBRAIRE,#LINGERE;#LYSANDRE,#DORIMANT,#LIBRAIRE,#MERCIER;#LYSANDRE,#DORIMANT;#LYSANDRE,#DORIMANT,#CLEANTE;#HIPPOLYTE',
     ),
   ),
   'corneillep_galeriedupalais_I06' => 
@@ -91884,6 +92925,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'DORIMANT-HIPPOLYTE-CLÉANTE-Le Libraire du palais -La Lingère du palais/LYSANDRE-DORIMANT-Le Libraire du palais -Le Mercier du palais/LYSANDRE-DORIMANT/LYSANDRE-DORIMANT-CLÉANTE/HIPPOLYTE/CÉLIDÉE-HIPPOLYTE',
+      'string-id' => '#DORIMANT,#HIPPOLYTE,#CLEANTE,#LIBRAIRE,#LINGERE;#LYSANDRE,#DORIMANT,#LIBRAIRE,#MERCIER;#LYSANDRE,#DORIMANT;#LYSANDRE,#DORIMANT,#CLEANTE;#HIPPOLYTE;#CELIDEE,#HIPPOLYTE',
     ),
   ),
   'corneillep_galeriedupalais_II01' => 
@@ -91942,6 +92984,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'DORIMANT-HIPPOLYTE/LYSANDRE-DORIMANT-HIPPOLYTE/LYSANDRE-DORIMANT/DORIMANT/HIPPOLYTE/CÉLIDÉE-HIPPOLYTE',
+      'string-id' => '#DORIMANT,#HIPPOLYTE;#LYSANDRE,#DORIMANT,#HIPPOLYTE;#LYSANDRE,#DORIMANT;#DORIMANT;#HIPPOLYTE;#CELIDEE,#HIPPOLYTE',
     ),
   ),
   'corneillep_galeriedupalais_II02' => 
@@ -92000,6 +93043,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'LYSANDRE-DORIMANT-HIPPOLYTE/LYSANDRE-DORIMANT/DORIMANT/HIPPOLYTE/CÉLIDÉE-HIPPOLYTE/CÉLIDÉE',
+      'string-id' => '#LYSANDRE,#DORIMANT,#HIPPOLYTE;#LYSANDRE,#DORIMANT;#DORIMANT;#HIPPOLYTE;#CELIDEE,#HIPPOLYTE;#CELIDEE',
     ),
   ),
   'corneillep_galeriedupalais_II03' => 
@@ -92058,6 +93102,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'LYSANDRE-DORIMANT/DORIMANT/HIPPOLYTE/CÉLIDÉE-HIPPOLYTE/CÉLIDÉE/LYSANDRE-CÉLIDÉE',
+      'string-id' => '#LYSANDRE,#DORIMANT;#DORIMANT;#HIPPOLYTE;#CELIDEE,#HIPPOLYTE;#CELIDEE;#LYSANDRE,#CELIDEE',
     ),
   ),
   'corneillep_galeriedupalais_II04' => 
@@ -92116,6 +93161,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'DORIMANT/HIPPOLYTE/CÉLIDÉE-HIPPOLYTE/CÉLIDÉE/LYSANDRE-CÉLIDÉE/LYSANDRE',
+      'string-id' => '#DORIMANT;#HIPPOLYTE;#CELIDEE,#HIPPOLYTE;#CELIDEE;#LYSANDRE,#CELIDEE;#LYSANDRE',
     ),
   ),
   'corneillep_galeriedupalais_III01' => 
@@ -92174,6 +93220,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'LYSANDRE-ARONTE/ARONTE/HIPPOLYTE/CÉLIDÉE-HIPPOLYTE/LYSANDRE-CÉLIDÉE-HIPPOLYTE/LYSANDRE-HIPPOLYTE',
+      'string-id' => '#LYSANDRE,#ARONTE;#ARONTE;#HIPPOLYTE;#CELIDEE,#HIPPOLYTE;#LYSANDRE,#CELIDEE,#HIPPOLYTE;#LYSANDRE,#HIPPOLYTE',
     ),
   ),
   'corneillep_galeriedupalais_III02' => 
@@ -92241,6 +93288,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ARONTE/HIPPOLYTE/CÉLIDÉE-HIPPOLYTE/LYSANDRE-CÉLIDÉE-HIPPOLYTE/LYSANDRE-HIPPOLYTE/PLEIRANTE-CHRYSANTE',
+      'string-id' => '#ARONTE;#HIPPOLYTE;#CELIDEE,#HIPPOLYTE;#LYSANDRE,#CELIDEE,#HIPPOLYTE;#LYSANDRE,#HIPPOLYTE;#PLEIRANTE,#CHRYSANTE',
     ),
   ),
   'corneillep_galeriedupalais_III03' => 
@@ -92308,6 +93356,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'HIPPOLYTE/CÉLIDÉE-HIPPOLYTE/LYSANDRE-CÉLIDÉE-HIPPOLYTE/LYSANDRE-HIPPOLYTE/PLEIRANTE-CHRYSANTE/CHRYSANTE-HIPPOLYTE',
+      'string-id' => '#HIPPOLYTE;#CELIDEE,#HIPPOLYTE;#LYSANDRE,#CELIDEE,#HIPPOLYTE;#LYSANDRE,#HIPPOLYTE;#PLEIRANTE,#CHRYSANTE;#CHRYSANTE,#HIPPOLYTE',
     ),
   ),
   'corneillep_galeriedupalais_III04' => 
@@ -92375,6 +93424,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CÉLIDÉE-HIPPOLYTE/LYSANDRE-CÉLIDÉE-HIPPOLYTE/LYSANDRE-HIPPOLYTE/PLEIRANTE-CHRYSANTE/CHRYSANTE-HIPPOLYTE/HIPPOLYTE',
+      'string-id' => '#CELIDEE,#HIPPOLYTE;#LYSANDRE,#CELIDEE,#HIPPOLYTE;#LYSANDRE,#HIPPOLYTE;#PLEIRANTE,#CHRYSANTE;#CHRYSANTE,#HIPPOLYTE;#HIPPOLYTE',
     ),
   ),
   'corneillep_galeriedupalais_III05' => 
@@ -92442,6 +93492,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'LYSANDRE-CÉLIDÉE-HIPPOLYTE/LYSANDRE-HIPPOLYTE/PLEIRANTE-CHRYSANTE/CHRYSANTE-HIPPOLYTE/HIPPOLYTE/CÉLIDÉE',
+      'string-id' => '#LYSANDRE,#CELIDEE,#HIPPOLYTE;#LYSANDRE,#HIPPOLYTE;#PLEIRANTE,#CHRYSANTE;#CHRYSANTE,#HIPPOLYTE;#HIPPOLYTE;#CELIDEE',
     ),
   ),
   'corneillep_galeriedupalais_III06' => 
@@ -92518,6 +93569,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'LYSANDRE-HIPPOLYTE/PLEIRANTE-CHRYSANTE/CHRYSANTE-HIPPOLYTE/HIPPOLYTE/CÉLIDÉE/DORIMANT-CÉLIDÉE',
+      'string-id' => '#LYSANDRE,#HIPPOLYTE;#PLEIRANTE,#CHRYSANTE;#CHRYSANTE,#HIPPOLYTE;#HIPPOLYTE;#CELIDEE;#DORIMANT,#CELIDEE',
     ),
   ),
   'corneillep_galeriedupalais_III07' => 
@@ -92585,6 +93637,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'PLEIRANTE-CHRYSANTE/CHRYSANTE-HIPPOLYTE/HIPPOLYTE/CÉLIDÉE/DORIMANT-CÉLIDÉE/DORIMANT',
+      'string-id' => '#PLEIRANTE,#CHRYSANTE;#CHRYSANTE,#HIPPOLYTE;#HIPPOLYTE;#CELIDEE;#DORIMANT,#CELIDEE;#DORIMANT',
     ),
   ),
   'corneillep_galeriedupalais_IV01' => 
@@ -92643,6 +93696,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'HIPPOLYTE-ARONTE/DORIMANT-CÉLIDÉE-ARONTE/DORIMANT-CÉLIDÉE/LYSANDRE-ARONTE/LYSANDRE/LYSANDRE-HIPPOLYTE',
+      'string-id' => '#HIPPOLYTE,#ARONTE;#DORIMANT,#CELIDEE,#ARONTE;#DORIMANT,#CELIDEE;#LYSANDRE,#ARONTE;#LYSANDRE;#LYSANDRE,#HIPPOLYTE',
     ),
   ),
   'corneillep_galeriedupalais_IV02' => 
@@ -92701,6 +93755,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'DORIMANT-CÉLIDÉE-ARONTE/DORIMANT-CÉLIDÉE/LYSANDRE-ARONTE/LYSANDRE/LYSANDRE-HIPPOLYTE/HIPPOLYTE',
+      'string-id' => '#DORIMANT,#CELIDEE,#ARONTE;#DORIMANT,#CELIDEE;#LYSANDRE,#ARONTE;#LYSANDRE;#LYSANDRE,#HIPPOLYTE;#HIPPOLYTE',
     ),
   ),
   'corneillep_galeriedupalais_IV03' => 
@@ -92768,6 +93823,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'DORIMANT-CÉLIDÉE/LYSANDRE-ARONTE/LYSANDRE/LYSANDRE-HIPPOLYTE/HIPPOLYTE/CÉLIDÉE-HIPPOLYTE',
+      'string-id' => '#DORIMANT,#CELIDEE;#LYSANDRE,#ARONTE;#LYSANDRE;#LYSANDRE,#HIPPOLYTE;#HIPPOLYTE;#CELIDEE,#HIPPOLYTE',
     ),
   ),
   'corneillep_galeriedupalais_IV04' => 
@@ -92835,6 +93891,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'LYSANDRE-ARONTE/LYSANDRE/LYSANDRE-HIPPOLYTE/HIPPOLYTE/CÉLIDÉE-HIPPOLYTE/PLEIRANTE-HIPPOLYTE',
+      'string-id' => '#LYSANDRE,#ARONTE;#LYSANDRE;#LYSANDRE,#HIPPOLYTE;#HIPPOLYTE;#CELIDEE,#HIPPOLYTE;#PLEIRANTE,#HIPPOLYTE',
     ),
   ),
   'corneillep_galeriedupalais_IV05' => 
@@ -92893,6 +93950,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'LYSANDRE/LYSANDRE-HIPPOLYTE/HIPPOLYTE/CÉLIDÉE-HIPPOLYTE/PLEIRANTE-HIPPOLYTE/PLEIRANTE-CÉLIDÉE',
+      'string-id' => '#LYSANDRE;#LYSANDRE,#HIPPOLYTE;#HIPPOLYTE;#CELIDEE,#HIPPOLYTE;#PLEIRANTE,#HIPPOLYTE;#PLEIRANTE,#CELIDEE',
     ),
   ),
   'corneillep_galeriedupalais_IV06' => 
@@ -92951,6 +94009,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'LYSANDRE-HIPPOLYTE/HIPPOLYTE/CÉLIDÉE-HIPPOLYTE/PLEIRANTE-HIPPOLYTE/PLEIRANTE-CÉLIDÉE/CÉLIDÉE',
+      'string-id' => '#LYSANDRE,#HIPPOLYTE;#HIPPOLYTE;#CELIDEE,#HIPPOLYTE;#PLEIRANTE,#HIPPOLYTE;#PLEIRANTE,#CELIDEE;#CELIDEE',
     ),
   ),
   'corneillep_galeriedupalais_IV07' => 
@@ -93009,6 +94068,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'HIPPOLYTE/CÉLIDÉE-HIPPOLYTE/PLEIRANTE-HIPPOLYTE/PLEIRANTE-CÉLIDÉE/CÉLIDÉE/Le Mercier du palais-La Lingère du palais',
+      'string-id' => '#HIPPOLYTE;#CELIDEE,#HIPPOLYTE;#PLEIRANTE,#HIPPOLYTE;#PLEIRANTE,#CELIDEE;#CELIDEE;#MERCIER,#LINGERE',
     ),
   ),
   'corneillep_galeriedupalais_IV08' => 
@@ -93076,6 +94136,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CÉLIDÉE-HIPPOLYTE/PLEIRANTE-HIPPOLYTE/PLEIRANTE-CÉLIDÉE/CÉLIDÉE/Le Mercier du palais-La Lingère du palais/CLÉANTE-Le Libraire du palais -Le Mercier du palais-La Lingère du palais',
+      'string-id' => '#CELIDEE,#HIPPOLYTE;#PLEIRANTE,#HIPPOLYTE;#PLEIRANTE,#CELIDEE;#CELIDEE;#MERCIER,#LINGERE;#CLEANTE,#LIBRAIRE,#MERCIER,#LINGERE',
     ),
   ),
   'corneillep_galeriedupalais_IV09' => 
@@ -93152,6 +94213,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'PLEIRANTE-HIPPOLYTE/PLEIRANTE-CÉLIDÉE/CÉLIDÉE/Le Mercier du palais-La Lingère du palais/CLÉANTE-Le Libraire du palais -Le Mercier du palais-La Lingère du palais/ARONTE-Le Mercier du palais-La Lingère du palais',
+      'string-id' => '#PLEIRANTE,#HIPPOLYTE;#PLEIRANTE,#CELIDEE;#CELIDEE;#MERCIER,#LINGERE;#CLEANTE,#LIBRAIRE,#MERCIER,#LINGERE;#ARONTE,#MERCIER,#LINGERE',
     ),
   ),
   'corneillep_galeriedupalais_V01' => 
@@ -93219,6 +94281,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'LYSANDRE/LYSANDRE-DORIMANT/LYSANDRE-DORIMANT-CÉLIDÉE/LYSANDRE-CÉLIDÉE/DORIMANT-HIPPOLYTE/PLEIRANTE-LYSANDRE-DORIMANT',
+      'string-id' => '#LYSANDRE;#LYSANDRE,#DORIMANT;#LYSANDRE,#DORIMANT,#CELIDEE;#LYSANDRE,#CELIDEE;#DORIMANT,#HIPPOLYTE;#PLEIRANTE,#LYSANDRE,#DORIMANT',
     ),
   ),
   'corneillep_galeriedupalais_V02' => 
@@ -93286,6 +94349,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'LYSANDRE-DORIMANT/LYSANDRE-DORIMANT-CÉLIDÉE/LYSANDRE-CÉLIDÉE/DORIMANT-HIPPOLYTE/PLEIRANTE-LYSANDRE-DORIMANT/LYSANDRE-DORIMANT-CÉLIDÉE-HIPPOLYTE',
+      'string-id' => '#LYSANDRE,#DORIMANT;#LYSANDRE,#DORIMANT,#CELIDEE;#LYSANDRE,#CELIDEE;#DORIMANT,#HIPPOLYTE;#PLEIRANTE,#LYSANDRE,#DORIMANT;#LYSANDRE,#DORIMANT,#CELIDEE,#HIPPOLYTE',
     ),
   ),
   'corneillep_galeriedupalais_V03' => 
@@ -93362,6 +94426,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'LYSANDRE-DORIMANT-CÉLIDÉE/LYSANDRE-CÉLIDÉE/DORIMANT-HIPPOLYTE/PLEIRANTE-LYSANDRE-DORIMANT/LYSANDRE-DORIMANT-CÉLIDÉE-HIPPOLYTE/PLEIRANTE-LYSANDRE-DORIMANT-CHRYSANTE-CÉLIDÉE-HIPPOLYTE',
+      'string-id' => '#LYSANDRE,#DORIMANT,#CELIDEE;#LYSANDRE,#CELIDEE;#DORIMANT,#HIPPOLYTE;#PLEIRANTE,#LYSANDRE,#DORIMANT;#LYSANDRE,#DORIMANT,#CELIDEE,#HIPPOLYTE;#PLEIRANTE,#LYSANDRE,#DORIMANT,#CHRYSANTE,#CELIDEE,#HIPPOLYTE',
     ),
   ),
   'corneillep_donsanche_III01' => 
@@ -93429,6 +94494,7 @@
       'genreId' => 'Comedieheroique',
       'authorId' => 'CorneillePierre',
       'string' => 'DONA ELVIRE-DON ALVAR DE LUNE/DON LOPE DE GUSMAN-DON MANRIQUE DE LARE-DON ALVAR DE LUNE/DONA ISABELLE-DON ALVAR DE LUNE/DONA ISABELLE-DON LOPE DE GUSMAN-DON MANRIQUE DE LARE/DONA ISABELLE/DONA ISABELLE-BLANCHE',
+      'string-id' => '#ELVIRE,#ALVAR;#LOPE,#MANRIQUE,#ALVAR;#ISABELLE,#ALVAR;#ISABELLE,#LOPE,#MANRIQUE;#ISABELLE;#ISABELLE,#BLANCHE',
     ),
   ),
   'corneillep_donsanche_V01' => 
@@ -93514,6 +94580,7 @@
       'genreId' => 'Comedieheroique',
       'authorId' => 'CorneillePierre',
       'string' => 'DONA ELVIRE-DON ALVAR DE LUNE/DONA LÉONOR-DONA ELVIRE/DONA ISABELLE-DONA LÉONOR-DONA ELVIRE/DONA ISABELLE-DONA LÉONOR-DONA ELVIRE-BLANCHE/DONA ISABELLE-DONA LÉONOR-DONA ELVIRE-BLANCHE-CARLOS-DON LOPE DE GUSMAN-DON MANRIQUE DE LARE/DONA ISABELLE-DONA LÉONOR-DONA ELVIRE-BLANCHE-CARLOS-DON ALVAR DE LUNE',
+      'string-id' => '#ELVIRE,#ALVAR;#LEONOR,#ELVIRE;#ISABELLE,#LEONOR,#ELVIRE;#ISABELLE,#LEONOR,#ELVIRE,#BLANCHE;#ISABELLE,#LEONOR,#ELVIRE,#BLANCHE,#CARLOS,#LOPE,#MANRIQUE;#ISABELLE,#LEONOR,#ELVIRE,#BLANCHE,#CARLOS,#ALVAR',
     ),
   ),
   'corneillep_donsanche_V02' => 
@@ -93608,6 +94675,7 @@
       'genreId' => 'Comedieheroique',
       'authorId' => 'CorneillePierre',
       'string' => 'DONA LÉONOR-DONA ELVIRE/DONA ISABELLE-DONA LÉONOR-DONA ELVIRE/DONA ISABELLE-DONA LÉONOR-DONA ELVIRE-BLANCHE/DONA ISABELLE-DONA LÉONOR-DONA ELVIRE-BLANCHE-CARLOS-DON LOPE DE GUSMAN-DON MANRIQUE DE LARE/DONA ISABELLE-DONA LÉONOR-DONA ELVIRE-BLANCHE-CARLOS-DON ALVAR DE LUNE/DONA ISABELLE-DONA LÉONOR-DONA ELVIRE-BLANCHE-CARLOS-DON RAYMOND DE MONCADE-DON LOPE DE GUSMAN',
+      'string-id' => '#LEONOR,#ELVIRE;#ISABELLE,#LEONOR,#ELVIRE;#ISABELLE,#LEONOR,#ELVIRE,#BLANCHE;#ISABELLE,#LEONOR,#ELVIRE,#BLANCHE,#CARLOS,#LOPE,#MANRIQUE;#ISABELLE,#LEONOR,#ELVIRE,#BLANCHE,#CARLOS,#ALVAR;#ISABELLE,#LEONOR,#ELVIRE,#BLANCHE,#CARLOS,#RAYMOND,#LOPE',
     ),
   ),
   'corneillep_clitandre_I01' => 
@@ -93675,6 +94743,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CALISTE/ROSIDOR-LYSARQUE/CALISTE/CALISTE-DORISE/PYMANTE-GÉRONTE/PYMANTE-GÉRONTE-LYCASTE',
+      'string-id' => '#CALISTE;#ROSIDOR,#LYSARQUE;#CALISTE;#CALISTE,#DORISE;#PYMANTE,#GERONTE;#PYMANTE,#GERONTE,#LYCASTE',
     ),
   ),
   'corneillep_clitandre_I02' => 
@@ -93760,6 +94829,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ROSIDOR-LYSARQUE/CALISTE/CALISTE-DORISE/PYMANTE-GÉRONTE/PYMANTE-GÉRONTE-LYCASTE/LYSARQUE-CLÉON',
+      'string-id' => '#ROSIDOR,#LYSARQUE;#CALISTE;#CALISTE,#DORISE;#PYMANTE,#GERONTE;#PYMANTE,#GERONTE,#LYCASTE;#LYSARQUE,#CLEON',
     ),
   ),
   'corneillep_clitandre_I03' => 
@@ -93827,6 +94897,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CALISTE/CALISTE-DORISE/PYMANTE-GÉRONTE/PYMANTE-GÉRONTE-LYCASTE/LYSARQUE-CLÉON/CALISTE-DORISE',
+      'string-id' => '#CALISTE;#CALISTE,#DORISE;#PYMANTE,#GERONTE;#PYMANTE,#GERONTE,#LYCASTE;#LYSARQUE,#CLEON;#CALISTE,#DORISE',
     ),
   ),
   'corneillep_clitandre_I04' => 
@@ -93894,6 +94965,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CALISTE-DORISE/PYMANTE-GÉRONTE/PYMANTE-GÉRONTE-LYCASTE/LYSARQUE-CLÉON/CALISTE-DORISE/ROSIDOR-PYMANTE-CALISTE-DORISE-GÉRONTE-LYCASTE',
+      'string-id' => '#CALISTE,#DORISE;#PYMANTE,#GERONTE;#PYMANTE,#GERONTE,#LYCASTE;#LYSARQUE,#CLEON;#CALISTE,#DORISE;#ROSIDOR,#PYMANTE,#CALISTE,#DORISE,#GERONTE,#LYCASTE',
     ),
   ),
   'corneillep_clitandre_II01' => 
@@ -93970,6 +95042,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'PYMANTE/PYMANTE-LYSARQUE/LYSARQUE-PREMIER ARCHER-SECOND ARCHER/FLORIDAN-CLITANDRE/FLORIDAN-CLITANDRE-CLÉON/DORISE-GÉRONTE',
+      'string-id' => '#PYMANTE;#PYMANTE,#LYSARQUE;#LYSARQUE,#ARCHER1,#ARCHER2;#FLORIDAN,#CLITANDRE;#FLORIDAN,#CLITANDRE,#CLEON;#DORISE,#GERONTE',
     ),
   ),
   'corneillep_clitandre_II02' => 
@@ -94055,6 +95128,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'PYMANTE-LYSARQUE/LYSARQUE-PREMIER ARCHER-SECOND ARCHER/FLORIDAN-CLITANDRE/FLORIDAN-CLITANDRE-CLÉON/DORISE-GÉRONTE/PYMANTE-DORISE',
+      'string-id' => '#PYMANTE,#LYSARQUE;#LYSARQUE,#ARCHER1,#ARCHER2;#FLORIDAN,#CLITANDRE;#FLORIDAN,#CLITANDRE,#CLEON;#DORISE,#GERONTE;#PYMANTE,#DORISE',
     ),
   ),
   'corneillep_clitandre_II03' => 
@@ -94131,6 +95205,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'LYSARQUE-PREMIER ARCHER-SECOND ARCHER/FLORIDAN-CLITANDRE/FLORIDAN-CLITANDRE-CLÉON/DORISE-GÉRONTE/PYMANTE-DORISE/PYMANTE',
+      'string-id' => '#LYSARQUE,#ARCHER1,#ARCHER2;#FLORIDAN,#CLITANDRE;#FLORIDAN,#CLITANDRE,#CLEON;#DORISE,#GERONTE;#PYMANTE,#DORISE;#PYMANTE',
     ),
   ),
   'corneillep_clitandre_IV01' => 
@@ -94198,6 +95273,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'PYMANTE-DORISE/PYMANTE/FLORIDAN/FLORIDAN-PYMANTE-DORISE/FLORIDAN-PYMANTE-DORISE-LYCASTE-PREMIER VENEUR-SECOND VENEUR/CLITANDRE-LE GEÔLIER',
+      'string-id' => '#PYMANTE,#DORISE;#PYMANTE;#FLORIDAN;#FLORIDAN,#PYMANTE,#DORISE;#FLORIDAN,#PYMANTE,#DORISE,#LYCASTE,#VENEUR1,#VENEUR2;#CLITANDRE,#GEOLIER',
     ),
   ),
   'corneillep_clitandre_IV02' => 
@@ -94274,6 +95350,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'PYMANTE/FLORIDAN/FLORIDAN-PYMANTE-DORISE/FLORIDAN-PYMANTE-DORISE-LYCASTE-PREMIER VENEUR-SECOND VENEUR/CLITANDRE-LE GEÔLIER/CLITANDRE',
+      'string-id' => '#PYMANTE;#FLORIDAN;#FLORIDAN,#PYMANTE,#DORISE;#FLORIDAN,#PYMANTE,#DORISE,#LYCASTE,#VENEUR1,#VENEUR2;#CLITANDRE,#GEOLIER;#CLITANDRE',
     ),
   ),
   'corneillep_clitandre_IV03' => 
@@ -94350,6 +95427,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'FLORIDAN/FLORIDAN-PYMANTE-DORISE/FLORIDAN-PYMANTE-DORISE-LYCASTE-PREMIER VENEUR-SECOND VENEUR/CLITANDRE-LE GEÔLIER/CLITANDRE/FLORIDAN-PYMANTE-DORISE-CLÉON',
+      'string-id' => '#FLORIDAN;#FLORIDAN,#PYMANTE,#DORISE;#FLORIDAN,#PYMANTE,#DORISE,#LYCASTE,#VENEUR1,#VENEUR2;#CLITANDRE,#GEOLIER;#CLITANDRE;#FLORIDAN,#PYMANTE,#DORISE,#CLEON',
     ),
   ),
   'corneillep_cinna_IV01' => 
@@ -94408,15 +95486,16 @@
       'act' => '4',
       'scene' => '1',
       'sceneId' => 'IV01',
-      'author' => 'Corneille, Pierre',
+      'author' => 'Corneille',
       'title' => 'Cinna',
       'date' => 1642,
       'lustrum' => '1641-1645',
       'genre' => 'Tragédie',
       'titleId' => 'Cinna',
       'genreId' => 'Tragedie',
-      'authorId' => 'CorneillePierre',
+      'authorId' => 'Corneille',
       'string' => 'OCTAVE-CÉSAR AUGUSTE-POLYCLÈTE-EUPHORBE/OCTAVE-CÉSAR AUGUSTE/OCTAVE-CÉSAR AUGUSTE-LIVIE/ÉMILIE/MAXIME-ÉMILIE/MAXIME',
+      'string-id' => '#AUGUSTE,#POLYCLETE,#EUPHORBE;#AUGUSTE;#AUGUSTE,#LIVIE;#EMILIE;#MAXIME,#EMILIE;#MAXIME',
     ),
   ),
   'corneillep_cid37_I01' => 
@@ -94493,6 +95572,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'DON GOMES-ELVIRE/CHIMÈNE-ELVIRE/DONA URRAQUE-LÉONOR-UN PAGE/DON DIÈGUE-DON GOMES/DON DIÈGUE/DON DIÈGUE-DON RODRIGUE',
+      'string-id' => '#COMTE,#ELVIRE;#CHIMENE,#ELVIRE;#INFANTE,#LEONOR,#PAGE;#DIEGUE,#COMTE;#DIEGUE;#DIEGUE,#RODRIGUE',
     ),
   ),
   'corneillep_cid37_I02' => 
@@ -94560,6 +95640,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CHIMÈNE-ELVIRE/DONA URRAQUE-LÉONOR-UN PAGE/DON DIÈGUE-DON GOMES/DON DIÈGUE/DON DIÈGUE-DON RODRIGUE/DON RODRIGUE',
+      'string-id' => '#CHIMENE,#ELVIRE;#INFANTE,#LEONOR,#PAGE;#DIEGUE,#COMTE;#DIEGUE;#DIEGUE,#RODRIGUE;#RODRIGUE',
     ),
   ),
   'corneillep_cid37_II01' => 
@@ -94645,6 +95726,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'DON GOMES-DON ARIAS/DON GOMES-DON RODRIGUE/DONA URRAQUE-CHIMÈNE-LÉONOR/DONA URRAQUE-CHIMÈNE-LÉONOR-UN PAGE/DONA URRAQUE-LÉONOR/DON FERNAND-DON SANCHE-DON ARIAS-DON ALONSE',
+      'string-id' => '#COMTE,#ARIAS;#COMTE,#RODRIGUE;#INFANTE,#CHIMENE,#LEONOR;#INFANTE,#CHIMENE,#LEONOR,#PAGE;#INFANTE,#LEONOR;#FERNAND,#SANCHE,#ARIAS,#ALONSE',
     ),
   ),
   'corneillep_cid37_II02' => 
@@ -94721,6 +95803,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'DON GOMES-DON RODRIGUE/DONA URRAQUE-CHIMÈNE-LÉONOR/DONA URRAQUE-CHIMÈNE-LÉONOR-UN PAGE/DONA URRAQUE-LÉONOR/DON FERNAND-DON SANCHE-DON ARIAS-DON ALONSE/DON FERNAND-DON DIÈGUE-DON SANCHE-DON ARIAS-DON ALONSE-CHIMÈNE',
+      'string-id' => '#COMTE,#RODRIGUE;#INFANTE,#CHIMENE,#LEONOR;#INFANTE,#CHIMENE,#LEONOR,#PAGE;#INFANTE,#LEONOR;#FERNAND,#SANCHE,#ARIAS,#ALONSE;#FERNAND,#DIEGUE,#SANCHE,#ARIAS,#ALONSE,#CHIMENE',
     ),
   ),
   'corneillep_cid37_III01' => 
@@ -94788,6 +95871,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'DON RODRIGUE-ELVIRE/DON SANCHE-CHIMÈNE-ELVIRE/CHIMÈNE-ELVIRE/DON RODRIGUE-CHIMÈNE-ELVIRE/DON DIÈGUE/DON DIÈGUE-DON RODRIGUE',
+      'string-id' => '#RODRIGUE,#ELVIRE;#SANCHE,#CHIMENE,#ELVIRE;#CHIMENE,#ELVIRE;#RODRIGUE,#CHIMENE,#ELVIRE;#DIEGUE;#DIEGUE,#RODRIGUE',
     ),
   ),
   'corneillep_cid37_V01' => 
@@ -94873,6 +95957,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'DON RODRIGUE-CHIMÈNE/DONA URRAQUE/DONA URRAQUE-LÉONOR/CHIMÈNE-ELVIRE/DON SANCHE-CHIMÈNE-ELVIRE/DON FERNAND-DON DIÈGUE-DON SANCHE-DON ARIAS-DON ALONSE-CHIMÈNE-ELVIRE',
+      'string-id' => '#RODRIGUE,#CHIMENE;#INFANTE;#INFANTE,#LEONOR;#CHIMENE,#ELVIRE;#SANCHE,#CHIMENE,#ELVIRE;#FERNAND,#DIEGUE,#SANCHE,#ARIAS,#ALONSE,#CHIMENE,#ELVIRE',
     ),
   ),
   'corneillep_cid37_V02' => 
@@ -94949,6 +96034,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'CorneillePierre',
       'string' => 'DONA URRAQUE/DONA URRAQUE-LÉONOR/CHIMÈNE-ELVIRE/DON SANCHE-CHIMÈNE-ELVIRE/DON FERNAND-DON DIÈGUE-DON SANCHE-DON ARIAS-DON ALONSE-CHIMÈNE-ELVIRE/DON FERNAND-DONA URRAQUE-DON DIÈGUE-DON RODRIGUE-DON SANCHE-DON ARIAS-DON ALONSE-CHIMÈNE-LÉONOR-ELVIRE',
+      'string-id' => '#INFANTE;#INFANTE,#LEONOR;#CHIMENE,#ELVIRE;#SANCHE,#CHIMENE,#ELVIRE;#FERNAND,#DIEGUE,#SANCHE,#ARIAS,#ALONSE,#CHIMENE,#ELVIRE;#FERNAND,#INFANTE,#DIEGUE,#RODRIGUE,#SANCHE,#ARIAS,#ALONSE,#CHIMENE,#LEONOR,#ELVIRE',
     ),
   ),
   'corneillep_attila_II01' => 
@@ -95025,6 +96111,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'HONORIE-FLAVIE/VALAMIR-HONORIE-FLAVIE/VALAMIR-FLAVIE/ARDARIC-VALAMIR/ARDARIC-OCTAR/ARDARIC-ILDIONE',
+      'string-id' => '#HONORIE,#FLAVIE;#VALAMIR,#HONORIE,#FLAVIE;#VALAMIR,#FLAVIE;#ARDARIC,#VALAMIR;#ARDARIC,#OCTAR;#ARDARIC,#ILDIONE',
     ),
   ),
   'corneillep_attila_IV01' => 
@@ -95101,6 +96188,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'HONORIE-OCTAR-FLAVIE/HONORIE-FLAVIE/ATTILA-HONORIE-ILDIONE-OCTAR/ATTILA-ARDARIC/ATTILA-ARDARIC-ILDIONE/ARDARIC-ILDIONE',
+      'string-id' => '#HONORIE,#OCTAR,#FLAVIE;#HONORIE,#FLAVIE;#ATTILA,#HONORIE,#ILDIONE,#OCTAR;#ATTILA,#ARDARIC;#ATTILA,#ARDARIC,#ILDIONE;#ARDARIC,#ILDIONE',
     ),
   ),
   'corneillep_attila_IV02' => 
@@ -95177,6 +96265,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'HONORIE-FLAVIE/ATTILA-HONORIE-ILDIONE-OCTAR/ATTILA-ARDARIC/ATTILA-ARDARIC-ILDIONE/ARDARIC-ILDIONE/ARDARIC-ILDIONE',
+      'string-id' => '#HONORIE,#FLAVIE;#ATTILA,#HONORIE,#ILDIONE,#OCTAR;#ATTILA,#ARDARIC;#ATTILA,#ARDARIC,#ILDIONE;#ARDARIC,#ILDIONE;#ARDARIC,#ILDIONE',
     ),
   ),
   'corneillep_attila_V01' => 
@@ -95253,6 +96342,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ARDARIC-VALAMIR/ARDARIC-VALAMIR-HONORIE/ATTILA-ARDARIC-VALAMIR-HONORIE-OCTAR/ATTILA-ARDARIC-VALAMIR-HONORIE-ILDIONE-OCTAR/HONORIE-OCTAR/VALAMIR-HONORIE-OCTAR',
+      'string-id' => '#ARDARIC,#VALAMIR;#ARDARIC,#VALAMIR,#HONORIE;#ATTILA,#ARDARIC,#VALAMIR,#HONORIE,#OCTAR;#ATTILA,#ARDARIC,#VALAMIR,#HONORIE,#ILDIONE,#OCTAR;#HONORIE,#OCTAR;#VALAMIR,#HONORIE,#OCTAR',
     ),
   ),
   'corneillep_attila_V02' => 
@@ -95329,6 +96419,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ARDARIC-VALAMIR-HONORIE/ATTILA-ARDARIC-VALAMIR-HONORIE-OCTAR/ATTILA-ARDARIC-VALAMIR-HONORIE-ILDIONE-OCTAR/HONORIE-OCTAR/VALAMIR-HONORIE-OCTAR/ARDARIC-VALAMIR-HONORIE-ILDIONE-OCTAR',
+      'string-id' => '#ARDARIC,#VALAMIR,#HONORIE;#ATTILA,#ARDARIC,#VALAMIR,#HONORIE,#OCTAR;#ATTILA,#ARDARIC,#VALAMIR,#HONORIE,#ILDIONE,#OCTAR;#HONORIE,#OCTAR;#VALAMIR,#HONORIE,#OCTAR;#ARDARIC,#VALAMIR,#HONORIE,#ILDIONE,#OCTAR',
     ),
   ),
   'corneillep_andromede_II01' => 
@@ -95432,6 +96523,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ANDROMÈDE--AGLANTE-CÉPHALIE-Un page de Phinée/ANDROMÈDE--PHINÉE-LIRIOPE-Un page de Phinée-Choeur du peuple/ANDROMÈDE--PHINÉE-TIMANTE/CÉPHÉE-ANDROMÈDE--PHINÉE-PERSÉE-TIMANTE/CÉPHÉE-ANDROMÈDE--ÉOLE-HUIT VENTS-PHINÉE-PERSÉE/CÉPHÉE--PERSÉE',
+      'string-id' => '#ANDROMEDE,#SOLEIL,#AGLANTE,#CEPHALIE,#PAGE;#ANDROMEDE,#SOLEIL,#PHINEE,#LIRIOPE,#PAGE,#CHOEUR;#ANDROMEDE,#SOLEIL,#PHINEE,#TIMANTE;#CEPHEE,#ANDROMEDE,#SOLEIL,#PHINEE,#PERSEE,#TIMANTE;#CEPHEE,#ANDROMEDE,#SOLEIL,#EOLE,#HUITVENTS,#PHINEE,#PERSEE;#CEPHEE,#SOLEIL,#PERSEE',
     ),
   ),
   'corneillep_andromede_IV01' => 
@@ -95526,6 +96618,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'ANDROMÈDE--PERSÉE/ANDROMÈDE--AGLANTE-CÉPHALIE/ANDROMÈDE--PHINÉE-AMMON/-PHINÉE-AMMON/JUNON--PHINÉE-AMMON/CÉPHÉE-CASSIOPE-ANDROMÈDE--PERSÉE-TIMANTE-AMMON-Choeur du peuple',
+      'string-id' => '#ANDROMEDE,#SOLEIL,#PERSEE;#ANDROMEDE,#SOLEIL,#AGLANTE,#CEPHALIE;#ANDROMEDE,#SOLEIL,#PHINEE,#AMMON;#SOLEIL,#PHINEE,#AMMON;#JUNON,#SOLEIL,#PHINEE,#AMMON;#CEPHEE,#CASSIOPE,#ANDROMEDE,#SOLEIL,#PERSEE,#TIMANTE,#AMMON,#CHOEUR',
     ),
   ),
   'corneillep_andromede_V01' => 
@@ -95620,6 +96713,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'PHINÉE-AMMON/CASSIOPE-ANDROMÈDE--PHINÉE/CÉPHÉE-CASSIOPE-ANDROMÈDE-/CÉPHÉE-CASSIOPE-ANDROMÈDE--AGLANTE/CÉPHÉE-CASSIOPE-ANDROMÈDE--AGLANTE-PHORBAS/CÉPHÉE-CASSIOPE-ANDROMÈDE--PERSÉE-AGLANTE-PHORBAS',
+      'string-id' => '#SOLEIL,#PHINEE,#AMMON;#CASSIOPE,#ANDROMEDE,#SOLEIL,#PHINEE;#CEPHEE,#CASSIOPE,#ANDROMEDE,#SOLEIL;#CEPHEE,#CASSIOPE,#ANDROMEDE,#SOLEIL,#AGLANTE;#CEPHEE,#CASSIOPE,#ANDROMEDE,#SOLEIL,#AGLANTE,#PHORBAS;#CEPHEE,#CASSIOPE,#ANDROMEDE,#SOLEIL,#PERSEE,#AGLANTE,#PHORBAS',
     ),
   ),
   'corneillep_andromede_V02' => 
@@ -95705,6 +96799,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CASSIOPE-ANDROMÈDE--PHINÉE/CÉPHÉE-CASSIOPE-ANDROMÈDE-/CÉPHÉE-CASSIOPE-ANDROMÈDE--AGLANTE/CÉPHÉE-CASSIOPE-ANDROMÈDE--AGLANTE-PHORBAS/CÉPHÉE-CASSIOPE-ANDROMÈDE--PERSÉE-AGLANTE-PHORBAS/CÉPHÉE-CASSIOPE-ANDROMÈDE-MERCURE--PERSÉE-AGLANTE-PHORBAS-Choeur du peuple',
+      'string-id' => '#CASSIOPE,#ANDROMEDE,#SOLEIL,#PHINEE;#CEPHEE,#CASSIOPE,#ANDROMEDE,#SOLEIL;#CEPHEE,#CASSIOPE,#ANDROMEDE,#SOLEIL,#AGLANTE;#CEPHEE,#CASSIOPE,#ANDROMEDE,#SOLEIL,#AGLANTE,#PHORBAS;#CEPHEE,#CASSIOPE,#ANDROMEDE,#SOLEIL,#PERSEE,#AGLANTE,#PHORBAS;#CEPHEE,#CASSIOPE,#ANDROMEDE,#MERCURE,#SOLEIL,#PERSEE,#AGLANTE,#PHORBAS,#CHOEUR',
     ),
   ),
   'corneillep_andromede_V03' => 
@@ -95790,6 +96885,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'CÉPHÉE-CASSIOPE-ANDROMÈDE-/CÉPHÉE-CASSIOPE-ANDROMÈDE--AGLANTE/CÉPHÉE-CASSIOPE-ANDROMÈDE--AGLANTE-PHORBAS/CÉPHÉE-CASSIOPE-ANDROMÈDE--PERSÉE-AGLANTE-PHORBAS/CÉPHÉE-CASSIOPE-ANDROMÈDE-MERCURE--PERSÉE-AGLANTE-PHORBAS-Choeur du peuple/CÉPHÉE-CASSIOPE-ANDROMÈDE-JUPITER-JUNON-NEPTUNE--PERSÉE-AGLANTE-PHORBAS-Choeur du peuple',
+      'string-id' => '#CEPHEE,#CASSIOPE,#ANDROMEDE,#SOLEIL;#CEPHEE,#CASSIOPE,#ANDROMEDE,#SOLEIL,#AGLANTE;#CEPHEE,#CASSIOPE,#ANDROMEDE,#SOLEIL,#AGLANTE,#PHORBAS;#CEPHEE,#CASSIOPE,#ANDROMEDE,#SOLEIL,#PERSEE,#AGLANTE,#PHORBAS;#CEPHEE,#CASSIOPE,#ANDROMEDE,#MERCURE,#SOLEIL,#PERSEE,#AGLANTE,#PHORBAS,#CHOEUR;#CEPHEE,#CASSIOPE,#ANDROMEDE,#JUPITER,#JUNON,#NEPTUNE,#SOLEIL,#PERSEE,#AGLANTE,#PHORBAS,#CHOEUR',
     ),
   ),
   'corneillep_agesilas_II01' => 
@@ -95866,6 +96962,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'SPITRIDATE-MANDANE/LYSANDER-SPITRIDATE-MANDANE-CLÉON/LYSANDER-MANDANE-CLÉON/LYSANDER-COTYS-CLÉON/LYSANDER-CLÉON/LYSANDER-ELPINICE-AGLATIDE',
+      'string-id' => '#SPITRIDATE,#MANDANE;#LYSANDER,#SPITRIDATE,#MANDANE,#CLEON;#LYSANDER,#MANDANE,#CLEON;#LYSANDER,#COTYS,#CLEON;#LYSANDER,#CLEON;#LYSANDER,#ELPINICE,#AGLATIDE',
     ),
   ),
   'corneillep_agesilas_V01' => 
@@ -95924,6 +97021,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'AGÉSILAS-XENOCLES/AGÉSILAS-SPITRIDATE-XENOCLES/AGÉSILAS-SPITRIDATE-MANDANE-XENOCLES/AGÉSILAS-MANDANE-XENOCLES/AGÉSILAS-XENOCLES/AGÉSILAS-LYSANDER-XENOCLES',
+      'string-id' => '#AGESILAS,#XENOCLES;#AGESILAS,#SPITRIDATE,#XENOCLES;#AGESILAS,#SPITRIDATE,#MANDANE,#XENOCLES;#AGESILAS,#MANDANE,#XENOCLES;#AGESILAS,#XENOCLES;#AGESILAS,#LYSANDER,#XENOCLES',
     ),
   ),
   'corneillep_agesilas_V02' => 
@@ -95991,6 +97089,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'AGÉSILAS-SPITRIDATE-XENOCLES/AGÉSILAS-SPITRIDATE-MANDANE-XENOCLES/AGÉSILAS-MANDANE-XENOCLES/AGÉSILAS-XENOCLES/AGÉSILAS-LYSANDER-XENOCLES/AGÉSILAS-LYSANDER',
+      'string-id' => '#AGESILAS,#SPITRIDATE,#XENOCLES;#AGESILAS,#SPITRIDATE,#MANDANE,#XENOCLES;#AGESILAS,#MANDANE,#XENOCLES;#AGESILAS,#XENOCLES;#AGESILAS,#LYSANDER,#XENOCLES;#AGESILAS,#LYSANDER',
     ),
   ),
   'corneillep_agesilas_V03' => 
@@ -96067,6 +97166,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'AGÉSILAS-SPITRIDATE-MANDANE-XENOCLES/AGÉSILAS-MANDANE-XENOCLES/AGÉSILAS-XENOCLES/AGÉSILAS-LYSANDER-XENOCLES/AGÉSILAS-LYSANDER/AGÉSILAS-LYSANDER-AGLATIDE-XENOCLES',
+      'string-id' => '#AGESILAS,#SPITRIDATE,#MANDANE,#XENOCLES;#AGESILAS,#MANDANE,#XENOCLES;#AGESILAS,#XENOCLES;#AGESILAS,#LYSANDER,#XENOCLES;#AGESILAS,#LYSANDER;#AGESILAS,#LYSANDER,#AGLATIDE,#XENOCLES',
     ),
   ),
   'corneillep_agesilas_V04' => 
@@ -96143,6 +97243,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'CorneillePierre',
       'string' => 'AGÉSILAS-MANDANE-XENOCLES/AGÉSILAS-XENOCLES/AGÉSILAS-LYSANDER-XENOCLES/AGÉSILAS-LYSANDER/AGÉSILAS-LYSANDER-AGLATIDE-XENOCLES/AGÉSILAS-LYSANDER-COTYS-SPITRIDATE-MANDANE-ELPINICE-AGLATIDE-XENOCLES',
+      'string-id' => '#AGESILAS,#MANDANE,#XENOCLES;#AGESILAS,#XENOCLES;#AGESILAS,#LYSANDER,#XENOCLES;#AGESILAS,#LYSANDER;#AGESILAS,#LYSANDER,#AGLATIDE,#XENOCLES;#AGESILAS,#LYSANDER,#COTYS,#SPITRIDATE,#MANDANE,#ELPINICE,#AGLATIDE,#XENOCLES',
     ),
   ),
   'chevreau_avocatdupe_IV01' => 
@@ -96201,6 +97302,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Chevreau',
       'string' => 'POLYDAS/MAINALTE-SICANDRE-THARZINTE/POLYDAS-MAINALTE/MAINALTE/POLYDAS-FLAMINIE/FLAMINIE-MAINALTE',
+      'string-id' => '#POLYDAS;#MAINALTE,#SICANDRE,#THARZINTE;#POLYDAS,#MAINALTE;#MAINALTE;#POLYDAS,#FLAMINIE;#FLAMINIE,#MAINALTE',
     ),
   ),
   'chevreau_avocatdupe_IV02' => 
@@ -96259,6 +97361,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Chevreau',
       'string' => 'MAINALTE-SICANDRE-THARZINTE/POLYDAS-MAINALTE/MAINALTE/POLYDAS-FLAMINIE/FLAMINIE-MAINALTE/POLYDAS',
+      'string-id' => '#MAINALTE,#SICANDRE,#THARZINTE;#POLYDAS,#MAINALTE;#MAINALTE;#POLYDAS,#FLAMINIE;#FLAMINIE,#MAINALTE;#POLYDAS',
     ),
   ),
   'chevreau_avocatdupe_IV03' => 
@@ -96317,6 +97420,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Chevreau',
       'string' => 'POLYDAS-MAINALTE/MAINALTE/POLYDAS-FLAMINIE/FLAMINIE-MAINALTE/POLYDAS/ATALANTE-POLYDAS',
+      'string-id' => '#POLYDAS,#MAINALTE;#MAINALTE;#POLYDAS,#FLAMINIE;#FLAMINIE,#MAINALTE;#POLYDAS;#ATALANTE,#POLYDAS',
     ),
   ),
   'chevreau_avocatdupe_IV04' => 
@@ -96384,6 +97488,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Chevreau',
       'string' => 'MAINALTE/POLYDAS-FLAMINIE/FLAMINIE-MAINALTE/POLYDAS/ATALANTE-POLYDAS/SICANDRE-THARZINTE',
+      'string-id' => '#MAINALTE;#POLYDAS,#FLAMINIE;#FLAMINIE,#MAINALTE;#POLYDAS;#ATALANTE,#POLYDAS;#SICANDRE,#THARZINTE',
     ),
   ),
   'chevreau_avocatdupe_IV05' => 
@@ -96451,6 +97556,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Chevreau',
       'string' => 'POLYDAS-FLAMINIE/FLAMINIE-MAINALTE/POLYDAS/ATALANTE-POLYDAS/SICANDRE-THARZINTE/POLYDAS-FLAMINIE-MAINALTE-SICANDRE-THARZINTE',
+      'string-id' => '#POLYDAS,#FLAMINIE;#FLAMINIE,#MAINALTE;#POLYDAS;#ATALANTE,#POLYDAS;#SICANDRE,#THARZINTE;#POLYDAS,#FLAMINIE,#MAINALTE,#SICANDRE,#THARZINTE',
     ),
   ),
   'boyer_tiridate_II01' => 
@@ -96508,13 +97614,23 @@
       'titleId' => 'Tyridate',
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
-      'string' => 'BÉRÉNICE-EURIDICE/TYRIDATE-BÉRÉNICE-EURIDICE/ARIARATHE-TYRIDATE-BÉRÉNICE-EURIDICE/ARIARATHE-TYRIDATE-BÉRÉNICE-EURIDICE-ORONTE/ARIARATHE-BÉRÉNICE-EURIDICE-ORONTE/ORONTE',
+      'string' => 'BÉRÉNICE-EURIDICE/TYRIDATE-BÉRÉNICE-EURIDICE/ARIARATHE-TYRIDATE-BÉRÉNICE-EURIDICE/ARIARATHE-ARIARATHE-TYRIDATE-BÉRÉNICE-EURIDICE-ORONTE/ARIARATHE-ARIARATHE-BÉRÉNICE-EURIDICE-ORONTE/ARIARATHE-ORONTE',
+      'string-id' => '#BERENICE,#EURIDICE;#TYRIDATE,#BERENICE,#EURIDICE;#ARIARATHE,#TYRIDATE,#BERENICE,#EURIDICE;#LEROI,#ARIARATHE,#TYRIDATE,#BERENICE,#EURIDICE,#ORONTE;#LEROI,#ARIARATHE,#BERENICE,#EURIDICE,#ORONTE;#LEROI,#ORONTE',
     ),
   ),
   'boyer_tiridate_II02' => 
   array (
     'pattern' => 
     array (
+      '#LEROI' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
       '#ARIARATHE' => 
       array (
         0 => 0,
@@ -96523,6 +97639,15 @@
         3 => 1,
         4 => 0,
         5 => 0,
+      ),
+      '#ANTHIOCHIDE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
+        5 => 1,
       ),
       '#TYRIDATE' => 
       array (
@@ -96566,13 +97691,32 @@
       'titleId' => 'Tyridate',
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
-      'string' => 'TYRIDATE-BÉRÉNICE-EURIDICE/ARIARATHE-TYRIDATE-BÉRÉNICE-EURIDICE/ARIARATHE-TYRIDATE-BÉRÉNICE-EURIDICE-ORONTE/ARIARATHE-BÉRÉNICE-EURIDICE-ORONTE/ORONTE/',
+      'string' => 'TYRIDATE-BÉRÉNICE-EURIDICE/ARIARATHE-TYRIDATE-BÉRÉNICE-EURIDICE/ARIARATHE-ARIARATHE-TYRIDATE-BÉRÉNICE-EURIDICE-ORONTE/ARIARATHE-ARIARATHE-BÉRÉNICE-EURIDICE-ORONTE/ARIARATHE-ORONTE/ARIARATHE-ANTHIOCHIDE',
+      'string-id' => '#TYRIDATE,#BERENICE,#EURIDICE;#ARIARATHE,#TYRIDATE,#BERENICE,#EURIDICE;#LEROI,#ARIARATHE,#TYRIDATE,#BERENICE,#EURIDICE,#ORONTE;#LEROI,#ARIARATHE,#BERENICE,#EURIDICE,#ORONTE;#LEROI,#ORONTE;#LEROI,#ANTHIOCHIDE',
     ),
   ),
   'boyer_tiridate_II03' => 
   array (
     'pattern' => 
     array (
+      '#LEROI' => 
+      array (
+        0 => 0,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 0,
+      ),
+      '#ANTHIOCHIDE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 1,
+        5 => 1,
+      ),
       '#TYRIDATE' => 
       array (
         0 => 1,
@@ -96615,13 +97759,32 @@
       'titleId' => 'Tyridate',
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
-      'string' => 'ARIARATHE-TYRIDATE-BÉRÉNICE-EURIDICE/ARIARATHE-TYRIDATE-BÉRÉNICE-EURIDICE-ORONTE/ARIARATHE-BÉRÉNICE-EURIDICE-ORONTE/ORONTE//ORONTE',
+      'string' => 'ARIARATHE-TYRIDATE-BÉRÉNICE-EURIDICE/ARIARATHE-ARIARATHE-TYRIDATE-BÉRÉNICE-EURIDICE-ORONTE/ARIARATHE-ARIARATHE-BÉRÉNICE-EURIDICE-ORONTE/ARIARATHE-ORONTE/ARIARATHE-ANTHIOCHIDE/ANTHIOCHIDE-ORONTE',
+      'string-id' => '#ARIARATHE,#TYRIDATE,#BERENICE,#EURIDICE;#LEROI,#ARIARATHE,#TYRIDATE,#BERENICE,#EURIDICE,#ORONTE;#LEROI,#ARIARATHE,#BERENICE,#EURIDICE,#ORONTE;#LEROI,#ORONTE;#LEROI,#ANTHIOCHIDE;#ANTHIOCHIDE,#ORONTE',
     ),
   ),
   'boyer_tiridate_II04' => 
   array (
     'pattern' => 
     array (
+      '#LEROI' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 1,
+        4 => 0,
+        5 => 0,
+      ),
+      '#ANTHIOCHIDE' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
       '#TYRIDATE' => 
       array (
         0 => 1,
@@ -96664,13 +97827,23 @@
       'titleId' => 'Tyridate',
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
-      'string' => 'ARIARATHE-TYRIDATE-BÉRÉNICE-EURIDICE-ORONTE/ARIARATHE-BÉRÉNICE-EURIDICE-ORONTE/ORONTE//ORONTE/',
+      'string' => 'ARIARATHE-ARIARATHE-TYRIDATE-BÉRÉNICE-EURIDICE-ORONTE/ARIARATHE-ARIARATHE-BÉRÉNICE-EURIDICE-ORONTE/ARIARATHE-ORONTE/ARIARATHE-ANTHIOCHIDE/ANTHIOCHIDE-ORONTE/ANTHIOCHIDE',
+      'string-id' => '#LEROI,#ARIARATHE,#TYRIDATE,#BERENICE,#EURIDICE,#ORONTE;#LEROI,#ARIARATHE,#BERENICE,#EURIDICE,#ORONTE;#LEROI,#ORONTE;#LEROI,#ANTHIOCHIDE;#ANTHIOCHIDE,#ORONTE;#ANTHIOCHIDE',
     ),
   ),
   'boyer_tiridate_III01' => 
   array (
     'pattern' => 
     array (
+      '#LEROI' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
       '#ARIARATHE' => 
       array (
         0 => 1,
@@ -96684,8 +97857,8 @@
       array (
         0 => 0,
         1 => 1,
-        2 => 0,
-        3 => 0,
+        2 => 1,
+        3 => 1,
         4 => 0,
         5 => 0,
       ),
@@ -96722,13 +97895,32 @@
       'titleId' => 'Tyridate',
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
-      'string' => 'ARIARATHE-TYRIDATE/ANTHIOCHIDE-TYRIDATE////ORONTE',
+      'string' => 'ARIARATHE-TYRIDATE/ANTHIOCHIDE-TYRIDATE/ANTHIOCHIDE/ARIARATHE-ANTHIOCHIDE/ARIARATHE/ARIARATHE-ORONTE',
+      'string-id' => '#ARIARATHE,#TYRIDATE;#ANTHIOCHIDE,#TYRIDATE;#ANTHIOCHIDE;#LEROI,#ANTHIOCHIDE;#LEROI;#LEROI,#ORONTE',
     ),
   ),
   'boyer_tiridate_III02' => 
   array (
     'pattern' => 
     array (
+      '#LEROI' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 1,
+        3 => 1,
+        4 => 1,
+        5 => 0,
+      ),
+      '#ANTHIOCHIDE' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 1,
+        3 => 0,
+        4 => 0,
+        5 => 0,
+      ),
       '#TYRIDATE' => 
       array (
         0 => 1,
@@ -96762,13 +97954,23 @@
       'titleId' => 'Tyridate',
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
-      'string' => 'ANTHIOCHIDE-TYRIDATE////ORONTE/ORONTE',
+      'string' => 'ANTHIOCHIDE-TYRIDATE/ANTHIOCHIDE/ARIARATHE-ANTHIOCHIDE/ARIARATHE/ARIARATHE-ORONTE/ORONTE',
+      'string-id' => '#ANTHIOCHIDE,#TYRIDATE;#ANTHIOCHIDE;#LEROI,#ANTHIOCHIDE;#LEROI;#LEROI,#ORONTE;#ORONTE',
     ),
   ),
   'boyer_tiridate_V01' => 
   array (
     'pattern' => 
     array (
+      '#LEROI' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 0,
+        4 => 1,
+        5 => 1,
+      ),
       '#ARIARATHE' => 
       array (
         0 => 1,
@@ -96783,9 +97985,9 @@
         0 => 0,
         1 => 0,
         2 => 1,
-        3 => 0,
+        3 => 1,
         4 => 0,
-        5 => 0,
+        5 => 1,
       ),
       '#BERENICE' => 
       array (
@@ -96820,21 +98022,31 @@
       'titleId' => 'Tyridate',
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
-      'string' => 'ARIARATHE-ORONTE/ORONTE/ANTHIOCHIDE-ORONTE/TYRIDATE-BÉRÉNICE-ORONTE/TYRIDATE-BÉRÉNICE-ORONTE/TYRIDATE-BÉRÉNICE-ORONTE',
+      'string' => 'ARIARATHE-ORONTE/ORONTE/ANTHIOCHIDE-ORONTE/ANTHIOCHIDE-TYRIDATE-BÉRÉNICE-ORONTE/ARIARATHE-TYRIDATE-BÉRÉNICE-ORONTE/ARIARATHE-ANTHIOCHIDE-TYRIDATE-BÉRÉNICE-ORONTE',
+      'string-id' => '#ARIARATHE,#ORONTE;#ORONTE;#ANTHIOCHIDE,#ORONTE;#ANTHIOCHIDE,#TYRIDATE,#BERENICE,#ORONTE;#LEROI,#TYRIDATE,#BERENICE,#ORONTE;#LEROI,#ANTHIOCHIDE,#TYRIDATE,#BERENICE,#ORONTE',
     ),
   ),
   'boyer_tiridate_V02' => 
   array (
     'pattern' => 
     array (
+      '#LEROI' => 
+      array (
+        0 => 0,
+        1 => 0,
+        2 => 0,
+        3 => 1,
+        4 => 1,
+        5 => 1,
+      ),
       '#ANTHIOCHIDE' => 
       array (
         0 => 0,
         1 => 1,
-        2 => 0,
+        2 => 1,
         3 => 0,
-        4 => 0,
-        5 => 0,
+        4 => 1,
+        5 => 1,
       ),
       '#BERENICE' => 
       array (
@@ -96869,7 +98081,8 @@
       'titleId' => 'Tyridate',
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
-      'string' => 'ORONTE/ANTHIOCHIDE-ORONTE/TYRIDATE-BÉRÉNICE-ORONTE/TYRIDATE-BÉRÉNICE-ORONTE/TYRIDATE-BÉRÉNICE-ORONTE/TYRIDATE-BÉRÉNICE',
+      'string' => 'ORONTE/ANTHIOCHIDE-ORONTE/ANTHIOCHIDE-TYRIDATE-BÉRÉNICE-ORONTE/ARIARATHE-TYRIDATE-BÉRÉNICE-ORONTE/ARIARATHE-ANTHIOCHIDE-TYRIDATE-BÉRÉNICE-ORONTE/ARIARATHE-ANTHIOCHIDE-TYRIDATE-BÉRÉNICE',
+      'string-id' => '#ORONTE;#ANTHIOCHIDE,#ORONTE;#ANTHIOCHIDE,#TYRIDATE,#BERENICE,#ORONTE;#LEROI,#TYRIDATE,#BERENICE,#ORONTE;#LEROI,#ANTHIOCHIDE,#TYRIDATE,#BERENICE,#ORONTE;#LEROI,#ANTHIOCHIDE,#TYRIDATE,#BERENICE',
     ),
   ),
   'boyer_porcieromaine_IV01' => 
@@ -96928,6 +98141,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'PORCIE-PHILIPE/PORCIE/PORCIE/BRUTE-PORCIE/BRUTE-PORCIE-MAXIME/PORCIE',
+      'string-id' => '#PORCIE,#PHILIPE;#PORCIE;#PORCIE;#BRUTE,#PORCIE;#BRUTE,#PORCIE,#MAXIME;#PORCIE',
     ),
   ),
   'boyer_oropaste_III01' => 
@@ -96995,6 +98209,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'MÉGABISE/PATISITE-MÉGABISE/OROPASTE-PATISITE-MÉGABISE/OROPASTE-PATISITE/OROPASTE-HÉSIONE/DARIE-HÉSIONE',
+      'string-id' => '#MEGABISE;#PATISITE,#MEGABISE;#OROPASTE,#PATISITE,#MEGABISE;#OROPASTE,#PATISITE;#OROPASTE,#HESIONE;#DARIE,#HESIONE',
     ),
   ),
   'boyer_oropaste_IV01' => 
@@ -97071,6 +98286,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'PATISITE-MÉGABISE/OROPASTE-ARAMINTE/OROPASTE/OROPASTE-HÉSIONE-MITROBATE/OROPASTE-HÉSIONE-CLÉONE/OROPASTE-PATISITE-MÉGABISE-HÉSIONE-CLÉONE',
+      'string-id' => '#PATISITE,#MEGABISE;#OROPASTE,#ARAMINTE;#OROPASTE;#OROPASTE,#HESIONE,#MITROBATE;#OROPASTE,#HESIONE,#CLEONE;#OROPASTE,#PATISITE,#MEGABISE,#HESIONE,#CLEONE',
     ),
   ),
   'boyer_oropaste_IV02' => 
@@ -97156,6 +98372,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'OROPASTE-ARAMINTE/OROPASTE/OROPASTE-HÉSIONE-MITROBATE/OROPASTE-HÉSIONE-CLÉONE/OROPASTE-PATISITE-MÉGABISE-HÉSIONE-CLÉONE/OROPASTE-PATISITE-HÉSIONE',
+      'string-id' => '#OROPASTE,#ARAMINTE;#OROPASTE;#OROPASTE,#HESIONE,#MITROBATE;#OROPASTE,#HESIONE,#CLEONE;#OROPASTE,#PATISITE,#MEGABISE,#HESIONE,#CLEONE;#OROPASTE,#PATISITE,#HESIONE',
     ),
   ),
   'boyer_oropaste_V01' => 
@@ -97241,6 +98458,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'OROPASTE-PATISITE/OROPASTE-PATISITE-MÉGABISE/ZOPIRE-HÉSIONE/DARIE-ZOPIRE-HÉSIONE-CLÉONE/HÉSIONE-ARAMINTE-CLÉONE/ZOPIRE-HÉSIONE-ARAMINTE-CLÉONE',
+      'string-id' => '#OROPASTE,#PATISITE;#OROPASTE,#PATISITE,#MEGABISE;#ZOPIRE,#HESIONE;#DARIE,#ZOPIRE,#HESIONE,#CLEONE;#HESIONE,#ARAMINTE,#CLEONE;#ZOPIRE,#HESIONE,#ARAMINTE,#CLEONE',
     ),
   ),
   'boyer_oropaste_V02' => 
@@ -97317,6 +98535,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'OROPASTE-PATISITE-MÉGABISE/ZOPIRE-HÉSIONE/DARIE-ZOPIRE-HÉSIONE-CLÉONE/HÉSIONE-ARAMINTE-CLÉONE/ZOPIRE-HÉSIONE-ARAMINTE-CLÉONE/DARIE-ZOPIRE-HÉSIONE-ARAMINTE-CLÉONE',
+      'string-id' => '#OROPASTE,#PATISITE,#MEGABISE;#ZOPIRE,#HESIONE;#DARIE,#ZOPIRE,#HESIONE,#CLEONE;#HESIONE,#ARAMINTE,#CLEONE;#ZOPIRE,#HESIONE,#ARAMINTE,#CLEONE;#DARIE,#ZOPIRE,#HESIONE,#ARAMINTE,#CLEONE',
     ),
   ),
   'boyer_oropaste_V03' => 
@@ -97393,6 +98612,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'ZOPIRE-HÉSIONE/DARIE-ZOPIRE-HÉSIONE-CLÉONE/HÉSIONE-ARAMINTE-CLÉONE/ZOPIRE-HÉSIONE-ARAMINTE-CLÉONE/DARIE-ZOPIRE-HÉSIONE-ARAMINTE-CLÉONE/OROPASTE-DARIE-ZOPIRE-HÉSIONE-ARAMINTE-CLÉONE',
+      'string-id' => '#ZOPIRE,#HESIONE;#DARIE,#ZOPIRE,#HESIONE,#CLEONE;#HESIONE,#ARAMINTE,#CLEONE;#ZOPIRE,#HESIONE,#ARAMINTE,#CLEONE;#DARIE,#ZOPIRE,#HESIONE,#ARAMINTE,#CLEONE;#OROPASTE,#DARIE,#ZOPIRE,#HESIONE,#ARAMINTE,#CLEONE',
     ),
   ),
   'boyer_mortenfantsbrute_IV01' => 
@@ -97469,6 +98689,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'TULLIE-JULIE/TITE-TULLIE/TITE-TIBÈRE-TULLIE-JULIE/TITE-TIBÈRE-JUNIE-TULLIE-JULIE/TITE-TIBÈRE-JUNIE/TITE-TIBÈRE-JUNIE-MARCELLIN',
+      'string-id' => '#TULLIE,#JULIE;#TITE,#TULLIE;#TITE,#TIBERE,#TULLIE,#JULIE;#TITE,#TIBERE,#JUNIE,#TULLIE,#JULIE;#TITE,#TIBERE,#JUNIE;#TITE,#TIBERE,#JUNIE,#MARCELLIN',
     ),
   ),
   'boyer_mortenfantsbrute_V01' => 
@@ -97536,6 +98757,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'JUNIE/JUNIE-TULLIE-JULIE/JUNIE-TULLIE-MARCELLIN/BRUTE-JUNIE-TULLIE-MARCELLIN/BRUTE-JUNIE/BRUTE-JUNIE',
+      'string-id' => '#JUNIE;#JUNIE,#TULLIE,#JULIE;#JUNIE,#TULLIE,#MARCELLIN;#BRUTE,#JUNIE,#TULLIE,#MARCELLIN;#BRUTE,#JUNIE;#BRUTE,#JUNIE',
     ),
   ),
   'boyer_federic_I01' => 
@@ -97594,6 +98816,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boyer',
       'string' => '/CAMILLE/FÉDÉRIC/FÉDÉRIC/FÉDÉRIC-VALÈRE-FABRICE/VALÈRE',
+      'string-id' => ';#CAMILLE;#FEDERIC;#FEDERIC;#FEDERIC,#VALERE,#FABRICE;#VALERE',
     ),
   ),
   'boyer_federic_II01' => 
@@ -97661,6 +98884,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boyer',
       'string' => 'FÉDÉRIC-OCTAVE/FÉDÉRIC-CAMILLE/CAMILLE/CAMILLE-FABRICE/FABRICE/VALÈRE-FABRICE',
+      'string-id' => '#FEDERIC,#OCTAVE;#FEDERIC,#CAMILLE;#CAMILLE;#CAMILLE,#FABRICE;#FABRICE;#VALERE,#FABRICE',
     ),
   ),
   'boyer_federic_II02' => 
@@ -97719,6 +98943,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boyer',
       'string' => 'FÉDÉRIC-CAMILLE/CAMILLE/CAMILLE-FABRICE/FABRICE/VALÈRE-FABRICE/VALÈRE-FABRICE',
+      'string-id' => '#FEDERIC,#CAMILLE;#CAMILLE;#CAMILLE,#FABRICE;#FABRICE;#VALERE,#FABRICE;#VALERE,#FABRICE',
     ),
   ),
   'boyer_federic_II03' => 
@@ -97768,6 +98993,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boyer',
       'string' => 'CAMILLE/CAMILLE-FABRICE/FABRICE/VALÈRE-FABRICE/VALÈRE-FABRICE/',
+      'string-id' => '#CAMILLE;#CAMILLE,#FABRICE;#FABRICE;#VALERE,#FABRICE;#VALERE,#FABRICE;',
     ),
   ),
   'boyer_federic_III01' => 
@@ -97817,6 +99043,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boyer',
       'string' => 'FÉDÉRIC/FÉDÉRIC/FÉDÉRIC-OCTAVE/FÉDÉRIC-VALÈRE-OCTAVE/VALÈRE/VALÈRE',
+      'string-id' => '#FEDERIC;#FEDERIC;#FEDERIC,#OCTAVE;#FEDERIC,#VALERE,#OCTAVE;#VALERE;#VALERE',
     ),
   ),
   'boyer_federic_III02' => 
@@ -97866,6 +99093,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boyer',
       'string' => 'FÉDÉRIC/FÉDÉRIC-OCTAVE/FÉDÉRIC-VALÈRE-OCTAVE/VALÈRE/VALÈRE/',
+      'string-id' => '#FEDERIC;#FEDERIC,#OCTAVE;#FEDERIC,#VALERE,#OCTAVE;#VALERE;#VALERE;',
     ),
   ),
   'boyer_federic_III03' => 
@@ -97915,6 +99143,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boyer',
       'string' => 'FÉDÉRIC-OCTAVE/FÉDÉRIC-VALÈRE-OCTAVE/VALÈRE/VALÈRE//CAMILLE',
+      'string-id' => '#FEDERIC,#OCTAVE;#FEDERIC,#VALERE,#OCTAVE;#VALERE;#VALERE;;#CAMILLE',
     ),
   ),
   'boyer_federic_III04' => 
@@ -97964,6 +99193,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boyer',
       'string' => 'FÉDÉRIC-VALÈRE-OCTAVE/VALÈRE/VALÈRE//CAMILLE/',
+      'string-id' => '#FEDERIC,#VALERE,#OCTAVE;#VALERE;#VALERE;;#CAMILLE;',
     ),
   ),
   'boyer_federic_IV01' => 
@@ -98013,6 +99243,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boyer',
       'string' => 'FÉDÉRIC-OCTAVE/FÉDÉRIC-FABRICE-OCTAVE/FABRICE/CAMILLE-FABRICE/CAMILLE/CAMILLE',
+      'string-id' => '#FEDERIC,#OCTAVE;#FEDERIC,#FABRICE,#OCTAVE;#FABRICE;#CAMILLE,#FABRICE;#CAMILLE;#CAMILLE',
     ),
   ),
   'boyer_federic_IV02' => 
@@ -98062,6 +99293,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boyer',
       'string' => 'FÉDÉRIC-FABRICE-OCTAVE/FABRICE/CAMILLE-FABRICE/CAMILLE/CAMILLE/',
+      'string-id' => '#FEDERIC,#FABRICE,#OCTAVE;#FABRICE;#CAMILLE,#FABRICE;#CAMILLE;#CAMILLE;',
     ),
   ),
   'boyer_federic_IV03' => 
@@ -98102,6 +99334,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boyer',
       'string' => 'FABRICE/CAMILLE-FABRICE/CAMILLE/CAMILLE//',
+      'string-id' => '#FABRICE;#CAMILLE,#FABRICE;#CAMILLE;#CAMILLE;;',
     ),
   ),
   'boyer_federic_IV04' => 
@@ -98151,6 +99384,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boyer',
       'string' => 'CAMILLE-FABRICE/CAMILLE/CAMILLE///VALÈRE',
+      'string-id' => '#CAMILLE,#FABRICE;#CAMILLE;#CAMILLE;;;#VALERE',
     ),
   ),
   'boyer_federic_IV05' => 
@@ -98200,6 +99434,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boyer',
       'string' => 'CAMILLE/CAMILLE///VALÈRE/VALÈRE-OCTAVE',
+      'string-id' => '#CAMILLE;#CAMILLE;;;#VALERE;#VALERE,#OCTAVE',
     ),
   ),
   'boyer_federic_V01' => 
@@ -98267,6 +99502,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boyer',
       'string' => 'CAMILLE/CAMILLE/CAMILLE-FABRICE/FÉDÉRIC-CAMILLE-FABRICE/FÉDÉRIC-CAMILLE-VALÈRE-FABRICE/YOLAND-FÉDÉRIC-CAMILLE-VALÈRE-FABRICE',
+      'string-id' => '#CAMILLE;#CAMILLE;#CAMILLE,#FABRICE;#FEDERIC,#CAMILLE,#FABRICE;#FEDERIC,#CAMILLE,#VALERE,#FABRICE;#YOLAND,#FEDERIC,#CAMILLE,#VALERE,#FABRICE',
     ),
   ),
   'boyer_aristodeme_III01' => 
@@ -98316,6 +99552,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'ARGIE/ARISTODÈME-ARGIE/ARGIE/ALCIDAMAS-ARGIE/ALCIDAMAS/ALCIDAMAS',
+      'string-id' => '#ARGIE;#ARISTODEME,#ARGIE;#ARGIE;#ALCIDAMAS,#ARGIE;#ALCIDAMAS;#ALCIDAMAS',
     ),
   ),
   'boyer_aristodeme_IV01' => 
@@ -98374,6 +99611,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'ARISTODÈME-ALCIDAMAS-MÉROPE/ARISTODÈME-ALCIDAMAS-CRESPHONTE-MÉROPE/ALCIDAMAS-CRESPHONTE/ALCIDAMAS/ALCIDAMAS-ARGIE/ALCIDAMAS',
+      'string-id' => '#ARISTODEME,#ALCIDAMAS,#MEROPE;#ARISTODEME,#ALCIDAMAS,#CRESPHONTE,#MEROPE;#ALCIDAMAS,#CRESPHONTE;#ALCIDAMAS;#ALCIDAMAS,#ARGIE;#ALCIDAMAS',
     ),
   ),
   'boyer_amoursjupitersemele_IV01' => 
@@ -98459,6 +99697,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'JUPITER-MOMUS-SÉMÉLÉ/VÉNUS-AMOURS-SÉMÉLÉ/VÉNUS-JEUNESSE-SÉMÉLÉ/JUNON-AMOURS-MERCURE-SÉMÉLÉ/JUNON-SÉMÉLÉ/JUNON',
+      'string-id' => '#JUPITER,#MOMUS,#SEMELE;#VENUS,#AMOURS,#SEMELE;#VENUS,#JEUNESSE,#SEMELE;#JUNON,#AMOURS,#MERCURE,#SEMELE;#JUNON,#SEMELE;#JUNON',
     ),
   ),
   'boyer_amoursjupitersemele_IV02' => 
@@ -98544,6 +99783,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'VÉNUS-AMOURS-SÉMÉLÉ/VÉNUS-JEUNESSE-SÉMÉLÉ/JUNON-AMOURS-MERCURE-SÉMÉLÉ/JUNON-SÉMÉLÉ/JUNON/JUNON-MOMUS',
+      'string-id' => '#VENUS,#AMOURS,#SEMELE;#VENUS,#JEUNESSE,#SEMELE;#JUNON,#AMOURS,#MERCURE,#SEMELE;#JUNON,#SEMELE;#JUNON;#JUNON,#MOMUS',
     ),
   ),
   'boyer_amoursjupitersemele_V01' => 
@@ -98584,6 +99824,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'SÉMÉLÉ/SÉMÉLÉ/SÉMÉLÉ-ALCMÉON/SÉMÉLÉ-ALCMÉON/SÉMÉLÉ-ALCMÉON/SÉMÉLÉ-ALCMÉON',
+      'string-id' => '#SEMELE;#SEMELE;#SEMELE,#ALCMEON;#SEMELE,#ALCMEON;#SEMELE,#ALCMEON;#SEMELE,#ALCMEON',
     ),
   ),
   'boyer_amoursjupitersemele_V02' => 
@@ -98633,6 +99874,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'SÉMÉLÉ/SÉMÉLÉ-ALCMÉON/SÉMÉLÉ-ALCMÉON/SÉMÉLÉ-ALCMÉON/SÉMÉLÉ-ALCMÉON/JALOUSIE',
+      'string-id' => '#SEMELE;#SEMELE,#ALCMEON;#SEMELE,#ALCMEON;#SEMELE,#ALCMEON;#SEMELE,#ALCMEON;#JALOUSIE',
     ),
   ),
   'boyer_amoursjupitersemele_V03' => 
@@ -98673,6 +99915,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'SÉMÉLÉ-ALCMÉON/SÉMÉLÉ-ALCMÉON/SÉMÉLÉ-ALCMÉON/SÉMÉLÉ-ALCMÉON/JALOUSIE/',
+      'string-id' => '#SEMELE,#ALCMEON;#SEMELE,#ALCMEON;#SEMELE,#ALCMEON;#SEMELE,#ALCMEON;#JALOUSIE;',
     ),
   ),
   'boyer_amoursjupitersemele_V04' => 
@@ -98722,6 +99965,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'SÉMÉLÉ-ALCMÉON/SÉMÉLÉ-ALCMÉON/SÉMÉLÉ-ALCMÉON/JALOUSIE//JUPITER-SÉMÉLÉ-ALCMÉON',
+      'string-id' => '#SEMELE,#ALCMEON;#SEMELE,#ALCMEON;#SEMELE,#ALCMEON;#JALOUSIE;;#JUPITER,#SEMELE,#ALCMEON',
     ),
   ),
   'boyer_amoursjupitersemele_V05' => 
@@ -98780,6 +100024,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'SÉMÉLÉ-ALCMÉON/SÉMÉLÉ-ALCMÉON/JALOUSIE//JUPITER-SÉMÉLÉ-ALCMÉON/JUPITER-SÉMÉLÉ',
+      'string-id' => '#SEMELE,#ALCMEON;#SEMELE,#ALCMEON;#JALOUSIE;;#JUPITER,#SEMELE,#ALCMEON;#JUPITER,#SEMELE',
     ),
   ),
   'boyer_amoursjupitersemele_VI01' => 
@@ -98838,6 +100083,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'SÉMÉLÉ/MOMUS-SÉMÉLÉ/JUPITER-MOMUS/MOMUS/ALCMÉON-DIMAS/ALCMÉON-DIMAS',
+      'string-id' => '#SEMELE;#MOMUS,#SEMELE;#JUPITER,#MOMUS;#MOMUS;#ALCMEON,#DIMAS;#ALCMEON,#DIMAS',
     ),
   ),
   'boyer_amoursjupitersemele_VI02' => 
@@ -98905,6 +100151,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'MOMUS-SÉMÉLÉ/JUPITER-MOMUS/MOMUS/ALCMÉON-DIMAS/ALCMÉON-DIMAS/JUNON-ALCMÉON-DIMAS',
+      'string-id' => '#MOMUS,#SEMELE;#JUPITER,#MOMUS;#MOMUS;#ALCMEON,#DIMAS;#ALCMEON,#DIMAS;#JUNON,#ALCMEON,#DIMAS',
     ),
   ),
   'boyer_amoursjupitersemele_VI03' => 
@@ -98963,6 +100210,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'JUPITER-MOMUS/MOMUS/ALCMÉON-DIMAS/ALCMÉON-DIMAS/JUNON-ALCMÉON-DIMAS/',
+      'string-id' => '#JUPITER,#MOMUS;#MOMUS;#ALCMEON,#DIMAS;#ALCMEON,#DIMAS;#JUNON,#ALCMEON,#DIMAS;',
     ),
   ),
   'boyer_amoursjupitersemele_VI04' => 
@@ -99021,6 +100269,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'MOMUS/ALCMÉON-DIMAS/ALCMÉON-DIMAS/JUNON-ALCMÉON-DIMAS//ATYS',
+      'string-id' => '#MOMUS;#ALCMEON,#DIMAS;#ALCMEON,#DIMAS;#JUNON,#ALCMEON,#DIMAS;;#ATYS',
     ),
   ),
   'boyer_amoursjupitersemele_VI05' => 
@@ -99079,6 +100328,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'ALCMÉON-DIMAS/ALCMÉON-DIMAS/JUNON-ALCMÉON-DIMAS//ATYS/JUPITER',
+      'string-id' => '#ALCMEON,#DIMAS;#ALCMEON,#DIMAS;#JUNON,#ALCMEON,#DIMAS;;#ATYS;#JUPITER',
     ),
   ),
   'boyer_agamemnon_II01' => 
@@ -99128,6 +100378,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'CASSANDRE/ORESTE-CASSANDRE/AGAMEMNON-ORESTE/AGAMEMNON/AGAMEMNON/AGAMEMNON',
+      'string-id' => '#CASSANDRE;#ORESTE,#CASSANDRE;#AGAMEMNON,#ORESTE;#AGAMEMNON;#AGAMEMNON;#AGAMEMNON',
     ),
   ),
   'boyer_agamemnon_II02' => 
@@ -99186,6 +100437,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'ORESTE-CASSANDRE/AGAMEMNON-ORESTE/AGAMEMNON/AGAMEMNON/AGAMEMNON/AGAMEMNON-CLYTEMNESTRE',
+      'string-id' => '#ORESTE,#CASSANDRE;#AGAMEMNON,#ORESTE;#AGAMEMNON;#AGAMEMNON;#AGAMEMNON;#AGAMEMNON,#CLYTEMNESTRE',
     ),
   ),
   'boyer_agamemnon_II03' => 
@@ -99235,6 +100487,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'AGAMEMNON-ORESTE/AGAMEMNON/AGAMEMNON/AGAMEMNON/AGAMEMNON-CLYTEMNESTRE/CLYTEMNESTRE',
+      'string-id' => '#AGAMEMNON,#ORESTE;#AGAMEMNON;#AGAMEMNON;#AGAMEMNON;#AGAMEMNON,#CLYTEMNESTRE;#CLYTEMNESTRE',
     ),
   ),
   'boyer_agamemnon_III01' => 
@@ -99284,6 +100537,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'AGAMEMNON/AGAMEMNON/AGAMEMNON-ORESTE/AGAMEMNON/AGAMEMNON-CLYTEMNESTRE/AGAMEMNON',
+      'string-id' => '#AGAMEMNON;#AGAMEMNON;#AGAMEMNON,#ORESTE;#AGAMEMNON;#AGAMEMNON,#CLYTEMNESTRE;#AGAMEMNON',
     ),
   ),
   'boyer_agamemnon_III02' => 
@@ -99342,6 +100596,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'AGAMEMNON/AGAMEMNON-ORESTE/AGAMEMNON/AGAMEMNON-CLYTEMNESTRE/AGAMEMNON/AGAMEMNON-CASSANDRE',
+      'string-id' => '#AGAMEMNON;#AGAMEMNON,#ORESTE;#AGAMEMNON;#AGAMEMNON,#CLYTEMNESTRE;#AGAMEMNON;#AGAMEMNON,#CASSANDRE',
     ),
   ),
   'boyer_agamemnon_III03' => 
@@ -99400,6 +100655,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'AGAMEMNON-ORESTE/AGAMEMNON/AGAMEMNON-CLYTEMNESTRE/AGAMEMNON/AGAMEMNON-CASSANDRE/CASSANDRE',
+      'string-id' => '#AGAMEMNON,#ORESTE;#AGAMEMNON;#AGAMEMNON,#CLYTEMNESTRE;#AGAMEMNON;#AGAMEMNON,#CASSANDRE;#CASSANDRE',
     ),
   ),
   'boyer_agamemnon_IV01' => 
@@ -99467,6 +100723,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'AGAMEMNON/AGAMEMNON-ORESTE-PYLADE/ORESTE-PYLADE/ORESTE-CASSANDRE/CASSANDRE/CLYTEMNESTRE-CASSANDRE',
+      'string-id' => '#AGAMEMNON;#AGAMEMNON,#ORESTE,#PYLADE;#ORESTE,#PYLADE;#ORESTE,#CASSANDRE;#CASSANDRE;#CLYTEMNESTRE,#CASSANDRE',
     ),
   ),
   'boyer_agamemnon_IV02' => 
@@ -99534,6 +100791,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'AGAMEMNON-ORESTE-PYLADE/ORESTE-PYLADE/ORESTE-CASSANDRE/CASSANDRE/CLYTEMNESTRE-CASSANDRE/CLYTEMNESTRE',
+      'string-id' => '#AGAMEMNON,#ORESTE,#PYLADE;#ORESTE,#PYLADE;#ORESTE,#CASSANDRE;#CASSANDRE;#CLYTEMNESTRE,#CASSANDRE;#CLYTEMNESTRE',
     ),
   ),
   'boyer_agamemnon_V01' => 
@@ -99583,6 +100841,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'CASSANDRE/AGAMEMNON-CASSANDRE/AGAMEMNON/AGAMEMNON/AGAMEMNON-ORESTE-PYLADE/ORESTE-PYLADE',
+      'string-id' => '#CASSANDRE;#AGAMEMNON,#CASSANDRE;#AGAMEMNON;#AGAMEMNON;#AGAMEMNON,#ORESTE,#PYLADE;#ORESTE,#PYLADE',
     ),
   ),
   'boyer_agamemnon_V02' => 
@@ -99641,6 +100900,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'AGAMEMNON-CASSANDRE/AGAMEMNON/AGAMEMNON/AGAMEMNON-ORESTE-PYLADE/ORESTE-PYLADE/CLYTEMNESTRE-ORESTE-PYLADE',
+      'string-id' => '#AGAMEMNON,#CASSANDRE;#AGAMEMNON;#AGAMEMNON;#AGAMEMNON,#ORESTE,#PYLADE;#ORESTE,#PYLADE;#CLYTEMNESTRE,#ORESTE,#PYLADE',
     ),
   ),
   'boyer_agamemnon_V03' => 
@@ -99690,6 +100950,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'AGAMEMNON/AGAMEMNON/AGAMEMNON-ORESTE-PYLADE/ORESTE-PYLADE/CLYTEMNESTRE-ORESTE-PYLADE/ORESTE-PYLADE',
+      'string-id' => '#AGAMEMNON;#AGAMEMNON;#AGAMEMNON,#ORESTE,#PYLADE;#ORESTE,#PYLADE;#CLYTEMNESTRE,#ORESTE,#PYLADE;#ORESTE,#PYLADE',
     ),
   ),
   'boyer_agamemnon_V04' => 
@@ -99739,6 +101000,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'AGAMEMNON/AGAMEMNON-ORESTE-PYLADE/ORESTE-PYLADE/CLYTEMNESTRE-ORESTE-PYLADE/ORESTE-PYLADE/ORESTE-PYLADE',
+      'string-id' => '#AGAMEMNON;#AGAMEMNON,#ORESTE,#PYLADE;#ORESTE,#PYLADE;#CLYTEMNESTRE,#ORESTE,#PYLADE;#ORESTE,#PYLADE;#ORESTE,#PYLADE',
     ),
   ),
   'boyer_agamemnon_V05' => 
@@ -99788,6 +101050,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Boyer',
       'string' => 'AGAMEMNON-ORESTE-PYLADE/ORESTE-PYLADE/CLYTEMNESTRE-ORESTE-PYLADE/ORESTE-PYLADE/ORESTE-PYLADE/ORESTE-PYLADE',
+      'string-id' => '#AGAMEMNON,#ORESTE,#PYLADE;#ORESTE,#PYLADE;#CLYTEMNESTRE,#ORESTE,#PYLADE;#ORESTE,#PYLADE;#ORESTE,#PYLADE;#ORESTE,#PYLADE',
     ),
   ),
   'boursault_portraitdupeintre_I01' => 
@@ -99873,6 +101136,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boursault',
       'string' => 'DAMIS-CLITIE/DAMIS-LE COMTE/DAMIS-AMARANTE-CLITIE-LE COMTE/DAMIS-AMARANTE-CLITIE-LE COMTE-LA MARQUISE ORIANE-PETIT-JEAN/DAMIS-AMARANTE-CLITIE-LE COMTE-PETIT-JEAN/DAMIS-AMARANTE-CLITIE-LE COMTE-LE CHEVALIER DORANTE',
+      'string-id' => '#DAMIS,#CLITIE;#DAMIS,#LECOMTE;#DAMIS,#AMARANTE,#CLITIE,#LECOMTE;#DAMIS,#AMARANTE,#CLITIE,#LECOMTE,#ORIANE,#PETITJEAN;#DAMIS,#AMARANTE,#CLITIE,#LECOMTE,#PETITJEAN;#DAMIS,#AMARANTE,#CLITIE,#LECOMTE,#DORANTE',
     ),
   ),
   'boursault_portraitdupeintre_I02' => 
@@ -99949,6 +101213,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boursault',
       'string' => 'DAMIS-LE COMTE/DAMIS-AMARANTE-CLITIE-LE COMTE/DAMIS-AMARANTE-CLITIE-LE COMTE-LA MARQUISE ORIANE-PETIT-JEAN/DAMIS-AMARANTE-CLITIE-LE COMTE-PETIT-JEAN/DAMIS-AMARANTE-CLITIE-LE COMTE-LE CHEVALIER DORANTE/DAMIS-AMARANTE-CLITIE-LE COMTE-LE CHEVALIER DORANTE-LA MARQUISE ORIANE-LA RAMÉE',
+      'string-id' => '#DAMIS,#LECOMTE;#DAMIS,#AMARANTE,#CLITIE,#LECOMTE;#DAMIS,#AMARANTE,#CLITIE,#LECOMTE,#ORIANE,#PETITJEAN;#DAMIS,#AMARANTE,#CLITIE,#LECOMTE,#PETITJEAN;#DAMIS,#AMARANTE,#CLITIE,#LECOMTE,#DORANTE;#DAMIS,#AMARANTE,#CLITIE,#LECOMTE,#DORANTE,#ORIANE,#LARAMEE',
     ),
   ),
   'boursault_portraitdupeintre_I03' => 
@@ -100025,6 +101290,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boursault',
       'string' => 'DAMIS-AMARANTE-CLITIE-LE COMTE/DAMIS-AMARANTE-CLITIE-LE COMTE-LA MARQUISE ORIANE-PETIT-JEAN/DAMIS-AMARANTE-CLITIE-LE COMTE-PETIT-JEAN/DAMIS-AMARANTE-CLITIE-LE COMTE-LE CHEVALIER DORANTE/DAMIS-AMARANTE-CLITIE-LE COMTE-LE CHEVALIER DORANTE-LA MARQUISE ORIANE-LA RAMÉE/DAMIS-AMARANTE-CLITIE-LE COMTE-LE CHEVALIER DORANTE-LA MARQUISE ORIANE-LISIDOR',
+      'string-id' => '#DAMIS,#AMARANTE,#CLITIE,#LECOMTE;#DAMIS,#AMARANTE,#CLITIE,#LECOMTE,#ORIANE,#PETITJEAN;#DAMIS,#AMARANTE,#CLITIE,#LECOMTE,#PETITJEAN;#DAMIS,#AMARANTE,#CLITIE,#LECOMTE,#DORANTE;#DAMIS,#AMARANTE,#CLITIE,#LECOMTE,#DORANTE,#ORIANE,#LARAMEE;#DAMIS,#AMARANTE,#CLITIE,#LECOMTE,#DORANTE,#ORIANE,#LISIDOR',
     ),
   ),
   'boursault_portraitdupeintre_I04' => 
@@ -100101,6 +101367,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boursault',
       'string' => 'DAMIS-AMARANTE-CLITIE-LE COMTE-LA MARQUISE ORIANE-PETIT-JEAN/DAMIS-AMARANTE-CLITIE-LE COMTE-PETIT-JEAN/DAMIS-AMARANTE-CLITIE-LE COMTE-LE CHEVALIER DORANTE/DAMIS-AMARANTE-CLITIE-LE COMTE-LE CHEVALIER DORANTE-LA MARQUISE ORIANE-LA RAMÉE/DAMIS-AMARANTE-CLITIE-LE COMTE-LE CHEVALIER DORANTE-LA MARQUISE ORIANE-LISIDOR/DAMIS-AMARANTE-CLITIE-LE COMTE-LISIDOR-PETIT-JEAN',
+      'string-id' => '#DAMIS,#AMARANTE,#CLITIE,#LECOMTE,#ORIANE,#PETITJEAN;#DAMIS,#AMARANTE,#CLITIE,#LECOMTE,#PETITJEAN;#DAMIS,#AMARANTE,#CLITIE,#LECOMTE,#DORANTE;#DAMIS,#AMARANTE,#CLITIE,#LECOMTE,#DORANTE,#ORIANE,#LARAMEE;#DAMIS,#AMARANTE,#CLITIE,#LECOMTE,#DORANTE,#ORIANE,#LISIDOR;#DAMIS,#AMARANTE,#CLITIE,#LECOMTE,#LISIDOR,#PETITJEAN',
     ),
   ),
   'boursault_mortvivant_I01' => 
@@ -100159,6 +101426,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boursault',
       'string' => 'FABRICE/FERDINAND-STÉPHANIE/FERDINAND-LAZARILLE/LAZARILLE/STÉPHANIE-LAZARILLE-FABRICE/STÉPHANIE-FABRICE',
+      'string-id' => '#FABRICE;#FERDINAND,#STEPHANIE;#FERDINAND,#LAZARILLE;#LAZARILLE;#STEPHANIE,#LAZARILLE,#FABRICE;#STEPHANIE,#FABRICE',
     ),
   ),
   'boursault_mortvivant_I02' => 
@@ -100217,6 +101485,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boursault',
       'string' => 'FERDINAND-STÉPHANIE/FERDINAND-LAZARILLE/LAZARILLE/STÉPHANIE-LAZARILLE-FABRICE/STÉPHANIE-FABRICE/FABRICE',
+      'string-id' => '#FERDINAND,#STEPHANIE;#FERDINAND,#LAZARILLE;#LAZARILLE;#STEPHANIE,#LAZARILLE,#FABRICE;#STEPHANIE,#FABRICE;#FABRICE',
     ),
   ),
   'boursault_mortvivant_II01' => 
@@ -100266,6 +101535,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boursault',
       'string' => 'LAZARILLE-FABRICE/LAZARILLE-FABRICE/FERDINAND-STÉPHANIE-LAZARILLE-FABRICE/LAZARILLE-FABRICE/LAZARILLE-FABRICE/FABRICE',
+      'string-id' => '#LAZARILLE,#FABRICE;#LAZARILLE,#FABRICE;#FERDINAND,#STEPHANIE,#LAZARILLE,#FABRICE;#LAZARILLE,#FABRICE;#LAZARILLE,#FABRICE;#FABRICE',
     ),
   ),
   'boursault_mortvivant_III01' => 
@@ -100333,6 +101603,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boursault',
       'string' => 'HENRIQUEZ DE GALAS-UNE SERVANTE/HENRIQUEZ DE GALAS/LAZARILLE-HENRIQUEZ DE GALAS/LAZARILLE-HENRIQUEZ DE GALAS-L’HÔTE DE LAZARILLE/LAZARILLE-HENRIQUEZ DE GALAS-L’HÔTE DE LAZARILLE/LAZARILLE-FABRICE-HENRIQUEZ DE GALAS',
+      'string-id' => '#HENRIQUEZ,#SERVANTE;#HENRIQUEZ;#LAZARILLE,#HENRIQUEZ;#LAZARILLE,#HENRIQUEZ,#HOTE;#LAZARILLE,#HENRIQUEZ,#HOTE;#LAZARILLE,#FABRICE,#HENRIQUEZ',
     ),
   ),
   'boursault_mortvivant_III02' => 
@@ -100400,6 +101671,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boursault',
       'string' => 'HENRIQUEZ DE GALAS/LAZARILLE-HENRIQUEZ DE GALAS/LAZARILLE-HENRIQUEZ DE GALAS-L’HÔTE DE LAZARILLE/LAZARILLE-HENRIQUEZ DE GALAS-L’HÔTE DE LAZARILLE/LAZARILLE-FABRICE-HENRIQUEZ DE GALAS/FERDINAND-STÉPHANIE-LAZARILLE-FABRICE-HENRIQUEZ DE GALAS',
+      'string-id' => '#HENRIQUEZ;#LAZARILLE,#HENRIQUEZ;#LAZARILLE,#HENRIQUEZ,#HOTE;#LAZARILLE,#HENRIQUEZ,#HOTE;#LAZARILLE,#FABRICE,#HENRIQUEZ;#FERDINAND,#STEPHANIE,#LAZARILLE,#FABRICE,#HENRIQUEZ',
     ),
   ),
   'boursault_jalouxendormi_I01' => 
@@ -100440,6 +101712,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boursault',
       'string' => 'OLIMPIE/CLÉANDRE/CLÉANDRE/CLÉANDRE//OLIMPIE',
+      'string-id' => '#OLIMPIE;#CLEANDRE;#CLEANDRE;#CLEANDRE;;#OLIMPIE',
     ),
   ),
   'boursault_jalouxendormi_I02' => 
@@ -100489,6 +101762,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boursault',
       'string' => 'CLÉANDRE/CLÉANDRE/CLÉANDRE//OLIMPIE/ALCIDOR',
+      'string-id' => '#CLEANDRE;#CLEANDRE;#CLEANDRE;;#OLIMPIE;#ALCIDOR',
     ),
   ),
   'boursault_jalouxendormi_I03' => 
@@ -100538,6 +101812,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boursault',
       'string' => 'CLÉANDRE/CLÉANDRE//OLIMPIE/ALCIDOR/CLÉANDRE-OLIMPIE-ALCIDOR',
+      'string-id' => '#CLEANDRE;#CLEANDRE;;#OLIMPIE;#ALCIDOR;#CLEANDRE,#OLIMPIE,#ALCIDOR',
     ),
   ),
   'boursault_jalouxendormi_I04' => 
@@ -100587,6 +101862,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boursault',
       'string' => 'CLÉANDRE//OLIMPIE/ALCIDOR/CLÉANDRE-OLIMPIE-ALCIDOR/CLÉANDRE-ALCIDOR',
+      'string-id' => '#CLEANDRE;;#OLIMPIE;#ALCIDOR;#CLEANDRE,#OLIMPIE,#ALCIDOR;#CLEANDRE,#ALCIDOR',
     ),
   ),
   'boursault_jalouxendormi_I05' => 
@@ -100636,6 +101912,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boursault',
       'string' => '/OLIMPIE/ALCIDOR/CLÉANDRE-OLIMPIE-ALCIDOR/CLÉANDRE-ALCIDOR/CLÉANDRE-ALCIDOR',
+      'string-id' => ';#OLIMPIE;#ALCIDOR;#CLEANDRE,#OLIMPIE,#ALCIDOR;#CLEANDRE,#ALCIDOR;#CLEANDRE,#ALCIDOR',
     ),
   ),
   'boursault_jalouxendormi_I06' => 
@@ -100685,6 +101962,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boursault',
       'string' => 'OLIMPIE/ALCIDOR/CLÉANDRE-OLIMPIE-ALCIDOR/CLÉANDRE-ALCIDOR/CLÉANDRE-ALCIDOR/CLÉANDRE-OLIMPIE-ALCIDOR',
+      'string-id' => '#OLIMPIE;#ALCIDOR;#CLEANDRE,#OLIMPIE,#ALCIDOR;#CLEANDRE,#ALCIDOR;#CLEANDRE,#ALCIDOR;#CLEANDRE,#OLIMPIE,#ALCIDOR',
     ),
   ),
   'boursault_jalouxendormi_I07' => 
@@ -100734,6 +102012,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boursault',
       'string' => 'ALCIDOR/CLÉANDRE-OLIMPIE-ALCIDOR/CLÉANDRE-ALCIDOR/CLÉANDRE-ALCIDOR/CLÉANDRE-OLIMPIE-ALCIDOR/CLÉANDRE-ALCIDOR',
+      'string-id' => '#ALCIDOR;#CLEANDRE,#OLIMPIE,#ALCIDOR;#CLEANDRE,#ALCIDOR;#CLEANDRE,#ALCIDOR;#CLEANDRE,#OLIMPIE,#ALCIDOR;#CLEANDRE,#ALCIDOR',
     ),
   ),
   'boursault_jalouxendormi_I08' => 
@@ -100774,6 +102053,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boursault',
       'string' => 'CLÉANDRE-OLIMPIE-ALCIDOR/CLÉANDRE-ALCIDOR/CLÉANDRE-ALCIDOR/CLÉANDRE-OLIMPIE-ALCIDOR/CLÉANDRE-ALCIDOR/CLÉANDRE-OLIMPIE-ALCIDOR',
+      'string-id' => '#CLEANDRE,#OLIMPIE,#ALCIDOR;#CLEANDRE,#ALCIDOR;#CLEANDRE,#ALCIDOR;#CLEANDRE,#OLIMPIE,#ALCIDOR;#CLEANDRE,#ALCIDOR;#CLEANDRE,#OLIMPIE,#ALCIDOR',
     ),
   ),
   'boursault_jalouxendormi_I09' => 
@@ -100823,6 +102103,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boursault',
       'string' => 'CLÉANDRE-ALCIDOR/CLÉANDRE-ALCIDOR/CLÉANDRE-OLIMPIE-ALCIDOR/CLÉANDRE-ALCIDOR/CLÉANDRE-OLIMPIE-ALCIDOR/ALCIDOR',
+      'string-id' => '#CLEANDRE,#ALCIDOR;#CLEANDRE,#ALCIDOR;#CLEANDRE,#OLIMPIE,#ALCIDOR;#CLEANDRE,#ALCIDOR;#CLEANDRE,#OLIMPIE,#ALCIDOR;#ALCIDOR',
     ),
   ),
   'boursault_jalouxendormi_I10' => 
@@ -100872,6 +102153,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boursault',
       'string' => 'CLÉANDRE-ALCIDOR/CLÉANDRE-OLIMPIE-ALCIDOR/CLÉANDRE-ALCIDOR/CLÉANDRE-OLIMPIE-ALCIDOR/ALCIDOR/',
+      'string-id' => '#CLEANDRE,#ALCIDOR;#CLEANDRE,#OLIMPIE,#ALCIDOR;#CLEANDRE,#ALCIDOR;#CLEANDRE,#OLIMPIE,#ALCIDOR;#ALCIDOR;',
     ),
   ),
   'boucher_champagnelecoiffeur_I01' => 
@@ -100930,6 +102212,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boucher',
       'string' => 'CLÉANDRE/ÉLISE-LISETTE-CLÉANDRE/BONIFACE-ÉLISE-LISETTE-CLÉANDRE/BONIFACE-MONSIEUR THOMAS/BONIFACE-ÉLISE-LISETTE-MONSIEUR THOMAS/BONIFACE-MONSIEUR THOMAS',
+      'string-id' => '#CLEANDRE;#ELISE,#LISETTE,#CLEANDRE;#BONIFACE,#ELISE,#LISETTE,#CLEANDRE;#BONIFACE,#MONSIEURTHOMAS;#BONIFACE,#ELISE,#LISETTE,#MONSIEURTHOMAS;#BONIFACE,#MONSIEURTHOMAS',
     ),
   ),
   'boucher_champagnelecoiffeur_I02' => 
@@ -100988,6 +102271,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boucher',
       'string' => 'ÉLISE-LISETTE-CLÉANDRE/BONIFACE-ÉLISE-LISETTE-CLÉANDRE/BONIFACE-MONSIEUR THOMAS/BONIFACE-ÉLISE-LISETTE-MONSIEUR THOMAS/BONIFACE-MONSIEUR THOMAS/MONSIEUR THOMAS-CLÉANDRE',
+      'string-id' => '#ELISE,#LISETTE,#CLEANDRE;#BONIFACE,#ELISE,#LISETTE,#CLEANDRE;#BONIFACE,#MONSIEURTHOMAS;#BONIFACE,#ELISE,#LISETTE,#MONSIEURTHOMAS;#BONIFACE,#MONSIEURTHOMAS;#MONSIEURTHOMAS,#CLEANDRE',
     ),
   ),
   'boucher_champagnelecoiffeur_I03' => 
@@ -101055,6 +102339,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boucher',
       'string' => 'BONIFACE-ÉLISE-LISETTE-CLÉANDRE/BONIFACE-MONSIEUR THOMAS/BONIFACE-ÉLISE-LISETTE-MONSIEUR THOMAS/BONIFACE-MONSIEUR THOMAS/MONSIEUR THOMAS-CLÉANDRE/BONIFACE-LISETTE-CLÉANDRE',
+      'string-id' => '#BONIFACE,#ELISE,#LISETTE,#CLEANDRE;#BONIFACE,#MONSIEURTHOMAS;#BONIFACE,#ELISE,#LISETTE,#MONSIEURTHOMAS;#BONIFACE,#MONSIEURTHOMAS;#MONSIEURTHOMAS,#CLEANDRE;#BONIFACE,#LISETTE,#CLEANDRE',
     ),
   ),
   'boucher_champagnelecoiffeur_I04' => 
@@ -101122,6 +102407,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boucher',
       'string' => 'BONIFACE-MONSIEUR THOMAS/BONIFACE-ÉLISE-LISETTE-MONSIEUR THOMAS/BONIFACE-MONSIEUR THOMAS/MONSIEUR THOMAS-CLÉANDRE/BONIFACE-LISETTE-CLÉANDRE/BONIFACE-ÉLISE-CLÉANDRE',
+      'string-id' => '#BONIFACE,#MONSIEURTHOMAS;#BONIFACE,#ELISE,#LISETTE,#MONSIEURTHOMAS;#BONIFACE,#MONSIEURTHOMAS;#MONSIEURTHOMAS,#CLEANDRE;#BONIFACE,#LISETTE,#CLEANDRE;#BONIFACE,#ELISE,#CLEANDRE',
     ),
   ),
   'boucher_champagnelecoiffeur_I05' => 
@@ -101189,6 +102475,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boucher',
       'string' => 'BONIFACE-ÉLISE-LISETTE-MONSIEUR THOMAS/BONIFACE-MONSIEUR THOMAS/MONSIEUR THOMAS-CLÉANDRE/BONIFACE-LISETTE-CLÉANDRE/BONIFACE-ÉLISE-CLÉANDRE/ÉLISE-LISETTE-CLÉANDRE',
+      'string-id' => '#BONIFACE,#ELISE,#LISETTE,#MONSIEURTHOMAS;#BONIFACE,#MONSIEURTHOMAS;#MONSIEURTHOMAS,#CLEANDRE;#BONIFACE,#LISETTE,#CLEANDRE;#BONIFACE,#ELISE,#CLEANDRE;#ELISE,#LISETTE,#CLEANDRE',
     ),
   ),
   'boucher_champagnelecoiffeur_I06' => 
@@ -101256,6 +102543,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boucher',
       'string' => 'BONIFACE-MONSIEUR THOMAS/MONSIEUR THOMAS-CLÉANDRE/BONIFACE-LISETTE-CLÉANDRE/BONIFACE-ÉLISE-CLÉANDRE/ÉLISE-LISETTE-CLÉANDRE/ÉLISE-LISETTE-CLÉANDRE',
+      'string-id' => '#BONIFACE,#MONSIEURTHOMAS;#MONSIEURTHOMAS,#CLEANDRE;#BONIFACE,#LISETTE,#CLEANDRE;#BONIFACE,#ELISE,#CLEANDRE;#ELISE,#LISETTE,#CLEANDRE;#ELISE,#LISETTE,#CLEANDRE',
     ),
   ),
   'boucher_champagnelecoiffeur_I07' => 
@@ -101323,6 +102611,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boucher',
       'string' => 'MONSIEUR THOMAS-CLÉANDRE/BONIFACE-LISETTE-CLÉANDRE/BONIFACE-ÉLISE-CLÉANDRE/ÉLISE-LISETTE-CLÉANDRE/ÉLISE-LISETTE-CLÉANDRE/BONIFACE-MONSIEUR THOMAS',
+      'string-id' => '#MONSIEURTHOMAS,#CLEANDRE;#BONIFACE,#LISETTE,#CLEANDRE;#BONIFACE,#ELISE,#CLEANDRE;#ELISE,#LISETTE,#CLEANDRE;#ELISE,#LISETTE,#CLEANDRE;#BONIFACE,#MONSIEURTHOMAS',
     ),
   ),
   'boucher_champagnelecoiffeur_I08' => 
@@ -101390,6 +102679,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Boucher',
       'string' => 'BONIFACE-LISETTE-CLÉANDRE/BONIFACE-ÉLISE-CLÉANDRE/ÉLISE-LISETTE-CLÉANDRE/ÉLISE-LISETTE-CLÉANDRE/BONIFACE-MONSIEUR THOMAS/BONIFACE-ÉLISE-LISETTE-MONSIEUR THOMAS-CLÉANDRE',
+      'string-id' => '#BONIFACE,#LISETTE,#CLEANDRE;#BONIFACE,#ELISE,#CLEANDRE;#ELISE,#LISETTE,#CLEANDRE;#ELISE,#LISETTE,#CLEANDRE;#BONIFACE,#MONSIEURTHOMAS;#BONIFACE,#ELISE,#LISETTE,#MONSIEURTHOMAS,#CLEANDRE',
     ),
   ),
   'boisrobert_rivauxamis_III01' => 
@@ -101475,6 +102765,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boisrobert',
       'string' => 'IOLAS-BÉRÉNICE-LES MÉDECINS/PHALANTE-IOLAS-BÉRÉNICE-IOLANTE/IOLANTE/IOLANTE-LILIANE/LILIANE-CARINTE/LILIANE-CARINTE-ARONTE',
+      'string-id' => '#IOLAS,#BERENICE,#MEDECIN;#PHALANTE,#IOLAS,#BERENICE,#IOLANTE;#IOLANTE;#IOLANTE,#LILIANE;#LILIANE,#CARINTE;#LILIANE,#CARINTE,#ARONTE',
     ),
   ),
   'boisrobert_rivauxamis_V01' => 
@@ -101551,6 +102842,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boisrobert',
       'string' => 'IOLANTE-IARBE/IOLANTE-IARBE-LES SOLDATS-ALMÉDOR/PHALANTE-HYDASPE/IOLAS-BÉRÉNICE-LE PAGE-LILIANE-CARINTE-ARONTE/IARBE/PHALANTE-IARBE',
+      'string-id' => '#IOLANTE,#IARBE;#IOLANTE,#IARBE,#SOLDATS,#ALMEDOR;#PHALANTE,#HYDASPE;#IOLAS,#BERENICE,#LEPAGE,#LILIANE,#CARINTE,#ARONTE;#IARBE;#PHALANTE,#IARBE',
     ),
   ),
   'boisrobert_rivauxamis_V02' => 
@@ -101636,6 +102928,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boisrobert',
       'string' => 'IOLANTE-IARBE-LES SOLDATS-ALMÉDOR/PHALANTE-HYDASPE/IOLAS-BÉRÉNICE-LE PAGE-LILIANE-CARINTE-ARONTE/IARBE/PHALANTE-IARBE/PHALANTE-IOLAS-BÉRÉNICE-IOLANTE-LILIANE-CARINTE-IARBE',
+      'string-id' => '#IOLANTE,#IARBE,#SOLDATS,#ALMEDOR;#PHALANTE,#HYDASPE;#IOLAS,#BERENICE,#LEPAGE,#LILIANE,#CARINTE,#ARONTE;#IARBE;#PHALANTE,#IARBE;#PHALANTE,#IOLAS,#BERENICE,#IOLANTE,#LILIANE,#CARINTE,#IARBE',
     ),
   ),
   'boisrobert_cassandre_I01' => 
@@ -101721,6 +103014,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boisrobert',
       'string' => 'LE DUC DE CARDONE-ASTOLFE-/CASSANDRE-ASTOLFE-/CASSANDRE-DON REMON DE MONCADE-DON PEDRE D\'ARAGON-DON LOPE-/DON REMON DE MONCADE-DON PEDRE D\'ARAGON-BERALDE-/BERALDE-/ASTOLFE-BERALDE',
+      'string-id' => '#DUC,#ASTOLFE,#CAPITAINE;#CASSANDRE,#ASTOLFE,#CAPITAINE;#CASSANDRE,#MONCADE,#DONPEDRE,#DONLOPE,#CAPITAINE;#MONCADE,#DONPEDRE,#BERALDE,#CAPITAINE;#BERALDE,#CAPITAINE;#ASTOLFE,#BERALDE,#CAPITAINE',
     ),
   ),
   'boisrobert_cassandre_I02' => 
@@ -101806,6 +103100,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boisrobert',
       'string' => 'CASSANDRE-ASTOLFE-/CASSANDRE-DON REMON DE MONCADE-DON PEDRE D\'ARAGON-DON LOPE-/DON REMON DE MONCADE-DON PEDRE D\'ARAGON-BERALDE-/BERALDE-/ASTOLFE-BERALDE-/CASSANDRE-ASTOLFE-DON REMON DE MONCADE',
+      'string-id' => '#CASSANDRE,#ASTOLFE,#CAPITAINE;#CASSANDRE,#MONCADE,#DONPEDRE,#DONLOPE,#CAPITAINE;#MONCADE,#DONPEDRE,#BERALDE,#CAPITAINE;#BERALDE,#CAPITAINE;#ASTOLFE,#BERALDE,#CAPITAINE;#CASSANDRE,#ASTOLFE,#MONCADE,#CAPITAINE',
     ),
   ),
   'boisrobert_cassandre_I03' => 
@@ -101891,6 +103186,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boisrobert',
       'string' => 'CASSANDRE-DON REMON DE MONCADE-DON PEDRE D\'ARAGON-DON LOPE-/DON REMON DE MONCADE-DON PEDRE D\'ARAGON-BERALDE-/BERALDE-/ASTOLFE-BERALDE-/CASSANDRE-ASTOLFE-DON REMON DE MONCADE-/ASTOLFE-DON REMON DE MONCADE',
+      'string-id' => '#CASSANDRE,#MONCADE,#DONPEDRE,#DONLOPE,#CAPITAINE;#MONCADE,#DONPEDRE,#BERALDE,#CAPITAINE;#BERALDE,#CAPITAINE;#ASTOLFE,#BERALDE,#CAPITAINE;#CASSANDRE,#ASTOLFE,#MONCADE,#CAPITAINE;#ASTOLFE,#MONCADE,#CAPITAINE',
     ),
   ),
   'boisrobert_cassandre_III01' => 
@@ -101949,6 +103245,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boisrobert',
       'string' => 'DON REMON DE MONCADE-DON PEDRE D\'ARAGON-/DON REMON DE MONCADE-DON PEDRE D\'ARAGON-BERALDE-/DON PEDRE D\'ARAGON-BERALDE-/DON REMON DE MONCADE-DON PEDRE D\'ARAGON-/ISABELLE-DON REMON DE MONCADE-DON PEDRE D\'ARAGON-BERALDE-/DON REMON DE MONCADE-DON PEDRE D\'ARAGON',
+      'string-id' => '#MONCADE,#DONPEDRE,#CAPITAINE;#MONCADE,#DONPEDRE,#BERALDE,#CAPITAINE;#DONPEDRE,#BERALDE,#CAPITAINE;#MONCADE,#DONPEDRE,#CAPITAINE;#ISABELLE,#MONCADE,#DONPEDRE,#BERALDE,#CAPITAINE;#MONCADE,#DONPEDRE,#CAPITAINE',
     ),
   ),
   'boisrobert_cassandre_III02' => 
@@ -102025,6 +103322,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boisrobert',
       'string' => 'DON REMON DE MONCADE-DON PEDRE D\'ARAGON-BERALDE-/DON PEDRE D\'ARAGON-BERALDE-/DON REMON DE MONCADE-DON PEDRE D\'ARAGON-/ISABELLE-DON REMON DE MONCADE-DON PEDRE D\'ARAGON-BERALDE-/DON REMON DE MONCADE-DON PEDRE D\'ARAGON-/CASSANDRE-DON REMON DE MONCADE',
+      'string-id' => '#MONCADE,#DONPEDRE,#BERALDE,#CAPITAINE;#DONPEDRE,#BERALDE,#CAPITAINE;#MONCADE,#DONPEDRE,#CAPITAINE;#ISABELLE,#MONCADE,#DONPEDRE,#BERALDE,#CAPITAINE;#MONCADE,#DONPEDRE,#CAPITAINE;#CASSANDRE,#MONCADE,#CAPITAINE',
     ),
   ),
   'boisrobert_cassandre_III03' => 
@@ -102110,6 +103408,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boisrobert',
       'string' => 'DON PEDRE D\'ARAGON-BERALDE-/DON REMON DE MONCADE-DON PEDRE D\'ARAGON-/ISABELLE-DON REMON DE MONCADE-DON PEDRE D\'ARAGON-BERALDE-/DON REMON DE MONCADE-DON PEDRE D\'ARAGON-/CASSANDRE-DON REMON DE MONCADE-/CASSANDRE-ASTOLFE',
+      'string-id' => '#DONPEDRE,#BERALDE,#CAPITAINE;#MONCADE,#DONPEDRE,#CAPITAINE;#ISABELLE,#MONCADE,#DONPEDRE,#BERALDE,#CAPITAINE;#MONCADE,#DONPEDRE,#CAPITAINE;#CASSANDRE,#MONCADE,#CAPITAINE;#CASSANDRE,#ASTOLFE,#CAPITAINE',
     ),
   ),
   'boisrobert_cassandre_III04' => 
@@ -102195,6 +103494,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boisrobert',
       'string' => 'DON REMON DE MONCADE-DON PEDRE D\'ARAGON-/ISABELLE-DON REMON DE MONCADE-DON PEDRE D\'ARAGON-BERALDE-/DON REMON DE MONCADE-DON PEDRE D\'ARAGON-/CASSANDRE-DON REMON DE MONCADE-/CASSANDRE-ASTOLFE-/CASSANDRE-DON LOPE',
+      'string-id' => '#MONCADE,#DONPEDRE,#CAPITAINE;#ISABELLE,#MONCADE,#DONPEDRE,#BERALDE,#CAPITAINE;#MONCADE,#DONPEDRE,#CAPITAINE;#CASSANDRE,#MONCADE,#CAPITAINE;#CASSANDRE,#ASTOLFE,#CAPITAINE;#CASSANDRE,#DONLOPE,#CAPITAINE',
     ),
   ),
   'boisrobert_cassandre_IV01' => 
@@ -102271,6 +103571,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boisrobert',
       'string' => 'LE DUC DE CARDONE-ASTOLFE-/LE DUC DE CARDONE-ASTOLFE-DON LOPE-/DON REMON DE MONCADE-/CASSANDRE-DON REMON DE MONCADE-/CASSANDRE-LE DUC DE CARDONE-DON REMON DE MONCADE-DON LOPE-/CASSANDRE-LE DUC DE CARDONE-ASTOLFE-DON LOPE',
+      'string-id' => '#DUC,#ASTOLFE,#CAPITAINE;#DUC,#ASTOLFE,#DONLOPE,#CAPITAINE;#MONCADE,#CAPITAINE;#CASSANDRE,#MONCADE,#CAPITAINE;#CASSANDRE,#DUC,#MONCADE,#DONLOPE,#CAPITAINE;#CASSANDRE,#DUC,#ASTOLFE,#DONLOPE,#CAPITAINE',
     ),
   ),
   'boisrobert_cassandre_V01' => 
@@ -102347,6 +103648,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boisrobert',
       'string' => 'CASSANDRE-BERALDE-/CASSANDRE-ISABELLE-/CASSANDRE-LE DUC DE CARDONE-ISABELLE-/CASSANDRE-ISABELLE-/CASSANDRE-ISABELLE-BERALDE-/ASTOLFE',
+      'string-id' => '#CASSANDRE,#BERALDE,#CAPITAINE;#CASSANDRE,#ISABELLE,#CAPITAINE;#CASSANDRE,#DUC,#ISABELLE,#CAPITAINE;#CASSANDRE,#ISABELLE,#CAPITAINE;#CASSANDRE,#ISABELLE,#BERALDE,#CAPITAINE;#ASTOLFE,#CAPITAINE',
     ),
   ),
   'boisrobert_cassandre_V02' => 
@@ -102414,6 +103716,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boisrobert',
       'string' => 'CASSANDRE-ISABELLE-/CASSANDRE-LE DUC DE CARDONE-ISABELLE-/CASSANDRE-ISABELLE-/CASSANDRE-ISABELLE-BERALDE-/ASTOLFE-/LE DUC DE CARDONE-ASTOLFE-BERALDE',
+      'string-id' => '#CASSANDRE,#ISABELLE,#CAPITAINE;#CASSANDRE,#DUC,#ISABELLE,#CAPITAINE;#CASSANDRE,#ISABELLE,#CAPITAINE;#CASSANDRE,#ISABELLE,#BERALDE,#CAPITAINE;#ASTOLFE,#CAPITAINE;#DUC,#ASTOLFE,#BERALDE,#CAPITAINE',
     ),
   ),
   'boisrobert_cassandre_V03' => 
@@ -102481,6 +103784,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boisrobert',
       'string' => 'CASSANDRE-LE DUC DE CARDONE-ISABELLE-/CASSANDRE-ISABELLE-/CASSANDRE-ISABELLE-BERALDE-/ASTOLFE-/LE DUC DE CARDONE-ASTOLFE-BERALDE-/CASSANDRE-LE DUC DE CARDONE-ASTOLFE-ISABELLE-BERALDE',
+      'string-id' => '#CASSANDRE,#DUC,#ISABELLE,#CAPITAINE;#CASSANDRE,#ISABELLE,#CAPITAINE;#CASSANDRE,#ISABELLE,#BERALDE,#CAPITAINE;#ASTOLFE,#CAPITAINE;#DUC,#ASTOLFE,#BERALDE,#CAPITAINE;#CASSANDRE,#DUC,#ASTOLFE,#ISABELLE,#BERALDE,#CAPITAINE',
     ),
   ),
   'boisrobert_cassandre_V04' => 
@@ -102557,6 +103861,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Boisrobert',
       'string' => 'CASSANDRE-ISABELLE-/CASSANDRE-ISABELLE-BERALDE-/ASTOLFE-/LE DUC DE CARDONE-ASTOLFE-BERALDE-/CASSANDRE-LE DUC DE CARDONE-ASTOLFE-ISABELLE-BERALDE-/CASSANDRE-LE DUC DE CARDONE-ASTOLFE-ISABELLE-DON REMON DE MONCADE',
+      'string-id' => '#CASSANDRE,#ISABELLE,#CAPITAINE;#CASSANDRE,#ISABELLE,#BERALDE,#CAPITAINE;#ASTOLFE,#CAPITAINE;#DUC,#ASTOLFE,#BERALDE,#CAPITAINE;#CASSANDRE,#DUC,#ASTOLFE,#ISABELLE,#BERALDE,#CAPITAINE;#CASSANDRE,#DUC,#ASTOLFE,#ISABELLE,#MONCADE,#CAPITAINE',
     ),
   ),
   'beys_celine_V01' => 
@@ -102633,6 +103938,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Beys',
       'string' => 'LISANOR/CÉLINE/LISANOR-CÉLINE-THERSANDRE/LISANOR-CÉLINE-THERSANDRE-LISIDAS/CÉLINE-AGANTE-CALISTE/LISANOR-CÉLINE-THERSANDRE-LISIDAS-AGANTE-CALISTE-CHRISANTE',
+      'string-id' => '#LISANOR;#CELINE;#LISANOR,#CELINE,#THERSANDRE;#LISANOR,#CELINE,#THERSANDRE,#LISIDAS;#CELINE,#AGANTE,#CALISTE;#LISANOR,#CELINE,#THERSANDRE,#LISIDAS,#AGANTE,#CALISTE,#CHRISANTE',
     ),
   ),
   'beys_celine_V02' => 
@@ -102709,6 +104015,7 @@
       'genreId' => 'Tragi-comedie',
       'authorId' => 'Beys',
       'string' => 'CÉLINE/LISANOR-CÉLINE-THERSANDRE/LISANOR-CÉLINE-THERSANDRE-LISIDAS/CÉLINE-AGANTE-CALISTE/LISANOR-CÉLINE-THERSANDRE-LISIDAS-AGANTE-CALISTE-CHRISANTE/LISANOR-CÉLINE-THERSANDRE-LISIDAS-AGANTE-CALISTE-CLARIN',
+      'string-id' => '#CELINE;#LISANOR,#CELINE,#THERSANDRE;#LISANOR,#CELINE,#THERSANDRE,#LISIDAS;#CELINE,#AGANTE,#CALISTE;#LISANOR,#CELINE,#THERSANDRE,#LISIDAS,#AGANTE,#CALISTE,#CHRISANTE;#LISANOR,#CELINE,#THERSANDRE,#LISIDAS,#AGANTE,#CALISTE,#CLARIN',
     ),
   ),
   'benserade_mortachille_III01' => 
@@ -102785,6 +104092,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Benserade',
       'string' => 'ACHILLE-BRISÉIDE-AJAX-ULYSSE/ACHILLE-BRISÉIDE/BRISÉIDE/HÉCUBE-POLIXÈNE/HÉCUBE-POLIXÈNE-PÂRIS/ACHILLE-ALCIMÈDE',
+      'string-id' => '#ACHILLE,#BRISEIDE,#AJAX,#ULYSSE;#ACHILLE,#BRISEIDE;#BRISEIDE;#HECUBE,#POLIXENE;#HECUBE,#POLIXENE,#PARIS;#ACHILLE,#ALCIMEDE',
     ),
   ),
   'benserade_mortachille_IV01' => 
@@ -102852,6 +104160,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Benserade',
       'string' => 'HÉCUBE-POLIXÈNE-PÂRIS-DEIPHOBE/AJAX-ULYSSE/ACHILLE-ALCIMÈDE/ACHILLE-ALCIMÈDE-PÂRIS-DEIPHOBE/ACHILLE/ACHILLE-AJAX-ULYSSE',
+      'string-id' => '#HECUBE,#POLIXENE,#PARIS,#DEIPHOBE;#AJAX,#ULYSSE;#ACHILLE,#ALCIMEDE;#ACHILLE,#ALCIMEDE,#PARIS,#DEIPHOBE;#ACHILLE;#ACHILLE,#AJAX,#ULYSSE',
     ),
   ),
   'benserade_mortachille_IV02' => 
@@ -102910,6 +104219,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Benserade',
       'string' => 'AJAX-ULYSSE/ACHILLE-ALCIMÈDE/ACHILLE-ALCIMÈDE-PÂRIS-DEIPHOBE/ACHILLE/ACHILLE-AJAX-ULYSSE/ACHILLE-AJAX-ULYSSE',
+      'string-id' => '#AJAX,#ULYSSE;#ACHILLE,#ALCIMEDE;#ACHILLE,#ALCIMEDE,#PARIS,#DEIPHOBE;#ACHILLE;#ACHILLE,#AJAX,#ULYSSE;#ACHILLE,#AJAX,#ULYSSE',
     ),
   ),
   'benserade_cleopatre_III01' => 
@@ -102959,6 +104269,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Benserade',
       'string' => 'EROS///LUCILE/CLÉOPÂTRE/CLÉOPÂTRE',
+      'string-id' => '#EROS;;;#LUCILE;#CLEOPATRE;#CLEOPATRE',
     ),
   ),
   'benserade_cleopatre_IV01' => 
@@ -102999,6 +104310,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Benserade',
       'string' => '/EPAPHRODITE//EPAPHRODITE/CLÉOPÂTRE/CLÉOPÂTRE',
+      'string-id' => ';#EPAPHRODITE;;#EPAPHRODITE;#CLEOPATRE;#CLEOPATRE',
     ),
   ),
   'benserade_cleopatre_IV02' => 
@@ -103039,6 +104351,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Benserade',
       'string' => 'EPAPHRODITE//EPAPHRODITE/CLÉOPÂTRE/CLÉOPÂTRE/CLÉOPÂTRE',
+      'string-id' => '#EPAPHRODITE;;#EPAPHRODITE;#CLEOPATRE;#CLEOPATRE;#CLEOPATRE',
     ),
   ),
   'benserade_cleopatre_V01' => 
@@ -103079,6 +104392,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Benserade',
       'string' => 'CLÉOPÂTRE-EPAPHRODITE/CLÉOPÂTRE//EPAPHRODITE/CLÉOPÂTRE/EPAPHRODITE',
+      'string-id' => '#CLEOPATRE,#EPAPHRODITE;#CLEOPATRE;;#EPAPHRODITE;#CLEOPATRE;#EPAPHRODITE',
     ),
   ),
   'benserade_cleopatre_V02' => 
@@ -103119,6 +104433,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Benserade',
       'string' => 'CLÉOPÂTRE//EPAPHRODITE/CLÉOPÂTRE/EPAPHRODITE/',
+      'string-id' => '#CLEOPATRE;;#EPAPHRODITE;#CLEOPATRE;#EPAPHRODITE;',
     ),
   ),
   'benserade_cleopatre_V03' => 
@@ -103159,6 +104474,7 @@
       'genreId' => 'Tragedie',
       'authorId' => 'Benserade',
       'string' => '/EPAPHRODITE/CLÉOPÂTRE/EPAPHRODITE//',
+      'string-id' => ';#EPAPHRODITE;#CLEOPATRE;#EPAPHRODITE;;',
     ),
   ),
   'armand_crinature_I01' => 
@@ -103217,6 +104533,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Armand',
       'string' => 'MADAME GERVAIS-SUZON/SUZON-VINCENT/MONGEI-MADAME MONGEI/MONGEI-MADAME MONGEI-SUZON-VINCENT/MONGEI-MADAME MONGEI-SUZON/MONGEI-MADAME MONGEI-SUZON-VINCENT',
+      'string-id' => '#MADAMEGERVAIS,#SUZON;#SUZON,#VINCENT;#MONGEI,#MADAMEMONGEI;#MONGEI,#MADAMEMONGEI,#SUZON,#VINCENT;#MONGEI,#MADAMEMONGEI,#SUZON;#MONGEI,#MADAMEMONGEI,#SUZON,#VINCENT',
     ),
   ),
   'armand_crinature_I02' => 
@@ -103266,6 +104583,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Armand',
       'string' => 'SUZON-VINCENT/MONGEI-MADAME MONGEI/MONGEI-MADAME MONGEI-SUZON-VINCENT/MONGEI-MADAME MONGEI-SUZON/MONGEI-MADAME MONGEI-SUZON-VINCENT/MONGEI-MADAME MONGEI-SUZON',
+      'string-id' => '#SUZON,#VINCENT;#MONGEI,#MADAMEMONGEI;#MONGEI,#MADAMEMONGEI,#SUZON,#VINCENT;#MONGEI,#MADAMEMONGEI,#SUZON;#MONGEI,#MADAMEMONGEI,#SUZON,#VINCENT;#MONGEI,#MADAMEMONGEI,#SUZON',
     ),
   ),
   'armand_crinature_I03' => 
@@ -103315,6 +104633,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Armand',
       'string' => 'MONGEI-MADAME MONGEI/MONGEI-MADAME MONGEI-SUZON-VINCENT/MONGEI-MADAME MONGEI-SUZON/MONGEI-MADAME MONGEI-SUZON-VINCENT/MONGEI-MADAME MONGEI-SUZON/MONGEI-MADAME MONGEI-SUZON-VINCENT',
+      'string-id' => '#MONGEI,#MADAMEMONGEI;#MONGEI,#MADAMEMONGEI,#SUZON,#VINCENT;#MONGEI,#MADAMEMONGEI,#SUZON;#MONGEI,#MADAMEMONGEI,#SUZON,#VINCENT;#MONGEI,#MADAMEMONGEI,#SUZON;#MONGEI,#MADAMEMONGEI,#SUZON,#VINCENT',
     ),
   ),
   'armand_crinature_I04' => 
@@ -103355,6 +104674,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Armand',
       'string' => 'MONGEI-MADAME MONGEI-SUZON-VINCENT/MONGEI-MADAME MONGEI-SUZON/MONGEI-MADAME MONGEI-SUZON-VINCENT/MONGEI-MADAME MONGEI-SUZON/MONGEI-MADAME MONGEI-SUZON-VINCENT/MONGEI-MADAME MONGEI-SUZON-VINCENT',
+      'string-id' => '#MONGEI,#MADAMEMONGEI,#SUZON,#VINCENT;#MONGEI,#MADAMEMONGEI,#SUZON;#MONGEI,#MADAMEMONGEI,#SUZON,#VINCENT;#MONGEI,#MADAMEMONGEI,#SUZON;#MONGEI,#MADAMEMONGEI,#SUZON,#VINCENT;#MONGEI,#MADAMEMONGEI,#SUZON,#VINCENT',
     ),
   ),
   'armand_crinature_I05' => 
@@ -103404,6 +104724,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Armand',
       'string' => 'MONGEI-MADAME MONGEI-SUZON/MONGEI-MADAME MONGEI-SUZON-VINCENT/MONGEI-MADAME MONGEI-SUZON/MONGEI-MADAME MONGEI-SUZON-VINCENT/MONGEI-MADAME MONGEI-SUZON-VINCENT/SUZON-VINCENT',
+      'string-id' => '#MONGEI,#MADAMEMONGEI,#SUZON;#MONGEI,#MADAMEMONGEI,#SUZON,#VINCENT;#MONGEI,#MADAMEMONGEI,#SUZON;#MONGEI,#MADAMEMONGEI,#SUZON,#VINCENT;#MONGEI,#MADAMEMONGEI,#SUZON,#VINCENT;#SUZON,#VINCENT',
     ),
   ),
   'armand_crinature_I06' => 
@@ -103453,6 +104774,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Armand',
       'string' => 'MONGEI-MADAME MONGEI-SUZON-VINCENT/MONGEI-MADAME MONGEI-SUZON/MONGEI-MADAME MONGEI-SUZON-VINCENT/MONGEI-MADAME MONGEI-SUZON-VINCENT/SUZON-VINCENT/SUZON',
+      'string-id' => '#MONGEI,#MADAMEMONGEI,#SUZON,#VINCENT;#MONGEI,#MADAMEMONGEI,#SUZON;#MONGEI,#MADAMEMONGEI,#SUZON,#VINCENT;#MONGEI,#MADAMEMONGEI,#SUZON,#VINCENT;#SUZON,#VINCENT;#SUZON',
     ),
   ),
   'armand_crinature_I07' => 
@@ -103502,6 +104824,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Armand',
       'string' => 'MONGEI-MADAME MONGEI-SUZON/MONGEI-MADAME MONGEI-SUZON-VINCENT/MONGEI-MADAME MONGEI-SUZON-VINCENT/SUZON-VINCENT/SUZON/SUZON-VINCENT',
+      'string-id' => '#MONGEI,#MADAMEMONGEI,#SUZON;#MONGEI,#MADAMEMONGEI,#SUZON,#VINCENT;#MONGEI,#MADAMEMONGEI,#SUZON,#VINCENT;#SUZON,#VINCENT;#SUZON;#SUZON,#VINCENT',
     ),
   ),
   'armand_crinature_I08' => 
@@ -103569,6 +104892,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Armand',
       'string' => 'MONGEI-MADAME MONGEI-SUZON-VINCENT/MONGEI-MADAME MONGEI-SUZON-VINCENT/SUZON-VINCENT/SUZON/SUZON-VINCENT/MADAME MONGEI-MADAME GERVAIS-SUZON-VINCENT',
+      'string-id' => '#MONGEI,#MADAMEMONGEI,#SUZON,#VINCENT;#MONGEI,#MADAMEMONGEI,#SUZON,#VINCENT;#SUZON,#VINCENT;#SUZON;#SUZON,#VINCENT;#MADAMEMONGEI,#MADAMEGERVAIS,#SUZON,#VINCENT',
     ),
   ),
   'armand_crinature_I09' => 
@@ -103636,6 +104960,7 @@
       'genreId' => 'Comedie',
       'authorId' => 'Armand',
       'string' => 'MONGEI-MADAME MONGEI-SUZON-VINCENT/SUZON-VINCENT/SUZON/SUZON-VINCENT/MADAME MONGEI-MADAME GERVAIS-SUZON-VINCENT/MONGEI-MADAME MONGEI-MADAME GERVAIS-VINCENT',
+      'string-id' => '#MONGEI,#MADAMEMONGEI,#SUZON,#VINCENT;#SUZON,#VINCENT;#SUZON;#SUZON,#VINCENT;#MADAMEMONGEI,#MADAMEGERVAIS,#SUZON,#VINCENT;#MONGEI,#MADAMEMONGEI,#MADAMEGERVAIS,#VINCENT',
     ),
   ),
 ); ?>

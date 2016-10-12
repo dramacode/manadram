@@ -41,15 +41,20 @@
       'field' => 'Chevreau',
       'value' => 9,
     ),
+    'Corneille' => 
+    array (
+      'field' => 'Corneille',
+      'value' => 18,
+    ),
     'CorneillePierre' => 
     array (
       'field' => 'Corneille, Pierre',
-      'value' => 340,
+      'value' => 337,
     ),
     'CorneilleThomas' => 
     array (
       'field' => 'Corneille, Thomas',
-      'value' => 381,
+      'value' => 366,
     ),
     'Cyrano' => 
     array (
@@ -94,7 +99,7 @@
     'DuRyer' => 
     array (
       'field' => 'Du Ryer',
-      'value' => 104,
+      'value' => 102,
     ),
     'Gilbert' => 
     array (
@@ -206,11 +211,6 @@
       'field' => 'Villiers',
       'value' => 13,
     ),
-    'dUrfe' => 
-    array (
-      'field' => 'd’Urfé',
-      'value' => 30,
-    ),
   ),
   'authorId' => 
   array (
@@ -254,15 +254,20 @@
       'field' => 'Chevreau',
       'value' => 9,
     ),
+    'Corneille' => 
+    array (
+      'field' => 'Corneille',
+      'value' => 18,
+    ),
     'CorneillePierre' => 
     array (
       'field' => 'CorneillePierre',
-      'value' => 340,
+      'value' => 337,
     ),
     'CorneilleThomas' => 
     array (
       'field' => 'CorneilleThomas',
-      'value' => 381,
+      'value' => 366,
     ),
     'Cyrano' => 
     array (
@@ -307,7 +312,7 @@
     'DuRyer' => 
     array (
       'field' => 'DuRyer',
-      'value' => 104,
+      'value' => 102,
     ),
     'Gilbert' => 
     array (
@@ -419,11 +424,6 @@
       'field' => 'Villiers',
       'value' => 13,
     ),
-    'dUrfe' => 
-    array (
-      'field' => 'dUrfe',
-      'value' => 30,
-    ),
   ),
   'title' => 
   array (
@@ -491,11 +491,6 @@
     array (
       'field' => 'Antigone',
       'value' => 11,
-    ),
-    'ArgenisetPoliarque' => 
-    array (
-      'field' => 'Argenis et Poliarque',
-      'value' => 2,
     ),
     'Ariane' => 
     array (
@@ -921,11 +916,6 @@
     array (
       'field' => 'La Suivante',
       'value' => 27,
-    ),
-    'LaSylvanire' => 
-    array (
-      'field' => 'La Sylvanire',
-      'value' => 30,
     ),
     'LaThebaide' => 
     array (
@@ -1483,7 +1473,7 @@
     'Comedie' => 
     array (
       'field' => 'Comédie',
-      'value' => 1056,
+      'value' => 1071,
     ),
     'Comedie-ballet' => 
     array (
@@ -1505,20 +1495,15 @@
       'field' => 'Pastorale',
       'value' => 35,
     ),
-    'Pastoraleheroique' => 
-    array (
-      'field' => 'Pastorale héroïque',
-      'value' => 30,
-    ),
     'Tragedie' => 
     array (
       'field' => 'Tragédie',
-      'value' => 722,
+      'value' => 704,
     ),
     'Tragi-comedie' => 
     array (
       'field' => 'Tragi-comédie',
-      'value' => 448,
+      'value' => 449,
     ),
   ),
   'genreId' => 
@@ -1526,7 +1511,7 @@
     'Comedie' => 
     array (
       'field' => 'Comedie',
-      'value' => 1056,
+      'value' => 1071,
     ),
     'Comedie-ballet' => 
     array (
@@ -1548,20 +1533,15 @@
       'field' => 'Pastorale',
       'value' => 35,
     ),
-    'Pastoraleheroique' => 
-    array (
-      'field' => 'Pastoraleheroique',
-      'value' => 30,
-    ),
     'Tragedie' => 
     array (
       'field' => 'Tragedie',
-      'value' => 722,
+      'value' => 704,
     ),
     'Tragi-comedie' => 
     array (
       'field' => 'Tragi-comedie',
-      'value' => 448,
+      'value' => 449,
     ),
   ),
   'play' => 
@@ -2060,11 +2040,6 @@
     array (
       'field' => 'duryer_anaxandre',
       'value' => 13,
-    ),
-    'duryer_argenispoliarque' => 
-    array (
-      'field' => 'duryer_argenispoliarque',
-      'value' => 2,
     ),
     'duryer_berenice' => 
     array (
@@ -2661,11 +2636,6 @@
       'field' => 'tristan_parasite',
       'value' => 11,
     ),
-    'urfe_sylvanire' => 
-    array (
-      'field' => 'urfe_sylvanire',
-      'value' => 30,
-    ),
     'villiers_festindepierre' => 
     array (
       'field' => 'villiers_festindepierre',
@@ -2674,71 +2644,6 @@
   ),
   'date' => 
   array (
-    1617 => 
-    array (
-      'field' => 1617,
-      'value' => 30,
-    ),
-    1618 => 
-    array (
-      'field' => 1618,
-      'value' => 0,
-    ),
-    1619 => 
-    array (
-      'field' => 1619,
-      'value' => 0,
-    ),
-    1620 => 
-    array (
-      'field' => 1620,
-      'value' => 0,
-    ),
-    1621 => 
-    array (
-      'field' => 1621,
-      'value' => 0,
-    ),
-    1622 => 
-    array (
-      'field' => 1622,
-      'value' => 0,
-    ),
-    1623 => 
-    array (
-      'field' => 1623,
-      'value' => 0,
-    ),
-    1624 => 
-    array (
-      'field' => 1624,
-      'value' => 0,
-    ),
-    1625 => 
-    array (
-      'field' => 1625,
-      'value' => 0,
-    ),
-    1626 => 
-    array (
-      'field' => 1626,
-      'value' => 0,
-    ),
-    1627 => 
-    array (
-      'field' => 1627,
-      'value' => 0,
-    ),
-    1628 => 
-    array (
-      'field' => 1628,
-      'value' => 0,
-    ),
-    1629 => 
-    array (
-      'field' => 1629,
-      'value' => 2,
-    ),
     1630 => 
     array (
       'field' => 1630,
@@ -2997,20 +2902,10 @@
   ),
   'lustrum' => 
   array (
-    '1616-1620' => 
-    array (
-      'field' => '1616-1620',
-      'value' => 30,
-    ),
-    '1621-1625' => 
-    array (
-      'field' => '1621-1625',
-      'value' => 0,
-    ),
     '1626-1630' => 
     array (
       'field' => '1626-1630',
-      'value' => 20,
+      'value' => 18,
     ),
     '1631-1635' => 
     array (
