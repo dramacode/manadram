@@ -34,13 +34,10 @@ echo '<!DOCTYPE html>
 
 <body>';
 
-if (isset($_GET["author"]) and $_GET["author"] == "corneillep") {
-    include ("corneillep/corpus.php");
-} else {
+
     include ("data/corpus.php");
-}
-$lang = (isset($_GET["lang"]) and $_GET["lang"] == "en")? "en" : "fr";
-include ("lang/".$lang.".php");
+$lang = (isset($_GET["lang"]) and $_GET["lang"] == "en") ? "en" : "fr";
+include ("lang/" . $lang . ".php");
 include ("tpl/header.tpl.php");
 include ("tpl/corpus.tpl.php");
 
@@ -55,19 +52,17 @@ include ("tpl/corpus.tpl.php");
 //echo '<div style="display: none">	<div id="results" style="width:1000px;height:800px;overflow:auto;">';
 
 
-if (isset($_POST["post"])) {
-
+if (isset($_GET["post"])) {
     doPost($files, $corpus, $fields);
-
 } else {
     echo '<script type="text/javascript" src="js/main.js"> </script>';
     include ("tpl/form.tpl.php");
 }
-include("tpl/footer.tpl.php");
+include ("tpl/footer.tpl.php");
 echo '</body></html>';
 
 function doPost($files, $corpus, $fields) {
-    
+
     $a = microtime(true);
 
     //echo "<pre>";print_r($haystack);
@@ -77,7 +72,7 @@ function doPost($files, $corpus, $fields) {
         "lustrum" => "Année",
         "genre" => "Genre"
     );
-    foreach ($_POST["xpath"] as $key => $xpath) {
+    foreach ($_GET["xpath"] as $key => $xpath) {
         
         if (!$xpath) {
             continue;
@@ -86,26 +81,18 @@ function doPost($files, $corpus, $fields) {
     }
     $needle = getNeedle();
     $n = count(array_shift(array_values($needle)));
-    $group = (isset($_POST["group"])) ? true : false;
-    $confidents = (isset($_POST["ignore_confident"])) ? true : false;
+    $group = (isset($_GET["group"])) ? true : false;
+    $confidents = (isset($_GET["ignore_confident"])) ? true : false;
     $options = (!$confidents and !$group) ? "default" : "";
     $options.= $confidents ? "C" : "";
     $options.= $group ? "G" : "";
     $folder = (isset($_GET["author"]) and $_GET["author"] == "corneillep") ? "corneillep" : "data";
     $haystack = array();
     $fields = array();
-    
-    if (isset($_GET["author"]) and $_GET["author"] == "corneillep") {
-        include ("corneillep/fields" . $n . ".php");
-        include ("corneillep/haystack" . $n . $options . ".php");
-        $fields = $fields[$n];
-        $haystack = $haystack[$n][$options];
-    } else {
-        include ("data/fields" . $n . ".php");
-        include ("data/haystack" . $n . $options . ".php");
-        $fields = $fields[$n];
-        $haystack = $haystack[$n][$options];
-    }
+    include ("data/fields" . $n . ".php");
+    include ("data/haystack" . $n . $options . ".php");
+    $fields = $fields[$n];
+    $haystack = $haystack[$n][$options];
     $searchResults = searchPattern($needle, $haystack, $dfields, $corpus, $fields);
     $b = microtime(true);
     $time = round($b - $a, 2);

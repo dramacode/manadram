@@ -1,6 +1,6 @@
 <div id="form">
     
-    <form method="post" enctype="multipart/form-data">
+    <form method="get" enctype="multipart/form-data">
 
 
 

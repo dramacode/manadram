@@ -5,7 +5,7 @@ function searchPattern($needle, $haystack, $dfields, $corpus, $fields) {
 
     //PATAB
     $patab = '<table class="pattern">';
-    foreach ($_POST["pattern"] as $character) {
+    foreach ($_GET["pattern"] as $character) {
         $patab.= '<tr>';
         foreach ($character as $configuration) {
             $patab.= ($configuration == "P") ? '<td class="configuration speaking"></td>' : '<td class="configuration absent"></td>';
@@ -80,7 +80,7 @@ function searchPattern($needle, $haystack, $dfields, $corpus, $fields) {
             $results[$key]["sceneId"] = $hay["id"]["sceneId"];
             $results[$key]["string"] = $hay["id"]["string"];
              $results[$key]["allocc"] = $hay["id"]["sceneId"];
-            if ($_POST["xpath"]["xpath-0"]) {
+            if ($_GET["xpath"]["xpath-0"]) {
 	            
                 $dom = new DOMDocument();
 //                 $string = file_get_contents("http://dramacode.github.io/tcp5/" . $hay["id"]["play"] . ".xml");
@@ -92,7 +92,7 @@ function searchPattern($needle, $haystack, $dfields, $corpus, $fields) {
                 $conf = $dom->getElementById($results[$key]["sceneId"]);
 //                 print_r($conf);
                 $i = 0;
-                foreach ($_POST["xpath"] as $xkey => $request) {
+                foreach ($_GET["xpath"] as $xkey => $request) {
                     
                     if (!$request) {
                         continue;

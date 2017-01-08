@@ -1,7 +1,7 @@
 <?php
 function getNeedle() {
 
-    $needle = $_POST["pattern"];
+    $needle = $_GET["pattern"];
     $search = array(
         "A",
         "P",
