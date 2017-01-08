@@ -17,8 +17,10 @@
             'transitionIn': 'none',
             'transitionOut': 'none'
         });
-
-
+        var thisHash = window.location.hash;
+        if(window.location.hash) {
+            $(thisHash).fancybox().trigger('click');
+        }
         initListeners();
         initListenersScene();
 
