@@ -86,7 +86,7 @@ function doPost($files, $corpus, $fields) {
     $options = (!$confidents and !$group) ? "default" : "";
     $options.= $confidents ? "C" : "";
     $options.= $group ? "G" : "";
-    $folder = (isset($_GET["author"]) and $_GET["author"] == "corneillep") ? "corneillep" : "data";
+    $folder = "data";
     $haystack = array();
     $fields = array();
     include ("data/fields" . $n . ".php");
