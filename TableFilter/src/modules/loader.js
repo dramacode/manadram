@@ -1,156 +1,172 @@
-import {Feature} from './feature';
-import Dom from '../dom';
-import Types from '../types';
+import {Feature} from '../feature';
+import {createElm, createText, elm, removeElm} from '../dom';
+import {isFn, EMPTY_FN} from '../types';
+import {root} from '../root';
+import {NONE} from '../const';
 
-let global = window;
+const EVENTS = [
+    'before-filtering',
+    'before-populating-filter',
+    'before-page-change',
+    'before-clearing-filters',
+    'before-page-length-change',
+    'before-reset-page',
+    'before-reset-page-length',
+    'before-loading-extensions',
+    'before-loading-themes'
+];
 
-export class Loader extends Feature{
+/**
+ * Activity indicator
+ *
+ * @export
+ * @class Loader
+ * @extends {Feature}
+ */
+export class Loader extends Feature {
 
     /**
-     * Loading message/spinner
-     * @param {Object} tf TableFilter instance
+     * Creates an instance of Loader.
+     *
+     * @param {TableFilter} tf TableFilter instance
      */
     constructor(tf) {
         super(tf, 'loader');
 
-        // TableFilter configuration
         let f = this.config;
 
-        //id of container element
-        this.loaderTgtId = f.loader_target_id || null;
-        //div containing loader
-        this.loaderDiv = null;
-        //defines loader text
-        this.loaderText = f.loader_text || 'Loading...';
-        //defines loader innerHtml
-        this.loaderHtml = f.loader_html || null;
-        //defines css class for loader div
-        this.loaderCssClass = f.loader_css_class || 'loader';
-        //delay for hiding loader
-        this.loaderCloseDelay = 250;
-        //callback function before loader is displayed
-        this.onShowLoader = Types.isFn(f.on_show_loader) ?
-            f.on_show_loader : null;
-        //callback function after loader is closed
-        this.onHideLoader = Types.isFn(f.on_hide_loader) ?
-            f.on_hide_loader : null;
-        //loader div
-        this.prfxLoader = 'load_';
+        /**
+         * ID of custom container element
+         * @type {String}
+         */
+        this.targetId = f.loader_target_id || null;
+
+        /**
+         * Loader container DOM element
+         * @type {DOMElement}
+         */
+        this.cont = null;
+
+        /**
+         * Text displayed when indicator is visible
+         * @type {String}
+         */
+        this.text = f.loader_text || 'Loading...';
+
+        /**
+         * Custom HTML injected in Loader's container element
+         * @type {String}
+         */
+        this.html = f.loader_html || null;
+
+        /**
+         * Css class for Loader's container element
+         * @type {String}
+         */
+        this.cssClass = f.loader_css_class || 'loader';
+
+        /**
+         * Close delay in milliseconds
+         * @type {Number}
+         */
+        this.closeDelay = 250;
+
+        /**
+         * Callback fired when loader is displayed
+         * @type {Function}
+         */
+        this.onShow = isFn(f.on_show_loader) ?
+            f.on_show_loader : EMPTY_FN;
+
+        /**
+         * Callback fired when loader is closed
+         * @type {Function}
+         */
+        this.onHide = isFn(f.on_hide_loader) ? f.on_hide_loader : EMPTY_FN;
     }
 
+    /**
+     * Initializes Loader instance
+     */
     init() {
-        if(this.initialized){
+        if (this.initialized) {
             return;
         }
 
         let tf = this.tf;
         let emitter = this.emitter;
 
-        let containerDiv = Dom.create('div', ['id', this.prfxLoader+tf.id]);
-        containerDiv.className = this.loaderCssClass;
+        let containerDiv = createElm('div');
+        containerDiv.className = this.cssClass;
 
-        let targetEl = !this.loaderTgtId ?
-            tf.tbl.parentNode : Dom.id(this.loaderTgtId);
-        if(!this.loaderTgtId){
+        let targetEl = !this.targetId ?
+            tf.tbl.parentNode : elm(this.targetId);
+        if (!this.targetId) {
             targetEl.insertBefore(containerDiv, tf.tbl);
         } else {
             targetEl.appendChild(containerDiv);
         }
-        this.loaderDiv = containerDiv;
-        if(!this.loaderHtml){
-            this.loaderDiv.appendChild(Dom.text(this.loaderText));
+        this.cont = containerDiv;
+        if (!this.html) {
+            this.cont.appendChild(createText(this.text));
         } else {
-            this.loaderDiv.innerHTML = this.loaderHtml;
+            this.cont.innerHTML = this.html;
         }
 
-        this.show('none');
+        this.show(NONE);
 
         // Subscribe to events
-        emitter.on([
-            'before-filtering',
-            'before-populating-filter',
-            'before-page-change',
-            'before-clearing-filters',
-            'before-page-length-change',
-            'before-reset-page',
-            'before-reset-page-length',
-            'before-loading-extensions',
-            'before-loading-themes'],
-            ()=> this.show('')
-        );
-        emitter.on([
-            'after-filtering',
-            'after-populating-filter',
-            'after-page-change',
-            'after-clearing-filters',
-            'after-page-length-change',
-            'after-reset-page',
-            'after-reset-page-length',
-            'after-loading-extensions',
-            'after-loading-themes'],
-            ()=> this.show('none')
-        );
+        emitter.on(EVENTS, () => this.show(''));
+        emitter.on(EVENTS, () => this.show(NONE));
 
+        /**
+         * @inherited
+         */
         this.initialized = true;
     }
 
+    /**
+     * Shows or hides activity indicator
+     * @param {String} Two possible values: '' or 'none'
+     */
     show(p) {
-        if(!this.isEnabled() /*|| this.loaderDiv.style.display === p*/){
+        if (!this.isEnabled()) {
             return;
         }
 
         let displayLoader = () => {
-            if(!this.loaderDiv){
+            if (!this.cont) {
                 return;
             }
-            if(this.onShowLoader && p !== 'none'){
-                this.onShowLoader.call(null, this);
+            if (p !== NONE) {
+                this.onShow(this);
             }
-            this.loaderDiv.style.display = p;
-            if(this.onHideLoader && p === 'none'){
-                this.onHideLoader.call(null, this);
+            this.cont.style.display = p;
+            if (p === NONE) {
+                this.onHide(this);
             }
         };
 
-        let t = p === 'none' ? this.loaderCloseDelay : 1;
-        global.setTimeout(displayLoader, t);
+        let t = p === NONE ? this.closeDelay : 1;
+        root.setTimeout(displayLoader, t);
     }
 
+    /**
+     * Removes feature
+     */
     destroy() {
-        if(!this.initialized){
+        if (!this.initialized) {
             return;
         }
 
         let emitter = this.emitter;
 
-        Dom.remove(this.loaderDiv);
-        this.loaderDiv = null;
+        removeElm(this.cont);
+        this.cont = null;
 
         // Unsubscribe to events
-        emitter.off([
-            'before-filtering',
-            'before-populating-filter',
-            'before-page-change',
-            'before-clearing-filters',
-            'before-page-length-change',
-            'before-reset-page',
-            'before-reset-page-length',
-            'before-loading-extensions',
-            'before-loading-themes'],
-            ()=> this.show('')
-        );
-        emitter.off([
-            'after-filtering',
-            'after-populating-filter',
-            'after-page-change',
-            'after-clearing-filters',
-            'after-page-length-change',
-            'after-reset-page',
-            'after-reset-page-length',
-            'after-loading-extensions',
-            'after-loading-themes'],
-            ()=> this.show('none')
-        );
+        emitter.off(EVENTS, () => this.show(''));
+        emitter.off(EVENTS, () => this.show(NONE));
 
         this.initialized = false;
     }

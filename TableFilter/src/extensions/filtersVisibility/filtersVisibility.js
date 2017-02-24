@@ -1,83 +1,180 @@
-import Dom from '../../dom';
-import Types from '../../types';
-import Event from '../../event';
+import {Feature} from '../../feature';
+import {createElm, removeElm, elm} from '../../dom';
+import {isFn, isUndef, EMPTY_FN} from '../../types';
+import {addEvt} from '../../event';
 
-export default class FiltersVisibility {
+/**
+ * Filters Visibility extension
+ */
+export default class FiltersVisibility extends Feature {
 
     /**
-     * Filters Row Visibility extension
-     * @param {Object} tf TableFilter instance
-     * @param {Object} f Config
+     * Creates an instance of FiltersVisibility
+     * @param {TableFilter} tf TableFilter instance
+     * @param {Object} Configuration object
      */
     constructor(tf, f) {
+        super(tf, f.name);
 
-        this.initialized = false;
+        /**
+         * Module name
+         * @type {String}
+         */
         this.name = f.name;
+
+        /**
+         * Module description
+         * @type {String}
+         */
         this.desc = f.description || 'Filters row visibility manager';
 
-        // Path and image filenames
+        /**
+         * Extension's stylesheet filename
+         * @type {String}
+         */
         this.stylesheet = f.stylesheet || 'filtersVisibility.css';
+
+        /**
+         * Expand icon filename
+         * @type {String}
+         */
         this.icnExpand = f.expand_icon_name || 'icn_exp.png';
+
+        /**
+         * Collapse icon filename
+         * @type {String}
+         */
         this.icnCollapse = f.collapse_icon_name || 'icn_clp.png';
 
-        //expand/collapse filters span element
+        /**
+         * Main container element
+         * @private
+         */
         this.contEl = null;
-        //expand/collapse filters btn element
+
+        /**
+         * Button element
+         * @private
+         */
         this.btnEl = null;
 
+        /**
+         * Expand icon HTML
+         * @private
+         */
         this.icnExpandHtml = '<img src="' + tf.themesPath + this.icnExpand +
             '" alt="Expand filters" >';
+
+        /**
+         * Collapse icon HTML
+         * @private
+         */
         this.icnCollapseHtml = '<img src="' + tf.themesPath + this.icnCollapse +
             '" alt="Collapse filters" >';
+
+        /**
+         * Default text
+         * @private
+         */
         this.defaultText = 'Toggle filters';
 
-        //id of container element
+        /**
+         * ID of main container element
+         * @type {String}
+         */
         this.targetId = f.target_id || null;
-        //enables/disables expand/collapse icon
+
+        /**
+         * Enable expand/collapse icon, defaults to true
+         * @type {Boolean}
+         */
         this.enableIcon = f.enable_icon === false ? false : true;
+
+        /**
+         * Custom text for button
+         * @type {String}
+         */
         this.btnText = f.btn_text || '';
 
-        //defines expand/collapse filters text
+        /**
+         * Collapse button HTML
+         * @private
+         */
         this.collapseBtnHtml = this.enableIcon ?
             this.icnCollapseHtml + this.btnText :
             this.btnText || this.defaultText;
+
+        /**
+         * Expand button HTML
+         * @private
+         */
         this.expandBtnHtml = this.enableIcon ?
             this.icnExpandHtml + this.btnText :
             this.btnText || this.defaultText;
 
-        //defines expand/collapse filters button innerHtml
+        /**
+         * Button's custom HTML
+         * @type {String}
+         */
         this.btnHtml = f.btn_html || null;
-        //defines css class for expand/collapse filters button
+
+        /**
+         * Css class for expand/collapse filters button
+         * @type {String}
+         */
         this.btnCssClass = f.btn_css_class || 'btnExpClpFlt';
-        //defines css class span containing expand/collapse filters
+
+        /**
+         * Css class for main container
+         * @type {String}
+         */
         this.contCssClass = f.cont_css_class || 'expClpFlt';
-        this.filtersRowIndex = !Types.isUndef(f.filters_row_index) ?
+
+        /**
+         * Filters row index
+         * @type {Number}
+         */
+        this.filtersRowIndex = !isUndef(f.filters_row_index) ?
             f.filters_row_index : tf.getFiltersRowIndex();
 
-        this.visibleAtStart = !Types.isUndef(f.visible_at_start) ?
+        /**
+         * Make filters visible at initialization, defaults to true
+         * @type {Boolean}
+         */
+        this.visibleAtStart = !isUndef(f.visible_at_start) ?
             Boolean(f.visible_at_start) : true;
 
-        // Prefix
-        this.prfx = 'fltsVis_';
+        /**
+         * Callback fired before filters row is shown
+         * @type {Function}
+         */
+        this.onBeforeShow = isFn(f.on_before_show) ?
+            f.on_before_show : EMPTY_FN;
 
-        //callback before filters row is shown
-        this.onBeforeShow = Types.isFn(f.on_before_show) ?
-            f.on_before_show : null;
-        //callback after filters row is shown
-        this.onAfterShow = Types.isFn(f.on_after_show) ?
-            f.on_after_show : null;
-        //callback before filters row is hidden
-        this.onBeforeHide = Types.isFn(f.on_before_hide) ?
-            f.on_before_hide : null;
-        //callback after filters row is hidden
-        this.onAfterHide = Types.isFn(f.on_after_hide) ? f.on_after_hide : null;
+        /**
+         * Callback fired after filters row is shown
+         * @type {Function}
+         */
+        this.onAfterShow = isFn(f.on_after_show) ? f.on_after_show : EMPTY_FN;
 
-        //Loads extension stylesheet
+        /**
+         * Callback fired before filters row is hidden
+         * @type {Function}
+         */
+        this.onBeforeHide = isFn(f.on_before_hide) ?
+            f.on_before_hide : EMPTY_FN;
+
+        /**
+         * Callback fired after filters row is hidden
+         * @type {Function}
+         */
+        this.onAfterHide = isFn(f.on_after_hide) ? f.on_after_hide : EMPTY_FN;
+
+        //Import extension's stylesheet
         tf.import(f.name + 'Style', tf.stylePath + this.stylesheet, null,
             'link');
 
-        this.tf = tf;
-        this.emitter = tf.emitter;
+        this.enable();
     }
 
     /**
@@ -89,7 +186,12 @@ export default class FiltersVisibility {
         }
 
         this.buildUI();
+
+        /**
+         * @inherited
+         */
         this.initialized = true;
+
         this.emitter.on(['show-filters'], (tf, visible) => this.show(visible));
         this.emitter.emit('filters-visibility-initialized', this.tf, this);
     }
@@ -99,14 +201,14 @@ export default class FiltersVisibility {
      */
     buildUI() {
         let tf = this.tf;
-        let span = Dom.create('span', ['id', this.prfx + tf.id]);
+        let span = createElm('span');
         span.className = this.contCssClass;
 
         //Container element (rdiv or custom element)
         if (!this.targetId) {
             tf.setToolbar();
         }
-        let targetEl = !this.targetId ? tf.rDiv : Dom.id(this.targetId);
+        let targetEl = !this.targetId ? tf.rDiv : elm(this.targetId);
 
         if (!this.targetId) {
             let firstChild = targetEl.firstChild;
@@ -117,7 +219,7 @@ export default class FiltersVisibility {
 
         let btn;
         if (!this.btnHtml) {
-            btn = Dom.create('a', ['href', 'javascript:void(0);']);
+            btn = createElm('a', ['href', 'javascript:void(0);']);
             btn.className = this.btnCssClass;
             btn.title = this.btnText || this.defaultText;
             btn.innerHTML = this.collapseBtnHtml;
@@ -127,7 +229,7 @@ export default class FiltersVisibility {
             btn = span.firstChild;
         }
 
-        Event.add(btn, 'click', () => this.toggle());
+        addEvt(btn, 'click', () => this.toggle());
 
         this.contEl = span;
         this.btnEl = btn;
@@ -159,11 +261,11 @@ export default class FiltersVisibility {
         let tbl = tf.gridLayout ? tf.feature('gridLayout').headTbl : tf.tbl;
         let fltRow = tbl.rows[this.filtersRowIndex];
 
-        if (this.onBeforeShow && visible) {
-            this.onBeforeShow.call(this, this);
+        if (visible) {
+            this.onBeforeShow(this);
         }
-        if (this.onBeforeHide && !visible) {
-            this.onBeforeHide.call(null, this);
+        if (!visible) {
+            this.onBeforeHide(this);
         }
 
         fltRow.style.display = visible ? '' : 'none';
@@ -172,11 +274,11 @@ export default class FiltersVisibility {
                 this.collapseBtnHtml : this.expandBtnHtml;
         }
 
-        if (this.onAfterShow && visible) {
-            this.onAfterShow.call(null, this);
+        if (visible) {
+            this.onAfterShow(this);
         }
-        if (this.onAfterHide && !visible) {
-            this.onAfterHide.call(null, this);
+        if (!visible) {
+            this.onAfterHide(this);
         }
 
         this.emitter.emit('filters-toggled', tf, this, visible);
@@ -186,18 +288,18 @@ export default class FiltersVisibility {
      * Destroy the UI
      */
     destroy() {
-        if (!this.btnEl && !this.contEl) {
+        if (!this.initialized) {
             return;
         }
 
         this.emitter.off(['show-filters'], (tf, visible) => this.show(visible));
 
         this.btnEl.innerHTML = '';
-        Dom.remove(this.btnEl);
+        removeElm(this.btnEl);
         this.btnEl = null;
 
         this.contEl.innerHTML = '';
-        Dom.remove(this.contEl);
+        removeElm(this.contEl);
         this.contEl = null;
         this.initialized = false;
     }

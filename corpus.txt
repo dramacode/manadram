@@ -23,7 +23,7 @@
 ../tcp5/corneillep_andromede.xml
 ../tcp5/corneillep_attila.xml
 ../tcp5/corneillep_cid37.xml
-../tcp5/corneillep_cinna.xml
+../tcp5/corneillep_cinna43.xml
 ../tcp5/corneillep_clitandre.xml
 ../tcp5/corneillep_donsanche.xml
 ../tcp5/corneillep_galeriedupalais.xml

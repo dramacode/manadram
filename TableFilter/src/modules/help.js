@@ -1,29 +1,44 @@
-import {Feature} from './feature';
-import Dom from '../dom';
-import Event from '../event';
-
+import {Feature} from '../feature';
+import {createElm, createText, elm, removeElm} from '../dom';
+import {addEvt, targetEvt, removeEvt} from '../event';
+import {NONE} from '../const';
+import {root} from '../root';
 
 const WIKI_URL = 'https://github.com/koalyptus/TableFilter/wiki/' +
-                    '4.-Filter-operators';
+    '4.-Filter-operators';
 const WEBSITE_URL = 'http://koalyptus.github.io/TableFilter/';
 
-export class Help extends Feature{
+/**
+ * Help UI component
+ */
+export class Help extends Feature {
 
     /**
-     * Help UI component
-     * @param {Object} tf TableFilter instance
+     * Creates an instance of Help
+     * @param {TableFilter} tf TableFilter instance
      */
-    constructor(tf){
+    constructor(tf) {
         super(tf, 'help');
 
-        var f = this.config;
+        let f = this.config;
 
-        //id of custom container element for instructions
+        /**
+         * ID of main custom container element
+         * @type {String}
+         */
         this.tgtId = f.help_instructions_target_id || null;
-        //id of custom container element for instructions
+
+        /**
+         * ID of custom container element for instructions
+         * @type {String}
+         */
         this.contTgtId = f.help_instructions_container_target_id ||
             null;
-        //defines help text
+
+        /**
+         * Instructions text (accepts HTML)
+         * @type {String}
+         */
         this.instrText = f.help_instructions_text ?
             f.help_instructions_text :
             'Use the filters above each column to filter and limit table ' +
@@ -31,124 +46,186 @@ export class Help extends Feature{
             'operators: <br /><b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, ' +
             '<b>&gt;=</b>, <b>=</b>, <b>*</b>, <b>!</b>, <b>{</b>, <b>}</b>, ' +
             '<b>||</b>,<b>&amp;&amp;</b>, <b>[empty]</b>, <b>[nonempty]</b>, ' +
-            '<b>rgx:</b><br/><a href="'+ WIKI_URL +'" target="_blank">' +
+            '<b>rgx:</b><br/><a href="' + WIKI_URL + '" target="_blank">' +
             'Learn more</a><hr/>';
-        //defines help innerHtml
+
+        /**
+         * Instructions HTML
+         * @type {String}
+         */
         this.instrHtml = f.help_instructions_html || null;
-        //defines reset button text
+
+        /**
+         * Help button text ('?')
+         * @type {String}
+         */
         this.btnText = f.help_instructions_btn_text || '?';
-        //defines reset button innerHtml
+
+        /**
+         * Custom help button HTML
+         * @type {String}
+         */
         this.btnHtml = f.help_instructions_btn_html || null;
-        //defines css class for help button
+
+        /**
+         * Css class for help button
+         * @type {String}
+         */
         this.btnCssClass = f.help_instructions_btn_css_class || 'helpBtn';
-        //defines css class for help container
+
+        /**
+         * Css class for help container element
+         * @type {String}
+         */
         this.contCssClass = f.help_instructions_container_css_class ||
             'helpCont';
-        //help button element
+
+        /**
+         * Button DOM element
+         * @type {DOMElement}
+         */
         this.btn = null;
-         //help content div
+
+        /**
+         * Help container DOM element
+         * @type {DOMElement}
+         */
         this.cont = null;
+
+        /**
+         * Bound mouseup wrapper
+         * @private
+         */
+        this.boundMouseup = null;
+
+        /**
+         * Default HTML appended to instructions text
+         * @type {String}
+         */
         this.defaultHtml = '<div class="helpFooter"><h4>TableFilter ' +
-            'v'+ tf.version +'</h4>' +
-            '<a href="'+ WEBSITE_URL +'" target="_blank">'+ WEBSITE_URL +'</a>'+
-            '<br/><span>&copy;2015-'+ tf.year +' {AUTHOR}</span>' +
+            'v' + tf.version + '</h4>' + '<a href="' + WEBSITE_URL +
+            '" target="_blank">' + WEBSITE_URL + '</a>' +
+            '<br/><span>&copy;2015-' + tf.year + ' {AUTHOR}</span>' +
             '<div align="center" style="margin-top:8px;">' +
             '<a href="javascript:void(0);" class="close">Close</a></div></div>';
 
-        //id prefix for help elements
-        this.prfxHelpSpan = 'helpSpan_';
-        //id prefix for help elements
-        this.prfxHelpDiv = 'helpDiv_';
-
-        this.emitter.on(['init-help'], ()=> this.init());
+        this.emitter.on(['init-help'], () => this.init());
     }
 
-    init(){
-        if(this.initialized){
+    /**
+     * Mouse-up event handler handling popup auto-close behaviour
+     * @private
+     */
+    onMouseup(evt) {
+        let targetElm = targetEvt(evt);
+
+        while (targetElm && targetElm !== this.cont && targetElm !== this.btn) {
+            targetElm = targetElm.parentNode;
+        }
+
+        if (targetElm !== this.cont && targetElm !== this.btn) {
+            this.toggle();
+        }
+
+        return;
+    }
+
+    /**
+     * Initialise Help instance
+     */
+    init() {
+        if (this.initialized) {
             return;
         }
 
-        var tf = this.tf;
+        let tf = this.tf;
 
-        var helpspan = Dom.create('span', ['id', this.prfxHelpSpan+tf.id]);
-        var helpdiv = Dom.create('div', ['id', this.prfxHelpDiv+tf.id]);
+        let btn = createElm('span');
+        let cont = createElm('div');
+
+        this.boundMouseup = this.onMouseup.bind(this);
 
         //help button is added to defined element
-        if(!this.tgtId){
+        if (!this.tgtId) {
             tf.setToolbar();
         }
-        var targetEl = !this.tgtId ? tf.rDiv : Dom.id(this.tgtId);
-        targetEl.appendChild(helpspan);
+        let targetEl = !this.tgtId ? tf.rDiv : elm(this.tgtId);
+        targetEl.appendChild(btn);
 
-        var divContainer = !this.contTgtId ? helpspan : Dom.id(this.contTgtId);
+        let divContainer = !this.contTgtId ? btn : elm(this.contTgtId);
 
-        if(!this.btnHtml){
-            divContainer.appendChild(helpdiv);
-            var helplink = Dom.create('a', ['href', 'javascript:void(0);']);
+        if (!this.btnHtml) {
+            divContainer.appendChild(cont);
+            let helplink = createElm('a', ['href', 'javascript:void(0);']);
             helplink.className = this.btnCssClass;
-            helplink.appendChild(Dom.text(this.btnText));
-            helpspan.appendChild(helplink);
-            Event.add(helplink, 'click', () => { this.toggle(); });
+            helplink.appendChild(createText(this.btnText));
+            btn.appendChild(helplink);
+            addEvt(helplink, 'click', () => this.toggle());
         } else {
-            helpspan.innerHTML = this.btnHtml;
-            var helpEl = helpspan.firstChild;
-            Event.add(helpEl, 'click', () => { this.toggle(); });
-            divContainer.appendChild(helpdiv);
+            btn.innerHTML = this.btnHtml;
+            let helpEl = btn.firstChild;
+            addEvt(helpEl, 'click', () => this.toggle());
+            divContainer.appendChild(cont);
         }
 
-        if(!this.instrHtml){
-            helpdiv.innerHTML = this.instrText;
-            helpdiv.className = this.contCssClass;
-            Event.add(helpdiv, 'dblclick', () => { this.toggle(); });
+        if (!this.instrHtml) {
+            cont.innerHTML = this.instrText;
+            cont.className = this.contCssClass;
         } else {
-            if(this.contTgtId){
-                divContainer.appendChild(helpdiv);
+            if (this.contTgtId) {
+                divContainer.appendChild(cont);
             }
-            helpdiv.innerHTML = this.instrHtml;
-            if(!this.contTgtId){
-                helpdiv.className = this.contCssClass;
-                Event.add(helpdiv, 'dblclick', () => { this.toggle(); });
+            cont.innerHTML = this.instrHtml;
+            if (!this.contTgtId) {
+                cont.className = this.contCssClass;
             }
         }
-        helpdiv.innerHTML += this.defaultHtml;
-        Event.add(helpdiv, 'click', () => { this.toggle(); });
+        cont.innerHTML += this.defaultHtml;
+        addEvt(cont, 'click', () => this.toggle());
 
-        this.cont = helpdiv;
-        this.btn = helpspan;
+        this.cont = cont;
+        this.btn = btn;
+        /** @inherited */
         this.initialized = true;
     }
 
     /**
      * Toggle help pop-up
      */
-    toggle(){
+    toggle() {
         // check only if explicitily set to false as in this case undefined
         // signifies the help feature is enabled by default
-        if(this.enabled === false){
+        if (this.enabled === false) {
             return;
         }
-        var divDisplay = this.cont.style.display;
-        if(divDisplay === '' || divDisplay === 'none'){
+
+        // ensure mouseup event handler is removed
+        removeEvt(root, 'mouseup', this.boundMouseup);
+
+        let divDisplay = this.cont.style.display;
+        if (divDisplay === '' || divDisplay === NONE) {
             this.cont.style.display = 'inline';
+            addEvt(root, 'mouseup', this.boundMouseup);
         } else {
-            this.cont.style.display = 'none';
+            this.cont.style.display = NONE;
         }
     }
 
     /**
      * Remove help UI
      */
-    destroy(){
-        if(!this.initialized){
+    destroy() {
+        if (!this.initialized) {
             return;
         }
-        Dom.remove(this.btn);
+        removeElm(this.btn);
         this.btn = null;
-        if(!this.cont){
-            return;
-        }
-        Dom.remove(this.cont);
+
+        removeElm(this.cont);
         this.cont = null;
+
+        this.boundMouseup = null;
+
         this.initialized = false;
     }
 

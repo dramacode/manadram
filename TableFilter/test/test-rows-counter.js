@@ -9,6 +9,8 @@ var rowsCounter = tf.feature('rowsCounter');
 module('Sanity checks');
 test('RowsCounter component', function() {
     notEqual(rowsCounter, null, 'RowsCounter instanciated');
+    notEqual(rowsCounter.container, null, 'RowsCounter container element');
+    notEqual(rowsCounter.label, null, 'RowsCounter label element');
 });
 
 module('Feature interface');
@@ -58,7 +60,7 @@ test('Can check is enabled', function() {
 
 module('Behaviour');
 test('RowsCounter value', function() {
-    equal(rowsCounter.rowsCounterSpan.innerHTML,
+    equal(rowsCounter.label.innerHTML,
         7, 'Counter value');
 });
 
@@ -66,7 +68,7 @@ test('RowsCounter component with filtered table', function() {
     tf.setFilterValue(0, 'Syd');
     tf.filter();
 
-    equal(rowsCounter.rowsCounterSpan.innerHTML,
+    equal(rowsCounter.label.innerHTML,
         4, 'Counter value');
 
     tf.clearFilters();
@@ -79,15 +81,27 @@ test('RowsCounter component with paging', function() {
     tf = new TableFilter('demo', {
         base_path: '../dist/tablefilter/',
         rows_counter: true,
-        paging: true
+        paging: true,
+        paging_length: 3
     });
     tf.init();
-    equal(tf.feature('rowsCounter').rowsCounterSpan.innerHTML,
-        '1-7 / 7', 'Counter value with paging');
+    equal(tf.feature('rowsCounter').label.innerHTML,
+        '1-3 / 7', 'Counter value with paging');
+});
+test('Can calculate page on page change', function() {
+    //setup
+    var paging = tf.feature('paging');
+
+    //act
+    paging.setPage(2);
+
+    //assert
+    equal(tf.feature('rowsCounter').label.innerHTML,
+        '4-6 / 7', 'Counter value with paging');
 });
 
 module('Tear-down');
 test('can destroy TableFilter DOM elements', function() {
     tf.destroy();
-    deepEqual(tf.hasGrid(), false, 'Filters removed');
+    deepEqual(tf.isInitialized(), false, 'Filters removed');
 });

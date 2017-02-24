@@ -1,19 +1,30 @@
-import {Feature} from './feature';
-import Dom from '../dom';
+import {Feature} from '../feature';
+import {addClass, removeClass} from '../dom';
 
+/**
+ * Rows with alternating background color for improved readability
+ */
 export class AlternateRows extends Feature {
 
     /**
-     * Alternating rows color
+     * Creates an instance of AlternateRows.
+     *
      * @param {Object} tf TableFilter instance
      */
     constructor(tf) {
         super(tf, 'alternateRows');
 
-        var config = this.config;
-        //defines css class for even rows
+        let config = this.config;
+        /**
+         * Css class for even rows (default: 'even')
+         * @type {String}
+         */
         this.evenCss = config.even_row_css_class || 'even';
-        //defines css class for odd rows
+
+        /**
+         * Css class for odd rows (default: 'odd')
+         * @type {String}
+         */
         this.oddCss = config.odd_row_css_class || 'odd';
     }
 
@@ -21,7 +32,7 @@ export class AlternateRows extends Feature {
      * Sets alternating rows color
      */
     init() {
-        if(this.initialized){
+        if (this.initialized) {
             return;
         }
 
@@ -29,31 +40,30 @@ export class AlternateRows extends Feature {
 
         // Subscribe to events
         this.emitter.on(['row-processed', 'row-paged'],
-            (tf, rowIndex, arrIndex, isValid)=>
+            (tf, rowIndex, arrIndex, isValid) =>
                 this.processRow(rowIndex, arrIndex, isValid));
-        this.emitter.on(['column-sorted'], ()=> this.processAll());
+        this.emitter.on(['column-sorted'], () => this.processAll());
+        this.emitter.on(['rows-changed'], () => this.processAll());
 
+        /** @inherited */
         this.initialized = true;
     }
 
+    /**
+     * Apply background to all valid rows
+     */
     processAll() {
-        if(!this.isEnabled()){
+        if (!this.isEnabled()) {
             return;
         }
-        var tf = this.tf;
-        var validRowsIndex = tf.getValidRows(true);
-        var noValidRowsIndex = validRowsIndex.length === 0;
-        //1st index
-        var beginIndex = noValidRowsIndex ? tf.refRow : 0;
-        // nb indexes
-        var indexLen = noValidRowsIndex ?
-                tf.nbFilterableRows+beginIndex :
-                validRowsIndex.length;
-        var idx = 0;
+        let tf = this.tf;
+        let validRowsIndex = tf.getValidRows(true);
+        let indexLen = validRowsIndex.length;
+        let idx = 0;
 
         //alternates bg color
-        for(var j=beginIndex; j<indexLen; j++){
-            var rowIdx = noValidRowsIndex ? j : validRowsIndex[j];
+        for (let j = 0; j < indexLen; j++) {
+            let rowIdx = validRowsIndex[j];
             this.setRowBg(rowIdx, idx);
             idx++;
         }
@@ -66,7 +76,7 @@ export class AlternateRows extends Feature {
      * @param  {Boolean} isValid Valid row flag
      */
     processRow(rowIdx, arrIdx, isValid) {
-        if(isValid){
+        if (isValid) {
             this.setRowBg(rowIdx, arrIdx);
         } else {
             this.removeRowBg(rowIdx);
@@ -78,50 +88,51 @@ export class AlternateRows extends Feature {
      * @param {Number} rowIdx Row index
      * @param {Number} idx    Valid rows collection index needed to calculate bg
      * color
+     * @private
      */
     setRowBg(rowIdx, idx) {
-        if(!this.isEnabled() || isNaN(rowIdx)){
+        if (!this.isEnabled() || isNaN(rowIdx)) {
             return;
         }
-        var rows = this.tf.tbl.rows;
-        var i = isNaN(idx) ? rowIdx : idx;
+        let rows = this.tf.tbl.rows;
+        let i = isNaN(idx) ? rowIdx : idx;
         this.removeRowBg(rowIdx);
 
-        Dom.addClass(
-            rows[rowIdx],
-            (i%2) ? this.evenCss : this.oddCss
-        );
+        addClass(rows[rowIdx], (i % 2) ? this.evenCss : this.oddCss);
     }
 
     /**
      * Removes row background color
      * @param  {Number} idx Row index
+     * @private
      */
     removeRowBg(idx) {
-        if(isNaN(idx)){
+        if (isNaN(idx)) {
             return;
         }
-        var rows = this.tf.tbl.rows;
-        Dom.removeClass(rows[idx], this.oddCss);
-        Dom.removeClass(rows[idx], this.evenCss);
+        let rows = this.tf.tbl.rows;
+        removeClass(rows[idx], this.oddCss);
+        removeClass(rows[idx], this.evenCss);
     }
 
     /**
      * Removes all alternating backgrounds
      */
     destroy() {
-        if(!this.initialized){
+        if (!this.initialized) {
             return;
         }
-        for(var i=0; i<this.tf.nbRows; i++){
+        let nbRows = this.tf.getRowsNb(true);
+        for (let i = 0; i < nbRows; i++) {
             this.removeRowBg(i);
         }
 
         // Unsubscribe to events
         this.emitter.off(['row-processed', 'row-paged'],
-            (tf, rowIndex, arrIndex, isValid)=>
+            (tf, rowIndex, arrIndex, isValid) =>
                 this.processRow(rowIndex, arrIndex, isValid));
-        this.emitter.off(['column-sorted'], ()=> this.processAll());
+        this.emitter.off(['column-sorted'], () => this.processAll());
+        this.emitter.off(['rows-changed'], () => this.processAll());
 
         this.initialized = false;
     }

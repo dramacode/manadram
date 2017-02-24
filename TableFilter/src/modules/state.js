@@ -1,12 +1,11 @@
-import {Feature} from './feature';
+import {Feature} from '../feature';
 import {Hash} from './hash';
 import {Storage} from './storage';
-import Str from '../string';
-import Types from '../types';
+import {isEmpty} from '../string';
+import {isArray, isNull, isString, isUndef} from '../types';
 
 /**
- * Reflects the state of features to be persisted via hash, localStorage or
- * cookie
+ * Features state object persistable with localStorage, cookie or URL hash
  *
  * @export
  * @class State
@@ -16,7 +15,6 @@ export class State extends Feature {
 
     /**
      * Creates an instance of State
-     *
      * @param {TableFilter} tf TableFilter instance
      */
     constructor(tf) {
@@ -24,38 +22,164 @@ export class State extends Feature {
 
         let cfg = this.config.state;
 
+        /**
+         * Determines whether state is persisted with URL hash
+         * @type {Boolean}
+         */
         this.enableHash = cfg === true ||
-            (Types.isObj(cfg.types) && cfg.types.indexOf('hash') !== -1);
-        this.enableLocalStorage = Types.isObj(cfg.types) &&
+            (isArray(cfg.types) && cfg.types.indexOf('hash') !== -1);
+
+        /**
+         * Determines whether state is persisted with localStorage
+         * @type {Boolean}
+         */
+        this.enableLocalStorage = isArray(cfg.types) &&
             cfg.types.indexOf('local_storage') !== -1;
-        this.enableCookie = Types.isObj(cfg.types) &&
+
+        /**
+         * Determines whether state is persisted with localStorage
+         * @type {Boolean}
+         */
+        this.enableCookie = isArray(cfg.types) &&
             cfg.types.indexOf('cookie') !== -1;
+
+        /**
+         * Persist filters values, enabled by default
+         * @type {Boolean}
+         */
         this.persistFilters = cfg.filters === false ? false : true;
+
+        /**
+         * Persist current page number when paging is enabled
+         * @type {Boolean}
+         */
         this.persistPageNumber = Boolean(cfg.page_number);
+
+        /**
+         * Persist page length when paging is enabled
+         * @type {Boolean}
+         */
         this.persistPageLength = Boolean(cfg.page_length);
+
+        /**
+         * Persist column sorting
+         * @type {Boolean}
+         */
         this.persistSort = Boolean(cfg.sort);
+
+        /**
+         * Persist columns visibility
+         * @type {Boolean}
+         */
         this.persistColsVisibility = Boolean(cfg.columns_visibility);
+
+        /**
+         * Persist filters row visibility
+         * @type {Boolean}
+         */
         this.persistFiltersVisibility = Boolean(cfg.filters_visibility);
+
+        /**
+         * Cookie duration in hours
+         * @type {Boolean}
+         */
         this.cookieDuration = !isNaN(cfg.cookie_duration) ?
             parseInt(cfg.cookie_duration, 10) : 87600;
 
+        /**
+         * Enable Storage if localStorage or cookie is required
+         * @type {Boolean}
+         * @private
+         */
         this.enableStorage = this.enableLocalStorage || this.enableCookie;
+
+        /**
+         * Storage instance if storage is required
+         * @type {Storage}
+         * @private
+         */
+        this.storage = null;
+
+        /**
+         * Hash instance if URL hash is required
+         * @type {Boolean}
+         * @private
+         */
         this.hash = null;
+
+        /**
+         * Current page number
+         * @type {Number}
+         * @private
+         */
         this.pageNb = null;
+
+        /**
+         * Current page length
+         * @type {Number}
+         * @private
+         */
         this.pageLength = null;
+
+        /**
+         * Current column sorting
+         * @type {Object}
+         * @private
+         */
         this.sort = null;
+
+        /**
+         * Current hidden columns
+         * @type {Object}
+         * @private
+         */
         this.hiddenCols = null;
+
+        /**
+         * Filters row visibility
+         * @type {Boolean}
+         * @private
+         */
         this.filtersVisibility = null;
 
+        /**
+         * State object
+         * @type {Object}
+         * @private
+         */
         this.state = {};
+
+        /**
+         * Prefix for column ID
+         * @type {String}
+         * @private
+         */
         this.prfxCol = 'col_';
+
+        /**
+         * Prefix for page number ID
+         * @type {String}
+         * @private
+         */
         this.pageNbKey = 'page';
+
+        /**
+         * Prefix for page length ID
+         * @type {String}
+         * @private
+         */
         this.pageLengthKey = 'page_length';
+
+        /**
+         * Prefix for filters visibility ID
+         * @type {String}
+         * @private
+         */
         this.filtersVisKey = 'filters_visibility';
     }
 
     /**
-     * Initializes the State object
+     * Initializes State instance
      */
     init() {
         if (this.initialized) {
@@ -87,6 +211,10 @@ export class State extends Feature {
             this.storage = new Storage(this);
             this.storage.init();
         }
+
+        /**
+         * @inherited
+         */
         this.initialized = true;
     }
 
@@ -107,7 +235,7 @@ export class State extends Feature {
             filterValues.forEach((val, idx) => {
                 let key = `${this.prfxCol}${idx}`;
 
-                if (Types.isString(val) && Str.isEmpty(val)) {
+                if (isString(val) && isEmpty(val)) {
                     if (state.hasOwnProperty(key)) {
                         state[key].flt = undefined;
                     }
@@ -119,7 +247,7 @@ export class State extends Feature {
         }
 
         if (this.persistPageNumber) {
-            if (Types.isNull(this.pageNb)) {
+            if (isNull(this.pageNb)) {
                 state[this.pageNbKey] = undefined;
             } else {
                 state[this.pageNbKey] = this.pageNb;
@@ -127,7 +255,7 @@ export class State extends Feature {
         }
 
         if (this.persistPageLength) {
-            if (Types.isNull(this.pageLength)) {
+            if (isNull(this.pageLength)) {
                 state[this.pageLengthKey] = undefined;
             } else {
                 state[this.pageLengthKey] = this.pageLength;
@@ -135,7 +263,7 @@ export class State extends Feature {
         }
 
         if (this.persistSort) {
-            if (!Types.isNull(this.sort)) {
+            if (!isNull(this.sort)) {
                 // Remove previuosly sorted column
                 Object.keys(state).forEach((key) => {
                     if (key.indexOf(this.prfxCol) !== -1 && state[key]) {
@@ -150,7 +278,7 @@ export class State extends Feature {
         }
 
         if (this.persistColsVisibility) {
-            if (!Types.isNull(this.hiddenCols)) {
+            if (!isNull(this.hiddenCols)) {
                 // Clear previuosly hidden columns
                 Object.keys(state).forEach((key) => {
                     if (key.indexOf(this.prfxCol) !== -1 && state[key]) {
@@ -167,7 +295,7 @@ export class State extends Feature {
         }
 
         if (this.persistFiltersVisibility) {
-            if (Types.isNull(this.filtersVisibility)) {
+            if (isNull(this.filtersVisibility)) {
                 state[this.filtersVisKey] = undefined;
             } else {
                 state[this.filtersVisKey] = this.filtersVisibility;
@@ -319,7 +447,7 @@ export class State extends Feature {
         Object.keys(state).forEach((key) => {
             if (key.indexOf(this.prfxCol) !== -1) {
                 let colIdx = parseInt(key.replace(this.prfxCol, ''), 10);
-                if (!Types.isUndef(state[key].sort)) {
+                if (!isUndef(state[key].sort)) {
                     let sort = state[key].sort;
                     this.emitter.emit('sort', tf, colIdx, sort.descending);
                 }
@@ -343,7 +471,7 @@ export class State extends Feature {
         Object.keys(state).forEach((key) => {
             if (key.indexOf(this.prfxCol) !== -1) {
                 let colIdx = parseInt(key.replace(this.prfxCol, ''), 10);
-                if (!Types.isUndef(state[key].hidden)) {
+                if (!isUndef(state[key].hidden)) {
                     hiddenCols.push(colIdx);
                 }
             }

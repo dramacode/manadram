@@ -1,10 +1,16 @@
-import Event from './event';
-import Dom from './dom';
-import Str from './string';
-import Types from './types';
-import DateHelper from './date';
-import Helpers from './helpers';
+import {addEvt, cancelEvt, stopEvt, targetEvt, keyCode} from './event';
+import {
+    addClass, createElm, createOpt, elm, getText, getFirstTextNode, hasClass,
+    removeClass, removeElm, tag
+} from './dom';
+import {contains, matchCase, rgxEsc, trim} from './string';
+import {isEmpty as isEmptyString} from './string';
+import {
+    isArray, isEmpty, isFn, isNumber, isObj, isString, isUndef, EMPTY_FN
+} from './types';
+import {parse as parseNb} from './number'
 
+import {root} from './root';
 import {Emitter} from './emitter';
 import {GridLayout} from './modules/gridLayout';
 import {Loader} from './modules/loader';
@@ -20,14 +26,26 @@ import {Help} from './modules/help';
 import {AlternateRows} from './modules/alternateRows';
 import {NoResults} from './modules/noResults';
 import {State} from './modules/state';
+import {DateType} from './modules/dateType';
 
-let global = window,
-    doc = global.document;
+import {
+    INPUT, SELECT, MULTIPLE, CHECKLIST, NONE,
+    ENTER_KEY, TAB_KEY, ESC_KEY, UP_ARROW_KEY, DOWN_ARROW_KEY,
+    CELL_TAG, AUTO_FILTER_DELAY, NUMBER, DATE, FORMATTED_NUMBER
+} from './const';
 
+let doc = root.document;
+
+/**
+ * Makes HTML tables filterable and a bit more :)
+ *
+ * @export
+ * @class TableFilter
+ */
 export class TableFilter {
 
     /**
-     * TableFilter object constructor
+     * Creates an instance of TableFilter
      * requires `table` or `id` arguments, `row` and `configuration` optional
      * @param {DOMElement} table Table DOM element
      * @param {String} id Table id
@@ -35,368 +53,954 @@ export class TableFilter {
      * @param {Object} configuration object
      */
     constructor(...args) {
-        if (args.length === 0) { return; }
-
+        /**
+         * ID of current instance
+         * @type {String}
+         * @private
+         */
         this.id = null;
-        this.version = '{VERSION}';
-        this.year = new Date().getFullYear();
-        this.tbl = null;
-        this.startRow = null;
-        this.refRow = null;
-        this.headersRow = null;
-        this.cfg = {};
-        this.nbFilterableRows = null;
-        this.nbRows = null;
-        this.nbCells = null;
-        this._hasGrid = false;
 
-        // TODO: use for-of with babel plug-in
+        /**
+         * Current version
+         * @type {String}
+         */
+        this.version = '{VERSION}';
+
+        /**
+         * Current year
+         * @type {Number}
+         * @private
+         */
+        this.year = new Date().getFullYear();
+
+        /**
+         * HTML Table DOM element
+         * @type {DOMElement}
+         */
+        this.tbl = null;
+
+        /**
+         * Calculated row's index from which starts filtering once filters
+         * are generated
+         * @type {Number}
+         */
+        this.refRow = null;
+
+        /**
+         * Index of the headers row
+         * @type {Number}
+         * @private
+         */
+        this.headersRow = null;
+
+        /**
+         * Configuration object
+         * @type {Object}
+         * @private
+         */
+        this.cfg = {};
+
+        /**
+         * Number of rows that can be filtered
+         * @type {Number}
+         * @private
+         */
+        this.nbFilterableRows = 0;
+
+        /**
+         * Number of cells in the reference row
+         * @type {Number}
+         * @private
+         */
+        this.nbCells = null;
+
+        let startRow;
+
+        // TODO: use for-of
         args.forEach((arg) => {
-            // for (let arg of args) {
-            let argtype = typeof arg;
-            if (argtype === 'object' && arg && arg.nodeName === 'TABLE') {
+            if (typeof arg === 'object' && arg.nodeName === 'TABLE') {
                 this.tbl = arg;
                 this.id = arg.id || `tf_${new Date().getTime()}_`;
-            } else if (argtype === 'string') {
+            } else if (isString(arg)) {
                 this.id = arg;
-                this.tbl = Dom.id(arg);
-            } else if (argtype === 'number') {
-                this.startRow = arg;
-            } else if (argtype === 'object') {
+                this.tbl = elm(arg);
+            } else if (isNumber(arg)) {
+                startRow = arg;
+            } else if (isObj(arg)) {
                 this.cfg = arg;
             }
-            // }
         });
 
-        if (!this.tbl || this.tbl.nodeName != 'TABLE' ||
-            this.getRowsNb() === 0) {
-            throw new Error(
-                'Could not instantiate TableFilter: HTML table not found.');
+        if (!this.tbl || this.tbl.nodeName !== 'TABLE') {
+            throw new Error(`Could not instantiate TableFilter: HTML table
+                DOM element not found.`);
+        }
+
+        if (this.getRowsNb() === 0) {
+            throw new Error(`Could not instantiate TableFilter: HTML table
+                requires at least 1 row.`);
         }
 
         // configuration object
         let f = this.cfg;
 
+        /**
+         * Event emitter instance
+         * @type {Emitter}
+         */
         this.emitter = new Emitter();
 
         //Start row et cols nb
-        this.refRow = this.startRow === null ? 2 : (this.startRow + 1);
-        try { this.nbCells = this.getCellsNb(this.refRow); }
-        catch (e) { this.nbCells = this.getCellsNb(0); }
+        this.refRow = isUndef(startRow) ? 2 : (startRow + 1);
 
-        //default script base path
+        /**
+         * Base path for static assets
+         * @type {String}
+         */
         this.basePath = f.base_path || 'tablefilter/';
-
-        /*** filter types ***/
-        this.fltTypeInp = 'input';
-        this.fltTypeSlc = 'select';
-        this.fltTypeMulti = 'multiple';
-        this.fltTypeCheckList = 'checklist';
-        this.fltTypeNone = 'none';
 
         /*** filters' grid properties ***/
 
-        //enables/disables filter grid
+        /**
+         * Enable/disable filters
+         * @type {Boolean}
+         */
         this.fltGrid = f.grid === false ? false : true;
 
-        //enables/disables grid layout (fixed headers)
+        /**
+         * Enable/disable grid layout (fixed headers)
+         * @type {Boolean}
+         */
         this.gridLayout = Boolean(f.grid_layout);
 
+        /**
+         * Filters row index
+         * @type {Number}
+         */
         this.filtersRowIndex = isNaN(f.filters_row_index) ?
             0 : f.filters_row_index;
+
+        /**
+         * Headers row index
+         * @type {Number}
+         */
         this.headersRow = isNaN(f.headers_row_index) ?
             (this.filtersRowIndex === 0 ? 1 : 0) : f.headers_row_index;
 
-        //defines tag of the cells containing filters (td/th)
-        this.fltCellTag = f.filters_cell_tag !== 'th' ||
-            f.filters_cell_tag !== 'td' ? 'td' : f.filters_cell_tag;
+        /**
+         * Define the type of cell containing a filter (td/th)
+         * @type {String}
+         */
+        this.fltCellTag = isString(f.filters_cell_tag) ?
+            f.filters_cell_tag : CELL_TAG;
 
-        //stores filters ids
+        /**
+         * List of filters IDs
+         * @type {Array}
+         * @private
+         */
         this.fltIds = [];
-        //stores filters DOM elements
-        this.fltElms = [];
-        //stores valid rows indexes (rows visible upon filtering)
+
+        /**
+         * List of valid rows indexes (rows visible upon filtering)
+         * @type {Array}
+         * @private
+         */
         this.validRowsIndex = [];
-        //stores filters row element
-        this.fltGridEl = null;
-        //container div for paging elements, reset btn etc.
+
+        /**
+         * Toolbar's container DOM element
+         * @type {DOMElement}
+         * @private
+         */
         this.infDiv = null;
-        //div for rows counter
+
+        /**
+         * Left-side inner container DOM element (rows counter in toolbar)
+         * @type {DOMElement}
+         * @private
+         */
         this.lDiv = null;
-        //div for reset button and results per page select
+
+        /**
+         * Right-side inner container DOM element (reset button,
+         * page length selector in toolbar)
+         * @type {DOMElement}
+         * @private
+         */
         this.rDiv = null;
-        //div for paging elements
+
+        /**
+         * Middle inner container DOM element (paging elements in toolbar)
+         * @type {DOMElement}
+         * @private
+         */
         this.mDiv = null;
 
-        //defines css class for div containing paging elements, rows counter etc
+        /**
+         * Css class for toolbar's container DOM element
+         * @type {String}
+         */
         this.infDivCssClass = f.inf_div_css_class || 'inf';
-        //defines css class for left div
+
+        /**
+         * Css class for left-side inner container DOM element
+         * @type {String}
+         */
         this.lDivCssClass = f.left_div_css_class || 'ldiv';
-        //defines css class for right div
+
+        /**
+         * Css class for right-side inner container DOM element
+         * @type {String}
+         */
         this.rDivCssClass = f.right_div_css_class || 'rdiv';
-        //defines css class for mid div
+
+        /**
+         * Css class for middle inner container DOM element
+         * @type {String}
+         */
         this.mDivCssClass = f.middle_div_css_class || 'mdiv';
-        //table container div css class
-        this.contDivCssClass = f.content_div_css_class || 'cont';
 
         /*** filters' grid appearance ***/
-        //stylesheet file
+        /**
+         * Path for stylesheets
+         * @type {String}
+         */
         this.stylePath = f.style_path || this.basePath + 'style/';
+
+        /**
+         * Main stylesheet path
+         * @type {String}
+         */
         this.stylesheet = f.stylesheet || this.stylePath + 'tablefilter.css';
+
+        /**
+         * Main stylesheet ID
+         * @type {String}
+         * @private
+         */
         this.stylesheetId = this.id + '_style';
-        //defines css class for filters row
+
+        /**
+         * Css class for the filters row
+         * @type {String}
+         */
         this.fltsRowCssClass = f.flts_row_css_class || 'fltrow';
-        //enables/disables icons (paging, reset button)
+
+        /**
+         * Enable/disable icons (paging, reset button)
+         * @type {Boolean}
+         */
         this.enableIcons = f.enable_icons === false ? false : true;
-        //enables/disbles rows alternating bg colors
+
+        /**
+         * Enable/disable alternating rows
+         * @type {Boolean}
+         */
         this.alternateRows = Boolean(f.alternate_rows);
-        //defines widths of columns
-        this.hasColWidths = Types.isArray(f.col_widths);
-        this.colWidths = this.hasColWidths ? f.col_widths : null;
-        //defines css class for filters
+
+        /**
+         * Indicate whether columns widths are set
+         * @type {Boolean}
+         * @private
+         */
+        this.hasColWidths = isArray(f.col_widths);
+
+        /**
+         * Columns widths array
+         * @type {Array}
+         */
+        this.colWidths = this.hasColWidths ? f.col_widths : [];
+
+        /**
+         * Css class for a filter element
+         * @type {String}
+         */
         this.fltCssClass = f.flt_css_class || 'flt';
-        //defines css class for multiple selects filters
+
+        /**
+         * Css class for multiple select filters
+         * @type {String}
+         */
         this.fltMultiCssClass = f.flt_multi_css_class || 'flt_multi';
-        //defines css class for filters
+
+        /**
+         * Css class for small filter (when submit button is active)
+         * @type {String}
+         */
         this.fltSmallCssClass = f.flt_small_css_class || 'flt_s';
-        //defines css class for single-filter
+
+        /**
+         * Css class for single filter type
+         * @type {String}
+         */
         this.singleFltCssClass = f.single_flt_css_class || 'single_flt';
 
         /*** filters' grid behaviours ***/
-        //enables/disables enter key
+
+        /**
+         * Enable/disable enter key for input type filters
+         * @type {Boolean}
+         */
         this.enterKey = f.enter_key === false ? false : true;
-        //calls function before filtering starts
-        this.onBeforeFilter = Types.isFn(f.on_before_filter) ?
-            f.on_before_filter : null;
-        //calls function after filtering
-        this.onAfterFilter = Types.isFn(f.on_after_filter) ?
-            f.on_after_filter : null;
-        //enables/disables case sensitivity
+
+        /**
+         * Callback fired before filtering process starts
+         * @type {Function}
+         */
+        this.onBeforeFilter = isFn(f.on_before_filter) ?
+            f.on_before_filter : EMPTY_FN;
+
+        /**
+         * Callback fired after filtering process is completed
+         * @type {Function}
+         */
+        this.onAfterFilter = isFn(f.on_after_filter) ?
+            f.on_after_filter : EMPTY_FN;
+
+        /**
+         * Enable/disable case sensitivity filtering
+         * @type {Boolean}
+         */
         this.caseSensitive = Boolean(f.case_sensitive);
-        //has exact match per column
-        this.hasExactMatchByCol = Types.isArray(f.columns_exact_match);
+
+        /**
+         * Indicate whether exact match filtering is enabled on a per column
+         * basis
+         * @type {Boolean}
+         * @private
+         */
+        this.hasExactMatchByCol = isArray(f.columns_exact_match);
+
+        /**
+         * Exact match filtering per column array
+         * @type {Array}
+         */
         this.exactMatchByCol = this.hasExactMatchByCol ?
             f.columns_exact_match : [];
-        //enables/disbles exact match for search
+
+        /**
+         * Globally enable/disable exact match filtering
+         * @type {Boolean}
+         */
         this.exactMatch = Boolean(f.exact_match);
-        //refreshes drop-down lists upon validation
+
+        /**
+         * Ignore diacritics globally or on a column basis
+         * @type {Boolean|Array}
+         */
+        this.ignoreDiacritics = f.ignore_diacritics;
+
+        /**
+         * Enable/disable linked filters filtering mode
+         * @type {Boolean}
+         */
         this.linkedFilters = Boolean(f.linked_filters);
-        //wheter excluded options are disabled
+
+        /**
+         * Enable/disable readonly state for excluded options when
+         * linked filters filtering mode is on
+         * @type {Boolean}
+         */
         this.disableExcludedOptions = Boolean(f.disable_excluded_options);
-        //id of active filter
+
+        /**
+         * Active filter ID
+         * @type {String}
+         * @private
+         */
         this.activeFilterId = null;
-        //enables always visible rows
+
+        /**
+         * Enable/disable always visible rows, excluded from filtering
+         * @type {Boolean}
+         */
         this.hasVisibleRows = Boolean(f.rows_always_visible);
-        //array containing always visible rows
+
+        /**
+         * List of row indexes to be excluded from filtering
+         * @type {Array}
+         */
         this.visibleRows = this.hasVisibleRows ? f.rows_always_visible : [];
-        //enables/disables external filters generation
+
+        /**
+         * Enable/disable external filters generation
+         * @type {Boolean}
+         */
         this.isExternalFlt = Boolean(f.external_flt_grid);
-        //array containing ids of external elements containing filters
+
+        /**
+         * List of containers IDs where external filters will be generated
+         * @type {Array}
+         */
         this.externalFltTgtIds = f.external_flt_grid_ids || [];
-        //stores filters elements if isExternalFlt is true
-        this.externalFltEls = [];
-        //delays any filtering process if loader true
-        this.execDelay = !isNaN(f.exec_delay) ? parseInt(f.exec_delay, 10) :
-            100;
-        //calls function when filters grid loaded
-        this.onFiltersLoaded = Types.isFn(f.on_filters_loaded) ?
-            f.on_filters_loaded : null;
-        //enables/disables single filter search
+
+        /**
+         * Callback fired after filters are generated
+         * @type {Function}
+         */
+        this.onFiltersLoaded = isFn(f.on_filters_loaded) ?
+            f.on_filters_loaded : EMPTY_FN;
+
+        /**
+         * Enable/disable single filter filtering all columns
+         * @type {Boolean}
+         */
         this.singleSearchFlt = Boolean(f.single_filter);
-        //calls function after row is validated
-        this.onRowValidated = Types.isFn(f.on_row_validated) ?
-            f.on_row_validated : null;
-        //array defining columns for customCellData event
+
+        /**
+         * Callback fired after a row is validated during filtering
+         * @type {Function}
+         */
+        this.onRowValidated = isFn(f.on_row_validated) ?
+            f.on_row_validated : EMPTY_FN;
+
+        /**
+         * List of columns implementing custom filtering
+         * @type {Array}
+         */
         this.customCellDataCols = f.custom_cell_data_cols ?
             f.custom_cell_data_cols : [];
-        //calls custom function for retrieving cell data
-        this.customCellData = Types.isFn(f.custom_cell_data) ?
-            f.custom_cell_data : null;
-        //input watermark text array
+
+        /**
+         * Delegate function for retrieving cell data with custom logic
+         * @type {Function}
+         */
+        this.customCellData = isFn(f.custom_cell_data) ?
+            f.custom_cell_data : EMPTY_FN;
+
+        /**
+         * Global watermark text for input filter type or watermark for each
+         * filter if an array is supplied
+         * @type {String|Array}
+         */
         this.watermark = f.watermark || '';
-        this.isWatermarkArray = Types.isArray(this.watermark);
-        //id of toolbar container element
+
+        /**
+         * Indicate whether watermark is on a per column basis
+         * @type {Boolean}
+         * @private
+         */
+        this.isWatermarkArray = isArray(this.watermark);
+
+        /**
+         * Toolbar's custom container ID
+         * @type {String}
+         */
         this.toolBarTgtId = f.toolbar_target_id || null;
-        //enables/disables help div
-        this.help = Types.isUndef(f.help_instructions) ?
+
+        /**
+         * Indicate whether help UI component is disabled
+         * @type {Boolean}
+         */
+        this.help = isUndef(f.help_instructions) ?
             undefined : Boolean(f.help_instructions);
-        //popup filters
+
+        /**
+         * Indicate whether pop-up filters UI is enabled
+         * @type {Boolean}
+         */
         this.popupFilters = Boolean(f.popup_filters);
-        //active columns color
+
+        /**
+         * Indicate whether filtered (active) columns indicator is enabled
+         * @type {Boolean}
+         */
         this.markActiveColumns = Boolean(f.mark_active_columns);
-        //defines css class for active column header
+
+        /**
+         * Css class for filtered (active) columns
+         * @type {String}
+         */
         this.activeColumnsCssClass = f.active_columns_css_class ||
             'activeHeader';
-        //calls function before active column header is marked
-        this.onBeforeActiveColumn = Types.isFn(f.on_before_active_column) ?
-            f.on_before_active_column : null;
-        //calls function after active column header is marked
-        this.onAfterActiveColumn = Types.isFn(f.on_after_active_column) ?
-            f.on_after_active_column : null;
+
+        /**
+         * Callback fired before a column is marked as filtered
+         * @type {Function}
+         */
+        this.onBeforeActiveColumn = isFn(f.on_before_active_column) ?
+            f.on_before_active_column : EMPTY_FN;
+
+        /**
+         * Callback fired after a column is marked as filtered
+         * @type {Function}
+         */
+        this.onAfterActiveColumn = isFn(f.on_after_active_column) ?
+            f.on_after_active_column : EMPTY_FN;
 
         /*** select filter's customisation and behaviours ***/
-        //defines 1st option text
-        this.displayAllText = f.display_all_text || 'Clear';
-        //enables/disables empty option in combo-box filters
+        /**
+         * Text for clear option in drop-down filter types (1st option)
+         * @type {String|Array}
+         */
+        this.clearFilterText = f.clear_filter_text || 'Clear';
+
+        /**
+         * Indicate whether empty option is enabled in drop-down filter types
+         * @type {Boolean}
+         */
         this.enableEmptyOption = Boolean(f.enable_empty_option);
-        //defines empty option text
+
+        /**
+         * Text for empty option in drop-down filter types
+         * @type {String}
+         */
         this.emptyText = f.empty_text || '(Empty)';
-        //enables/disables non empty option in combo-box filters
+
+        /**
+         * Indicate whether non-empty option is enabled in drop-down filter
+         * types
+         * @type {Boolean}
+         */
         this.enableNonEmptyOption = Boolean(f.enable_non_empty_option);
-        //defines empty option text
+
+        /**
+         * Text for non-empty option in drop-down filter types
+         * @type {String}
+         */
         this.nonEmptyText = f.non_empty_text || '(Non empty)';
-        //enables/disables onChange event on combo-box
+
+        /**
+         * Indicate whether drop-down filter types filter the table by default
+         * on change event
+         * @type {Boolean}
+         */
         this.onSlcChange = f.on_change === false ? false : true;
-        //enables/disables select options sorting
+
+        /**
+         * Indicate whether options in drop-down filter types are sorted in a
+         * alpha-numeric manner by default
+         * @type {Boolean}
+         */
         this.sortSlc = f.sort_select === false ? false : true;
-        //enables/disables ascending numeric options sorting
+
+        /**
+         * Indicate whether options in drop-down filter types are sorted in a
+         * ascending numeric manner
+         * @type {Boolean}
+         * @private
+         */
         this.isSortNumAsc = Boolean(f.sort_num_asc);
+
+        /**
+         * List of columns implementing options sorting in a ascending numeric
+         * manner
+         * @type {Array}
+         */
         this.sortNumAsc = this.isSortNumAsc ? f.sort_num_asc : [];
-        //enables/disables descending numeric options sorting
+
+        /**
+         * Indicate whether options in drop-down filter types are sorted in a
+         * descending numeric manner
+         * @type {Boolean}
+         * @private
+         */
         this.isSortNumDesc = Boolean(f.sort_num_desc);
+
+        /**
+         * List of columns implementing options sorting in a descending numeric
+         * manner
+         * @type {Array}
+         */
         this.sortNumDesc = this.isSortNumDesc ? f.sort_num_desc : [];
-        //Select filters are populated on demand
+
+        /**
+         * Indicate whether drop-down filter types are populated on demand at
+         * first usage
+         * @type {Boolean}
+         */
         this.loadFltOnDemand = Boolean(f.load_filters_on_demand);
-        this.hasCustomOptions = Types.isObj(f.custom_options);
+
+        /**
+         * Indicate whether custom drop-down filter options are implemented
+         * @type {Boolean}
+         */
+        this.hasCustomOptions = isObj(f.custom_options);
+
+        /**
+         * Custom options definition of a per column basis, ie:
+         *	custom_options: {
+         *      cols:[0, 1],
+         *      texts: [
+         *          ['a0', 'b0', 'c0'],
+         *          ['a1', 'b1', 'c1']
+         *      ],
+         *      values: [
+         *          ['a0', 'b0', 'c0'],
+         *          ['a1', 'b1', 'c1']
+         *      ],
+         *      sorts: [false, true]
+         *  }
+         *
+         * @type {Object}
+         */
         this.customOptions = f.custom_options;
 
         /*** Filter operators ***/
+        /**
+         * Regular expression operator for input filter. Defaults to 'rgx:'
+         * @type {String}
+         */
         this.rgxOperator = f.regexp_operator || 'rgx:';
+
+        /**
+         * Empty cells operator for input filter. Defaults to '[empty]'
+         * @type {String}
+         */
         this.emOperator = f.empty_operator || '[empty]';
+
+        /**
+         * Non-empty cells operator for input filter. Defaults to '[nonempty]'
+         * @type {String}
+         */
         this.nmOperator = f.nonempty_operator || '[nonempty]';
+
+        /**
+         * Logical OR operator for input filter. Defaults to '||'
+         * @type {String}
+         */
         this.orOperator = f.or_operator || '||';
+
+        /**
+         * Logical AND operator for input filter. Defaults to '&&'
+         * @type {String}
+         */
         this.anOperator = f.and_operator || '&&';
+
+        /**
+         * Greater than operator for input filter. Defaults to '>'
+         * @type {String}
+         */
         this.grOperator = f.greater_operator || '>';
+
+        /**
+         * Lower than operator for input filter. Defaults to '<'
+         * @type {String}
+         */
         this.lwOperator = f.lower_operator || '<';
+
+        /**
+         * Lower than or equal operator for input filter. Defaults to '<='
+         * @type {String}
+         */
         this.leOperator = f.lower_equal_operator || '<=';
+
+        /**
+         * Greater than or equal operator for input filter. Defaults to '>='
+         * @type {String}
+         */
         this.geOperator = f.greater_equal_operator || '>=';
+
+        /**
+         * Inequality operator for input filter. Defaults to '!'
+         * @type {String}
+         */
         this.dfOperator = f.different_operator || '!';
+
+        /**
+         * Like operator for input filter. Defaults to '!'
+         * @type {String}
+         */
         this.lkOperator = f.like_operator || '*';
+
+        /**
+         * Strict equality operator for input filter. Defaults to '='
+         * @type {String}
+         */
         this.eqOperator = f.equal_operator || '=';
+
+        /**
+         * Starts with operator for input filter. Defaults to '='
+         * @type {String}
+         */
         this.stOperator = f.start_with_operator || '{';
+
+        /**
+         * Ends with operator for input filter. Defaults to '='
+         * @type {String}
+         */
         this.enOperator = f.end_with_operator || '}';
-        this.curExp = f.cur_exp || '^[¥£€$]';
+
+        // this.curExp = f.cur_exp || '^[¥£€$]';
+
+        /**
+         * Stored values separator
+         * @type {String}
+         */
         this.separator = f.separator || ',';
 
-        /*** rows counter ***/
-        //show/hides rows counter
+        /**
+         * Enable rows counter UI component
+         * @type {Boolean}
+         */
         this.rowsCounter = Boolean(f.rows_counter);
 
-        /*** status bar ***/
-        //show/hides status bar
+        /**
+         * Enable status bar UI component
+         * @type {Boolean}
+         */
         this.statusBar = Boolean(f.status_bar);
 
-        /*** loader ***/
-        //enables/disables loader/spinner indicator
+        /**
+         * Enable activity/spinner indicator UI component
+         * @type {Boolean}
+         */
         this.loader = Boolean(f.loader);
 
         /*** validation - reset buttons/links ***/
-        //show/hides filter's validation button
+        /**
+         * Enable filters submission button
+         * @type {Boolean}
+         */
         this.displayBtn = Boolean(f.btn);
-        //defines validation button text
+
+        /**
+         * Define filters submission button text
+         * @type {String}
+         */
         this.btnText = f.btn_text || (!this.enableIcons ? 'Go' : '');
-        //defines css class for validation button
+
+        /**
+         * Css class for filters submission button
+         * @type {String}
+         */
         this.btnCssClass = f.btn_css_class ||
             (!this.enableIcons ? 'btnflt' : 'btnflt_icon');
-        //show/hides reset link
+
+        /**
+         * Enable clear button
+         * @type {Boolean}
+         */
         this.btnReset = Boolean(f.btn_reset);
-        //defines css class for reset button
-        this.btnResetCssClass = f.btn_reset_css_class || 'reset';
-        //callback function before filters are cleared
-        this.onBeforeReset = Types.isFn(f.on_before_reset) ?
-            f.on_before_reset : null;
-        //callback function after filters are cleared
-        this.onAfterReset = Types.isFn(f.on_after_reset) ?
-            f.on_after_reset : null;
 
-        /*** paging ***/
-        //enables/disables table paging
+        /**
+         * Callback fired before filters are cleared
+         * @type {Function}
+         */
+        this.onBeforeReset = isFn(f.on_before_reset) ?
+            f.on_before_reset : EMPTY_FN;
+
+        /**
+         * Callback fired after filters are cleared
+         * @type {Function}
+         */
+        this.onAfterReset = isFn(f.on_after_reset) ?
+            f.on_after_reset : EMPTY_FN;
+
+        /**
+         * Enable paging component
+         * @type {Boolean}
+         */
         this.paging = Boolean(f.paging);
-        this.nbVisibleRows = 0; //nb visible rows
-        this.nbHiddenRows = 0; //nb hidden rows
 
-        /*** autofilter on typing ***/
-        //Auto filtering, table is filtered when user stops typing
+        /**
+         * Number of hidden rows
+         * @type {Number}
+         * @private
+         */
+        this.nbHiddenRows = 0;
+
+        /**
+         * Enable auto-filter behaviour, table is filtered when a user
+         * stops typing
+         * @type {Boolean}
+         */
         this.autoFilter = Boolean(f.auto_filter);
-        //onkeyup delay timer (msecs)
+
+        /**
+         * Auto-filter delay in msecs
+         * @type {Number}
+         */
         this.autoFilterDelay = !isNaN(f.auto_filter_delay) ?
-            f.auto_filter_delay : 900;
-        //typing indicator
+            f.auto_filter_delay : AUTO_FILTER_DELAY;
+
+        /**
+         * Indicate whether user is typing
+         * @type {Boolean}
+         * @private
+         */
         this.isUserTyping = null;
+
+        /**
+         * Auto-filter interval ID
+         * @type {String}
+         * @private
+         */
         this.autoFilterTimer = null;
 
-        /*** keyword highlighting ***/
-        //enables/disables keyword highlighting
+        /**
+         * Enable keyword highlighting behaviour
+         * @type {Boolean}
+         */
         this.highlightKeywords = Boolean(f.highlight_keywords);
 
-        /*** No results feature ***/
-        this.noResults = Types.isObj(f.no_results_message) ||
+        /**
+         * Enable no results message UI component
+         * @type {Boolean}
+         */
+        this.noResults = isObj(f.no_results_message) ||
             Boolean(f.no_results_message);
 
-        // stateful
-        this.state = Types.isObj(f.state) || Boolean(f.state);
+        /**
+         * Enable state persistence
+         * @type {Boolean}
+         */
+        this.state = isObj(f.state) || Boolean(f.state);
 
         /*** data types ***/
-        //defines default date type (european DMY)
-        this.defaultDateType = f.default_date_type || 'DMY';
-        //defines default thousands separator
-        //US = ',' EU = '.'
+
+        /**
+         * Define default locale, default to 'en' as per Sugar Date module:
+         * https://sugarjs.com/docs/#/DateLocales
+         * @type {String}
+         */
+        this.locale = f.locale || 'en';
+
+        /**
+         * Define thousands separator ',' or '.', defaults to ','
+         * @type {String}
+         */
         this.thousandsSeparator = f.thousands_separator || ',';
-        //defines default decimal separator
-        //US & javascript = '.' EU = ','
+
+        /**
+         * Define decimal separator ',' or '.', defaults to '.'
+         * @type {String}
+         */
         this.decimalSeparator = f.decimal_separator || '.';
-        //enables number format per column
-        this.hasColNbFormat = Types.isArray(f.col_number_format);
-        //array containing columns nb formats
-        this.colNbFormat = this.hasColNbFormat ? f.col_number_format : null;
-        //enables date type per column
-        this.hasColDateType = Types.isArray(f.col_date_type);
-        //array containing columns date type
-        this.colDateType = this.hasColDateType ? f.col_date_type : null;
+
+        /**
+         * Determine whether table has columns data types
+         * @type {Boolean}
+         * @private
+         */
+        this.hasColTypes = isArray(f.col_types);
+
+        /**
+         * Define data types on a column basis, possible values 'string',
+         * 'number', 'formatted-number', 'date', 'ipaddress' ie:
+         * col_types : [
+         *  'string', 'date', 'number',
+         *  { type: 'formatted-number', decimal: ',', thousands: '.' },
+         *  { type: 'date', locale: 'en-gb' },
+         *  { type: 'date', format: ['{dd}-{months}-{yyyy|yy}'] }
+         * ]
+         *
+         * Refer to https://sugarjs.com/docs/#/DateParsing for exhaustive
+         * information on date parsing formats supported by Sugar Date
+         * @type {Array}
+         */
+        this.colTypes = this.hasColTypes ? f.col_types : [];
 
         /*** ids prefixes ***/
-        //css class name added to table
+        /**
+         * Main prefix
+         * @private
+         */
         this.prfxTf = 'TF';
-        //filters (inputs - selects)
+
+        /**
+         * Filter's ID prefix (inputs - selects)
+         * @private
+         */
         this.prfxFlt = 'flt';
-        //validation button
+
+        /**
+         * Button's ID prefix
+         * @private
+         */
         this.prfxValButton = 'btn';
-        //container div for paging elements, rows counter etc.
+
+        /**
+         * Toolbar container ID prefix
+         * @private
+         */
         this.prfxInfDiv = 'inf_';
-        //left div
+
+        /**
+         * Toolbar left element ID prefix
+         * @private
+         */
         this.prfxLDiv = 'ldiv_';
-        //right div
+
+        /**
+         * Toolbar right element ID prefix
+         * @private
+         */
         this.prfxRDiv = 'rdiv_';
-        //middle div
+
+        /**
+         * Toolbar middle element ID prefix
+         * @private
+         */
         this.prfxMDiv = 'mdiv_';
-        //filter values cookie
-        this.prfxCookieFltsValues = 'tf_flts_';
-        //page nb cookie
-        this.prfxCookiePageNb = 'tf_pgnb_';
-        //page length cookie
-        this.prfxCookiePageLen = 'tf_pglen_';
+
+        /**
+         * Responsive Css class
+         * @private
+         */
         this.prfxResponsive = 'resp';
 
         /*** extensions ***/
-        //imports external script
+        /**
+         * List of loaded extensions
+         * @type {Array}
+         * @private
+         */
         this.extensions = f.extensions;
-        this.hasExtensions = Types.isArray(this.extensions);
+
+        /**
+         * Determine whether extensions are loaded
+         * @type {Boolean}
+         * @private
+         */
+        this.hasExtensions = isArray(this.extensions);
 
         /*** themes ***/
+        /**
+         * Enable default theme
+         * @type {Boolean}
+         */
         this.enableDefaultTheme = Boolean(f.enable_default_theme);
-        //imports themes
-        this.hasThemes = (this.enableDefaultTheme || Types.isArray(f.themes));
+
+        /**
+         * Determine whether themes are enables
+         * @type {Boolean}
+         * @private
+         */
+        this.hasThemes = (this.enableDefaultTheme || isArray(f.themes));
+
+        /**
+         * List of themes, ie:
+         * themes: [{ name: 'skyblue' }]
+         * @type {Array}
+         */
         this.themes = f.themes || [];
-        //themes path
+
+        /**
+         * Define path to themes assets, defaults to
+         * 'tablefilter/style/themes/'. Usage:
+         * themes: [{ name: 'skyblue' }]
+         * @type {Array}
+         */
         this.themesPath = f.themes_path || this.stylePath + 'themes/';
 
-        //responsive table
+        /**
+         * Enable responsive layout
+         * @type {Boolean}
+         */
         this.responsive = Boolean(f.responsive);
 
-        // Features registry
+        /**
+         * Features registry
+         * @private
+         */
         this.Mod = {};
 
-        // Extensions registry
+        /**
+         * Extensions registry
+         * @private
+         */
         this.ExtRegistry = {};
     }
 
@@ -404,10 +1008,11 @@ export class TableFilter {
      * Initialise features and layout
      */
     init() {
-        if (this._hasGrid) {
+        if (this.initialized) {
             return;
         }
 
+        this.nbCells = this.getCellsNb(this.refRow);
         let Mod = this.Mod;
         let n = this.singleSearchFlt ? 1 : this.nbCells;
         let inpclass;
@@ -420,32 +1025,28 @@ export class TableFilter {
             this.loadThemes();
         }
 
+        // Instanciate sugar date wrapper
+        Mod.dateType = Mod.dateType || new DateType(this);
+        Mod.dateType.init();
+
         // Instantiate help feature and initialise only if set true
-        if (!Mod.help) {
-            Mod.help = new Help(this);
-        }
+        Mod.help = Mod.help || new Help(this);
         if (this.help) {
             Mod.help.init();
         }
 
         if (this.state) {
-            if (!Mod.state) {
-                Mod.state = new State(this);
-            }
+            Mod.state = Mod.state || new State(this);
             Mod.state.init();
         }
 
         if (this.gridLayout) {
-            if (!Mod.gridLayout) {
-                Mod.gridLayout = new GridLayout(this);
-            }
+            Mod.gridLayout = Mod.gridLayout || new GridLayout(this);
             Mod.gridLayout.init();
         }
 
         if (this.loader) {
-            if (!Mod.loader) {
-                Mod.loader = new Loader(this);
-            }
+            Mod.loader = Mod.loader || new Loader(this);
             Mod.loader.init();
         }
 
@@ -455,9 +1056,7 @@ export class TableFilter {
         }
 
         if (this.popupFilters) {
-            if (!Mod.popupFilter) {
-                Mod.popupFilter = new PopupFilter(this);
-            }
+            Mod.popupFilter = Mod.popupFilter || new PopupFilter(this);
             Mod.popupFilter.init();
         }
 
@@ -468,14 +1067,12 @@ export class TableFilter {
             let fltrow = this._insertFiltersRow();
 
             this.nbFilterableRows = this.getRowsNb();
-            this.nbVisibleRows = this.nbFilterableRows;
-            this.nbRows = this.tbl.rows.length;
 
             // Generate filters
             for (let i = 0; i < n; i++) {
                 this.emitter.emit('before-filter-init', this, i);
 
-                let fltcell = Dom.create(this.fltCellTag),
+                let fltcell = createElm(this.fltCellTag),
                     col = this.getFilterType(i);
 
                 if (this.singleSearchFlt) {
@@ -484,24 +1081,24 @@ export class TableFilter {
                 if (!this.gridLayout) {
                     fltrow.appendChild(fltcell);
                 }
-                inpclass = (i == n - 1 && this.displayBtn) ?
+                inpclass = (i === n - 1 && this.displayBtn) ?
                     this.fltSmallCssClass : this.fltCssClass;
 
                 //only 1 input for single search
                 if (this.singleSearchFlt) {
-                    col = this.fltTypeInp;
+                    col = INPUT;
                     inpclass = this.singleFltCssClass;
                 }
 
                 //drop-down filters
-                if (col === this.fltTypeSlc || col === this.fltTypeMulti) {
+                if (col === SELECT || col === MULTIPLE) {
                     if (!Mod.dropdown) {
                         Mod.dropdown = new Dropdown(this);
                     }
                     Mod.dropdown.init(i, this.isExternalFlt, fltcell);
                 }
                 // checklist
-                else if (col === this.fltTypeCheckList) {
+                else if (col === CHECKLIST) {
                     if (!Mod.checkList) {
                         Mod.checkList = new CheckList(this);
                     }
@@ -511,7 +1108,7 @@ export class TableFilter {
                 }
 
                 // this adds submit button
-                if (i == n - 1 && this.displayBtn) {
+                if (i === n - 1 && this.displayBtn) {
                     this._buildSubmitButton(i, fltcell);
                 }
 
@@ -558,19 +1155,15 @@ export class TableFilter {
             Mod.alternateRows.init();
         }
         if (this.noResults) {
-            if (!Mod.noResults) {
-                Mod.noResults = new NoResults(this);
-            }
+            Mod.noResults = Mod.noResults || new NoResults(this);
             Mod.noResults.init();
         }
 
-        this._hasGrid = true;
-
         //TF css class is added to table
         if (!this.gridLayout) {
-            Dom.addClass(this.tbl, this.prfxTf);
+            addClass(this.tbl, this.prfxTf);
             if (this.responsive) {
-                Dom.addClass(this.tbl, this.prfxResponsive);
+                addClass(this.tbl, this.prfxResponsive);
             }
         }
 
@@ -590,11 +1183,11 @@ export class TableFilter {
             this.emitter.on(['after-filtering'], () => this.linkFilters());
         }
 
-        if (this.onFiltersLoaded) {
-            this.onFiltersLoaded.call(null, this);
-        }
-
+        /** @inherited */
         this.initialized = true;
+
+        this.onFiltersLoaded(this);
+
         this.emitter.emit('initialized', this);
     }
 
@@ -607,14 +1200,14 @@ export class TableFilter {
             return;
         }
         if (evt) {
-            let key = Event.keyCode(evt);
-            if (key === 13) {
+            let key = keyCode(evt);
+            if (key === ENTER_KEY) {
                 this.filter();
-                Event.cancel(evt);
-                Event.stop(evt);
+                cancelEvt(evt);
+                stopEvt(evt);
             } else {
                 this.isUserTyping = true;
-                global.clearInterval(this.autoFilterTimer);
+                root.clearInterval(this.autoFilterTimer);
                 this.autoFilterTimer = null;
             }
         }
@@ -629,25 +1222,26 @@ export class TableFilter {
         if (!this.autoFilter) {
             return;
         }
-        let key = Event.keyCode(evt);
+        let key = keyCode(evt);
         this.isUserTyping = false;
 
         function filter() {
-            global.clearInterval(this.autoFilterTimer);
+            root.clearInterval(this.autoFilterTimer);
             this.autoFilterTimer = null;
             if (!this.isUserTyping) {
                 this.filter();
                 this.isUserTyping = null;
             }
         }
-        // TODO: define constants for keys
-        if (key !== 13 && key !== 9 && key !== 27 && key !== 38 && key !== 40) {
+
+        if (key !== ENTER_KEY && key !== TAB_KEY && key !== ESC_KEY &&
+            key !== UP_ARROW_KEY && key !== DOWN_ARROW_KEY) {
             if (this.autoFilterTimer === null) {
-                this.autoFilterTimer = global.setInterval(filter.bind(this),
+                this.autoFilterTimer = root.setInterval(filter.bind(this),
                     this.autoFilterDelay);
             }
         } else {
-            global.clearInterval(this.autoFilterTimer);
+            root.clearInterval(this.autoFilterTimer);
             this.autoFilterTimer = null;
         }
     }
@@ -666,7 +1260,7 @@ export class TableFilter {
      * @param {Event} evt
      */
     onInpFocus(evt) {
-        let elm = Event.target(evt);
+        let elm = targetEvt(evt);
         this.emitter.emit('filter-focus', this, elm);
     }
 
@@ -676,7 +1270,7 @@ export class TableFilter {
     onInpBlur() {
         if (this.autoFilter) {
             this.isUserTyping = false;
-            global.clearInterval(this.autoFilterTimer);
+            root.clearInterval(this.autoFilterTimer);
         }
         this.emitter.emit('filter-blur', this);
     }
@@ -685,12 +1279,15 @@ export class TableFilter {
      * Insert filters row at initialization
      */
     _insertFiltersRow() {
+        // TODO: prevent filters row generation for popup filters too,
+        // to reduce and simplify headers row index adjusting across lib modules
+        // (GridLayout, PopupFilter etc)
         if (this.gridLayout) {
             return;
         }
         let fltrow;
 
-        let thead = Dom.tag(this.tbl, 'thead');
+        let thead = tag(this.tbl, 'thead');
         if (thead.length > 0) {
             fltrow = thead[0].insertRow(this.filtersRowIndex);
         } else {
@@ -700,7 +1297,7 @@ export class TableFilter {
         fltrow.className = this.fltsRowCssClass;
 
         if (this.isExternalFlt) {
-            fltrow.style.display = 'none';
+            fltrow.style.display = NONE;
         }
 
         this.emitter.emit('filters-row-inserted', this, fltrow);
@@ -716,8 +1313,6 @@ export class TableFilter {
         }
         this.refRow = this.refRow > 0 ? this.refRow - 1 : 0;
         this.nbFilterableRows = this.getRowsNb();
-        this.nbVisibleRows = this.nbFilterableRows;
-        this.nbRows = this.nbFilterableRows + this.refRow;
     }
 
     /**
@@ -730,34 +1325,33 @@ export class TableFilter {
         let col = this.getFilterType(colIndex);
         let externalFltTgtId = this.isExternalFlt ?
             this.externalFltTgtIds[colIndex] : null;
-        let inptype = col === this.fltTypeInp ? 'text' : 'hidden';
-        let inp = Dom.create(this.fltTypeInp,
-            ['id', this.prfxFlt + colIndex + '_' + this.id],
-            ['type', inptype], ['ct', colIndex]);
+        let inpType = col === INPUT ? 'text' : 'hidden';
+        let inp = createElm(INPUT,
+            ['id', this.buildFilterId(colIndex)],
+            ['type', inpType], ['ct', colIndex]);
 
-        if (inptype !== 'hidden' && this.watermark) {
+        if (inpType !== 'hidden' && this.watermark) {
             inp.setAttribute('placeholder',
                 this.isWatermarkArray ? (this.watermark[colIndex] || '') :
                     this.watermark
             );
         }
         inp.className = cssClass || this.fltCssClass;
-        Event.add(inp, 'focus', (evt) => this.onInpFocus(evt));
+        addEvt(inp, 'focus', (evt) => this.onInpFocus(evt));
 
         //filter is appended in custom element
         if (externalFltTgtId) {
-            Dom.id(externalFltTgtId).appendChild(inp);
-            this.externalFltEls.push(inp);
+            elm(externalFltTgtId).appendChild(inp);
         } else {
             container.appendChild(inp);
         }
 
         this.fltIds.push(inp.id);
 
-        Event.add(inp, 'keypress', (evt) => this.detectKey(evt));
-        Event.add(inp, 'keydown', () => this.onKeyDown());
-        Event.add(inp, 'keyup', (evt) => this.onKeyUp(evt));
-        Event.add(inp, 'blur', () => this.onInpBlur());
+        addEvt(inp, 'keypress', (evt) => this.detectKey(evt));
+        addEvt(inp, 'keydown', () => this.onKeyDown());
+        addEvt(inp, 'keyup', (evt) => this.onKeyUp(evt));
+        addEvt(inp, 'blur', () => this.onInpBlur());
     }
 
     /**
@@ -768,19 +1362,20 @@ export class TableFilter {
     _buildSubmitButton(colIndex, container) {
         let externalFltTgtId = this.isExternalFlt ?
             this.externalFltTgtIds[colIndex] : null;
-        let btn = Dom.create(this.fltTypeInp,
-            ['id', this.prfxValButton + colIndex + '_' + this.id],
-            ['type', 'button'], ['value', this.btnText]);
+        let btn = createElm(INPUT,
+            ['type', 'button'],
+            ['value', this.btnText]
+        );
         btn.className = this.btnCssClass;
 
         //filter is appended in custom element
         if (externalFltTgtId) {
-            Dom.id(externalFltTgtId).appendChild(btn);
+            elm(externalFltTgtId).appendChild(btn);
         } else {
             container.appendChild(btn);
         }
 
-        Event.add(btn, 'click', () => this.filter());
+        addEvt(btn, 'click', () => this.filter());
     }
 
     /**
@@ -855,7 +1450,7 @@ export class TableFilter {
      * @return {Boolean}
      */
     hasExtension(name) {
-        return !Types.isEmpty(this.ExtRegistry[name]);
+        return !isEmpty(this.ExtRegistry[name]);
     }
 
     /**
@@ -869,7 +1464,7 @@ export class TableFilter {
             let extInstance = this.ExtRegistry[ext.name];
             if (extInstance) {
                 extInstance.destroy();
-                this.ExtRegistry[ext.name] = null;
+                this.ExtRegistry[ext.name] = undefined;
             }
         }
     }
@@ -886,7 +1481,7 @@ export class TableFilter {
             let defaultTheme = { name: 'default' };
             this.themes.push(defaultTheme);
         }
-        if (Types.isArray(themes)) {
+        if (isArray(themes)) {
             for (let i = 0, len = themes.length; i < len; i++) {
                 let theme = themes[i];
                 let name = theme.name;
@@ -905,26 +1500,8 @@ export class TableFilter {
             }
         }
 
-        //Some elements need to be overriden for default theme
-        //Reset button
-        this.btnResetText = null;
-        this.btnResetHtml = '<input type="button" value="" class="' +
-            this.btnResetCssClass + '" title="Clear filters" />';
-
-        //Paging buttons
-        this.btnPrevPageHtml = '<input type="button" value="" class="' +
-            this.btnPageCssClass + ' previousPage" title="Previous page" />';
-        this.btnNextPageHtml = '<input type="button" value="" class="' +
-            this.btnPageCssClass + ' nextPage" title="Next page" />';
-        this.btnFirstPageHtml = '<input type="button" value="" class="' +
-            this.btnPageCssClass + ' firstPage" title="First page" />';
-        this.btnLastPageHtml = '<input type="button" value="" class="' +
-            this.btnPageCssClass + ' lastPage" title="Last page" />';
-
-        //Loader
+        // Enable loader indicator
         this.loader = true;
-        this.loaderHtml = '<div class="defaultLoader"></div>';
-        this.loaderText = null;
 
         this.emitter.emit('after-loading-themes', this);
     }
@@ -934,19 +1511,18 @@ export class TableFilter {
      * @return {DOMElement} stylesheet element
      */
     getStylesheet(name = 'default') {
-        return Dom.id(this.prfxTf + name);
+        return elm(this.prfxTf + name);
     }
 
     /**
      * Destroy filter grid
      */
     destroy() {
-        if (!this._hasGrid) {
+        if (!this.initialized) {
             return;
         }
-        let rows = this.tbl.rows,
-            Mod = this.Mod,
-            emitter = this.emitter;
+
+        let emitter = this.emitter;
 
         if (this.isExternalFlt && !this.popupFilters) {
             this.removeExternalFlts();
@@ -967,21 +1543,11 @@ export class TableFilter {
         this.validateAllRows();
 
         if (this.fltGrid && !this.gridLayout) {
-            this.fltGridEl = rows[this.filtersRowIndex];
             this.tbl.deleteRow(this.filtersRowIndex);
         }
 
         // broadcast destroy event
         emitter.emit('destroy', this);
-
-        // Destroy modules
-        // TODO: subcribe modules to destroy event instead
-        Object.keys(Mod).forEach(function (key) {
-            var feature = Mod[key];
-            if (feature && Types.isFn(feature.destroy)) {
-                feature.destroy();
-            }
-        });
 
         // unsubscribe to events
         if (this.hasVisibleRows) {
@@ -993,13 +1559,12 @@ export class TableFilter {
         this.emitter.off(['filter-focus'],
             (tf, filter) => this.setActiveFilterId(filter.id));
 
-        Dom.removeClass(this.tbl, this.prfxTf);
-        Dom.removeClass(this.tbl, this.prfxResponsive);
+        removeClass(this.tbl, this.prfxTf);
+        removeClass(this.tbl, this.prfxResponsive);
 
         this.nbHiddenRows = 0;
         this.validRowsIndex = [];
         this.fltIds = [];
-        this._hasGrid = false;
         this.initialized = false;
     }
 
@@ -1012,48 +1577,48 @@ export class TableFilter {
         }
 
         /*** container div ***/
-        let infdiv = Dom.create('div', ['id', this.prfxInfDiv + this.id]);
-        infdiv.className = this.infDivCssClass;
+        let infDiv = createElm('div');
+        infDiv.className = this.infDivCssClass;
 
         //custom container
         if (this.toolBarTgtId) {
-            Dom.id(this.toolBarTgtId).appendChild(infdiv);
+            elm(this.toolBarTgtId).appendChild(infDiv);
         }
         //grid-layout
         else if (this.gridLayout) {
             let gridLayout = this.Mod.gridLayout;
-            gridLayout.tblMainCont.appendChild(infdiv);
-            infdiv.className = gridLayout.gridInfDivCssClass;
+            gridLayout.tblMainCont.appendChild(infDiv);
+            infDiv.className = gridLayout.infDivCssClass;
         }
         //default location: just above the table
         else {
-            var cont = Dom.create('caption');
-            cont.appendChild(infdiv);
+            let cont = createElm('caption');
+            cont.appendChild(infDiv);
             this.tbl.insertBefore(cont, this.tbl.firstChild);
         }
-        this.infDiv = Dom.id(this.prfxInfDiv + this.id);
+        this.infDiv = infDiv;
 
         /*** left div containing rows # displayer ***/
-        let ldiv = Dom.create('div', ['id', this.prfxLDiv + this.id]);
-        ldiv.className = this.lDivCssClass;
-        infdiv.appendChild(ldiv);
-        this.lDiv = Dom.id(this.prfxLDiv + this.id);
+        let lDiv = createElm('div');
+        lDiv.className = this.lDivCssClass;
+        infDiv.appendChild(lDiv);
+        this.lDiv = lDiv;
 
         /***    right div containing reset button
                 + nb results per page select    ***/
-        let rdiv = Dom.create('div', ['id', this.prfxRDiv + this.id]);
-        rdiv.className = this.rDivCssClass;
-        infdiv.appendChild(rdiv);
-        this.rDiv = Dom.id(this.prfxRDiv + this.id);
+        let rDiv = createElm('div');
+        rDiv.className = this.rDivCssClass;
+        infDiv.appendChild(rDiv);
+        this.rDiv = rDiv;
 
         /*** mid div containing paging elements ***/
-        let mdiv = Dom.create('div', ['id', this.prfxMDiv + this.id]);
-        mdiv.className = this.mDivCssClass;
-        infdiv.appendChild(mdiv);
-        this.mDiv = Dom.id(this.prfxMDiv + this.id);
+        let mDiv = createElm('div');
+        mDiv.className = this.mDivCssClass;
+        infDiv.appendChild(mDiv);
+        this.mDiv = mDiv;
 
         // emit help initialisation only if undefined
-        if (Types.isUndef(this.help)) {
+        if (isUndef(this.help)) {
             // explicitily set enabled field to true to initialise help by
             // default, only if setting is undefined
             this.Mod.help.enabled = true;
@@ -1068,11 +1633,11 @@ export class TableFilter {
         if (!this.infDiv) {
             return;
         }
-        Dom.remove(this.infDiv);
+        removeElm(this.infDiv);
         this.infDiv = null;
 
         let tbl = this.tbl;
-        let captions = Dom.tag(tbl, 'caption');
+        let captions = tag(tbl, 'caption');
         if (captions.length > 0) {
             [].forEach.call(captions, (elm) => tbl.removeChild(elm));
         }
@@ -1089,7 +1654,7 @@ export class TableFilter {
             len = ids.length;
         for (let ct = 0; ct < len; ct++) {
             let externalFltTgtId = ids[ct],
-                externalFlt = Dom.id(externalFltTgtId);
+                externalFlt = elm(externalFltTgtId);
             if (externalFlt) {
                 externalFlt.innerHTML = '';
             }
@@ -1103,7 +1668,7 @@ export class TableFilter {
      */
     isCustomOptions(colIndex) {
         return this.hasCustomOptions &&
-            this.customOptions.cols.indexOf(colIndex) != -1;
+            this.customOptions.cols.indexOf(colIndex) !== -1;
     }
 
     /**
@@ -1113,7 +1678,7 @@ export class TableFilter {
      * @return {Array}
      */
     getCustomOptions(colIndex) {
-        if (Types.isEmpty(colIndex) || !this.isCustomOptions(colIndex)) {
+        if (isEmpty(colIndex) || !this.isCustomOptions(colIndex)) {
             return;
         }
 
@@ -1146,250 +1711,27 @@ export class TableFilter {
      * hidden when all the search terms are not found in inspected row.
      */
     filter() {
-        if (!this.fltGrid || !this._hasGrid) {
+        if (!this.fltGrid || !this.initialized) {
             return;
         }
-        //invoke onbefore callback
-        if (this.onBeforeFilter) {
-            this.onBeforeFilter.call(null, this);
-        }
+        //fire onbefore callback
+        this.onBeforeFilter(this);
         this.emitter.emit('before-filtering', this);
 
         let row = this.tbl.rows,
-            hiddenrows = 0;
+            nbRows = this.getRowsNb(true),
+            hiddenRows = 0;
 
         this.validRowsIndex = [];
         // search args re-init
         let searchArgs = this.getFiltersValue();
 
-        var numCellData, nbFormat;
-        var re_le = new RegExp(this.leOperator),
-            re_ge = new RegExp(this.geOperator),
-            re_l = new RegExp(this.lwOperator),
-            re_g = new RegExp(this.grOperator),
-            re_d = new RegExp(this.dfOperator),
-            re_lk = new RegExp(Str.rgxEsc(this.lkOperator)),
-            re_eq = new RegExp(this.eqOperator),
-            re_st = new RegExp(this.stOperator),
-            re_en = new RegExp(this.enOperator),
-            // re_an = new RegExp(this.anOperator),
-            // re_cr = new RegExp(this.curExp),
-            re_em = this.emOperator,
-            re_nm = this.nmOperator,
-            re_re = new RegExp(Str.rgxEsc(this.rgxOperator));
-
-        //keyword highlighting
-        function highlight(str, ok, cell) {
-            /*jshint validthis:true */
-            if (this.highlightKeywords && ok) {
-                str = str.replace(re_lk, '');
-                str = str.replace(re_eq, '');
-                str = str.replace(re_st, '');
-                str = str.replace(re_en, '');
-                let w = str;
-                if (re_le.test(str) || re_ge.test(str) || re_l.test(str) ||
-                    re_g.test(str) || re_d.test(str)) {
-                    w = Dom.getText(cell);
-                }
-                if (w !== '') {
-                    this.emitter.emit('highlight-keyword', this, cell, w);
-                }
-            }
-        }
-
-        //looks for search argument in current row
-        function hasArg(sA, cellData, j) {
-            /*jshint validthis:true */
-            sA = Str.matchCase(sA, this.caseSensitive);
-
-            let occurence,
-                removeNbFormat = Helpers.removeNbFormat;
-
-            //Search arg operator tests
-            let hasLO = re_l.test(sA),
-                hasLE = re_le.test(sA),
-                hasGR = re_g.test(sA),
-                hasGE = re_ge.test(sA),
-                hasDF = re_d.test(sA),
-                hasEQ = re_eq.test(sA),
-                hasLK = re_lk.test(sA),
-                // hasAN = re_an.test(sA),
-                hasST = re_st.test(sA),
-                hasEN = re_en.test(sA),
-                hasEM = (re_em === sA),
-                hasNM = (re_nm === sA),
-                hasRE = re_re.test(sA);
-
-            //Search arg dates tests
-            let isLDate = hasLO &&
-                DateHelper.isValid(sA.replace(re_l, ''), dtType);
-            let isLEDate = hasLE &&
-                DateHelper.isValid(sA.replace(re_le, ''), dtType);
-            let isGDate = hasGR &&
-                DateHelper.isValid(sA.replace(re_g, ''), dtType);
-            let isGEDate = hasGE &&
-                DateHelper.isValid(sA.replace(re_ge, ''), dtType);
-            let isDFDate = hasDF &&
-                DateHelper.isValid(sA.replace(re_d, ''), dtType);
-            let isEQDate = hasEQ &&
-                DateHelper.isValid(sA.replace(re_eq, ''), dtType);
-
-            let dte1, dte2;
-            //dates
-            if (DateHelper.isValid(cellData, dtType)) {
-                dte1 = DateHelper.format(cellData, dtType);
-                // lower date
-                if (isLDate) {
-                    dte2 = DateHelper.format(sA.replace(re_l, ''), dtType);
-                    occurence = dte1 < dte2;
-                }
-                // lower equal date
-                else if (isLEDate) {
-                    dte2 = DateHelper.format(sA.replace(re_le, ''), dtType);
-                    occurence = dte1 <= dte2;
-                }
-                // greater equal date
-                else if (isGEDate) {
-                    dte2 = DateHelper.format(sA.replace(re_ge, ''), dtType);
-                    occurence = dte1 >= dte2;
-                }
-                // greater date
-                else if (isGDate) {
-                    dte2 = DateHelper.format(sA.replace(re_g, ''), dtType);
-                    occurence = dte1 > dte2;
-                }
-                // different date
-                else if (isDFDate) {
-                    dte2 = DateHelper.format(sA.replace(re_d, ''), dtType);
-                    occurence = dte1.toString() != dte2.toString();
-                }
-                // equal date
-                else if (isEQDate) {
-                    dte2 = DateHelper.format(sA.replace(re_eq, ''), dtType);
-                    occurence = dte1.toString() == dte2.toString();
-                }
-                // searched keyword with * operator doesn't have to be a date
-                else if (re_lk.test(sA)) {// like date
-                    occurence = Str.contains(sA.replace(re_lk, ''), cellData,
-                        false, this.caseSensitive);
-                }
-                else if (DateHelper.isValid(sA, dtType)) {
-                    dte2 = DateHelper.format(sA, dtType);
-                    occurence = dte1.toString() === dte2.toString();
-                }
-                //empty
-                else if (hasEM) {
-                    occurence = Str.isEmpty(cellData);
-                }
-                //non-empty
-                else if (hasNM) {
-                    occurence = !Str.isEmpty(cellData);
-                } else {
-                    occurence = Str.contains(sA, cellData, this.isExactMatch(j),
-                        this.caseSensitive);
-                }
-            }
-
-            else {
-                //first numbers need to be formated
-                if (this.hasColNbFormat && this.colNbFormat[j]) {
-                    numCellData = removeNbFormat(
-                        cellData, this.colNbFormat[j]);
-                    nbFormat = this.colNbFormat[j];
-                } else {
-                    if (this.thousandsSeparator === ',' &&
-                        this.decimalSeparator === '.') {
-                        numCellData = removeNbFormat(cellData, 'us');
-                        nbFormat = 'us';
-                    } else {
-                        numCellData = removeNbFormat(cellData, 'eu');
-                        nbFormat = 'eu';
-                    }
-                }
-
-                // first checks if there is any operator (<,>,<=,>=,!,*,=,{,},
-                // rgx:)
-                // lower equal
-                if (hasLE) {
-                    occurence = numCellData <= removeNbFormat(
-                        sA.replace(re_le, ''), nbFormat);
-                }
-                //greater equal
-                else if (hasGE) {
-                    occurence = numCellData >= removeNbFormat(
-                        sA.replace(re_ge, ''), nbFormat);
-                }
-                //lower
-                else if (hasLO) {
-                    occurence = numCellData < removeNbFormat(
-                        sA.replace(re_l, ''), nbFormat);
-                }
-                //greater
-                else if (hasGR) {
-                    occurence = numCellData > removeNbFormat(
-                        sA.replace(re_g, ''), nbFormat);
-                }
-                //different
-                else if (hasDF) {
-                    occurence = Str.contains(sA.replace(re_d, ''), cellData,
-                        false, this.caseSensitive) ? false : true;
-                }
-                //like
-                else if (hasLK) {
-                    occurence = Str.contains(sA.replace(re_lk, ''), cellData,
-                        false, this.caseSensitive);
-                }
-                //equal
-                else if (hasEQ) {
-                    occurence = Str.contains(sA.replace(re_eq, ''), cellData,
-                        true, this.caseSensitive);
-                }
-                //starts with
-                else if (hasST) {
-                    occurence = cellData.indexOf(sA.replace(re_st, '')) === 0 ?
-                        true : false;
-                }
-                //ends with
-                else if (hasEN) {
-                    let searchArg = sA.replace(re_en, '');
-                    occurence =
-                        cellData.lastIndexOf(searchArg, cellData.length - 1) ===
-                            (cellData.length - 1) - (searchArg.length - 1) &&
-                            cellData.lastIndexOf(searchArg, cellData.length - 1)
-                                > -1 ? true : false;
-                }
-                //empty
-                else if (hasEM) {
-                    occurence = Str.isEmpty(cellData);
-                }
-                //non-empty
-                else if (hasNM) {
-                    occurence = !Str.isEmpty(cellData);
-                }
-                //regexp
-                else if (hasRE) {
-                    //in case regexp fires an exception
-                    try {
-                        //operator is removed
-                        let srchArg = sA.replace(re_re, '');
-                        let rgx = new RegExp(srchArg);
-                        occurence = rgx.test(cellData);
-                    } catch (e) { occurence = false; }
-                } else {
-                    occurence = Str.contains(sA, cellData, this.isExactMatch(j),
-                        this.caseSensitive);
-                }
-
-            }//else
-            return occurence;
-        }//fn
-
-        for (let k = this.refRow; k < this.nbRows; k++) {
+        for (let k = this.refRow; k < nbRows; k++) {
             // already filtered rows display re-init
             row[k].style.display = '';
 
-            let cells = row[k].cells,
-                nchilds = cells.length;
+            let cells = row[k].cells;
+            let nchilds = cells.length;
 
             // checks if row has exact cell #
             if (nchilds !== this.nbCells) {
@@ -1405,14 +1747,12 @@ export class TableFilter {
             for (let j = 0; j < nchilds; j++) {
                 //searched keyword
                 let sA = searchArgs[this.singleSearchFlt ? 0 : j];
-                var dtType = this.hasColDateType ?
-                    this.colDateType[j] : this.defaultDateType;
 
                 if (sA === '') {
                     continue;
                 }
 
-                let cellData = Str.matchCase(this.getCellData(cells[j]),
+                let cellValue = matchCase(this.getCellValue(cells[j]),
                     this.caseSensitive);
 
                 //multiple search parameter operator ||
@@ -1425,25 +1765,29 @@ export class TableFilter {
                     hasMultiAndSA = sAAndSplit.length > 1;
 
                 //detect operators or array query
-                if (Types.isArray(sA) || hasMultiOrSA || hasMultiAndSA) {
+                if (isArray(sA) || hasMultiOrSA || hasMultiAndSA) {
                     let cS,
                         s,
                         occur = false;
-                    if (Types.isArray(sA)) {
+                    if (isArray(sA)) {
                         s = sA;
                     } else {
                         s = hasMultiOrSA ? sAOrSplit : sAAndSplit;
                     }
-                    // TODO: improve clarity/readability of this block
+                    // isolate search term and check occurence in cell data
                     for (let w = 0, len = s.length; w < len; w++) {
-                        cS = Str.trim(s[w]);
-                        occur = hasArg.call(this, cS, cellData, j);
-                        highlight.call(this, cS, occur, cells[j]);
+                        cS = trim(s[w]);
+                        occur = this._testTerm(cS, cellValue, j);
+
+                        if (occur) {
+                            this.emitter.emit('highlight-keyword', this,
+                                cells[j], cS);
+                        }
                         if ((hasMultiOrSA && occur) ||
                             (hasMultiAndSA && !occur)) {
                             break;
                         }
-                        if (Types.isArray(sA) && occur) {
+                        if (isArray(sA) && occur) {
                             break;
                         }
                     }
@@ -1452,8 +1796,11 @@ export class TableFilter {
                 }
                 //single search parameter
                 else {
-                    occurence[j] = hasArg.call(this, Str.trim(sA), cellData, j);
-                    highlight.call(this, sA, occurence[j], cells[j]);
+                    occurence[j] = this._testTerm(trim(sA), cellValue, j);
+                    if (occurence[j]) {
+                        this.emitter.emit('highlight-keyword', this, cells[j],
+                            sA);
+                    }
                 }//else single param
 
                 if (!occurence[j]) {
@@ -1470,52 +1817,292 @@ export class TableFilter {
                 isRowValid = true;
             }
 
+            this.validateRow(k, isRowValid);
             if (!isRowValid) {
-                this.validateRow(k, false);
-                hiddenrows++;
-            } else {
-                this.validateRow(k, true);
+                hiddenRows++;
             }
 
             this.emitter.emit('row-processed', this, k,
                 this.validRowsIndex.length, isRowValid);
         }// for k
 
-        this.nbVisibleRows = this.validRowsIndex.length;
-        this.nbHiddenRows = hiddenrows;
+        this.nbHiddenRows = hiddenRows;
 
-        //invokes onafterfilter callback
-        if (this.onAfterFilter) {
-            this.onAfterFilter.call(null, this);
-        }
+        //fire onafterfilter callback
+        this.onAfterFilter(this);
 
         this.emitter.emit('after-filtering', this, searchArgs);
     }
 
     /**
+     * Test for a match of search term in cell data
+     * @param {String} term      Search term
+     * @param {String} cellValue  Cell data
+     * @param {Number} colIdx    Column index
+     * @returns {Boolean}
+     */
+    _testTerm(term, cellValue, colIdx) {
+        let numData;
+        let decimal = this.decimalSeparator;
+        let reLe = new RegExp(this.leOperator),
+            reGe = new RegExp(this.geOperator),
+            reL = new RegExp(this.lwOperator),
+            reG = new RegExp(this.grOperator),
+            reD = new RegExp(this.dfOperator),
+            reLk = new RegExp(rgxEsc(this.lkOperator)),
+            reEq = new RegExp(this.eqOperator),
+            reSt = new RegExp(this.stOperator),
+            reEn = new RegExp(this.enOperator),
+            // re_an = new RegExp(this.anOperator),
+            // re_cr = new RegExp(this.curExp),
+            reEm = this.emOperator,
+            reNm = this.nmOperator,
+            reRe = new RegExp(rgxEsc(this.rgxOperator));
+
+        term = matchCase(term, this.caseSensitive);
+
+        let occurence = false;
+
+        //Search arg operator tests
+        let hasLO = reL.test(term),
+            hasLE = reLe.test(term),
+            hasGR = reG.test(term),
+            hasGE = reGe.test(term),
+            hasDF = reD.test(term),
+            hasEQ = reEq.test(term),
+            hasLK = reLk.test(term),
+            // hatermN = re_an.test(term),
+            hasST = reSt.test(term),
+            hasEN = reEn.test(term),
+            hasEM = (reEm === term),
+            hasNM = (reNm === term),
+            hasRE = reRe.test(term);
+
+        // Check for dates or resolve date type
+        if (this.hasType(colIdx, [DATE])) {
+            let dte1, dte2;
+
+            let dateType = this.Mod.dateType;
+            let isValidDate = dateType.isValid.bind(dateType);
+            let parseDate = dateType.parse.bind(dateType);
+            let locale = dateType.getOptions(colIdx).locale || this.locale;
+
+            // Search arg dates tests
+            let isLDate = hasLO &&
+                isValidDate(term.replace(reL, ''), locale);
+            let isLEDate = hasLE &&
+                isValidDate(term.replace(reLe, ''), locale);
+            let isGDate = hasGR &&
+                isValidDate(term.replace(reG, ''), locale);
+            let isGEDate = hasGE &&
+                isValidDate(term.replace(reGe, ''), locale);
+            let isDFDate = hasDF &&
+                isValidDate(term.replace(reD, ''), locale);
+            let isEQDate = hasEQ &&
+                isValidDate(term.replace(reEq, ''), locale);
+
+            dte1 = parseDate(cellValue, locale);
+
+            // lower equal date
+            if (isLEDate) {
+                dte2 = parseDate(term.replace(reLe, ''), locale);
+                occurence = dte1 <= dte2;
+            }
+            // lower date
+            else if (isLDate) {
+                dte2 = parseDate(term.replace(reL, ''), locale);
+                occurence = dte1 < dte2;
+            }
+            // greater equal date
+            else if (isGEDate) {
+                dte2 = parseDate(term.replace(reGe, ''), locale);
+                occurence = dte1 >= dte2;
+            }
+            // greater date
+            else if (isGDate) {
+                dte2 = parseDate(term.replace(reG, ''), locale);
+                occurence = dte1 > dte2;
+            }
+            // different date
+            else if (isDFDate) {
+                dte2 = parseDate(term.replace(reD, ''), locale);
+                occurence = dte1.toString() !== dte2.toString();
+            }
+            // equal date
+            else if (isEQDate) {
+                dte2 = parseDate(term.replace(reEq, ''), locale);
+                occurence = dte1.toString() === dte2.toString();
+            }
+            // searched keyword with * operator doesn't have to be a date
+            else if (reLk.test(term)) {// like date
+                occurence = contains(term.replace(reLk, ''), cellValue,
+                    false, this.caseSensitive);
+            }
+            else if (isValidDate(term)) {
+                dte2 = parseDate(term, locale);
+                occurence = dte1.toString() === dte2.toString();
+            }
+            //empty
+            else if (hasEM) {
+                occurence = isEmptyString(cellValue);
+            }
+            //non-empty
+            else if (hasNM) {
+                occurence = !isEmptyString(cellValue);
+            } else {
+                occurence = contains(term, cellValue,
+                    this.isExactMatch(colIdx), this.caseSensitive);
+            }
+        }
+
+        else {
+            if (this.hasType(colIdx, [FORMATTED_NUMBER])) {
+                let colType = this.colTypes[colIdx];
+                if (colType.hasOwnProperty('decimal')) {
+                    decimal = colType.decimal;
+                }
+            }
+            // Convert to number anyways to auto-resolve type in case not
+            // defined by configuration
+            numData = Number(cellValue) || parseNb(cellValue, decimal);
+
+            // first checks if there is any operator (<,>,<=,>=,!,*,=,{,},
+            // rgx:)
+            // lower equal
+            if (hasLE) {
+                occurence = numData <= parseNb(
+                    term.replace(reLe, ''),
+                    decimal
+                );
+            }
+            //greater equal
+            else if (hasGE) {
+                occurence = numData >= parseNb(
+                    term.replace(reGe, ''),
+                    decimal
+                );
+            }
+            //lower
+            else if (hasLO) {
+                occurence = numData < parseNb(
+                    term.replace(reL, ''),
+                    decimal
+                );
+            }
+            //greater
+            else if (hasGR) {
+                occurence = numData > parseNb(
+                    term.replace(reG, ''),
+                    decimal
+                );
+            }
+            //different
+            else if (hasDF) {
+                occurence = contains(term.replace(reD, ''), cellValue,
+                    false, this.caseSensitive) ? false : true;
+            }
+            //like
+            else if (hasLK) {
+                occurence = contains(term.replace(reLk, ''), cellValue,
+                    false, this.caseSensitive);
+            }
+            //equal
+            else if (hasEQ) {
+                occurence = contains(term.replace(reEq, ''), cellValue,
+                    true, this.caseSensitive);
+            }
+            //starts with
+            else if (hasST) {
+                occurence = cellValue.indexOf(term.replace(reSt, '')) === 0 ?
+                    true : false;
+            }
+            //ends with
+            else if (hasEN) {
+                let searchArg = term.replace(reEn, '');
+                occurence =
+                    cellValue.lastIndexOf(searchArg, cellValue.length - 1) ===
+                        (cellValue.length - 1) - (searchArg.length - 1) &&
+                        cellValue.lastIndexOf(searchArg, cellValue.length - 1)
+                        > -1 ? true : false;
+            }
+            //empty
+            else if (hasEM) {
+                occurence = isEmptyString(cellValue);
+            }
+            //non-empty
+            else if (hasNM) {
+                occurence = !isEmptyString(cellValue);
+            }
+            //regexp
+            else if (hasRE) {
+                //in case regexp throws
+                try {
+                    //operator is removed
+                    let srchArg = term.replace(reRe, '');
+                    let rgx = new RegExp(srchArg);
+                    occurence = rgx.test(cellValue);
+                } catch (ex) {
+                    occurence = false;
+                }
+            } else {
+                // If numeric type data, perform a strict equality test and
+                // fallback to unformatted number string comparison
+                if (numData &&
+                    this.hasType(colIdx, [NUMBER, FORMATTED_NUMBER]) &&
+                    !this.singleSearchFlt) {
+                    // parseNb can return 0 for strings which are not
+                    // formatted numbers, in that case return the original
+                    // string. TODO: handle this in parseNb
+                    term = parseNb(term, decimal) || term;
+                    occurence = numData === term ||
+                        contains(term.toString(), numData.toString(),
+                            this.isExactMatch(colIdx), this.caseSensitive);
+                } else {
+                    // Finally test search term is contained in cell data
+                    occurence = contains(
+                        term,
+                        cellValue,
+                        this.isExactMatch(colIdx),
+                        this.caseSensitive,
+                        this.ignoresDiacritics(colIdx)
+                    );
+                }
+            }
+
+        }//else
+
+        return occurence;
+    }
+
+    /**
      * Return the data of a specified column
      * @param  {Number} colIndex Column index
-     * @param  {Boolean} includeHeaders  Optional: include headers row
-     * @param  {Boolean} num     Optional: return unformatted number
-     * @param  {Array} exclude   Optional: list of row indexes to be excluded
+     * @param  {Boolean} [includeHeaders=false] Include headers row
+     * @param  {Boolean} [typed=true] Return a typed value
+     * @param  {Array} [exclude=[]] List of row indexes to be excluded
      * @return {Array}           Flat list of data for a column
      */
-    getColValues(colIndex, includeHeaders = false, num = false, exclude = []) {
-        if (!this.fltGrid) {
-            return;
-        }
-        let row = this.tbl.rows,
-            colValues = [];
+    getColValues(
+        colIndex,
+        includeHeaders = false,
+        typed = false,
+        exclude = []
+    ) {
+        let row = this.tbl.rows;
+        let nbRows = this.getRowsNb(true);
+        let colValues = [];
+        let getContent = typed ? this.getCellData.bind(this) :
+            this.getCellValue.bind(this);
 
         if (includeHeaders) {
             colValues.push(this.getHeadersText()[colIndex]);
         }
 
-        for (let i = this.refRow; i < this.nbRows; i++) {
+        for (let i = this.refRow; i < nbRows; i++) {
             let isExludedRow = false;
             // checks if current row index appears in exclude array
             if (exclude.length > 0) {
-                isExludedRow = exclude.indexOf(i) != -1;
+                isExludedRow = exclude.indexOf(i) !== -1;
             }
             let cell = row[i].cells,
                 nchilds = cell.length;
@@ -1524,15 +2111,10 @@ export class TableFilter {
             if (nchilds === this.nbCells && !isExludedRow) {
                 // this loop retrieves cell data
                 for (let j = 0; j < nchilds; j++) {
-                    if (j != colIndex || row[i].style.display !== '') {
+                    if (j !== colIndex) {
                         continue;
                     }
-                    let cellData = this.getCellData(cell[j]),
-                        nbFormat = this.colNbFormat ?
-                            this.colNbFormat[colIndex] : null,
-                        data = num ?
-                            Helpers.removeNbFormat(cellData, nbFormat) :
-                            cellData;
+                    let data = getContent(cell[j]);
                     colValues.push(data);
                 }
             }
@@ -1549,47 +2131,31 @@ export class TableFilter {
         if (!this.fltGrid) {
             return;
         }
-        let fltValue = '',
-            fltValues = [],
-            flt = this.getFilterElement(index);
+        let fltValue = '';
+        let flt = this.getFilterElement(index);
         if (!flt) {
-            return '';
+            return fltValue;
         }
 
         let fltColType = this.getFilterType(index);
-        if (fltColType !== this.fltTypeMulti &&
-            fltColType !== this.fltTypeCheckList) {
+        if (fltColType !== MULTIPLE && fltColType !== CHECKLIST) {
             fltValue = flt.value;
         }
         //mutiple select
-        else if (fltColType === this.fltTypeMulti) {
-            // TODO: extract a method in dropdown module from below
-            for (let j = 0, len = flt.options.length; j < len; j++) {
-                if (flt.options[j].selected) {
-                    fltValues.push(flt.options[j].value);
-                }
-            }
-            //return empty string if collection is empty
-            fltValue = fltValues.length > 0 ? fltValues : '';
+        else if (fltColType === MULTIPLE) {
+            fltValue = this.feature('dropdown').getValues(index);
         }
         //checklist
-        else if (fltColType === this.fltTypeCheckList) {
-            // TODO: extract a method in checklist module from below
-            if (flt.getAttribute('value') !== null) {
-                fltValues = flt.getAttribute('value');
-                //removes last operator ||
-                fltValues = fltValues.substr(0, fltValues.length - 3);
-                //convert || separated values into array
-                fltValues = fltValues.split(' ' + this.orOperator + ' ');
-            }
-            //return empty string if collection is empty
-            fltValue = fltValues.length > 0 ? fltValues : '';
+        else if (fltColType === CHECKLIST) {
+            fltValue = this.feature('checkList').getValues(index);
         }
-        //return an empty string if collection contains a single empty string
-        if (Types.isArray(fltValue) && fltValue.length === 1 &&
-            fltValue[0] === '') {
+        //return an empty string if collection is empty or contains a single
+        //empty string
+        if (isArray(fltValue) && fltValue.length === 0 ||
+            (fltValue.length === 1 && fltValue[0] === '')) {
             fltValue = '';
         }
+
         return fltValue;
     }
 
@@ -1604,10 +2170,10 @@ export class TableFilter {
         let searchArgs = [];
         for (let i = 0, len = this.fltIds.length; i < len; i++) {
             let fltValue = this.getFilterValue(i);
-            if (Types.isArray(fltValue)) {
+            if (isArray(fltValue)) {
                 searchArgs.push(fltValue);
             } else {
-                searchArgs.push(Str.trim(fltValue));
+                searchArgs.push(trim(fltValue));
             }
         }
         return searchArgs;
@@ -1641,7 +2207,7 @@ export class TableFilter {
         let arr = [];
         for (let i = 0, len = this.fltIds.length; i < len; i++) {
             let fltType = this.getFilterType(i);
-            if (fltType === Str.lower(type)) {
+            if (fltType === type.toLowerCase()) {
                 let a = bool ? i : this.fltIds[i];
                 arr.push(a);
             }
@@ -1656,7 +2222,7 @@ export class TableFilter {
      */
     getFilterElement(index) {
         let fltId = this.fltIds[index];
-        return Dom.id(fltId);
+        return elm(fltId);
     }
 
     /**
@@ -1665,8 +2231,8 @@ export class TableFilter {
      * @return {Number}          Number of cells
      */
     getCellsNb(rowIndex = 0) {
-        let tr = this.tbl.rows[rowIndex];
-        return tr.cells.length;
+        let tr = this.tbl.rows[rowIndex >= 0 ? rowIndex : 0];
+        return tr ? tr.cells.length : 0;
     }
 
     /**
@@ -1676,25 +2242,57 @@ export class TableFilter {
      * @return {Number}                 Number of filterable rows
      */
     getRowsNb(includeHeaders) {
-        let s = Types.isUndef(this.refRow) ? 0 : this.refRow,
-            ntrs = this.tbl.rows.length;
-        if (includeHeaders) { s = 0; }
+        let s = isUndef(this.refRow) ? 0 : this.refRow;
+        let ntrs = this.tbl.rows.length;
+        if (includeHeaders) {
+            s = 0;
+        }
         return parseInt(ntrs - s, 10);
     }
 
+
     /**
-     * Return the data of a given cell
-     * @param  {DOMElement} cell Cell's DOM object
-     * @return {String}
+     * Return the text content of a given cell
+     * @param {DOMElement} Cell's DOM element
+     * @returns {String}
+     */
+    getCellValue(cell) {
+        let idx = cell.cellIndex;
+        //CallcustomCellData callback
+        if (this.customCellDataCols.indexOf(idx) !== -1) {
+            return this.customCellData(this, cell, idx);
+        } else {
+            return getText(cell);
+        }
+    }
+
+    /**
+     * Return the typed data of a given cell based on the column type definition
+     * @param  {DOMElement} cell Cell's DOM element
+     * @return {String|Number|Date}
      */
     getCellData(cell) {
-        let idx = cell.cellIndex;
-        //Check for customCellData callback
-        if (this.customCellData && this.customCellDataCols.indexOf(idx) != -1) {
-            return this.customCellData.call(null, this, cell, idx);
-        } else {
-            return Dom.getText(cell);
+        let colIndex = cell.cellIndex;
+        let value = this.getCellValue(cell);
+
+        if (this.hasType(colIndex, [FORMATTED_NUMBER])) {
+            let decimal = this.decimalSeparator;
+            let colType = this.colTypes[colIndex];
+            if (colType.hasOwnProperty('decimal')) {
+                decimal = colType.decimal;
+            }
+            return parseNb(value, decimal);
         }
+        else if (this.hasType(colIndex, [NUMBER])) {
+            return Number(value);
+        }
+        else if (this.hasType(colIndex, [DATE])){
+            let dateType = this.Mod.dateType;
+            let locale = dateType.getOptions(colIndex).locale || this.locale;
+            return dateType.parse(value, locale);
+        }
+
+        return value;
     }
 
     /**
@@ -1703,20 +2301,29 @@ export class TableFilter {
      *     [rowIndex, [value0, value1...]],
      *     [rowIndex, [value0, value1...]]
      * ]
-     * @param  {Boolean} includeHeaders  Optional: include headers row
-     * @param  {Boolean} excludeHiddenCols  Optional: exclude hidden columns
+     * @param  {Boolean} [includeHeaders=false] Include headers row
+     * @param  {Boolean} [excludeHiddenCols=false] Exclude hidden columns
+     * @param  {Boolean} [typed=false] Return typed value
      * @return {Array}
      *
      * TODO: provide an API returning data in JSON format
      */
-    getTableData(includeHeaders = false, excludeHiddenCols = false) {
+    getTableData(
+        includeHeaders = false,
+        excludeHiddenCols = false,
+        typed = false
+    ) {
         let rows = this.tbl.rows;
+        let nbRows = this.getRowsNb(true);
         let tblData = [];
+        let getContent = typed ? this.getCellData.bind(this) :
+            this.getCellValue.bind(this);
+
         if (includeHeaders) {
             let headers = this.getHeadersText(excludeHiddenCols);
             tblData.push([this.getHeadersRowIndex(), headers]);
         }
-        for (let k = this.refRow; k < this.nbRows; k++) {
+        for (let k = this.refRow; k < nbRows; k++) {
             let rowData = [k, []];
             let cells = rows[k].cells;
             for (let j = 0, len = cells.length; j < len; j++) {
@@ -1725,8 +2332,8 @@ export class TableFilter {
                         continue;
                     }
                 }
-                let cellData = this.getCellData(cells[j]);
-                rowData[1].push(cellData);
+                let cellValue = getContent(cells[j]);
+                rowData[1].push(cellValue);
             }
             tblData.push(rowData);
         }
@@ -1739,18 +2346,26 @@ export class TableFilter {
      *     [rowIndex, [value0, value1...]],
      *     [rowIndex, [value0, value1...]]
      * ]
-     * @param  {Boolean} includeHeaders  Optional: include headers row
-     * @param  {Boolean} excludeHiddenCols  Optional: exclude hidden columns
+     * @param  {Boolean} [includeHeaders=false] Include headers row
+     * @param  {Boolean} [excludeHiddenCols=false] Exclude hidden columns
+     * @param  {Boolean} [typed=false] Return typed value
      * @return {Array}
      *
      * TODO: provide an API returning data in JSON format
      */
-    getFilteredData(includeHeaders = false, excludeHiddenCols = false) {
+    getFilteredData(
+        includeHeaders = false,
+        excludeHiddenCols = false,
+        typed = false
+    ) {
         if (!this.validRowsIndex) {
             return [];
         }
         let rows = this.tbl.rows,
             filteredData = [];
+        let getContent = typed ? this.getCellData.bind(this) :
+            this.getCellValue.bind(this);
+
         if (includeHeaders) {
             let headers = this.getHeadersText(excludeHiddenCols);
             filteredData.push([this.getHeadersRowIndex(), headers]);
@@ -1766,8 +2381,8 @@ export class TableFilter {
                         continue;
                     }
                 }
-                let cellData = this.getCellData(cells[k]);
-                rData[1].push(cellData);
+                let cellValue = getContent(cells[k]);
+                rData[1].push(cellValue);
             }
             filteredData.push(rData);
         }
@@ -1777,40 +2392,57 @@ export class TableFilter {
     /**
      * Return the filtered data for a given column index
      * @param  {Number} colIndex Colmun's index
-     * @param  {Boolean} includeHeaders  Optional: include headers row
+     * @param  {Boolean} [includeHeaders=false] Include headers row
+     * @param  {Boolean} [typed=false] Return typed value
+     * @param  {Array} [exclude=[]] List of row indexes to be excluded
+     * @param  {Boolean} [visible=true] Return only filtered and visible data
+     *                           (relevant for paging)
      * @return {Array}           Flat list of values ['val0','val1','val2'...]
      *
      * TODO: provide an API returning data in JSON format
      */
-    getFilteredDataCol(colIndex, includeHeaders = false) {
-        if (Types.isUndef(colIndex)) {
+    getFilteredDataCol(
+        colIndex,
+        includeHeaders = false,
+        typed = false,
+        exclude = [],
+        visible = true
+    ) {
+        if (isUndef(colIndex)) {
             return [];
         }
-        let data = this.getFilteredData(),
-            colData = [];
+
+        let rows = this.tbl.rows;
+        let getContent = typed ? this.getCellData.bind(this) :
+            this.getCellValue.bind(this);
+
+        // ensure valid rows index do not contain excluded rows and row is
+        // displayed
+        let validRows = this.getValidRows(true).filter((rowIdx) => {
+            return exclude.indexOf(rowIdx) === -1 &&
+                (visible ?
+                    this.getRowDisplay(rows[rowIdx]) !== 'none' :
+                    true);
+        });
+
+        // convert column value to expected type if necessary
+        let validColValues = validRows.map((rowIdx) => {
+            return getContent(rows[rowIdx].cells[colIndex]);
+        });
+
         if (includeHeaders) {
-            colData.push(this.getHeadersText()[colIndex]);
+            validColValues.unshift(this.getHeadersText()[colIndex]);
         }
-        for (let i = 0, len = data.length; i < len; i++) {
-            let r = data[i],
-                //cols values of current row
-                d = r[1],
-                //data of searched column
-                c = d[colIndex];
-            colData.push(c);
-        }
-        return colData;
+
+        return validColValues;
     }
 
     /**
      * Get the display value of a row
-     * @param  {RowElement} row DOM element of the row
+     * @param  {HTMLTableRowElement} row DOM element of the row
      * @return {String}     Usually 'none' or ''
      */
     getRowDisplay(row) {
-        if (!Types.isObj(row)) {
-            return null;
-        }
         return row.style.display;
     }
 
@@ -1830,7 +2462,7 @@ export class TableFilter {
             isValid = true;
         }
 
-        let displayFlag = isValid ? '' : 'none',
+        let displayFlag = isValid ? '' : NONE,
             validFlag = isValid ? 'true' : 'false';
         row.style.display = displayFlag;
 
@@ -1843,9 +2475,7 @@ export class TableFilter {
                 this.validRowsIndex.push(rowIndex);
             }
 
-            if (this.onRowValidated) {
-                this.onRowValidated.call(null, this, rowIndex);
-            }
+            this.onRowValidated(this, rowIndex);
 
             this.emitter.emit('row-validated', this, rowIndex);
         }
@@ -1855,7 +2485,7 @@ export class TableFilter {
      * Validate all filterable rows
      */
     validateAllRows() {
-        if (!this._hasGrid) {
+        if (!this.initialized) {
             return;
         }
         this.validRowsIndex = [];
@@ -1876,8 +2506,7 @@ export class TableFilter {
         let slc = this.getFilterElement(index),
             fltColType = this.getFilterType(index);
 
-        if (fltColType !== this.fltTypeMulti &&
-            fltColType != this.fltTypeCheckList) {
+        if (fltColType !== MULTIPLE && fltColType !== CHECKLIST) {
             if (this.loadFltOnDemand && !this.initialized) {
                 this.emitter.emit('build-select-filter', this, index,
                     this.linkedFilters, this.isExternalFlt);
@@ -1885,8 +2514,8 @@ export class TableFilter {
             slc.value = query;
         }
         //multiple selects
-        else if (fltColType === this.fltTypeMulti) {
-            let values = Types.isArray(query) ? query :
+        else if (fltColType === MULTIPLE) {
+            let values = isArray(query) ? query :
                 query.split(' ' + this.orOperator + ' ');
 
             if (this.loadFltOnDemand && !this.initialized) {
@@ -1897,16 +2526,16 @@ export class TableFilter {
             this.emitter.emit('select-options', this, index, values);
         }
         //checklist
-        else if (fltColType === this.fltTypeCheckList) {
+        else if (fltColType === CHECKLIST) {
             let values = [];
             if (this.loadFltOnDemand && !this.initialized) {
                 this.emitter.emit('build-checklist-filter', this, index,
-                    this.isExternalFlt);
+                    this.linkedFilters);
             }
-            if (Types.isArray(query)) {
+            if (isArray(query)) {
                 values = query;
             } else {
-                query = Str.matchCase(query, this.caseSensitive);
+                query = matchCase(query, this.caseSensitive);
                 values = query.split(' ' + this.orOperator + ' ');
             }
 
@@ -1924,27 +2553,23 @@ export class TableFilter {
         }
         tbl = tbl || this.tbl;
 
-        setWidths.call(this);
-
-        function setWidths() {
-            let nbCols = this.nbCells;
-            let colWidths = this.colWidths;
-            let colTags = Dom.tag(tbl, 'col');
-            let tblHasColTag = colTags.length > 0;
-            let frag = !tblHasColTag ? doc.createDocumentFragment() : null;
-            for (let k = 0; k < nbCols; k++) {
-                let col;
-                if (tblHasColTag) {
-                    col = colTags[k];
-                } else {
-                    col = Dom.create('col', ['id', this.id + '_col_' + k]);
-                    frag.appendChild(col);
-                }
-                col.style.width = colWidths[k];
+        let nbCols = this.nbCells;
+        let colWidths = this.colWidths;
+        let colTags = tag(tbl, 'col');
+        let tblHasColTag = colTags.length > 0;
+        let frag = !tblHasColTag ? doc.createDocumentFragment() : null;
+        for (let k = 0; k < nbCols; k++) {
+            let col;
+            if (tblHasColTag) {
+                col = colTags[k];
+            } else {
+                col = createElm('col');
+                frag.appendChild(col);
             }
-            if (!tblHasColTag) {
-                tbl.insertBefore(frag, tbl.firstChild);
-            }
+            col.style.width = colWidths[k];
+        }
+        if (!tblHasColTag) {
+            tbl.insertBefore(frag, tbl.firstChild);
         }
     }
 
@@ -1955,10 +2580,11 @@ export class TableFilter {
         if (!this.hasVisibleRows) {
             return;
         }
+        let nbRows = this.getRowsNb(true);
         for (let i = 0, len = this.visibleRows.length; i < len; i++) {
             let row = this.visibleRows[i];
             //row index cannot be > nrows
-            if (row <= this.nbRows) {
+            if (row <= nbRows) {
                 this.validateRow(row, true);
             }
         }
@@ -1973,19 +2599,15 @@ export class TableFilter {
         }
 
         this.emitter.emit('before-clearing-filters', this);
+        this.onBeforeReset(this, this.getFiltersValue());
 
-        if (this.onBeforeReset) {
-            this.onBeforeReset.call(null, this, this.getFiltersValue());
-        }
         for (let i = 0, len = this.fltIds.length; i < len; i++) {
             this.setFilterValue(i, '');
         }
 
         this.filter();
 
-        if (this.onAfterReset) {
-            this.onAfterReset.call(null, this);
-        }
+        this.onAfterReset(this);
         this.emitter.emit('after-clearing-filters', this);
     }
 
@@ -1994,8 +2616,7 @@ export class TableFilter {
      */
     clearActiveColumns() {
         for (let i = 0, len = this.getCellsNb(this.headersRow); i < len; i++) {
-            Dom.removeClass(
-                this.getHeaderElement(i), this.activeColumnsCssClass);
+            removeClass(this.getHeaderElement(i), this.activeColumnsCssClass);
         }
     }
 
@@ -2005,16 +2626,14 @@ export class TableFilter {
      */
     markActiveColumn(colIndex) {
         let header = this.getHeaderElement(colIndex);
-        if (Dom.hasClass(header, this.activeColumnsCssClass)) {
+        if (hasClass(header, this.activeColumnsCssClass)) {
             return;
         }
-        if (this.onBeforeActiveColumn) {
-            this.onBeforeActiveColumn.call(null, this, colIndex);
-        }
-        Dom.addClass(header, this.activeColumnsCssClass);
-        if (this.onAfterActiveColumn) {
-            this.onAfterActiveColumn.call(null, this, colIndex);
-        }
+        this.onBeforeActiveColumn(this, colIndex);
+
+        addClass(header, this.activeColumnsCssClass);
+
+        this.onAfterActiveColumn(this, colIndex);
     }
 
     /**
@@ -2045,11 +2664,21 @@ export class TableFilter {
     }
 
     /**
+     * Builds filter element ID for a given column index
+     * @param {any} colIndex
+     * @returns {String} Filter element ID string
+     * @private
+     */
+    buildFilterId(colIndex) {
+        return `${this.prfxFlt}${colIndex}_${this.id}`;
+    }
+
+    /**
      * Make specified column's filter active
      * @param colIndex Index of a column
      */
     activateFilter(colIndex) {
-        if (Types.isUndef(colIndex)) {
+        if (isUndef(colIndex)) {
             return;
         }
         this.setActiveFilterId(this.getFilterId(colIndex));
@@ -2063,56 +2692,103 @@ export class TableFilter {
         if (!this.linkedFilters || !this.activeFilterId) {
             return;
         }
-        let slcA1 = this.getFiltersByType(this.fltTypeSlc, true),
-            slcA2 = this.getFiltersByType(this.fltTypeMulti, true),
-            slcA3 = this.getFiltersByType(this.fltTypeCheckList, true),
+        let slcA1 = this.getFiltersByType(SELECT, true),
+            slcA2 = this.getFiltersByType(MULTIPLE, true),
+            slcA3 = this.getFiltersByType(CHECKLIST, true),
             slcIndex = slcA1.concat(slcA2);
         slcIndex = slcIndex.concat(slcA3);
 
         let activeIdx = this.getColumnIndexFromFilterId(this.activeFilterId);
 
         for (let i = 0, len = slcIndex.length; i < len; i++) {
-            let curSlc = Dom.id(this.fltIds[slcIndex[i]]);
-            let slcSelectedValue = this.getFilterValue(slcIndex[i]);
+            let colIdx = slcIndex[i];
+            let curSlc = elm(this.fltIds[colIdx]);
+            let slcSelectedValue = this.getFilterValue(colIdx);
 
             // Welcome to cyclomatic complexity hell :)
             // TODO: simplify/refactor if statement
-            if (activeIdx !== slcIndex[i] ||
-                (this.paging && slcA1.indexOf(slcIndex[i]) != -1 &&
-                    activeIdx === slcIndex[i]) ||
-                (!this.paging && (slcA3.indexOf(slcIndex[i]) != -1 ||
-                    slcA2.indexOf(slcIndex[i]) != -1)) ||
-                slcSelectedValue === this.displayAllText) {
+            if (activeIdx !== colIdx ||
+                (this.paging && slcA1.indexOf(colIdx) !== -1 &&
+                    activeIdx === colIdx) ||
+                (!this.paging && (slcA3.indexOf(colIdx) !== -1 ||
+                    slcA2.indexOf(colIdx) !== -1)) ||
+                slcSelectedValue === this.getClearFilterText(colIdx)) {
 
                 //1st option needs to be inserted
                 if (this.loadFltOnDemand) {
-                    let opt0 = Dom.createOpt(this.displayAllText, '');
+                    let opt0 = createOpt(this.getClearFilterText(colIdx), '');
                     curSlc.innerHTML = '';
                     curSlc.appendChild(opt0);
                 }
 
-                if (slcA3.indexOf(slcIndex[i]) != -1) {
-                    this.emitter.emit('build-checklist-filter', this,
-                        slcIndex[i]);
+                if (slcA3.indexOf(colIdx) !== -1) {
+                    this.emitter.emit('build-checklist-filter', this, colIdx,
+                        true);
                 } else {
-                    this.emitter.emit('build-select-filter', this, slcIndex[i],
+                    this.emitter.emit('build-select-filter', this, colIdx,
                         true);
                 }
 
-                this.setFilterValue(slcIndex[i], slcSelectedValue);
+                this.setFilterValue(colIdx, slcSelectedValue);
             }
         }
     }
 
     /**
      * Determines if passed filter column implements exact query match
-     * @param  {Number}  colIndex [description]
-     * @return {Boolean}          [description]
+     * @param  {Number}  colIndex   Column index
+     * @return {Boolean}
      */
     isExactMatch(colIndex) {
         let fltType = this.getFilterType(colIndex);
         return this.exactMatchByCol[colIndex] || this.exactMatch ||
-            (fltType !== this.fltTypeInp);
+            fltType !== INPUT;
+    }
+
+    /**
+     * Checks if passed row is valid
+     * @param {Number} rowIndex Row index
+     * @returns {Boolean}
+     */
+    isRowValid(rowIndex) {
+        return this.getValidRows().indexOf(rowIndex) !== -1;
+    }
+
+    /**
+     * Checks if passed row is visible
+     * @param {Number} rowIndex Row index
+     * @returns {Boolean}
+     */
+    isRowDisplayed(rowIndex) {
+        let row = this.tbl.rows[rowIndex];
+        return this.getRowDisplay(row) === '';
+    }
+
+    /**
+     * Checks if specified column filter ignores diacritics.
+     * Note this is only applicable to input filter types.
+     * @param {Number} colIndex    Column index
+     * @returns {Boolean}
+     */
+    ignoresDiacritics(colIndex) {
+        let ignoreDiac = this.ignoreDiacritics;
+        if (isArray(ignoreDiac)) {
+            return ignoreDiac[colIndex];
+        }
+        return Boolean(ignoreDiac);
+    }
+
+    /**
+     * Returns clear all text for specified filter column
+     * @param {Number} colIndex    Column index
+     * @returns {String}
+     */
+    getClearFilterText(colIndex) {
+        let clearText = this.clearFilterText;
+        if (isArray(clearText)) {
+            return clearText[colIndex];
+        }
+        return clearText;
     }
 
     /**
@@ -2121,13 +2797,12 @@ export class TableFilter {
      * @param  {String}  type     Possible values: 'script' or 'link'
      * @return {Boolean}
      */
-    isImported(filePath, type) {
+    isImported(filePath, type = 'script') {
         let imported = false,
-            importType = !type ? 'script' : type,
-            attr = importType == 'script' ? 'src' : 'href',
-            files = Dom.tag(doc, importType);
+            attr = type === 'script' ? 'src' : 'href',
+            files = tag(doc, type);
         for (let i = 0, len = files.length; i < len; i++) {
-            if (files[i][attr] === undefined) {
+            if (isUndef(files[i][attr])) {
                 continue;
             }
             if (files[i][attr].match(filePath)) {
@@ -2145,31 +2820,29 @@ export class TableFilter {
      * @param  {Function} callback Callback
      * @param  {String}   type     Possible values: 'script' or 'link'
      */
-    import(fileId, filePath, callback, type) {
-        let ftype = !type ? 'script' : type,
-            imported = this.isImported(filePath, ftype);
-        if (imported) {
+    import(fileId, filePath, callback, type = 'script') {
+        if (this.isImported(filePath, type)) {
             return;
         }
         let o = this,
             isLoaded = false,
             file,
-            head = Dom.tag(doc, 'head')[0];
+            head = tag(doc, 'head')[0];
 
-        if (Str.lower(ftype) === 'link') {
-            file = Dom.create('link',
+        if (type.toLowerCase() === 'link') {
+            file = createElm('link',
                 ['id', fileId], ['type', 'text/css'],
                 ['rel', 'stylesheet'], ['href', filePath]
             );
         } else {
-            file = Dom.create('script',
+            file = createElm('script',
                 ['id', fileId],
                 ['type', 'text/javascript'], ['src', filePath]
             );
         }
 
         //Browser <> IE onload event works only for scripts, not for stylesheets
-        file.onload = file.onreadystatechange = function () {
+        file.onload = file.onreadystatechange = () => {
             if (!isLoaded &&
                 (!this.readyState || this.readyState === 'loaded' ||
                     this.readyState === 'complete')) {
@@ -2180,7 +2853,7 @@ export class TableFilter {
             }
         };
         file.onerror = function () {
-            throw new Error('TableFilter could not load: ' + filePath);
+            throw new Error(`TableFilter could not load: ${filePath}`);
         };
         head.appendChild(file);
     }
@@ -2189,8 +2862,8 @@ export class TableFilter {
      * Check if table has filters grid
      * @return {Boolean}
      */
-    hasGrid() {
-        return this._hasGrid;
+    isInitialized() {
+        return this.initialized;
     }
 
     /**
@@ -2211,11 +2884,12 @@ export class TableFilter {
             return this.validRowsIndex;
         }
 
+        let nbRows = this.getRowsNb(true);
         this.validRowsIndex = [];
-        for (let k = this.refRow; k < this.getRowsNb(true); k++) {
+        for (let k = this.refRow; k < nbRows; k++) {
             let r = this.tbl.rows[k];
             if (!this.paging) {
-                if (this.getRowDisplay(r) !== 'none') {
+                if (this.getRowDisplay(r) !== NONE) {
                     this.validRowsIndex.push(r.rowIndex);
                 }
             } else {
@@ -2258,7 +2932,25 @@ export class TableFilter {
      * @return {Number}
      */
     getLastRowIndex() {
-        return (this.nbRows - 1);
+        let nbRows = this.getRowsNb(true);
+        return (nbRows - 1);
+    }
+
+    /**
+     * Determine whether the specified column has one of the passed types
+     * @param {Number} colIndex Column index
+     * @param {Array} [types=[]] List of column types
+     * @returns {Boolean}
+     */
+    hasType(colIndex, types = []) {
+        if (!this.hasColTypes) {
+            return false;
+        }
+        let colType = this.colTypes[colIndex];
+        if (isObj(colType)) {
+            colType = colType.type;
+        }
+        return types.indexOf(colType) !== -1;
     }
 
     /**
@@ -2268,7 +2960,7 @@ export class TableFilter {
      */
     getHeaderElement(colIndex) {
         let table = this.gridLayout ? this.Mod.gridLayout.headTbl : this.tbl;
-        let tHead = Dom.tag(table, 'thead');
+        let tHead = tag(table, 'thead');
         let headersRow = this.headersRow;
         let header;
         for (let i = 0; i < this.nbCells; i++) {
@@ -2300,7 +2992,7 @@ export class TableFilter {
                 }
             }
             let header = this.getHeaderElement(j);
-            let headerText = Dom.getFirstTextNode(header);
+            let headerText = getFirstTextNode(header);
             headers.push(headerText);
         }
         return headers;
@@ -2313,7 +3005,7 @@ export class TableFilter {
      */
     getFilterType(colIndex) {
         let colType = this.cfg['col_' + colIndex];
-        return !colType ? this.fltTypeInp : Str.lower(colType);
+        return !colType ? INPUT : colType.toLowerCase();
     }
 
     /**
@@ -2322,6 +3014,15 @@ export class TableFilter {
      */
     getFilterableRowsNb() {
         return this.getRowsNb(false);
+    }
+
+    /**
+     * Return the total number of valid rows
+     * @param {Boolean} [reCalc=false] Forces calculation of filtered rows
+     * @returns {Number}
+     */
+    getValidRowsNb(reCalc = false) {
+        return this.getValidRows(reCalc).length;
     }
 
     /**

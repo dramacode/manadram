@@ -1,204 +1,224 @@
-import {Feature} from './feature';
-import Dom from '../dom';
-import Types from '../types';
-import Event from '../event';
-import Str from '../string';
+import {Feature} from '../feature';
+import {createElm, removeElm, elm, tag} from '../dom';
+import {addEvt, targetEvt} from '../event';
+import {contains} from '../string';
+import {NONE} from '../const';
 
-export class GridLayout extends Feature{
+/**
+ * Grid layout, table with fixed headers
+ */
+export class GridLayout extends Feature {
 
     /**
-     * Grid layout, table with fixed headers
-     * @param {Object} tf TableFilter instance
+     * Creates an instance of GridLayout
+     * @param {TableFilter} tf TableFilter instance
      */
-    constructor(tf){
+    constructor(tf) {
         super(tf, 'gridLayout');
 
         let f = this.config;
 
-        //defines grid width
-        this.gridWidth = f.grid_width || null;
-        //defines grid height
-        this.gridHeight = f.grid_height || null;
-        //defines css class for main container
-        this.gridMainContCssClass = f.grid_cont_css_class || 'grd_Cont';
-        //defines css class for div containing table
-        this.gridContCssClass = f.grid_tbl_cont_css_class || 'grd_tblCont';
-        //defines css class for div containing headers' table
-        this.gridHeadContCssClass = f.grid_tblHead_cont_css_class ||
+        /**
+         * Grid-layout container width as CSS string
+         * @type {String}
+         */
+        this.width = f.grid_width || null;
+
+        /**
+         * Grid-layout container height as CSS string
+         * @type {String}
+         */
+        this.height = f.grid_height || null;
+
+        /**
+         * Css class for main container element
+         * @type {String}
+         */
+        this.mainContCssClass = f.grid_cont_css_class || 'grd_Cont';
+
+        /**
+         * Css class for body table container element
+         * @type {String}
+         */
+        this.contCssClass = f.grid_tbl_cont_css_class || 'grd_tblCont';
+
+        /**
+         * Css class for headers table container element
+         * @type {String}
+         */
+        this.headContCssClass = f.grid_tblHead_cont_css_class ||
             'grd_headTblCont';
-        //defines css class for div containing rows counter, paging etc.
-        this.gridInfDivCssClass = f.grid_inf_grid_css_class || 'grd_inf';
-        //defines which row contains column headers
-        this.gridHeadRowIndex = f.grid_headers_row_index || 0;
-        //array of headers row indexes to be placed in header table
-        this.gridHeadRows = f.grid_headers_rows || [0];
-        //generate filters in table headers
-        this.gridEnableFilters = f.grid_enable_default_filters!==undefined ?
-            f.grid_enable_default_filters : true;
+
+        /**
+         * Css class for toolbar container element (rows counter, paging etc.)
+         * @type {String}
+         */
+        this.infDivCssClass = f.grid_inf_grid_css_class || 'grd_inf';
+
+        /**
+         * Index of the headers row, default: 0
+         * @type {Number}
+         */
+        this.headRowIndex = f.grid_headers_row_index || 0;
+
+        /**
+         * Collection of the header row indexes to be moved into headers table
+         * @type {Array}
+         */
+        this.headRows = f.grid_headers_rows || [0];
+
+        /**
+         * Enable or disable column filters generation, default: true
+         * @type {Boolean}
+         */
+        this.enableFilters = f.grid_enable_default_filters === false ?
+            false : true;
+
+        /**
+         * Enable or disable column headers, default: false
+         * @type {Boolean}
+         */
         this.noHeaders = Boolean(f.grid_no_headers);
-        //default col width
-        this.gridDefaultColWidth = f.grid_default_col_width || '100px';
 
-        this.gridColElms = [];
+        /**
+         * Grid-layout default column widht as CSS string
+         * @type {String}
+         */
+        this.defaultColWidth = f.grid_default_col_width || '100px';
 
-        //div containing grid elements if grid_layout true
-        this.prfxMainTblCont = 'gridCont_';
-        //div containing table if grid_layout true
-        this.prfxTblCont = 'tblCont_';
-        //div containing headers table if grid_layout true
-        this.prfxHeadTblCont = 'tblHeadCont_';
-        //headers' table if grid_layout true
-        this.prfxHeadTbl = 'tblHead_';
-        //id of td containing the filter if grid_layout true
+        /**
+         * List of column elements
+         * @type {Array}
+         * @private
+         */
+        this.colElms = [];
+
+        /**
+         * Prefix for grid-layout filter's cell ID
+         * @type {String}
+         * @private
+         */
         this.prfxGridFltTd = '_td_';
-        //id of th containing column header if grid_layout true
+
+        /**
+         * Prefix for grid-layout header's cell ID
+         * @type {String}
+         * @private
+         */
         this.prfxGridTh = 'tblHeadTh_';
 
+        /**
+         * Mark-up of original HTML table
+         * @type {String}
+         * @private
+         */
         this.sourceTblHtml = tf.tbl.outerHTML;
 
+        /**
+         * Indicates if working table has column elements
+         * @type {Boolean}
+         * @private
+         */
+        this.tblHasColTag = tag(tf.tbl, 'col').length > 0 ? true : false;
+
+        /**
+         * Main container element
+         * @private
+         */
+        this.tblMainCont = null;
+
+        /**
+         * Table container element
+         * @private
+         */
+        this.tblCont = null;
+
+        /**
+         * Headers' table container element
+         * @private
+         */
+        this.headTblCont = null;
+
+        /**
+         * Headers' table element
+         * @private
+         */
+        this.headTbl = null;
+
         // filters flag at TF level
-        tf.fltGrid = this.gridEnableFilters;
+        tf.fltGrid = this.enableFilters;
     }
 
     /**
      * Generates a grid with fixed headers
+     * TODO: reduce size of init by extracting single purposed methods
      */
-    init(){
+    init() {
         let tf = this.tf;
-        let f = this.config;
         let tbl = tf.tbl;
 
-        if(this.initialized){
+        if (this.initialized) {
             return;
         }
 
-        // Override reference rows indexes
-        tf.refRow = Types.isNull(tf.startRow) ? 0 : tf.startRow;
-        tf.headersRow = 0;
-        tf.filtersRowIndex = 1;
+        // Override relevant TableFilter properties
+        this.setOverrides();
 
-        tf.isExternalFlt = true;
+        // Assign default column widths
+        this.setDefaultColWidths();
 
-        // default width of 100px if column widths not set
-        if(!tf.hasColWidths){
-            tf.colWidths = [];
-            for(let k=0; k<tf.nbCells; k++){
-                let colW,
-                    cell = tbl.rows[this.gridHeadRowIndex].cells[k];
-                if(cell.width !== ''){
-                    colW = cell.width;
-                } else if(cell.style.width !== ''){
-                    colW = parseInt(cell.style.width, 10);
-                } else {
-                    colW = this.gridDefaultColWidth;
-                }
-                tf.colWidths[k] = colW;
-            }
-            tf.hasColWidths = true;
-        }
-        tf.setColWidths();
-
-        let tblW;//initial table width
-        if(tbl.width !== ''){
-            tblW = tbl.width;
-        }
-        else if(tbl.style.width !== ''){
-            tblW = parseInt(tbl.style.width, 10);
-        } else {
-            tblW = tbl.clientWidth;
-        }
+        // Initial table width
+        let tblW = this.initialTableWidth();
 
         //Main container: it will contain all the elements
-        this.tblMainCont = Dom.create('div',
-            ['id', this.prfxMainTblCont + tf.id]);
-        this.tblMainCont.className = this.gridMainContCssClass;
-        if(this.gridWidth){
-            this.tblMainCont.style.width = this.gridWidth;
+        this.tblMainCont = this.createContainer(
+            'div', this.mainContCssClass);
+        if (this.width) {
+            this.tblMainCont.style.width = this.width;
         }
         tbl.parentNode.insertBefore(this.tblMainCont, tbl);
 
         //Table container: div wrapping content table
-        this.tblCont = Dom.create('div', ['id', this.prfxTblCont + tf.id]);
-        this.tblCont.className = this.gridContCssClass;
-        if(this.gridWidth){
-            if(this.gridWidth.indexOf('%') != -1){
-                this.tblCont.style.width = '100%';
-            } else {
-                this.tblCont.style.width = this.gridWidth;
-            }
-        }
-        if(this.gridHeight){
-            this.tblCont.style.height = this.gridHeight;
+        this.tblCont = this.createContainer('div', this.contCssClass);
+        this.setConfigWidth(this.tblCont);
+        if (this.height) {
+            this.tblCont.style.height = this.height;
         }
         tbl.parentNode.insertBefore(this.tblCont, tbl);
-        let t = Dom.remove(tbl);
+        let t = removeElm(tbl);
         this.tblCont.appendChild(t);
 
         //In case table width is expressed in %
-        if(tbl.style.width === ''){
-            tbl.style.width = (Str.contains('%', tblW) ?
+        if (tbl.style.width === '') {
+            tbl.style.width = (contains('%', tblW) ?
                 tbl.clientWidth : tblW) + 'px';
         }
 
-        let d = Dom.remove(this.tblCont);
+        let d = removeElm(this.tblCont);
         this.tblMainCont.appendChild(d);
 
         //Headers table container: div wrapping headers table
-        this.headTblCont = Dom.create(
-            'div',['id', this.prfxHeadTblCont + tf.id]);
-        this.headTblCont.className = this.gridHeadContCssClass;
-        if(this.gridWidth){
-            if(this.gridWidth.indexOf('%') != -1){
-                this.headTblCont.style.width = '100%';
-            } else {
-                this.headTblCont.style.width = this.gridWidth;
-            }
-        }
+        this.headTblCont = this.createContainer(
+            'div', this.headContCssClass);
+        this.setConfigWidth(this.headTblCont);
 
         //Headers table
-        this.headTbl = Dom.create('table', ['id', this.prfxHeadTbl + tf.id]);
-        let tH = Dom.create('tHead');
+        this.headTbl = createElm('table');
+        let tH = createElm('tHead');
 
         //1st row should be headers row, ids are added if not set
         //Those ids are used by the sort feature
-        let hRow = tbl.rows[this.gridHeadRowIndex];
-        let sortTriggers = [];
-        for(let n=0; n<tf.nbCells; n++){
-            let c = hRow.cells[n];
-            let thId = c.getAttribute('id');
-            if(!thId || thId===''){
-                thId = this.prfxGridTh+n+'_'+tf.id;
-                c.setAttribute('id', thId);
-            }
-            sortTriggers.push(thId);
-        }
+        let hRow = tbl.rows[this.headRowIndex];
+        let sortTriggers = this.getSortTriggerIds(hRow);
 
         //Filters row is created
-        let filtersRow = Dom.create('tr');
-        if(this.gridEnableFilters && tf.fltGrid){
-            tf.externalFltTgtIds = [];
-            for(let j=0; j<tf.nbCells; j++){
-                let fltTdId = tf.prfxFlt+j+ this.prfxGridFltTd +tf.id;
-                let cl = Dom.create(tf.fltCellTag, ['id', fltTdId]);
-                filtersRow.appendChild(cl);
-                tf.externalFltTgtIds[j] = fltTdId;
-            }
-        }
+        let filtersRow = this.createFiltersRow();
 
         //Headers row are moved from content table to headers table
-        if(!this.noHeaders) {
-            for(let i=0; i<this.gridHeadRows.length; i++){
-                let headRow = tbl.rows[this.gridHeadRows[0]];
-                tH.appendChild(headRow);
-            }
-        } else {
-            // Handle table with no headers, assuming here headers do not
-            // exist
-            tH.appendChild(Dom.create('tr'));
-        }
+        this.setHeadersRow(tH);
 
         this.headTbl.appendChild(tH);
-        if(tf.filtersRowIndex === 0){
+        if (tf.filtersRowIndex === 0) {
             tH.insertBefore(filtersRow, hRow);
         } else {
             tH.appendChild(filtersRow);
@@ -208,8 +228,8 @@ export class GridLayout extends Feature{
         this.tblCont.parentNode.insertBefore(this.headTblCont, this.tblCont);
 
         //THead needs to be removed in content table for sort feature
-        let thead = Dom.tag(tbl, 'thead');
-        if(thead.length>0){
+        let thead = tag(tbl, 'thead');
+        if (thead.length > 0) {
             tbl.removeChild(thead[0]);
         }
 
@@ -232,8 +252,8 @@ export class GridLayout extends Feature{
         //
 
         //scroll synchronisation
-        Event.add(this.tblCont, 'scroll', (evt)=> {
-            let elm = Event.target(evt);
+        addEvt(this.tblCont, 'scroll', (evt) => {
+            let elm = targetEvt(evt);
             let scrollLeft = elm.scrollLeft;
             this.headTblCont.scrollLeft = scrollLeft;
             //New pointerX calc taking into account scrollLeft
@@ -253,87 +273,212 @@ export class GridLayout extends Feature{
             // }
         });
 
-        //Configure sort extension if any
-        let sort = (f.extensions || []).filter(function(itm){
-            return itm.name === 'sort';
-        });
-        if(sort.length === 1){
-            sort[0].async_sort = true;
-            sort[0].trigger_ids = sortTriggers;
+        // TODO: Trigger a custom event handled by sort extension
+        let sort = tf.extension('sort');
+        if (sort) {
+            sort.asyncSort = true;
+            sort.triggerIds = sortTriggers;
         }
-
-        //Cols generation for all browsers excepted IE<=7
-        this.tblHasColTag = Dom.tag(tbl, 'col').length > 0 ? true : false;
 
         //Col elements are enough to keep column widths after sorting and
         //filtering
-        let createColTags = function(){
-            for(let k=(tf.nbCells-1); k>=0; k--){
-                let col = Dom.create('col', ['id', tf.id+'_col_'+k]);
-                tbl.insertBefore(col, tbl.firstChild);
-                col.style.width = tf.colWidths[k];
-                this.gridColElms[k] = col;
-            }
-            this.tblHasColTag = true;
-        };
+        this.setColumnElements();
 
-        if(!this.tblHasColTag){
-            createColTags.call(this);
-        } else {
-            let cols = Dom.tag(tbl, 'col');
-            for(let ii=0; ii<tf.nbCells; ii++){
-                cols[ii].setAttribute('id', tf.id+'_col_'+ii);
-                cols[ii].style.width = tf.colWidths[ii];
-                this.gridColElms.push(cols[ii]);
-            }
+        if (tf.popupFilters) {
+            filtersRow.style.display = NONE;
         }
 
-        let afterColResizedFn = Types.isFn(f.on_after_col_resized) ?
-            f.on_after_col_resized : null;
-        f.on_after_col_resized = function(o, colIndex){
-            if(!colIndex){
-                return;
-            }
-            let w = o.crWColsRow.cells[colIndex].style.width;
-            let col = o.gridColElms[colIndex];
-            col.style.width = w;
-
-            let thCW = o.crWColsRow.cells[colIndex].clientWidth;
-            let tdCW = o.crWRowDataTbl.cells[colIndex].clientWidth;
-
-            if(thCW != tdCW){
-                o.headTbl.style.width = tbl.clientWidth+'px';
-            }
-
-            if(afterColResizedFn){
-                afterColResizedFn.call(null, o, colIndex);
-            }
-        };
-
-        if(tf.popupFilters){
-            filtersRow.style.display = 'none';
+        if (tbl.clientWidth !== this.headTbl.clientWidth) {
+            tbl.style.width = this.headTbl.clientWidth + 'px';
         }
 
-        if(tbl.clientWidth !== this.headTbl.clientWidth){
-            tbl.style.width = this.headTbl.clientWidth+'px';
-        }
-
+        /** @inherited */
         this.initialized = true;
+    }
+
+    /**
+     * Overrides TableFilter instance properties to adjust to grid layout mode
+     * @private
+     */
+    setOverrides() {
+        let tf = this.tf;
+        tf.refRow = 0;
+        tf.headersRow = 0;
+        tf.filtersRowIndex = 1;
+        tf.isExternalFlt = true;
+    }
+
+    /**
+     * Set grid-layout default column widths if column widths are not defined
+     * @private
+     */
+    setDefaultColWidths() {
+        let tf = this.tf;
+        if (tf.hasColWidths) {
+            return;
+        }
+        for (let k = 0, len = tf.getCellsNb(); k < len; k++) {
+            let colW;
+            let cell = tf.tbl.rows[tf.getHeadersRowIndex()].cells[k];
+            if (cell.width !== '') {
+                colW = cell.width;
+            } else if (cell.style.width !== '') {
+                colW = parseInt(cell.style.width, 10);
+            } else {
+                colW = this.defaultColWidth;
+            }
+            tf.colWidths[k] = colW;
+        }
+        tf.hasColWidths = true;
+        tf.setColWidths();
+    }
+
+    /**
+     * Initial table width
+     * @returns {Number}
+     * @private
+     */
+    initialTableWidth() {
+        let tbl = this.tf.tbl;
+        let width; //initial table width
+
+        if (tbl.width !== '') {
+            width = tbl.width;
+        }
+        else if (tbl.style.width !== '') {
+            width = tbl.style.width;
+        } else {
+            width = tbl.clientWidth;
+        }
+        return parseInt(width, 10);
+    }
+
+    /**
+     * Creates container element
+     * @param {String} tag Tag name
+     * @param {String} className Css class to assign to element
+     * @returns {DOMElement}
+     * @private
+     */
+    createContainer(tag, className) {
+        let element = createElm(tag);
+        element.className = className;
+        return element;
+    }
+
+    /**
+     * Creates filters row with cells
+     * @returns {HTMLTableRowElement}
+     * @private
+     */
+    createFiltersRow() {
+        let tf = this.tf;
+        let filtersRow = createElm('tr');
+        if (this.enableFilters && tf.fltGrid) {
+            tf.externalFltTgtIds = [];
+            for (let j = 0; j < tf.getCellsNb(); j++) {
+                let fltTdId = `${tf.prfxFlt + j + this.prfxGridFltTd + tf.id}`;
+                let cl = createElm(tf.fltCellTag, ['id', fltTdId]);
+                filtersRow.appendChild(cl);
+                tf.externalFltTgtIds[j] = fltTdId;
+            }
+        }
+        return filtersRow;
+    }
+
+    /**
+     * Generates column elements if necessary and assigns their widths
+     * @private
+     */
+    setColumnElements() {
+        let tf = this.tf;
+        let cols = tag(tf.tbl, 'col');
+        this.tblHasColTag = cols.length > 0;
+
+        for (let k = (tf.nbCells - 1); k >= 0; k--) {
+            let col;
+
+            if (!this.tblHasColTag) {
+                col = createElm('col');
+                tf.tbl.insertBefore(col, tf.tbl.firstChild);
+            } else {
+                col = cols[k];
+            }
+            col.style.width = tf.colWidths[k];
+            this.colElms[k] = col;
+        }
+        this.tblHasColTag = true;
+    }
+
+    /**
+     * Sets headers row in headers table
+     * @param {HTMLHeadElement} tableHead Table head element
+     * @private
+     */
+    setHeadersRow(tableHead) {
+        if (this.noHeaders) {
+            // Handle table with no headers, assuming here headers do not
+            // exist
+            tableHead.appendChild(createElm('tr'));
+        } else {
+            // Headers row are moved from content table to headers table
+            for (let i = 0; i < this.headRows.length; i++) {
+                let row = this.tf.tbl.rows[this.headRows[i]];
+                tableHead.appendChild(row);
+            }
+        }
+    }
+
+    /**
+     * Sets width defined in configuration to passed element
+     * @param {DOMElement} element DOM element
+     * @private
+     */
+    setConfigWidth(element) {
+        if (!this.width) {
+            return;
+        }
+        if (this.width.indexOf('%') !== -1) {
+            element.style.width = '100%';
+        } else {
+            element.style.width = this.width;
+        }
+    }
+
+    /**
+     * Returns a list of header IDs used for specifing external sort triggers
+     * @param {HTMLTableRowElement} row DOM row element
+     * @returns {Array} List of IDs
+     * @private
+     */
+    getSortTriggerIds(row) {
+        let tf = this.tf;
+        let sortTriggers = [];
+        for (let n = 0; n < tf.getCellsNb(); n++) {
+            let c = row.cells[n];
+            let thId = c.getAttribute('id');
+            if (!thId || thId === '') {
+                thId = `${this.prfxGridTh + n}_${tf.id}`;
+                c.setAttribute('id', thId);
+            }
+            sortTriggers.push(thId);
+        }
+        return sortTriggers;
     }
 
     /**
      * Removes the grid layout
      */
-    destroy(){
+    destroy() {
         let tf = this.tf;
         let tbl = tf.tbl;
 
-        if(!this.initialized){
+        if (!this.initialized) {
             return;
         }
-        let t = Dom.remove(tbl);
+        let t = removeElm(tbl);
         this.tblMainCont.parentNode.insertBefore(t, this.tblMainCont);
-        Dom.remove(this.tblMainCont);
+        removeElm(this.tblMainCont);
 
         this.tblMainCont = null;
         this.headTblCont = null;
@@ -342,7 +487,7 @@ export class GridLayout extends Feature{
 
         tbl.outerHTML = this.sourceTblHtml;
         //needed to keep reference of table element for future usage
-        this.tf.tbl = Dom.id(tf.id);
+        this.tf.tbl = elm(tf.id);
 
         this.initialized = false;
     }

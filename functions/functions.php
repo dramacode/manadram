@@ -1,4 +1,5 @@
 <?php
+set_time_limit(20000);
 
 function roman($num) {
 
@@ -39,8 +40,27 @@ function roman($num) {
 
 function roundUpToAny($n, $x = 5) {
 
-    return (round($n) % $x === 0) ? round($n) : round(($n + $x / 2) / $x) * $x;
+    $date = (round($n) % $x === 0) ? round($n) : round(($n + $x / 2) / $x) * $x;
+    //echo $date." ; ";
+    //$date = $date -1;
+    return $date;
 }
+
+function lustrum($date){
+    //echo $date." ; ";
+    $date++;
+    $lustrum = roundUpToAny($date);
+    //echo $lustrum." ; ";
+    //echo $lustrum;
+    $lustrum = ($lustrum-5)."-".($lustrum-1);
+    return $lustrum;
+    //echo $lustrum."<br/>";
+}
+//$dates = array(1630, 1631, 1632, 1633, 1634, 1635, 1636, 1637, 1638, 1639, 1640);
+//foreach ($dates as $date){
+//    lustrum($date);
+//}
+//echo lustrum(1631);
 
 function in_array_r($needle, $haystack, $strict = false) {
 

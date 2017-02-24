@@ -36,6 +36,22 @@ test('Can filter on drop-down change', function() {
     deepEqual(tf.getFilteredData()[0][1][3], '1.1', 'Matched value');
 });
 
+test('Can refresh all drop-down filters', function() {
+    //setup
+    tf.clearFilters();
+    var build = dropdown.build;
+    var hit = 0;
+    dropdown.build = function() { hit++ };
+
+    //act
+    dropdown.refreshAll();
+
+    //assert
+    deepEqual(hit, 2, 'build method called');
+
+    dropdown.build = build;
+});
+
 test('Can select options', function() {
     tf.clearFilters();
     var flt1 = id(tf.fltIds[2]);
@@ -44,6 +60,29 @@ test('Can select options', function() {
 
     deepEqual(flt1.options[5].selected, true, 'Option selected');
     deepEqual(flt1.options[6].selected, true, 'Option selected');
+});
+
+test('Can get selected values', function() {
+    //setup
+    var values = ['286', '872'];
+    tf.clearFilters();
+    tf.setFilterValue(2, values);
+
+    //act
+    var result = dropdown.getValues(2);
+
+    //assert
+    deepEqual(values, result);
+});
+test('Can return values when no selected options', function() {
+    //setup
+    tf.clearFilters();
+
+    //act
+    var result = dropdown.getValues(2);
+
+    //assert
+    deepEqual([], result);
 });
 
 // Issue 113, addressing option sorting for numeric values
@@ -76,4 +115,9 @@ test('Can sort options', function() {
 test('TableFilter removed', function() {
     tf.destroy();
     deepEqual(id(tf.fltIds[3]), null, 'Filter is removed');
+    deepEqual(
+        tf.feature('dropdown').initialized,
+        false,
+        'Drop-down not initialised'
+    );
 });

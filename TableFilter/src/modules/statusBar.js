@@ -1,80 +1,174 @@
-import {Feature} from './feature';
-import Dom from '../dom';
-import Types from '../types';
+import {Feature} from '../feature';
+import {root} from '../root';
+import {createElm, createText, elm, removeElm} from '../dom';
+import {isFn, EMPTY_FN} from '../types';
 
-let global = window;
+const EVENTS = [
+    'after-filtering',
+    'after-populating-filter',
+    'after-page-change',
+    'after-clearing-filters',
+    'after-page-length-change',
+    'after-reset-page',
+    'after-reset-page-length',
+    'after-loading-extensions',
+    'after-loading-themes'
+];
 
-export class StatusBar extends Feature{
+/**
+ * Status bar UI component
+ * @export
+ * @class StatusBar
+ * @extends {Feature}
+ */
+export class StatusBar extends Feature {
 
     /**
-     * Status bar UI component
-     * @param {Object} tf TableFilter instance
+     * Creates an instance of StatusBar
+     * @param {TableFilter} tf TableFilter instance
      */
-    constructor(tf){
+    constructor(tf) {
         super(tf, 'statusBar');
 
         // Configuration object
         let f = this.config;
 
-        //id of custom container element
-        this.statusBarTgtId = f.status_bar_target_id || null;
-        //element containing status bar label
-        this.statusBarDiv = null;
-        //status bar
-        this.statusBarSpan = null;
-        //status bar label
-        this.statusBarSpanText = null;
-        //defines status bar text
-        this.statusBarText = f.status_bar_text || '';
-        //defines css class status bar
-        this.statusBarCssClass = f.status_bar_css_class || 'status';
-        //delay for status bar clearing
-        this.statusBarCloseDelay = 250;
+        /**
+         * ID of custom container element
+         * @type {String}
+         */
+        this.targetId = f.status_bar_target_id || null;
 
-        //calls function before message is displayed
-        this.onBeforeShowMsg = Types.isFn(f.on_before_show_msg) ?
-            f.on_before_show_msg : null;
-        //calls function after message is displayed
-        this.onAfterShowMsg = Types.isFn(f.on_after_show_msg) ?
-            f.on_after_show_msg : null;
+        /**
+         * Container DOM element
+         * @type {DOMElement}
+         * @private
+         */
+        this.container = null;
 
-        //status messages
+        /**
+         * Message container DOM element
+         * @type {DOMElement}
+         * @private
+         */
+        this.msgContainer = null;
+
+        /**
+         * Label container DOM element
+         * @type {DOMElement}
+         * @private
+         */
+        this.labelContainer = null;
+
+        /**
+         * Text preceding status message
+         * @type {String}
+         */
+        this.text = f.status_bar_text || '';
+
+        /**
+         * Css class for container element
+         * @type {String}
+         */
+        this.cssClass = f.status_bar_css_class || 'status';
+
+        /**
+         * Message visibility duration in milliseconds
+         * @type {Number}
+         * @private
+         */
+        this.delay = 250;
+
+        /**
+         * Callback fired before the message is displayed
+         * @type {Function}
+         */
+        this.onBeforeShowMsg = isFn(f.on_before_show_msg) ?
+            f.on_before_show_msg : EMPTY_FN;
+
+        /**
+         * Callback fired after the message is displayed
+         * @type {Function}
+         */
+        this.onAfterShowMsg = isFn(f.on_after_show_msg) ?
+            f.on_after_show_msg : EMPTY_FN;
+
+        /**
+         * Message appearing upon filtering
+         * @type {String}
+         */
         this.msgFilter = f.msg_filter || 'Filtering data...';
-        //populating drop-downs
+
+        /**
+         * Message appearing when a drop-down filter is populated
+         * @type {String}
+         */
         this.msgPopulate = f.msg_populate || 'Populating filter...';
-        //populating drop-downs
+
+        /**
+         * Message appearing when a checklist filter is populated
+         * @type {String}
+         */
         this.msgPopulateCheckList = f.msg_populate_checklist ||
             'Populating list...';
-        //changing paging page
+
+        /**
+         * Message appearing when a pagination page is changed
+         * @type {String}
+         */
         this.msgChangePage = f.msg_change_page || 'Collecting paging data...';
-        //clearing filters
+
+        /**
+         * Message appearing when filters are cleared
+         * @type {String}
+         */
         this.msgClear = f.msg_clear || 'Clearing filters...';
-        //changing nb results/page
+
+        /**
+         * Message appearing when the page length is changed
+         * @type {String}
+         */
         this.msgChangeResults = f.msg_change_results ||
             'Changing results per page...';
-        //re-setting page
+
+        /**
+         * Message appearing when the page is re-set
+         * @type {String}
+         */
         this.msgResetPage = f.msg_reset_page || 'Re-setting page...';
-        //re-setting page length
+
+        /**
+         * Message appearing when the page length is re-set
+         * @type {String}
+         */
         this.msgResetPageLength = f.msg_reset_page_length ||
             'Re-setting page length...';
-        //table sorting
+
+        /**
+         * Message appearing upon column sorting
+         * @type {String}
+         */
         this.msgSort = f.msg_sort || 'Sorting data...';
-        //extensions loading
+
+        /**
+         * Message appearing when extensions are loading
+         * @type {String}
+         */
         this.msgLoadExtensions = f.msg_load_extensions ||
             'Loading extensions...';
-        //themes loading
-        this.msgLoadThemes = f.msg_load_themes || 'Loading theme(s)...';
 
-        // status bar div
-        this.prfxStatus = 'status_';
-        // status bar label
-        this.prfxStatusSpan = 'statusSpan_';
-        // text preceding status bar label
-        this.prfxStatusTxt = 'statusText_';
+        /**
+         * Message appearing when themes are loading
+         * @type {String}
+         */
+        this.msgLoadThemes = f.msg_load_themes || 'Loading theme(s)...';
     }
 
-    init(){
-        if(this.initialized){
+    /**
+     * Initializes StatusBar instance
+     */
+    init() {
+        if (this.initialized) {
             return;
         }
 
@@ -82,25 +176,23 @@ export class StatusBar extends Feature{
         let emitter = this.emitter;
 
         //status bar container
-        let statusDiv = Dom.create('div', ['id', this.prfxStatus+tf.id]);
-        statusDiv.className = this.statusBarCssClass;
+        let statusDiv = createElm('div');
+        statusDiv.className = this.cssClass;
 
         //status bar label
-        let statusSpan = Dom.create('span', ['id', this.prfxStatusSpan+tf.id]);
+        let statusSpan = createElm('span');
         //preceding text
-        let statusSpanText = Dom.create('span',
-            ['id', this.prfxStatusTxt+tf.id]);
-        statusSpanText.appendChild(Dom.text(this.statusBarText));
+        let statusSpanText = createElm('span');
+        statusSpanText.appendChild(createText(this.text));
 
         // target element container
-        if(!this.statusBarTgtId){
+        if (!this.targetId) {
             tf.setToolbar();
         }
-        let targetEl = (!this.statusBarTgtId) ?
-                tf.lDiv : Dom.id(this.statusBarTgtId);
+        let targetEl = (!this.targetId) ? tf.lDiv : elm(this.targetId);
 
         //default container: 'lDiv'
-        if(!this.statusBarTgtId){
+        if (!this.targetId) {
             statusDiv.appendChild(statusSpanText);
             statusDiv.appendChild(statusSpan);
             targetEl.appendChild(statusDiv);
@@ -110,113 +202,98 @@ export class StatusBar extends Feature{
             targetEl.appendChild(statusSpan);
         }
 
-        this.statusBarDiv = statusDiv;
-        this.statusBarSpan = statusSpan;
-        this.statusBarSpanText = statusSpanText;
+        this.container = statusDiv;
+        this.msgContainer = statusSpan;
+        this.labelContainer = statusSpanText;
 
         // Subscribe to events
-        emitter.on(['before-filtering'], ()=> this.message(this.msgFilter));
+        emitter.on(['before-filtering'], () => this.message(this.msgFilter));
         emitter.on(['before-populating-filter'],
-            ()=> this.message(this.msgPopulate));
+            () => this.message(this.msgPopulate));
         emitter.on(['before-page-change'],
-            ()=> this.message(this.msgChangePage));
-        emitter.on(['before-clearing-filters'], ()=>
+            () => this.message(this.msgChangePage));
+        emitter.on(['before-clearing-filters'], () =>
             this.message(this.msgClear));
         emitter.on(['before-page-length-change'],
-            ()=> this.message(this.msgChangeResults));
-        emitter.on(['before-reset-page'], ()=> this.message(this.msgResetPage));
+            () => this.message(this.msgChangeResults));
+        emitter.on(['before-reset-page'],
+            () => this.message(this.msgResetPage));
         emitter.on(['before-reset-page-length'],
-            ()=> this.message(this.msgResetPageLength));
+            () => this.message(this.msgResetPageLength));
         emitter.on(['before-loading-extensions'],
-            ()=> this.message(this.msgLoadExtensions));
+            () => this.message(this.msgLoadExtensions));
         emitter.on(['before-loading-themes'],
-            ()=> this.message(this.msgLoadThemes));
+            () => this.message(this.msgLoadThemes));
 
-        emitter.on([
-            'after-filtering',
-            'after-populating-filter',
-            'after-page-change',
-            'after-clearing-filters',
-            'after-page-length-change',
-            'after-reset-page',
-            'after-reset-page-length',
-            'after-loading-extensions',
-            'after-loading-themes'],
-            ()=> this.message('')
-        );
+        emitter.on(EVENTS, () => this.message(''));
 
+        /**
+         * @inherited
+         */
         this.initialized = true;
     }
 
-    message(t=''){
-        if(!this.isEnabled()){
+    /**
+     * Display status message
+     * @param {String} [t=''] Message to be displayed
+     */
+    message(t = '') {
+        if (!this.isEnabled()) {
             return;
         }
 
-        if(this.onBeforeShowMsg){
-            this.onBeforeShowMsg.call(null, this.tf, t);
-        }
+        this.onBeforeShowMsg(this.tf, t);
 
-        let d = t==='' ? this.statusBarCloseDelay : 1;
-        global.setTimeout(() => {
-            if(!this.initialized){
+        let d = t === '' ? this.delay : 1;
+        root.setTimeout(() => {
+            if (!this.initialized) {
                 return;
             }
-            this.statusBarSpan.innerHTML = t;
-            if(this.onAfterShowMsg){
-                this.onAfterShowMsg.call(null, this.tf, t);
-            }
+            this.msgContainer.innerHTML = t;
+
+            this.onAfterShowMsg(this.tf, t);
         }, d);
     }
 
-    destroy(){
-        if(!this.initialized){
+    /**
+     * Destroy StatusBar instance
+     */
+    destroy() {
+        if (!this.initialized) {
             return;
         }
 
         let emitter = this.emitter;
 
-        this.statusBarDiv.innerHTML = '';
-        if(!this.statusBarTgtId){
-            Dom.remove(this.statusBarDiv);
+        this.container.innerHTML = '';
+        if (!this.targetId) {
+            removeElm(this.container);
         }
-        this.statusBarSpan = null;
-        this.statusBarSpanText = null;
-        this.statusBarDiv = null;
+        this.labelContainer = null;
+        this.msgContainer = null;
+        this.container = null;
 
         // Unsubscribe to events
-        emitter.off(['before-filtering'], ()=> this.message(this.msgFilter));
+        emitter.off(['before-filtering'], () => this.message(this.msgFilter));
         emitter.off(['before-populating-filter'],
-            ()=> this.message(this.msgPopulate));
+            () => this.message(this.msgPopulate));
         emitter.off(['before-page-change'],
-            ()=> this.message(this.msgChangePage));
+            () => this.message(this.msgChangePage));
         emitter.off(['before-clearing-filters'],
-            ()=> this.message(this.msgClear));
+            () => this.message(this.msgClear));
         emitter.off(['before-page-length-change'],
-            ()=> this.message(this.msgChangeResults));
-        emitter.off(['before-reset-page'], ()=>
+            () => this.message(this.msgChangeResults));
+        emitter.off(['before-reset-page'], () =>
             this.message(this.msgResetPage));
         emitter.off(['before-reset-page-length'],
-            ()=> this.message(this.msgResetPageLength));
+            () => this.message(this.msgResetPageLength));
         emitter.off(['before-loading-extensions'],
-            ()=> this.message(this.msgLoadExtensions));
+            () => this.message(this.msgLoadExtensions));
         emitter.off(['before-loading-themes'],
-            ()=> this.message(this.msgLoadThemes));
+            () => this.message(this.msgLoadThemes));
 
-        emitter.off([
-            'after-filtering',
-            'after-populating-filter',
-            'after-page-change',
-            'after-clearing-filters',
-            'after-page-length-change',
-            'after-reset-page',
-            'after-reset-page-length',
-            'after-loading-extensions',
-            'after-loading-themes'],
-            ()=> this.message('')
-        );
+        emitter.off(EVENTS, () => this.message(''));
 
         this.initialized = false;
     }
-
 }

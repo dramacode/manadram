@@ -1,22 +1,44 @@
-import Dom from '../dom';
-import Str from '../string';
-import Types from '../types';
+import {createText, createElm, getText} from '../dom';
+import {isArray} from '../types';
+import {rgxEsc} from '../string';
 
+/**
+ * Highlight matched keywords upon filtering
+ *
+ * @export
+ * @class HighlightKeyword
+ */
 export class HighlightKeyword {
 
     /**
-     * HighlightKeyword, highlight matched keyword
-     * @param {Object} tf TableFilter instance
+     * Creates an instance of HighlightKeyword
+     * @param {TableFilter} tf TableFilter instance
      */
     constructor(tf) {
         let f = tf.config();
-        //defines css class for highlighting
+
+        /**
+         * Css class for highlighted term
+         * @type {String}
+         */
         this.highlightCssClass = f.highlight_css_class || 'keyword';
 
+        /**
+         * TableFilter instance
+         * @type {TableFilter}
+         */
         this.tf = tf;
+
+        /**
+         * TableFilter's emitter instance
+         * @type {Emitter}
+         */
         this.emitter = tf.emitter;
     }
 
+    /**
+     * Initializes HighlightKeyword instance
+     */
     init() {
         this.emitter.on(
             ['before-filtering', 'destroy'],
@@ -24,47 +46,46 @@ export class HighlightKeyword {
         );
         this.emitter.on(
             ['highlight-keyword'],
-            (tf, cell, word) =>
-                this.highlight(cell, word, this.highlightCssClass)
+            (tf, cell, term) => this._processTerm(cell, term)
         );
     }
 
     /**
-     * highlight occurences of searched term in passed node
+     * Highlight occurences of searched term in passed node
      * @param  {Node} node
-     * @param  {String} word     Searched term
+     * @param  {String} term     Searched term
      * @param  {String} cssClass Css class name
      *
      * TODO: refactor this method
      */
-    highlight(node, word, cssClass) {
+    highlight(node, term, cssClass) {
         // Iterate into this nodes childNodes
         if (node.hasChildNodes) {
             let children = node.childNodes;
             for (let i = 0; i < children.length; i++) {
-                this.highlight(children[i], word, cssClass);
+                this.highlight(children[i], term, cssClass);
             }
         }
 
         if (node.nodeType === 3) {
-            let tempNodeVal = Str.lower(node.nodeValue);
-            let tempWordVal = Str.lower(word);
-            if (tempNodeVal.indexOf(tempWordVal) !== -1) {
+            let nodeVal = node.nodeValue.toLowerCase();
+            let termIdx = nodeVal.indexOf(term.toLowerCase());
+
+            if (termIdx !== -1) {
                 let pn = node.parentNode;
                 if (pn && pn.className !== cssClass) {
-                    // word not highlighted yet
+                    // term not highlighted yet
                     let nv = node.nodeValue,
-                        ni = tempNodeVal.indexOf(tempWordVal),
                         // Create a load of replacement nodes
-                        before = Dom.text(nv.substr(0, ni)),
-                        docWordVal = nv.substr(ni, word.length),
-                        after = Dom.text(nv.substr(ni + word.length)),
-                        hiwordtext = Dom.text(docWordVal),
-                        hiword = Dom.create('span');
-                    hiword.className = cssClass;
-                    hiword.appendChild(hiwordtext);
+                        before = createText(nv.substr(0, termIdx)),
+                        value = nv.substr(termIdx, term.length),
+                        after = createText(nv.substr(termIdx + term.length)),
+                        text = createText(value),
+                        container = createElm('span');
+                    container.className = cssClass;
+                    container.appendChild(text);
                     pn.insertBefore(before, node);
-                    pn.insertBefore(hiword, node);
+                    pn.insertBefore(container, node);
                     pn.insertBefore(after, node);
                     pn.removeChild(node);
                 }
@@ -74,19 +95,19 @@ export class HighlightKeyword {
 
     /**
      * Removes highlight to nodes matching passed string
-     * @param  {String} word
+     * @param  {String} term
      * @param  {String} cssClass Css class to remove
      */
-    unhighlight(word, cssClass) {
+    unhighlight(term, cssClass) {
         let highlightedNodes = this.tf.tbl.querySelectorAll(`.${cssClass}`);
         for (let i = 0; i < highlightedNodes.length; i++) {
             let n = highlightedNodes[i];
-            let nodeVal = Dom.getText(n),
-                tempNodeVal = Str.lower(nodeVal),
-                tempWordVal = Str.lower(word);
+            let nodeVal = getText(n);
 
-            if (tempNodeVal.indexOf(tempWordVal) !== -1) {
-                n.parentNode.replaceChild(Dom.text(nodeVal), n);
+            if (nodeVal.toLowerCase().indexOf(term.toLowerCase()) !== -1) {
+                let parentNode = n.parentNode;
+                parentNode.replaceChild(createText(nodeVal), n);
+                parentNode.normalize();
             }
         }
     }
@@ -100,7 +121,7 @@ export class HighlightKeyword {
         }
         // iterate filters values to unhighlight all values
         this.tf.getFiltersValue().forEach((val) => {
-            if (Types.isArray(val)) {
+            if (isArray(val)) {
                 val.forEach((item) =>
                     this.unhighlight(item, this.highlightCssClass));
             } else {
@@ -109,6 +130,7 @@ export class HighlightKeyword {
         });
     }
 
+    /**  Remove feature */
     destroy() {
         this.emitter.off(
             ['before-filtering', 'destroy'],
@@ -116,8 +138,42 @@ export class HighlightKeyword {
         );
         this.emitter.off(
             ['highlight-keyword'],
-            (tf, cell, word) =>
-                this.highlight(cell, word, this.highlightCssClass)
+            (tf, cell, term) => this._processTerm(cell, term)
         );
+    }
+
+    /**
+     * Ensure filtering operators are handled before highlighting any match
+     * @param {any} Table cell to look searched term into
+     * @param {any} Searched termIdx
+     */
+    _processTerm(cell, term) {
+        let tf = this.tf;
+        let reLk = new RegExp(rgxEsc(tf.lkOperator));
+        let reEq = new RegExp(tf.eqOperator);
+        let reSt = new RegExp(tf.stOperator);
+        let reEn = new RegExp(tf.enOperator);
+        let reLe = new RegExp(tf.leOperator);
+        let reGe = new RegExp(tf.geOperator);
+        let reL = new RegExp(tf.lwOperator);
+        let reG = new RegExp(tf.grOperator);
+        let reD = new RegExp(tf.dfOperator);
+
+        term = term
+            .replace(reLk, '')
+            .replace(reEq, '')
+            .replace(reSt, '')
+            .replace(reEn, '');
+
+        if (reLe.test(term) || reGe.test(term) || reL.test(term) ||
+            reG.test(term) || reD.test(term)) {
+            term = getText(cell);
+        }
+
+        if (term === '') {
+            return;
+        }
+
+        this.highlight(cell, term, this.highlightCssClass);
     }
 }

@@ -9,9 +9,17 @@
         col_1: 'checklist',
         on_after_reset: testClearFilters
     });
+
+    var ct = 0;
+    tf.emitter.on(['build-checklist-filter'], function() {
+        ct++;
+    });
+
     tf.init();
+
     tf.setFilterValue(0, 'Sydney');
     tf.getFilterElement(0).focus();
+
     tf.filter();
 
     module('Sanity checks');
@@ -19,7 +27,11 @@
         deepEqual(tf instanceof TableFilter, true, 'TableFilter instantiated');
         deepEqual(tf.linkedFilters, true, 'Linked filters enabled');
 
+        tf.activateFilter(0);
         tf.clearFilters();
+
+        deepEqual(ct, 2,
+            'build-checklist-filter event emitted after filtering');
         tf.onAfterFilter = null;
         tf.destroy();
         tf = null;
@@ -97,15 +109,17 @@
         });
         tf.init();
 
-        var flt0 = id(tf.fltIds[0]);
-        var flt1 = id(tf.fltIds[1]);
+        var flt0 = tf.getFilterElement(0);
+        var flt1 = tf.getFilterElement(1);
+
         var evObj = document.createEvent('HTMLEvents');
-        evObj.initEvent('change', true, true);
+        evObj.initEvent('click', true, true);
 
         tf.setFilterValue(0, 'Sydney');
-        flt0.dispatchEvent(evObj);
+        flt0.querySelectorAll('input')[1].dispatchEvent(evObj);
         tf.setFilterValue(1, 'Adelaide');
-        flt1.dispatchEvent(evObj);
+        flt1.querySelectorAll('input')[0].dispatchEvent(evObj);
+
         setTimeout(testWithChecklistFilters.call(null, tf), 50);
     }
 
@@ -116,7 +130,6 @@
 
         deepEqual(flt0.getElementsByTagName('li').length, 2, 'Nb of options');
         deepEqual(flt1.getElementsByTagName('li').length, 2, 'Nb of options');
-        tf.clearFilters();
         tf.destroy();
         tf = null;
         setExcludedOptions();

@@ -1,98 +1,155 @@
-import Dom from '../../dom';
+import {Feature} from '../../feature';
+import {tag} from '../../dom';
+import {INPUT} from '../../const';
+import {root} from '../../root';
 
-export default class AdapterEzEditTable {
+const INSTANTIATION_ERROR = `Failed to instantiate EditTable object.
+    \n"ezEditTable" dependency not found.`;
+
+/**
+ * Adapter module for ezEditTable, an external library providing advanced
+ * grid features (selection and edition):
+ * http://codecanyon.net/item/ezedittable-enhance-html-tables/2425123?ref=koalyptus
+ */
+export default class AdapterEzEditTable extends Feature {
+
     /**
-     * Adapter module for ezEditTable, an external library providing advanced
-     * grid features (selection and edition):
-     * http://codecanyon.net/item/ezedittable-enhance-html-tables/2425123?ref=koalyptus
+     * Creates an instance of AdapterEzEditTable
      *
-     * @param {Object} tf TableFilter instance
+     * @param {TableFilter} tf TableFilter instance
+     * @param {Object} cfg Configuration options for ezEditTable library
      */
-    constructor(tf, cfg){
-        // ezEditTable config
-        this.initialized = false;
+    constructor(tf, cfg) {
+        super(tf, cfg.name);
+
+        /**
+         * Module description
+         * @type {String}
+         */
         this.desc = cfg.description || 'ezEditTable adapter';
+
+        /**
+         * Filename of ezEditTable library
+         * @type {String}
+         */
         this.filename = cfg.filename || 'ezEditTable.js';
+
+        /**
+         * Path to ezEditTable library
+         * @type {String}
+         */
         this.vendorPath = cfg.vendor_path;
+
+        /**
+         * Load ezEditTable stylesheet
+         * @type {Boolean}
+         */
         this.loadStylesheet = Boolean(cfg.load_stylesheet);
+
+        /**
+         * Path to ezEditTable stylesheet
+         * @type {String}
+         */
         this.stylesheet = cfg.stylesheet || this.vendorPath + 'ezEditTable.css';
+
+        /**
+         * Name of ezEditTable stylesheet
+         * @type {String}
+         */
         this.stylesheetName = cfg.stylesheet_name || 'ezEditTableCss';
-        this.err = 'Failed to instantiate EditTable object.\n"ezEditTable" ' +
-            'dependency not found.';
+
         // Enable the ezEditTable's scroll into view behaviour if grid layout on
-        cfg.scroll_into_view = cfg.scroll_into_view===false ?
+        cfg.scroll_into_view = cfg.scroll_into_view === false ?
             false : tf.gridLayout;
 
+        /**
+         * ezEditTable instance
+         * @type {EditTable}
+         * @private
+         */
         this._ezEditTable = null;
+
+        /**
+         * ezEditTable configuration
+         * @private
+         */
         this.cfg = cfg;
-        this.tf = tf;
-        this.emitter = tf.emitter;
+
+        this.enable();
     }
 
     /**
      * Conditionally load ezEditTable library and set advanced grid
-     * @return {[type]} [description]
      */
-    init(){
-        var tf = this.tf;
-        if(window.EditTable){
+    init() {
+        if (this.initialized) {
+            return;
+        }
+        let tf = this.tf;
+        if (root.EditTable) {
             this._setAdvancedGrid();
         } else {
-            var path = this.vendorPath + this.filename;
-            tf.import(this.filename, path, ()=> { this._setAdvancedGrid(); });
+            let path = this.vendorPath + this.filename;
+            tf.import(this.filename, path, () => this._setAdvancedGrid());
         }
-        if(this.loadStylesheet && !tf.isImported(this.stylesheet, 'link')){
+        if (this.loadStylesheet && !tf.isImported(this.stylesheet, 'link')) {
             tf.import(this.stylesheetName, this.stylesheet, null, 'link');
         }
 
         // TODO: hack to prevent ezEditTable enter key event hijaking.
         // Needs to be fixed in the vendor's library
         this.emitter.on(['filter-focus', 'filter-blur'],
-            ()=> this._toggleForInputFilter());
+            () => this._toggleForInputFilter());
+
+        /**
+         * @inherited
+         */
+        this.initialized = true;
     }
 
     /**
      * Instantiate ezEditTable component for advanced grid features
+     * @private
      */
-    _setAdvancedGrid(){
-        var tf = this.tf;
+    _setAdvancedGrid() {
+        let tf = this.tf;
 
         //start row for EditTable constructor needs to be calculated
-        var startRow,
+        let startRow,
             cfg = this.cfg,
-            thead = Dom.tag(tf.tbl, 'thead');
+            thead = tag(tf.tbl, 'thead');
 
         //if thead exists and startRow not specified, startRow is calculated
         //automatically by EditTable
-        if(thead.length > 0 && !cfg.startRow){
+        if (thead.length > 0 && !cfg.startRow) {
             startRow = undefined;
         }
         //otherwise startRow config property if any or TableFilter refRow
-        else{
+        else {
             startRow = cfg.startRow || tf.refRow;
         }
 
         cfg.base_path = cfg.base_path || tf.basePath + 'ezEditTable/';
-        var editable = cfg.editable;
-        var selectable = cfg.selection;
+        let editable = cfg.editable;
+        let selectable = cfg.selection;
 
-        if(selectable){
+        if (selectable) {
             cfg.default_selection = cfg.default_selection || 'row';
         }
         //CSS Styles
         cfg.active_cell_css = cfg.active_cell_css || 'ezETSelectedCell';
 
-        var _lastValidRowIndex = 0;
-        var _lastRowIndex = 0;
+        let _lastValidRowIndex = 0;
+        let _lastRowIndex = 0;
 
-        if(selectable){
+        if (selectable) {
             //Row navigation needs to be calculated according to TableFilter's
             //validRowsIndex array
-            var onAfterSelection = function(et, selectedElm, e){
-                var slc = et.Selection;
+            let onAfterSelection = function (et, selectedElm, e) {
+                let slc = et.Selection;
                 //Next valid filtered row needs to be selected
-                var doSelect = function(nextRowIndex){
-                    if(et.defaultSelection === 'row'){
+                let doSelect = function (nextRowIndex) {
+                    if (et.defaultSelection === 'row') {
                         /* eslint-disable */
                         slc.SelectRowByIndex(nextRowIndex);
                         /* eslint-enable */
@@ -100,31 +157,31 @@ export default class AdapterEzEditTable {
                         /* eslint-disable */
                         et.ClearSelections();
                         /* eslint-enable */
-                        var cellIndex = selectedElm.cellIndex,
+                        let cellIndex = selectedElm.cellIndex,
                             row = tf.tbl.rows[nextRowIndex];
-                        if(et.defaultSelection === 'both'){
+                        if (et.defaultSelection === 'both') {
                             /* eslint-disable */
                             slc.SelectRowByIndex(nextRowIndex);
                             /* eslint-enable */
                         }
-                        if(row){
+                        if (row) {
                             /* eslint-disable */
                             slc.SelectCell(row.cells[cellIndex]);
                             /* eslint-enable */
                         }
                     }
                     //Table is filtered
-                    if(tf.validRowsIndex.length !== tf.getRowsNb()){
-                        var r = tf.tbl.rows[nextRowIndex];
-                        if(r){
+                    if (tf.validRowsIndex.length !== tf.getRowsNb()) {
+                        let r = tf.tbl.rows[nextRowIndex];
+                        if (r) {
                             r.scrollIntoView(false);
                         }
-                        if(cell){
-                            if(cell.cellIndex === (tf.getCellsNb()-1) &&
-                                tf.gridLayout){
+                        if (cell) {
+                            if (cell.cellIndex === (tf.getCellsNb() - 1) &&
+                                tf.gridLayout) {
                                 tf.tblCont.scrollLeft = 100000000;
                             }
-                            else if(cell.cellIndex===0 && tf.gridLayout){
+                            else if (cell.cellIndex === 0 && tf.gridLayout) {
                                 tf.tblCont.scrollLeft = 0;
                             } else {
                                 cell.scrollIntoView(false);
@@ -134,15 +191,15 @@ export default class AdapterEzEditTable {
                 };
 
                 //table is not filtered
-                if(!tf.validRowsIndex){
+                if (!tf.validRowsIndex) {
                     return;
                 }
-                var validIndexes = tf.validRowsIndex,
+                let validIndexes = tf.validRowsIndex,
                     validIdxLen = validIndexes.length,
                     row = et.defaultSelection !== 'row' ?
                         selectedElm.parentNode : selectedElm,
                     //cell for default_selection = 'both' or 'cell'
-                    cell = selectedElm.nodeName==='TD' ? selectedElm : null,
+                    cell = selectedElm.nodeName === 'TD' ? selectedElm : null,
                     /* eslint-disable */
                     keyCode = e !== undefined ? et.Event.GetKey(e) : 0,
                     /* eslint-enable */
@@ -150,31 +207,32 @@ export default class AdapterEzEditTable {
                     nextRowIndex,
                     paging = tf.feature('paging'),
                     //pgup/pgdown keys
-                    d = (keyCode === 34 || keyCode === 33 ?
-                        (paging && paging.pagingLength || et.nbRowsPerPage) :1);
+                    d = keyCode === 34 || keyCode === 33 ?
+                        (paging && paging.pagingLength || et.nbRowsPerPage) :
+                        1;
 
                 //If next row is not valid, next valid filtered row needs to be
                 //calculated
-                if(!isRowValid){
+                if (!isRowValid) {
                     //Selection direction up/down
-                    if(row.rowIndex>_lastRowIndex){
+                    if (row.rowIndex > _lastRowIndex) {
                         //last row
-                        if(row.rowIndex >= validIndexes[validIdxLen-1]){
-                            nextRowIndex = validIndexes[validIdxLen-1];
+                        if (row.rowIndex >= validIndexes[validIdxLen - 1]) {
+                            nextRowIndex = validIndexes[validIdxLen - 1];
                         } else {
-                            var calcRowIndex = (_lastValidRowIndex + d);
-                            if(calcRowIndex > (validIdxLen-1)){
-                                nextRowIndex = validIndexes[validIdxLen-1];
+                            let calcRowIndex = (_lastValidRowIndex + d);
+                            if (calcRowIndex > (validIdxLen - 1)) {
+                                nextRowIndex = validIndexes[validIdxLen - 1];
                             } else {
                                 nextRowIndex = validIndexes[calcRowIndex];
                             }
                         }
-                    } else{
+                    } else {
                         //first row
-                        if(row.rowIndex <= validIndexes[0]){
+                        if (row.rowIndex <= validIndexes[0]) {
                             nextRowIndex = validIndexes[0];
                         } else {
-                            var v = validIndexes[_lastValidRowIndex - d];
+                            let v = validIndexes[_lastValidRowIndex - d];
                             nextRowIndex = v ? v : validIndexes[0];
                         }
                     }
@@ -183,21 +241,21 @@ export default class AdapterEzEditTable {
                 } else {
                     //If filtered row is valid, special calculation for
                     //pgup/pgdown keys
-                    if(keyCode!==34 && keyCode!==33){
+                    if (keyCode !== 34 && keyCode !== 33) {
                         _lastValidRowIndex = validIndexes.indexOf(row.rowIndex);
                         _lastRowIndex = row.rowIndex;
                     } else {
-                        if(keyCode === 34){ //pgdown
+                        if (keyCode === 34) { //pgdown
                             //last row
-                            if((_lastValidRowIndex + d) <= (validIdxLen-1)){
+                            if ((_lastValidRowIndex + d) <= (validIdxLen - 1)) {
                                 nextRowIndex = validIndexes[
-                                _lastValidRowIndex + d];
+                                    _lastValidRowIndex + d];
                             } else {
-                                nextRowIndex = [validIdxLen-1];
+                                nextRowIndex = [validIdxLen - 1];
                             }
                         } else { //pgup
                             //first row
-                            if((_lastValidRowIndex - d) <= validIndexes[0]){
+                            if ((_lastValidRowIndex - d) <= validIndexes[0]) {
                                 nextRowIndex = validIndexes[0];
                             } else {
                                 nextRowIndex = validIndexes[
@@ -213,35 +271,35 @@ export default class AdapterEzEditTable {
 
             //Page navigation has to be enforced whenever selected row is out of
             //the current page range
-            var onBeforeSelection = function(et, selectedElm){
-                var row = et.defaultSelection !== 'row' ?
+            let onBeforeSelection = function (et, selectedElm) {
+                let row = et.defaultSelection !== 'row' ?
                     selectedElm.parentNode : selectedElm;
-                if(tf.paging){
-                    if(tf.feature('paging').nbPages > 1){
-                        var paging = tf.feature('paging');
+                if (tf.paging) {
+                    if (tf.feature('paging').nbPages > 1) {
+                        let paging = tf.feature('paging');
                         //page length is re-assigned in case it has changed
                         et.nbRowsPerPage = paging.pagingLength;
-                        var validIndexes = tf.validRowsIndex,
+                        let validIndexes = tf.validRowsIndex,
                             validIdxLen = validIndexes.length,
                             pagingEndRow = parseInt(paging.startPagingRow, 10) +
                                 parseInt(paging.pagingLength, 10);
-                        var rowIndex = row.rowIndex;
+                        let rowIndex = row.rowIndex;
 
-                        if((rowIndex === validIndexes[validIdxLen-1]) &&
-                            paging.currentPageNb!==paging.nbPages){
+                        if ((rowIndex === validIndexes[validIdxLen - 1]) &&
+                            paging.currentPageNb !== paging.nbPages) {
                             paging.setPage('last');
                         }
-                        else if((rowIndex == validIndexes[0]) &&
-                            paging.currentPageNb!==1){
+                        else if ((rowIndex === validIndexes[0]) &&
+                            paging.currentPageNb !== 1) {
                             paging.setPage('first');
                         }
-                        else if(rowIndex > validIndexes[pagingEndRow-1] &&
-                            rowIndex < validIndexes[validIdxLen-1]){
+                        else if (rowIndex > validIndexes[pagingEndRow - 1] &&
+                            rowIndex < validIndexes[validIdxLen - 1]) {
                             paging.setPage('next');
                         }
-                        else if(
+                        else if (
                             rowIndex < validIndexes[paging.startPagingRow] &&
-                            rowIndex > validIndexes[0]){
+                            rowIndex > validIndexes[0]) {
                             paging.setPage('previous');
                         }
                     }
@@ -249,21 +307,21 @@ export default class AdapterEzEditTable {
             };
 
             //Selected row needs to be visible when paging is activated
-            if(tf.paging){
-                tf.feature('paging').onAfterChangePage = function(paging){
-                    var advGrid = paging.tf.extension('advancedGrid');
-                    var et = advGrid._ezEditTable;
-                    var slc = et.Selection;
+            if (tf.paging) {
+                tf.feature('paging').onAfterChangePage = function (paging) {
+                    let advGrid = paging.tf.extension('advancedGrid');
+                    let et = advGrid._ezEditTable;
+                    let slc = et.Selection;
                     /* eslint-disable */
-                    var row = slc.GetActiveRow();
+                    let row = slc.GetActiveRow();
                     /* eslint-enable */
-                    if(row){
+                    if (row) {
                         row.scrollIntoView(false);
                     }
                     /* eslint-disable */
-                    var cell = slc.GetActiveCell();
+                    let cell = slc.GetActiveCell();
                     /* eslint-enable */
-                    if(cell){
+                    if (cell) {
                         cell.scrollIntoView(false);
                     }
                 };
@@ -271,96 +329,92 @@ export default class AdapterEzEditTable {
 
             //Rows navigation when rows are filtered is performed with the
             //EditTable row selection callback events
-            if(cfg.default_selection==='row'){
-                var fnB = cfg.on_before_selected_row;
-                cfg.on_before_selected_row = function(){
-                    onBeforeSelection(arguments[0], arguments[1], arguments[2]);
-                    if(fnB){
-                        fnB.call(
-                            null, arguments[0], arguments[1], arguments[2]);
+            if (cfg.default_selection === 'row') {
+                let fnB = cfg.on_before_selected_row;
+                cfg.on_before_selected_row = function () {
+                    var args = arguments;
+                    onBeforeSelection(args[0], args[1], args[2]);
+                    if (fnB) {
+                        fnB.call(null, args[0], args[1], args[2]);
                     }
                 };
-                var fnA = cfg.on_after_selected_row;
-                cfg.on_after_selected_row = function(){
-                    onAfterSelection(arguments[0], arguments[1], arguments[2]);
-                    if(fnA){
-                        fnA.call(
-                            null, arguments[0], arguments[1], arguments[2]);
+                let fnA = cfg.on_after_selected_row;
+                cfg.on_after_selected_row = function () {
+                    var args = arguments;
+                    onAfterSelection(args[0], args[1], args[2]);
+                    if (fnA) {
+                        fnA.call(null, args[0], args[1], args[2]);
                     }
                 };
             } else {
-                var fnD = cfg.on_before_selected_cell;
-                cfg.on_before_selected_cell = function(){
-                    onBeforeSelection(arguments[0], arguments[1], arguments[2]);
-                    if(fnD){
-                        fnD.call(
-                            null, arguments[0], arguments[1], arguments[2]);
+                let fnD = cfg.on_before_selected_cell;
+                cfg.on_before_selected_cell = function () {
+                    var args = arguments;
+                    onBeforeSelection(args[0], args[1], args[2]);
+                    if (fnD) {
+                        fnD.call(null, args[0], args[1], args[2]);
                     }
                 };
-                var fnC = cfg.on_after_selected_cell;
-                cfg.on_after_selected_cell = function(){
-                    onAfterSelection(arguments[0], arguments[1], arguments[2]);
-                    if(fnC){
-                        fnC.call(
-                            null, arguments[0], arguments[1], arguments[2]);
+                let fnC = cfg.on_after_selected_cell;
+                cfg.on_after_selected_cell = function () {
+                    var args = arguments;
+                    onAfterSelection(args[0], args[1], args[2]);
+                    if (fnC) {
+                        fnC.call(null, args[0], args[1], args[2]);
                     }
                 };
             }
         }
-        if(editable){
+        if (editable) {
             //Added or removed rows, TF rows number needs to be re-calculated
-            var fnE = cfg.on_added_dom_row;
-            cfg.on_added_dom_row = function(){
+            let fnE = cfg.on_added_dom_row;
+            cfg.on_added_dom_row = function () {
+                var args = arguments;
                 tf.nbFilterableRows++;
-                if(!tf.paging){
+                if (!tf.paging) {
                     tf.emitter.emit('rows-changed', tf, this);
-                    //tf.feature('rowsCounter').refresh();
                 } else {
-                    tf.nbRows++;
-                    tf.nbVisibleRows++;
                     tf.nbFilterableRows++;
-                    tf.paging=false;
+                    tf.paging = false;
                     tf.feature('paging').destroy();
                     tf.feature('paging').reset();
                 }
-                if(tf.alternateRows){
+                if (tf.alternateRows) {
                     tf.feature('alternateRows').init();
                 }
-                if(fnE){
-                    fnE.call(null, arguments[0], arguments[1], arguments[2]);
+                if (fnE) {
+                    fnE.call(null, args[0], args[1], args[2]);
                 }
             };
-            if(cfg.actions && cfg.actions['delete']){
-                var fnF = cfg.actions['delete'].on_after_submit;
-                cfg.actions['delete'].on_after_submit = function(){
+            if (cfg.actions && cfg.actions['delete']) {
+                let fnF = cfg.actions['delete'].on_after_submit;
+                cfg.actions['delete'].on_after_submit = function () {
+                    var args = arguments;
                     tf.nbFilterableRows--;
-                    if(!tf.paging){
-                        // tf.feature('rowsCounter').refresh();
+                    if (!tf.paging) {
                         tf.emitter.emit('rows-changed', tf, this);
                     } else {
-                        tf.nbRows--;
-                        tf.nbVisibleRows--;
                         tf.nbFilterableRows--;
-                        tf.paging=false;
+                        tf.paging = false;
                         tf.feature('paging').destroy();
                         tf.feature('paging').reset(false);
                     }
-                    if(tf.alternateRows){
+                    if (tf.alternateRows) {
                         tf.feature('alternateRows').init();
                     }
-                    if(fnF){
-                        fnF.call(null, arguments[0], arguments[1]);
+                    if (fnF) {
+                        fnF.call(null, args[0], args[1]);
                     }
                 };
             }
         }
 
-        try{
+        try {
             /* eslint-disable */
             this._ezEditTable = new EditTable(tf.id, cfg, startRow);
             this._ezEditTable.Init();
             /* eslint-enable */
-        } catch(e) { throw new Error(this.err); }
+        } catch (e) { throw new Error(INSTANTIATION_ERROR); }
 
         this.initialized = true;
     }
@@ -368,15 +422,15 @@ export default class AdapterEzEditTable {
     /**
      * Reset advanced grid when previously removed
      */
-    reset(){
-        var ezEditTable = this._ezEditTable;
-        if(ezEditTable){
-            if(this.cfg.selection){
+    reset() {
+        let ezEditTable = this._ezEditTable;
+        if (ezEditTable) {
+            if (this.cfg.selection) {
                 /* eslint-disable */
                 ezEditTable.Selection.Set();
                 /* eslint-enable */
             }
-            if(this.cfg.editable){
+            if (this.cfg.editable) {
                 /* eslint-disable */
                 ezEditTable.Editable.Set();
                 /* eslint-enable */
@@ -387,9 +441,9 @@ export default class AdapterEzEditTable {
     /**
      * Toggle behaviour
      */
-    toggle(){
-        var ezEditTable = this._ezEditTable;
-        if(ezEditTable.editable){
+    toggle() {
+        let ezEditTable = this._ezEditTable;
+        if (ezEditTable.editable) {
             /* eslint-disable */
             ezEditTable.Editable.Remove();
             /* eslint-enable */
@@ -398,7 +452,7 @@ export default class AdapterEzEditTable {
             ezEditTable.Editable.Set();
             /* eslint-enable */
         }
-        if(ezEditTable.selection){
+        if (ezEditTable.selection) {
             /* eslint-disable */
             ezEditTable.Selection.Remove();
             /* eslint-enable */
@@ -409,14 +463,14 @@ export default class AdapterEzEditTable {
         }
     }
 
-    _toggleForInputFilter(){
-        var tf = this.tf;
-        if(!tf.getActiveFilterId()){
+    _toggleForInputFilter() {
+        let tf = this.tf;
+        if (!tf.getActiveFilterId()) {
             return;
         }
-        var colIndex = tf.getColumnIndexFromFilterId(tf.getActiveFilterId());
-        var filterType = tf.getFilterType(colIndex);
-        if(filterType === tf.fltTypeInp){
+        let colIndex = tf.getColumnIndexFromFilterId(tf.getActiveFilterId());
+        let filterType = tf.getFilterType(colIndex);
+        if (filterType === INPUT) {
             this.toggle();
         }
     }
@@ -424,16 +478,19 @@ export default class AdapterEzEditTable {
     /**
      * Remove advanced grid
      */
-    destroy(){
-        var ezEditTable = this._ezEditTable;
-        if(ezEditTable){
-            if(this.cfg.selection){
+    destroy() {
+        if (!this.initialized) {
+            return;
+        }
+        let ezEditTable = this._ezEditTable;
+        if (ezEditTable) {
+            if (this.cfg.selection) {
                 /* eslint-disable */
                 ezEditTable.Selection.ClearSelections();
                 ezEditTable.Selection.Remove();
                 /* eslint-enable */
             }
-            if(this.cfg.editable){
+            if (this.cfg.editable) {
                 /* eslint-disable */
                 ezEditTable.Editable.Remove();
                 /* eslint-enable */
@@ -441,7 +498,7 @@ export default class AdapterEzEditTable {
         }
 
         this.emitter.off(['filter-focus', 'filter-blur'],
-            ()=> this._toggleForInputFilter());
+            () => this._toggleForInputFilter());
         this.initialized = false;
     }
 }

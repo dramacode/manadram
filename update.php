@@ -1,140 +1,210 @@
 <?php
-set_time_limit(20000);
+
+//set_time_limit(20000);
 error_reporting(E_ALL);
 foreach (glob("functions/*.php") as $function) {
-    require_once ("functions/" . basename($function));
+    include_once ("functions/" . basename($function));
 }
+$bdd = connect();
+$filters = get_filters($bdd);
+    ob_start();
+    include ("tpl/filters.tpl.php");
+    $filters = ob_get_clean();
+    file_put_contents("tpl/filters.html", $filters);
+echo "<pre>";print_r($filters);
+
+return;
+//
+
+////vider les tables
+
+$sql = "DELETE FROM 'pattern'";
+insert($sql, $bdd);
+$sql = "DELETE FROM 'play'";
+insert($sql, $bdd);
+$sql = "DELETE FROM 'stats'";
+insert($sql, $bdd);
+$sql = "DELETE FROM 'configuration'";
+insert($sql, $bdd);
+$sql = "DELETE FROM 'role'";
+insert($sql, $bdd);
+
+//
+
+//get corpus
+
 $globs = explode("\n", trim(file_get_contents("corpus.txt")));
 $files = array();
 foreach ($globs as $glob) {
     $files = array_merge(glob($glob) , $files);
 }
 
-//corpus
-$corpus = array();
+//play and characters
 foreach ($files as $file) {
-    $corpus[basename($file, ".xml") ] = biblio(basename($file, ".xml"));
+    $play = basename($file, ".xml");
+    $corpus = biblio($play);
 }
-file_put_contents('data/corpus.php', '<?php $corpus = ' . var_export($corpus, true) . '; ?>');
 
-//haystack
+//characters
+
+//patterns
+
 $modes = array(
     "default" => array(
-        false,
-        false
+        0,
+        0
     ) ,
     "C" => array(
-        true,
-        false
+        1,
+        0
     ) ,
     "G" => array(
-        false,
-        true
+        0,
+        1
     ) ,
     "CG" => array(
-        true,
-        true
+        1,
+        1
     )
 );
-$i = 1;
-while ($i < 11) {
-    foreach ($modes as $key => $mode) {
-        $haystack = getHaystack($files, $i, $mode[0], $mode[1], $corpus, false);
-        file_put_contents("data/haystack" . $i . $key . ".php", '<?php $haystack[' . $i . ']["' . $key . '"] = ' . var_export($haystack, true) . '; ?>');
-        
-        if ($key == "default") {
-            $fields = getFields($haystack, $corpus, $files, $i);
-            file_put_contents("data/fields" . $i . ".php", '<?php $fields[' . $i . '] = ' . var_export($fields, true) . '; ?>');
-        }
-    }
-    $i++;
-}
-
-//fields
-exit;
-
-function getFields($haystack, $corpus, $files, $n) {
-
-    $types = array(
-        "author",
-        "authorId",
-        "title",
-        "genre",
-        "genreId",
-        "play",
-        "date",
-        "lustrum"
+$dom = new DOMDocument();
+$j = 0;
+foreach ($files as $file) {
+    $play_code = basename($file, ".xml");
+    $biblio = biblio($play_code);
+    $html = get_table($play_code);
+    $sql = "INSERT INTO play (
+    code,
+    author,
+    title,
+    genre,
+    created,
+    lustrum,
+    html
+    ) VALUES (
+    ?,
+    ?,
+    ?,
+    ?,
+    ?,
+    ?,
+    ?
+    )";
+    $data = array(
+        $play_code,
+        $biblio["author"],
+        $biblio["title"],
+        $biblio["genre"],
+        (int)$biblio["date"],
+        $biblio["lustrum"],
+        $html
     );
-    $fields = array();
-    foreach ($haystack as $key => $hay) {
-        foreach ($types as $type) {
+    insert($sql, $bdd, $data);
+    $sql = "SELECT LAST_INSERT_ROWID()";
+    $play_id = select($sql, $bdd);
+    $play_id = reset($play_id);
+    $dom->load($file);
+    $xp = new DOMXPath($dom);
+    $xp->registerNamespace("tei", "http://www.tei-c.org/ns/1.0");
+    $i = 1; //longueur min des motifs à extraire. Les motifs A//B, A/, /A sont extraits en même temps que (respectivement) les motifs de 3 (A/AB/A) et 2 (A/B) conf, mais ils sont insérés en base avec l = 2 et l=1
 
-            //$fields[$type][$hay["id"][$type]]=0;
-            
-            if (!isset($fields[$type])) {
-                $fields[$type] = array();
-            }
-            $fields[$type][normalize($hay["id"][$type]) ]["field"] = $hay["id"][$type];
-            $fields[$type][normalize($hay["id"][$type]) ]["value"] = 0;
+    while ($i <= 4) { //longueur max des motifs à extraire
 
-            //array_push($fields[$type], array(
-            
-            //    "field" =>
+        foreach ($modes as $kmode => $mode) {
+            $patterns = extract_patterns($xp, $i, $mode[0], $mode[1]);
+            $occurrences = occurrences($patterns);
+            $stats = 0;
+            $sql = "INSERT INTO stats (
+            play_id,
+            value,
+            l,
+            c,
+            g
+            ) VALUES (
+            ?,
+            ?,
+            ?,
+            ?,
+            ?            
+            )";
+            $data = array(
+                $play_id,
+                0,
+                $i,
+                $mode[0],
+                $mode[1],
+            );
+            insert($sql, $bdd, $data);
+            foreach ($patterns as $code => $pattern) { //le faire à l'intérieur d'extract pour éviter de reboucler, mais où insérer les stats ?
 
-            
-            //    $hay["id"][$type],
+                $list_id = implode("+", $occurrences[$pattern["int_bin"]]);
+                $sql = "INSERT INTO pattern (
+                play_id,
+                code,
+                act_n,
+                scene_n,
+                scene_id,
+                occurrences,
+                int_dec,
+                int_bin,
+                str_code,
+                str_id,
+                str_name,
+                l,
+                c,
+                g
+                ) VALUES (
+                ?,
+                ?,
+                ?,
+                ?,
+                ?,
+                ?,
+                ?,
+                ?,
+                ?,
+                ?,
+                ?,
+                ?,
+                ?,
+                ?
+                )";
+                $data = array(
+                    (int)$play_id, //récupérer id numérique
 
-            
-            //    "value" => 0
+                    $code,
+                    (int)$pattern["act_n"],
+                    (int)$pattern["scene_n"],
+                    $pattern["scene_id"],
+                    $list_id,
+                    $pattern["int_dec"], //transforme en float pour les nombres trop élevés : pb pour sqlite ?
 
-            
-            //    //$hay["id"][$type]=>0
+                    $pattern["int_bin"],
+                    $pattern["str_code"],
+                    $pattern["str_id"],
+                    $pattern["str_name"],
+                    $pattern["l"], //je prends le nombre de conf, et non la longueur de la matrice (la conf vide qui marque l'entracte est un code, A//B est un motif de l = 2)
 
-            
-            //));
-
-            
-        }
-    }
-
-    //dates and lustra : traitement spécifique
-    $dates = getDates($files);
-    $lustra = array();
-    foreach ($dates as $date) {
-        $lustrum = roundUpToAny($date);
-        $lustrum = ($lustrum - 4) . "-" . $lustrum;
-        
-        if (!in_array($lustrum, $lustra)) {
-            $lustra[] = $lustrum;
-        }
-    }
-    $fields["date"] = array();
-    foreach ($dates as $date) {
-        $fields["date"][$date] = array(
-            "field" => $date,
-            "value" => 0
-        );
-    }
-    $fields["lustrum"] = array();
-    foreach ($lustra as $lustrum) {
-        $fields["lustrum"][$lustrum] = array(
-            "field" => $lustrum,
-            "value" => 0
-        );
-    }
-    foreach ($haystack as $key => $hay) {
-        foreach ($types as $type) {
-            foreach ($fields[$type] as $kfield => $field) {
+                    $mode[0],
+                    $mode[1]
+                );
+                insert($sql, $bdd, $data);
+                $sql = "UPDATE stats SET value = value +1 WHERE play_id = ".(int)$play_id." AND l = ".$pattern["l"]." AND c = ".$mode[0]." AND g = ".$mode[1];
+                insert($sql, $bdd);
+                //quand je suis à l = 1 et que j'extrait un motif à entracte ?
                 
-                if ($fields[$type][$kfield]["field"] == $hay["id"][$type]) {
-                    $fields[$type][$kfield]["value"]++;
-                }
+                //ds le form, si j'entre un entracte, spécifier aussi la longueur
+
+                
             }
         }
+        $i++;
     }
-    foreach ($types as $type) {
-        ksort($fields[$type]);
-    }
-    return $fields;
+    $corpus = get_corpus();
+    ob_start();
+    include ("tpl/corpus.tpl.php");
+    $list = ob_get_clean();
+    file_put_contents("tpl/corpus.html", $list);
+    
 }
 ?>

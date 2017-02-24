@@ -3,7 +3,7 @@ body,input {
 	font-size:16px;
 }
 html, body{height: 96%;}
-#form{height: 80%;}
+/*#form{height: 60%;}*/
 table {
 	border-collapse:collapse;
 }
@@ -126,7 +126,7 @@ label {
 /*position: absolute;*/
 /*left:0;*/
 /*top:20%;*/
-	padding:15%;
+	padding:0;
 }
 
 #settings {
@@ -173,7 +173,7 @@ margin: 2% 4%;}
     
 }
 #header {
-	margin:2% 3%;
+	margin:2% 3% 0% 3%;
 }
 
 .edit-table img {

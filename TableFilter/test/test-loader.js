@@ -10,11 +10,7 @@ var loader = tf.feature('loader');
 module('Sanity checks');
 test('Loader component', function() {
     notEqual(loader, null, 'Loader instanciated');
-    notEqual(
-        document.getElementById(loader.prfxLoader+tf.id),
-        null,
-        'Loader DOM container'
-    );
+    equal(loader.cont.nodeName, 'DIV', 'Loader DOM container');
 });
 
 module('Feature interface');
@@ -61,11 +57,11 @@ test('Can check is enabled', function() {
 module('Behaviour');
 test('Can show loader', function() {
     loader.show('');
-    deepEqual(loader.loaderDiv.style.display, '', 'Loader is displayed');
+    deepEqual(loader.cont.style.display, '', 'Loader is displayed');
 });
 
 module('Tear-down');
 test('can destroy TableFilter DOM elements', function() {
     tf.destroy();
-    deepEqual(tf.hasGrid(), false, 'Filters removed');
+    deepEqual(tf.isInitialized(), false, 'Filters removed');
 });

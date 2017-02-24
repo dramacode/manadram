@@ -65,16 +65,9 @@ formatter.format(data, 1);
         })(jQuery);
     </script>
     <div id="div-patab-info">
-        <div id="patab-table">
-        <?php echo $patab;?>
-        </div>
-        <div id="patab-options"><?php if(isset($_POST["group"])){?>
-        <p>Grouper les personnages <i class="fa fa-check"></i></p><?php }?><?php if(isset($_POST["ignore_confident"])){?>
-    
-        <p>Ignorer les confidents <i class="fa fa-check"></i></p><?php }?>
-        </div>
+
         <div id="patab-results">
-        <p><i class="fa fa-caret-right"></i> <?php echo $occurrences["n"]; ?> occurence<?php if($occurrences["n"]>1){echo "s";}?> trouvée<?php if($occurrences["n"]>1){echo "s";}?> sur <?php echo $occurrences["total"]; ?> (<?php echo $occurrences["percentage"]; ?>%) en <?php echo $time; ?> secondes.</p>
+        <p><i class="fa fa-caret-right"></i> <?php echo $results_n; ?> occurence<?php if($results_n>1){echo "s";}?> trouvée<?php if($results_n>1){echo "s";}?> sur <?php echo $global_n; ?> (<?php echo $proportion; ?>%) en <?php echo $time; ?> secondes.</p>
         </div>
     </div>
 

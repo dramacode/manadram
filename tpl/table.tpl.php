@@ -1,25 +1,30 @@
 
-
-        <table class="legend result pattern">
-          <tr>
-            <td class="absent configuration">0</td>
-            <td class="caption">Personnage absent</td>
-            <td class="speaking configuration">1</td>
-            <td class="caption">Personnage présent </td>
-            <td class="mute configuration">2</td>
-            <td class="caption">Personnage muet </td>
-            </tr>
-          <tr>
+            <h3><?php echo $field["title"];?></h3>
+            <div class="table">
+            <table class="tableFilterTable tableExport" id="<?php echo $key;?>">
+                <thead>
+                    <tr>
+                        <td><i class="fa fa-sort"></i><?php echo $field["head"];?></td>
+                        <td><i class="fa fa-sort tooltip"></i>Occurrences</td>
+                        <td><i class="fa fa-sort tooltip-e"></i>Proportion (%)</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach($table_results[$key] as $table_result){ ?>
+                    <tr>
+                        <td><?php echo $table_result["title"];?></td>
+                        <td><?php echo $table_result["occurrences"];?></td>
+                        <td><?php echo $table_result["proportion"];?></td>
+                    </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+            </div>
+      
  
-        </table>
-		<table class="legend result pattern">
-          <tr>
-          	<td class="configuration"></td>
-          	<td class="configuration"></td>
-          	<td class="caption">Scènes liées entre elles</td>
-         
-		  	<td class="configuration"></td>
-		  	<td class="configuration break"></td>
-		  	<td class="caption">Rupture de la liaison des scènes</td>
-          </tr>
-        </table>
+
+
+
+
+
+ 

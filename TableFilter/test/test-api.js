@@ -1,11 +1,13 @@
 
 var tf = new TableFilter('demo', {
-    base_path: '../dist/tablefilter/'
+    base_path: '../dist/tablefilter/',
+    col_types: ['string', 'string', 'number', 'number', 'number']
 });
 tf.init();
 
 var tf1 = new TableFilter('demo1', {
     base_path: '../dist/tablefilter/',
+    col_types: ['string', 'string', 'number', 'number', 'number'],
     extensions: [{
         name: 'colsVisibility',
         at_start: [1, 2],
@@ -20,21 +22,29 @@ test('TableFilter object', function() {
     deepEqual(tf.id, 'demo', 'id check');
     deepEqual(tf.getFiltersRowIndex(), 0, 'Filters row index');
     deepEqual(tf.getHeadersRowIndex(), 1, 'Headers row index');
-    deepEqual(tf.getCellsNb(), 5, 'cells collection length');
-    deepEqual(tf.getRowsNb(), 7, 'rows collection length');
-    deepEqual(tf.getFilterableRowsNb(), 7, 'number of filterable rows');
-    deepEqual(tf.getFilterId(0), 'flt0_demo', 'filter DOM element id');
+    deepEqual(tf.getCellsNb(), 5, 'Cells collection length');
+    deepEqual(tf.getRowsNb(), 7, 'Rows collection length');
+    deepEqual(tf.getFilterableRowsNb(), 7, 'Number of filterable rows');
+    deepEqual(tf.getFilterId(0), 'flt0_demo', 'Filter DOM element id');
     deepEqual(tf.getStartRowIndex(), 2, 'Start of filterable rows');
     deepEqual(tf.getLastRowIndex(), 8, 'Last row index');
     deepEqual(
         tf.getHeadersText(),
-        ['From','Destination','Road Distance (km)', 'By Air (hrs)',
-        'By Rail (hrs)'],
+        [
+            'From','Destination','Road Distance (km)', 'By Air (hrs)',
+            'By Rail (hrs)'
+        ],
         'Headers text');
     deepEqual(
-        tf.getCellData(tf.getHeaderElement(1)),
+        tf.getCellValue(tf.getHeaderElement(1)),
         'Destination',
         'Column header text'
+    );
+    deepEqual(tf.getValidRowsNb(), 0, 'Number of valid rows before filtering');
+    deepEqual(
+        tf.getCellData(tf.tbl.rows[3].cells[2]),
+        982,
+        'getCellData returns typed value'
     );
 });
 
@@ -60,7 +70,7 @@ test('Filter table', function() {
         'Column 0 filter value after clearing filters');
     tf.setFilterValue(0, 'Syd');
     tf.filter();
-    deepEqual(tf.getValidRows().length, 4, 'Filtered rows number');
+    deepEqual(tf.getValidRowsNb(), 4, 'Filtered rows number');
 });
 
 test('Filter table with range', function() {
@@ -120,8 +130,14 @@ test('Activate filter for a specified column', function() {
 
 test('Clear filters', function() {
     tf.clearFilters();
-    deepEqual(tf.nbVisibleRows, 7, 'Filtered rows number');
+    deepEqual(tf.getValidRowsNb(), 7, 'Filtered rows number');
     deepEqual(tf.getFiltersValue(), ['', '', '', '', '']);
+});
+
+test('Can get feature', function() {
+    var feature = tf.feature('help');
+    deepEqual(typeof feature, 'object', 'Feature instance');
+    deepEqual(feature.feature, 'help', 'Feature name');
 });
 
 test('Get table data', function() {
@@ -138,6 +154,11 @@ test('Get table data', function() {
             'Sydney','Adelaide','Adelaide','Adelaide'
         ],
         'Get specified column values including column header'
+    );
+    deepEqual(
+        tf.getColValues(2, false, true),
+        [1412,982,286,872,2781,1533,2045],
+        'Get specified column typed values'
     );
     deepEqual(
         tf.getTableData(),
@@ -167,6 +188,19 @@ test('Get table data', function() {
         ],
         'Get table data including columns headers'
     );
+    deepEqual(
+        tf.getTableData(false, false, true),
+        [
+            [2, ['Sydney','Adelaide',1412,1.4,25.3]],
+            [3, ['Sydney','Brisbane',982,1.5,16]],
+            [4, ['Sydney','Canberra',286,0.6,4.3]],
+            [5, ['Sydney','Melbourne',872,1.1,10.5]],
+            [6, ['Adelaide','Perth',2781,3.1,38]],
+            [7, ['Adelaide','Alice Springs',1533,2,20.25]],
+            [8, ['Adelaide','Brisbane',2045,2.15,40]]
+        ],
+        'Get table typed data'
+    );
     tf.setFilterValue(0, 'Adelaide');
     tf.filter();
     deepEqual(
@@ -190,6 +224,15 @@ test('Get table data', function() {
         'Get filtered table data including columns headers'
     );
     deepEqual(
+        tf.getFilteredData(false, false, true),
+        [
+            [6, ['Adelaide','Perth',2781,3.1,38]],
+            [7, ['Adelaide','Alice Springs',1533,2,20.25]],
+            [8, ['Adelaide','Brisbane',2045,2.15,40]]
+        ],
+        'Get filtered typed data'
+    );
+    deepEqual(
         tf.getFilteredDataCol(0),
         ['Adelaide','Adelaide','Adelaide'],
         'Get specified column filtered values'
@@ -199,13 +242,18 @@ test('Get table data', function() {
         ['From','Adelaide','Adelaide','Adelaide'],
         'Get specified column filtered values including header'
     );
+    deepEqual(
+        tf.getFilteredDataCol(2, false, true),
+        [2781,1533,2045],
+        'Get specified column filtered typed values'
+    );
     tf.clearFilters();
     tf.filter();
 });
 
 test('Destroy', function() {
     tf.destroy();
-    deepEqual(tf.hasGrid(), false, 'Filters removed');
+    deepEqual(tf.isInitialized(), false, 'Filters removed');
     tf = null;
 });
 
@@ -320,13 +368,13 @@ test('Get filters values', function() {
 });
 
 // Test case for issue 165
-test('Test getCellData with white spaces', function() {
+test('Test getCellValue with white spaces', function() {
     // setup
     var cell = document.createElement('td');
     cell.textContent ='\t\thello world\t\t\t';
 
     // act
-    var result = tf.getCellData(cell);
+    var result = tf.getCellValue(cell);
 
     //assert
     deepEqual(result, 'hello world', 'Expected text with no white spaces');
@@ -389,7 +437,7 @@ test('Filter table', function() {
 
 test('Clear filters', function() {
     tf.clearFilters();
-    deepEqual(tf.nbVisibleRows, 7, 'Filtered rows number');
+    deepEqual(tf.getValidRowsNb(), 7, 'Filtered rows number');
     deepEqual(tf.getFiltersValue(), ['', '', '', '', '']);
 });
 
@@ -460,7 +508,7 @@ test('Get table data', function() {
 
 test('Destroy', function() {
     tf.destroy();
-    deepEqual(tf.hasGrid(), false, 'Filters removed');
+    deepEqual(tf.isInitialized(), false, 'Filters removed');
     tf = null;
 });
 
@@ -523,8 +571,10 @@ function colsVisibilityTests() { // issue 94
 
         deepEqual(
             tf1.getHeadersText(false),
-            ['From','Destination','Road Distance (km)', 'By Air (hrs)',
-            'By Rail (hrs)'],
+            [
+                'From','Destination','Road Distance (km)', 'By Air (hrs)',
+                'By Rail (hrs)'
+            ],
             'Headers text'
         );
 
@@ -538,7 +588,7 @@ function colsVisibilityTests() { // issue 94
 
     test('Destroy', function() {
         tf1.destroy();
-        deepEqual(tf1.hasGrid(), false, 'Filters removed');
+        deepEqual(tf1.isInitialized(), false, 'Filters removed');
         tf1 = null;
     });
 }

@@ -34,7 +34,8 @@
         }
     );
     tf1.init();
-    var btn = document.querySelector('#'+tf1.prfxValButton+'4_'+tf1.id);
+
+    var btn = document.querySelector('.' + tf1.btnCssClass);
 
     module('Table 2: sanity checks');
     test('TableFilter instance', function() {
@@ -67,6 +68,45 @@
         tf1.setFilterValue(4, '>30');
         btn.click();
         deepEqual(tf1.getValidRows().length, 2, 'Filter button event result');
+    });
+
+    test('Cannot init if initialised', function() {
+        // setup
+        var importFile = tf1.import;
+        var hit = 0;
+        tf1.import = function() { hit++ };
+        tf1.initialized = true;
+
+        // act
+        tf1.init();
+
+        // assert
+        deepEqual(hit, 0, 'import not called');
+
+        tf1.import = importFile;
+    });
+
+    module('Tear-down');
+    test('can destroy TableFilter DOM elements', function() {
+        tf.destroy();
+        tf1.destroy();
+
+        deepEqual(tf.isInitialized(), false, 'Instance no longer initialised');
+        deepEqual(tf1.getFilterElement(0), null, 'Filter 0 removed');
+    });
+
+    module('Edge cases');
+    test('throws when no working DOM element', function() {
+        throws(
+            function() { new TableFilter('xyz'); },
+            Error,
+            'Throws Error when no DOM table'
+        );
+    });
+    test('Can instantiate with wrong refRow', function() {
+        var tf2 = new TableFilter('demo', -9);
+        tf2.init();
+        deepEqual(tf2.nbCells, 5, 'Expected number of columns');
     });
 
 })(window, TableFilter);

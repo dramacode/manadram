@@ -29,9 +29,7 @@
   <!-- stocker un élément dans une variable -->
   <!-- dom evaluate attribute -->
   <xsl:template match="/">
-    <h3><xsl:value-of select="tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:author/tei:surname"/>, <i>
-      <xsl:value-of select="tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title"/></i> (<xsl:value-of select="substring(//tei:date[@type='created']/@when, 1, 4)"/>)
-    </h3>
+
     
     <table class="result pattern" id="{$basename}">
       <!--ligne actes-->

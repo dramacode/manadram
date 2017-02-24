@@ -88,12 +88,16 @@ var tfConfig = {
     status: true,
     status_bar: true,
     status_bar_target_id: 'statusDiv',
-    col_number_format: [
-        null, null, 'US',
-        'US', 'US', 'US',
-        'US', 'US', 'US'
+    col_types: [
+        'string', 'string', 'number',
+        'number', 'number', 'number',
+        'number', 'number', 'number'
     ],
-    display_all_text: " [ Show all ] ",
+    clear_filter_text: [
+        ' [ Show all ] ',
+        '<Clear>',
+        'Clear:'
+    ],
     col_0: "multiple",
     col_1: "select",
     col_2: "checklist",

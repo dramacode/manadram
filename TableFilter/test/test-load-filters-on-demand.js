@@ -13,14 +13,14 @@ tf.init();
 var flt1 = tf.getFilterElement(0);
 var flt2 = tf.getFilterElement(1);
 var flt3 = null;
-var flt3ContId = tf.feature('checkList').prfxCheckListDiv+'2_'+tf.id;
+var flt3ContId = tf.feature('checkList').prfx + '2_' + tf.id;
 var flt3Cont = id(flt3ContId);
 
 function buildChecklist(tf, colIdx){
     var checkList = tf.feature('checkList');
     checkList.build(colIdx);
-    checkList.checkListDiv[colIdx].onclick = null;
-    checkList.checkListDiv[colIdx].title = '';
+    checkList.containers[colIdx].onclick = null;
+    checkList.containers[colIdx].title = '';
 }
 
 
@@ -58,7 +58,7 @@ test('Filters are populated after activation', function() {
 
 test('TableFilter re-initialised with grid layout', function() {
     tf.destroy();
-    deepEqual(tf.hasGrid(), false, 'Filters removed');
+    deepEqual(tf.isInitialized(), false, 'Filters removed');
     tf = null;
     tf = new TableFilter('demo', {
         base_path: '../dist/tablefilter/',
@@ -73,7 +73,7 @@ test('TableFilter re-initialised with grid layout', function() {
     flt1 = tf.getFilterElement(0);
     flt2 = tf.getFilterElement(1);
     flt3 = null;
-    flt3ContId = tf.feature('checkList').prfxCheckListDiv+'2_'+tf.id;
+    flt3ContId = tf.feature('checkList').prfx + '2_' + tf.id;
     flt3Cont = id(flt3ContId);
 });
 
@@ -119,6 +119,6 @@ test('Filters can filter table', function() {
 
 test('TableFilter removed', function() {
     tf.destroy();
-    deepEqual(tf.hasGrid(), false, 'Filters removed');
+    deepEqual(tf.isInitialized(), false, 'Filters removed');
     tf = null;
 });

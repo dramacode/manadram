@@ -1,6 +1,6 @@
 (function($) {
     $(document).ready(function() {
-
+        
         $("#options").buttonset();
 
 
@@ -12,7 +12,7 @@
             html: true,
             gravity: 'e'
         });
-        $(".fancybox").fancybox({
+         $(".fancybox").fancybox({
             'titlePosition': 'inside',
             'transitionIn': 'none',
             'transitionOut': 'none'
@@ -70,12 +70,12 @@ function nextChar(c) {
 function toggleScene(e) {
     var v = e.firstChild.value;
     switch (v) {
-    case "A":
-        e.firstChild.value = "P";
+    case "0":
+        e.firstChild.value = "1";
         e.setAttribute("style", "background:grey");
         break;
-    case "P":
-        e.firstChild.value = "A";
+    case "1":
+        e.firstChild.value = "0";
         e.setAttribute("style", "background:white");
         break;
     }
@@ -100,7 +100,7 @@ function addRow() {
         tds[i].setAttribute("style", "");
         //input
         tds[i].firstElementChild.name = "pattern[" + rowId + "][" + i + "]";
-        tds[i].firstElementChild.setAttribute("value", "A");
+        tds[i].firstElementChild.setAttribute("value", "0");
         tds[i].addEventListener('click', function(e) {
             toggleScene(this);
         });
@@ -125,7 +125,7 @@ function addColumn() {
             newTd.setAttribute("style", "");
             //input
             newTd.firstElementChild.name = "pattern[" + rowId + "][" + l + "]";
-            newTd.firstElementChild.setAttribute("value", "A");
+            newTd.firstElementChild.setAttribute("value", "0");
             newTd.addEventListener('click', function(e) {
                 toggleScene(this);
             });
@@ -165,7 +165,7 @@ function delCol() {
 function addFieldConfiguration() {
     var fields = document.getElementsByClassName("xpath-field-configuration");
     var newField = fields[0].cloneNode(true);
-    newField.setAttribute("name", "xpath-" + fields.length);
+    newField.setAttribute("name", "xpath[xpath-" + fields.length+"]");
 
     document.getElementById("xpath-fields-configuration").appendChild(newField);
 }

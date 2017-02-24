@@ -12,8 +12,9 @@ function biblio($play) {
     $date = $xp->evaluate("//tei:creation/tei:date[@type='created']");
     $date = ($date->length > 0) ? substr($date->item(0)->getAttribute("when") , 0, 4) : "";
     $date = (int)$date;
-    $lustrum = roundUpToAny($date);
-    $lustrum = ($lustrum-4)."-". $lustrum;
+    $lustrum = lustrum($date);
+    //$lustrum = roundUpToAny($date);
+    //$lustrum = ($lustrum-5)."-".($lustrum-1);
     $genre = $xp->evaluate("//tei:keywords/tei:term[@type='genre']");
     $genre = ($genre->length > 0) ? $genre->item(0)->textContent : "";
     $roles = $xp->evaluate("//tei:person");

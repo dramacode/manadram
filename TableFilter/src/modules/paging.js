@@ -1,14 +1,20 @@
-import {Feature} from './feature';
-import Dom from '../dom';
-import Types from '../types';
-import Str from '../string';
-import Event from '../event';
+import {Feature} from '../feature';
+import {createElm, createOpt, createText, elm, removeElm} from '../dom';
+import {isArray, isFn, isNull, EMPTY_FN} from '../types';
+import {addEvt, keyCode, removeEvt} from '../event';
+import {INPUT, SELECT, NONE, ENTER_KEY} from '../const';
 
+/**
+ * Paging UI component
+ * @export
+ * @class Paging
+ * @extends {Feature}
+ */
 export class Paging extends Feature {
 
     /**
-     * Pagination component
-     * @param {Object} tf TableFilter instance
+     * Creates an instance of Paging
+     * @param {TableFilter} tf TableFilter instance
      */
     constructor(tf) {
         super(tf, 'paging');
@@ -16,126 +22,272 @@ export class Paging extends Feature {
         // Configuration object
         var f = this.config;
 
-        //css class for paging buttons (previous,next,etc.)
+        /**
+         * Css class for the paging buttons (previous, next, etc.)
+         * @type {String}
+         */
         this.btnPageCssClass = f.paging_btn_css_class || 'pgInp';
-        //stores paging select element
+
+         /**
+         * Main select DOM element
+         * @type {DOMElement}
+         */
         this.pagingSlc = null;
-        //results per page select element
+
+        /**
+         * Results per page select DOM element
+         * @type {DOMElement}
+         */
         this.resultsPerPageSlc = null;
-        //id of container element
+
+        /**
+         * ID of custom container element
+         * @type {String}
+         */
         this.pagingTgtId = f.paging_target_id || null;
-        //defines table paging length
+
+        /**
+         * Number of rows contained in a page
+         * @type {Number}
+         */
         this.pagingLength = !isNaN(f.paging_length) ? f.paging_length : 10;
-        //id of container element
+
+        /**
+         * ID of custom container element for the results per page selector
+         * @type {String}
+         */
         this.resultsPerPageTgtId = f.results_per_page_target_id || null;
-        //css class for paging select element
+
+        /**
+         * Css class for the paging select element
+         * @type {String}
+         */
         this.pgSlcCssClass = f.paging_slc_css_class || 'pgSlc';
-        //css class for paging input element
+
+        /**
+         * Css class for the paging input element
+         * @type {String}
+         */
         this.pgInpCssClass = f.paging_inp_css_class || 'pgNbInp';
-        //stores results per page text and values
+
+        /**
+         * Label and values for the results per page select, example of usage:
+         * ['Records: ', [10,25,50,100]]
+         * @type {Array}
+         */
         this.resultsPerPage = f.results_per_page || null;
-        //enables/disables results per page drop-down
-        this.hasResultsPerPage = Types.isArray(this.resultsPerPage);
-        //defines css class for results per page select
+
+        /**
+         * Determines if results per page is configured
+         * @type {Boolean}
+         */
+        this.hasResultsPerPage = isArray(this.resultsPerPage);
+
+        /**
+         * Css class for the results per page select
+         * @type {String}
+         */
         this.resultsSlcCssClass = f.results_slc_css_class || 'rspg';
-        //css class for label preceding results per page select
+
+        /**
+         * Css class for the label preceding results per page select
+         * @type {String}
+         */
         this.resultsSpanCssClass = f.results_span_css_class || 'rspgSpan';
-        //1st row index of current page
+
+        /**
+         * Index of the first row of current page
+         * @type {Number}
+         * @private
+         */
         this.startPagingRow = 0;
-        //total nb of pages
+
+        /**
+         * Total number of pages
+         * @type {Number}
+         * @private
+         */
         this.nbPages = 0;
-        //current page nb
+
+        /**
+         * Current page number
+         * @type {Number}
+         * @private
+         */
         this.currentPageNb = 1;
-        //defines next page button text
+
+        /**
+         * Next page button text
+         * @type {String}
+         */
         this.btnNextPageText = f.btn_next_page_text || '>';
-        //defines previous page button text
+
+        /**
+         * Previous page button text
+         * @type {String}
+         */
         this.btnPrevPageText = f.btn_prev_page_text || '<';
-        //defines last page button text
+
+        /**
+         * Last page button text
+         * @type {String}
+         */
         this.btnLastPageText = f.btn_last_page_text || '>|';
-        //defines first page button text
+
+        /**
+         * First page button text
+         * @type {String}
+         */
         this.btnFirstPageText = f.btn_first_page_text || '|<';
-        //defines next page button html
+
+        /**
+         * Next page button HTML
+         * @type {String}
+         */
         this.btnNextPageHtml = f.btn_next_page_html ||
             (!tf.enableIcons ? null :
                 '<input type="button" value="" class="' + this.btnPageCssClass +
                 ' nextPage" title="Next page" />');
-        //defines previous page button html
+
+        /**
+         * Previous page button HTML
+         * @type {String}
+         */
         this.btnPrevPageHtml = f.btn_prev_page_html ||
             (!tf.enableIcons ? null :
                 '<input type="button" value="" class="' + this.btnPageCssClass +
                 ' previousPage" title="Previous page" />');
-        //defines last page button html
+
+        /**
+         * First page button HTML
+         * @type {String}
+         */
         this.btnFirstPageHtml = f.btn_first_page_html ||
             (!tf.enableIcons ? null :
                 '<input type="button" value="" class="' + this.btnPageCssClass +
                 ' firstPage" title="First page" />');
-        //defines previous page button html
+
+        /**
+         * Last page button HTML
+         * @type {String}
+         */
         this.btnLastPageHtml = f.btn_last_page_html ||
             (!tf.enableIcons ? null :
                 '<input type="button" value="" class="' + this.btnPageCssClass +
                 ' lastPage" title="Last page" />');
-        //defines text preceeding page selector drop-down
-        this.pageText = f.page_text || ' Page ';
-        //defines text after page selector drop-down
-        this.ofText = f.of_text || ' of ';
-        //css class for span containing tot nb of pages
-        this.nbPgSpanCssClass = f.nb_pages_css_class || 'nbpg';
-        //enables/disables paging buttons
-        this.hasPagingBtns = f.paging_btns === false ? false : true;
-        //defines previous page button html
-        this.pageSelectorType = f.page_selector_type || tf.fltTypeSlc;
-        //calls function before page is changed
-        this.onBeforeChangePage = Types.isFn(f.on_before_change_page) ?
-            f.on_before_change_page : null;
-        //calls function before page is changed
-        this.onAfterChangePage = Types.isFn(f.on_after_change_page) ?
-            f.on_after_change_page : null;
 
-        //pages select
-        this.prfxSlcPages = 'slcPages_';
-        //results per page select
-        this.prfxSlcResults = 'slcResults_';
-        //label preciding results per page select
-        this.prfxSlcResultsTxt = 'slcResultsTxt_';
-        //span containing next page button
-        this.prfxBtnNextSpan = 'btnNextSpan_';
-        //span containing previous page button
-        this.prfxBtnPrevSpan = 'btnPrevSpan_';
-        //span containing last page button
-        this.prfxBtnLastSpan = 'btnLastSpan_';
-        //span containing first page button
-        this.prfxBtnFirstSpan = 'btnFirstSpan_';
-        //next button
-        this.prfxBtnNext = 'btnNext_';
-        //previous button
-        this.prfxBtnPrev = 'btnPrev_';
-        //last button
-        this.prfxBtnLast = 'btnLast_';
-        //first button
-        this.prfxBtnFirst = 'btnFirst_';
-        //span for tot nb pages
-        this.prfxPgSpan = 'pgspan_';
-        //span preceding pages select (contains 'Page')
-        this.prfxPgBeforeSpan = 'pgbeforespan_';
-        //span following pages select (contains ' of ')
-        this.prfxPgAfterSpan = 'pgafterspan_';
+        /**
+         * Text preceeding page selector drop-down
+         * @type {String}
+         */
+        this.pageText = f.page_text || ' Page ';
+
+        /**
+         * Text after page selector drop-down
+         * @type {String}
+         */
+        this.ofText = f.of_text || ' of ';
+
+        /**
+         * Css class for the span containing total number of pages
+         * @type {String}
+         */
+        this.nbPgSpanCssClass = f.nb_pages_css_class || 'nbpg';
+
+        /**
+         * Determines if paging buttons are enabled (default: true)
+         * @type {Boolean}
+         */
+        this.hasPagingBtns = f.paging_btns === false ? false : true;
+
+        /**
+         * Defines page selector type, two possible values: 'select', 'input'
+         * @type {String}
+         */
+        this.pageSelectorType = f.page_selector_type || SELECT;
+
+        /**
+         * Callback fired before the page is changed
+         * @type {Function}
+         */
+        this.onBeforeChangePage = isFn(f.on_before_change_page) ?
+            f.on_before_change_page : EMPTY_FN;
+
+        /**
+         * Callback fired after the page is changed
+         * @type {Function}
+         */
+        this.onAfterChangePage = isFn(f.on_after_change_page) ?
+            f.on_after_change_page : EMPTY_FN;
+
+        /**
+         * Label preciding results per page select
+         * @type {DOMElement}
+         * @private
+         */
+        this.slcResultsTxt = null;
+        /**
+         * Span containing next page button
+         * @type {DOMElement}
+         * @private
+         */
+        this.btnNextCont = null;
+        /**
+         * Span containing previous page button
+         * @type {DOMElement}
+         * @private
+         */
+        this.btnPrevCont = null;
+        /**
+         * Span containing last page button
+         * @type {DOMElement}
+         * @private
+         */
+        this.btnLastCont = null;
+        /**
+         * Span containing first page button
+         * @type {DOMElement}
+         * @private
+         */
+        this.btnFirstCont = null;
+        /**
+         * Span for tot nb pages
+         * @type {DOMElement}
+         * @private
+         */
+        this.pgCont = null;
+        /**
+         * Span preceding pages select (contains 'Page')
+         * @type {DOMElement}
+         * @private
+         */
+        this.pgBefore = null;
+        /**
+         * Span following pages select (contains ' of ')
+         * @type {DOMElement}
+         * @private
+         */
+        this.pgAfter = null;
 
         var start_row = tf.refRow;
-        var nrows = tf.nbRows;
+        var nrows = tf.getRowsNb(true);
         //calculates page nb
         this.nbPages = Math.ceil((nrows - start_row) / this.pagingLength);
 
-        //Paging elements events
         var o = this;
-        // Paging DOM events
+        /**
+         * Paging DOM events handlers
+         * @type {String}
+         * @private
+         */
         this.evt = {
             slcIndex() {
-                return (o.pageSelectorType === tf.fltTypeSlc) ?
+                return (o.pageSelectorType === SELECT) ?
                     o.pagingSlc.options.selectedIndex :
                     parseInt(o.pagingSlc.value, 10) - 1;
             },
             nbOpts() {
-                return (o.pageSelectorType === tf.fltTypeSlc) ?
+                return (o.pageSelectorType === SELECT) ?
                     parseInt(o.pagingSlc.options.length, 10) - 1 :
                     (o.nbPages - 1);
             },
@@ -156,8 +308,8 @@ export class Paging extends Feature {
                 o.changePage(0);
             },
             _detectKey(e) {
-                var key = Event.keyCode(e);
-                if (key === 13) {
+                var key = keyCode(e);
+                if (key === ENTER_KEY) {
                     if (tf.sorted) {
                         tf.filter();
                         o.changePage(o.evt.slcIndex());
@@ -204,98 +356,81 @@ export class Paging extends Feature {
         };
 
         // Paging drop-down list selector
-        if (this.pageSelectorType === tf.fltTypeSlc) {
-            slcPages = Dom.create(
-                tf.fltTypeSlc, ['id', this.prfxSlcPages + tf.id]);
+        if (this.pageSelectorType === SELECT) {
+            slcPages = createElm(SELECT);
             slcPages.className = this.pgSlcCssClass;
-            Event.add(slcPages, 'change', evt.slcPagesChange);
+            addEvt(slcPages, 'change', evt.slcPagesChange);
         }
 
         // Paging input selector
-        if (this.pageSelectorType === tf.fltTypeInp) {
-            slcPages = Dom.create(
-                tf.fltTypeInp,
-                ['id', this.prfxSlcPages + tf.id],
-                ['value', this.currentPageNb]
-            );
+        if (this.pageSelectorType === INPUT) {
+            slcPages = createElm(INPUT, ['value', this.currentPageNb]);
             slcPages.className = this.pgInpCssClass;
-            Event.add(slcPages, 'keypress', evt._detectKey);
+            addEvt(slcPages, 'keypress', evt._detectKey);
         }
 
         // btns containers
-        var btnNextSpan = Dom.create(
-            'span', ['id', this.prfxBtnNextSpan + tf.id]);
-        var btnPrevSpan = Dom.create(
-            'span', ['id', this.prfxBtnPrevSpan + tf.id]);
-        var btnLastSpan = Dom.create(
-            'span', ['id', this.prfxBtnLastSpan + tf.id]);
-        var btnFirstSpan = Dom.create(
-            'span', ['id', this.prfxBtnFirstSpan + tf.id]);
+        var btnNextSpan = createElm('span');
+        var btnPrevSpan = createElm('span');
+        var btnLastSpan = createElm('span');
+        var btnFirstSpan = createElm('span');
 
         if (this.hasPagingBtns) {
             // Next button
             if (!this.btnNextPageHtml) {
-                var btn_next = Dom.create(
-                    tf.fltTypeInp,
-                    ['id', this.prfxBtnNext + tf.id],
+                var btnNext = createElm(INPUT,
                     ['type', 'button'],
                     ['value', this.btnNextPageText],
                     ['title', 'Next']
                 );
-                btn_next.className = this.btnPageCssClass;
-                Event.add(btn_next, 'click', evt.next);
-                btnNextSpan.appendChild(btn_next);
+                btnNext.className = this.btnPageCssClass;
+                addEvt(btnNext, 'click', evt.next);
+                btnNextSpan.appendChild(btnNext);
             } else {
                 btnNextSpan.innerHTML = this.btnNextPageHtml;
-                Event.add(btnNextSpan, 'click', evt.next);
+                addEvt(btnNextSpan, 'click', evt.next);
             }
             // Previous button
             if (!this.btnPrevPageHtml) {
-                var btn_prev = Dom.create(
-                    tf.fltTypeInp,
-                    ['id', this.prfxBtnPrev + tf.id],
+                var btnPrev = createElm(INPUT,
                     ['type', 'button'],
                     ['value', this.btnPrevPageText],
                     ['title', 'Previous']
                 );
-                btn_prev.className = this.btnPageCssClass;
-                Event.add(btn_prev, 'click', evt.prev);
-                btnPrevSpan.appendChild(btn_prev);
+                btnPrev.className = this.btnPageCssClass;
+                addEvt(btnPrev, 'click', evt.prev);
+                btnPrevSpan.appendChild(btnPrev);
             } else {
                 btnPrevSpan.innerHTML = this.btnPrevPageHtml;
-                Event.add(btnPrevSpan, 'click', evt.prev);
+                addEvt(btnPrevSpan, 'click', evt.prev);
             }
             // Last button
             if (!this.btnLastPageHtml) {
-                var btn_last = Dom.create(
-                    tf.fltTypeInp,
-                    ['id', this.prfxBtnLast + tf.id],
+                var btnLast = createElm(INPUT,
                     ['type', 'button'],
                     ['value', this.btnLastPageText],
                     ['title', 'Last']
                 );
-                btn_last.className = this.btnPageCssClass;
-                Event.add(btn_last, 'click', evt.last);
-                btnLastSpan.appendChild(btn_last);
+                btnLast.className = this.btnPageCssClass;
+                addEvt(btnLast, 'click', evt.last);
+                btnLastSpan.appendChild(btnLast);
             } else {
                 btnLastSpan.innerHTML = this.btnLastPageHtml;
-                Event.add(btnLastSpan, 'click', evt.last);
+                addEvt(btnLastSpan, 'click', evt.last);
             }
             // First button
             if (!this.btnFirstPageHtml) {
-                var btn_first = Dom.create(
-                    tf.fltTypeInp,
-                    ['id', this.prfxBtnFirst + tf.id],
+                var btnFirst = createElm(INPUT,
                     ['type', 'button'],
                     ['value', this.btnFirstPageText],
                     ['title', 'First']
                 );
-                btn_first.className = this.btnPageCssClass;
-                Event.add(btn_first, 'click', evt.first);
-                btnFirstSpan.appendChild(btn_first);
+                btnFirst.className = this.btnPageCssClass;
+                addEvt(btnFirst, 'click', evt.first);
+                btnFirstSpan.appendChild(btnFirst);
             } else {
                 btnFirstSpan.innerHTML = this.btnFirstPageHtml;
-                Event.add(btnFirstSpan, 'click', evt.first);
+                addEvt(btnFirstSpan, 'click', evt.first);
             }
         }
 
@@ -303,28 +438,34 @@ export class Paging extends Feature {
         if (!this.pagingTgtId) {
             tf.setToolbar();
         }
-        var targetEl = !this.pagingTgtId ? tf.mDiv : Dom.id(this.pagingTgtId);
+        var targetEl = !this.pagingTgtId ? tf.mDiv : elm(this.pagingTgtId);
         targetEl.appendChild(btnFirstSpan);
         targetEl.appendChild(btnPrevSpan);
 
-        var pgBeforeSpan = Dom.create(
-            'span', ['id', this.prfxPgBeforeSpan + tf.id]);
-        pgBeforeSpan.appendChild(Dom.text(this.pageText));
+        var pgBeforeSpan = createElm('span');
+        pgBeforeSpan.appendChild(createText(this.pageText));
         pgBeforeSpan.className = this.nbPgSpanCssClass;
         targetEl.appendChild(pgBeforeSpan);
         targetEl.appendChild(slcPages);
-        var pgAfterSpan = Dom.create(
-            'span', ['id', this.prfxPgAfterSpan + tf.id]);
-        pgAfterSpan.appendChild(Dom.text(this.ofText));
+        var pgAfterSpan = createElm('span');
+        pgAfterSpan.appendChild(createText(this.ofText));
         pgAfterSpan.className = this.nbPgSpanCssClass;
         targetEl.appendChild(pgAfterSpan);
-        var pgspan = Dom.create('span', ['id', this.prfxPgSpan + tf.id]);
-        pgspan.className = this.nbPgSpanCssClass;
-        pgspan.appendChild(Dom.text(' ' + this.nbPages + ' '));
-        targetEl.appendChild(pgspan);
+        var pgSpan = createElm('span');
+        pgSpan.className = this.nbPgSpanCssClass;
+        pgSpan.appendChild(createText(' ' + this.nbPages + ' '));
+        targetEl.appendChild(pgSpan);
         targetEl.appendChild(btnNextSpan);
         targetEl.appendChild(btnLastSpan);
-        this.pagingSlc = Dom.id(this.prfxSlcPages + tf.id);
+
+        this.btnNextCont = btnNextSpan;
+        this.btnPrevCont = btnPrevSpan;
+        this.btnLastCont = btnLastSpan;
+        this.btnFirstCont = btnFirstSpan;
+        this.pgCont = pgSpan;
+        this.pgBefore = pgBeforeSpan;
+        this.pgAfter = pgAfterSpan;
+        this.pagingSlc = slcPages;
 
         this.setPagingInfo();
 
@@ -339,6 +480,7 @@ export class Paging extends Feature {
         this.emitter.on(['change-page-results'],
             (tf, pageLength) => this.changeResultsPerPage(pageLength));
 
+        /** @inherited */
         this.initialized = true;
     }
 
@@ -375,8 +517,7 @@ export class Paging extends Feature {
      */
     setPagingInfo(validRows) {
         var tf = this.tf;
-        var mdiv = !this.pagingTgtId ? tf.mDiv : Dom.id(this.pagingTgtId);
-        var pgspan = Dom.id(this.prfxPgSpan + tf.id);
+        var mdiv = !this.pagingTgtId ? tf.mDiv : elm(this.pagingTgtId);
 
         //store valid rows indexes
         tf.validRowsIndex = validRows || tf.getValidRows(true);
@@ -384,18 +525,17 @@ export class Paging extends Feature {
         //calculate nb of pages
         this.nbPages = Math.ceil(tf.validRowsIndex.length / this.pagingLength);
         //refresh page nb span
-        pgspan.innerHTML = this.nbPages;
+        this.pgCont.innerHTML = this.nbPages;
         //select clearing shortcut
-        if (this.pageSelectorType === tf.fltTypeSlc) {
+        if (this.pageSelectorType === SELECT) {
             this.pagingSlc.innerHTML = '';
         }
 
         if (this.nbPages > 0) {
             mdiv.style.visibility = 'visible';
-            if (this.pageSelectorType === tf.fltTypeSlc) {
+            if (this.pageSelectorType === SELECT) {
                 for (var z = 0; z < this.nbPages; z++) {
-                    var opt = Dom.createOpt(z + 1, z * this.pagingLength,
-                        false);
+                    var opt = createOpt(z + 1, z * this.pagingLength, false);
                     this.pagingSlc.options[z] = opt;
                 }
             } else {
@@ -426,25 +566,22 @@ export class Paging extends Feature {
         }
 
         //this loop shows valid rows of current page
-        for (var h = 0, len = tf.validRowsIndex.length; h < len; h++) {
+        for (var h = 0, len = tf.getValidRowsNb(true); h < len; h++) {
             var validRowIdx = tf.validRowsIndex[h];
             var r = rows[validRowIdx];
             var isRowValid = r.getAttribute('validRow');
             var rowDisplayed = false;
 
             if (h >= startPagingRow && h < endPagingRow) {
-                if (Types.isNull(isRowValid) ||
-                    Boolean(isRowValid === 'true')) {
+                if (isNull(isRowValid) || Boolean(isRowValid === 'true')) {
                     r.style.display = '';
                     rowDisplayed = true;
                 }
             } else {
-                r.style.display = 'none';
+                r.style.display = NONE;
             }
             this.emitter.emit('row-paged', tf, validRowIdx, h, rowDisplayed);
         }
-
-        tf.nbVisibleRows = tf.validRowsIndex.length;
 
         // broadcast grouping by page
         this.emitter.emit('grouped-by-page', tf, this);
@@ -465,13 +602,13 @@ export class Paging extends Feature {
      */
     setPage(cmd) {
         var tf = this.tf;
-        if (!tf.hasGrid() || !this.isEnabled()) {
+        if (!tf.isInitialized() || !this.isEnabled()) {
             return;
         }
         var btnEvt = this.evt,
             cmdtype = typeof cmd;
         if (cmdtype === 'string') {
-            switch (Str.lower(cmd)) {
+            switch (cmd.toLowerCase()) {
                 case 'next':
                     btnEvt.next();
                     break;
@@ -510,13 +647,11 @@ export class Paging extends Feature {
             ev.target.blur();
         };
 
-        var slcR = Dom.create(
-            tf.fltTypeSlc, ['id', this.prfxSlcResults + tf.id]);
+        var slcR = createElm(SELECT);
         slcR.className = this.resultsSlcCssClass;
         var slcRText = this.resultsPerPage[0],
             slcROpts = this.resultsPerPage[1];
-        var slcRSpan = Dom.create(
-            'span', ['id', this.prfxSlcResultsTxt + tf.id]);
+        var slcRSpan = createElm('span');
         slcRSpan.className = this.resultsSpanCssClass;
 
         // results per page select is added to external element
@@ -524,8 +659,8 @@ export class Paging extends Feature {
             tf.setToolbar();
         }
         var targetEl = !this.resultsPerPageTgtId ?
-            tf.rDiv : Dom.id(this.resultsPerPageTgtId);
-        slcRSpan.appendChild(Dom.text(slcRText));
+            tf.rDiv : elm(this.resultsPerPageTgtId);
+        slcRSpan.appendChild(createText(slcRText));
 
         var help = tf.feature('help');
         if (help && help.btn) {
@@ -540,7 +675,8 @@ export class Paging extends Feature {
             var currOpt = new Option(slcROpts[r], slcROpts[r], false, false);
             slcR.options[r] = currOpt;
         }
-        Event.add(slcR, 'change', evt.slcResultsChange);
+        addEvt(slcR, 'change', evt.slcResultsChange);
+        this.slcResultsTxt = slcRSpan;
         this.resultsPerPageSlc = slcR;
     }
 
@@ -549,23 +685,23 @@ export class Paging extends Feature {
      */
     removeResultsPerPage() {
         var tf = this.tf;
-        if (!tf.hasGrid() || !this.resultsPerPageSlc || !this.resultsPerPage) {
+        if (!tf.isInitialized() || !this.resultsPerPageSlc ||
+            !this.resultsPerPage) {
             return;
         }
-        var slcR = this.resultsPerPageSlc,
-            slcRSpan = Dom.id(this.prfxSlcResultsTxt + tf.id);
-        if (slcR) {
-            Dom.remove(slcR);
+        if (this.resultsPerPageSlc) {
+            removeElm(this.resultsPerPageSlc);
         }
-        if (slcRSpan) {
-            Dom.remove(slcRSpan);
+        if (this.slcResultsTxt) {
+            removeElm(this.slcResultsTxt);
         }
         this.resultsPerPageSlc = null;
+        this.slcResultsTxt = null;
     }
 
     /**
-     * Change the page according to passed index
-     * @param  {Number} index Index of the page (0-n)
+     * Change the page based on passed index
+     * @param {Number} index Index of the page (0-n)
      */
     changePage(index) {
         var tf = this.tf;
@@ -577,33 +713,34 @@ export class Paging extends Feature {
         this.emitter.emit('before-page-change', tf, (index + 1));
 
         if (index === null) {
-            index = this.pageSelectorType === tf.fltTypeSlc ?
+            index = this.pageSelectorType === SELECT ?
                 this.pagingSlc.options.selectedIndex : this.pagingSlc.value - 1;
         }
         if (index >= 0 && index <= (this.nbPages - 1)) {
-            if (this.onBeforeChangePage) {
-                this.onBeforeChangePage.call(null, this, (index + 1));
-            }
+            this.onBeforeChangePage(this, (index + 1));
+
             this.currentPageNb = parseInt(index, 10) + 1;
-            if (this.pageSelectorType === tf.fltTypeSlc) {
+            if (this.pageSelectorType === SELECT) {
                 this.pagingSlc.options[index].selected = true;
             } else {
                 this.pagingSlc.value = this.currentPageNb;
             }
 
-            this.startPagingRow = (this.pageSelectorType === tf.fltTypeSlc) ?
+            this.startPagingRow = (this.pageSelectorType === SELECT) ?
                 this.pagingSlc.value : (index * this.pagingLength);
 
             this.groupByPage();
 
-            if (this.onAfterChangePage) {
-                this.onAfterChangePage.call(null, this, (index + 1));
-            }
+            this.onAfterChangePage(this, (index + 1));
         }
 
         this.emitter.emit('after-page-change', tf, (index + 1));
     }
 
+    /**
+     * Change the number of results per page based on passed value
+     * @param {String} val The number of results per page
+     */
     changeResultsPerPage(val) {
         if (!this.isEnabled() || isNaN(val)) {
             return;
@@ -627,7 +764,7 @@ export class Paging extends Feature {
 
         var slcR = this.resultsPerPageSlc;
         var slcIndex = slcR.selectedIndex;
-        var slcPagesSelIndex = (this.pageSelectorType === tf.fltTypeSlc) ?
+        var slcPagesSelIndex = (this.pageSelectorType === SELECT) ?
             this.pagingSlc.selectedIndex :
             parseInt(this.pagingSlc.value - 1, 10);
         this.pagingLength = parseInt(slcR.options[slcIndex].value, 10);
@@ -639,7 +776,7 @@ export class Paging extends Feature {
             }
             this.setPagingInfo();
 
-            if (this.pageSelectorType === tf.fltTypeSlc) {
+            if (this.pageSelectorType === SELECT) {
                 var slcIdx =
                     (this.pagingSlc.options.length - 1 <= slcPagesSelIndex) ?
                         (this.pagingSlc.options.length - 1) : slcPagesSelIndex;
@@ -688,65 +825,59 @@ export class Paging extends Feature {
      * Remove paging feature
      */
     destroy() {
-        var tf = this.tf;
-
         if (!this.initialized) {
             return;
         }
-        // btns containers
-        var btnNextSpan = Dom.id(this.prfxBtnNextSpan + tf.id);
-        var btnPrevSpan = Dom.id(this.prfxBtnPrevSpan + tf.id);
-        var btnLastSpan = Dom.id(this.prfxBtnLastSpan + tf.id);
-        var btnFirstSpan = Dom.id(this.prfxBtnFirstSpan + tf.id);
-        //span containing 'Page' text
-        var pgBeforeSpan = Dom.id(this.prfxPgBeforeSpan + tf.id);
-        //span containing 'of' text
-        var pgAfterSpan = Dom.id(this.prfxPgAfterSpan + tf.id);
-        //span containing nb of pages
-        var pgspan = Dom.id(this.prfxPgSpan + tf.id);
 
         var evt = this.evt;
 
         if (this.pagingSlc) {
-            if (this.pageSelectorType === tf.fltTypeSlc) {
-                Event.remove(this.pagingSlc, 'change', evt.slcPagesChange);
+            if (this.pageSelectorType === SELECT) {
+                removeEvt(this.pagingSlc, 'change', evt.slcPagesChange);
             }
-            else if (this.pageSelectorType === tf.fltTypeInp) {
-                Event.remove(this.pagingSlc, 'keypress', evt._detectKey);
+            else if (this.pageSelectorType === INPUT) {
+                removeEvt(this.pagingSlc, 'keypress', evt._detectKey);
             }
-            Dom.remove(this.pagingSlc);
+            removeElm(this.pagingSlc);
         }
 
-        if (btnNextSpan) {
-            Event.remove(btnNextSpan, 'click', evt.next);
-            Dom.remove(btnNextSpan);
+        if (this.btnNextCont) {
+            removeEvt(this.btnNextCont, 'click', evt.next);
+            removeElm(this.btnNextCont);
+            this.btnNextCont = null;
         }
 
-        if (btnPrevSpan) {
-            Event.remove(btnPrevSpan, 'click', evt.prev);
-            Dom.remove(btnPrevSpan);
+        if (this.btnPrevCont) {
+            removeEvt(this.btnPrevCont, 'click', evt.prev);
+            removeElm(this.btnPrevCont);
+            this.btnPrevCont = null;
         }
 
-        if (btnLastSpan) {
-            Event.remove(btnLastSpan, 'click', evt.last);
-            Dom.remove(btnLastSpan);
+        if (this.btnLastCont) {
+            removeEvt(this.btnLastCont, 'click', evt.last);
+            removeElm(this.btnLastCont);
+            this.btnLastCont = null;
         }
 
-        if (btnFirstSpan) {
-            Event.remove(btnFirstSpan, 'click', evt.first);
-            Dom.remove(btnFirstSpan);
+        if (this.btnFirstCont) {
+            removeEvt(this.btnFirstCont, 'click', evt.first);
+            removeElm(this.btnFirstCont);
+            this.btnFirstCont = null;
         }
 
-        if (pgBeforeSpan) {
-            Dom.remove(pgBeforeSpan);
+        if (this.pgBefore) {
+            removeElm(this.pgBefore);
+            this.pgBefore = null;
         }
 
-        if (pgAfterSpan) {
-            Dom.remove(pgAfterSpan);
+        if (this.pgAfter) {
+            removeElm(this.pgAfter);
+            this.pgAfter = null;
         }
 
-        if (pgspan) {
-            Dom.remove(pgspan);
+        if (this.pgCont) {
+            removeElm(this.pgCont);
+            this.pgCont = null;
         }
 
         if (this.hasResultsPerPage) {

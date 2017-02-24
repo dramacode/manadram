@@ -17,20 +17,20 @@
                 <tbody>
                     
                     <tr class="character" id="A">
-                        <td class="configuration"><input type="hidden" value="A" name="pattern[A][0]"></td>
-                        <td class="configuration"><input type="hidden" value="A" name="pattern[A][1]"></td>
-                        <td class="configuration"><input type="hidden" value="A" name="pattern[A][2]"></td>
+                        <td class="configuration"><input type="hidden" value="0" name="pattern[A][0]"></td>
+                        <td class="configuration"><input type="hidden" value="0" name="pattern[A][1]"></td>
+                        <td class="configuration"><input type="hidden" value="0" name="pattern[A][2]"></td>
                     </tr>
 
                     <tr class="character" id="B">
-                        <td class="configuration"><input type="hidden" value="A" name="pattern[B][0]"></td>
-                        <td class="configuration"><input type="hidden" value="A" name="pattern[B][1]"></td>
-                        <td class="configuration"><input type="hidden" value="A" name="pattern[B][2]"></td>
+                        <td class="configuration"><input type="hidden" value="0" name="pattern[B][0]"></td>
+                        <td class="configuration"><input type="hidden" value="0" name="pattern[B][1]"></td>
+                        <td class="configuration"><input type="hidden" value="0" name="pattern[B][2]"></td>
                     </tr>
                     <tr class="character" id="C">
-                        <td class="configuration"><input type="hidden" value="A" name="pattern[C][0]"></td>
-                        <td class="configuration"><input type="hidden" value="A" name="pattern[C][1]"></td>
-                        <td class="configuration"><input type="hidden" value="A" name="pattern[C][2]"></td>
+                        <td class="configuration"><input type="hidden" value="0" name="pattern[C][0]"></td>
+                        <td class="configuration"><input type="hidden" value="0" name="pattern[C][1]"></td>
+                        <td class="configuration"><input type="hidden" value="0" name="pattern[C][2]"></td>
                     </tr>
                 </tbody>
             </table>
@@ -63,6 +63,11 @@
                 </div>
             </div>          
         </div></div>
+     <div id="filters">
+     <?php
+        echo file_get_contents("tpl/filters.html");
+        ?>
+        </div>
      </form>
 
 </div>

@@ -1,94 +1,128 @@
-import {Feature} from './feature';
-import Dom from '../dom';
-import Event from '../event';
+import {Feature} from '../feature';
+import {createElm, createText, elm, removeElm} from '../dom';
+import {addEvt} from '../event';
 
-export class ClearButton extends Feature{
+/**
+ * Clear button UI component
+ */
+export class ClearButton extends Feature {
 
     /**
-     * Clear button component
-     * @param {Object} tf TableFilter instance
+     * Creates an instance of ClearButton
+     * @param {TableFilter} tf TableFilter instance
      */
-    constructor(tf){
+    constructor(tf) {
         super(tf, 'btnReset');
 
-        // Configuration object
-        var f = this.config;
+        let f = this.config;
 
-        //id of container element
-        this.btnResetTgtId = f.btn_reset_target_id || null;
-        //reset button element
-        this.btnResetEl = null;
-        //defines reset text
-        this.btnResetText = f.btn_reset_text || 'Reset';
-        //defines reset button tooltip
-        this.btnResetTooltip = f.btn_reset_tooltip || 'Clear filters';
-        //defines reset button innerHtml
-        this.btnResetHtml = f.btn_reset_html ||
+        /**
+         * Container element ID
+         * @type {String}
+         */
+        this.targetId = f.btn_reset_target_id || null;
+
+        /**
+         * Clear button container element
+         * @type {DOMElement}
+         * @private
+         */
+        this.container = null;
+
+        /**
+         * Clear button element
+         * @type {DOMElement}
+         * @private
+         */
+        this.element = null;
+
+        /**
+         * Text for the clear button
+         * @type {String}
+         */
+        this.text = f.btn_reset_text || 'Reset';
+
+        /**
+         * Css class for reset button
+         * @type {String}
+         */
+        this.cssClass = f.btn_reset_css_class || 'reset';
+
+        /**
+         * Tooltip text for the clear button
+         * @type {String}
+         */
+        this.tooltip = f.btn_reset_tooltip || 'Clear filters';
+
+        /**
+         * Custom Html string for the clear button
+         * @type {String}
+         */
+        this.html = f.btn_reset_html ||
             (!tf.enableIcons ? null :
-            '<input type="button" value="" class="'+tf.btnResetCssClass+'" ' +
-            'title="'+this.btnResetTooltip+'" />');
-        //span containing reset button
-        this.prfxResetSpan = 'resetspan_';
+                '<input type="button" value="" class="' + this.cssClass +
+                '" ' + 'title="' + this.tooltip + '" />');
     }
 
-    onClick(){
-        if(!this.isEnabled()){
+    /**
+     * Click event handler for clear button
+     * @private
+     */
+    onClick() {
+        if (!this.isEnabled()) {
             return;
         }
         this.tf.clearFilters();
     }
 
     /**
-     * Build DOM elements
+     * Initialize clear button component
      */
-    init(){
-        var tf = this.tf;
+    init() {
+        let tf = this.tf;
 
-        if(this.initialized){
+        if (this.initialized) {
             return;
         }
 
-        var resetspan = Dom.create('span', ['id', this.prfxResetSpan+tf.id]);
+        let cont = createElm('span');
 
         // reset button is added to defined element
-        if(!this.btnResetTgtId){
+        if (!this.targetId) {
             tf.setToolbar();
         }
-        var targetEl = !this.btnResetTgtId ?
-            tf.rDiv : Dom.id(this.btnResetTgtId);
-        targetEl.appendChild(resetspan);
+        let targetEl = !this.targetId ? tf.rDiv : elm(this.targetId);
+        targetEl.appendChild(cont);
 
-        if(!this.btnResetHtml){
-            var fltreset = Dom.create('a', ['href', 'javascript:void(0);']);
-            fltreset.className = tf.btnResetCssClass;
-            fltreset.appendChild(Dom.text(this.btnResetText));
-            resetspan.appendChild(fltreset);
-            Event.add(fltreset, 'click', ()=> { this.onClick(); });
+        if (!this.html) {
+            let fltReset = createElm('a', ['href', 'javascript:void(0);']);
+            fltReset.className = this.cssClass;
+            fltReset.appendChild(createText(this.text));
+            cont.appendChild(fltReset);
+            addEvt(fltReset, 'click', () => this.onClick());
         } else {
-            resetspan.innerHTML = this.btnResetHtml;
-            var resetEl = resetspan.firstChild;
-            Event.add(resetEl, 'click', ()=> { this.onClick(); });
+            cont.innerHTML = this.html;
+            let resetEl = cont.firstChild;
+            addEvt(resetEl, 'click', () => this.onClick());
         }
-        this.btnResetEl = resetspan.firstChild;
+        this.element = cont.firstChild;
+        this.container = cont;
 
+        /** @inherited */
         this.initialized = true;
     }
 
     /**
-     * Remove clear button UI
+     * Destroy ClearButton instance
      */
-    destroy(){
-        var tf = this.tf;
-
-        if(!this.initialized){
+    destroy() {
+        if (!this.initialized) {
             return;
         }
-
-        var resetspan = Dom.id(this.prfxResetSpan+tf.id);
-        if(resetspan){
-            Dom.remove(resetspan);
-        }
-        this.btnResetEl = null;
+        removeElm(this.element);
+        removeElm(this.container);
+        this.element = null;
+        this.container = null;
         this.initialized = false;
     }
 }

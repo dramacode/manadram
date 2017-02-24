@@ -1,31 +1,118 @@
-import Dom from '../../dom';
-import Str from '../../string';
-import Types from '../../types';
+import {Feature} from '../../feature';
+import {createText, elm} from '../../dom';
+import {isArray, isFn, isUndef, isEmpty, EMPTY_FN} from '../../types';
+import {numSortAsc} from '../../sort';
 
-export default class ColOps{
+const EVENTS = [
+    'after-filtering',
+    'after-page-change',
+    'after-page-length-change'
+];
+
+const SUM = 'sum';
+const MEAN = 'mean';
+const MIN = 'min';
+const MAX = 'max';
+const MEDIAN = 'median';
+const Q1 = 'q1';
+const Q3 = 'q3';
+
+/**
+ * Column calculations extension
+ */
+export default class ColOps extends Feature {
 
     /**
-     * Column calculations
-     * @param {Object} tf TableFilter instance
+     * Creates an instance of ColOps
+     *
+     * @param {TableFilter} tf TableFilter instance
+     * @param {Object} opts Configuration object
      */
     constructor(tf, opts) {
+        super(tf, opts.name);
 
-        //calls function before col operation
-        this.onBeforeOperation = Types.isFn(opts.on_before_operation) ?
-            opts.on_before_operation : null;
-        //calls function after col operation
-        this.onAfterOperation = Types.isFn(opts.on_after_operation) ?
-            opts.on_after_operation : null;
+        /**
+         * Callback fired before columns operations start
+         * @type {Function}
+         */
+        this.onBeforeOperation = isFn(opts.on_before_operation) ?
+            opts.on_before_operation : EMPTY_FN;
 
+        /**
+         * Callback fired after columns operations are completed
+         * @type {Function}
+         */
+        this.onAfterOperation = isFn(opts.on_after_operation) ?
+            opts.on_after_operation : EMPTY_FN;
+
+        /**
+         * Configuration options
+         * @type {Object}
+         */
         this.opts = opts;
-        this.tf = tf;
+
+        /**
+         * List of DOM element IDs containing column's calculation result
+         * @type {Array}
+         */
+        this.labelIds = opts.id || [];
+
+        /**
+         * List of columns' indexes for calculations
+         * @type {Array}
+         */
+        this.colIndexes = opts.col || [];
+
+        /**
+         * List of operations - possible values: 'sum', 'mean', 'min', 'max',
+         * 'median', 'q1', 'q3'
+         * @type {Array}
+         */
+        this.operations = opts.operation || [];
+
+        /**
+         * List of write methods used to write the result - possible values:
+         * 'innerHTML', 'setValue', 'createTextNode'
+         * @type {Array}
+         */
+        this.outputTypes = opts.write_method || [];
+
+        /**
+         * List of row indexes displaying the results
+         * @type {Array}
+         */
+        this.totRowIndexes = opts.tot_row_index || [];
+
+        /**
+         * List of row indexes excluded from calculations
+         * @type {Array}
+         */
+        this.excludeRows = opts.exclude_row || [];
+
+        /**
+         * List of decimal precision for calculation results
+         * @type {Array}
+         */
+        this.decimalPrecisions = isUndef(opts.decimal_precision) ?
+                2 : opts.decimal_precision;
+
+        this.enable();
     }
 
-    init(){
+    /**
+     * Initializes ColOps instance
+     */
+    init() {
+        if (this.initialized) {
+            return;
+        }
         // subscribe to events
-        this.tf.emitter.on(['after-filtering'], ()=> this.calc());
+        this.emitter.on(EVENTS, () => this.calcAll());
 
-        this.calc();
+        this.calcAll();
+
+        /** @inherited */
+        this.initialized = true;
     }
 
     /**
@@ -44,280 +131,313 @@ export default class ColOps{
      * (1) optimized the routine (now it will only process each column once),
      * (2) added calculations for the median, lower and upper quartile.
      */
-    calc() {
-        var tf = this.tf;
-        if(!tf.hasGrid()){
+    calcAll() {
+        let tf = this.tf;
+        if (!tf.isInitialized()) {
             return;
         }
 
-        if(this.onBeforeOperation){
-            this.onBeforeOperation.call(null, tf);
-        }
+        this.onBeforeOperation(tf, this);
+        this.emitter.emit('before-column-operation', tf, this);
 
-        var opts = this.opts,
-            labelId = opts.id,
-            colIndex = opts.col,
-            operation = opts.operation,
-            outputType = opts.write_method,
-            totRowIndex = opts.tot_row_index,
-            excludeRow = opts.exclude_row,
-            decimalPrecision = Types.isUndef(opts.decimal_precision) ?
-                2 : opts.decimal_precision;
+        let colIndexes = this.colIndexes,
+            colOperations = this.operations,
+            outputTypes = this.outputTypes,
+            totRowIndexes = this.totRowIndexes,
+            excludeRows = this.excludeRows,
+            decimalPrecisions = isUndef(this.decimalPrecisions) ?
+                2 : this.decimalPrecisions;
 
         //nuovella: determine unique list of columns to operate on
-        var ucolIndex = [],
-            ucolMax = 0;
-        ucolIndex[ucolMax] = colIndex[0];
+        let uIndexes = [];
+        colIndexes.forEach((val) => {
+            if (uIndexes.indexOf(val) === -1) {
+                uIndexes.push(val);
+            }
+        });
 
-        for(var ii=1; ii<colIndex.length; ii++){
-            var saved = 0;
-            //see if colIndex[ii] is already in the list of unique indexes
-            for(var jj=0; jj<=ucolMax; jj++){
-                if(ucolIndex[jj] === colIndex[ii]){
-                    saved = 1;
+        let nbCols = uIndexes.length,
+            rows = tf.tbl.rows,
+            colValues = [];
+
+        for (let u = 0; u < nbCols; u++) {
+            //this retrieves col values
+            //use uIndexes because we only want to pass through this loop
+            //once for each column get the values in this unique column
+            colValues.push(
+                tf.getFilteredDataCol(uIndexes[u], false, true, excludeRows)
+            );
+
+            let curValues = colValues[u];
+
+            //next: calculate all operations for this column
+            let result = 0,
+                operations = [],
+                precisions = [],
+                labels = [],
+                writeType,
+                idx = 0;
+
+            for (let k = 0; k < colIndexes.length; k++) {
+                if (colIndexes[k] !== uIndexes[u]) {
+                    continue;
                 }
+                operations[idx] = (colOperations[k] || 'sum').toLowerCase();
+                precisions[idx] = decimalPrecisions[k];
+                labels[idx] = this.labelIds[k];
+                writeType = isArray(outputTypes) ? outputTypes[k] : null;
+                idx++;
             }
-            //if not saved then, save the index;
-            if (saved === 0){
-                ucolMax++;
-                ucolIndex[ucolMax] = colIndex[ii];
+
+            for (let i = 0; i < idx; i++) {
+                // emit values before column calculation
+                this.emitter.emit(
+                    'before-column-calc',
+                    tf,
+                    this,
+                    uIndexes[u],
+                    curValues,
+                    operations[i],
+                    precisions[i]
+                );
+
+                result = Number(this.calc(curValues, operations[i], null));
+
+                // emit column calculation result
+                this.emitter.emit(
+                    'column-calc',
+                    tf,
+                    this,
+                    uIndexes[u],
+                    result,
+                    operations[i],
+                    precisions[i]
+                );
+
+                // write result in expected DOM element
+                this.writeResult(
+                    result,
+                    labels[i],
+                    writeType,
+                    precisions[i]
+                );
+
+            }//for i
+
+            // row(s) with result are always visible
+            let totRow = totRowIndexes && totRowIndexes[u] ?
+                rows[totRowIndexes[u]] : null;
+            if (totRow) {
+                totRow.style.display = '';
             }
+        }//for u
+
+        this.onAfterOperation(tf, this);
+        this.emitter.emit('after-column-operation', tf, this);
+    }
+
+    /**
+     * Make desired calculation on specified column.
+     * @param {Number} colIndex Column index
+     * @param {String} [operation=SUM] Operation type
+     * @param {Number} precision Decimal precision
+     * @returns {Number}
+     */
+    columnCalc(colIndex, operation = SUM, precision) {
+        let excludeRows = this.excludeRows || [];
+        let colValues =
+            this.tf.getFilteredDataCol(colIndex, false, true, excludeRows);
+        return Number(this.calc(colValues, operation, precision));
+    }
+
+    /**
+     * Make calculation on passed values.
+     * @param {Array} values List of values
+     * @param {String} [operation=SUM] Optional operation type
+     * @param {Number} precision Optional result precision
+     * @returns {Number}
+     * @private
+     */
+    calc(colValues, operation = SUM, precision) {
+        let result = 0;
+
+        if (operation === Q1 || operation === Q3 || operation === MEDIAN) {
+            colValues = this.sortColumnValues(colValues, numSortAsc);
         }
 
-        if(Str.lower(typeof labelId)=='object' &&
-            Str.lower(typeof colIndex)=='object' &&
-            Str.lower(typeof operation)=='object'){
-            var rows = tf.tbl.rows,
-                colvalues = [];
+        switch (operation) {
+            case MEAN:
+                result = this.calcMean(colValues);
+                break;
+            case SUM:
+                result = this.calcSum(colValues);
+                break;
+            case MIN:
+                result = this.calcMin(colValues);
+                break;
+            case MAX:
+                result = this.calcMax(colValues);
+                break;
+            case MEDIAN:
+                result = this.calcMedian(colValues);
+                break;
+            case Q1:
+                result = this.calcQ1(colValues);
+                break;
+            case Q3:
+                result = this.calcQ3(colValues);
+                break;
+        }
 
-            for(var ucol=0; ucol<=ucolMax; ucol++){
-                //this retrieves col values
-                //use ucolIndex because we only want to pass through this loop
-                //once for each column get the values in this unique column
-                colvalues.push(
-                    tf.getColValues(ucolIndex[ucol], false, true, excludeRow));
+        return isEmpty(precision) ? result : result.toFixed(precision);
+    }
 
-                //next: calculate all operations for this column
-                var result,
-                    nbvalues=0,
-                    temp,
-                    meanValue=0,
-                    sumValue=0,
-                    minValue=null,
-                    maxValue=null,
-                    q1Value=null,
-                    medValue=null,
-                    q3Value=null,
-                    meanFlag=0,
-                    sumFlag=0,
-                    minFlag=0,
-                    maxFlag=0,
-                    q1Flag=0,
-                    medFlag=0,
-                    q3Flag=0,
-                    theList=[],
-                    opsThisCol=[],
-                    decThisCol=[],
-                    labThisCol=[],
-                    oTypeThisCol=[],
-                    mThisCol=-1;
+    /**
+     * Calculate the sum of passed values.
+     * @param {Array} [values=[]] List of values
+     * @returns {Number}
+     */
+    calcSum(values = []) {
+        if (isEmpty(values)) {
+            return 0;
+        }
+        let result = values.reduce((x, y) => Number(x) + Number(y));
+        return result;
+    }
 
-                for(var k=0; k<colIndex.length; k++){
-                    if(colIndex[k] === ucolIndex[ucol]){
-                        mThisCol++;
-                        opsThisCol[mThisCol]=Str.lower(operation[k]);
-                        decThisCol[mThisCol]=decimalPrecision[k];
-                        labThisCol[mThisCol]=labelId[k];
-                        oTypeThisCol = outputType !== undefined &&
-                            Str.lower(typeof outputType)==='object' ?
-                            outputType[k] : null;
+    /**
+     * Calculate the mean of passed values.
+     * @param {Array} [values=[]] List of values
+     * @returns {Number}
+     */
+    calcMean(values = []) {
+        let result = this.calcSum(values) / values.length;
+        return Number(result);
+    }
 
-                        switch(opsThisCol[mThisCol]){
-                            case 'mean':
-                                meanFlag=1;
-                                break;
-                            case 'sum':
-                                sumFlag=1;
-                                break;
-                            case 'min':
-                                minFlag=1;
-                                break;
-                            case 'max':
-                                maxFlag=1;
-                                break;
-                            case 'median':
-                                medFlag=1;
-                                break;
-                            case 'q1':
-                                q1Flag=1;
-                                break;
-                            case 'q3':
-                                q3Flag=1;
-                                break;
-                        }
-                    }
-                }
+    /**
+     * Calculate the max value of passed values.
+     * @param {Array} [values=[]] List of values
+     * @returns {Number}
+     */
+    calcMax(values = []) {
+        return Math.max.apply(null, values);
+    }
 
-                for(var j=0; j<colvalues[ucol].length; j++){
-                    //sort the list for calculation of median and quartiles
-                    if((q1Flag==1)|| (q3Flag==1) || (medFlag==1)){
-                        if (j<colvalues[ucol].length -1){
-                            for(k=j+1; k<colvalues[ucol].length; k++) {
-                                /* eslint-disable */
-                                if(eval(colvalues[ucol][k]) <
-                                    eval(colvalues[ucol][j])){
-                                /* eslint-enable */
-                                    temp = colvalues[ucol][j];
-                                    colvalues[ucol][j] = colvalues[ucol][k];
-                                    colvalues[ucol][k] = temp;
-                                }
-                            }
-                        }
-                    }
-                    var cvalue = parseFloat(colvalues[ucol][j]);
-                    theList[j] = parseFloat(cvalue);
+    /**
+     * Calculate the min value of passed values.
+     * @param {Array} [values=[]] List of values
+     * @returns {Number}
+     */
+    calcMin(values = []) {
+        return Math.min.apply(null, values);
+    }
 
-                    if(!isNaN(cvalue)){
-                        nbvalues++;
-                        if(sumFlag===1 || meanFlag===1){
-                            sumValue += parseFloat( cvalue );
-                        }
-                        if(minFlag===1){
-                            if(minValue===null){
-                                minValue = parseFloat( cvalue );
-                            } else{
-                                minValue = parseFloat( cvalue ) < minValue ?
-                                    parseFloat( cvalue ): minValue;
-                            }
-                        }
-                        if(maxFlag===1){
-                            if (maxValue===null){
-                                maxValue = parseFloat( cvalue );
-                            } else {
-                                maxValue = parseFloat( cvalue ) > maxValue ?
-                                    parseFloat( cvalue ): maxValue;
-                            }
-                        }
-                    }
-                }//for j
-                if(meanFlag===1){
-                    meanValue = sumValue/nbvalues;
-                }
-                if(medFlag===1){
-                    var aux = 0;
-                    if(nbvalues%2 === 1){
-                        aux = Math.floor(nbvalues/2);
-                        medValue = theList[aux];
-                    } else{
-                        medValue =
-                            (theList[nbvalues/2] + theList[((nbvalues/2)-1)])/2;
-                    }
-                }
-                var posa;
-                if(q1Flag===1){
-                    posa=0.0;
-                    posa = Math.floor(nbvalues/4);
-                    if(4*posa == nbvalues){
-                        q1Value = (theList[posa-1] + theList[posa])/2;
-                    } else {
-                        q1Value = theList[posa];
-                    }
-                }
-                if (q3Flag===1){
-                    posa=0.0;
-                    var posb=0.0;
-                    posa = Math.floor(nbvalues/4);
-                    if (4*posa === nbvalues){
-                        posb = 3*posa;
-                        q3Value = (theList[posb] + theList[posb-1])/2;
-                    } else {
-                        q3Value = theList[nbvalues-posa-1];
-                    }
-                }
+    /**
+     * Calculate the median of passed values.
+     * @param {Array} [values=[]] List of values
+     * @returns {Number}
+     */
+    calcMedian(values = []) {
+        let nbValues = values.length;
+        let aux = 0;
+        if (nbValues % 2 === 1) {
+            aux = Math.floor(nbValues / 2);
+            return Number(values[aux]);
+        }
+        return (Number(values[nbValues / 2]) +
+            Number(values[((nbValues / 2) - 1)])) / 2;
+    }
 
-                for(var i=0; i<=mThisCol; i++){
-                    switch( opsThisCol[i] ){
-                        case 'mean':
-                            result=meanValue;
-                            break;
-                        case 'sum':
-                            result=sumValue;
-                            break;
-                        case 'min':
-                            result=minValue;
-                            break;
-                        case 'max':
-                            result=maxValue;
-                            break;
-                        case 'median':
-                            result=medValue;
-                            break;
-                        case 'q1':
-                            result=q1Value;
-                            break;
-                        case 'q3':
-                            result=q3Value;
-                            break;
-                    }
+    /**
+     * Calculate the lower quartile of passed values.
+     * @param {Array} [values=[]] List of values
+     * @returns {Number}
+     */
+    calcQ1(values = []) {
+        let nbValues = values.length;
+        let posa = 0.0;
+        posa = Math.floor(nbValues / 4);
+        if (4 * posa === nbValues) {
+            return (Number(values[posa - 1]) +
+                Number(values[posa])) / 2;
+        }
+        return Number(values[posa]);
+    }
 
-                    var precision = !isNaN(decThisCol[i]) ? decThisCol[i] : 2;
+    /**
+     * Calculate the upper quartile of passed values.
+     * @param {Array} [values=[]] List of values
+     * @returns {Number}
+     */
+    calcQ3(values = []) {
+        let nbValues = values.length;
+        let posa = 0.0;
+        let posb = 0.0;
+        posa = Math.floor(nbValues / 4);
+        if (4 * posa === nbValues) {
+            posb = 3 * posa;
+            return (Number(values[posb]) +
+                Number(values[posb - 1])) / 2;
+        }
+        return Number(values[nbValues - posa - 1]);
+    }
 
-                    //if outputType is defined
-                    if(oTypeThisCol && result){
-                        result = result.toFixed( precision );
+    /**
+     * Sort passed values with supplied sorter function.
+     * @param {Array} [values=[]] List of values to be sorted
+     * @param {Function} sorter Sorter function
+     * @returns {Array}
+     */
+    sortColumnValues(values = [], sorter) {
+        return values.sort(sorter);
+    }
 
-                        if(Dom.id(labThisCol[i])){
-                            switch( Str.lower(oTypeThisCol) ){
-                                case 'innerhtml':
-                                    if (isNaN(result) || !isFinite(result) ||
-                                        nbvalues===0){
-                                        Dom.id(labThisCol[i]).innerHTML = '.';
-                                    } else{
-                                        Dom.id(labThisCol[i]).innerHTML= result;
-                                    }
-                                    break;
-                                case 'setvalue':
-                                    Dom.id( labThisCol[i] ).value = result;
-                                    break;
-                                case 'createtextnode':
-                                    var oldnode = Dom.id(labThisCol[i])
-                                        .firstChild;
-                                    var txtnode = Dom.text(result);
-                                    Dom.id(labThisCol[i])
-                                        .replaceChild(txtnode, oldnode);
-                                    break;
-                            }//switch
-                        }
-                    } else {
-                        try{
-                            if(isNaN(result) || !isFinite(result) ||
-                                nbvalues===0){
-                                Dom.id(labThisCol[i]).innerHTML = '.';
-                            } else {
-                                Dom.id(labThisCol[i]).innerHTML =
-                                    result.toFixed(precision);
-                            }
-                        } catch(e) {}//catch
-                    }//else
-                }//for i
+    /**
+     * Write calculation result in passed DOM element with supplied write method
+     * and decimal precision.
+     * @param {Number} [result=0] Calculation result
+     * @param {DOMElement} label DOM element
+     * @param {String} [writeType='innerhtml'] Write method
+     * @param {Number} [precision=2] Applied decimal precision
+     * @private
+     */
+    writeResult(result = 0, label, writeType = 'innerhtml', precision = 2) {
+        let labelElm = elm(label);
 
-                // row(s) with result are always visible
-                var totRow = totRowIndex && totRowIndex[ucol] ?
-                                rows[totRowIndex[ucol]] : null;
-                if(totRow){
-                    totRow.style.display = '';
-                }
-            }//for ucol
-        }//if typeof
+        if (!labelElm) {
+            return;
+        }
 
-        if(this.onAfterOperation){
-            this.onAfterOperation.call(null, tf);
+        result = result.toFixed(precision);
+        if (isNaN(result) || !isFinite(result)) {
+            result = '';
+        }
+
+        switch (writeType.toLowerCase()) {
+            case 'innerhtml':
+                labelElm.innerHTML = result;
+                break;
+            case 'setvalue':
+                labelElm.value = result;
+                break;
+            case 'createtextnode':
+                let oldNode = labelElm.firstChild;
+                let txtNode = createText(result);
+                labelElm.replaceChild(txtNode, oldNode);
+                break;
         }
     }
 
-    destroy(){
+    /** Remove extension */
+    destroy() {
+        if (!this.initialized) {
+            return;
+        }
         // unsubscribe to events
-        this.tf.emitter.off(['after-filtering'], ()=> this.calc());
+        this.emitter.off(EVENTS, () => this.calcAll());
+
+        this.initialized = false;
     }
 
 }

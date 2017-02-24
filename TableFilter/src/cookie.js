@@ -1,28 +1,43 @@
+import {root} from './root';
+
 /**
  * Cookie utilities
  */
 
+const doc = root.document;
+
 export default {
 
-    write(name, value, hours){
+    /**
+     * Write a cookie
+     * @param {String} name Name of the cookie
+     * @param {String} value Value of the cookie
+     * @param {Number} hours Cookie duration in hours
+     */
+    write(name, value, hours) {
         let expire = '';
-        if(hours){
+        if (hours) {
             expire = new Date((new Date()).getTime() + hours * 3600000);
             expire = '; expires=' + expire.toGMTString();
         }
-        document.cookie = name + '=' + escape(value) + expire;
+        doc.cookie = name + '=' + escape(value) + expire;
     },
 
-    read(name){
+    /**
+     * Read a cookie
+     * @param {String} name Name of the cookie
+     * @returns {String} Value of the cookie
+     */
+    read(name) {
         let cookieValue = '',
             search = name + '=';
-        if(document.cookie.length > 0){
-            let cookie = document.cookie,
+        if (doc.cookie.length > 0) {
+            let cookie = doc.cookie,
                 offset = cookie.indexOf(search);
-            if(offset !== -1){
+            if (offset !== -1) {
                 offset += search.length;
                 let end = cookie.indexOf(';', offset);
-                if(end === -1){
+                if (end === -1) {
                     end = cookie.length;
                 }
                 cookieValue = unescape(cookie.substring(offset, end));
@@ -31,28 +46,12 @@ export default {
         return cookieValue;
     },
 
-    remove(name){
+    /**
+     * Remove a cookie
+     * @param {String} name Name of the cookie
+     */
+    remove(name) {
         this.write(name, '', -1);
-    },
-
-    valueToArray(name, separator){
-        if(!separator){
-            separator = ',';
-        }
-        //reads the cookie
-        let val = this.read(name);
-        //creates an array with filters' values
-        let arr = val.split(separator);
-        return arr;
-    },
-
-    getValueByIndex(name, index, separator){
-        if(!separator){
-            separator = ',';
-        }
-        //reads the cookie
-        let val = this.valueToArray(name, separator);
-        return val[index];
     }
 
 };

@@ -1,147 +1,196 @@
-import {Feature} from './feature';
-import Dom from '../dom';
-import Types from '../types';
+import {Feature} from '../feature';
+import {createElm, createText, elm, removeElm} from '../dom';
+import {isFn, EMPTY_FN} from '../types';
 
-export class RowsCounter extends Feature{
+/**
+ * Rows counter UI component
+ * @export
+ * @class RowsCounter
+ * @extends {Feature}
+ */
+export class RowsCounter extends Feature {
 
     /**
-     * Rows counter
-     * @param {Object} tf TableFilter instance
+     * Creates an instance of RowsCounter
+     * @param {TableFilter} tf TableFilter instance
      */
-    constructor(tf){
+    constructor(tf) {
         super(tf, 'rowsCounter');
 
         // TableFilter configuration
-        var f = this.config;
+        let f = this.config;
 
-        //id of custom container element
-        this.rowsCounterTgtId = f.rows_counter_target_id || null;
-        //element containing tot nb rows
-        this.rowsCounterDiv = null;
-        //element containing tot nb rows label
-        this.rowsCounterSpan = null;
-        //defines rows counter text
-        this.rowsCounterText = f.rows_counter_text || 'Rows: ';
+        /**
+         * ID of custom container element
+         * @type {String}
+         */
+        this.targetId = f.rows_counter_target_id || null;
+
+        /**
+         * Container DOM element
+         * @type {DOMElement}
+         * @private
+         */
+        this.container = null;
+
+        /**
+         * Container DOM element for label displaying the total number of rows
+         * @type {DOMElement}
+         * @private
+         */
+        this.label = null;
+
+        /**
+         * Text preceding the total number of rows
+         * @type {String}
+         */
+        this.text = f.rows_counter_text || 'Rows: ';
+
+        /**
+         * Separator symbol appearing between the first and last visible rows of
+         * current page when paging is enabled. ie: Rows: 31-40 / 70
+         * @type {String}
+         */
         this.fromToTextSeparator = f.from_to_text_separator || '-';
+
+        /**
+         * Separator symbol appearing between the first and last visible rows of
+         * current page and the total number of filterable rows when paging is
+         * enabled. ie: Rows: 31-40 / 70
+         * @type {String}
+         */
         this.overText = f.over_text || ' / ';
-        //defines css class rows counter
-        this.totRowsCssClass = f.tot_rows_css_class || 'tot';
-        //rows counter div
-        this.prfxCounter = 'counter_';
-        //nb displayed rows label
-        this.prfxTotRows = 'totrows_span_';
-        //label preceding nb rows label
-        this.prfxTotRowsTxt = 'totRowsTextSpan_';
-        //callback raised before counter is refreshed
-        this.onBeforeRefreshCounter = Types.isFn(f.on_before_refresh_counter) ?
-            f.on_before_refresh_counter : null;
-        //callback raised after counter is refreshed
-        this.onAfterRefreshCounter = Types.isFn(f.on_after_refresh_counter) ?
-            f.on_after_refresh_counter : null;
+
+        /**
+         * Css class for container element
+         * @type {String}
+         */
+        this.cssClass = f.tot_rows_css_class || 'tot';
+
+        /**
+         * Callback fired before the counter is refreshed
+         * @type {Function}
+         */
+        this.onBeforeRefreshCounter = isFn(f.on_before_refresh_counter) ?
+            f.on_before_refresh_counter : EMPTY_FN;
+
+        /**
+         * Callback fired after the counter is refreshed
+         * @type {Function}
+         */
+        this.onAfterRefreshCounter = isFn(f.on_after_refresh_counter) ?
+            f.on_after_refresh_counter : EMPTY_FN;
     }
 
-    init(){
-        if(this.initialized){
+    /**
+     * Initializes RowsCounter instance
+     */
+    init() {
+        if (this.initialized) {
             return;
         }
 
-        var tf = this.tf;
+        let tf = this.tf;
 
         //rows counter container
-        var countDiv = Dom.create('div', ['id', this.prfxCounter+tf.id]);
-        countDiv.className = this.totRowsCssClass;
+        let countDiv = createElm('div');
+        countDiv.className = this.cssClass;
         //rows counter label
-        var countSpan = Dom.create('span', ['id', this.prfxTotRows+tf.id]);
-        var countText = Dom.create('span', ['id', this.prfxTotRowsTxt+tf.id]);
-        countText.appendChild(Dom.text(this.rowsCounterText));
+        let countSpan = createElm('span');
+        let countText = createElm('span');
+        countText.appendChild(createText(this.text));
 
         // counter is added to defined element
-        if(!this.rowsCounterTgtId){
+        if (!this.targetId) {
             tf.setToolbar();
         }
-        var targetEl = !this.rowsCounterTgtId ?
-                tf.lDiv : Dom.id( this.rowsCounterTgtId );
+        let targetEl = !this.targetId ? tf.lDiv : elm(this.targetId);
 
         //default container: 'lDiv'
-        if(!this.rowsCounterTgtId){
+        if (!this.targetId) {
             countDiv.appendChild(countText);
             countDiv.appendChild(countSpan);
             targetEl.appendChild(countDiv);
         }
-        else{
+        else {
             //custom container, no need to append statusDiv
             targetEl.appendChild(countText);
             targetEl.appendChild(countSpan);
         }
-        this.rowsCounterDiv = countDiv;
-        this.rowsCounterSpan = countSpan;
+        this.container = countDiv;
+        this.label = countSpan;
 
         // subscribe to events
         this.emitter.on(['after-filtering', 'grouped-by-page'],
-            ()=> this.refresh(tf.nbVisibleRows));
-        this.emitter.on(['rows-changed'], ()=> this.refresh());
+            () => this.refresh(tf.getValidRowsNb()));
+        this.emitter.on(['rows-changed'], () => this.refresh());
 
+        /** @inherited */
         this.initialized = true;
         this.refresh();
     }
 
-    refresh(p){
-        if(!this.initialized || !this.isEnabled()){
+    /**
+     * Refreshes the rows counter
+     * @param {Number} p Optional parameter the total number of rows to display
+     * @returns
+     */
+    refresh(p) {
+        if (!this.initialized || !this.isEnabled()) {
             return;
         }
 
-        var tf = this.tf;
+        let tf = this.tf;
 
-        if(this.onBeforeRefreshCounter){
-            this.onBeforeRefreshCounter.call(null, tf, this.rowsCounterSpan);
-        }
+        this.onBeforeRefreshCounter(tf, this.label);
 
-        var totTxt;
-        if(!tf.paging){
-            if(p && p !== ''){
+        let totTxt;
+        if (!tf.paging) {
+            if (p && p !== '') {
                 totTxt = p;
-            } else{
-                totTxt = tf.nbFilterableRows - tf.nbHiddenRows;
+            } else {
+                totTxt = tf.getFilterableRowsNb() - tf.nbHiddenRows;
             }
         } else {
-            var paging = tf.feature('paging');
-            if(paging){
+            let paging = tf.feature('paging');
+            if (paging) {
                 //paging start row
-                var paging_start_row = parseInt(paging.startPagingRow, 10) +
-                        ((tf.nbVisibleRows>0) ? 1 : 0);
-                var paging_end_row = (paging_start_row+paging.pagingLength)-1 <=
-                        tf.nbVisibleRows ?
-                        paging_start_row+paging.pagingLength-1 :
-                        tf.nbVisibleRows;
-                totTxt = paging_start_row + this.fromToTextSeparator +
-                    paging_end_row + this.overText + tf.nbVisibleRows;
+                let pagingStartRow = parseInt(paging.startPagingRow, 10) +
+                    ((tf.getValidRowsNb() > 0) ? 1 : 0);
+                let pagingEndRow =
+                    (pagingStartRow + paging.pagingLength) - 1 <=
+                    tf.getValidRowsNb() ?
+                        pagingStartRow + paging.pagingLength - 1 :
+                        tf.getValidRowsNb();
+                totTxt = pagingStartRow + this.fromToTextSeparator +
+                    pagingEndRow + this.overText + tf.getValidRowsNb();
             }
         }
 
-        this.rowsCounterSpan.innerHTML = totTxt;
-        if(this.onAfterRefreshCounter){
-            this.onAfterRefreshCounter.call(
-                null, tf, this.rowsCounterSpan, totTxt);
-        }
+        this.label.innerHTML = totTxt;
+        this.onAfterRefreshCounter(tf, this.label, totTxt);
     }
 
-    destroy(){
-        if(!this.initialized){
+    /**
+     * Remove feature
+     */
+    destroy() {
+        if (!this.initialized) {
             return;
         }
 
-        if(!this.rowsCounterTgtId && this.rowsCounterDiv){
-            Dom.remove(this.rowsCounterDiv);
+        if (!this.targetId && this.container) {
+            removeElm(this.container);
         } else {
-            Dom.id(this.rowsCounterTgtId).innerHTML = '';
+            elm(this.targetId).innerHTML = '';
         }
-        this.rowsCounterSpan = null;
-        this.rowsCounterDiv = null;
+        this.label = null;
+        this.container = null;
 
         // unsubscribe to events
         this.emitter.off(['after-filtering', 'grouped-by-page'],
-            ()=> this.refresh(tf.nbVisibleRows));
-        this.emitter.off(['rows-changed'], ()=> this.refresh());
+            () => this.refresh(tf.getValidRowsNb()));
+        this.emitter.off(['rows-changed'], () => this.refresh());
 
         this.initialized = false;
     }

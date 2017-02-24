@@ -2,16 +2,21 @@
  * Array utilities
  */
 
-import Str from './string';
+import {matchCase} from './string';
 
-export default {
-    has: function(arr, val, caseSensitive){
-        let sCase = caseSensitive===undefined ? false : caseSensitive;
-        for (var i=0; i<arr.length; i++){
-            if(Str.matchCase(arr[i].toString(), sCase) == val){
-                return true;
-            }
+/**
+ * Checks if given item can be found in the passed collection
+ * @param  {Array} arr  collection
+ * @param  {Any} val  item to search
+ * @param  {Boolean} caseSensitive respects case if true
+ * @return {Boolean}
+ */
+export const has = (arr, val, caseSensitive) => {
+    let sCase = Boolean(caseSensitive);
+    for (var i = 0, l = arr.length; i < l; i++) {
+        if (matchCase(arr[i].toString(), sCase) === val) {
+            return true;
         }
-        return false;
     }
-};
+    return false;
+}
