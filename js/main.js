@@ -1,6 +1,106 @@
 (function($) {
     $(document).ready(function() {
-        
+
+        $(".fancybox").fancybox({
+            'titlePosition': 'inside',
+            'transitionIn': 'none',
+            'transitionOut': 'none'
+        });
+        $(".tables-container").accordion({
+            collapsible: true,
+            active: false
+        });
+
+        var tfConfigCorpus = {
+            base_path: 'TableFilter/dist/tablefilter/',
+            auto_filter: true,
+            loader: true,
+            rows_counter: true,
+            watermark: "Filtrer",
+            col_types: ["String", "String", "String", "String", "String", "String", "Number"],
+            extensions: [{
+                name: 'sort'
+            }]
+        };
+        var tfConfigTable = {
+            base_path: 'TableFilter/dist/tablefilter/',
+            auto_filter: true,
+            loader: true,
+            rows_counter: true,
+            watermark: "Filtrer",
+            col_types: ["String", "Number", "Number"],
+            extensions: [{
+                name: 'sort'
+            }]
+        };
+        var tfConfigOccurrences = {
+            base_path: 'TableFilter/dist/tablefilter/',
+            auto_filter: true,
+            loader: true,
+            rows_counter: true,
+            watermark: "Filtrer",
+            col_types: ["String", "String", "String", "String", "String", "String", "Number", "String", "Number", "Number", "Number"],
+            extensions: [{
+                name: 'sort'
+            }]
+        };
+        var tfConfigCode = {
+            base_path: 'TableFilter/dist/tablefilter/',
+            auto_filter: true,
+            loader: true,
+            rows_counter: true,
+            watermark: "Filtrer",
+            col_types: ["String", "String", "Number", "Number"],
+            extensions: [{
+                name: 'sort'
+            }]
+        };
+
+        var tfConfigXPath = {
+            base_path: 'TableFilter/dist/tablefilter/',
+            auto_filter: true,
+            loader: true,
+            rows_counter: true,
+            watermark: "Filtrer",
+            col_types: ["Number", "Number"],
+            extensions: [{
+                name: 'sort'
+            }]
+        };
+        var tables = document.getElementsByClassName("tableFilterCorpus");
+        for (var i = 0; i < tables.length; i++) {
+            var tf = new TableFilter(tables[i].id, tfConfigCorpus);
+            tf.init();
+        }
+        var tables = document.getElementsByClassName("tableFilterTable");
+        for (var i = 0; i < tables.length; i++) {
+            var tf = new TableFilter(tables[i].id, tfConfigTable);
+            tf.init();
+        }
+        var tables = document.getElementsByClassName("tableFilterOccurrences");
+        for (var i = 0; i < tables.length; i++) {
+            var tf = new TableFilter(tables[i].id, tfConfigOccurrences);
+            tf.init();
+        }
+        var tables = document.getElementsByClassName("tableFilterCode");
+        for (var i = 0; i < tables.length; i++) {
+            var tf = new TableFilter(tables[i].id, tfConfigCode);
+            tf.init();
+        }
+        var tables = document.getElementsByClassName("tableFilterXPath");
+        for (var i = 0; i < tables.length; i++) {
+            var tf = new TableFilter(tables[i].id, tfConfigXPath);
+            tf.init();
+        }
+
+
+        $('.rdiv').html('<a class="tooltip export-link" title="Télécharger les résultats au format CSV" id="export-table-corpus" onclick="exportTableToCSV.apply(this, [$(\'#\'+$(this).closest(\'table\').prop(\'id\')), \'export.csv\'])"><i class="fa fa-download"></i></a>');
+
+
+
+
+
+
         $("#options").buttonset();
 
 
@@ -12,20 +112,66 @@
             html: true,
             gravity: 'e'
         });
-         $(".fancybox").fancybox({
+        $(".fancybox").fancybox({
             'titlePosition': 'inside',
             'transitionIn': 'none',
             'transitionOut': 'none'
         });
         var thisHash = window.location.hash;
-        if(window.location.hash) {
+        if (window.location.hash) {
             $(thisHash).fancybox().trigger('click');
         }
         initListeners();
         initListenersScene();
-
+        //
     });
 })(jQuery);
+
+
+
+// This must be a hyperlink
+
+
+
+
+function exportTableToCSV($table, filename) {
+    var $rows = $table.find('tr:not(.fltrow):has(td)'),
+
+        // Temporary delimiter characters unlikely to be typed by keyboard
+        // This is to avoid accidentally splitting the actual contents
+        tmpColDelim = String.fromCharCode(11),
+        // vertical tab character
+        tmpRowDelim = String.fromCharCode(0),
+        // null character
+        // actual delimiter characters for CSV format
+        colDelim = '	',
+        rowDelim = '\n',
+
+        // Grab text from table into CSV formatted string
+        csv = $rows.map(function(i, row) {
+            var $row = $(row),
+                $cols = $row.find('td:not(.view-table, .view-text, .view-source)');
+
+            return $cols.map(function(j, col) {
+                var $col = $(col),
+                    text = $col.text();
+
+                return text.replace(/"/g, '""'); // escape double quotes
+            }).get().join(tmpColDelim);
+
+        }).get().join(tmpRowDelim).split(tmpRowDelim).join(rowDelim).split(tmpColDelim).join(colDelim),
+
+        // Data URI
+        csvData = 'data:application/octet-stream;charset=utf-8,' + encodeURIComponent(csv);
+
+    $(this).attr({
+        'download': filename,
+        'href': csvData,
+        'target': '_blank'
+    });
+}
+
+
 
 
 function initListeners() {
@@ -165,7 +311,7 @@ function delCol() {
 function addFieldConfiguration() {
     var fields = document.getElementsByClassName("xpath-field-configuration");
     var newField = fields[0].cloneNode(true);
-    newField.setAttribute("name", "xpath[xpath-" + fields.length+"]");
+    newField.setAttribute("name", "xpath[xpath-" + fields.length + "]");
 
     document.getElementById("xpath-fields-configuration").appendChild(newField);
 }

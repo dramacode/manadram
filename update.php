@@ -12,7 +12,11 @@ $filters = get_filters($bdd);
     $filters = ob_get_clean();
     file_put_contents("tpl/filters.html", $filters);
 echo "<pre>";print_r($filters);
-
+    $corpus = get_corpus();
+    ob_start();
+    include ("tpl/corpus.tpl.php");
+    $list = ob_get_clean();
+    file_put_contents("tpl/corpus.html", $list);
 return;
 //
 

@@ -1,7 +1,8 @@
 
             <h3><?php echo $field["title"];?></h3>
             <div class="table">
-            <table class="tableFilterTable tableExport" id="<?php echo $key;?>">
+                
+            <table class="tableFilterTable tableExport" id="<?php echo $key.$needletr;?>">
                 <thead>
                     <tr>
                         <td><i class="fa fa-sort"></i><?php echo $field["head"];?></td>

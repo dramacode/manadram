@@ -1,5 +1,23 @@
 <?php
 function get_needle() {
+    if(isset($_GET["str_code"])){
+        $needles = explode("\n", $_GET["str_code"]);
+        $array = array();
+        foreach($needles as $needle){
+            $needle = trim($needle);
+            if(!$needle){continue;}
+            $length = explode("/",$needle);
+            $length = array_filter($length);
+            $length = count($length);
+            //si n'est pas un motif valide
+            //$length = 2;
+            //echo $length;
+            //$length = 2;
+            $array[] = array("needle"=>$needle, "length"=>$length);
+        }
+        return $array;
+    }
+    
     //A1
     $needle = $_GET["pattern"];
     $needle = array_values($needle);
@@ -28,9 +46,9 @@ function get_needle() {
     $needle = multistring($needle);
     //$needle = bindec($needle);
     //echo $needle;
-    return array(
+    return array(array(
         "needle" => $needle,
         "length" => $length
-    );
+    ));
 }
 ?>

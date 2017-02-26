@@ -1,6 +1,6 @@
  <h3>Occurrences</h3>
- <div class="table">   
-    <table class="tableFilterOccurrences tableExport" id="table-results">
+ <div class="table">
+    <table class="tableFilterOccurrences tableExport" id="table-results<?php echo $needletr;?>">
         <thead>
             <tr>
                 <td class="view-table"></td>

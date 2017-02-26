@@ -1,6 +1,6 @@
-<div id="patab">
+<div id="patab" class="patab">
     <div id="graphcontainer">
-    <div id="graphdiv"></div>
+    <div id="graphdiv<?php echo $needletr;?>"></div>
     <br/>
     <p><i>Proportion du motif par lustre</i></p>
     </div>
@@ -18,7 +18,7 @@
 <?php echo $json; ?>
       ]);
         var formatter = new google.visualization.NumberFormat({ 
-  pattern: '#%', 
+  pattern: '#.#%', 
   fractionDigits: 1
 });
 formatter.format(data, 1);
@@ -51,24 +51,24 @@ formatter.format(data, 1);
         },
         vAxes: {
           // Adds titles to each axis.
-          0: {title: 'Proportion', format:'percent'},
+          0: {title: 'Proportion', format:'#.#%'},
           1: {title: 'Nombre total de motifs dans le corpus', format:'# ###'}
         }
 
     };
 
-    var chart = new google.visualization.ComboChart(document.getElementById('graphdiv'));
+    var chart = new google.visualization.ComboChart(document.getElementById('graphdiv<?php echo $needletr;?>'));
     chart.draw(data, options);
   }
 
             });
         })(jQuery);
     </script>
-    <div id="div-patab-info">
+<!--    <div id="div-patab-info">
 
         <div id="patab-results">
         <p><i class="fa fa-caret-right"></i> <?php echo $results_n; ?> occurence<?php if($results_n>1){echo "s";}?> trouvée<?php if($results_n>1){echo "s";}?> sur <?php echo $global_n; ?> (<?php echo $proportion; ?>%) en <?php echo $time; ?> secondes.</p>
         </div>
-    </div>
+    </div>-->
 
 </div>

@@ -9,7 +9,11 @@ function form($bdd) {
     <form method="get" enctype="multipart/form-data">
 
 
-
+<div id="str_code">
+<textarea name="str_code">';
+if(isset($_GET["str_code"])){echo $_GET["str_code"];}
+echo '</textarea>
+</div>
 
     <div id="pattern">
         <div class="pattern-wrapper">
@@ -68,7 +72,7 @@ function form($bdd) {
         </div></div>';
         echo '<div id="filters">';
         $filters = get_filters($bdd);
-        include_once("tpl/filters.tpl.php");        
+        include_once("tpl/filters.tpl.php");
         echo '</div>
         
      </form>

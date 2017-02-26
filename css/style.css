@@ -226,7 +226,7 @@ margin: 2% 4%;}
 	display:none;
 }
 
-#table-results .fltrow td:nth-child(1) input,#table-results .fltrow td:nth-child(2) input,#table-results .fltrow td:nth-child(3) input {
+.tableFilterOccurrences .fltrow td:nth-child(1) input,.tableFilterOccurrences .fltrow td:nth-child(2) input,.tableFilterOccurrences .fltrow td:nth-child(3) input {
 	display:none;
 }
 #corpus .fltrow td:nth-child(1) input,#corpus .fltrow td:nth-child(2) input,#corpus .fltrow td:nth-child(3) input {
@@ -264,15 +264,15 @@ table#table-results tbody {
 /* 	width:50px; */
 }
 
-#table-results thead .fa, #table-results tbody .fa  {
+.tableFilterOccurrences thead .fa, #table-results tbody .fa  {
 	margin:0;
 }
 
-#table-results thead .fa {
+.tableFilterOccurrences thead .fa {
 	margin-left:10px;
 }
 
-#table-results {
+.tableFilterOccurrences {
 	margin:auto;
 }
 
@@ -292,21 +292,21 @@ p,li {
     display: inline-block;
 }*/
 
-#tables div.table {margin:10px 0;}
+.tables-container div.table {margin:10px 0;}
 /*#graphdiv{width:100%;}*/
-#tables div table {margin:auto;padding:10px 0;}
+.tables-container div table {margin:auto;padding:10px 0;}
 #graphcontainer{float: right;margin-left: 50px;width: 50%;margin-right: 3%;}
 #graphcontainer p{text-align: center;}
-#patab{width: 100%;margin:auto;padding-bottom: 20px;}
-#tables{clear:both;}
+.patab{width: 100%;margin:auto;padding-bottom: 20px;}
+.table-container{clear:both;}
 #settings{position: relative;
 	top:30px;
 	right:10%;
 }
 #patab-table{float: left;margin-right:15px;}
 #div-patab-info{padding-top:100px;margin-left:3%;width:50%;}
-#tables{height:100%;}
-#tables div.table{height: 80% !important;overflow: scroll;}
+.tables-container{height:100%;}
+.tables-container div.table{height: 80% !important;overflow: scroll;}
 .res, .dygraph-label, .dygraph-axis-label{font-size: 12px;}
 .res td.author{width: 120px;max-width: 120px;}
 .res td.title{width:150px;max-width:150px;}
@@ -322,8 +322,8 @@ p,li {
 p{margin:0;}
 #settings p{margin: 25px 0 15px 0;}
 thead .fa{margin-right:5px !important;}
-#tables{padding-top: 30px;padding-bottom: 60px;}
-
+.tables-container{padding-top: 30px;padding-bottom: 60px;}
+.patab{height: 300px;}
 /*
 #patab{display: table;}
 #patab div{display: table-cell;}
@@ -339,3 +339,4 @@ thead .fa{margin-right:5px !important;}
 .scene:hover{background-color: lightgrey;}
 .fltrow td, .fltrow{background-color: inherit !important; border-left: none !important;border-right: none !important;}
 tr.fltrow{border-left:1px solid #ccc !important;border-right:1px solid #ccc !important;}
+.export-link{float: left;}

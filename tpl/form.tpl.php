@@ -3,6 +3,10 @@
     <form method="get" enctype="multipart/form-data">
 
 
+    
+<div id="str_code">
+<textarea name="str_code"></textarea>
+</div>
 
 
     <div id="pattern">

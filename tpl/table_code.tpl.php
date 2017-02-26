@@ -1,7 +1,7 @@
 
             <h3><?php echo $field["title"];?></h3>
-            <div class="table">
-            <table class="tableFilterCode tableExport" id="<?php echo $key;?>">
+            <div class="table">                
+            <table class="tableFilterCode tableExport" id="<?php echo $key.$needletr;?>">
                 <thead>
                     <tr>
                         <td><i class="fa fa-sort"></i>Auteur</td>
