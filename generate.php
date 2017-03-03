@@ -2,8 +2,21 @@
 include_once ("functions/pattern.php");
 set_time_limit(600);
 ini_set('memory_limit', '-1');
-
-function generate($p, $c, $group = false) {
+if(!isset($_GET["c"])){return;}
+$p = (isset($_GET["p"]))? $_GET["p"]:false ;
+$c = $_GET["c"];
+$group = (isset($_GET["group"]))? $_GET["group"]:false ;
+echo "<!DOCTYPE html><html><head><meta charset='UTF-8'/><link rel='stylesheet' href='css/generate.css'/></head><body>";
+$valids = array();
+if($p){
+    generate($p, $c, $group, $valids);
+}else{
+    generate_all($c, $valids);
+}
+echo "<pre>";
+print_r($valids);
+echo "</body></html>";
+function generate($p, $c, $group = false, &$valids) {
 
     
     //générer tous les motifs
@@ -13,7 +26,7 @@ function generate($p, $c, $group = false) {
     $patterns = $duplicates = $empty_char = $duplicate_char = $empty_conf = $repeat_conf = array();
     //test
     echo "<h2>".$c." configurations, ".$p." personnages</h2><p>2^(cp) = ".$max." motifs possibles, de 0 à ".decbin($max-1)."<sub>2</sub></p>";
-    echo "<table style='border-collapse:collapse;'><tr style='vertical-align:top;'><td style='border:1px solid black;'><table><tr style='vertical-align:top;'><td><h3>Motifs possibles</h3>".$max." motifs</td><td><h3>Motifs possibles réordonnés</h3><br/><br/></td></tr>";
+    echo "<table><tr style='vertical-align:top;'><td><table><tr style='vertical-align:top;'><td><h3>Motifs possibles</h3>".$max." motifs</td><td><h3>Motifs possibles réordonnés</h3>".$max." motifs<br/><br/></td></tr>";
     //
     
     while ($i < $max) { //vérifier que je n'ai pas besoin de <=
@@ -53,7 +66,7 @@ function generate($p, $c, $group = false) {
     $patterns = $array;
     
     //test
-    echo "<td style='border:1px solid black;padding:5px;'><h3>Motifs possibles dédoublonnés</h3>" . print_patterns($patterns)."</td>";
+    echo "<td class='filtered'><h3>Motifs possibles dédoublonnés</h3>" . print_patterns($patterns)."</td>";
     //
     
     foreach ($patterns as $key => $pattern) {
@@ -86,7 +99,7 @@ function generate($p, $c, $group = false) {
         
         if (flatempty($flip_pattern)) {
             unset($patterns[$key]);
-
+        
             //test
             $empty_conf[] = $pattern;
             //
@@ -102,19 +115,19 @@ function generate($p, $c, $group = false) {
             //
         }
     }
-
+    $valids = array_merge($valids, $patterns);
     //test
-    echo "<td style='border:1px solid black;padding:5px;'><h3>Motifs avec au moins un personnage toujours absent</h3>" . print_patterns($empty_char);
+    echo "<td class='filtered'><h3>Motifs avec au moins un personnage toujours absent</h3>" . print_patterns($empty_char);
     echo "<h3>Motifs avec au moins deux personnages dont la distance = 0</h3>" . print_patterns($duplicate_char);
     echo "<h3>Motifs avec au moins une configuration sans personnage</h3>" . print_patterns($empty_conf);
     echo "<h3>Motifs avec au moins une configuration identique à la suivante</h3>" . print_patterns($repeat_conf);
-    echo "</td><td style='border:1px solid black;padding:5px;'><h3>Motifs valides</h3>" . print_patterns($patterns, true)."</td></tr></table>";
+    echo "</td><td class='filtered'><h3>Motifs valides</h3>" . print_patterns($patterns, true)."</td></tr></table>";
     //
     
     return array_values($patterns);
 }
 
-function generate_all($c) {
+function generate_all($c, &$valids) {
 
     $max = (bcpow(2, $c)); //nombre max de personnages possibles ayant une distance > 0 avec ce nombre de configuration
     //test
@@ -129,7 +142,7 @@ function generate_all($c) {
         echo "<h2>Motifs à " . $p . " personnages</h2>";
         //
         
-        $patterns = array_merge($patterns, generate($p, $c));
+        $patterns = array_merge($patterns, generate($p, $c, false, $valids));
         
         //test
         $total = count($patterns);
@@ -142,10 +155,16 @@ function generate_all($c) {
     //
     return $patterns;
 }
-//generate_all(3);
-generate(3,3);
-//string[0];
-
+//lister tous les string
+//créer des motifs pour les entractes. Le faire en second, sur string (entracte à l'intérieur du motif)
+//A-B/A/A-C
+//A-B/A-B-C/A-C
+//A/A-B/A
+//A/A-B/B
+//A/A-B/A-B-C
+//A-B-C/A-B/A
+//A/A-B-C/A-B
+//A-B/A-B-C/A
 //C. combinaisons regroupées
 
 //rupture ?

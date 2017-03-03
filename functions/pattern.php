@@ -303,6 +303,7 @@ function print_pattern($pattern, $string = false) {
     if ($string) {
         $pattern = flatmulti($pattern);
         $pattern = multiflip($pattern);
+        $pattern = intcode($pattern);
         $html.= multistring($pattern);
     }
     $html.= "<br/><br/>";

@@ -1,6 +1,6 @@
 <?php
 function get_needle() {
-    if(isset($_GET["str_code"])){
+    if(($_GET["str_code"])){
         $needles = explode("\n", $_GET["str_code"]);
         $array = array();
         foreach($needles as $needle){

@@ -9,7 +9,7 @@ require_once ("functions/get_needle.php");
 require_once ("functions/search.php");
 require_once ("functions/db.php");
 require_once ("functions/statify.php");
-require_once ("functions/form.php");
+
 require_once ("functions/plays.php");
 require_once ("functions/json.php");
 require_once ("functions/get_filters.php");
@@ -46,9 +46,7 @@ $corpus = get_corpus();
 include ("lang/" . $lang . ".php");
 include ("tpl/header.tpl.php");
 include ("tpl/corpus.html");
-form($bdd);
-
-//include ("tpl/form.tpl.php");
+include ("tpl/form.tpl.php");
 
 if (isset($_GET["post"])) {
     echo '<div class="res">';
@@ -111,13 +109,14 @@ function doPost($bdd) {
     
     //generate
 
-    
-    //si field[str_code] => $needles : length ? garder les options et les filtres ; multi pattern : résultats groupés / tous les résultats (avec un comparateur : chrono, non chrono, par auteur, genre ?) / mixte
 
     
     //comparateur : graphe camembert, temps d'exécution, lier les tableaux
-    //css : form+summary, graph ?
-    //comparer les genres
+    //css : form (le moins haut possible, 4 colonnes)+summary+ deux col par motif (tiroirs, graph)
+    //comparer les genres : une col par genre dans summary, évolution par genre
+    //créer des fichiers distincts par motif
+    
+    
 
     
     //résultats groupé : si count patterns>1, agréger les résultats (comment statify ?)
@@ -138,8 +137,10 @@ function doPost($bdd) {
         }
         
         if (isset($_GET["filters"][$key])) {
+            if(!($_GET["filters"][$key][0])){continue;}
             $array = array();
             foreach ($_GET["filters"][$key] as $filter) {
+                
                 $array[] = $key . " = '" . $filter . "'";
             }
             $filters[$key] = "(";
@@ -148,6 +149,7 @@ function doPost($bdd) {
         }
     }
     $filter_play = isset($filters) ? " WHERE " . implode(" AND ", $filters) : "";
+    
     $filter = isset($filters) ? " AND play_id IN (SELECT id FROM play " . $filter_play . ")" : "";
     $needles = get_needle();
     $all_results = array();

@@ -1,8 +1,7 @@
 
             <div class="table">
-    <a class="tooltip export-link" title="Télécharger les résultats au format CSV" id="export-table-summary"><i class="fa fa-download"></i></a>
                 
-            <table class="tableFilterCode tableExport" id="table-summary">
+            <table class="tableFilterSummary tableExport" id="table-summary">
                 <thead>
                     <tr>
                         <td><i class="fa fa-sort"></i>Motif</td>

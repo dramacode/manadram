@@ -10,7 +10,10 @@
             collapsible: true,
             active: false
         });
-
+        $(".toggle-pattern").click(function(){
+            $(".pattern-wrapper").toggle();
+            $(".str_code").val("");
+        });
         var tfConfigCorpus = {
             base_path: 'TableFilter/dist/tablefilter/',
             auto_filter: true,
@@ -67,6 +70,15 @@
                 name: 'sort'
             }]
         };
+        var tfConfigSummary = {
+            base_path: 'TableFilter/dist/tablefilter/',
+            auto_filter: true,
+            loader: true,
+            col_types: ["String","Number", "Number"],
+            extensions: [{
+                name: 'sort'
+            }]
+        };
         var tables = document.getElementsByClassName("tableFilterCorpus");
         for (var i = 0; i < tables.length; i++) {
             var tf = new TableFilter(tables[i].id, tfConfigCorpus);
@@ -92,6 +104,11 @@
             var tf = new TableFilter(tables[i].id, tfConfigXPath);
             tf.init();
         }
+        var tables = document.getElementsByClassName("tableFilterSummary");
+        for (var i = 0; i < tables.length; i++) {
+            var tf = new TableFilter(tables[i].id, tfConfigSummary);
+            tf.init();
+        }        
 
 
         $('.rdiv').html('<a class="tooltip export-link" title="Télécharger les résultats au format CSV" id="export-table-corpus" onclick="exportTableToCSV.apply(this, [$(\'#\'+$(this).closest(\'table\').prop(\'id\')), \'export.csv\'])"><i class="fa fa-download"></i></a>');
@@ -108,7 +125,11 @@
             html: true,
             gravity: 'w'
         });
-        $(".tooltip-e").tipsy({
+       $(".tooltip-s").tipsy({
+            html: true,
+            gravity: 's'
+        });
+       $(".tooltip-e").tipsy({
             html: true,
             gravity: 'e'
         });

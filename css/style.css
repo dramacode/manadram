@@ -96,23 +96,11 @@ label {
 }
 
 /*#pattern div.pattern-wrapper{position: absolute;top:40%;}*/
-#pattern div.pattern-wrapper {
-	margin:auto;
-	width:200px;
-}
 
-#pattern table {
-	margin:auto;
-}
 
-#pattern div {
-	margin:auto;
-}
 
-.submit-wrapper {
-	width:200px;
-	text-align:center;
-}
+
+
 
 /*#pattern:hover{background-color: #f2f2f2;}*/
 #submit {
@@ -120,33 +108,12 @@ label {
 	width:50px;
 }
 
-#pattern {
-	width:50%;
-	display:table-cell;
-/*position: absolute;*/
-/*left:0;*/
-/*top:20%;*/
-	padding:0;
-}
-
-#settings {
-	display:table-cell;
-/*float: right;*/
-/*position: absolute;*/
-/*top:20%;*/
-/*right:15%;*/
-	padding:2%;
-	width:450px;
-}
 
 .settings-wrapper:hover {
-	background-color:#f2f2f2;
+	/*background-color:#f2f2f2;*/
 }
 
-.settings-wrapper {
-	padding:20px 21px 20px 20px;
-	width: 433px;
-}
+
 
 #settings input {
 	display:block;
@@ -180,14 +147,9 @@ margin: 2% 4%;}
 	width:20px;
 }
 
-.edit-table {
-	text-align:center;
-	margin:20px!important;
-}
 
-.submit {
-	margin:20px;
-}
+
+
 
 /*.ui-buttonset label{width:50%;}*/
 .ui-corner-left {
@@ -299,10 +261,7 @@ p,li {
 #graphcontainer p{text-align: center;}
 .patab{width: 100%;margin:auto;padding-bottom: 20px;}
 .table-container{clear:both;}
-#settings{position: relative;
-	top:30px;
-	right:10%;
-}
+
 #patab-table{float: left;margin-right:15px;}
 #div-patab-info{padding-top:100px;margin-left:3%;width:50%;}
 .tables-container{height:100%;}
@@ -332,11 +291,50 @@ thead .fa{margin-right:5px !important;}
 #patab-results
 */
 
-#form{width:70%;margin:auto;}
+#form{margin:auto;}
 #info img{display: block;margin: auto;margin-top:20px;margin-bottom: 20px;}
 
 .scene a{text-decoration: none;color: black;}
 .scene:hover{background-color: lightgrey;}
 .fltrow td, .fltrow{background-color: inherit !important; border-left: none !important;border-right: none !important;}
 tr.fltrow{border-left:1px solid #ccc !important;border-right:1px solid #ccc !important;}
-.export-link{float: left;}
+/*.export-link{float: left;}*/
+
+.filter select.text{height: 45px; margin-top:5px;}
+.filter label.text{display: block;float: left;min-width: 70px;}
+form{display: table;}
+.form-block{display: table-cell;}
+h4.toggle-pattern:hover{color:#ac1a2f; }
+form{width: 80%;margin: auto;}
+#pattern{width: 300px;}
+h4.toggle-pattern{text-align: center;cursor: pointer;}
+.edit-table{text-align: center;}
+table.search{margin: 15px auto;}
+input.submit{margin: auto;
+display: block;}
+textarea{display: block;margin: 10px auto;}
+#table-summary{width:40%;margin: 15px auto;}
+.sort-arrow{display: none !important;}
+h4{margin: 5px 0 20px 0;}
+
+/*
+
+generate
+
+tiroir à gauche
+créer de nouvelles pages ?
+
+adaptative
+lien sur le motif et rappel (dans la même page ou une page différente)
+nombre total
+pas de résultat
+
+
+colonnes genre (dans le tableau)
+colonne lustre (dans le tableau)
+dans ce cas, il resterait occurrences, auteur, xpath
+lignes genres (dans les graphes)
+un graphique pour tous les motifs (mais dans ce cas je ne peux pas faire une ligne par genre)
+Quelle utilité ?
+
+*/
