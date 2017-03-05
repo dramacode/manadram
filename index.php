@@ -53,7 +53,7 @@ if (isset($_GET["post"])) {
     doPost($bdd);
     echo '</div>';
 }
-include ("tpl/footer.tpl.php");
+//include ("tpl/footer.tpl.php");
 echo '</body></html>';
 
 function doPost($bdd) {
@@ -111,10 +111,7 @@ function doPost($bdd) {
 
 
     
-    //comparateur : graphe camembert, temps d'exécution, lier les tableaux
-    //css : form (le moins haut possible, 4 colonnes)+summary+ deux col par motif (tiroirs, graph)
-    //comparer les genres : une col par genre dans summary, évolution par genre
-    //créer des fichiers distincts par motif
+    //comparateur : graphe camembert, temps d'exécution, lier les tableaux (pb de l'ancre : fait planter le graph)
     
     
 
@@ -195,7 +192,6 @@ function doPost($bdd) {
         echo "<div id='" . $needle . "' class='pattern-results'><h3>" . $needle . "</h3>";
 
         //csv
-        include ("tpl/patab.tpl.ggl.php");
         echo "<div id='tables-" . $needle . "' class='tables-container'>";
 
         //occurrences
@@ -212,7 +208,10 @@ function doPost($bdd) {
                 include ("tpl/table.tpl.php");
             }
         }
-        echo "</div></div>";
+        echo "</div>";
+                include ("tpl/patab.tpl.ggl.php");
+
+        echo "</div>";
     }
 }
 ?>

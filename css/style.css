@@ -257,9 +257,9 @@ p,li {
 .tables-container div.table {margin:10px 0;}
 /*#graphdiv{width:100%;}*/
 .tables-container div table {margin:auto;padding:10px 0;}
-#graphcontainer{float: right;margin-left: 50px;width: 50%;margin-right: 3%;}
-#graphcontainer p{text-align: center;}
-.patab{width: 100%;margin:auto;padding-bottom: 20px;}
+.graphcontainer{margin-right: 3%;}
+.graphcontainer p{text-align: center;}
+/*.patab{width: 100%;margin:auto;padding-bottom: 20px;}*/
 .table-container{clear:both;}
 
 #patab-table{float: left;margin-right:15px;}
@@ -316,13 +316,16 @@ textarea{display: block;margin: 10px auto;}
 #table-summary{width:40%;margin: 15px auto;}
 .sort-arrow{display: none !important;}
 h4{margin: 5px 0 20px 0;}
+/*.pattern-results{display: table}*/
+/*.patab{display: table-cell;width:35%;}*/
+.tables-container{float: left;width:60%;font-size: 12px;}
+.patab{margin-left: 60%;}
 
 /*
 
-generate
 
 tiroir à gauche
-créer de nouvelles pages ?
+pb des js (lent même avec un seul)
 
 adaptative
 lien sur le motif et rappel (dans la même page ou une page différente)

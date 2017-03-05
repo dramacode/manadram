@@ -1,7 +1,14 @@
 <div id="header">
     <a href="http://obvil.paris-sorbonne.fr" class="logo"><img src="img/logo.png"></a>
 
-    <div class="menu"><a href="#info" id="trigger-info" title="Aide et présentation du projet" class="tooltip-e fancybox"><i class="fa fa-question">&#160;</i></a><a href="#corpus" title="Corpus" id="trigger-corpus" class="tooltip-e fancybox"><i class="fa fa-database">&#160;</i></a><a href="." id="reload" title="Nouvelle recherche" class="tooltip-e fancybox"><i class="fa fa-rotate-left">&#160;</i></a></div>
+    <div class="menu"><a href="#info" id="trigger-info" title="Aide et présentation du projet" class="tooltip-e fancybox"><i class="fa fa-question">&#160;</i></a><a href="#corpus" title="Corpus" id="trigger-corpus" class="tooltip-e fancybox"><i class="fa fa-database">&#160;</i></a><a href="." id="reload" title="Nouvelle recherche" class="tooltip-e fancybox"><i class="fa fa-rotate-left">&#160;</i></a>    
+    <?php if($lang=="fr") {?>
+    <a href="./?lang=en" class="lang tooltip-e" title="English version">en</a><span class="lang"> | fr</span> 
+    <?php }else{ ?>
+    <span class="lang">en | </span><a href="." class="lang tooltip-e" title="Version française">fr</a>
+    <?php } ?>
+</div>
+
 </div>
 
 <div style="display: none">

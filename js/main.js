@@ -72,7 +72,7 @@
         };
         var tfConfigSummary = {
             base_path: 'TableFilter/dist/tablefilter/',
-            auto_filter: true,
+            grid:false,
             loader: true,
             col_types: ["String","Number", "Number"],
             extensions: [{

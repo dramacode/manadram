@@ -1,6 +1,6 @@
-<div id="patab" class="patab">
-    <div id="graphcontainer">
-    <div id="graphdiv<?php echo $needletr;?>"></div>
+<div class="patab">
+    <div class="graphcontainer">
+    <div class="graphdiv" id="graphdiv<?php echo $needletr;?>"></div>
     <p><i>Proportion du motif par lustre</i></p>
     </div>
     <script type="text/javascript">
