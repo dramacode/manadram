@@ -1,6 +1,19 @@
 (function($) {
     $(document).ready(function() {
-
+        
+        $("#options").buttonset();
+        $(".tooltip").tipsy({
+            html: true,
+            gravity: 'w'
+        });
+        $(".tooltip-s").tipsy({
+            html: true,
+            gravity: 's'
+        });
+        $(".tooltip-e").tipsy({
+            html: true,
+            gravity: 'e'
+        });
         $(".fancybox").fancybox({
             'titlePosition': 'inside',
             'transitionIn': 'none',
@@ -10,12 +23,9 @@
             collapsible: true,
             active: false
         });
-        $(".toggle-pattern").click(function(){
-            $(".pattern-wrapper").toggle();
-            $(".str_code").val("");
-        });
+        
         var tfConfigCorpus = {
-            base_path: 'TableFilter/dist/tablefilter/',
+            base_path: 'js/TableFilter/dist/tablefilter/',
             auto_filter: true,
             loader: true,
             rows_counter: true,
@@ -26,7 +36,7 @@
             }]
         };
         var tfConfigTable = {
-            base_path: 'TableFilter/dist/tablefilter/',
+            base_path: 'js/TableFilter/dist/tablefilter/',
             auto_filter: true,
             loader: true,
             rows_counter: true,
@@ -37,7 +47,7 @@
             }]
         };
         var tfConfigOccurrences = {
-            base_path: 'TableFilter/dist/tablefilter/',
+            base_path: 'js/TableFilter/dist/tablefilter/',
             auto_filter: true,
             loader: true,
             rows_counter: true,
@@ -48,7 +58,7 @@
             }]
         };
         var tfConfigCode = {
-            base_path: 'TableFilter/dist/tablefilter/',
+            base_path: 'js/TableFilter/dist/tablefilter/',
             auto_filter: true,
             loader: true,
             rows_counter: true,
@@ -60,7 +70,7 @@
         };
 
         var tfConfigXPath = {
-            base_path: 'TableFilter/dist/tablefilter/',
+            base_path: 'js/TableFilter/dist/tablefilter/',
             auto_filter: true,
             loader: true,
             rows_counter: true,
@@ -71,9 +81,9 @@
             }]
         };
         var tfConfigSummary = {
-            base_path: 'TableFilter/dist/tablefilter/',
-            grid:false,
+            base_path: 'js/TableFilter/dist/tablefilter/',
             loader: true,
+            rows_counter: true,
             col_types: ["String","Number", "Number"],
             extensions: [{
                 name: 'sort'
@@ -110,89 +120,23 @@
             tf.init();
         }        
 
-
+        //hack sur tablefilter pour exporter
         $('.rdiv').html('<a class="tooltip export-link" title="Télécharger les résultats au format CSV" id="export-table-corpus" onclick="exportTableToCSV.apply(this, [$(\'#\'+$(this).closest(\'table\').prop(\'id\')), \'export.csv\'])"><i class="fa fa-download"></i></a>');
-
-
-
-
-
-
-        $("#options").buttonset();
-
-
-        $(".tooltip").tipsy({
-            html: true,
-            gravity: 'w'
+        //toggle l'input de pattern
+        $(".toggle-pattern").click(function(){
+            $(".pattern-wrapper").toggle();
+            $(".str_code").val("");
         });
-       $(".tooltip-s").tipsy({
-            html: true,
-            gravity: 's'
-        });
-       $(".tooltip-e").tipsy({
-            html: true,
-            gravity: 'e'
-        });
-        $(".fancybox").fancybox({
-            'titlePosition': 'inside',
-            'transitionIn': 'none',
-            'transitionOut': 'none'
-        });
+        //accéder directement à #corpus et #info
         var thisHash = window.location.hash;
         if (window.location.hash) {
             $(thisHash).fancybox().trigger('click');
         }
+        //formulaire
         initListeners();
         initListenersScene();
-        //
     });
 })(jQuery);
-
-
-
-// This must be a hyperlink
-
-
-
-
-function exportTableToCSV($table, filename) {
-    var $rows = $table.find('tr:not(.fltrow):has(td)'),
-
-        // Temporary delimiter characters unlikely to be typed by keyboard
-        // This is to avoid accidentally splitting the actual contents
-        tmpColDelim = String.fromCharCode(11),
-        // vertical tab character
-        tmpRowDelim = String.fromCharCode(0),
-        // null character
-        // actual delimiter characters for CSV format
-        colDelim = '	',
-        rowDelim = '\n',
-
-        // Grab text from table into CSV formatted string
-        csv = $rows.map(function(i, row) {
-            var $row = $(row),
-                $cols = $row.find('td:not(.view-table, .view-text, .view-source)');
-
-            return $cols.map(function(j, col) {
-                var $col = $(col),
-                    text = $col.text();
-
-                return text.replace(/"/g, '""'); // escape double quotes
-            }).get().join(tmpColDelim);
-
-        }).get().join(tmpRowDelim).split(tmpRowDelim).join(rowDelim).split(tmpColDelim).join(colDelim),
-
-        // Data URI
-        csvData = 'data:application/octet-stream;charset=utf-8,' + encodeURIComponent(csv);
-
-    $(this).attr({
-        'download': filename,
-        'href': csvData,
-        'target': '_blank'
-    });
-}
-
-
 
 
 function initListeners() {
@@ -324,9 +268,6 @@ function delCol() {
         }
     }
 }
-
-
-
 
 
 function addFieldConfiguration() {

@@ -5,14 +5,15 @@
             <?php if(isset($_GET["post"])){
                 $filters = get_filters($bdd);
                 include_once("tpl/filters.tpl.php");
-            } else {include_once("tpl/filters.html");} ?>
+            } else {include_once("html/filters.html");} ?>
         </div>        
         <div id="pattern" class="form-block form-pattern">
-            <div class="pattern-title"><h4 class="toggle-pattern tooltip-s" title="Basculer l'affichage" >Motif</h4></div>                    
             <div class="pattern-wrapper" <?php if(isset($_GET["str_code"])){if($_GET["str_code"]){echo "style='display:block;'";} else {echo "style='display:none;'";}}else{echo "style='display:none;'";} ?>>
+                <div class="pattern-title"><h4>Motif <a class="toggle-pattern"><i class="fa fa-th tooltip-s" title="Basculer l'affichage"></i></a></h4></div>                    
                 <textarea class="str_code" name="str_code" rows="10" cols="16"><?php if(isset($_GET["str_code"])){if($_GET["str_code"]){echo $_GET["str_code"];}} ?></textarea>
             </div>
             <div class="pattern-wrapper" <?php if(isset($_GET["str_code"])){if($_GET["str_code"]){echo "style='display:none;'";}} ?>>
+                <div class="pattern-title"><h4>Motif <a class="toggle-pattern"><i class="fa fa-list tooltip-s" title="Basculer l'affichage"></i></a></h4></div>                    
                 <div class="edit-table">
                     <a title="Ajouter une colonne" class="tooltip" id="add_column"><img src="img/addcol.png"/></a>
                     <a title="Supprimer une colonne" class="tooltip" id="delete_column"><img src="img/delcol.png"/></a>

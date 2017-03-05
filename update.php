@@ -10,13 +10,13 @@ $filters = get_filters($bdd);
     ob_start();
     include ("tpl/filters.tpl.php");
     $filters = ob_get_clean();
-    file_put_contents("tpl/filters.html", $filters);
+    file_put_contents("html/filters.html", $filters);
 echo "<pre>";print_r($filters);
     $corpus = get_corpus();
     ob_start();
-    include ("tpl/corpus.tpl.php");
+    include ("tpl/table_corpus.tpl.php");
     $list = ob_get_clean();
-    file_put_contents("tpl/corpus.html", $list);
+    file_put_contents("html/corpus.html", $list);
 return;
 //
 

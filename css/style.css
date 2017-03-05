@@ -307,9 +307,9 @@ form{display: table;}
 h4.toggle-pattern:hover{color:#ac1a2f; }
 form{width: 80%;margin: auto;}
 #pattern{width: 300px;}
-h4.toggle-pattern{text-align: center;cursor: pointer;}
+.pattern-title h4{text-align: center;}
 .edit-table{text-align: center;}
-table.search{margin: 15px auto;}
+table.search{margin: 17px auto;}
 input.submit{margin: auto;
 display: block;}
 textarea{display: block;margin: 10px auto;}
@@ -320,7 +320,9 @@ h4{margin: 5px 0 20px 0;}
 /*.patab{display: table-cell;width:35%;}*/
 .tables-container{float: left;width:60%;font-size: 12px;}
 .patab{margin-left: 60%;}
-
+.pattern-results{clear: both;}
+#table-summary .fltrow{display: none;}
+textarea, .xpath-field-configuration{font-family: monospace;}
 /*
 
 

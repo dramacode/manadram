@@ -9,43 +9,36 @@ require_once ("functions/get_needle.php");
 require_once ("functions/search.php");
 require_once ("functions/db.php");
 require_once ("functions/statify.php");
-
 require_once ("functions/plays.php");
 require_once ("functions/json.php");
 require_once ("functions/get_filters.php");
 echo '<!DOCTYPE html>
-
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-                <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
-        <script type="text/javascript" src="js/jquery.hoverIntent.js"></script>
-        <script type="text/javascript" src="js/jquery-ui-1.11.4/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="js/tipsy/src/javascripts/jquery.tipsy.js"></script>
-        <script type="text/javascript" src="js/fancybox/source/jquery.fancybox.js"></script>
-        <script type="text/javascript" src="TableFilter/dist/tablefilter/tablefilter.js"></script>
-        <script type="text/javascript" src="js/dygraph/dygraph-combined.js"></script>
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script type="text/javascript" src="js/main.js"> </script>
-       <link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css" type="text/css" />
-        <link rel="stylesheet" href="js/tipsy/src/stylesheets/tipsy.css" type="text/css" />
-        <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css" type="text/css" />
-      <link rel="stylesheet" href="js/jquery-ui-1.11.4/themes/smoothness/jquery-ui.css">
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.hoverIntent.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/tipsy/src/javascripts/jquery.tipsy.js"></script>
+    <script type="text/javascript" src="js/fancybox/source/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="js/TableFilter/dist/tablefilter/tablefilter.js"></script>
+    <script type="text/javascript" src="export.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css" type="text/css" />
+    <link rel="stylesheet" href="js/tipsy/src/stylesheets/tipsy.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css" type="text/css" />
+    <link rel="stylesheet" href="js/jquery-ui-1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/form.css">
-    <link rel="stylesheet" type="text/css" href="css/table.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-     <title>Moteur d\'analyse dramaturgique</title>
+    <title>Moteur d\'analyse dramaturgique</title>
 </head>
-
 <body>';
 $bdd = connect();
 $lang = (isset($_GET["lang"]) and $_GET["lang"] == "en") ? "en" : "fr";
 $corpus = get_corpus();
 include ("lang/" . $lang . ".php");
 include ("tpl/header.tpl.php");
-include ("tpl/corpus.html");
+include ("html/corpus.html");
 include ("tpl/form.tpl.php");
 
 if (isset($_GET["post"])) {
@@ -54,7 +47,8 @@ if (isset($_GET["post"])) {
     echo '</div>';
 }
 //include ("tpl/footer.tpl.php");
-echo '</body></html>';
+echo '    <script type="text/javascript" src="js/main.js"></script>
+</body></html>';
 
 function doPost($bdd) {
 
@@ -169,7 +163,7 @@ function doPost($bdd) {
     }
     //$b = microtime(true);
     //$time = round($b - $a, 2);
-    include("tpl/summary.tpl.php");
+    include("tpl/table_summary.tpl.php");
         
     
     foreach ($all_results as $needle => $all_result) {
@@ -195,7 +189,7 @@ function doPost($bdd) {
         echo "<div id='tables-" . $needle . "' class='tables-container'>";
 
         //occurrences
-        include ("tpl/occurrences.tpl.php");
+        include ("tpl/table_occurrences.tpl.php");
 
         //tables
         foreach ($fields as $key => $field) {
@@ -205,11 +199,11 @@ function doPost($bdd) {
             } elseif (isset($field["type"])) {
                 include ("tpl/table_xpath.tpl.php");
             } else {
-                include ("tpl/table.tpl.php");
+                include ("tpl/table_generic.tpl.php");
             }
         }
         echo "</div>";
-                include ("tpl/patab.tpl.ggl.php");
+                include ("tpl/graph.tpl.php");
 
         echo "</div>";
     }

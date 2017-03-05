@@ -9,7 +9,7 @@ if (!isset($_GET["c"])) {
 $p = (isset($_GET["p"])) ? $_GET["p"] : false;
 $c = $_GET["c"];
 $group = (isset($_GET["group"])) ? $_GET["group"] : false;
-echo "<!DOCTYPE html><html><head><meta charset='UTF-8'/><link rel='stylesheet' href='css/generate.css'/></head><body>";
+echo "<!DOCTYPE html><html><head><meta charset='UTF-8'/><link rel='stylesheet' href='css/generate.css'/><title>Motifs dramatiques</title></head><body>";
 $valids = array();
 
 if ($p) {
@@ -17,7 +17,7 @@ if ($p) {
 } else {
     generate_all($c, $valids);
 }
-echo "<pre>";
+//echo "<pre>";
 //print_r($valids);
 foreach ($valids as $pattern) {
     $pattern = flatmulti($pattern);
@@ -38,7 +38,7 @@ function generate($p, $c, $group = false, &$valids) {
     $patterns = $duplicates = $empty_char = $duplicate_char = $empty_conf = $repeat_conf = array();
 
     //test
-    echo "<h2>" . $c . " configurations, " . $p . " personnages</h2><p>2^(cp) = " . $max . " motifs possibles, de 0 à " . decbin($max - 1) . "<sub>2</sub></p>";
+    echo "<h2>" . $c . " configurations, " . $p . " personnages</h2><p>2<sup>cp</sup> = " . $max . " motifs possibles, de 0 à " . decbin($max - 1) . "<sub>2</sub></p>";
     echo "<table><tr style='vertical-align:top;'><td><table><tr style='vertical-align:top;'><td><h3>Motifs possibles</h3>" . $max . " motifs</td><td><h3>Motifs possibles réordonnés</h3>" . $max . " motifs<br/><br/></td></tr>";
 
     //
@@ -142,10 +142,10 @@ function generate($p, $c, $group = false, &$valids) {
     $valids = array_merge($valids, $patterns);
 
     //test
-    echo "<td class='filtered'><h3>Motifs avec au moins un personnage toujours absent</h3>" . print_patterns($empty_char);
-    echo "<h3>Motifs avec au moins deux personnages dont la distance = 0</h3>" . print_patterns($duplicate_char);
-    echo "<h3>Motifs avec au moins une configuration sans personnage</h3>" . print_patterns($empty_conf);
-    echo "<h3>Motifs avec au moins une configuration identique à la suivante</h3>" . print_patterns($repeat_conf);
+    echo "<td class='filtered'><h3>Motifs exclus</h3><h4>Motifs avec au moins un personnage toujours absent</h4>" . print_patterns($empty_char);
+    echo "<h4>Motifs avec au moins deux personnages dont la distance = 0</h4>" . print_patterns($duplicate_char);
+    echo "<h4>Motifs avec au moins une configuration sans personnage</h4>" . print_patterns($empty_conf);
+    echo "<h4>Motifs avec au moins une configuration identique à la suivante</h4>" . print_patterns($repeat_conf);
     echo "</td><td class='filtered'><h3>Motifs valides</h3>" . print_patterns($patterns, true) . "</td></tr></table>";
 
     //
@@ -159,7 +159,7 @@ function generate_all($c, &$valids) {
     
     //test
 
-    echo "<h1>" . $c . " configurations, (2^c)-1 = " . ($max - 1) . " personnages distincts possibles</h1>";
+    echo "<h1>" . $c . " configurations, 2<sup>c</sup>-1 = " . ($max - 1) . " personnages distincts possibles</h1>";
 
     //
     $p = 1;

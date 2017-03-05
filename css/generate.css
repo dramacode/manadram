@@ -1,3 +1,4 @@
 body{font-family: "Helvetica";}
 table, tbody,tr,td{padding: 0;border:0;margin:0;}
 .filtered{padding-top:2px;}
+td{padding: 0 10px 0 0;}
