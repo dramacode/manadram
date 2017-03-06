@@ -14,7 +14,7 @@ function exportTableToCSV($table, filename) {
         // Grab text from table into CSV formatted string
         csv = $rows.map(function(i, row) {
             var $row = $(row),
-                $cols = $row.find('td:not(.view-table, .view-text, .view-source)');
+                $cols = $row.find('td:not(.view-table, .view-text, .view-source, .str_code)');
 
             return $cols.map(function(j, col) {
                 var $col = $(col),

@@ -2,33 +2,65 @@
 include_once ("functions/pattern.php");
 set_time_limit(600);
 ini_set('memory_limit', '-1');
-
-if (!isset($_GET["c"])) {
-    return;
-}
-$p = (isset($_GET["p"])) ? $_GET["p"] : false;
-$c = $_GET["c"];
-$group = (isset($_GET["group"])) ? $_GET["group"] : false;
-echo "<!DOCTYPE html><html><head><meta charset='UTF-8'/><link rel='stylesheet' href='css/generate.css'/><title>Motifs dramatiques</title></head><body>";
 $valids = array();
 
-if ($p) {
-    generate($p, $c, $group, $valids);
-} else {
-    generate_all($c, $valids);
-}
-//echo "<pre>";
-//print_r($valids);
-foreach ($valids as $pattern) {
-    $pattern = flatmulti($pattern);
-    $pattern = multiflip($pattern);
-    $pattern = intcode($pattern);
-    $pattern = multistring($pattern);
-    echo "<br/>".$pattern;
-}
-echo "</body></html>";
+if (isset($argv)) {
+    $lb = "\n";
+    $a = microtime(true);
+    if (isset($argv[2])) {
+        $group = isset($argv[3]) ? $arg[3] : false;
+        ob_start();
+        generate($argv[1], $argv[2], $argv[3], $valids);
+        ob_end_clean();
+        valids($valids, $lb);
+    } else {
+        ob_start();
+        generate_all($argv[1], $valids);
+        ob_end_clean();
+        valids($valids, $lb);
+    }
+    $b = microtime(true);
+    echo "\nTemps d'exécution : ".round($b-$a, 2)." secondes\n";
 
-function generate($p, $c, $group = false, &$valids) {
+} else {
+    $lb = "<br/>";
+    
+    if (!isset($_GET["c"])) {
+        return;
+    }
+    $p = (isset($_GET["p"])) ? $_GET["p"] : false;
+    $c = $_GET["c"];
+    $group = (isset($_GET["group"])) ? $_GET["group"] : false;
+    echo "<!DOCTYPE html><html><head><meta charset='UTF-8'/><link rel='stylesheet' href='css/generate.css'/><title>Motifs dramatiques</title></head><body>";
+    
+    if ($p) {
+        generate($c, $p, $group, $valids);
+        valids($valids, $lb);
+    } else {
+        generate_all($c, $valids);
+        valids($valids, $lb);
+    }
+    echo "</body></html>";
+}
+
+
+function valids($valids, $lb) {
+
+    $total = count($valids);
+    if($lb == "\n"){echo "\nTotal : " . $total . " motifs valides\n";}else{
+        echo "<h2>Total : " . $total . " motifs valides</h2>";
+    }
+    //print_r($valids);
+    foreach ($valids as $pattern) {
+        $pattern = flatmulti($pattern);
+        $pattern = multiflip($pattern);
+        $pattern = intcode($pattern);
+        $pattern = multistring($pattern);
+        echo $pattern . $lb;
+    }
+}
+
+function generate($c, $p, $group = false, &$valids) {
 
 
     //générer tous les motifs
@@ -171,23 +203,24 @@ function generate_all($c, &$valids) {
         echo "<h2>Motifs à " . $p . " personnages</h2>";
 
         //
-        $patterns = array_merge($patterns, generate($p, $c, false, $valids));
+        $patterns = array_merge($patterns, generate($c, $p, false, $valids));
 
         //test
-        $total = count($patterns);
-
+        
         //
+
         $p++;
     }
 
     //test
-    echo "<h2>Total : " . $total . " motifs valides</h2>";
-
+    
     //
+
     return $patterns;
 }
 
 //lenteur
+
 //créer des motifs pour les entractes. Le faire en second, sur string (entracte à l'intérieur du motif)
 
 

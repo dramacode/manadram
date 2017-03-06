@@ -188,7 +188,7 @@ margin: 2% 4%;}
 	display:none;
 }
 
-.tableFilterOccurrences .fltrow td:nth-child(1) input,.tableFilterOccurrences .fltrow td:nth-child(2) input,.tableFilterOccurrences .fltrow td:nth-child(3) input {
+.tableFilterOccurrences .fltrow td:nth-child(1) input,.tableFilterOccurrences .fltrow td:nth-child(2) input,.tableFilterOccurrences .fltrow td:nth-child(3) input,.tableFilterOccurrences .fltrow td:nth-child(4) input {
 	display:none;
 }
 #corpus .fltrow td:nth-child(1) input,#corpus .fltrow td:nth-child(2) input,#corpus .fltrow td:nth-child(3) input {
@@ -318,27 +318,13 @@ textarea{display: block;margin: 10px auto;}
 h4{margin: 5px 0 20px 0;}
 /*.pattern-results{display: table}*/
 /*.patab{display: table-cell;width:35%;}*/
-.tables-container{float: left;width:60%;font-size: 12px;}
-.patab{margin-left: 60%;}
+.tables-container{float: left;width:65%;font-size: 12px;}
+.patab{margin-left: 65%;}
 .pattern-results{clear: both;}
 #table-summary .fltrow{display: none;}
 textarea, .xpath-field-configuration{font-family: monospace;}
 /*
 
-
-pb des js (lent même avec un seul)
-
 adaptative
-lien sur le motif et rappel (dans la même page ou une page différente)
-nombre total
-pas de résultat
-
-
-colonnes genre (dans le tableau)
-colonne lustre (dans le tableau)
-dans ce cas, il resterait occurrences, auteur, xpath
-lignes genres (dans les graphes)
-un graphique pour tous les motifs (mais dans ce cas je ne peux pas faire une ligne par genre)
-Quelle utilité ?
 
 */

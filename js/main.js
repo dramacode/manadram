@@ -1,7 +1,5 @@
 (function($) {
-    $(document).ready(function() {
-        
-        $("#options").buttonset();
+    $(document).ready(function() {        
         $(".tooltip").tipsy({
             html: true,
             gravity: 'w'
@@ -23,6 +21,20 @@
             collapsible: true,
             active: false
         });
+        var tfConfigSummary = {
+            base_path: 'js/TableFilter/dist/tablefilter/',
+            loader: true,
+            rows_counter: true,
+            col_types: ["String","Number", "Number"],
+            extensions: [{
+                name: 'sort'
+                }]
+            };
+        var tables = document.getElementsByClassName("tableFilterSummary");
+        for (var i = 0; i < tables.length; i++) {
+            var tf = new TableFilter(tables[i].id, tfConfigSummary);
+            tf.init();
+        }
         
         var tfConfigCorpus = {
             base_path: 'js/TableFilter/dist/tablefilter/',
@@ -52,7 +64,7 @@
             loader: true,
             rows_counter: true,
             watermark: "Filtrer",
-            col_types: ["String", "String", "String", "String", "String", "String", "Number", "String", "Number", "Number", "Number"],
+            col_types: ["String", "String", "String","String", "String", "String", "String", "Number", "String", "Number", "Number", "Number"],
             extensions: [{
                 name: 'sort'
             }]
@@ -80,15 +92,7 @@
                 name: 'sort'
             }]
         };
-        var tfConfigSummary = {
-            base_path: 'js/TableFilter/dist/tablefilter/',
-            loader: true,
-            rows_counter: true,
-            col_types: ["String","Number", "Number"],
-            extensions: [{
-                name: 'sort'
-            }]
-        };
+
         var tables = document.getElementsByClassName("tableFilterCorpus");
         for (var i = 0; i < tables.length; i++) {
             var tf = new TableFilter(tables[i].id, tfConfigCorpus);
@@ -114,11 +118,6 @@
             var tf = new TableFilter(tables[i].id, tfConfigXPath);
             tf.init();
         }
-        var tables = document.getElementsByClassName("tableFilterSummary");
-        for (var i = 0; i < tables.length; i++) {
-            var tf = new TableFilter(tables[i].id, tfConfigSummary);
-            tf.init();
-        }        
 
         //hack sur tablefilter pour exporter
         $('.rdiv').html('<a class="tooltip export-link" title="Télécharger les résultats au format CSV" id="export-table-corpus" onclick="exportTableToCSV.apply(this, [$(\'#\'+$(this).closest(\'table\').prop(\'id\')), \'export.csv\'])"><i class="fa fa-download"></i></a>');
@@ -135,6 +134,7 @@
         //formulaire
         initListeners();
         initListenersScene();
+        document.body.style.display = "block";        
     });
 })(jQuery);
 

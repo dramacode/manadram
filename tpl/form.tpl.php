@@ -77,6 +77,7 @@
                     <a title="Supprimer un champ" class="tooltip" id="delete_field_configuration"><i class="fa fa-minus"> </i></a>
                     </div>
                 </div>          
+                <script type="text/javascript">(function($) {$("#options").buttonset();})(jQuery);</script>
             </div>
         </div>
     </form>
