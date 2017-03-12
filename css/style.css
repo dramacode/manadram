@@ -300,7 +300,7 @@ thead .fa{margin-right:5px !important;}
 tr.fltrow{border-left:1px solid #ccc !important;border-right:1px solid #ccc !important;}
 /*.export-link{float: left;}*/
 
-.filter select.text{height: 45px; margin-top:5px;}
+.filter select.text{height: 43px; margin-top:5px;}
 .filter label.text{display: block;float: left;min-width: 70px;}
 form{display: table;}
 .form-block{display: table-cell;}
