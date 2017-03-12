@@ -1,6 +1,6 @@
 <?php
 
-//error_reporting(0);
+error_reporting(0);
 require_once ("functions/functions.php");
 require_once ("functions/pattern.php");
 require_once ("functions/patab.php");
