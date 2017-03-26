@@ -65,7 +65,7 @@ function generate($c, $p, $group = false, &$valids) {
 
     //générer tous les motifs
     $i = 0;
-    $max = bcpow(2, ($p * $c));
+    $max = pow(2, ($p * $c));
     $cp = $c * $p;
     $patterns = $duplicates = $empty_char = $duplicate_char = $empty_conf = $repeat_conf = array();
 
