@@ -39,7 +39,7 @@ function extract_patterns($xp, $length, $confidents, $group) {
     while ($k < $configurations->length) {
         $current_configuration = $first_configuration = $configurations->item($k); //conf de départ du motif
         $conf_id = $current_configuration->getAttribute("xml:id");
-
+    //print_r($conf_id);
         $scene_id = $xp->evaluate("./ancestor::*[@type='scene']", $first_configuration);
         $scene_id = $scene_id->item(0)->getAttribute("xml:id"); //scene_id (renvoie toujours à un id existant) pourra différer de $configuration_id (-1 pour les débuts d'acte)
 
@@ -106,7 +106,6 @@ function extract_patterns($xp, $length, $confidents, $group) {
                     $current_act_id = $next_act_id;//pour le tour suivant
                 }
             }
-                    echo $scene_id;
 
             if ($entract_after and $i == $length) {
                 foreach ($characters as $character_id => $character) {
@@ -118,7 +117,7 @@ function extract_patterns($xp, $length, $confidents, $group) {
 
         }
         $k++;
-        echo "<pre>";print_r($pattern);
+        //echo "<pre>";print_r($pattern);
         if (!isset($pattern)) {
             continue;
         }

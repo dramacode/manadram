@@ -11,13 +11,11 @@ $filters = get_filters($bdd);
     include ("tpl/filters.tpl.php");
     $filters = ob_get_clean();
     file_put_contents("html/filters.html", $filters);
-echo "<pre>";print_r($filters);
     $corpus = get_corpus();
     ob_start();
     include ("tpl/table_corpus.tpl.php");
     $list = ob_get_clean();
     file_put_contents("html/corpus.html", $list);
-return;
 //
 
 ////vider les tables
@@ -112,7 +110,7 @@ foreach ($files as $file) {
     $xp->registerNamespace("tei", "http://www.tei-c.org/ns/1.0");
     $i = 1; //longueur min des motifs à extraire. Les motifs A//B, A/, /A sont extraits en même temps que (respectivement) les motifs de 3 (A/AB/A) et 2 (A/B) conf, mais ils sont insérés en base avec l = 2 et l=1
 
-    while ($i <= 4) { //longueur max des motifs à extraire
+    while ($i <= 5) { //longueur max des motifs à extraire
 
         foreach ($modes as $kmode => $mode) {
             $patterns = extract_patterns($xp, $i, $mode[0], $mode[1]);
@@ -172,6 +170,7 @@ foreach ($files as $file) {
                 ?,
                 ?,
                 ?,
+                ?,
                 ?
                 )";
                 $data = array(
@@ -194,6 +193,7 @@ foreach ($files as $file) {
                     $mode[0],
                     $mode[1]
                 );
+                
                 insert($sql, $bdd, $data);
                 $sql = "UPDATE stats SET value = value +1 WHERE play_id = ".(int)$play_id." AND l = ".$pattern["l"]." AND c = ".$mode[0]." AND g = ".$mode[1];
                 insert($sql, $bdd);
@@ -213,4 +213,6 @@ foreach ($files as $file) {
     file_put_contents("tpl/corpus.html", $list);
     
 }
+    $bdd->closeCursor();
+    $bdd = NULL;
 ?>
