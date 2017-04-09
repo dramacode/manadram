@@ -148,6 +148,7 @@ foreach ($files as $file) {
                 act_n,
                 scene_n,
                 scene_id,
+                conf_id,
                 occurrences,
                 int_dec,
                 int_bin,
@@ -180,6 +181,7 @@ foreach ($files as $file) {
                     (int)$pattern["act_n"],
                     (int)$pattern["scene_n"],
                     $pattern["scene_id"],
+                    $pattern["conf_id"],
                     $list_id,
                     $pattern["int_dec"], //transforme en float pour les nombres trop élevés : pb pour sqlite ?
 

@@ -65,6 +65,7 @@ CREATE TABLE pattern (
   act_n      INTEGER, -- numéro de l'acte
   scene_n    INTEGER, -- numéro de la première scène du motif (PB SI JE PRENDS LES CONFIGURATIONS)
   scene_id	 TEXT,
+  conf_id	TEXT,
   int_dec    INTEGER, -- motif en décimal (PB DU FLOAT)
   int_bin    TEXT,    -- motif en binaire
   str_code   TEXT,    -- motif codifié A/AB

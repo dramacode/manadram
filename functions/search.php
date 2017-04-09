@@ -18,7 +18,7 @@ function search($needle, $length, $confidents, $group, $bdd, $filter) {
             $dom->load("../tcp5/" . $results[$key]["code"] . ".xml");
             $xp = new DOMXPath($dom);
             $xp->registerNamespace("tei", "http://www.tei-c.org/ns/1.0");
-            $conf = $dom->getElementById($results[$key]["scene_id"]);
+            $conf = $dom->getElementById($results[$key]["conf_id"]);
             $i = 0;
             foreach ($_GET["xpath"] as $xkey => $request) {
                 //echo $i;
