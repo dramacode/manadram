@@ -70,7 +70,7 @@ function generate($c, $p, $group = false, &$valids) {
     $patterns = $duplicates = $empty_char = $duplicate_char = $empty_conf = $repeat_conf = array();
 
     //test
-    echo "<h2>" . $c . " configurations, " . $p . " personnages</h2><p>2<sup>cp</sup> = " . $max . " motifs possibles, de 0 à " . decbin($max - 1) . "<sub>2</sub></p>";
+    echo "<h2>s = " . $c . " scènes, p = " . $p . " personnages</h2><p>2<sup>sp</sup> = " . $max . " motifs possibles, de 0 à " . decbin($max - 1) . "<sub>2</sub></p>";
     echo "<table><tr style='vertical-align:top;'><td><table><tr style='vertical-align:top;'><td><h3>Motifs possibles</h3>" . $max . " motifs</td><td><h3>Motifs possibles réordonnés</h3>" . $max . " motifs<br/><br/></td></tr>";
 
     //
@@ -175,9 +175,9 @@ function generate($c, $p, $group = false, &$valids) {
 
     //test
     echo "<td class='filtered'><h3>Motifs exclus</h3><h4>Motifs avec au moins un personnage toujours absent</h4>" . print_patterns($empty_char);
-    echo "<h4>Motifs avec au moins deux personnages dont la distance = 0</h4>" . print_patterns($duplicate_char);
-    echo "<h4>Motifs avec au moins une configuration sans personnage</h4>" . print_patterns($empty_conf);
-    echo "<h4>Motifs avec au moins une configuration identique à la suivante</h4>" . print_patterns($repeat_conf);
+    echo "<h4>Motifs avec au moins deux personnages concomittants</h4>" . print_patterns($duplicate_char);
+    echo "<h4>Motifs avec au moins une scène sans personnage</h4>" . print_patterns($empty_conf);
+    echo "<h4>Motifs avec au moins une scène identique à la suivante</h4>" . print_patterns($repeat_conf);
     echo "</td><td class='filtered'><h3>Motifs valides</h3>" . print_patterns($patterns, true) . "</td></tr></table>";
 
     //
@@ -191,7 +191,7 @@ function generate_all($c, &$valids) {
     
     //test
 
-    echo "<h1>" . $c . " configurations, 2<sup>c</sup>-1 = " . ($max - 1) . " personnages distincts possibles</h1>";
+    echo "<h1>s = " . $c . " scènes, 2<sup>s</sup>-1 = " . ($max - 1) . " personnages distincts possibles</h1>";
 
     //
     $p = 1;
