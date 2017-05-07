@@ -27,7 +27,7 @@ include ("lang/" . $lang . ".php");
     <script type="text/javascript" src="js/tipsy/src/javascripts/jquery.tipsy.js"></script>
     <script type="text/javascript" src="js/fancybox/source/jquery.fancybox.js"></script>
     <script type="text/javascript" src="js/TableFilter/dist/tablefilter/tablefilter.js"></script>
-    <script type="text/javascript" src="export.js"></script>
+    <script type="text/javascript" src="js/export.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="js/main.js"></script>    
     <link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css" type="text/css" />
