@@ -58,3 +58,7 @@ td.role, td.caption{padding: 1px 5px;}
 table.result{margin: auto;}
 table.legend td.caption{border:none;}
 table.legend{margin-top:20px;}
+table.result td{white-space: nowrap;height: 13px;}
+table.result{
+    font-size: 12px;
+}

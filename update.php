@@ -1,7 +1,8 @@
 <?php
 
 //set_time_limit(20000);
-error_reporting(E_ALL);
+//error_reporting(E_ALL);
+//error_reporting(0);
 foreach (glob("functions/*.php") as $function) {
     include_once ("functions/" . basename($function));
 }
@@ -42,11 +43,11 @@ foreach ($globs as $glob) {
 }
 
 //play and characters
-foreach ($files as $file) {
-    $play = basename($file, ".xml");
-    $corpus = biblio($play);
-}
-
+//foreach ($files as $file) {
+//    $play = basename($file, ".xml");
+//    $corpus = biblio($play);
+//}
+//print_r
 //characters
 
 //patterns
@@ -213,6 +214,5 @@ foreach ($files as $file) {
     file_put_contents("tpl/corpus.html", $list);
     
 }
-    $bdd->closeCursor();
     $bdd = NULL;
 ?>
