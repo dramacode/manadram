@@ -30,6 +30,7 @@ if (isset($argv)) {
     }
     $p = (isset($_GET["p"])) ? $_GET["p"] : false;
     $c = $_GET["c"];
+    //$entracts = (isset($_GET["entracts"])) ? $_GET["entracts"] : false;
     $group = (isset($_GET["group"])) ? $_GET["group"] : false;
     echo "<!DOCTYPE html><html><head><meta charset='UTF-8'/><link rel='stylesheet' href='css/generate.css'/><title>Motifs dramatiques</title></head><body>";
     
@@ -45,7 +46,9 @@ if (isset($argv)) {
 
 
 function valids($valids, $lb) {
+    $valids = entracts($valids);
 
+    //echo "<pre>";print_r($valids);
     $total = count($valids);
     if($lb == "\n"){echo "\nTotal : " . $total . " motifs valides\n";}else{
         echo "<h2>Total : " . $total . " motifs valides</h2>";
@@ -58,6 +61,30 @@ function valids($valids, $lb) {
         $pattern = multistring($pattern);
         echo $pattern . $lb;
     }
+}
+
+function entracts($valids){
+    $array = array();
+    //ne marche que pour l = 3, un seul entracte dans le motif
+    foreach($valids as $pattern){
+	//line = char
+	$characters_n = count($pattern);
+	$pattern = flatmulti($pattern);
+	$pattern = multiflip($pattern);
+	$pattern = multiflat($pattern);//line = conf
+	$line = str_repeat("0",$characters_n);
+	$new = array($pattern[0], $line, $pattern[1], $pattern[2]);
+	$new = flatmulti($new);
+	$new = multiflip($new);
+	$new = multiflat($new);
+	$array[] = $new;
+	$new = array($pattern[0], $pattern[1], $line, $pattern[2]);
+	$new = flatmulti($new);
+	$new = multiflip($new);
+	$new = multiflat($new);
+	$array[] = $new;
+    }
+    return $array;
 }
 
 function generate($c, $p, $group = false, &$valids) {
