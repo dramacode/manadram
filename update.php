@@ -27,7 +27,8 @@ $sql = "DELETE FROM 'configuration'";
 insert($sql, $bdd);
 $sql = "DELETE FROM 'role'";
 insert($sql, $bdd);
-
+//$bdd = NULL;
+//return;
 ////
 
 //get corpus
@@ -231,5 +232,5 @@ ob_start();
 include ("tpl/table_corpus.tpl.php");
 $list = ob_get_clean();
 file_put_contents("html/corpus.html", $list);
-
+$bdd = NULL;
 ?>

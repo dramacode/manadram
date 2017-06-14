@@ -180,7 +180,6 @@
 ../tcp5/racine_mithridate.xml
 ../tcp5/racine_phedre.xml
 ../tcp5/racine_plaideurs.xml
-../tcp5/racine_plaideurs.xml
 ../tcp5/racine_thebaide.xml
 ../tcp5/rosimond_avocatsavetier.xml
 ../tcp5/rosimond_festindepierre.xml
