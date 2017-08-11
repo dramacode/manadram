@@ -59,7 +59,10 @@
         <li><a href="http://bibdramatique.paris-sorbonne.fr/">Bibliothèque dramatique (UMR CELLF 16-21)</a></li>
         <li><a href="http://obvil.paris-sorbonne.fr/corpus/moliere/moliere/">Projet Molière (labex OBVIL)</a></li>
         </ul>
-        
+        <h3>Bibliographie</h3>
+	<ul>
+	    <li>Marc Douguet, « MAnaDram : un moteur d’analyse pour l’extraction et le repérage des motifs dramaturgiques », dans Ioana Galleron (dir.), <i>Théâtre et humanités numériques</i> Revue d'histoire du théâtre numérique</li>, <i>Revue d'historiographie du théâtre</i>, n°4, 2017 [à paraître]
+	</ul>
         <br/>
         <p>Programme développé par Marc Douguet dans le cadre du labex OBVIL.</p>
         <p>Contact : marc.douguet[at]gmail.com</p>
