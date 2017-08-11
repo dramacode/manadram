@@ -61,7 +61,7 @@
         </ul>
         <h3>Bibliographie</h3>
 	<ul>
-	    <li>Marc Douguet, « MAnaDram : un moteur d’analyse pour l’extraction et le repérage des motifs dramaturgiques », dans Ioana Galleron (dir.), <i>Théâtre et humanités numériques</i> Revue d'histoire du théâtre numérique</li>, <i>Revue d'historiographie du théâtre</i>, n°4, 2017 [à paraître]
+	    <li>Marc Douguet, « MAnaDram : un moteur d’analyse pour l’extraction et le repérage des motifs dramaturgiques », dans Ioana Galleron (dir.), <i>Théâtre et humanités numériques</i>, <i>Revue d'historiographie du théâtre</i>, n°4, 2017 [à paraître]</li>
 	</ul>
         <br/>
         <p>Programme développé par Marc Douguet dans le cadre du labex OBVIL.</p>
