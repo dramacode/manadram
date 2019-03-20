@@ -1,9 +1,7 @@
 <div id="header">
-    <a href="http://obvil.paris-sorbonne.fr" class="logo"><img src="img/logo.png"></a>
-
-    <div class="menu"><a href="#info" id="trigger-info" title="Aide et présentation du projet" class="tooltip-e fancybox"><i class="fa fa-question">&#160;</i></a><a href="#corpus" title="Corpus" id="trigger-corpus" class="tooltip-e fancybox"><i class="fa fa-database">&#160;</i></a><a href="." id="reload" title="Nouvelle recherche" class="tooltip-e fancybox"><i class="fa fa-rotate-left">&#160;</i></a>    
+    <div class="menu"><a href="#info" id="trigger-info" title="Aide et présentation du projet" class="tooltip-e fancybox"><i class="fa fa-question">&#160;</i></a><a href="#corpus" title="Corpus" id="trigger-corpus" class="tooltip-e fancybox"><i class="fa fa-database">&#160;</i></a><a href="." id="reload" title="Nouvelle recherche" class="tooltip-e fancybox"><i class="fa fa-rotate-left">&#160;</i></a>
     <?php if($lang=="fr") {?>
-    <a href="./?lang=en" class="lang tooltip-e" title="English version">en</a><span class="lang"> | fr</span> 
+    <a href="./?lang=en" class="lang tooltip-e" title="English version">en</a><span class="lang"> | fr</span>
     <?php }else{ ?>
     <span class="lang">en | </span><a href="." class="lang tooltip-e" title="Version française">fr</a>
     <?php } ?>
@@ -59,7 +57,7 @@
         <li><a href="http://bibdramatique.paris-sorbonne.fr/">Bibliothèque dramatique (UMR CELLF 16-21)</a></li>
         <li><a href="http://obvil.paris-sorbonne.fr/corpus/moliere/moliere/">Projet Molière (labex OBVIL)</a></li>
         </ul>
-        
+
         <br/>
         <p>Programme développé par Marc Douguet dans le cadre du labex OBVIL.</p>
         <p>Contact : marc.douguet[at]gmail.com</p>

@@ -137,7 +137,7 @@ margin: 2% 4%;}
     font-size: 19px;
     /*font-weight: bold;*/
     text-decoration: none;
-    
+
 }
 #header {
 	margin:2% 3% 0% 3%;
@@ -328,3 +328,7 @@ textarea, .xpath-field-configuration{font-family: monospace;}
 adaptative
 
 */
+
+#form{
+	clear: both;
+}
