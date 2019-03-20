@@ -1,5 +1,5 @@
 <?php
-
+ini_set("memory_limit", "500M");
 error_reporting(0);
 require_once ("functions/functions.php");
 require_once ("functions/pattern.php");
@@ -29,7 +29,7 @@ include ("lang/" . $lang . ".php");
     <script type="text/javascript" src="js/TableFilter/dist/tablefilter/tablefilter.js"></script>
     <script type="text/javascript" src="js/export.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>    
+    <script type="text/javascript" src="js/main.js"></script>
     <link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css" type="text/css" />
     <link rel="stylesheet" href="js/tipsy/src/stylesheets/tipsy.css" type="text/css" />
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css" type="text/css" />
@@ -39,21 +39,21 @@ include ("lang/" . $lang . ".php");
     <title>Moteur d'analyse dramaturgique</title>
 </head>
 <body>
-    <script type="text/javascript">document.body.style.display = "none";</script>    
+    <script type="text/javascript">document.body.style.display = "none";</script>
     <div class="res">
     <?php
         //filtres :  (xpath)
-        
+
         //created ≠ lustrum (je ne peux pas prendre en compte created parce que les tableaux s'affichent par lustres) : le dire dans la documentation
-        
+
         //liste des valeurs de champs : si j'ai un trou dans lustrum dans mon corpus (dans statify ?). Pour l'instant ça va, mais avec l'Allemagne ?
-        
+
         //faut-il virer A//B des stats A/B ?
-        
+
         //index pour les filtres => Fred ?
-        
+
         //comparateur : graphe camembert, temps d'exécution, lier les tableaux (pb de l'ancre : fait planter le graph)
-        
+
         //résultats groupé : si count patterns>1, agréger les résultats (comment statify ?)
         //lien sur le motif et rappel (dans la même page ou une page différente)
         //nombre total
@@ -87,7 +87,7 @@ include ("lang/" . $lang . ".php");
                 ) ,
             );
             foreach ($_GET["xpath"] as $key => $xpath) {
-                
+
                 if (!$xpath) {
                     continue;
                 }
@@ -104,15 +104,15 @@ include ("lang/" . $lang . ".php");
             }
             if ($_GET["filters"]["to"]) {
                  $filters["to"] = "created <= '" . $_GET["filters"]["to"] . "'";
-            }         
-            foreach ($fields as $key => $field) {                 
+            }
+            foreach ($fields as $key => $field) {
                  if (($key != "author") AND ($key != "genre") AND ($key != "code")) {
                      continue;
-                 }                 
+                 }
                  if (isset($_GET["filters"][$key])) {
                      if(!($_GET["filters"][$key][0])){continue;}
                      $array = array();
-                     foreach ($_GET["filters"][$key] as $filter) {                         
+                     foreach ($_GET["filters"][$key] as $filter) {
                          $array[] = $key . " = '" . $filter . "'";
                      }
                      $filters[$key] = "(";
@@ -120,7 +120,7 @@ include ("lang/" . $lang . ".php");
                      $filters[$key].= ")";
                  }
             }
-            $filter_play = ($filters) ? " WHERE " . implode(" AND ", $filters) : ""; 
+            $filter_play = ($filters) ? " WHERE " . implode(" AND ", $filters) : "";
             $filter = ($filters) ? " AND play_id IN (SELECT id FROM play " . $filter_play . ")" : "";
             $all_results = doPost($bdd, $fields, $group, $confidents, $filter, $filter_play);
             include("tpl/table_summary.tpl.php");
@@ -135,7 +135,7 @@ include ("lang/" . $lang . ".php");
                     $xpath = isset($field["type"]) ? $field : false;
                     $table_results[$key] = statify($results, $key, $length, $group, $confidents, $xpath, $plays, $bdd, $filter, $filter_play);
                 }
-                $json = json($table_results["lustrum"]);                
+                $json = json($table_results["lustrum"]);
                 include("tpl/pattern.tpl.php");
             }
         }
@@ -143,4 +143,3 @@ include ("lang/" . $lang . ".php");
     </div>
 </body>
 </html>
-
