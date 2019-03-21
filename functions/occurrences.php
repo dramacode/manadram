@@ -7,22 +7,24 @@ function occurrences($patterns) {
 
     //renvoie un array de tous les scene_id contenant le même motif
     foreach ($patterns as $pattern) {
-        $array[$pattern["int_bin"]][] = $pattern["scene_id"];
+
+
+        $array[$pattern["trim_code"]][] = $pattern["scene_id"];
     }
 
     //[id](scene_id, sceneid)
     return $array;
 
     //occurrences
-    
+
     //pièces
 
-    
+
     //lustre, auteur, genre
 
-    
+
     //xpath ? même tpl
 
-    
+
 }
 ?>

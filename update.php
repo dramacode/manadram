@@ -82,7 +82,7 @@ $modes = array(
 $dom = new DOMDocument();
 $j = 0;
 foreach ($files as $file) {
-    
+
     $play_code = basename($file, ".xml");
     echo $play_code;
     $biblio = biblio($play_code);
@@ -141,7 +141,7 @@ foreach ($files as $file) {
 	    ?,
 	    ?,
 	    ?,
-	    ?            
+	    ?
 	    )";
 	    $data = array(
 		$play_id,
@@ -152,8 +152,7 @@ foreach ($files as $file) {
 	    );
 	    insert($sql, $bdd, $data);
 	    foreach ($patterns as $code => $pattern) { //le faire à l'intérieur d'extract pour éviter de reboucler, mais où insérer les stats ?
-
-		$list_id = implode("+", $occurrences[$pattern["int_bin"]]);
+		$list_id = implode("+", $occurrences[$pattern["trim_code"]]);
 		$sql = "INSERT INTO pattern (
 		play_id,
 		code,
@@ -212,10 +211,10 @@ foreach ($files as $file) {
 		insert($sql, $bdd);
 
 		//quand je suis à l = 1 et que j'extrait un motif à entracte ?
-		
+
 		//ds le form, si j'entre un entracte, spécifier aussi la longueur
 
-		
+
 	    }
 	}
 	$i++;
