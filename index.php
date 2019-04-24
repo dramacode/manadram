@@ -1,4 +1,5 @@
 <?php
+
 ini_set("memory_limit", "500M");
 error_reporting(0);
 require_once ("functions/functions.php");
