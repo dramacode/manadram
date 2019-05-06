@@ -60,7 +60,8 @@
 
         <br/>
         <p>Programme développé par Marc Douguet dans le cadre du labex OBVIL.</p>
-        <p>Contact : marc.douguet[at]gmail.com</p>
+        <p>Le site et les données sont hébergés par l'axe <a href="https://demarreshs.hypotheses.org/">Démarre SHS!</a> de l'Institut des données de Grenoble (IDEX Université Grenoble Alpes).</p>
+        <p>Contact : marc.douguet[at]univ-grenoble-alpes.fr</p>
         <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/fr/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/2.0/fr/88x31.png" /></a></p>
         <div id="test">
         </div>
